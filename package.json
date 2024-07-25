@@ -25,6 +25,6 @@
     "lint-staged": "^10.5.3"
   },
   "scripts": {
-    "docs:dev": "cd docs && bundle exec jekyll serve --livereload"
+    "start": "cd docs && bundle exec jekyll serve --livereload"
   }
 }
