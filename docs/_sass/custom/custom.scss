@@ -1,0 +1,90 @@
+body {
+  counter-reset: img-caption-num;
+  counter-reset: tab-caption-num;
+}
+
+.goodExample {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.badExample {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+.badExample h3 {
+  color: #b31d28;
+  margin-left: 0.5rem;
+}
+.goodExample h3 {
+  color: #22863a;
+  margin-left: 0.5rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline #eb5c3f !important;
+}
+
+.img-caption,
+.table-caption {
+  margin-top: -1em;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.table-caption {
+  counter-increment: tab-caption-num 1;
+}
+
+.img-caption {
+  counter-increment: img-caption-num 1;
+}
+
+.img-caption::before {
+  content: "Abbildung " counter(img-caption-num) ": ";
+}
+
+.table-caption::before {
+  content: "Tabelle " counter(tab-caption-num) ": ";
+}
+
+:not([class="inline-img"]) {
+  > img {
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  }
+}
+
+td.centered {
+  text-align: center;
+}
+
+#back-to-top {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  #back-to-top {
+    display: block;
+  }
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
+  font-weight: bold;
+  line-height: 10px;
+  color: #2f2f2f;
+  vertical-align: middle;
+  background-color: #f3f3f3fc;
+  border: solid 1px #dfdfdf;
+  border-bottom-color: lightgray;
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 #77777796;
+}

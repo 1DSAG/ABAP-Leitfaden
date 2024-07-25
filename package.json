@@ -1,0 +1,30 @@
+{
+  "name": "dsag-adt-leitfaden",
+  "version": "1.0.0",
+  "description": "DSAG ADT Leitfaden",
+  "main": "--none",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1DSAG/ADT-Leitfaden.git"
+  },
+  "keywords": [
+    "ABAP",
+    "DSAG",
+    "ADT",
+    "ABAP in Eclipse"
+  ],
+  "author": "DSAG ABAP community",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1DSAG/ADT-Leitfaden/issues"
+  },
+  "homepage": "https://1dsag.github.io/ADT-Leitfaden/",
+  "dependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "lint-staged": "^10.5.3"
+  },
+  "scripts": {
+    "docs:dev": "cd docs && bundle exec jekyll serve --livereload"
+  }
+}
