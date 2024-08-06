@@ -17,7 +17,7 @@ Das hohe Maß an Flexibilität und Erweiterbarkeit von SAP-Software bringt Vor- 
 - Die Software kann optimal an kundenspezifische Anforderungen angepasst und damit die Wertschöpfung durch den Einsatz deutlich gesteigert werden. 
 - Zeitgleich birgt die Erweiterbarkeit das Risiko kundenspezifischer Entwicklungen, die komplex, aufwendig wartbar und fehleranfällig sind.
 
-Das Dokument erschein bereits in zwei Auflagen, weils 2012 und 2016. Hierbei handelt es sich um die dritte Auflage.
+Das Dokument erschien bereits in zwei Auflagen, jeweils 2012 und 2016. Hierbei handelt es sich um die dritte Auflage.
 
 ## Aufbau und Zielgruppe
 
