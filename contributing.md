@@ -98,7 +98,7 @@ Einstieg in die globalen Einstellungen
 {: .img-caption}
 ```
 
-Sollen kleinere Bilder (siehe 1. Absatz im Kapitel [Debugger](docs/troubleshooting/debugger.md)) direkt im Absatz eingefügt werden, sollte die folgende Syntax verwendet werden
+Sollen kleinere Bilder (siehe 1. Absatz im Kapitel [Debugger](docs/clean-core/index.md)) direkt im Absatz eingefügt werden, sollte die folgende Syntax verwendet werden
 
 ```markdown
 Wechsel in die Debugging-Perspektive <span class="inline-img">![Schaltfläche Debugging-Perspektive](./img/image14.png)</span>.
