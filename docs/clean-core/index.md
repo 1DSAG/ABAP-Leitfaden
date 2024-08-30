@@ -231,6 +231,8 @@ Fundamentaler Bestandteil für Clean Core
 
 Die ersten Schritte für das Unternehmen wäre: Von SAP Classical Extensibility zu ABAP Cloud zu gehen. Damit die Standard APIs die Kundennamensraum-Felder in den Standard Tabelle haben müssen erstmal diese Kunden Felder durch Key User Extensibility erweitert werden.
 
+TEST VOLO 14.08!
+
 ## Modifikationen in SAP Code
 
 ( gemeint sind die echten Änderungen mit klassischen Modifikationen )
