@@ -43,7 +43,7 @@ Darüber hinaus kann eine veraltete Dokumentation irreführend sein. Deshalb sol
 Innerhalb einer SAP-Systemlandschaft bietet der SAP Solution Manager Möglichkeiten zur Projektdokumentation. Die nachfolgenden Links bieten weitere Informationen dazu.
 
 WEITERE QUELLEN  
-1.	Das arc42-Template zur Architekturdokumentation, [Arc42-Template](https://arc42.org/download)  (aufgerufen am: 19.09.2025)
+1.	Das arc42-Template zur Architekturdokumentation, [Arc42-Template](https://arc42.org/download)  (aufgerufen am: 19.09.2024)
 2.	Stefan Zörner: Softwarearchitekturen dokumentieren und kommunizieren. Carl Hanser Verlag GmbH Co KG, 2021. ISBN: 978-3446469280
 
 
