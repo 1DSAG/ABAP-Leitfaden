@@ -86,6 +86,10 @@ Stern-Kommentare sollten nur im Programmkopf oder für das temporäre Auskomment
 
 Für alle anderen Kommentare empfiehlt SAP, Inline-Kommentare zu verwenden. Diese sollten jeweils vor dem Quellcode stehen, den sie dokumentieren, und genauso eingerückt sein wie dieser Quellcode. Letzteres wird (nur) für Inline-Kommentare auch vom Pretty Printer korrekt durchgeführt. 
 
+WEITERE QUELLEN
+1.	Horst Keller, Wolf Hagen Thümmel: ABAP-Programmierrichtlinien. SAP Press, 2009. ISBN: 9783836212861
+
+
 ## Artefakte
 ### abapDoc
 
