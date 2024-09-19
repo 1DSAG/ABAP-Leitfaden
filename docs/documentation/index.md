@@ -77,6 +77,14 @@ Stern-Kommentare sollten nur im Programmkopf oder für das temporäre Auskomment
 
 Für alle anderen Kommentare empfiehlt SAP, Inline-Kommentare zu verwenden. Diese sollten jeweils vor dem Quellcode stehen, den sie dokumentieren, und genauso eingerückt sein wie dieser Quellcode. Letzteres wird (nur) für Inline-Kommentare auch vom Pretty Printer korrekt durchgeführt. 
 
+## Artefakte
+### abapDoc
+
+### Knowledge Transfer Documents (KTD)
+
+
+
+
 
 
 
