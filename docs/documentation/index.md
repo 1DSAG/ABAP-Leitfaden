@@ -42,6 +42,11 @@ Darüber hinaus kann eine veraltete Dokumentation irreführend sein. Deshalb sol
 
 Innerhalb einer SAP-Systemlandschaft bietet der SAP Solution Manager Möglichkeiten zur Projektdokumentation. Die nachfolgenden Links bieten weitere Informationen dazu.
 
+WEITERE QUELLEN  
+1.	Das arc42-Template zur Architekturdokumentation, https://arc42.org/download (aufgerufen am: 19.09.2025)
+2.	Stefan Zörner: Softwarearchitekturen dokumentieren und kommunizieren. Carl Hanser Verlag GmbH Co KG, 2021. ISBN: 978-3446469280
+
+
 ## Dokumentation von Entwicklungsobjekten
 Neben Methoden, Funktionsbausteinen und Reports, die Dokumentation im Quellcode enthalten können, existieren weitere Entwicklungsobjekte im ABAP-System, die keinen Quellcode besitzen und daher auf anderem Weg dokumentiert werden müssen. Beispiele dafür sind:
 
@@ -61,7 +66,7 @@ Beginnend mit SAP NetWeaver 7.50 lassen sich die ABAP-Doc-Kommentare von Klassen
 
 | BEST PRACTICE |
 |---------------|
-| Als Kommentierungssprache sollte Englisch verwendet werden. |
+|Als Kommentierungssprache sollte Englisch verwendet werden.|
 
 Entwicklungsteams arbeiten heutzutage überwiegend international zusammen. Auch wenn Sie derzeit rein deutschsprachig entwickeln, kann Ihr Projekt im Laufe der Zeit internationalisiert werden. Der Aufwand, der dann durch Koordinationsprobleme oder sogar nachträgliches Übersetzen entsteht, steht in keinem Verhältnis zu dem vielleicht größeren Aufwand durch englische Dokumentation.Es hat sich außerdem gezeigt, dass die Lesbarkeit von Quellcode und Kommentaren durch englischsprachige Kommentare erhöht wird. Denn die ABAP-Befehle selbst sind englisch und im Stil von Sätzen aufgebaut. Der Leser des Quellcodes muss bei englischer Dokumentation also nicht ständig die Sprache wechseln.
 
