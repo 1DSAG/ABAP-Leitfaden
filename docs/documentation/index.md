@@ -68,12 +68,6 @@ Ab dem Zeitpunkt der Produktivsetzung eines Programms sollte darauf geachtet wer
 |---------------|
 | Nachträgliche Änderungen am Quellcode sollten - von Headerkommentaren abgesehen - nur in Ausnahmefällen direkt im Quellcode dokumentiert werden. .|
 
-### Programmkopf
-Änderungen in Programmen können zum Beispiel mit Namen oder Namenskürzel des Entwicklers, dem Tagesdatum oder Monat und der Änderungsbelegnummer (Change Document, Incident Ticket, …) sowie einer stichwortartigen Beschreibung der Änderung im Programmkopf dokumentiert werden. 
-
-
-Durch diese Informationen kann später nachvollzogen werden, welche Erweiterung oder Fehlerbehebung Auslöser einer Änderung war. Diese Kopfkommentare helfen auch dabei zu erkennen, wie oft ein Programm geändert wurde, wer sich wahrscheinlich gut damit auskennt und wie lange die letzte Änderung zurückliegt. Diese Informationen sind hilfreich, schon bevor die nächsten Änderungen in einem Programm geplant oder eingebaut werden. 
-
 ### Kommentare im Quellcode
 Kommentare im Quellcode sollen dazu dienen, Entwicklern das Verstehen des Quellcodes zu erleichtern, sofern dies nicht durch geschickte Gestaltung des Quellcodes allein (Modularisierung, Namenswahl von Methoden und Variablen) erreichbar ist.
 
