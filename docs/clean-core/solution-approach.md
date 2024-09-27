@@ -49,14 +49,17 @@ Entscheidungshilfe
 
 ## ABAP Cloud
 
-``(Björn)``
+ABAP Cloud ist das neue Entwicklungsmodell für alle Systemlandschaften, egal ob SAP BTP ABAP Environment, S/4HANA Cloud Public Edition und Private Edition oder S/4HANA On-Premise, können Sie das selbe Modell für die Entwicklung von Clean Core und Cloud Ready Applications verwenden. Die Verwendung wird Ihnen im [Extensibility Guide für S/4HANA](https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html) genauer beschrieben. In den folgenden Abschnitten werden Sie einige Details erhalten. ABAP Cloud ist fundamentaler Bestandteil, wenn Sie Clean Core erreichen möchten.
 
-Tier 1 - 3
+![ABAP Cloud](./img/image-07.png)
 
-* Softwareorganisation mit Paketkonzept (+ Herausforderungen)
+ABAP Cloud - Verfügbarkeit
+{: .img-caption}
 
-Verweis auf Extensibility Leitfäden
+### Freigegebene APIs
 
-Fundamentaler Bestandteil für Clean Core 
+Die Verwendung von freigegebenen APIs (Entwicklungsobjekte mit C1-Freigabe) ist zentraler Bestandteil von ABAP Cloud. SAP gibt Ihnen als Kunde die Zusage, dass diese API stabil ist und für eigene Entwicklungen genutzt werden kann. Damit können in ABAP Cloud nur SAP Objekt verwendet werden, die SAP auch explizit freigegeben hat.
 
-Die ersten Schritte für das Unternehmen wäre: Von SAP Classical Extensibility zu ABAP Cloud zu gehen. Damit die Standard APIs die Kundennamensraum-Felder in den Standard Tabelle haben müssen erstmal diese Kunden Felder durch Key User Extensibility erweitert werden.
+### 3-TIER Modell
+
+Das 3-TIER Modell ist zentraler Bestandteil, wenn Sie einen Übergang von klassischer ABAP Entwicklung in Richtung ABAP Cloud gehen. Dabei sind erst einmal alle Objekte, die außerhalb einer Software Komponente, kurz SWC, mit ABAP Cloud sind, nicht Clean Core. Die Aufgabe besteht für Sie nun darin, die Entwicklungen ABAP Cloud Ready zu migrieren. Dabei werden Objekte von TIER-3 auf TIER-1 verschoben und nicht freigegebene APIs ersetzt. Sind die APIs aktuell nicht freigegeben, könnne sie auf TIER-2 soganannte Wrapper erstellen, die SAP Funktionalität kapseln und für Ihre Entwicklung in TIER-1 freigeben. Im Zuge dessen sollten Sie einen Influence Request bei SAP erstellen, um die Freigabe oder eine alternative API zu erhalten.
