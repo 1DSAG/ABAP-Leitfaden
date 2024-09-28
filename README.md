@@ -7,7 +7,7 @@
 
 Dies ist nicht der Leitfaden selbst (dieser ist über <https://1dsag.github.io/ABAP-Leitfaden> erreichbar), sondern das zugehörige Repository mit Anweisungen wie man zum Leitfaden beitragen kann.
 
-Der DSAG ADT Leitfaden ist ein lebendiges Dokument 👨‍💻 - es lebt von und mit seiner Community 🥳.
+Der DSAG ABAP Leitfaden ist ein lebendiges Dokument 👨‍💻 - es lebt von und mit seiner Community 🥳.
 
 Der Leitfaden ist in `markdown` (Variante `kramdown`) geschrieben und wird mittels `jekyll` in `GitHub Pages` (<https://1dsag.github.io/ABAP-Leitfaden>) bereit gestellt.
 
