@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Vorstellung ausgewählter Open-Source-ABAP-Projekte
+title: Vorstellung ausgewählter Projekte
 permalink: /open-source/open-source-projects/
 parent: Open Source
 prev_page_link: /open-source/abapgit-as-enabler/
@@ -9,21 +9,19 @@ nav_order: 5
 ---
 
 {: .no_toc}
-# Vorstellung ausgewählter Open-Source-ABAP-Projekte
+# Vorstellung ausgewählter Projekte
 
 1. TOC
 {:toc}
 
-## Vorstellung ausgewählter Open-Source-ABAP-Projekte
-
-### Übersicht
+## Übersicht
 
 - Und Einleitung... Dotabap.org
 
-### Projekte zur Unterstützung des Entwicklungsprozesses
+## Projekte zur Unterstützung des Entwicklungsprozesses
 
 - abapopenchecks, abaplint, code-pal, abapGit, abap-openapi, ...
 
-### Projekte als Bestandteil eigener Erweiterungen oder Produkte
+## Projekte als Bestandteil eigener Erweiterungen oder Produkte
 
 - abap2ui5, abap2xlsx ...
