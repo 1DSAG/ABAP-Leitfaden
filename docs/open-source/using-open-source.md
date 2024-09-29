@@ -37,6 +37,19 @@ nav_order: 1
 - Entscheidungsmatrix SAP aus Open Source Forum
 - Due Diligence
 - (Support, ...)
+- Wie verbreitet ist das OpenSource Projekt/Produkt?
+- "Empfiehlt" SAP das Projekt eventuell auch, oder nutzt dieses?
+- Wird das OpenSource Projekt in Blogs erwähnt? Wie ist die Bewertung in diesen Blog‘s?
+- Bevor man sich für Open Source oder ein bestimmtes Open Source Projekt entscheidet, sollte man folgende Dinge prüfen bzw. folgende Fragestellungen für sich beantworten:
+  - Unter welcher Lizenz wird das jeweilige Projekt veröffentlicht?
+  - Was sind die Lizenzbedingungen? Kann ich diese erfüllen?
+  - Open Source bedeutet nicht automatisch kostenlos, was sind die Lizenzkosten?
+  - Wie verbreitet ist ein Open Source Projekt?
+  - Kommt es vielleicht sogar von der SAP und SAP übernimmt den Support/die Wartung?
+  - Empfiehlt die SAP ein bestimmtes Projekt, oder nutzt es gar selbst?
+  - Was sagt die Community zu einem Projekt, wie ist das Feedback, wie bekannt ist es (in Diskussionsforen ...), wie ist die „Bewertung“?
+· ...
+
 - Andreas?
 
 ## Sicherheitsaspekte
