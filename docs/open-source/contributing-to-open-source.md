@@ -16,7 +16,7 @@ nav_order: 2
 1. TOC
 {:toc}
 
-## Beteiligung an der Entwicklung von Open-Source-Projekten
+## Beteiligung an Open Source
 
 - Als Alternative zum Fork, Beteiligung im Upstream Projekt, automatisierte Tests
 - Einfache Beteiligung -> Doku, Issues gut formuliert, kleinere Themen -> geringe Einstiegshürde
