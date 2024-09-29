@@ -27,7 +27,7 @@ nav_order: 1
 
 ## Wer nutzt Open-Source-Software?
 
-- Who Uses abapGit? | abapGit Docs
+- Who Uses abapGit? - abapGit Docs
 
 ## Bewertung und Lebenszyklus einer externen Abhängigkeit
 
@@ -48,8 +48,7 @@ nav_order: 1
   - Kommt es vielleicht sogar von der SAP und SAP übernimmt den Support/die Wartung?
   - Empfiehlt die SAP ein bestimmtes Projekt, oder nutzt es gar selbst?
   - Was sagt die Community zu einem Projekt, wie ist das Feedback, wie bekannt ist es (in Diskussionsforen ...), wie ist die „Bewertung“?
-· ...
-
+  - ...
 - Andreas?
 
 ## Sicherheitsaspekte
