@@ -2,11 +2,12 @@
 layout: page
 title: Clean Core
 permalink: /clean-core/
-next_page_title: Clean Core
+next_page_link: /clean-core/what-is-clean-core/
+next_page_title: Was ist Clean Core
+has_children: true
 nav_order: 7
 ---
 
-{: .no_toc}
 # Clean Core
 
 1. TOC
@@ -15,9 +16,6 @@ nav_order: 7
 ## Was ist Clean Core
 
 Clean Core ist ein Konzept, und für manchen SAP Kunden eine Philosophie -  Clean Core wird unterschiedlich aufgefasst, interpretiert und gelebt. Ein gemeinsames Verständniss der DSAG-Community wäre das folgende:
-
-**"Clean Core"** - Streng genommen ist das Konzept so zu interepretieren: Systemupgrades sollen keinen Einfluss auf Kundenerweiterungen haben. Deshalb 
-dürfen die SAP Kunden nur freigegebene Schnittstellen für Geschäftprozesserweiterungen nehmen.
 
 **“Keep the core clean”** –  Bedeutet, dass ein Unternehmen nach Clean Core Prinzipien -  definierten Richtlinien in einem Unternehmen - Neuentwicklung aufsetzt.
 
@@ -34,13 +32,13 @@ Quelle: SAP Help Portal
 Clean Core
 {: .img-caption}
 
-Das Clean Core Konzept mit seinen unterschiedlichen Facetten ist von SAP klar und deutlich bei der TechEd2023 kommuniziert. Die Schritt-für-Schritt Anleitung ist für etablierte Kunden, welche diverse „Legacy“ Technologien in ihren SAP-Systemen nutzen, ist dennoch unklar. 
-Es gibt zahlreiche Bestandskunden und SAP Partner, welche Mehrwerte durch Eigenentwicklung und Systemerweiterung, in Ihren Systemen geschaffen haben. Diese Mehrwerte gehören laut Definition nicht zum Clean Core - die Erweiterungen beruhen fast immer auf nicht freigegebene Schnittstellen. Es existieren unterschiedliche Nachfolge-Technologie-Matrizen für die sogenannten RICEFW-Objekte. Intern stellt sich primär die Fragen: „Wie können wir gegenüber unseren Kunden den Technologie-Wechsel vertreten? Und weshalb sollte ich jetzt gut-funktionierende Prozesse basierend bspw. auf Idocs, Nachrichten, RFCs, und ALV-Transaktionen umziehen?
+Das Clean Core Konzept ist von SAP klar und deutlich bei der TechEd2023 kommuniziert. Die Schritt-für-Schritt Anleitung ist für etablierte Kunden, welche diverse „Legacy“ Technologien in ihren SAP-Systemen nutzen, ist dennoch unklar. 
+Es gibt zahlreiche Bestandskunden, welche Mehrwerte durch Eigenentwicklung und Systemerweiterung, in Ihren Systemen geschaffen haben. Diese Mehrwerte gehören laut Definition nicht zum Clean Core. Es existieren unterschiedliche Nachfolge-Technologie-Matrizen für die sogenannten RICEFW-Objekte. Intern stellt sich primär die Fragen: „Wie können wir gegenüber unseren Kunden den Technologie-Wechsel vertreten? Und weshalb sollte ich jetzt gut-funktionierende Prozesse basierend bspw. auf Idocs, Nachrichten, RFCs, und ALV-Transaktionen umziehen?
 
 ### Zielgruppe
 (Noch offen)
-* SAP Kunden die auf S/4 HANA gehen - Greenfield Ansatz und stringent Clean Core bestimmen
-* SAP Kunden die Brownfield auf S/4 sind- Clean Core nach und nach definieren und Neuentwicklung konform dazu halten
+* Kunden die auf S/4 HANA gehen - Greenfield Ansatz und stringent Clean Core bestimmen
+* Kunden die Brownfield auf S/4 sind- Clean Core nach und nach definieren und Neuentwicklung konform dazu halten
 
 ### Clean Core Definition
 Im Kern dreht sich das Konzept des Clean Core darum, wesentliche Geschäftslogiken von nicht wesentlichen Funktionalitäten innerhalb der Software-Suite von SAP zu trennen. Durch die Isolierung von Kerngeschäftsprozessen und Datenstrukturen strebt SAP eine schlankere, agilere Grundlage an, die sich an sich ändernde Geschäftsanforderungen anpassen kann. 
@@ -88,7 +86,7 @@ Zusammenfassend steht das Clean Core Konzept von SAP für einen Paradigmenwechse
 
 Durch die Umsetzung der Prinzipien des Clean Core und strategischer Initiativen können Organisationen sich auf zukünftige SAP-Strategien, vor allem Cloud-Technologien vorbereiten. 
 
-Laut SAP geht es bei Clean Core vor allem, dass die Kunden sich die Zukunft nicht versperren und standardisiert Schnittstellen aufbauen. Durch die Standardisierung von Geschäftsprozessen und den Einsatz der SAP BTP können SAP Services, oder auch Lösungen von SAP Partners komplett verwendet werden.  
+Laut SAP geht es bei Clean Core vor allem, dass die Kunden sich die Zukunft nicht versperren und standardisiert Schnittstellen aufbauen. Durch die Standardisierung von Geschäftsprozessen und den Einsatz der SAP BTP können SAP Services komplett verwendet werden.  
 Die Clean Core Strategie ist für viele Bestandskunden eine Philosophie, bis interne Richtlinien die Nutzungen der Nachfolge-Technologien regeln. Basierend auf den Richtlinien werden Entwickler organisatorisch ausgerichtet, und geschult. Ein Gremium um die „Clean Core Governance“ einzuhalten ist Pflicht, mit dem Mandat die Richtlinien zu pflegen, zu erweitern und zu forcieren. Research und Development sollte häufig betrieben werden, um die Mehrwerte durch SAP-Service herauszuarbeiten.
 
 ### Private/Public Cloud/BTP
@@ -233,8 +231,6 @@ Verweis auf Extensibility Leitfäden
 Fundamentaler Bestandteil für Clean Core 
 
 Die ersten Schritte für das Unternehmen wäre: Von SAP Classical Extensibility zu ABAP Cloud zu gehen. Damit die Standard APIs die Kundennamensraum-Felder in den Standard Tabelle haben müssen erstmal diese Kunden Felder durch Key User Extensibility erweitert werden.
-
-TEST VOLO 14.08!
 
 ## Modifikationen in SAP Code
 
