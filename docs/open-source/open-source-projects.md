@@ -16,12 +16,20 @@ nav_order: 5
 
 ## Übersicht
 
-- Und Einleitung... Dotabap.org
+Eine Übersicht von ABAP Open Source Projekten findet sich auf [dotabap.org](https://dotabap.org/). Dort finden sich aktuell knapp 300 Projekte. Sollte Dein Projekt noch fehlen kann dies [wie hier beschrieben](https://github.com/dotabap/dotabap-list) durch einen Pull Request ergänzt werden.
 
 ## Projekte zur Unterstützung des Entwicklungsprozesses
 
-- abapopenchecks, abaplint, code-pal, abapGit, abap-openapi, ...
+### abapOpenChecks
+
+### abaplint
+
+### code pal for ABAP
+
+### ABAP OpenAPI Client & Server Generator
 
 ## Projekte als Bestandteil eigener Erweiterungen oder Produkte
 
-- abap2ui5, abap2xlsx ...
+### abap2ui5
+
+### abap2xlsx
