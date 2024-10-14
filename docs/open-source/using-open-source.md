@@ -53,7 +53,7 @@ werden kann, z.B. [Bauer et. al.](https://doi.org/10.1109/ICSM.2012.6405311). Kr
   title     = {A structured approach to assess third-party library usage},
   year      = {2012},
   pages     = {483--492},
-  publisher = {{IEEE} Computer Society},
+  publisher = {IEEE Computer Society},
   bibsource = {dblp computer science bibliography, https://dblp.org},
   biburl    = {https://dblp.org/rec/conf/icsm/BauerHD12.bib},
   doi       = {10.1109/ICSM.2012.6405311},
