@@ -2,9 +2,8 @@
 layout: page
 title: Testen
 permalink: /testing/
-next_page_title: ABAP Testen
-next_page_link: /testing/abap_unit/
 next_page_title: ABAP Unit Framework
+next_page_link: /testing/abap_unit/
 has_children: true
 nav_order: 8
 ---
@@ -15,15 +14,12 @@ nav_order: 8
 1. TOC
 {:toc}
 
-## Erster Punkt 
-
-Hier beginnt das Kapitel
 
 ## Zielgruppe
 - Management auch relevant
- - return on Invest 
+    - return on Invest 
 - Hauptzielgruppe Lead / Senior-Entwickler, die motiviert sind 
- - Hilfe zur Selbsthilfe / Lernen
+    - Hilfe zur Selbsthilfe / Lernen
 - Rechtfertigen als Quelle nutzen 
 
 
