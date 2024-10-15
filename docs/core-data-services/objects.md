@@ -9,35 +9,72 @@ nav_order: 30
 {: .no_toc}
 # Core Data Services - Objekte
 
-1. CDS Typ Definitionen
+1. Type Definitions
 {:toc}
 
-## CDS Type Definitions
+## Type Definitions
 
-### CDS Simple Types
+### Simple Types
+Hiermit definieren Sie elementare Datentypen, welche Sie in CDS Objekten oder in ABAP verwenden können.
 
-### CDS Enumerated Types
+__Beispiel__
+```ABAP CDS
+define type myDate : abap.dats
+```
 
-## CDS Function Definitions
+> [!NOTE]
+> Details finden Sie unter [SAP Help (CDS Simple Types)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_simple_types.htm)
 
-## CDS Data Definitions
+### Enumerated Types
+Definieren Sie einen enumerierten Typ mit Konstanten. Sie können den Typ und die Konstanten in CDS Objekten verwenden.
 
-### CDS DDIC-based views
+__Beispiel__
+Definition
+```ABAP CDS
+define type Weekdays : abap.int1 enum
+{
+    Monday = initial;
+    Tuesday = 1;
+    Wednesday = 2;
+    Thursday = 3;
+    Friday = 4;
+    Saturday = 5;
+    Sunday = 6;
+}
+```
+Verwendung
+```ABAP CDS
+define ... as select from ...
+{
+    ...
+}
+where
+  weekday = Weekdays.#Friday
+```
 
-### CDS View Entities
+> [!NOTE]
+> Details finden Sie unter [SAP Help (CDS Enum Types)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_enumeration_types.htm)
 
-### CDS Projection Views
+## Function Definitions
 
-### CDS Table Functions
+## Data Definitions
 
-### CDS Hierarchies
+### DDIC-based views
 
-### CDS Custom Entities
+### View Entities
 
-### CDS Abstract Entities
+### Projection Views
 
-## CDS tuning objects
+### Table Functions
+
+### Hierarchies
+
+### Custom Entities
+
+### Abstract Entities
+
+## tuning objects
 Aktuell bietet SAP nur einen Konfigurationstyp an: Define View Entity Buffer. Damit kann eine Pufferung der Daten definiert werden (keine Pufferung, Einzelsatz, Bereiche, Vollständig). Diese Einstellung kann sich auf die Performance auswirken. Details zum Performance im Zusammenhang mit CDS finden Sie im Kapitel [Performance](/core-data-services/performance).
 
-## CDS Access Control
+## Access Control
 Über die Access Controls können Sie durch Angabe von Rollen, Regeln und Bedingungen definieren, welche Nutzer bzw. welcher Nutzerkreis Zugriff auf bestimmte Daten erhält. Details finden Sie im Kapitel [Berechtigungen](/core-data-services/authorizations).
