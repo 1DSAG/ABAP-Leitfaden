@@ -21,7 +21,7 @@ nav_order: 8
 - Hauptzielgruppe Lead / Senior-Entwickler, die motiviert sind 
     - Hilfe zur Selbsthilfe / Lernen
 - Rechtfertigen als Quelle nutzen 
-
+- Teständerung
 
 
 # Abschnittstruktur: 
