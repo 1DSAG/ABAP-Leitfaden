@@ -21,7 +21,7 @@ nav_order: 8
 - Hauptzielgruppe Lead / Senior-Entwickler, die motiviert sind 
     - Hilfe zur Selbsthilfe / Lernen
 - Rechtfertigen als Quelle nutzen 
-
+- Teständerung
 
 
 # Abschnittstruktur: 
@@ -35,7 +35,7 @@ o Am Ende schreiben
     · Gutes ABAP OO design ist Grundlage 
     o	ABAP OO 
     o Unit test erfordern einen höheren Level an OO-Skills 
-    · Beispiel RFC Fuba, mit OO versorgen.
+    · Beispiel RFC Funktionsbaustein, mit OO versorgen.
     · 
     § ABAP Unit Tests sind nicht optional.
     · Definition of Done erweitern und unit tests mit aufnehmen
@@ -43,10 +43,10 @@ o Am Ende schreiben
     o Beispiele für sinnvoll.
     · Test leiden immer unter (Projekt-)Zeitdruck 
     · 
-    o Grundsätzlich ist fasst alles mit ABAO Unit testbar! 
+    o Grundsätzlich ist fasst alles mit ABAP Unit testbar! 
     § NO excuses. 
     o Experten Themen 
-    § Unittest / Infrastruktur ausbauen um Auswand für neue Tests zu verringern. 
+    § Unittest / Infrastruktur ausbauen um Aufwand für neue Tests zu verringern. 
 ## Testunterstützung:
 o Ecatt? 
 § Wohl nicht mehr relevant
