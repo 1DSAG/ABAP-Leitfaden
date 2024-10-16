@@ -20,11 +20,10 @@ Hiermit definieren Sie elementare Datentypen, welche Sie in CDS Objekten oder in
 
 __Beispiel__
 
-```ABAP CDS
+```
 define type myDate : abap.dats
 ```
 
-> [!NOTE]
 > Details finden Sie unter [SAP Help (CDS Simple Types)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_simple_types.htm)
 
 ### Enumerated Types
@@ -34,7 +33,7 @@ __Beispiel__
 
 Definition
 
-```ABAP CDS
+```
 define type Weekdays : abap.int1 enum
 {
     Monday = initial;
@@ -49,7 +48,7 @@ define type Weekdays : abap.int1 enum
 
 Verwendung
 
-```ABAP CDS
+```
 define ... as select from ...
 {
     ...
@@ -58,7 +57,6 @@ where
   weekday = Weekdays.#Friday
 ```
 
-> [!NOTE]
 > Details finden Sie unter [SAP Help (CDS Enum Types)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_enumeration_types.htm)
 
 ## Function Definitions
@@ -72,7 +70,6 @@ Aktuell bietet SAP nur die Definition einer _Scalar Function_ an. Dabei gibt es 
     * Eine Scalar Function Implementation Reference, als Verknüpfung zwischen der Definition und der Implementierung
     * Eine AMDP Function, welche die Implementierung der Scalar Function darstellt
 
-> [!NOTE]
 > Details finden Sie unter [SAP Help (CDS Scalar Functions)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_scalar_functions.htm)
 
 ## Data Definitions
