@@ -9,7 +9,7 @@ nav_order: 30
 {: .no_toc}
 # Core Data Services - Objekte
 
-1. Type Definitions
+1. TOC
 {:toc}
 
 ## Type Definitions
@@ -56,6 +56,18 @@ where
 > Details finden Sie unter [SAP Help (CDS Enum Types)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_enumeration_types.htm)
 
 ## Function Definitions
+Aktuell bietet SAP nur die Definition einer _Scalar Function_ an. Dabei gibt es zwei verschiedene Arten von Funktionen.
+* Analytical scalar function
+  * Diese Art der Funktionen ist aktuell nur SAP intern definierbar. Sie können die von SAP ausgelieferten Funktionen aber nutzen.
+* SQL-based scalar function
+  * Sie können eigene Funktionen dieser Art definieren und implementieren. Die Verwendung ist wie bei den eingebauten SQL Funktionen (wie z.B. CONCAT()). Eine Scalar Function kann mehrere Parameter haben und hat immer einen einzigen Rückgabewert.
+  * Sie benötigen drei Entwicklungsobjekte für eine Scalar Function:
+    * Eine Scalar Function Definition (CDS Objekt)
+    * Eine Scalar Function Implementation Reference, als Verknüpfung zwischen der Definition und der Implementierung
+    * Eine AMDP Function, welche die Implementierung der Scalar Function darstellt
+
+> [!NOTE]
+> Details finden Sie unter [SAP Help (CDS Scalar Functions)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_scalar_functions.htm)
 
 ## Data Definitions
 
@@ -74,7 +86,7 @@ where
 ### Abstract Entities
 
 ## tuning objects
-Aktuell bietet SAP nur einen Konfigurationstyp an: Define View Entity Buffer. Damit kann eine Pufferung der Daten definiert werden (keine Pufferung, Einzelsatz, Bereiche, Vollständig). Diese Einstellung kann sich auf die Performance auswirken. Details zum Performance im Zusammenhang mit CDS finden Sie im Kapitel [Performance](/core-data-services/performance).
+Aktuell bietet SAP nur einen Konfigurationstyp an: Define View Entity Buffer. Damit kann eine Pufferung der Daten definiert werden (keine Pufferung, Einzelsatz, Bereiche, Vollständig). Diese Einstellung kann sich auf die Performance auswirken. Details zur Performance im Zusammenhang mit CDS finden Sie im Kapitel [Performance](/core-data-services/performance).
 
 ## Access Control
 Über die Access Controls können Sie durch Angabe von Rollen, Regeln und Bedingungen definieren, welche Nutzer bzw. welcher Nutzerkreis Zugriff auf bestimmte Daten erhält. Details finden Sie im Kapitel [Berechtigungen](/core-data-services/authorizations).
