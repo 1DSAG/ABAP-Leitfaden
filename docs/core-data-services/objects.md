@@ -33,7 +33,7 @@ __Beispiel__
 
 Definition
 
-```abap
+```js
 define type Weekdays : abap.int1 enum
 {
     Monday = initial;
