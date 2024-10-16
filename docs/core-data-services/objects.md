@@ -2,6 +2,7 @@
 layout: page
 title: Core Data Services - Objekte
 permalink: /core-data-services/objects
+parent: Core Data Services
 next_page_title: Core Data Services - Erweiterbarkeit
 nav_order: 30
 ---
