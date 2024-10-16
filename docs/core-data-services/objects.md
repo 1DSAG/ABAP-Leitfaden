@@ -20,11 +20,11 @@ Hiermit definieren Sie elementare Datentypen, welche Sie in CDS Objekten oder in
 
 __Beispiel__
 
-```
+```abap
 define type myDate : abap.dats
 ```
 
-> Details finden Sie unter [SAP Help (CDS Simple Types)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_simple_types.htm)
+{% include note.html content="Details finden Sie unter [SAP Help (CDS Simple Types)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_simple_types.htm)" %}
 
 ### Enumerated Types
 Definieren Sie einen enumerierten Typ mit Konstanten. Sie können den Typ und die Konstanten in CDS Objekten verwenden.
@@ -33,7 +33,7 @@ __Beispiel__
 
 Definition
 
-```
+```abap
 define type Weekdays : abap.int1 enum
 {
     Monday = initial;
@@ -48,7 +48,7 @@ define type Weekdays : abap.int1 enum
 
 Verwendung
 
-```
+```abap
 define ... as select from ...
 {
     ...
