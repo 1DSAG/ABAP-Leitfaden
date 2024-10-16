@@ -24,7 +24,7 @@ __Beispiel__
 define type myDate : abap.dats
 ```
 
-{% include callout.html content="Details finden Sie unter [SAP Help (CDS Simple Types)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_simple_types.htm)" type="note" %}
+> Details finden Sie unter [SAP Help (CDS Simple Types)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_simple_types.htm)
 
 ### Enumerated Types
 Definieren Sie einen enumerierten Typ mit Konstanten. Sie können den Typ und die Konstanten in CDS Objekten verwenden.
