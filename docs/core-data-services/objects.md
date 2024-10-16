@@ -19,6 +19,7 @@ nav_order: 30
 Hiermit definieren Sie elementare Datentypen, welche Sie in CDS Objekten oder in ABAP verwenden können.
 
 __Beispiel__
+
 ```ABAP CDS
 define type myDate : abap.dats
 ```
@@ -30,7 +31,9 @@ define type myDate : abap.dats
 Definieren Sie einen enumerierten Typ mit Konstanten. Sie können den Typ und die Konstanten in CDS Objekten verwenden.
 
 __Beispiel__
+
 Definition
+
 ```ABAP CDS
 define type Weekdays : abap.int1 enum
 {
@@ -43,7 +46,9 @@ define type Weekdays : abap.int1 enum
     Sunday = 6;
 }
 ```
+
 Verwendung
+
 ```ABAP CDS
 define ... as select from ...
 {
