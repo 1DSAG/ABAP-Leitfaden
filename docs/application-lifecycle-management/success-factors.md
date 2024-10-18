@@ -4,7 +4,7 @@ title: Rahmenbedingungen für ein erfolgreiches ALM
 permalink: /application-lifecycle-management/success-factors/
 parent: ALM
 next_page_link: /application-lifecycle-management/ensuring-quality/
-next_page_title: Vorstellung ausgewählter Projekte
+next_page_title: Qualitätssicherung und -Monitoring
 nav_order: 1
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Qualitätssicherung und -Monitoring 
+title: Qualitätssicherung und -Monitoring
 permalink: /application-lifecycle-management/ensuring-quality/
 parent: ALM
 prev_page_link: /application-lifecycle-management/success-factors/
@@ -9,7 +9,7 @@ nav_order: 2
 ---
 
 {: .no_toc}
-# Qualitätssicherung und -Monitoring 
+# Qualitätssicherung und -Monitoring
 
 1. TOC
 {:toc}
