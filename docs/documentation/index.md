@@ -58,7 +58,22 @@ Neben Methoden, Funktionsbausteinen und Reports, die Dokumentation im Quellcode 
 |Wir empfehlen, für alle Entwicklungsobjekte und unabhängig vom Quellcode die Dokumentationsfunktion der ABAP-Workbench zu nutzen und die Aufgaben und Bedeutungen dieser Objekte im SAP-System zu dokumentieren. Hierbei sollte ausschließlich der Ist-Stand dokumentiert werden, gegebenenfalls angereichert um kurze Verweise auf die Änderungsdokumentation (Transportdokumentation, Defekt-Nummern).|
 
 Da die Workbench-Dokumentation auch an das Transportwesen angeschlossen ist, steht sie in allen Einzelsystemen einer Systemlandschaft zur Verfügung. Weiterhin kann diese Dokumentation von allen Benutzern eingesehen werden und wird für Reports vom ABAP-System automatisch in die Benutzeroberfläche eingebunden. Ein weiterer Vorteil kann darin bestehen, dass die Dokumentation mehrsprachig geführt werden kann. Auf SAP-Systemen mit SAP_BASIS >= 7.40 können im Quellcode ABAP-Doc-Kommentare verwendet werden. Dies kann als Alternative zur Dokumentation in der ABAP-Workbench verwendet werden. Der volle Funktionsumfang von ABAP-Doc-Kommentaren lässt sich derzeit allerdings nur mit den ABAP-Development-Tools für Eclipse ausschöpfen. Bei Verwendung von Core Data Services zur Definition von DDIC-Objekten können wesentlich mehr Entwicklungsobjekte im Quellcode dokumentiert werden und die Notwendigkeit externer Dokumentation entfällt. 
-Beginnend mit SAP NetWeaver 7.50 lassen sich die ABAP-Doc-Kommentare von Klassen und Schnittstellen als HTML-Dateien exportieren. 
+Beginnend mit SAP NetWeaver 7.50 lassen sich die ABAP-Doc-Kommentare von Klassen und Schnittstellen als HTML-Dateien exportieren. Die SAP erweitert ihr Repertoire ab ABAP Plattform 7.55 um eine weitere Technologie zur Dokumentation von ABAP-Entwicklungsobjekten. Das Knowledge Transfer Document fokussiert sich auf die neuen Objekttypen, die primär aus dem ABAP Restful Application Programming Model (RAP) Kontext entstammen. Dieses umfasst unter anderem: CDS Views, Behavior Definitions, Service Definitions, Service Bindings, Annotation Definitions und Paket
+
+### Kurztexte
+
+### abapDoc
+
+abapDoc ermöglicht es Klassen, Interfaces und Functionsbausteine zu dokumentieren. Die Kommentare bestehen aus einer oder mehr kommentierte Zeile. abapDoc beginnt mit dem Präfix "!.
+
+Im Quelltexteditor können abapDoc Kommentare vor deklarativen Statements platziert werden.
+
+abapDoc Kommentare werden angezeigt in
+* ABAP Element Info view
+* Element Information Popup
+* Code Completion Liste.
+
+### Knowledge Transfer Documents (KTD)
 
 ## Dokumentation im Quellcode
 
@@ -68,7 +83,7 @@ Beginnend mit SAP NetWeaver 7.50 lassen sich die ABAP-Doc-Kommentare von Klassen
 |---------------|
 |Als Kommentierungssprache sollte Englisch verwendet werden.|
 
-Entwicklungsteams arbeiten heutzutage überwiegend international zusammen. Auch wenn Sie derzeit rein deutschsprachig entwickeln, kann Ihr Projekt im Laufe der Zeit internationalisiert werden. Der Aufwand, der dann durch Koordinationsprobleme oder sogar nachträgliches Übersetzen entsteht, steht in keinem Verhältnis zu dem vielleicht größeren Aufwand durch englische Dokumentation.Es hat sich außerdem gezeigt, dass die Lesbarkeit von Quellcode und Kommentaren durch englischsprachige Kommentare erhöht wird. Denn die ABAP-Befehle selbst sind englisch und im Stil von Sätzen aufgebaut. Der Leser des Quellcodes muss bei englischer Dokumentation also nicht ständig die Sprache wechseln.
+Entwicklungsteams arbeiten heutzutage überwiegend international zusammen. Auch wenn Sie derzeit rein deutschsprachig entwickeln, kann Ihr Projekt im Laufe der Zeit internationalisiert werden. Der Aufwand, der dann durch Koordinationsprobleme oder sogar nachträgliches Übersetzen entsteht, steht in keinem Verhältnis zu dem vielleicht größeren Aufwand durch englische Dokumentation. Es hat sich außerdem gezeigt, dass die Lesbarkeit von Quellcode und Kommentaren durch englischsprachige Kommentare erhöht wird. Denn die ABAP-Befehle selbst sind englisch und im Stil von Sätzen aufgebaut. Der Leser des Quellcodes muss bei englischer Dokumentation also nicht ständig die Sprache wechseln.
 
 ### Dokumentation von Änderungen
 Ab dem Zeitpunkt der Produktivsetzung eines Programms sollte darauf geachtet werden, dass Änderungen in Programmen angemessen dokumentiert werden. Hier ist das richtige Maß wesentlich: Eine vollständige Versionshistorie aller Änderungen und auskommentierter Quellcode reduzieren die Lesbarkeit des Quellcodes. Trotz dieses Nachteils dokumentieren einige Entwicklungsteams bewusst alle Änderungen im Quellcode, um die Fehlersuche auf Produktiv- oder Testsystemen zu vereinfachen, in denen die Versionshistorie nicht zur Verfügung steht. 
@@ -89,24 +104,8 @@ Für alle anderen Kommentare empfiehlt SAP, Inline-Kommentare zu verwenden. Dies
 WEITERE QUELLEN
 1.	Horst Keller, Wolf Hagen Thümmel: ABAP-Programmierrichtlinien. SAP Press, 2009. ISBN: 9783836212861
 
-## Kommentarartefakte
 
 
-
-### abapDoc
-
-abapDoc ermöglicht es Klassen, Interfaces und Functionsbausteine zu dokumentieren. Die Kommentare bestehen aus einer oder mehr kommentierte Zeile. abapDoc beginnt mit dem Präfix "!.
-
-Im Quelltexteditor können abapDoc Kommentare vor deklarativen Statements platziert werden.
-
-abapDoc Kommentare werden angezeigt in
-* ABAP Element Info view
-* Element Information Popup
-* Code Completion Liste.
-
-
-
-### Knowledge Transfer Documents (KTD)
 
 
 
