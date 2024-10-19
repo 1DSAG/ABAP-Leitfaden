@@ -89,9 +89,9 @@ Für alle anderen Kommentare empfiehlt SAP, Inline-Kommentare zu verwenden. Dies
 WEITERE QUELLEN
 1.	Horst Keller, Wolf Hagen Thümmel: ABAP-Programmierrichtlinien. SAP Press, 2009. ISBN: 9783836212861
 
-##Kommentarartefakte
+## Kommentarartefakte
 
-###In the source code editor, they can be placed in an empty line directly in front of a declarative statement. You can document both globally available artifacts (such as classes, interfaces, their methods, attributes, or method parameter) and local artifacts (such as variables and field-symbols)
+
 
 ### abapDoc
 
@@ -100,9 +100,9 @@ abapDoc ermöglicht es Klassen, Interfaces und Functionsbausteine zu dokumentier
 Im Quelltexteditor können abapDoc Kommentare vor deklarativen Statements platziert werden.
 
 abapDoc Kommentare werden angezeigt in
-*ABAP Element Info view
-*Element Information Popup
-*Code Completion Liste.
+* ABAP Element Info view
+* Element Information Popup
+* Code Completion Liste.
 
 
 
