@@ -43,7 +43,7 @@ nav_order: 14
 <td></td>
 </tr>
 <tr class="header">
-<td>Björn Schulz</td>
+<td><a href="https://software-heroes.com" target="_blank" rel="noopener noreferrer">Björn Schulz</a></td>
 <td>REWE digital GmbH</td>
 <td>Organisation, Schreiben, Review</td>
 </tr>
