@@ -67,3 +67,30 @@ o Cloud ALM
 § Stand Sept 2024 laut Marco noch nicht gut nutzbar. ( freundlich formulieren ) 
 o Tricentris: https://www.tricentis.com/de/sap
 § Hat erst mal mit ABAP-Entwicklung wenig zu tun, also da wäre nix zu beaachten, aber als allgemeines Tool, um Software zu testen
+
+## Mermaid Demo
+
+```mermaid
+classDiagram
+    direction RL
+    class ZIF_AUTH_PROVIDER {
+        <<interface>>
+        is_authorized() abap_bool
+    }
+    class ZCL_AUTH_PROVIDER
+    ZCL_AUTH_PROVIDER ..|> ZIF_AUTH_PROVIDER : implements
+    class LTD_AUTH_PROVIDER {
+        +abap_bool fail_on_next_check
+    }
+    LTD_AUTH_PROVIDER ..|> ZIF_AUTH_PROVIDER : implements
+    class ZCL_AUTH_PROV_FACTORY {
+        +get_instance() ZIF_AUTH_PROVIDER
+    }
+    ZCL_AUTH_PROV_FACTORY ..> ZIF_AUTH_PROVIDER
+    ZCL_AUTH_PROV_FACTORY ..> ZCL_AUTH_PROVIDER : instantiates
+    class ZCL_PROCESSOR {
+        
+    }
+    ZCL_PROCESSOR ..> ZIF_AUTH_PROVIDER : uses
+    ZCL_PROCESSOR ..> ZCL_AUTH_PROV_FACTORY : uses
+```
