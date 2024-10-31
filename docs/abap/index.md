@@ -1,4 +1,4 @@
-s---
+---
 layout: page
 title: modern_abap_main
 permalink: /ABAP-main/
