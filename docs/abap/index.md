@@ -17,3 +17,10 @@ nav_order: 5
 ## Einführung ins Thema, Struktur und Inhalte des Kapitels.
 
 Willkommen im ABAP Kapitel - es geht los. ....
+
+
+Es ist keine Doku oder Lehrbuch
+Aufzeigen warum neues ABAP und welche Vorteile
+Zielgruppe:
+ Manager (Warum Lernbedarf für erfahrene Entwickler)
+ Entwickler
