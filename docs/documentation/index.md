@@ -7,7 +7,7 @@ nav_order: 1
 ---
 
 {: .no_toc}
-# Künstliche Intelligenz
+# Dokumentation
 
 1. TOC
 {:toc}
