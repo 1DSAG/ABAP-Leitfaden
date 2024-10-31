@@ -49,3 +49,5 @@ Ggf. VALUE mit UNTIL
 REDUCE – als äquivalent zu reduce() in vielen Sprachen
 FILTER -
 CORRESPONDING – als Ersatz zu MOVE-CORRESPONDING
+
+## Namenskonventionen - Empfehlungen NCs vs. Clean Code.
