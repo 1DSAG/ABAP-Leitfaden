@@ -16,3 +16,4 @@ nav_order: 5
 
 ## Einführung ins Thema, Struktur und Inhalte des Kapitels.
 
+Willkommen im ABAP Kapitel - es geht los. ....
