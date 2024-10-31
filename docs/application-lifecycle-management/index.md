@@ -9,9 +9,23 @@ nav_order: 4
 {: .no_toc}
 # Application Lifecycle Management (ALM)
 
-1. TOC
+1. ToC
 {:toc}
 
-## Erster Punkt 
+## Einleitung
 
-Hier beginnt das Kapitel
+ALM: (Marco)
+
+– Einleitung 
+– Was ist ALM und wie wird es in der SAP Welt durch Werkzeuge unterstützt
+  - https://support.sap.com/en/alm.html
+
+
+## Nutzen von ALM
+
+- Warum braucht man das überhaupt? Worin liegt der Nutzen?
+- Erfüllen  von externen Anforderungen 
+  - Wirtschaftsprüfer
+  - Rechtliche Regularien
+- Nutzen für das SAP Team
+  - Incident & Change Management

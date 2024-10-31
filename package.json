@@ -1,24 +1,24 @@
 {
-  "name": "dsag-adt-leitfaden",
+  "name": "dsag-abap-leitfaden",
   "version": "1.0.0",
-  "description": "DSAG ADT Leitfaden",
+  "description": "DSAG ABAP Leitfaden",
   "main": "--none",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1DSAG/ADT-Leitfaden.git"
+    "url": "git+https://github.com/1DSAG/ABAP-Leitfaden.git"
   },
   "keywords": [
     "ABAP",
     "DSAG",
-    "ADT",
-    "ABAP in Eclipse"
+    "Clean Core",
+    "Leitfaden"
   ],
   "author": "DSAG ABAP community",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/1DSAG/ADT-Leitfaden/issues"
+    "url": "https://github.com/1DSAG/ABAP-Leitfaden/issues"
   },
-  "homepage": "https://1dsag.github.io/ADT-Leitfaden/",
+  "homepage": "https://1dsag.github.io/ABAP-Leitfaden/",
   "dependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
