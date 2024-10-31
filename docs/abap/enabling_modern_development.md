@@ -1,0 +1,4 @@
+- .was braucht man als Organization
+- .wie im Projekt 
+- .Was brauchen Entwickler
+- .wie aus der Zwickmühle rauskommen
