@@ -7,7 +7,7 @@ nav_order: 1
 ---
 
 {: .no_toc}
-# Dokumentation
+# Künstliche Intelligenz
 
 1. TOC
 {:toc}
@@ -103,16 +103,4 @@ Für alle anderen Kommentare empfiehlt SAP, Inline-Kommentare zu verwenden. Dies
 
 WEITERE QUELLEN
 1.	Horst Keller, Wolf Hagen Thümmel: ABAP-Programmierrichtlinien. SAP Press, 2009. ISBN: 9783836212861
-
-
-
-
-
-
-
-
-
-
-
-  
 
