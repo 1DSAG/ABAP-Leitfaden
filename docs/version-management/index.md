@@ -12,6 +12,15 @@ nav_order: 6
 1. TOC
 {:toc}
 
-## Erster Punkt 
-
-Hier beginnt das Kapitel
+## Einleitung/Motivation
+## Git-Grundlagen
+## Einsatz von gitbasierten Lösungen in der ABAP-Entwicklung
+## Vergleich der unterschiedlichen Versionskontrollsystemen
+## Einsatzszenarien
+## Entwicklungsprozess mit Versionsverwaltung
+## Annäherung Entwicklungsprozesse ABAP und Non-ABAP über git-basierte Tools
+## Security Aspekte 
+## Integration an andere Komponenten
+## Risiken
+## Zusammenfassung
+## Empfehlung
