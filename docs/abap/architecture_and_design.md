@@ -4,7 +4,7 @@ title: Architektur und Design moderner ABAP Entwicklungen
 permalink: /abap/architecture_and_design/
 parent: abap
 prev_page_link: /abap/
-prev_page_title: ABAP
+prev_page_title: Moderne ABAP Entwicklung
 next_page_link: /abap/clean_and_modern_abap/
 next_page_title: Sauberer und moderner ABAP Code
 has_children: true
