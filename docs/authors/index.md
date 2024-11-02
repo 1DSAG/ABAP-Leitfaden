@@ -79,7 +79,7 @@ nav_order: 14
 </tr>
 <tr class="odd">
 <td>Florian Henninger</td>
-<td>FIS</td>
+<td>Cordes und Graefe</td>
 <td></td>
 </tr>
 <tr class="header">
