@@ -1,9 +1,12 @@
 ---
 layout: page
-title: modern_abap_main
-permalink: /ABAP-main/
-next_page_link: /architecture_and_design.md
-next_page_title: Architektur und Design moderner ABAP Entwicklung
+title: Das ABAP Restful Application Programming Model (RAP)
+permalink: /abap/restful_abap/
+parent: /abap/
+prev_page_link: /abap/clean_and_modern_abap/
+prev_page_title: Sauberer und moderner ABAP Code
+next_page_link: /abap/enabling_modern_development/
+next_page_title: Rahmenbedingungen und Enabling moderne ABAP Entwicklung im Team
 has_children: true
 nav_order: 5
 ---
