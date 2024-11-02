@@ -1,15 +1,18 @@
 ---
 layout: page
-title: clean_and_modern_abap
-permalink: /ABAP-modern_clean/
-next_page_link: /architecture_and_design.md
-next_page_title: Architektur und Design moderner ABAP Entwicklung
+title: Sauberen und modernen ABAP Code schreiben
+permalink: /abap/clean_and_modern_abap/
+parent: abap
+prev_page_link: /abap/architecture_and_design/
+prev_page_title: Architektur und Design moderner ABAP Anwendungen
+next_page_link: /abap/restful_abap/
+next_page_title: Das Restful ABAP Programming Model (RAP)
 has_children: true
 nav_order: 5
 ---
 
 {: .no_toc}
-# Modernes ABAP schreiben
+# Modernes ABAP schreiben das auch schön aussieht
 
 1. TOC
 {:toc}
