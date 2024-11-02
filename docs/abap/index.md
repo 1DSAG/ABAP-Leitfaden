@@ -1,8 +1,8 @@
 ---
 layout: page
-title: modern_abap_main
-permalink: /ABAP-main/
-next_page_link: /architecture_and_design.md
+title: Moderne ABAP Entwicklung
+permalink: /abap/
+next_page_link: /abap/architecture_and_design/
 next_page_title: Architektur und Design moderner ABAP Entwicklung
 has_children: true
 nav_order: 5
