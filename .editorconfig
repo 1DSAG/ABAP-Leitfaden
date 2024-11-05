@@ -3,9 +3,10 @@
 # top-most EditorConfig file
 root = true
 
+# 30.10.2024: Deaktiviert, siehe https://github.com/1DSAG/ABAP-Leitfaden/issues/42
 # Unix-style newlines with a newline ending every file
-[*]
-end_of_line = lf
+# [*]
+# end_of_line = lf
 
 # Matches multiple files with brace expansion notation
 # Set default charset
