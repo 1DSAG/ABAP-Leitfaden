@@ -62,6 +62,8 @@ Beginnend mit SAP NetWeaver 7.50 lassen sich die ABAP-Doc-Kommentare von Klassen
 
 ### Kurztexte
 
+Zu vielen Objekte können Kurztexte angelegt werden, wie eine Beschreibung zu einem Datenelement oder einer Methode.
+
 ### abapDoc
 
 abapDoc ermöglicht es Klassen, Interfaces und Functionsbausteine zu dokumentieren. Die Kommentare bestehen aus einer oder mehr kommentierte Zeile. abapDoc beginnt mit dem Präfix "!.
@@ -74,6 +76,10 @@ abapDoc Kommentare werden angezeigt in
 * Code Completion Liste.
 
 ### Knowledge Transfer Documents (KTD)
+
+Seit ABAP Plattform 7.55 gibt es das Knowledge Transfer Document. KTD kann für jedes Element eines Objekts die Dokumentation einzeln erstellt werden. Es basiert auf Markdown-Sprache mit einfacher Textformatierungssyntax.
+
+KTD müssen im selben Paket wie das Entwicklungsobjekt sein. Es wird nicht automatisch mit dem Entwicklungsobjekt transportiert, aber wenn das Entwicklungsobjekt gelöscht wird, wird auch das dazugehörige KTD gelöscht.
 
 ## Dokumentation im Quellcode
 
