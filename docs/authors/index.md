@@ -20,12 +20,12 @@ nav_order: 14
 <tr class="odd">
 <td>Alexander Lukas</td>
 <td>EnBW</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="header">
 <td>Andrea Schlotthauer</td>
 <td>SAP</td>
-<td></td>
+<td>Review</td>
 </tr>
 <tr class="odd">
 <td>Andreas Göb</td>
@@ -35,22 +35,22 @@ nav_order: 14
 <tr class="header">
 <td>Armin Junge</td>
 <td>msg systems ag</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="odd">
 <td>Bernd Reichel</td>
 <td>HORNBACH Baumarkt AG</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="header">
-<td>Björn Schulz</td>
+<td><a href="https://www.linkedin.com/in/bjoern-schulz-swh/">Björn Schulz</a></td>
 <td>REWE digital GmbH</td>
 <td>Organisation, Schreiben, Review</td>
 </tr>
 <tr class="odd">
 <td>Carine Tchoutouo Djomo</td>
 <td>SAP</td>
-<td></td>
+<td>Review</td>
 </tr>
 <tr class="header">
 <td>Domi Bigl</td>
@@ -60,12 +60,12 @@ nav_order: 14
 <tr class="odd">
 <td>Dominik Panzer</td>
 <td>Intense AG</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="header">
 <td>Enno Wulff</td>
 <td>Inwerken</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="odd">
 <td>Fabian Küng</td>
@@ -75,12 +75,12 @@ nav_order: 14
 <tr class="header">
 <td>Fabian Lupa</td>
 <td>Adesso</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="odd">
 <td>Florian Henninger</td>
 <td>Cordes und Graefe</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="header">
 <td>Frank Engert</td>
@@ -110,7 +110,7 @@ nav_order: 14
 <tr class="odd">
 <td>Jens Knappik</td>
 <td>thyssenkrupp</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="header">
 <td>Jens Zähringer</td>
@@ -120,12 +120,12 @@ nav_order: 14
 <tr class="odd">
 <td>Josephine Reinhold</td>
 <td>Softway AG</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="header">
 <td>Julius Dacheneder</td>
 <td>msg systems ag</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="odd">
 <td>Jürgen Creyaufmüller</td>
@@ -140,12 +140,12 @@ nav_order: 14
 <tr class="odd">
 <td>Marco Krapf</td>
 <td>Würth</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="header">
 <td>Marcus Richter</td>
 <td>CGI</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="odd">
 <td>Markus Gradl</td>
@@ -155,32 +155,32 @@ nav_order: 14
 <tr class="header">
 <td>Markus Rest</td>
 <td>SVA</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="odd">
 <td>Peter Luz</td>
 <td>Bosch</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="header">
 <td>Sebastian Freilinger-Huber</td>
 <td>msg systems ag</td>
-<td></td>
+<td>Organisation, Review</td>
 </tr>
 <tr class="odd">
 <td>Sven Treutler</td>
 <td>rku IT</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="header">
 <td>Thomas Fiedler</td>
 <td>SAP</td>
-<td></td>
+<td>Review</td>
 </tr>
 <tr class="odd">
 <td>Timo John</td>
 <td>ADventas</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="header">
 <td>Urs Bühlmann</td>
@@ -190,7 +190,7 @@ nav_order: 14
 <tr class="odd">
 <td>Volodymyr Vashchenko</td>
 <td>Festo</td>
-<td></td>
+<td>Schreiben, Review</td>
 </tr>
 
 </thead>
