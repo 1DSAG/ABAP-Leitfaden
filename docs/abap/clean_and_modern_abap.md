@@ -2,7 +2,7 @@
 layout: page
 title: Sauberen und modernen ABAP Code schreiben
 permalink: /abap/clean_and_modern_abap/
-parent: abap
+parent: Moderne ABAP Entwicklung
 prev_page_link: /abap/architecture_and_design/
 prev_page_title: Architektur und Design moderner ABAP Anwendungen
 next_page_link: /abap/restful_abap/
