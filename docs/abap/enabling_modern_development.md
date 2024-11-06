@@ -2,7 +2,7 @@
 layout: page
 title: Rahmenbedingungen und Enabling moderne ABAP Entwicklung im  Unternehmen und in den Teams
 permalink: /abap/enabling_modern_development/
-parent: abap
+parent: Moderne ABAP Entwicklung
 prev_page_link: /abap/restful_abap/
 prev_page_title: Das ABAP Restful Application Programming Model (RAP)
 nav_order: 5
