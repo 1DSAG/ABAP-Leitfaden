@@ -7,7 +7,7 @@ prev_page_link: /abap/
 prev_page_title: Moderne ABAP Entwicklung
 next_page_link: /abap/clean_and_modern_abap/
 next_page_title: Sauberer und moderner ABAP Code
-nav_order: 5
+nav_order: 1
 ---
 
 {: .no_toc}

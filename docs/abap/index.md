@@ -5,7 +5,7 @@ permalink: /abap/
 next_page_link: /abap/architecture_and_design/
 next_page_title: Architektur und Design moderner ABAP Entwicklung
 has_children: true
-nav_order: 5
+nav_order: 3
 ---
 
 {: .no_toc}

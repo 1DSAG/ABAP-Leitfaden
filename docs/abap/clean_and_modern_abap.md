@@ -7,7 +7,7 @@ prev_page_link: /abap/architecture_and_design/
 prev_page_title: Architektur und Design moderner ABAP Anwendungen
 next_page_link: /abap/restful_abap/
 next_page_title: Das Restful ABAP Programming Model (RAP)
-nav_order: 5
+nav_order: 2
 ---
 
 {: .no_toc}
