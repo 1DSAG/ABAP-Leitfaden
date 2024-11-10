@@ -10,11 +10,12 @@
     "ABAP",
     "abapGit",
     "DSAG",
-    "HANA",
-    "S/4HANA",
-    "SAP",
     "ERP",
-    "OSS"
+    "Fiori",
+    "HANA",
+    "OSS",
+    "S/4HANA",
+    "SAP"
   ],
   "flagWords": [
     "S4HANA",

@@ -20,7 +20,7 @@ Open Source hat es in der ABAP-Entwicklung besonders schwer Fuß zu fassen. Imme
 
 1. ...Open-Source-Projekte in die eigenen Lösungen zu integrieren ([Einsatz von Open Source](using-open-source))
 2. ...an Open-Source-Projekten mitzuwirken ([Beteiligung an Open Source](contributing-to-open-source))
-3. ...eigene Lösungen als Open-Source-Projekt bereitzustellen ([Entwicklung von Open-Source](developing-open-source)).
+3. ...eigene Lösungen als Open-Source-Projekt bereitzustellen ([Entwicklung von Open Source](developing-open-source)).
 
 Eine _Open-Source-Strategie_ muss jedes Unternehmen für sich selbst erschließen. Hier finden Sie eine Arbeitsgrundlage und Erfahrungsberichte.
 
@@ -33,31 +33,32 @@ SAP S/4HANA ist nicht "Open Source" nur weil Sie als Entwickler den von der SAP 
 
 ## Motivation und Chancen
 
-Warum sollten Sie sich mit Open Source in der ABAP-Entwicklung beschäftigen? Langsam aber stetig steigt die Anzahl an Szenarien, in denen Ihnen Open Source, und _auch_ Open-Source-ABAP im Alltag begegnet, statt, dass Sie danach selbst aktiv suchen müssen. Die Anzahl an in der Open Source Community verfügbaren ABAP-Projekten wächst - auf [dotabap.org](https://dotabap.org) werden zum Zeitpunkt der Erstellung dieses Kapitels 290 Projekte gelistet. Die SAP selbst veröffentlicht Software als Open-Source-Projekte, wie zum Beispiel [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap-cloud) oder auch den [RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) und diverse Tutorials, wie zum Beispiel [RAP100](https://github.com/SAP-samples/abap-platform-rap100). Sich dem kategorisch zu verschließen führt zunehmend mehr zu verpassten Chancen in...
+Warum sollten Sie sich mit Open Source in der ABAP-Entwicklung beschäftigen? Langsam aber stetig steigt die Anzahl an Szenarien, in denen Ihnen Open Source, und _auch_ Open-Source-ABAP im Alltag begegnet, statt, dass Sie danach selbst aktiv suchen müssen. Die Anzahl an in der Open Source Community verfügbaren ABAP-Projekten wächst - auf [dotabap.org](https://dotabap.org) werden zum Zeitpunkt der Erstellung dieses Kapitels 290 Projekte gelistet. Die SAP selbst veröffentlicht Software als Open-Source-Projekte, wie zum Beispiel [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap-cloud) oder auch den [RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) und diverse Tutorials oder Lerninhalte, wie zum Beispiel [RAP100](https://github.com/SAP-samples/abap-platform-rap100) oder [Fiori Elements Feature Showcase for RAP](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase). Sich dem kategorisch zu verschließen führt zunehmend mehr zu verpassten Chancen in...
 
 1. __...der Optimierung der eigenen Entwicklungsprozesse__
-    - Mit Tools wie [ABAP Cleaner](https://github.com/SAP/abap-cleaner), [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap-cloud) und [abapOpenChecks](https://github.com/larshp/abapOpenChecks) können Sie __Entwickler entlasten__ bei der Umsetzung von Entwicklungsrichtlinien und Best Practices, in dem diese __teilweise automatisiert umgesetzt__ und in anderen Teilen statisch geprüft und Entwickler __aktiv auf Findings hingewiesen__ werden. Und das __weit über den Umfang der im SAP-Standard ausgelieferten Möglichkeiten hinaus__ (ABAP Formatter / Pretty Printer, ABAP Test Cockpit).  
-    - Mit [abapGit](https://abapgit.org/) bietet sich Ihnen die Möglichkeit Ihre __Entwicklungsprozesse _Technologie-übergreifend_ mit einheitlichem Tooling zu harmonisieren__ und Ihre __gesamte Unternehmenscodebase in _einer_ Single Source of Truth__ zu verwalten, statt ABAP als special Snowflake mit Sonderregeln zu betrachten. Sie können __Code Reviews__ mit dafür ausgelegtem Tooling durchführen. Sie können angefangene __Änderungen automatisiert zurücknehmen__, wenn sie der Fachbereich nach Entwicklungszeit doch nicht mehr haben möchte __ohne große manuelle Rückbauaufwände__. Und das alles sogar bei Systemen bis Basis-Release 7.02 runter.  
-    - Mit Hilfe von [abaplint](https://abaplint.org/) können Sie __außerhalb eines SAP-Systems__ ABAP Coding prüfen, entwickeln und sogar [ausführen](https://transpiler.abaplint.org/). Sie können so __Continuous Integration Pipelines aufsetzen__ ohne dafür spezielle SAP-Systeme aufsetzen zu müssen und statische Codeanalyse und Unit Tests ausführen (mit Einschränkungen im Vergleich zu "nativer" Ausführung in ABAP-Systemen).  
-    - Über Generatoren wie den [RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) oder [ABAP OpenAPI Generator](https://github.com/abap-openapi/abap-openapi) können Sie __Boilerplate-Coding generieren__ und müssen dieses anschließend nur anpassen. So lassen sich __Entwicklungsaufwände sparen__ und insbesondere auch schnell Prototypen aufsetzen.
+    1. Mit Tools wie [ABAP Cleaner](https://github.com/SAP/abap-cleaner), [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap-cloud) und [abapOpenChecks](https://github.com/larshp/abapOpenChecks) können Sie Entwickler entlasten bei der Umsetzung von Entwicklungsrichtlinien und Best Practices, in dem diese teilweise automatisiert umgesetzt und in anderen Teilen statisch geprüft und Entwickler aktiv auf Findings hingewiesen werden. Und das weit über den Umfang der im SAP-Standard ausgelieferten Möglichkeiten hinaus (ABAP Formatter / Pretty Printer, ABAP Test Cockpit).  
+    2. Mit [abapGit](https://abapgit.org/) bietet sich Ihnen die Möglichkeit Ihre Entwicklungsprozesse _Technologie-übergreifend_ mit einheitlichem Tooling zu harmonisieren und Ihre gesamte Unternehmenscodebase in _einer_ Single Source of Truth zu verwalten, statt ABAP als special Snowflake mit Sonderregeln zu betrachten. Sie können Code Reviews mit dafür ausgelegtem Tooling durchführen. Sie können angefangene Änderungen automatisiert zurücknehmen, wenn sie der Fachbereich nach Entwicklungszeit doch nicht mehr haben möchte ohne große manuelle Rückbauaufwände. Und das alles sogar bei Systemen bis Basis-Release 7.02 runter.  
+    3. Mit Hilfe von [abaplint](https://abaplint.org/) können Sie außerhalb eines SAP-Systems ABAP Coding prüfen, entwickeln und sogar [ausführen](https://transpiler.abaplint.org/). Sie können so Continuous Integration Pipelines aufsetzen ohne dafür spezielle SAP-Systeme aufsetzen zu müssen und statische Codeanalyse und Unit Tests ausführen (mit Einschränkungen im Vergleich zu "nativer" Ausführung in ABAP-Systemen).  
+    4. Über Generatoren wie den [RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) oder [ABAP OpenAPI Generator](https://github.com/abap-openapi/abap-openapi) können Sie Boilerplate-Coding generieren und müssen dieses anschließend nur anpassen. So lassen sich Entwicklungsaufwände sparen und insbesondere auch schnell Prototypen aufsetzen.
 
-2. __...der Umsetzung von betriebswirtschaftlichen Anforderungen.__
-    - Mit [abap2xlsx](https://github.com/abap2xlsx/abap2xlsx) können Sie die kreativen Anforderungen der Fachbereiche zur Erstellung, zum Auslesen und zur Änderung von Excel-Dateien umsetzen. Und das schon mit ABAP 7.31. Sie müssen so __nicht Ihre Prozesse anpassen__, weil die OLE-basierte SAP API für Excel-Mappen keine Hintergrundjobs unterstützt und ein installiertes Microsoft Office beim Anwender erwartet. Sie müssen insbesondere auch __nicht den Entwicklungsaufwand investieren selbst eine Codebase zu implementieren und zu warten__, die sich um die Konvertierung und den Umgang mit Excel-Dateien befasst. Und Sie müssen auch nicht in Anbetracht des Implementierungsaufwand die Anforderung als nicht verhältnismäßig lösbar abweisen sondern __können auf der Arbeit aufsetzen, die andere sich bereits gemacht haben__.
+2. __...der Umsetzung von betriebswirtschaftlichen Anforderungen__
+    1. Mit [abap2xlsx](https://github.com/abap2xlsx/abap2xlsx) können Sie die kreativen Anforderungen der Fachbereiche zur Erstellung, zum Auslesen und zur Änderung von Excel-Dateien umsetzen. Und das schon mit ABAP 7.31. Sie müssen so nicht Ihre Prozesse anpassen, weil die OLE-basierte SAP API für Excel-Mappen keine Hintergrundjobs unterstützt und ein installiertes Microsoft Office beim Anwender erwartet. Sie müssen insbesondere auch nicht den Entwicklungsaufwand investieren selbst eine Codebase zu implementieren und zu warten, die sich um die Konvertierung und den Umgang mit Excel-Dateien befasst. Und Sie müssen auch nicht in Anbetracht des Implementierungsaufwands die Anforderung als nicht verhältnismäßig umsetzbar abweisen sondern können auf der Arbeit aufsetzen, die andere sich bereits gemacht haben.
+    2. Ähnlich verhält es sich bei anderen technischen Problemstellungen, zu denen es bereits etablierte Open-Source-Lösungen gibt. Beispielsweise [ABAP Logger](https://github.com/ABAP-Logger/ABAP-Logger) anstelle eigener Wrapper-Klassen um die Funktionsbausteine des Business Application Log. Oder [ajson](https://github.com/sbcgua/ajson) als JSON-Bibliothek für ABAP ab 7.02.
 
-An dieser Stelle ist bereits eine Unterscheidung erkennbar, die bei einer stückweisen Einführung einer Open-Source-Strategie im SAP- und speziell im ABAP-Kontext helfen kann. Punkt 1, die Optimierung der Entwicklungsprozesse, betrifft Tooling, welches _im Entwicklungsprozess_ genutzt wird. Dies ist oft zunächst einfacher zu betrachten als Punkt 2, die Umsetzung von betriebswirtschaftlichen Anforderungen. Bibliotheken, die dabei genutzt werden, erreichen zwangsläufig an der Stelle auch Ihr Produktivsystem und sind somit nochmal unter anderen Gesichtspunkten zu betrachten.
+3. __...der Außendarstellung__
+    1. Sie können bewerten, ob wiederverwendbare Komponenten Ihrer ABAP-basierten Lösungen nicht auch als Open-Source-Projekt Sinn machen würden. Coding, welches nicht in Konkurrenz Ihr Geschäftsmodell umsetzt, sondern die Optimierung des Entwicklungsprozesses oder übergreifenden Themen wie der User Experience, Revisionssicherheit oder ähnlichem dient, könnte auch von anderen Unternehmen genutzt werden. Wenn Sie diese Komponenten als frei verfügbare Software publizieren, ermöglichen Sie externe Beteiligungen an der Entwicklung von denen Sie profitieren können.  
+    Zusätzlich kann dies als Aushängeschild im Recruiting neuer Entwickler dienen. Diese sehen direkt, dass Sie modern entwickeln und sich nicht scheuen den Quellcode nach außen zu zeigen.  
+    Beispiele: [IBM](https://github.com/IBM?q=&type=all&language=abap&sort=), [Microsoft](https://github.com/microsoft?q=&type=all&language=abap&sort=), [rku.it](https://github.com/rku-it-GmbH?q=&type=all&language=abap&sort=), [Schwarz IT](https://github.com/SchwarzIT?q=&type=all&language=abap&sort=)
+    2. Wenn Ihr Unternehmen Dienstleistungen zur Verfügung stellt, die über Schnittstellen mit Partnern/Kunden umgesetzt werden, welche diese auch in Ihren SAP-Systemen mittels ABAP implementieren, können Sie eine Open Source SDK bereitstellen, welche Ihre API implementiert. Die Nutzer der SDK haben direkt eine Möglichkeit Issues zu öffnen oder ergänzende Features selbst per Pull Request vorzuschlagen und ihren Implementierungsaufwand erheblich zu verringern. Sie können intern die SDK selbst einsetzen oder für Integrationstests verwenden.    
+    Beispiele: [ABAP SDK for Azure](https://github.com/microsoft/ABAP-SDK-for-Azure), [AI SDK for SAP ABAP](https://github.com/microsoft/aisdkforsapabap), [ABAP SDK for IBM watsonx](https://github.com/IBM/abap-sdk-nwas-x)
 
+4. __...im Upskilling von Entwicklern__
+    1. Durch die Auseinandersetzung mit externen Bibliotheken und deren Implementierung können Sie Ihre Kenntnisse erweitern mit Blick auf objektorientiertes Design und Softwarearchitektur. Sie können mit neuen Technologien oder Ansätzen vertraut werden und das direkt mit produktivem Quellcode, statt Demobeispielen. Dieser Effekt verstärkt sich insbesondere bei der Beteiligung durch eigene Features oder Bugfixes und Code Reviews.
 
-Notizen:
+{: .highlight }
+Sie sehen es gibt viele Stellen an denen Open Source, _auch in der ABAP-Entwicklung_, einen erheblichen Mehrwert liefern kann. Eine Auseinandersetzung mit dem Thema lohnt sich daher in jedem Fall.
 
-- Fertige Lösungen für eigene Probleme existieren bereits
-  - Kostenersparnis gegenüber Eigenentwicklung und Wartung
-  - End-User-Benefit gegenüber "Aufwand zu groß" / rentiert sich nicht
-- Open-Source-Tools für den Entwicklungsprozess erhöhen die Softwarequalität, verkürzen Entwicklungszeiten, verringern Fehler
-- Aushängeschild in der Personalsuche: Nutzung moderner Tools, wir entwickeln modern
-- Möglichkeit externer Contributions
-- Enablement der Nutzung eigener Lösungen für Kunden (SDK/API für ABAP)
-
-## Erschwerte Rahmenbedingungen
+## Erschwerte Rahmenbedingungen und Risiken
 
 - Code in der Datenbank
 - Proprietäre Programmiersprache
@@ -65,6 +66,75 @@ Notizen:
 - Geschäftskritische Anwendungen und Prozesse
 - Unternehmenskritische Daten im System
 
+## Ausbaustufen
+
+Eine mögliche Herangehensweise an das Thema ist die verschiedenen Anwendungsfälle als aufeinander aufbauend zu sehen. Zusätzlich lässt sich der Einsatz von Open-Source-Komponenten in der eigenen Software aufteilen in die Nutzung im Entwicklungsprozess und die Integration in das Produktivcoding.
+
+```mermaid
+flowchart LR
+ subgraph nutzung["Nutzung von Open-Source-Lösungen"]
+        nutzung_dev("Nutzung von Entwicklertools im Entwicklungsprozess")
+        nutzung_prd("Nutzung von Bibliotheken im Produktivcoding")
+  end
+    nutzung_dev -.-> nutzung_prd
+    nutzung --> beteiligung("Beteiligung an Open-Source-Lösungen")
+    beteiligung --> bereitstellung("Bereitstellung eigener Open-Source-Lösungen")
+
+```
+
+> Notizen:
+> 
+> An dieser Stelle ist bereits eine Unterscheidung erkennbar, die bei einer stückweisen Einführung einer Open-Source-Strategie im SAP- und speziell im ABAP-Kontext helfen kann. Punkt 1, die Optimierung der Entwicklungsprozesse, betrifft Tooling, welches _im Entwicklungsprozess_ genutzt wird. Dies ist oft zunächst einfacher zu betrachten als Punkt 2, die Umsetzung von betriebswirtschaftlichen Anforderungen. Bibliotheken, die dabei genutzt werden, erreichen zwangsläufig an der Stelle auch Ihr Produktivsystem und sind somit nochmal unter anderen Gesichtspunkten zu betrachten.
+> 
+> - Fertige Lösungen für eigene Probleme existieren bereits
+>   - Kostenersparnis gegenüber Eigenentwicklung und Wartung
+>   - End-User-Benefit gegenüber "Aufwand zu groß" / rentiert sich nicht
+> - Open-Source-Tools für den Entwicklungsprozess erhöhen die Softwarequalität, verkürzen Entwicklungszeiten, verringern Fehler
+> - Aushängeschild in der Personalsuche: Nutzung moderner Tools, wir entwickeln modern
+> - Möglichkeit externer Contributions
+> - Enablement der Nutzung eigener Lösungen für Kunden (SDK/API für ABAP)
+
 ## Lizenzen
 
-- TODO: Lizenzübersicht hier oder in using-open-source
+> Aspekte von Lizenzen:
+
+<!-- markdownlint-disable MD033 -->
+<table>
+    <tr>
+        <th></th>
+        <th><a href="https://choosealicense.com/licenses/mit/">MIT</a></th>
+        <th>Apache 2.0</th>
+        <th>GPL 3.0 </th>
+        <th>GPL 2.0 </th>
+        <th>...</th>
+    </tr>
+    <tr>
+        <td colspan="6" class="bg-grey-lt-000">Rechte</td>
+    </tr>
+    <tr>
+        <td>Kommerzielle Nutzung</td>
+        <td><span class="label label-green">Erlaubt</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><span class="label label-red">Nicht Erlaubt</span></td>
+    </tr>
+    <tr>
+        <td>Weiterverbreitung</td>
+        <td><span class="label label-green">Erlaubt</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="6" class="bg-grey-lt-000">Pflichten</td>
+    </tr>
+</table>
+<!-- markdownlint-enable MD033 -->
+
+[choosealicense](https://choosealicense.com)
+
+https://choosealicense.com/appendix/
+
+Bereitstellung von Lizenzen in ABAP-Code...
