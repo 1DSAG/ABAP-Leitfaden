@@ -58,7 +58,7 @@ nav_order: 14
 <td></td>
 </tr>
 <tr class="odd">
-<td>Dominik Panzer</td>
+<td><a href="https://www.linkedin.com/in/dominik-panzer-690702248">Dominik Panzer</a></td>
 <td>Intense AG</td>
 <td>Schreiben, Review</td>
 </tr>
