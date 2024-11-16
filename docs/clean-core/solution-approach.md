@@ -49,7 +49,7 @@ Entscheidungshilfe
 
 ## ABAP Cloud
 
-ABAP Cloud ist das neue Entwicklungsmodell für alle Systemlandschaften, egal ob SAP BTP ABAP Environment, S/4HANA Cloud Public Edition und Private Edition oder S/4HANA On-Premise, können Sie das selbe Modell für die Entwicklung von Clean Core und Cloud Ready Applications verwenden. Die Verwendung wird Ihnen im [Extensibility Guide für S/4HANA](https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html) genauer beschrieben. In den folgenden Abschnitten werden Sie einige Details erhalten. ABAP Cloud ist fundamentaler Bestandteil, wenn Sie Clean Core erreichen möchten.
+ABAP Cloud ist das neue Entwicklungsmodell für alle Systemlandschaften, egal ob SAP BTP ABAP Environment, S/4HANA Cloud Public Edition und Private Edition oder S/4HANA On-Premise, können Sie das selbe Modell für die Entwicklung von Clean Core und Cloud Ready Anwendungen verwenden. Die Verwendung wird Ihnen im [Extensibility Guide für S/4HANA](https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html) genauer beschrieben. In den folgenden Abschnitten werden Sie einige Details erhalten. ABAP Cloud ist fundamentaler Bestandteil, wenn Sie Clean Core erreichen möchten.
 
 ![ABAP Cloud](./img/image-07.png)
 
@@ -62,4 +62,31 @@ Die Verwendung von freigegebenen APIs (Entwicklungsobjekte mit C1-Freigabe) ist 
 
 ### 3-TIER Modell
 
-Das 3-TIER Modell ist zentraler Bestandteil, wenn Sie einen Übergang von klassischer ABAP Entwicklung in Richtung ABAP Cloud gehen. Dabei sind erst einmal alle Objekte, die außerhalb einer Software Komponente, kurz SWC, mit ABAP Cloud sind, nicht Clean Core. Die Aufgabe besteht für Sie nun darin, die Entwicklungen ABAP Cloud Ready zu migrieren. Dabei werden Objekte von TIER-3 auf TIER-1 verschoben und nicht freigegebene APIs ersetzt. Sind die APIs aktuell nicht freigegeben, könnne sie auf TIER-2 soganannte Wrapper erstellen, die SAP Funktionalität kapseln und für Ihre Entwicklung in TIER-1 freigeben. Im Zuge dessen sollten Sie einen Influence Request bei SAP erstellen, um die Freigabe oder eine alternative API zu erhalten.
+Das 3-TIER Modell ist zentraler Bestandteil, wenn Sie einen Übergang von klassischer ABAP Entwicklung in Richtung ABAP Cloud gehen. Dabei sind erst einmal alle Objekte, die außerhalb einer Software Komponente, kurz SWC, mit ABAP Cloud sind, nicht Clean Core. Die Aufgabe besteht für Sie nun darin, die Entwicklungen ABAP Cloud Ready zu migrieren. Dabei werden Objekte von TIER-3 auf TIER-1 verschoben und nicht freigegebene APIs ersetzt. 
+
+Sind die APIs aktuell nicht freigegeben, könnne Sie auf TIER-2 soganannte Wrapper erstellen, die SAP Funktionalität kapseln und für Ihre Entwicklung in TIER-1 freigeben. Im Zuge dessen sollten Sie einen Influence Request bei SAP erstellen, um die Freigabe oder eine alternative API zu erhalten. Weitere Informationen zur Erstellung von Wrappern und welche Objekte sich eignen, finden sie im SAP Guide: [ABAP Cloud API Enablement](https://www.sap.com/documents/2023/05/b0bd8ae6-747e-0010-bca6-c68f7e60039b.html).
+
+
+### Migration von Reports
+
+Reports/Programme sind heute zentraler Bestandteil zur Ausführung von Logik in einem SAP System, egal ob im Dialog oder im Hintergrund per Batch-Job. Allerdings sollten Sie bei der Migration beachten, dass Reports nicht mehr Teil von ABAP Cloud sind. 
+
+Aktuell gibt es die folgenden Nachfolger:
+- Fiori App - Erstellung einer Anwendung auf SAP Fiori Basis mit dem ABAP RESTful Programming Model, kurz RAP. Weitere Informationen zu RAP finden Sie im Kapitel für Entwicklung. Die App ist der Einstiegspunkt für den Anwender.
+- Application Job - Diese neue Art von Job basiert in der Entwicklung auf einer Klasse, die durch eine zentrale Routine im System gestartet wird. Der Start erfolgt über eine Fiori Anwendung. Jobs sind vor allem zur Automatisierung von Tätigkeiten im Hintergrund.
+
+### Neue Konzepte
+
+Mit der Einführung von ABAP Cloud, wurden verschiedene Entwicklungskonzepte überarbeitet und Nachfolger zur Verfügung gestellt. Sie sollten daher beachten, dass die alten Konzepte teilweise nicht mehr gültig sind. Dazu einige Beispiele:
+
+| Bereich           | Alt (TIER-3)       | Neu (TIER-1)                        |
+|-------------------|--------------------|-------------------------------------|
+| Application Log   | SLG0, SLG1         | CL_BALI_OBJECT_HANDLER, ABAP API    |
+| Job               | SM36, SM37, Report | Application Job                     |
+| E-Mail            | CL_BCS             | CL_BCS_MAIL_MESSAGE                 |
+| E-Mail            | SOST               | Monitor Email Transmissions (F5442) |
+| Programmiermodell | BOPF               | RAP                                 |
+| Tabellenpflege    | SM30               | Business Configuration              |
+| Übersetzung       | SE63               | Maintain Translations (F4950)       |
+
+Die vollständige Liste finden Sie [hier](https://software-heroes.com/abap-cloud-api).
