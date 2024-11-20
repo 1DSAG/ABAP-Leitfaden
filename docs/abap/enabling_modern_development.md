@@ -20,6 +20,7 @@ nav_order: 4
 - .was braucht man als Organization
 - .wie im Projekt 
 - .Was brauchen Entwickler
+- .Wie sollten die Entwicklungsrichtlinien im Unternehmen aufgesetzt werden (Aufnahme Clean Code, Clean Core ... wie reinnehmen) 
 - .wie aus der Zwickmühle rauskommen
 - .Schulungen
 - .Kleine Applikationen als Showcases
