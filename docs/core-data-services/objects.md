@@ -24,7 +24,7 @@ __Beispiel__
 define type myDate : abap.dats
 ```
 
-> Details finden Sie unter [SAP Help (CDS Simple Types)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_simple_types.htm)
+> Details finden Sie unter [SAP Help (CDS Simple Types)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_simple_types.htm)
 
 ### Enumerated Types
 Definieren Sie einen enumerierten Typ mit Konstanten. Sie können den Typ und die Konstanten in CDS Objekten verwenden.
@@ -57,7 +57,7 @@ where
   weekday = Weekdays.#Friday
 ```
 
-> Details finden Sie unter [SAP Help (CDS Enum Types)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_enumeration_types.htm)
+> Details finden Sie unter [SAP Help (CDS Enum Types)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_enumeration_types.htm)
 
 ## Function Definitions
 Aktuell bietet SAP nur die Definition einer _Scalar Function_ an. Dabei gibt es zwei verschiedene Arten von Funktionen.
@@ -70,13 +70,46 @@ Aktuell bietet SAP nur die Definition einer _Scalar Function_ an. Dabei gibt es 
     * Eine Scalar Function Implementation Reference, als Verknüpfung zwischen der Definition und der Implementierung
     * Eine AMDP Function, welche die Implementierung der Scalar Function darstellt
 
-> Details finden Sie unter [SAP Help (CDS Scalar Functions)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_scalar_functions.htm)
+> Details finden Sie unter [SAP Help (CDS Scalar Functions)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_scalar_functions.htm)
 
 ## Data Definitions
 
 ### DDIC-based views
+> DDIC basierte Views sind ab Release 7.55 ersetzt worden durch View Entities, welche nicht mehr von DDIC Objekten abhängig sind
+
+Ein DDIC basierter View kann für DDIC Datenbanktabellen, DDIC Views und andere CDS Views erstellt werden. Bei der Definition muss über eine Annotation ein SQL-View-Name angegeben werden, der im ABAP Dictionary als DDIC View erzeugt wird. Bei der Aktivierung des CDS Views werden ein CDS Entity und der annotierte DDIC View erzeugt bzw. aktualisiert. Per SQL kann auf die Daten der referenzierten Objekte zugegriffen werden.
+
+__Beispiel__
+
+```abap
+@AbapCatalog.sqlViewName: 'CDS_DB_VIEW'
+define view ddic_based_view as select from ...
+{
+  field,
+  ...
+}
+where
+  field = 'ABC'
+```
+
+> Details finden Sie unter [SAP Help (CDS DDIC-Based Views)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_v1_views.htm)
 
 ### View Entities
+Mit einem CDS View Entity kann man auf Felder einer Datenquelle (Datenbanktabellen, andere CDS Entitäten) zugreifen. Die View Entities dienen als Basis für die [ABAP Data Models](https://help.sap.com/docs/abap-cloud/abap-data-models/abap-data-models) und werden vom [ABAP RESTful Application Programming Model](/abap/restful_abap) verwendet. Sie sind also ein wichtiger Bestandteil für eine moderne ABAP Entwicklung.
+
+__Beispiel__
+
+```abap
+view entity view_entity as select from ...
+{
+  field,
+  ...
+}
+where
+  field = 'ABC'
+```
+
+> Details finden Sie unter [SAP Help (CDS View Entities)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abencds_v2_views.htm)
 
 ### Projection Views
 
