@@ -1,0 +1,3 @@
+# Dies überschreibt mögliche core.autocrlf Konfigurationen, siehe
+# https://github.com/1DSAG/ABAP-Leitfaden/issues/42
+* -text
