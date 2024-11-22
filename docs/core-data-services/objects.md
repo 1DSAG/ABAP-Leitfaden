@@ -68,7 +68,7 @@ Aktuell bietet SAP nur die Definition einer _Scalar Function_ an. Dabei gibt es 
   * Sie benötigen drei Entwicklungsobjekte für eine Scalar Function:
     * Eine Scalar Function Definition (CDS Objekt)
     * Eine Scalar Function Implementation Reference, als Verknüpfung zwischen der Definition und der Implementierung
-    * Eine AMDP Function, welche die Implementierung der Scalar Function darstellt
+    * Eine [AMDP Function](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abenamdp_function_methods.htm), welche die Implementierung der Scalar Function darstellt
 
 > Details finden Sie unter [SAP Help (CDS Scalar Functions)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_scalar_functions.htm)
 
@@ -112,8 +112,17 @@ where
 > Details finden Sie unter [SAP Help (CDS View Entities)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abencds_v2_views.htm)
 
 ### Projection Views
+Ein Projection View basiert auf einem anderen CDS View Entity und wird für service-spezifische Anwendungsfälle genutzt. Dazu zählen:
+* Transaktionale Abfragen (relevant für [ABAP RESTful Application Programming Model](/abap/restful_abap))
+* Transaktionales Interface (relevant für [ABAP RESTful Application Programming Model](/abap/restful_abap))
+* Analytical Abfragen
+
+> Details finden Sie unter [SAP Help (CDS Projection Views)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_proj_views.htm)
 
 ### Table Functions
+Eine Table Function besteht aus zwei Teilen. Einem CDS Entity, welches z.B. bei den CDS View Entities oder Projection Views verwendet werden kann, und einer [AMDP Function](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenamdp_function_methods.htm), welche die Implementierung der Funktion darstellt. Das Ergebnis einer Table Function sind Datensätze. Eine AMDP Function ist nur in einer Umgebung nutzbar, deren Datenbanksystem AMDP unterstützt (z.B. SAP HANA). Mit der AMDP Function können Sie plattform-spezifische SQL-Befehle anwenden. Der Vorteil liegt darin, dass Sie spezielle Abfragen durchführen auf die Datenbank und die Ergebnisse als Datenquelle für andere CDS Entities bereitstellen können.
+
+> Details finden Sie unter [SAP Help (CDS Table Functions)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abencds_table_functions.htm)
 
 ### Hierarchies
 
