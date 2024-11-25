@@ -13,29 +13,44 @@ nav_order: 3
 
 1. TOC
 {:toc}
-
 Die nachfolgend aufgeführten Tools (Testwerkzeuge?) sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen. Das bedeutet auch, dass von Seiten des ABAP-Entwicklers (maskulin?) nichts beachtet werden muss, was die Tests in irgendeiner Weise (weder positiv oder negativ) beeinflussen könnte.
 
-## SAP Cloud ALM
+(....noch viel mehr auf dem Markt...nur die von SAP bereitgestellten oder im Lizenzumfang enthaltenen...)
+--> Marco
+
+## Testwerkzeuge im SAP Solution Manager
+--> Marco
+Brauchen wir das noch??
+Test Suite, Test Steps Designer, CBTA, eCATT kurz erwähnen?
+
+## Testwerkzeuge in SAP Cloud ALM
 
 Als Nachfolgeprodukt des SAP Solution Managers, dessen Mainstream-Wartungsende seitens SAP auf Ende 2027 datiert ist, wurde für das Application Lifecycle Management (ALM, link zu diesem Kapitel) im Jahr xxx2018?xxx SAP Cloud ALM vorgestellt. Das Cloud-Produkt beinhaltet - wie auch der Solution Manager - unter anderem ein integriertes Testmanagement, das sowohl eigenständig (für manuelle Testfälle) als auch in Verbindung mit einer Testautmatisierungslösung wie Tricentis Test Automation (siehe den nächsten Abschnitt) eingesetzt werden kann. SAP Cloud ALM und damit auch dessen Testmanagement-Funktionen werden kontinuierlich weiterentwickelt.
 
-## Tricentis Test Automation
+--> Marco
+    §	?Automatische Prozesstests mit CloudALM? 
+        ·	Geht das ? 
 
-Tricentis ist ein eigenständiges Unternehmen, das nicht zu SAP gehört, aber durch eine (langjährige, tiefgehende?) Partnerschaft sehr gut in die SAP-Welt integriert und daher im SAP-Kontext die empfohlene Lösung zur Testautomatisierung ist (https://support.sap.com/en/alm/partners/test-automation.html).
+## Tricentis Test Automation
+--> Harald
+
+Tricentis ist ein eigenständiges Unternehmen, das nicht zu SAP gehört, aber durch eine strategische Partnerschaft sehr gut in die SAP-Welt integriert und daher im SAP-Kontext die empfohlene Lösung zur Testautomatisierung ist (https://support.sap.com/en/alm/partners/test-automation.html) / (https://www.tricentis.com/sap).
 
 ...verschiedene Ausprägungen...Lizenzen teilweise schon dabei...
         ·	Tosca: Integration in SAP SolMan – Link zu https://documentation.tricentis.com/tosca/2310/de/content/sap_solutionmanager/concept.htm 
         ·	TTA: Integration in SAP Cloud ALM – Link zu https://support.sap.com/en/alm/partners/test-automation.html 
 
-(Grafik, welches Tricentis-Tool für welches ALM-System etc.?)
+    §	Tool für automatische GUI-Tests über sämtliche Technologien (Webseiten, SAP GUI etc.)
 
-(sollen wir auf 4 Ebenen gehen?)
-### Mögliche Einsatzszenarien
+(Grafik, welches Tricentis-Tool für welches ALM-System etc.?) --> Marco
+
+### Mögliche Einsatzszenarien für automatisierte Testfälle
 #### Tägliche Smoke-Tests
+--> Harald
 Daily Smoke Tests in Testumgebungen...
 
 #### Regressionstests
+--> Harald
 Automatisierte Testfälle können hervorragend für Regressionstests in Prä-Produktionssystemen eingesetzt werden...
 was muss da beachtet werden???  
 Testdaten etc.?
@@ -48,15 +63,7 @@ SAP Application Lifecycle Management: Test Automation https://support.sap.com/en
 Tricentis: Die empfohlene Testlösungvon SAP https://www.tricentis.com/de/sap
 
 ----------------------
-/// Stichpunkte aus der Word-Datei ///
 
-o	Cloud ALM
-    §	?Automatische Prozesstests mit CloudALM? 
-        ·	Geht das ? 
-    §	Stand Sept 2024 laut Marco noch nicht gut nutzbar. ( freundlich formulieren ) --> ist das noch so?
-o	Tricentis: https://www.tricentis.com/de/sap
-    §	Hat erst mal mit ABAP-Entwicklung wenig zu tun, also da wäre nix zu beachten, aber als allgemeines Tool, um Software zu testen
-    §	Tool für automatische GUI-Tests über sämtliche Technologien (Webseiten, SAP GUI etc.)
 
 
 
