@@ -48,7 +48,7 @@ Extern entwickelte Open-Source-Abhängigkeiten dauerhaft gewinnbringend einzuset
 um die in den vorigen Abschnitten genannten Chancen und Risiken gegeneinander abzuwägen. 
 
 Insbesondere bezüglich der Risiken existieren bereits veröffentlichte Kriterien, anhand derer eine solche Bewertung vorgenommen
-werden kann, z.B. [Bauer et. al.](https://doi.org/10.1109/ICSM.2012.6405311). Kriterien dabei sind unter anderem
+werden kann, z.B. [^1]. Kriterien dabei sind unter anderem
 
 * Angemessenheit: Die *Angemessenheit* erfasst, wie gut die gewählte Technologie hilft, das vorliegende Problem zu lösen.
 * Dokumentation: Das Kriterium *Dokumentation* fasst die Verfügbarkeit, Vollständigkeit und Qualität der Dokumentation zusammen.
@@ -57,21 +57,7 @@ werden kann, z.B. [Bauer et. al.](https://doi.org/10.1109/ICSM.2012.6405311). Kr
 * Werkzeugunterstützung: Die *Werkzeugunterstützung* erfasst, ob die Technologie durch Werkzeuge wie z.B. Entwicklungsumgebungen dediziert unterstützt wird oder ob ihr Einsatz diese gar behindert. Dieses Kriterium ist nicht für alle Technologien gleichermaßen anwendbar.
 * Herstellerunterstützung: Die *Herstellerunterstützung* beschreibt, inwiefern Pflege und Weiterentwicklung einer Technologie durch den Hersteller (in diesem Fall die Open-Source-Community) auch langfristig sichergestellt ist. 
 
-<!--
-@InProceedings{2012_bauerv_library,
-  author    = {Veronika Bauer and Lars Heinemann and Florian Deissenboeck},
-  booktitle = {28th {IEEE} International Conference on Software Maintenance {ICSM}},
-  title     = {A structured approach to assess third-party library usage},
-  year      = {2012},
-  pages     = {483--492},
-  publisher = {IEEE Computer Society},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/conf/icsm/BauerHD12.bib},
-  doi       = {10.1109/ICSM.2012.6405311},
-  timestamp = {Wed, 16 Oct 2019 14:14:50 +0200},
-  url       = {https://doi.org/10.1109/ICSM.2012.6405311},
-}
--->
+
 
 - Verbreitung, aktive Weiterentwicklung, Anzahl Contributors
 - Wer kümmert sich um Updates, wer testet diese, bewertet diese
@@ -92,6 +78,25 @@ werden kann, z.B. [Bauer et. al.](https://doi.org/10.1109/ICSM.2012.6405311). Kr
   - Was sagt die Community zu einem Projekt, wie ist das Feedback, wie bekannt ist es (in Diskussionsforen ...), wie ist die „Bewertung“?
   - ...
 - Andreas?
+
+
+[^1] Bauer et al., "A structured approach to assess third-party library usage", in 28th IEEE International Conference on Software Maintenance (ICSM)", <https://doi.org/10.1109/ICSM.2012.6405311>
+
+<!--
+@InProceedings{2012_bauerv_library,
+  author    = {Veronika Bauer and Lars Heinemann and Florian Deissenboeck},
+  booktitle = {28th {IEEE} International Conference on Software Maintenance {ICSM}},
+  title     = {A structured approach to assess third-party library usage},
+  year      = {2012},
+  pages     = {483--492},
+  publisher = {IEEE Computer Society},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/conf/icsm/BauerHD12.bib},
+  doi       = {10.1109/ICSM.2012.6405311},
+  timestamp = {Wed, 16 Oct 2019 14:14:50 +0200},
+  url       = {https://doi.org/10.1109/ICSM.2012.6405311},
+}
+-->
 
 ## Sicherheitsaspekte
 
