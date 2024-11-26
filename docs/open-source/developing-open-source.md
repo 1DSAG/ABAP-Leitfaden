@@ -10,8 +10,8 @@ next_page_title: abapGit als Enabler von Open Source
 nav_order: 3
 ---
 
-{: .no_toc}
 # Entwicklung von Open Source
+{: .no_toc}
 
 1. TOC
 {:toc}
@@ -27,3 +27,15 @@ nav_order: 3
 - Minimierung von Abhängigkeiten zum SAP-Standard
 - Auswirkungen auf die Paketstruktur
 - "Inner Source" -> oder Versionsverwaltungskapitel
+
+## Beispielhafte Setups
+
+### abapGit
+
+- 7.02, Unit Tests ohne Server
+
+### abap2ui5
+
+- Multitarget, Downport, ...
+
+### abap-file-formats

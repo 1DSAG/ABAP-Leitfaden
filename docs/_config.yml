@@ -53,6 +53,12 @@ callouts:
   warning:
     title: Warnung
     color: red
+  solution:
+    title: Lösung
+    color: green
+
+mermaid:
+  version: "11.3.0"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

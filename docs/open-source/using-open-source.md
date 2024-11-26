@@ -20,7 +20,18 @@ nav_order: 1
 
 ## Risiken
 
+- Tooling wird neu eingeführt, welches die Hürde erheblich senkt, um massenhaft proprietäres Coding zu extrahieren und "zur Konkurrenz mitzunehmen"
+- Tooling wird eingeführt, welches massenhaft Entwicklungsobjekte im System ändern kann. Fehlbedienung könnte zu Datenverlust in der Codebase führen.
+- Externes Coding gelangt ins System, welches ggf. nicht geprüft wurde und Sicherheitslücken oder Schadsoftware enthält
+- Externes Coding gelangt ins System, welches einen separaten Softwarelebenszyklus hat. Wie mit Updates umgehen?
+- Externes Coding gelangt ins System, welches standardmäßig keinen Support hat. Wie mit Problemen umgehen? Was ist bei Betrieb-stilllegenden-Bug im Produktivsystem in der externen Software?
+- Tooling wird eingeführt, mit dem Entwickler einfach externes Coding installieren können. Wie halte ich die davon hab, dass sie einfach alles installieren und die Systemstabilität kompromittieren?
+
 ## Wer stellt Open-Source-Software bereit?
+
+Eine umfangreiche Auflistung von auf GitHub gehosteten Open-Source-ABAP-Projekten finden Sie auf [dotabap.org](https://dotabap.org).
+
+(Screenshot)
 
 - Dotabap.org
 - SAP Open Source Manifesto
