@@ -47,5 +47,6 @@ Die Standardtransaktionen, Standard BAdis und Standard Fiori Apps reichen oftmal
 * Standardprozesse werden von der SAP unterstützt und Standard Fiori Apps kann man recht simpel im UI anpassen. Kunden mit langer SAP Historie haben oftmals Geschäftsprozessanforderungen, welche weit über die Standard Apps hinaus gehen. Auch ein mögliches Thema sind die SAP Gateway-basierten Apps: wenn die Standard Fiori App erstmal auf den SAP Gateway aufgebaut wird und dann nach einem Systemupgrade diese App auf das RAP-Model im Backend umzieht, so ist die Eigenentwicklung erstmal nachzubauen im neuen RAP-Modell.
 
 ### Add-Ons
-``(Marcus)``
-* In Bezug auf Zertifizierung und ABAP Cloud
+
+* Clean Core hat weiterhin Auswirkungen auf Add-Ons, die im ABAP System eingesetzt werden können. Damit ein Partner zukünftig die Clean Core Strategie Ihrer Kunden unterstützen kann, hat SAP die Bedingungen, eine Zertifizierung von Add-Ons zu erhalten, geändert. Somit ist es nicht mehr möglich eine Zertifizierung eines Add-Ons zu erhalten, wenn die Implementierung der Erweitung nicht den Vorgaben von Clean Core (erstellt in ABAP Cloud oder der BTP) entspricht. Eine Ausnahme hiervon ist nur innerhalb eines SAP S/4HANA Cloud, private edition Add-Ons bis Q3/25 möglich.
+* Bei Add-Ons ohne SAP Zertifizierung in SAP S/4HANA (on premise) oder SAP S/4HANA Cloud, private edition empfehlen wir daher, rechtzeitig mit dem Add-On Partner zu prüfen, ob dieser sein Produkt nach Clean Core entwickelt hat, bzw. dass rechtzeitig ein kompatibles Add-On für einen bevorstehenden Upgrade geliefert werden.
