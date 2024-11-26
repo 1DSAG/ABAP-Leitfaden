@@ -53,6 +53,9 @@ callouts:
   warning:
     title: Warnung
     color: red
+  solution:
+    title: Lösung
+    color: green
 
 mermaid:
   version: "11.3.0"
