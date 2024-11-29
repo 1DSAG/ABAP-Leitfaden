@@ -42,7 +42,8 @@ Tricentis ist ein eigenständiges Unternehmen, das nicht zu SAP gehört, aber du
 
     §	Tool für automatische GUI-Tests über sämtliche Technologien (Webseiten, SAP GUI etc.)
 
-(Grafik, welches Tricentis-Tool für welches ALM-System etc.?) --> Marco
+(Grafik selber machen auf deutsch, welches Tricentis-Tool für welches ALM-System etc., in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?)
+![Clean Core](./img/tricentis_tools_uebersicht.png)
 
 ### Mögliche Einsatzszenarien für automatisierte Testfälle
 #### Tägliche Smoke-Tests
