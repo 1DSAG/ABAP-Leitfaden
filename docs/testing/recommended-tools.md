@@ -13,10 +13,9 @@ nav_order: 3
 
 1. TOC
 {:toc}
-Die nachfolgend aufgeführten Tools (Testwerkzeuge?) sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen. Das bedeutet auch, dass von Seiten des ABAP-Entwicklers (maskulin?) nichts beachtet werden muss, was die Tests in irgendeiner Weise (weder positiv oder negativ) beeinflussen könnte.
+Die nachfolgend aufgeführten Testwerkzeuge sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen. Das bedeutet auch, dass von Seiten des ABAP-Entwicklers (maskulin?) nichts beachtet werden muss, was die Tests in irgendeiner Weise, also weder positiv oder negativ, beeinflussen könnte.
 
-(....noch viel mehr auf dem Markt...nur die von SAP bereitgestellten oder im Lizenzumfang enthaltenen...)
---> Marco
+Die Auswahl in diesem Leitfaden beschränkt sich auf die von SAP bereitgestellten(?) oder (schon) im Lizenzumfang enthaltenen Produkte. Daneben gibt es noch viele weitere Lösungen auf dem Markt, die für die ABAP-Entwicklung verwendet werden können.
 
 ## Testwerkzeuge im SAP Solution Manager
 --> Marco
