@@ -21,7 +21,7 @@ Die nachfolgend aufgeführten Tools (Testwerkzeuge?) sind nicht ABAP-spezifisch,
 ## Testwerkzeuge im SAP Solution Manager
 --> Marco
 Brauchen wir das noch??
-Test Suite, Test Steps Designer, CBTA, eCATT kurz erwähnen?
+Test Suite, Test Steps Designer, CBTA, eCATT kurz erwähnen? Ja! eCATT irgendwie referenziere.
 
 ## Testwerkzeuge in SAP Cloud ALM
 
