@@ -50,6 +50,24 @@ WEITERE QUELLEN
 1.	Das arc42-Template zur Architekturdokumentation, [Arc42-Template](https://arc42.org/download)  (aufgerufen am: 19.09.2024)
 2.	Stefan Zörner: Softwarearchitekturen dokumentieren und kommunizieren. Carl Hanser Verlag GmbH Co KG, 2021. ISBN: 978-3446469280
 
+## Dokumentation zur Versionsverwaltung
+
+### Transportauftrag
+Oftmals hilft es zum Transportauftrag zu dokumentieren
+* Ticketnummer und Titel des Tickets
+* Wichtigste Entwicklungsobjekte im Transport
+* Abhängigkeiten zu anderen Transporten (sofern vorhanden)
+* Kurzbeschreibung zu Änderungen im Transport
+Die Dokumentation zu jeder Aufgabe und zu jedem Auftrag während der Auftragsbearbeitung im Reiter "Dokumentation" zu erfassen. Die Dokumentation kann bis zur Freigabe laufend erweitert werden. Nach der Freigabe des Auftrags ist dies nicht mehr möglich.
+
+Diese Dokumentation auf dem Reiter "Dokumentation" kann man für jeden Transportauftrag erstellen, der ins Produktive Systeme geht. Transporte von Kopien sollte man nicht dokumentieren, um redundante Dokumentation zu vermeiden. Letztlich interessieren nur die Transporte, die ins Produktiv System gehen sollen, bzw. bereits gegangen sind.
+
+### Git-Client
+Sollte ein Git-Client wie abapGit oder gCTS eingesetzt werden, werden Code-Änderungen protokolliert. Zu jedem sogenannten Commit werden neben den Code-Änderungen noch Metadaten gespeichert. Zu den Metadaten zählen eine kurze Beschreibung, sogenannte Commit-Nachricht, Autor und  Datum. Die so entstehende Commit-Historie ermöglicht, vergangene Commits zu sehen und die Code-Änderungen nachzuvollziehen. Wird ein Ticket-System, wie zum Beispiel Jira oder Azure DevOps, für die Erfassung der Anforderungen benutzt, hat jede Anforderung an die Entwicklung eine eindeutige ID. Viele Teams haben die Vorgabe oder die interne Vereinbarung, diese ID in den Commit-Nachrichten einzutragen, damit sich die Commits den Aufgaben zuordnen lassen. Wird das konsistent gemacht, lassen sich mittels Freitextsuche in den Commit-Nachrichten alle Commits identifizieren, die zu einer bestimmten Aufgabe gehören. Das erleichtert wesentlich das Wiederfinden und die Überprüfung der Umsetzung im Fall von Bugs. Gleichzeitig lassen sich dadurch ähnliche Aufgaben sehr schnell umsetzen, weil die Entwickler das bereits funktionierende Beispiel finden und verfolgen können.
+
+| BEST PRACTICE |
+|---------------|
+|Wir empfehlen bei Änderungen, die ins produktive Systeme gehen egal ob mit Transportauftrag oder Git-Client mit Angabe was geändert wurde und mit Bezug zu einem externen Tool wie Ticketsystem|
 
 ## Dokumentation von Entwicklungsobjekten
 Neben Methoden, Funktionsbausteinen und Reports, die Dokumentation im Quellcode enthalten können, existieren weitere Entwicklungsobjekte im ABAP-System, die keinen Quellcode besitzen und daher auf anderem Weg dokumentiert werden müssen. Beispiele dafür sind:
