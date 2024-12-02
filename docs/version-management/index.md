@@ -14,7 +14,7 @@ nav_order: 6
 
 ## Einleitung/Motivation
 Zu den aufbewahrungspflichtigen Dokumenten gem. HGB, AO und GoBS gehören auch die Repositoriy-Objekten in ABAP. Dies wurde lange Zeit durch die integrierte Versionsverwaltung innerhalb der ABAP-Workbench (SE80) erreicht. In den letzten Jahren hat sich aber ABAP weiterentwickelt, sei es der Einsatz einer externen Entwicklungsumgebung (ABAP Development Tools), der Einsatz von Git-Versionsverwaltung oder die Entwicklung weiterer Repository-Objekten, die nicht in der ABAP-Workbench entwickelt werden können. Daher stellt sich für jeden ABAP-Entwickler, die zentrale Frage: 
-* Welche Versionsverwaltung soll ich wann nehmen.
+* Welche Versionsverwaltung soll ich wann nehmen?
 
 Dieses Kapitel soll daher einen Überblick und eine Gegenüberstellung von Versionsverwaltungs-Lösungen innerhalb des SAP-Universums für ABAP-Entwickler geben.
 
@@ -33,7 +33,25 @@ Dieses Kapitel soll daher einen Überblick und eine Gegenüberstellung von Versi
 –	Man kann alles zu einer Anwendung speichern (Dokumentation, Frontendcode, Backendcode)
 –	Versionierung (Tags)
 
+## Versionskontrollsysteme im SAP-Umfeld
+Folgende Versionskontrollsysteme gibt es im SAP-Umfeld
+### Lokale Versionsverwaltung in der SE80
+### Versionsverwaltung in ABAP Development Tools
+### abapGit
+### gCTS
+### SAP BAS
+
 ## Vergleich der unterschiedlichen Versionskontrollsystemen
+### Versionskontrollsysteme
+
+#### Lokale Versionsverwaltung in der SE80
+#### Versionsverwaltung in ABAP Development Tools
+#### abapGit in SAP GUI
+#### abapGit in Eclipse
+#### abapGit in der Cloud
+#### gCTS onPremise
+#### gCTS in der Cloud
+#### SAP BAS
 ## Einsatzszenarien
 
 –	Entwicklung als Partner – Auslieferbare Software 
