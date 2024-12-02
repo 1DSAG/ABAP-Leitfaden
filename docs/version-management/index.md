@@ -53,9 +53,23 @@ Folgende Versionskontrollsysteme gibt es im SAP-Umfeld
 #### gCTS in der Cloud
 #### SAP BAS
 ## Einsatzszenarien
+### Normale 3-System-Landschaft
+![Alt text](dsagleitfaden-normal.drawio.png)
 
 ### Softwarelieferant
-![Alt text](softwarelieferant.png)
+![Alt text](dsagleitfaden-softwarelieferant.drawio.png)
+
+### Verteilung in verschiedene Systemlandschaften
+![Alt text](dsagleitfaden-verteilung.drawio.png)
+
+### Recovery
+![Alt text](dsagleitfaden-RECOVERY.drawio.png)
+
+### Paralleles Arbeiten
+![Alt text](dsagleitfaden-parallel.drawio.png)
+
+### Custom Code Migration
+![Alt text](dsagleitfaden-customcode.drawio.png)
 
 –	Kundenentwicklung in einer normalen 3-System-Landschaft
 –	Entwicklung in verschiedene Systemlandschaften verteilen
