@@ -57,3 +57,5 @@ Dieses Kapitel soll daher einen Überblick und eine Gegenüberstellung von Versi
 ## Risiken
 ## Zusammenfassung
 ## Empfehlung
+## Quellen
+https://www.rheinwerk-verlag.de/git-und-sap/?srsltid=AfmBOooMbM45uQOGPLDAiaKz5hHazrf45BIEVjmOIe8mz9HjpdHjgzZq
