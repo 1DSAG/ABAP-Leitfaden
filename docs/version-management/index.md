@@ -54,7 +54,9 @@ Folgende Versionskontrollsysteme gibt es im SAP-Umfeld
 #### SAP BAS
 ## Einsatzszenarien
 
-–	Entwicklung als Partner – Auslieferbare Software 
+### Softwarelieferant
+![Alt text](softwarelieferant.png)
+
 –	Kundenentwicklung in einer normalen 3-System-Landschaft
 –	Entwicklung in verschiedene Systemlandschaften verteilen
 –	Recovery in drei Systemlandschaft
