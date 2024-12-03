@@ -54,15 +54,21 @@ Folgende Versionskontrollsysteme gibt es im SAP-Umfeld
 #### SAP BAS
 ## Einsatzszenarien
 ### Normale 3-System-Landschaft
+Bei diesem Einsatzszenario geht es darum, dass der Code auf dem Entwicklungssystem in ein Git-Repository mit einem Git-Versionsverwaltungssystem übertragen wird.
+
 ![Alt text](dsagleitfaden-normal.drawio.png)
 
 ### Softwarelieferant
+Dieses Einsatzszenario dient zum Austausch zwischen Quellcode von einem Softwarelieferant an seinem Kunden über ein Git-Repository.
 ![Alt text](dsagleitfaden-softwarelieferant.drawio.png)
 
 ### Verteilung in verschiedene Systemlandschaften
+Hier geht es darum, dass man zwischen seinen verschiedenen Systemlandschaften Quellcode austausch. So ist es möglich ohne Quertransporte den gleichen Quellcode zu nutzen und weiterzuarbeiten.
 ![Alt text](dsagleitfaden-verteilung.drawio.png)
 
 ### Recovery
+Dieses Szenario beschreibt die Möglichkeit, dass aus dem Git-Repository ein alter Stand zurückgewonnen werden kann.
+Dabei muss nicht jedes Repository-Objekt einzeln zurückgeholt werden, sondern ein alter Stand einer ganzen Anwendung.
 ![Alt text](dsagleitfaden-RECOVERY.drawio.png)
 
 ### Paralleles Arbeiten
