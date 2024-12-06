@@ -35,12 +35,6 @@ https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-m
 xxx...Automatisierung...Standard SolMan
 https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264810.html
 
-## eCATT (extended Computer Aided Test Tool) --> gehört nicht unter "Testwerkzeuge im SAP Solution Manager" !!!
-xxx...
-Verwendung von eCATT irgendwie referenzieren auf eigenes Kapitel?
-https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/de-de/49/6d2fa0e0221ec6e10000000a42189b/frameset.htm
-oder https://help.sap.com/saphelp_gbt10/helpdata/DE/20/e81c3b84e65e7be10000000a11402f/frameset.htm ???
-
 ## Testwerkzeuge in SAP Cloud ALM
 
 Als Nachfolgeprodukt des SAP Solution Managers, dessen Mainstream-Wartungsende seitens SAP auf Ende 2027 datiert ist, wurde für das Application Lifecycle Management (ALM, Link zu diesem Kapitel bzw. hab ich oben schon) im Jahr xxx2018?xxx SAP Cloud ALM vorgestellt. Das Cloud-Produkt beinhaltet - wie schon der Solution Manager - unter anderem ein integriertes Testmanagement, das sowohl eigenständig (für manuelle Testfälle) als auch in Verbindung mit einer Testautmatisierungslösung wie Tricentis Test Automation (siehe den nächsten Abschnitt bzw. Link dort hin) eingesetzt werden kann. SAP Cloud ALM und damit auch dessen Testmanagement-Funktionen werden kontinuierlich weiterentwickelt.
