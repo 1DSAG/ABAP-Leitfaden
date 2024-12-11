@@ -12,17 +12,27 @@ nav_order: 2
 1. TOC
 {:toc}
 
+ABAP gibt es seit 1983, und der Sprachumfang ist seitdem stetig gewachsen. Dadurch bildet die Sprache verschiedene Paradigmen ab, und es gibt häufig verschiedene Alternativen für ähnliche Zwecke. Als Beispiel können Funktionsgruppen und -bausteine etwa als imperativer Vorläufer ähnlich wie Klassen in ABAP OO genutzt werden. Daneben gibt es auch viele als obsolet gekennzeichnete Befehle, die häufig in bereits entwickelten Programmen oder Beispielcode im Internet zu finden sind und damit auch weiterhin für neue Entwicklungen genutzt werden. 
+
+Die SAP hat dieses Problem selbst erkannt und als eine Unterstützung für Entwickler die [Clean ABAP Guidelines](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) erstellt. Diese basieren auf dem Buch Clean Code von Robert C. Martin und adaptieren verschiedene Best Practices für ABAP. Die Guidelines liefern Vorgaben für viele Bereich, etwa von zur Benamung von Objekten und Variablen, über die Wahl der richtigen Sprachmittel, bis hin zur Formatierung und Kommentierung von Code.
+
+Daneben entwickelt die SAP ABAP auch stetig weiter. Eine Übersicht über neue Entwicklungen liefert etwa die [ABAP Feature Matrix](https://software-heroes.com/en/abap-feature-matrix).
+
 ## Modernes ABAP - neue Statements 
+
 - wichtigste neue Statements #
 - Stil von modernem ABAP
 - SAP SAMPLES als Referenz bibliothek
 
 Todo check SAP Samples (ABap OO Basics)– und clean code bzgl. patterns - 
 
-ABAP gibt es seit 1983, und der Sprachumfang ist seitdem stetig gewachsen.
-Verschiedene Paradigmen, obsolete Befehle und neue Alternativen, dadurch viele Möglichkeiten zur Programmierung
-SAP hat das selbst erkannt und die Clean ABAP Guidelines erstellt -> Vorgaben für viele Bereich wie Benamung, welche Sprachmittel setze ich ein, ...
-Empfehlung: eigene Richtlinien sollten auch immer auf Clean ABAP aufbauen
+### Funktionale Aufrufe
+
+### Konstruktoroperatoren
+
+
+
+
 
 
 
