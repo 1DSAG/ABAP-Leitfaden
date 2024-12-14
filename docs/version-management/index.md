@@ -19,6 +19,21 @@ Zu den aufbewahrungspflichtigen Dokumenten gem. HGB, AO und GoBS gehören auch d
 Dieses Kapitel soll daher einen Überblick und eine Gegenüberstellung von Versionsverwaltungs-Lösungen innerhalb des SAP-Universums für ABAP-Entwickler geben.
 
 ## Git-Grundlagen
+Git ist ein verteiltes Versionierungssystem welches frei als Open-Source zur Verfügung gestellt wird. Es wurde vom Linux-Erfinder Linus Torvalds 2005 entwickelt. Im Programmierbereich dient es dazu:
+* eigene Änderungen zu überwachen
+* Änderungen rückgängig zu machen
+* anderen zur Verfügung zu stellen
+* Aktualisierungen von anderen einzuholen
+
+Dadurch ergeben sich folgende Vorteile:
+* es kann zeitgleich entwickelt werden z. B. für verschiedene Features
+* Versionierung verhindert, dass bereits getätigte Arbeiten verloren gehen bzw. überschrieben werden
+* Bei Bedarf kann zu früheren Versionen zurückgekehrt werden oder simultan an verschiedenen Versionen gearbeitet werden
+
+### Wichtige Begriffe
+* **Repository**: In ein Repository bzw. einem Repo befinden sich alle Dateien inklusive derer vorangegangenen Versionen. Dadurch stehen stets alle Änderungen zur Verfügung, die von einer Datei ins Repo gespielt wurden und es kann nachvollzogen werden Wer, Wann, welche Änderungen durchgeführt hat.
+* **Branches**: Beim Einsatz von Git dienen Branches (engl.: to branch - sich verzweigen) dazu, um einen separaten Arbeitszweig zu erstellen. Dieser kann dann auch als neuer Kontext gesehen werden, in dem gearbeitet wird. So kann z.B. die Programmierung eines Features in einem eigenen Branch erfolgen, der bei Fertigstellung und nach dem Testen zurück in den Master-Zweig eingearbeitet wird.
+* **Versionierung**: Bei der Versionierung wird im Git alle getätigten Änderungen protokolliert. Mittels einem "Commit" können die Änderungen zu dem Repository hinzugefügt werden, eine neue Version der Datei(n) befinden sich dann im Repo. Anschließend können verschiedene Versionen miteinander verglichen, Änderungen rückgängig oder zu einer früheren Version zurückgekehrt werden.
 ## Einsatz von gitbasierten Lösungen in der ABAP-Entwicklung
 
 –	Git ist Standardlösung für Versionsverwaltung für alle Programmiersprache
