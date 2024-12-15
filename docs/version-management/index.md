@@ -36,17 +36,18 @@ Dadurch ergeben sich folgende Vorteile:
 * **Versionierung**: Bei der Versionierung wird im Git alle getätigten Änderungen protokolliert. Mittels einem "Commit" können die Änderungen zu dem Repository hinzugefügt werden, eine neue Version der Datei(n) befinden sich dann im Repo. Anschließend können verschiedene Versionen miteinander verglichen, Änderungen rückgängig oder zu einer früheren Version zurückgekehrt werden.
 ## Einsatz von gitbasierten Lösungen in der ABAP-Entwicklung
 
-–	Git ist Standardlösung für Versionsverwaltung für alle Programmiersprache
-–	Studenten wollen Git nutzen
-–	Standardmäßige Funktionen für die Versionsverwaltung ( Branching, Code Review, Rollback (nicht nur ein Objekt), Dokumentation was geändert wurde, 
-–	Zusammenarbeit von mehreren Entwicklern möglich
-–	Code ist zentral an einem Ort (Single Source of Truth)
-–	Ermöglichen von externen Tools (CI-Pipelines)
-–	Programmiersprachenunabhängig und Entwicklungstoolsunabhängig
-–	Einheitliches Format für Programmiersprachen
-–	Lesbares Format
-–	Man kann alles zu einer Anwendung speichern (Dokumentation, Frontendcode, Backendcode)
-–	Versionierung (Tags)
+In vielen Programmiersprachen ist eine Verwaltung von Programmcode in einem Git-Repository Standard. Durch den Einsatz von Lars Hvam Petersen, der es durch seine freie OpenSource Lösung abapGit ermöglicht hat, ABAP-Code in ein Git-Repository zu bringen, nehmen Git-Basierte Lösungen in der ABAP-Welt eine immer wichtigere Rolle ein. Der Einsatz von gitbasierten Lösungen in der ABAP-Entwicklung hat folgende technologische Vorteile:
+
+* **Standardmäßige Funktionen für die Versionsverwaltung**: Durch den Einsatz von Git können standardmäßige Funktionen eingesetzt werden, wie das Rollback nicht nur für ein Objekt, sondern für alle Objekte gleichzeitig.
+* **Zusammenarbeit von mehreren Entwicklern gleichzeitig an unterschiedlichen Anforderungen**: Mit Hilfe von Git ist es möglich, dass mehrere Entwickler gleichzeitig mit Hilfe von Branches an unterschiedlichen Anforderungen arbeiten kann.
+* **Ermöglichen von externen Tools**: Es ist nun möglich nicht nur SAP-Produkte für den Entwicklungsworkflow zu verwenden, sondern kann auch externe Tools verwenden, um seinen Code z.B. zu prüfen. Zudem können CI-Pipelines gebaut werden, die mit dem Standard-Transportmechanismus nicht möglich ist.
+* **Versionierung**: Bisher war es nur möglich eine Version zu einem Objekt zu wissen. Nun ist es möglich mit Hilfe von Tags eine Reihe von Objekten zu versionieren. Dies hat den Vorteil, dass nun die Anwendung ein Releasecharakter besitzen kann.
+* **Code ist zentral**: Der Code befindet sich an einer zentralen Stellen und alle Änderungen zu der Anwendung werden dorthin gebracht. Neben dem ABAP-Code können auch andere Bestandteile der Anwendung wie z.B. Fiori oder auch .NET Entwicklungen im Git-Repository gespeichert werden. Es kann auch die Dokumentation im Git gespeichert werden.
+
+Neben den technologischen Vorteilen gibt es auch organisatorische Vorteile
+* **Git ist Standardlösung**: Es ist einfacher andere Menschen für die SAP-Entwicklung zu begeistern, wenn sie schon Tools oder Technologien aus anderen Programmiersprachen kennen. GIt ist Standardlösung für andere Programmiersprachen und es muss kein neues Know-How aufgebaut werden. Besonders Studenten, die Git schon kennen, können sich dann für ABAP besser begeistern.
+* **Einheitliches Format für Programmiersprachen**: Im Git-Repository können nicht nur SAP-Entwicklungen gespeichert werden, sondern es können auch andere Entwicklerteams dort ihren Code zentral hinterlegen.
+* **Format**: Das Format ist einheitlich und kann von jedem gelesen werden. Es ist nicht verschlüsselt und alle Änderungen können nachvollzogen werden. So kann auch ein Wirtschaftsprüfer alle Änderungen sehen, wann und von wem es gemacht wurden.
 
 ## Versionskontrollsysteme im SAP-Umfeld
 Folgende Versionskontrollsysteme gibt es im SAP-Umfeld
