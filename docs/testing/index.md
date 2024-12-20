@@ -123,6 +123,10 @@ Link: [CACAMBER - the BDD-Framework for ABAP](https://github.com/dominikpanzer/c
 ### ASSERT
 * Vorstellung CL_ABAP_UNIT_ASSERT
 
+### RAISING cx_static_check
+
+[SAP empfiehlt](https://help.sap.com/doc/saphelp_crm700_ehp03/7.0.3.11/de-DE/dd/587324e2424b14ab5afb3239a77a8d/frameset.htm): Wenn der zu testende Code in der Lage ist, eine Ausnahme auszulösen, sollte die Testmethode selbst diese nicht behandeln, sondern sie in ihrer Signatur deklarieren (abgesehen von provozierten Ausnahmen), so dass der Testfall fehlschlägt, wenn er zur Laufzeit auftritt. 
+
 ### Beispiel Testklasse
 
 Das folgende Beispiel zeigt die Testklasse zu der globalen Klasse `ZCL_ADDRESS`, in der die Methode `SPLIT_ADDRESS` dafür zuständig ist, einen String, der Adresse und Hausnummer enthält, in die Bestandteile `Straße` und `Hausnummer` aufzuteilen.
@@ -241,13 +245,13 @@ CLASS ltcl_verify_addresses_helper DEFINITION FINAL FOR TESTING
           i_street   TYPE string
           i_house_no TYPE string,
 
-      test_all FOR TESTING.
+      test_german_standards FOR TESTING.
 ENDCLASS.
 
 
 CLASS ltcl_verify_addresses_helper IMPLEMENTATION.
 
-  METHOD test_all.
+  METHOD test_german_standards.
 
     verify_address( i_street = |Straße des 17. Juni| i_house_no = |134| ).
     verify_address( i_street = |ABC-Straße| i_house_no = |89| ).
@@ -276,13 +280,15 @@ CLASS ltcl_verify_addresses_helper IMPLEMENTATION.
 ENDCLASS.
 ```
 
-Die Testklasse enthält nun nur noch die eine Testmethode `TEST_ALL`, in der alle Tests durchgeführt werden.
+Die Testklasse enthält nun nur noch die eine Testmethode `TEST_GERMAN_STANDARDS`, in der alle Tests durchgeführt werden.
 
 Es gibt eine Hilfsmethode `VERIFY_ADDRESS`, die einen Straßennamen und eine Hausnummer entgegennimmt, diese zusammensetzt und durch die zu testende Methode `SPLIT_ADDRESS` wieder aufteilen lässt. Da ein Testfall nun nicht mehr 1:1 einer Testmethode entspricht, wurde der Parameter `MSG` von `CL_ABAP_UNIT_ASSERT=>ASSERT_EQUALS` verwendet, um direkt auf den Fehlerhaften Testfall hinweist.
 
 Die Testklasse ist nun deutlich übersichtlicher und die Testfälle sind auf einen Blick gut erkennbar.
 
 Diese Variante erlaubt es, auch weiterhin Tests durchzuführen, die nach einem anderen Schema funktionieren. 
+
+Hinweis: Dies ist keine Empfehlung, alle Tests in einer Testmethode unterzubringen. Das Beispiel soll lediglich aufzeigen, dass Hilfsmethoden genutzt werden können, um die Unit Tests kompakter, besser wartbar und lesbarer zu gestalten.
 
 ### Mocking, faking, spying und stubbing
 
@@ -335,7 +341,7 @@ TODO: Variante der Test-Doubles oder eigene Technik?
 
 ### Testumgebung
 
-Die ABAP-Unit-Tests können aus der SAP-Entwicklungsumgebung (SE80, SE24) oder den ABAP-Development-Tools heraus verwendet werden. Die Vorgehensweise unterscheidet sich nur in Kleinigkeiten. Die Techniken, die zur Erstellung notwendig sind, ähneln sich jedoch stark. Unit Test, die in der SE80 erstellt wurden, können auch in Eclipse gewartet und getestet werden und umgekehrt. Die Tastenkombinationen sind in beiden Tools gleich.
+Die ABAP-Unit-Tests können aus der SAP-Entwicklungsumgebung (SE80, SE24) oder den ABAP-Development-Tools heraus verwendet werden. Die Vorgehensweise unterscheidet sich nur in Kleinigkeiten. Die Techniken, die zur Erstellung notwendig sind, ähneln sich jedoch stark. Unit Test, die in der SE80 erstellt wurden, können auch in Eclipse gewartet und getestet werden und umgekehrt. Die Tastenkombination zum Ausführen der Unit Test ist in beiden Tools STRG + SHIFT + F10. Andere Funktionen sind in der ABAP Workbench teilweise nur durch das Menü erreichbar während es im ADT eine Tastenkombination dafür gibt.
 
 In den folgenden Kapiteln werden diese Themen behandelt:
 * Erstellen von Unit Tests
@@ -345,6 +351,21 @@ In den folgenden Kapiteln werden diese Themen behandelt:
 
 Wir gehen davon aus, dass Sie Erfahrung mit dem jeweiligen Tool haben. Aus diesem Grund erfolgt keine Schritt-für-Schritt-Anleitung, sondern lediglich eine grobe Darstellung des Vorgehens.
 
+#### Tastenkombinationen
+
+ADT
+
+* Ctrl + Shift + F9: Unit Test Preview anzeigen
+* Ctrl + Shift + F10: Unit Tests ausführen
+* Ctrl + Shift + F11: Unit Tests mit Coverage ausführen
+* Ctrl + Shift + F12: Unit Test Ausführungsdialog aufrufen
+* Ctrl + Shift + (F2: ATC-Prüfung mit Standardvariante ausführen)
+
+ABAP Workbench
+
+* Ctrl + Shift + F10: Unit Tests ausführen
+* Ctrl + Shift + F11: Lokale Testklassen anzeigen (nur formularbasierter Editor)
+* Ctrl + F11: Lokale Testklassen anzeigen (nur Quelltext-basierter Editor)
 
 #### Eclipse
 
