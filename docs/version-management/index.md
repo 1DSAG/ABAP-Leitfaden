@@ -51,12 +51,27 @@ Neben den technologischen Vorteilen gibt es auch organisatorische Vorteile
 
 ## Versionskontrollsysteme im SAP-Umfeld
 Folgende Versionskontrollsysteme gibt es im SAP-Umfeld
-### Lokale Versionsverwaltung in der SE80
-### Versionsverwaltung in ABAP Development Tools
-### abapGit
-### gCTS
-### SAP BAS
+### Serverbasierte Versionsverwaltung
+Die serverbasierte Versionsverwaltung ist für alle editierbaren Objekte der ABAP Workbench aktiv.
+Die Versionsverwaltung kann über
+* SE80 - Object Navigator
+* SE09 - Transport Organizer
+* die Anzeige- und Pflegetransaktionen für Repository Objekte
+aufgerufen werden.
 
+Die Versionen werden bei jeder Transportfreigabe versioniert.
+### Lokale Versionsverwaltung in ABAP Development Tools
+Das eclipsebasierte ABAP Development Tools bietet zwei Basis, eingebaute Versionsverwaltungen für Entwicklungsressourcen an.
+* **clientbasierte lokale Versionsverwaltung:** - Das Standardfeature unter Eclipse bietet eine Standardversionsverwaltung. Jedes Mal wenn es bearbeitet und gespeichert wird, speichert es Eclipse nach den persönlichen eingestellten Präferenzen.
+* **serverbasierte Revisionshistorie:** - Dies entspricht der lokalen Versionsverwaltung.
+
+Bei der Verwendung der beiden Versionen in Eclipse zum Vergleich was zwischen zwei Ständen unterschiedlich ist, kommt der ABAP Compare Editor in Eclipse zum Einsatz.
+### abapGit
+abapGit ist ein in ABAP entwickelter Git-Client. Es wurde von Lars Hvam Petersen entwickelt und ist ein OpenSource Projekt. Mit abapGit haben Entwickler die Möglichkeit eine Git-Versionskontrolle mit dem SAP-Applikationsserver zu verbinden und ABAP-Entwicklungsobjekte in einem Git-Repository anzulegen.
+### gCTS
+Im Gegensatz zu abapGit ist gCTS (Git-enabled Change and Transport System) ein von SAP bereitgestellte Erweiterung zu CTS. Es unterstützt die Integration von Git in das bestehende CTS, um moderne Versionskontrollfunktionen zu ermöglichen.
+### Versionsverwaltung in SAP BAS
+Mit SAP Business Application Studio steht Unternehmen ein Werkzeug für die Entwicklung ihrer Anwendungen und Erweiterungen mit Bezug zu SAP-Lösungen zur Verfügung. Die Entwicklungsumgebung stellt der Anbieter dabei in Form eines Cloud-basierten Services bereit. Für die einfachere Versionsverwaltung ist eine Integration mit Git vorgesehen. Die Versionierung ist aber auch mit anderen Systemen möglich.
 ## Vergleich der unterschiedlichen Versionskontrollsystemen
 ### Versionskontrollsysteme
 
