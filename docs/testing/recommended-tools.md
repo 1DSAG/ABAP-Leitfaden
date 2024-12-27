@@ -15,16 +15,19 @@ nav_order: 3
 {:toc}
 Die nachfolgend aufgeführten Testwerkzeuge sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen. Das bedeutet auch, dass von Seiten des ABAP-Entwicklers (maskulin?) nichts beachtet werden muss, was die Tests in irgendeiner Weise, also weder positiv oder negativ, beeinflussen könnte.
 
-Die Auswahl in diesem Leitfaden beschränkt sich auf die von SAP bereitgestellten(?) oder (schon) im Lizenzumfang enthaltenen Produkte. Daneben gibt es noch viele weitere Lösungen auf dem Markt, die für die ABAP-Entwicklung verwendet werden können.
+Die Auswahl in diesem Leitfaden beschränkt sich auf die von SAP bereitgestellten(?) oder (bereits) im Lizenzumfang enthaltenen Produkte. Daneben gibt es noch viele weitere Testmanagement-Lösungen auf dem Markt, die zur Unterstützung der ABAP-Entwicklung verwendet werden können.
 
 ## Testwerkzeuge im SAP Solution Manager
---> Marco
+Der SAP Solution Manager (https://support.sap.com/en/alm/solution-manager.html // die Seite ist auf EN...) ist ein ausgereiftes System für das Application Lifecycle Management (ALM, Link zu diesem Kapitel), das unter anderem verschiedene Testwerkzeuge enthält.
 
-Der SAP Solution Manager (https://support.sap.com/en/alm/solution-manager.html // die Seite ist auf EN...) ist ein ausgereiftes System für das Application Lifecycle Management (ALM, Link zu diesem Kapitel), das unter anderem verschiedene Testwerkzeugen enthält.
+### Test-Suite
+Die Test-Suite des SAP Solution Managers (https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264795.html) besteht im Wesentlichen aus dem Testplan-Management zur Vorbereitung der Tests und der App "Meine Testausführungen", mit der die Anwender die vorbereiteten und freigegebenen Testfälle durchführen. Dazu stehen für den Testmanager verschiedene Funktionen zur Auswertung und Analyse zur Verfügung.
 
-### Test Suite
-xxx...Standard SolMan
-https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264795.html
+Im Testplan-Management werden Testpläne angelegt und verwaltet. Das Herzstück ist die Auswahl der Testfälle, die als solche in der Struktur der Lösungsdokumentation (--> Link zu dem Kapitel) abgelegt sind. Diese können dann in kleinere Einheiten, die sogenannten Testpakete, aufgeteilt und den passenden Testern bzw. Testergruppen zugewiesen werden. Auf diese Weise können passgenaue Testpläne, zum Beispiel für Funktionstests, Integrationstests, Regressionstests, Unit Tests (en??) oder User Acceptance Tests (wie heißt das auf deutsch?) erstellt werden.
+
+
+
+Der Testmanager hat damit jederzeit die Übersicht über den Stand und den Fortschritt der Tests.
 
 ### Test Steps Designer (oder das volle Programm hier?)
 xxx...aus FB... ST-OST Add-on
