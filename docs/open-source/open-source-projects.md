@@ -9,11 +9,10 @@ nav_order: 5
 ---
 
 {: .no_toc}
-
 # Vorstellung ausgewählter Projekte
 
 1. TOC
-   {:toc}
+{:toc}
 
 ## Übersicht
 
