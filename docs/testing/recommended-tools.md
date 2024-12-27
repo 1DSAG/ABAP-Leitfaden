@@ -25,8 +25,7 @@ Die Test-Suite des SAP Solution Managers (https://help.sap.com/docs/SUPPORT_CONT
 
 Im Testplan-Management werden Testpläne angelegt und verwaltet. Das Herzstück ist die Auswahl der Testfälle, die als solche in der Struktur der Lösungsdokumentation (--> Link zu dem Kapitel) abgelegt sind. Diese können dann in kleinere Einheiten, die sogenannten Testpakete, aufgeteilt und den passenden Testern bzw. Testergruppen zugewiesen werden. Auf diese Weise können passgenaue Testpläne, zum Beispiel für Funktionstests, Integrationstests, Regressionstests, Unit Tests (en??) oder User Acceptance Tests (wie heißt das auf deutsch?) erstellt werden.
 
-
-
+(Hier noch ein bisschen was über Analytics...)
 Der Testmanager hat damit jederzeit die Übersicht über den Stand und den Fortschritt der Tests.
 
 ### Test Steps Designer (oder das volle Programm hier?)
@@ -39,7 +38,6 @@ xxx...Automatisierung...Standard SolMan
 https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264810.html
 
 ## Testwerkzeuge in SAP Cloud ALM
-
 Als Nachfolgeprodukt des SAP Solution Managers, dessen Mainstream-Wartungsende seitens SAP auf Ende 2027 datiert ist, wurde für das Application Lifecycle Management (ALM, Link zu diesem Kapitel bzw. hab ich oben schon) im Jahr xxx2018?xxx SAP Cloud ALM vorgestellt. Das Cloud-Produkt beinhaltet - wie schon der Solution Manager - unter anderem ein integriertes Testmanagement, das sowohl eigenständig (für manuelle Testfälle) als auch in Verbindung mit einer Testautmatisierungslösung wie Tricentis Test Automation (siehe den nächsten Abschnitt bzw. Link dort hin) eingesetzt werden kann. SAP Cloud ALM und damit auch dessen Testmanagement-Funktionen werden kontinuierlich weiterentwickelt.
 
 --> Marco
