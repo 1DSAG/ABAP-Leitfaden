@@ -20,6 +20,7 @@ nav_order: 1
 
  Strukturierung
  Trennung Backend Frontend erfordert gute Architektur
+ ZTEST TEST
  API 
  Neue UI / ODATA
  Paketkonzept
