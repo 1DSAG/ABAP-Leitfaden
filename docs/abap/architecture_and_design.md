@@ -20,6 +20,7 @@ nav_order: 1
 
  Strukturierung
  Trennung Backend Frontend erfordert gute Architektur
+    Beispiel einer groben konzeptstruktur für die technische Anforderung zeigen?
  API 
  Neue UI / ODATA
  Paketkonzept
