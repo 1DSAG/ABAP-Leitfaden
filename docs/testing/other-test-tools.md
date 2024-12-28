@@ -27,4 +27,8 @@ Welche Environments Stellt SAP zur Verfügung?
 –	Code Snippiets pro Environment. 
 –	SAP Stellt Beispiele in den SAP Samples zur Verfügung. 
 
-
+## eCATT (extended Computer Aided Test Tool) --> gehört nicht unter "Testwerkzeuge im SAP Solution Manager" !!!
+bitte übernehmen und entsprechend ausgestalten... (war im Teil "recommended-tools)...
+Verwendung von eCATT irgendwie referenzieren auf eigenes Kapitel?
+https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/de-de/49/6d2fa0e0221ec6e10000000a42189b/frameset.htm
+oder https://help.sap.com/saphelp_gbt10/helpdata/DE/20/e81c3b84e65e7be10000000a11402f/frameset.htm ???

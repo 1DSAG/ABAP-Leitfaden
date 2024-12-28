@@ -15,16 +15,18 @@ nav_order: 3
 {:toc}
 Die nachfolgend aufgeführten Testwerkzeuge sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen. Das bedeutet auch, dass von Seiten des ABAP-Entwicklers (maskulin?) nichts beachtet werden muss, was die Tests in irgendeiner Weise, also weder positiv oder negativ, beeinflussen könnte.
 
-Die Auswahl in diesem Leitfaden beschränkt sich auf die von SAP bereitgestellten(?) oder (schon) im Lizenzumfang enthaltenen Produkte. Daneben gibt es noch viele weitere Lösungen auf dem Markt, die für die ABAP-Entwicklung verwendet werden können.
+Die Auswahl in diesem Leitfaden beschränkt sich auf die von SAP bereitgestellten(?) oder (bereits) im Lizenzumfang enthaltenen Produkte. Daneben gibt es noch viele weitere Testmanagement-Lösungen auf dem Markt, die zur Unterstützung der ABAP-Entwicklung verwendet werden können.
 
 ## Testwerkzeuge im SAP Solution Manager
---> Marco
+Der SAP Solution Manager (https://support.sap.com/en/alm/solution-manager.html // die Seite ist auf EN...) ist ein ausgereiftes System für das Application Lifecycle Management (ALM, Link zu diesem Kapitel), das unter anderem verschiedene Testwerkzeuge enthält.
 
-Der SAP Solution Manager (https://support.sap.com/en/alm/solution-manager.html // die Seite ist auf EN...) ist ein ausgereiftes System für das Application Lifecycle Management (ALM, Link zu diesem Kapitel), das unter anderem verschiedene Testwerkzeugen enthält.
+### Test-Suite
+Die Test-Suite des SAP Solution Managers (https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264795.html) besteht im Wesentlichen aus dem Testplan-Management zur Vorbereitung der Tests und der App "Meine Testausführungen", mit der die Anwender die vorbereiteten und freigegebenen Testfälle durchführen. Dazu stehen für den Testmanager verschiedene Funktionen zur Auswertung und Analyse zur Verfügung.
 
-### Test Suite
-xxx...Standard SolMan
-https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264795.html
+Im Testplan-Management werden Testpläne angelegt und verwaltet. Das Herzstück ist die Auswahl der Testfälle, die als solche in der Struktur der Lösungsdokumentation (--> Link zu dem Kapitel) abgelegt sind. Diese können dann in kleinere Einheiten, die sogenannten Testpakete, aufgeteilt und den passenden Testern bzw. Testergruppen zugewiesen werden. Auf diese Weise können passgenaue Testpläne, zum Beispiel für Funktionstests, Integrationstests, Regressionstests, Unit Tests (en??) oder User Acceptance Tests (wie heißt das auf deutsch?) erstellt werden.
+
+(Hier noch ein bisschen was über Analytics...)
+Der Testmanager hat damit jederzeit die Übersicht über den Stand und den Fortschritt der Tests.
 
 ### Test Steps Designer (oder das volle Programm hier?)
 xxx...aus FB... ST-OST Add-on
@@ -35,14 +37,7 @@ https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-m
 xxx...Automatisierung...Standard SolMan
 https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264810.html
 
-## eCATT (extended Computer Aided Test Tool) --> gehört nicht unter "Testwerkzeuge im SAP Solution Manager" !!!
-xxx...
-Verwendung von eCATT irgendwie referenzieren auf eigenes Kapitel?
-https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/de-de/49/6d2fa0e0221ec6e10000000a42189b/frameset.htm
-oder https://help.sap.com/saphelp_gbt10/helpdata/DE/20/e81c3b84e65e7be10000000a11402f/frameset.htm ???
-
 ## Testwerkzeuge in SAP Cloud ALM
-
 Als Nachfolgeprodukt des SAP Solution Managers, dessen Mainstream-Wartungsende seitens SAP auf Ende 2027 datiert ist, wurde für das Application Lifecycle Management (ALM, Link zu diesem Kapitel bzw. hab ich oben schon) im Jahr xxx2018?xxx SAP Cloud ALM vorgestellt. Das Cloud-Produkt beinhaltet - wie schon der Solution Manager - unter anderem ein integriertes Testmanagement, das sowohl eigenständig (für manuelle Testfälle) als auch in Verbindung mit einer Testautmatisierungslösung wie Tricentis Test Automation (siehe den nächsten Abschnitt bzw. Link dort hin) eingesetzt werden kann. SAP Cloud ALM und damit auch dessen Testmanagement-Funktionen werden kontinuierlich weiterentwickelt.
 
 --> Marco
