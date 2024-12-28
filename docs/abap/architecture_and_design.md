@@ -29,25 +29,29 @@ SAP hat in ABAP wie in anderen Programmiersprachen wie JAVA üblich, auch in ABA
 [LINK SAP Doku Pakete]
 
 ### Grundlagen und Begriffserklärungen zum Paketkonzepts
-Ein **Paket** ist in erster Linie ein Mittel um Software zu strukturieren. Mit dem Paket werden Softwareartefakte zusammengefasst, die für einen bestimmten Zweck zuständig sind. Pakete können (und sollten auch) gekapselt sein. Das bedeutet, dass ein Objekt in einem Paket ein Objekt in einem anderen Paket nicht verwenden kann bzw. von einem Objekt in einem anderen Paket nicht verwendet werden kann.
-Ein paar Ausnahmen und Details erfolgen im weitern Abschnitt hierzu (technische bzw. gewünschte Verwendung).
-Es gibt die sogenannten **Hauptpakete**, die zur Strukturierung der zu erstellenden Softwarekompnente dienen. Und es gibt **Unterpakete**, die einem Hauptpaket zugeordnet sind. Die Unterpakete dienen der internen Strukturierung der Artefakte des Hauptpaketes.     
-In SAP gibt es dazu noch die **Strukturpakete**, die übergeordnet zu den Hauptpaketen sind und eine größere Organisation von Hauptpaketen hin zu Applikationen (-Komponenten?) ermöglicht. In Sinne der Komplexitätsreduzierung wird allerdings hier nicht weiter eingegangen sondern ist in der SAP Dokumentation beschrieben. Strukturpakete einzusetzen, kann sinnvoll sein, wenn im Unternehmen das Paketkonzept umfänmglich mit Haupt- und Unterpaketen bereits angewendet wird.  
-Mit der strukturierung von Softwareobjekten mittels Artefakten ergeben sich bereits Vorteile durch verbesserte Übersichtlichkeit, der Vorteil von Paketen ergibt sich aber erst durch die Funktionalität von **Paketschnittstellen**. Eine Paketschnittstelle definiert, welche Artefakte eines Paketes (Haupt- oder Unterpaket) für andere Pakete sichtbar sind. 
-Als letzten hier zu erklärendem Begriff kommt die **Verwendungserklärung**, die in einem Paket gepflegt wird. Verwendet ein Paket A ein Artefakt aus einem Paket B, wird in der Verwendungserklärung des Paketes A, das Paket B aufgenommen. Somit ist auf Paketebene sofort ersichtlich, welche Abhängigkeiten das Paket A besitzt. Dazu ist die Verwendungserklärung auch im Verwendungsnachweis auswertbar, womit es möglich ist, herauszufinden, welche Pakete eine Paketschnittstelle eines Paketes verwenden. 
+Ein **Paket** ist in erster Linie ein Mittel um Software zu strukturieren. Mit einem Paket werden Softwareartefakte zusammengefasst, die für einen bestimmten Zweck zuständig sind. Pakete können (und sollten auch) gekapselt sein. Das bedeutet, dass ein Objekt eines Paketes ein Objekt eines anderen Pakets nicht verwenden kann bzw. von einem Objekt eines anderen Pakets nicht verwendet werden kann.
+Details hierzu erfolgen im weitern Abschnitt (technische bzw. gewünschte Verwendung).
 
-### 
+Es gibt die sogenannten **Hauptpakete**, die zur Strukturierung der zu erstellenden Softwarekompnente dienen. Und es gibt **Unterpakete**, die einem Hauptpaket zugeordnet sind. Die Unterpakete dienen der internen Strukturierung der Artefakte des Hauptpaketes.  
+In SAP gibt es dazu noch die **Strukturpakete**, die übergeordnet zu den Hauptpaketen sind und eine größere Organisation von Hauptpaketen hin zu Applikationen (-Komponenten?) ermöglicht.  
+In Sinne der Komplexitätsreduzierung wird allerdings hier nicht weiter eingegangen, sondern ist in der SAP Dokumentation beschrieben. Strukturpakete einzusetzen, kann sinnvoll sein, wenn im Unternehmen das Paketkonzept umfänmglich mit Haupt- und Unterpaketen bereits angewendet wird.  
+Mit der Strukturierung von Softwareobjekten mittels Pakete ergeben sich bereits Vorteile durch verbesserte Übersichtlichkeit und Ordnung bezüglich der erstellten Artefakte. Der Vorteil von Paketen ergibt sich aber erst durch die Funktionalität von **Paketschnittstellen**.  
+Eine Paketschnittstelle definiert, welche Artefakte eines Paketes (Haupt- oder Unterpaket) nach außen sichtbar sind.
 
+Als letzten hier zu erklärendem Begriff kommt die **Verwendungserklärung**, die in einem Paket gepflegt wird.  
+Verwendet ein Paket A ein Artefakt aus einem Paket B, wird in der Verwendungserklärung des Paketes A, das Paket B aufgenommen. Somit ist auf Paketebene sofort ersichtlich, welche Abhängigkeiten das Paket A besitzt. Dazu ist die Verwendungserklärung auch im Verwendungsnachweis auswertbar. Somit ist es möglich herauszufinden, welche Pakete Abhängigkeiten zu dem Paket haben. 
+
+### Anwendung des Paketkonzepts in der Praxix
+
+
+### Vorteile und Nutzen
 * Warum Pakete -
 
 * Erklärbarkeit
 * Flexibilität
 * - Erstellung Pakete
-* - Strukturierung eines Pakets in Unterpakete
-* - Paket schnittstellen
-* - Verwendungserklärung
 * - Wie Pakete stringent umsetzen
-*   Nachschauen alter Leitfaden ...
+* - Nachschauen alter Leitfaden ...
 
  ## Strukturierung des Kapitels - Was kommt wie rein ....
 * - Paketkonzept
