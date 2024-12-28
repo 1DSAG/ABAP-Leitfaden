@@ -14,7 +14,7 @@ nav_order: 3
 1. TOC
 {:toc}
 
-## Einführung ins Thema, Struktur und Inhalte des Kapitels.
+## Einführung ins Thema und Inhalte des Kapitels.
 
 Willkommen im ABAP Kapitel. Hier geht es um den Kern der modernen SAP Entwicklung - um ABAP. Dieses Kapitel ist keine Beschreibung oder Dokumentation wie ABAP-Entwicklung im Generellen durchgeführt wird, dazu gibt es gute Online Schulungen, die inzwischen sogar kostenlos angeboten werden, die SAP Dokumentation und gute Bücher dazu.
 
@@ -39,7 +39,7 @@ Dieses Kapitel teilt sich in folgend Abschnitte auf:
 - [**Rahmenbedingungen und Enabling moderne ABAP Entwicklung im Unternehmen und in den Teams**](enabling_modern_development.md)  
     Für eine effiziente Transformation zu moderner SAP Entwicklung braucht es entsprechende Rahmenbedingungen. Wir geben Empfehlungen aus der Praxis was benötigt wird.
 
-**Zielgruppe des Kapitels**  
+## **Zielgruppe des Kapitels**  
 Wir sprechen in erster Linie den Personenkreis der ABAP Entwickler und in die ABAP-Entwicklung Involvierte an. Wir möchten aber auch Entscheider und Vorgesetzte von Entwicklungsteams ansprechen, da für die ABAP-Transformation Rahmenbedingungen gegeben sein müssen um auf dieser Reise erfolgreich zu sein. Und dafür möchten wir die Motivation im Unternehmen schaffen indem wir die Vorteile und Praxisempfehlungen hier aufzeigen.
 [ERSTER ENTWURF - muss noch etwas gekürzt und optimiert werden.]
 
