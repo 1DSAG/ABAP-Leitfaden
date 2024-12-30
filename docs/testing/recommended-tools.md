@@ -34,10 +34,14 @@ Die Tester, welche die vom Testmanager bereitgestellten und freigegebenen Testf�
 
 Die Analysefunktionen der Test Suite bestehen aus verschiedenen Reports, die auf vielfältige Weise die Aktivitäten der Tester aufbereiten und teils grafisch darstellen. Der Testmanager hat damit jederzeit die Übersicht über den Stand und den Fortschritt der Tests.
 
-### Test Steps Designer (oder das volle Programm hier?)
-xxx...aus FB... ST-OST Add-on
-https://support.sap.com/en/alm/focused-build.html
+### Test Steps Designer
+Aus dem Solution Manager Add-on "Focused Build" (Softwarekomponente ST-OST), das seit dem Jahr xxxx von SAP kostenlos zur Verfügung gestellt wird und in erster Linie für die agile Softwareentwicklung konzipiert wurde (https://support.sap.com/en/alm/focused-build.html) ist beim Testmanagement speziell der **Testschritt-Designer** hervorzuheben, der auch eigenständig
+als Ergänzung zu den klassischen Testdokumenten verwendet kann, auch in Kombination mit dokumentenbasierten Testfällen. Testschritte sind eine moderne, elegante Möglichkeit, um manuelle Testfälle abzubilden, die im Gegensatz zu herkömmlichen Testdokumenten allerdings einiges mehr an Vorarbeit bei der Erstellung abverlangen. Andererseits können aus gut dokumentierten Prozessen mit detaillierten Prozessschritten durch wenige Klicks Testschritt-Designer-Testfälle generiert werden. https://help.sap.com/docs/Focused_Build_Focused_Insights/53cb8e90c8504f31bb44d4f0029b4b98/84bc67026ded45e58c7f29296a5d3f35.html
+
+(Macht der Link hier irgendwo Sinn? Eher nicht, oder?)
 https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf
+
+
 
 (Grafik selber machen auf deutsch, in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?) [und die einzelnen Punkte kurz beschreiben](https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf)
 ![alt text](./img/test_suite_solman_and_fb.png)
