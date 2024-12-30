@@ -56,6 +56,8 @@ Die Erstellung erfolgt mittels eines Testrecorders, der ein Testskript mit den a
 
 Die Testskripts werden in sogenannte Testkonfigurationen gepackt und können darüber in der Lösungsdokumentation - neben manuellen Testfällen und URLs - abgelegt werden.
 
+Mit dem Wartungsende des SAP Solution Managers rückt auch das Ende vo CBTA näher. Daher ist es ratsam zu überlegen, ob eine zukunftsfähige Drittanbieter-Lösung wie Tricentis Test Automation (Link zu deem Abschnitt) zur Testautomatiserung vielleicht jetzt schon die bessere Alternative ist.
+
 Kann ich den Link hier brauchen?
 https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264810.html
 
