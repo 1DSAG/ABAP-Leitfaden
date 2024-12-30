@@ -26,7 +26,7 @@ Die Test-Suite des SAP Solution Managers (https://help.sap.com/docs/SUPPORT_CONT
 Im Testplan-Management werden Testpläne angelegt und verwaltet. Das Herzstück ist die Auswahl der Testfälle, die als solche in der Struktur der Lösungsdokumentation (--> Link zu dem Kapitel) abgelegt sind. Diese können dann in kleinere Einheiten, die sogenannten Testpakete, aufgeteilt und den passenden Testern bzw. Testergruppen zugewiesen werden. Auf diese Weise können passgenaue Testpläne, zum Beispiel für Funktionstests, Integrationstests, Regressionstests, Unit Tests (en??) oder User Acceptance Tests (wie heißt das auf deutsch?) erstellt werden.
 Manuelle Testfälle werden oft in **Testdokumenten** (Microsoft Word, Microsoft Excel etc.) beschrieben, in denen die durchzuführenden Testschritte aufgeführt sind. Außerdem besteht die Möglichkeit, **URLs** zu hinterlegen, die zu Testfällen führen, welche an einem anderen Ort liegen. Der dritte Testfalltyp im Standard des SAP Solution Managers sind sogenannte **Testkonfigurationen**, die automatisierte Testfälle ansteuern, die zum Beispiel per(?) CBTA (Link zu dem Abschnitt), eCATT (ist das so?? wenn ja, dann Link zu dem Kapitel) oder mit Tricentis-Tools(?) erstellt wurden. (https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/df49e0555937e263e10000000a44538d.html?locale=de-DE)
 
-Als weitere - modernere - Variante für manuelle Testfälle wurden von SAP **Test Steps** eingeführt (Link zu nähstem Abschnitt).
+Als weitere - moderne - Variante für manuelle Testfälle wurden von SAP **Test Steps** eingeführt (Link zu nähstem Abschnitt).
 
 (Screenshot Testfälle in der SolDoc?)
 
@@ -41,7 +41,8 @@ als Ergänzung zu den klassischen Testdokumenten verwendet kann, auch in Kombina
 (Macht der Link hier irgendwo Sinn? Eher nicht, oder?)
 https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf
 
-
+Mit Focused Build wird eine weitere Tester-App namens "Meine Testausführungen" ausgeliefert, die für Testschritt-Designer-Testfälle optimiert und sehr einfach zu bedienen ist. Diese App beschränkt sich auf die für den Tester absolut notwendigen Funktionen. Sie kann auch für rein dokumentenbasierte Testfälle oder für Testpakete mit gemischten Testfällen verwendet werden und macht die Testfallausführung sehr angenehm.
+Die "klassische" App "Meine Aufgaben / Tester-Arbeitsvorrat" ist etwas mächtiger, dafür allerdings schwieriger zu handhaben. Sie kann ebenso für beide Testfalltypen genutzt werden, wobei beim Aufruf eines Testschritt-Designer-Testfalls in ""Meine Testausführungen" abgesprungen wird, was anfangs eventuell verwirrend sein kann.
 
 (Grafik selber machen auf deutsch, in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?) [und die einzelnen Punkte kurz beschreiben](https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf)
 ![alt text](./img/test_suite_solman_and_fb.png)
