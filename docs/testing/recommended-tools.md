@@ -37,7 +37,7 @@ Die Analysefunktionen der Test Suite bestehen aus verschiedenen Reports, die auf
 ### Test Steps Designer (oder das volle Programm hier?)
 xxx...aus FB... ST-OST Add-on
 https://support.sap.com/en/alm/focused-build.html
-https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp14/FB%20-%20Test%20Management%20-%20L2%20SP14.pdf
+https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf
 
 ### CBTA
 xxx...Automatisierung...Standard SolMan
