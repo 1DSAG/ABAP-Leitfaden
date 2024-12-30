@@ -39,6 +39,9 @@ xxx...aus FB... ST-OST Add-on
 https://support.sap.com/en/alm/focused-build.html
 https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf
 
+(Grafik selber machen auf deutsch, in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?) [und die einzelnen Punkte kurz beschreiben](https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf)
+![alt text](./img/test_suite_solman_and_fb.png)
+
 ### CBTA
 xxx...Automatisierung...Standard SolMan
 https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264810.html
@@ -61,7 +64,7 @@ Tricentis ist ein eigenständiges Unternehmen, das nicht zu SAP gehört, aber du
     §	Tool für automatische GUI-Tests über sämtliche Technologien (Webseiten, SAP GUI etc.)
 
 (Grafik selber machen auf deutsch, welches Tricentis-Tool für welches ALM-System etc., in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?) und die einzelnen Punkte kurz beschreiben
-![Clean Core](./img/tricentis_tools_uebersicht.png)
+![alt text](./img/tricentis_tools_uebersicht.png)
 
 ### Mögliche Einsatzszenarien für automatisierte Testfälle
 #### Tägliche Smoke-Tests
