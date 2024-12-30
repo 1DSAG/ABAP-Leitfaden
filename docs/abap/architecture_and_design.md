@@ -28,7 +28,7 @@ Der Nutzen der Strukturierung der Software durch Pakete bei SAP Anwendungen ist 
 SAP hat in ABAP wie in anderen Programmiersprachen wie JAVA üblich, auch in ABAP ein Paketkonzept implementiert, mit dem es Möglich ist, die Software auf verschiedenen Ebenen zu strukturieren. Der Vorgänger der Pakete waren übrigens die Entwicklungsklassen. Mit der Einführung des Paketkonzepts ergeben sich allerdings deutlich erweiterte Möglichkeiten der Softwarestrukturierung, die zwar nicht direkt auf die Funktionalität an sich wirken, aber spätestens bei der Wartung, Pflege und Erweiterung der Eigenentwicklung deutliche Vorteile mit sich bringen. Da es seitens SAP eine ausführliche und gut verständliche Dokumentation des Paketkonzeptes gibt, werden wir hier nicht auf das Paketkonzept im Detail eingehen, sondern Empfehlungen geben wie bei Erstellung von Eigententwicklungen, im Weiteren "Software" genannt, vorgegangen werden kann, um Pakete in ABAP sinnvoll und nutzbringend einzusetzen. 
 [LINK SAP Doku Pakete]
 
-### Grundlagen und Begriffserklärungen zum Paketkonzepts
+## Grundlagen und Begriffserklärungen zum Paketkonzepts
 Ein **Paket** ist in erster Linie ein Mittel um Software zu strukturieren. Mit einem Paket werden Softwareartefakte zusammengefasst, die für einen bestimmten Zweck zuständig sind. Pakete können (und sollten auch) gekapselt sein. Das bedeutet, dass ein Objekt eines Paketes ein Objekt eines anderen Pakets nicht verwenden kann bzw. von einem Objekt eines anderen Pakets nicht verwendet werden kann.
 Details hierzu erfolgen im weitern Abschnitt (technische bzw. gewünschte Verwendung).
 
@@ -41,7 +41,30 @@ Eine Paketschnittstelle definiert, welche Artefakte eines Paketes (Haupt- oder U
 Als letzten hier zu erklärendem Begriff kommt die **Verwendungserklärung**, die in einem Paket gepflegt wird.  
 Verwendet ein Paket A ein Artefakt aus einem Paket B, wird in der Verwendungserklärung des Paketes A, das Paket B aufgenommen. Somit ist auf Paketebene sofort ersichtlich, welche Abhängigkeiten das Paket A besitzt. Dazu ist die Verwendungserklärung auch im Verwendungsnachweis auswertbar. Somit ist es möglich herauszufinden, welche Pakete Abhängigkeiten zu dem Paket haben. 
 
-### Anwendung des Paketkonzepts in der Praxix
+## Anwendung des Paketkonzepts in der Praxis
+
+### Paketdefinition 
+Für die folgenden Ausführungen beschreiben wir die Aspekte des Paketkonzepts für die Erstellung einer größeren Eigententwicklung. Auf andere Fälle wird später eingegangen. 
+Am Anfang der Umsetzung einer Eigenentwicklung muss klar definiert sein, welche Funktion die Software erfüllen soll und in welchen SAP Applikationsbereich die Software betrifft. Damit kann nun der Name der Eigenentwicklung als Komponente definiert werden. Dabei müssen Vorgaben der Entwicklungsrichtlinien im Unternehmen wie Namenskonventionen und Präfixe beachtet werden.  
+Die Namensgebung spielt hier eine wichtige Rolle und sollte gut bedacht werden und unter Berücksichtigung anderer Komponenten erfolgen. So sollte im Namen ersichtlich sein, um welches SAP Objekt sich handelt (z.B. Belegtyp, Formulare ...) und welche Funktion die Komponente erfüllt. Da Eigentwicklungen meistens in Bezug zu SAP Funktionen stehen, sollte der Bezug auch über den Namensbezug erkennbar sein. Meistens muss dann noch der Name sinnvoll gekürzt werden, da durch Namensräume und Präfixe die Anzahl der Zeichen begrenzt ist.
+*** [BEISPIEL NOCH EINTRAGEN !] ***
+Damit steht der Name des Hauptpaketes, das nun in SAP erstellt werden kann und sowohl als Hauptpaket als auch als gekapselt eingestellt wird. Bei der Erstellung des Pakets wird nun noch die SAP Applikationskomponente zugeordnet, hierbei sollte die Selbe Komponente verwendet werden, die die zugehörige SAP Standardkomponente besitzt. Dies kann dem Paket der zugehörigen SAP Objekte die in Beziehung zur Eigenentwicklung stehen entnommen werden.
+
+Innerhalb dieses Hauptpaketes sind nun die Unterpakete zu erstellen, die sich im Namen an das Hauptpaket orientieren, als Postfix aber die Funktion des Unterpaketes ausdrücken.
+
+### Erstellung der Unterpakete - Unterteilung nach Funktion
+Die Unterteilung des Hauptpaketes in Unterpakete sollte nicht nach Objekttyp erfolgen (z.B: DDIC, Forms, Klassen), sondern nach logischer Funktion vorgegangen werden. So kann als Grundstruktur das Paket ..._CORE oder ..._ENG (für Engine) als Unterpaket definiert werden. In diesem Paket werden Objekte erstellt, die von den anderen Unterpaketen verwendet werden und die zentralen Funktionen wie Geschäftsprozesslogik und gemeinsam genutzte Funktionen enthalten.  
+Je nach Art der Software können folgende Unterpakete erstellt werden
+* .._UI - Alle Artifakte für Anwendungsoberflächen
+* .._API - z.B: für ODATA services oder Klassen, die von anderen Paketen verwendet werden können
+* .._DATA - Objekte die Datenbankabfragen kapseln oder anderweitig Daten beschaffen (CDS Artefakte) 
+* .._TEST - Objekte für Unit Tests und Testhelper wie auch Mock-Objekte
+
+
+Zuordnung Applicagtion Kompentne
+
+Szenario SAP BADI Implementierung / kleine Erweiterung
+
 
 
 ### Vorteile und Nutzen
