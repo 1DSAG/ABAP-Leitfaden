@@ -46,7 +46,7 @@ Die "klassische" App "Meine Aufgaben / Tester-Arbeitsvorrat" ist etwas mächtige
 (Grafik selber machen auf deutsch, in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?) [und die einzelnen Punkte kurz beschreiben](https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf)
 ![Optionaler Alternativtext, falls sich das Bild nicht laden lässt](./img/test_suite_solman_and_fb.png)
 
-### Komponentenbasierte Testautomatisierung (component-based test automation, kurz CBTA)
+### Komponentenbasierte Testautomatisierung (Component-Based Test Automation, kurz CBTA)
 Die komponentenbasierten Testautomatisierung ist das Bordwerkzeug des SAP Solution Managers zur Automatisierung von Testfällen und im Standardlieferumfang enthalten.
 https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/00e90f0489994e76ad5999a63bbf4f30.html?locale=de-DE
 
@@ -63,6 +63,13 @@ https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264810.html
 ## Testwerkzeuge in SAP Cloud ALM
 Als Nachfolgeprodukt des SAP Solution Managers, dessen Mainstream-Wartungsende seitens SAP auf Ende 2027 datiert ist, wurde für das Application Lifecycle Management (ALM, Link zu diesem Kapitel bzw. hab ich oben schon) im Jahr xxx2018?xxx SAP Cloud ALM vorgestellt. Das Cloud-Produkt beinhaltet - wie schon der Solution Manager - unter anderem ein integriertes Testmanagement, das sowohl eigenständig (für manuelle Testfälle) als auch in Verbindung mit einer Testautmatisierungslösung wie Tricentis Test Automation (siehe den nächsten Abschnitt bzw. Link dort hin) eingesetzt werden kann. SAP Cloud ALM und damit auch dessen Testmanagement-Funktionen werden kontinuierlich weiterentwickelt.
 
+Ähnlich wie im SAP Solution Manager gliedert sich das Testmangement in SAP Cloud ALM in eine App für die **Testvorbereitung** von manuellen und automatisierte Testfällen, eine App für die Verwaltung von **Testplänen**, eine für die **Testausführung**, eine Analytics-App für die **Testausführungsanalyse** sowie eine zur Übersicht über Testfallfehler, hier **Defekte** genannt.
+
+Eine (Stand: Anfang 2025) in SAP Cloud ALM noch fehlende Funktion, die von vielen Anwendern im Solution Manager intensiv  genutzt wird, ist de Gruppierung von Testfällen innerhalb eines Testplans in Testpakete, mit der Möglichkeit zur passgenauen Zuordnung von Testergruppen inklusive Wiederverwendung (??).
+
+SAP liefert eine große Anzahl an Standardprozessen mit Prozessablauf-Diagrammen inklusive der zugehörigen Testfälle aus, die sehr leicht in Cloud ALM ausgewählt und bei Bedarf angepasst werden können, ähnlich wie beim Testschritt-Designer (Link dorthin) aus dem Focused Build-Paket.
+
+- 
 --> Marco
     Automatische Prozesstests mit CloudALM? (wie) geht das ? 
 
