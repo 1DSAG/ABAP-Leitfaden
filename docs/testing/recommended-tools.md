@@ -24,9 +24,9 @@ Der SAP Solution Manager (https://support.sap.com/en/alm/solution-manager.html /
 Die Test-Suite des SAP Solution Managers (https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264795.html) besteht im Wesentlichen aus dem Testplan-Management zur Vorbereitung der Tests und der App "Meine Aufgaben / Tester-Arbeitsvorrat", mit der die Anwender die vorbereiteten und freigegebenen Testfälle durchführen. Dazu stehen für den Testmanager verschiedene Funktionen zur Auswertung und Analyse zur Verfügung.
 
 Im Testplan-Management werden Testpläne angelegt und verwaltet. Das Herzstück ist die Auswahl der Testfälle, die als solche in der Struktur der Lösungsdokumentation (--> Link zu dem Kapitel) abgelegt sind. Diese können dann in kleinere Einheiten, die sogenannten Testpakete, aufgeteilt und den passenden Testern bzw. Testergruppen zugewiesen werden. Auf diese Weise können passgenaue Testpläne, zum Beispiel für Funktionstests, Integrationstests, Regressionstests, Unit Tests (en??) oder User Acceptance Tests (wie heißt das auf deutsch?) erstellt werden.
-Manuelle Testfälle werden oft in **Testdokumenten** (Microsoft Word, Microsoft Excel etc.) beschrieben, in denen die durchzuführenden Testschritte aufgeführt sind. Außerdem besteht die Möglichkeit, **URLs** zu hinterlegen, die zu Testfällen führen, welche an einem anderen Ort liegen. Der dritte Testfalltyp im Standard des SAP Solution Managers sind sogenannte **Testkonfigurationen**, die automatisierte Testfälle ansteuern, die zum Beispiel per(?) CBTA (Link zu dem Abschnitt), eCATT (ist das so?? wenn ja, dann Link zu dem Kapitel) oder mit Tricentis-Tools(?) erstellt wurden. (https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/df49e0555937e263e10000000a44538d.html?locale=de-DE)
+Manuelle Testfälle werden oft in **Testdokumenten** (Microsoft Word, Microsoft Excel etc.) beschrieben, in denen die durchzuführenden Testschritte aufgeführt sind. Außerdem besteht die Möglichkeit, **URLs** zu hinterlegen, die zu Testfällen führen, welche an einem anderen Ort liegen. Der dritte Testfalltyp im Standard des SAP Solution Managers sind sogenannte **Testkonfigurationen**, die automatisierte Testfälle ansteuern, die zum Beispiel mittels CBTA (Link zu dem Abschnitt), eCATT (Link zu dem Kapitel) oder mit Tricentis Tosca(!?!) (Link zu dem Kapitel) erstellt wurden. (https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/df49e0555937e263e10000000a44538d.html?locale=de-DE)
 
-Als weitere - moderne - Variante für manuelle Testfälle wurden von SAP **Test Steps** eingeführt (Link zu nähstem Abschnitt).
+Als weitere - moderne - Variante für manuelle Testfälle wurden von SAP **Testschritte** eingeführt, die allerdings nur nach Installation des Add-on "Focused Build" zur Verfügung stehen (Link zu nächstem Abschnitt).
 
 (Screenshot Testfälle in der SolDoc?)
 
@@ -34,9 +34,8 @@ Die Tester, welche die vom Testmanager bereitgestellten und freigegebenen Testf�
 
 Die Analysefunktionen der Test Suite bestehen aus verschiedenen Reports, die auf vielfältige Weise die Aktivitäten der Tester aufbereiten und teils grafisch darstellen. Der Testmanager hat damit jederzeit die Übersicht über den Stand und den Fortschritt der Tests.
 
-### Test Steps Designer
-Aus dem Solution Manager Add-on "Focused Build" (Softwarekomponente ST-OST), das seit dem Jahr xxxx von SAP kostenlos zur Verfügung gestellt wird und in erster Linie für die agile Softwareentwicklung konzipiert wurde (https://support.sap.com/en/alm/focused-build.html) ist beim Testmanagement speziell der **Testschritt-Designer** hervorzuheben, der auch eigenständig
-als Ergänzung zu den klassischen Testdokumenten verwendet kann, auch in Kombination mit dokumentenbasierten Testfällen. Testschritte sind eine moderne, elegante Möglichkeit, um manuelle Testfälle abzubilden, die im Gegensatz zu herkömmlichen Testdokumenten allerdings einiges mehr an Vorarbeit bei der Erstellung abverlangen. Andererseits können aus gut dokumentierten Prozessen mit detaillierten Prozessschritten durch wenige Klicks Testschritt-Designer-Testfälle generiert werden. https://help.sap.com/docs/Focused_Build_Focused_Insights/53cb8e90c8504f31bb44d4f0029b4b98/84bc67026ded45e58c7f29296a5d3f35.html
+### Testschritt-Designer
+Aus dem Solution Manager Add-on "Focused Build" (Softwarekomponente ST-OST), das von SAP in erster Linie für die agile Softwareentwicklung konzipiert wurde (https://support.sap.com/en/alm/focused-build.html) und seit dem Jahr 2020 kostenlos zur Verfügung gestellt wird, ist beim Testmanagement speziell der **Testschritt-Designer** hervorzuheben, der auch eigenständig als Ergänzung zu den klassischen Testdokumenten verwendet kann, sowie in Kombination mit dokumentenbasierten Testfällen. Testschritte sind eine moderne, elegante Möglichkeit um manuelle Testfälle abzubilden, die im Gegensatz zu herkömmlichen Testdokumenten allerdings einiges mehr an Vorarbeit bei der Erstellung abverlangen. Andererseits können aus gut dokumentierten Prozessen mit detaillierten Prozessschritten durch wenige Klicks Testschritt-Designer-Testfälle generiert werden. https://help.sap.com/docs/Focused_Build_Focused_Insights/53cb8e90c8504f31bb44d4f0029b4b98/84bc67026ded45e58c7f29296a5d3f35.html
 
 (Macht der Link hier irgendwo Sinn? Eher nicht, oder?)
 https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf
@@ -47,8 +46,8 @@ Die "klassische" App "Meine Aufgaben / Tester-Arbeitsvorrat" ist etwas mächtige
 (Grafik selber machen auf deutsch, in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?) [und die einzelnen Punkte kurz beschreiben](https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf)
 ![Optionaler Alternativtext, falls sich das Bild nicht laden lässt](./img/test_suite_solman_and_fb.png)
 
-### Component-based test automation (CBTA)
-Die komponentenbasierten Testautomatisierung ist, wie der Name schon sagt, das Bordwerkzeug des SAP Solution Managers zur Automatisierung von Testfällen und im Standardlieferumfang enthalten.
+### Komponentenbasierte Testautomatisierung (component-based test automation, kurz CBTA)
+Die komponentenbasierten Testautomatisierung ist das Bordwerkzeug des SAP Solution Managers zur Automatisierung von Testfällen und im Standardlieferumfang enthalten.
 https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/00e90f0489994e76ad5999a63bbf4f30.html?locale=de-DE
 
 Mit CBTA können Testfälle für unterschiedliche Technologien automatisiert werden wie etwa SAP GUI, SAP CRM Web Client, Web Dynpro ABAP, Business Server Pages (BSP), SAP UI5/FIORI und viele mehr.
@@ -56,7 +55,7 @@ Die Erstellung erfolgt mittels eines Testrecorders, der ein Testskript mit den a
 
 Die Testskripts werden in sogenannte Testkonfigurationen gepackt und können darüber in der Lösungsdokumentation - neben manuellen Testfällen und URLs - abgelegt werden.
 
-Mit dem Wartungsende des SAP Solution Managers rückt auch das Ende vo CBTA näher. Daher ist es ratsam zu überlegen, ob eine zukunftsfähige Drittanbieter-Lösung wie Tricentis Test Automation (Link zu deem Abschnitt) zur Testautomatiserung vielleicht jetzt schon die bessere Alternative ist.
+Mit dem Wartungsende des SAP Solution Managers rückt auch das Ende von CBTA näher. Daher ist es ratsam zu überlegen, ob eine zukunftsfähige Drittanbieter-Lösung wie Tricentis Test Automation (Link zu deem Abschnitt) zur Testautomatiserung vielleicht jetzt schon die bessere Alternative ist.
 
 Kann ich den Link hier brauchen?
 https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264810.html
