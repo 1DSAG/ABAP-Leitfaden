@@ -137,6 +137,14 @@ In jedem Entwicklungsteam sollte es - gerne auch rollierend - einen Clean ABAP O
 Änderungen und Erweiterungen müssen separat in den Teams kommuniziert und Abgestimmt werden. 
 Clean ABAP funktioner am besten wenn alle Beteiligten hiner den Regeln stehen, hierfür sind immer wieder Team Kompromisse und Abstimmungen möglich. 
 
+### Clean ABAP ist ein Prozess  
+Die Anwendung / Erlernen von Clean ABAP ist kein einmaliger Workshop oder eine Managementdirektive. 
+Es braucht Zeit, Übung, Motivation und den konstanten Willen bessere ABAP Programme zu schreiben. 
+
+Die Tätigkeiten, die das Anwenden von Clean ABAP sichderstellen heißen Pair-Programming, Code Reviews, Refactoring und Schulung.
+Hierfür müssen von der Organisation entsprechende Bedingungen geschaffen werden. 
+
+
 ### Differenzierung zu Clean Core
 Bei Clean ABAP geht um das schreiben von ABAP Code dessen Fokus auf Verständlichkeit und Wartbarkeit liegt. 
 Bei Clean Core der SAP geht es um die Behandlung der Grenzen von Kundenindividuellen Programen im SAP Standard. 
