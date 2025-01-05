@@ -153,9 +153,10 @@ Nur weil eine Umsetzung der Clean Core Stategie enspricht ist diese nicht automa
 * Rechtfertigung für Modifikation: z.B. Implementierung von Alleinstellungsmerkmalen (USPs) / Verbesserung / Prozessoptimierung / andere Savings? (ggf. Text aus altem Leitfaden adaptieren. 
 
 ### Saubere Modifikationen
-    Do
-    SAP Code öffnen und einen enhancementspot in der Modifikation anlegen. 
-    Enhancement spot wie gewohnt ausprägen mit allen Vorteilen der Enhancements z.B dass der Code im Z-Paket liegt. 
-    Don't 
-        In der Modifikation business code zu schreiebn. Dieser sollte inbedingt ausgelagert und separat testbar sein. 
-        Wenn die unter Do beschriebene Vorgehensweise nicht möglich sein sollte, verwenden sie Aufrufe von Methoden.
+Do
+ SAP Code öffnen und einen enhancementspot in der Modifikation anlegen. 
+ Enhancement spot wie gewohnt ausprägen mit allen Vorteilen der Enhancements z.B dass der Code im Z-Paket liegt. 
+
+Don't 
+ In der Modifikation business code zu schreiebn. Dieser sollte inbedingt ausgelagert und separat testbar sein. 
+ Wenn die unter Do beschriebene Vorgehensweise nicht möglich sein sollte, verwende Aufrufe von Methoden.
