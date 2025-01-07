@@ -14,6 +14,9 @@ nav_order: 1
 1. TOC
 {:toc}
 
+Das Application Lifecycle Management sollte einem definierten Prozess folgen, der die relevanten Schritte in einer klaren Abfolge darstellt. Dieser Prozess muss auf das Unternehmen angepasst sein, in Abstimmung zwischen dem Business und der IT. Ein entscheidender Faktor dabei ist die effiziente Defintion der Rollen innerhalb des ALM-Prozesses.
+
+Ein Beispiel könnte wie folgt dargestellt werden: ... (Abbildung) ??
 
 - Definierter Prozess (wenige Steps / effiziente Rollen) 
   - Requirements Management
