@@ -12,6 +12,7 @@ nav_order: 13
 1. TOC
 {:toc}
 
+
 ## Einleitung
 
 Wieso sollte das Management in Softwarequalität und eine gut aufgestellte Entwicklungsorganisation investieren? Softwarequalität als Basis wird in der Regel implizit von Stakeholdern automatisch erwartet, dafür notwendige Maßnahmen aber oft wenig unterstützt, denn „Es liegt kein Ruhm in Prävention“.
@@ -35,7 +36,6 @@ Die Lösungen dieser Probleme sind in der Regel in zwei Kategorien einzuteilen, 
 
 Teile dieser Lösungen können für sie als Unternehmen Quick Wins sein oder sich mit kleinen Keimzellen evaluieren und nachhaltig gestalten. Es lohnt sich hierbei einen Blick darauf zu werfen, was seit viele Jahren außerhalb der SAP-Welt im Bereich Software-Engineering betrieben wird und dies zu adaptieren. Einen Ausblick hierzu gibt ihnen das folgende Kapitel.
 
- 
 
 ### Bausteine einer effektiven Entwicklungsorganisation
 
@@ -43,11 +43,13 @@ Die Transformation zu einem erfolgreichen S/4HANA Technologie-Team stellt aus Un
 
 Je größer der Anteil an kundenindividueller Anpassung und Erweiterung ihrer vorhandenen SAP Software ist bzw. strategisch werden soll (todo: Verweis auf Kapitel Clean Core), desto wichtiger ist der unternehmerischer Fokus auf die Effizienz und Effektivität ihrer Entwicklungsorganisation. Der nachfolgende Auszug streift die aus unserer Sicht wichtigsten Themenfelder, die sie auf dem Weg zu einer erfolgreichen Entwicklungsorganisation unterstützen werden. 
 
+
 #### Definition der passenden Aufbau- und Ablauforganisation
 
 Die Ausrichtung ihrer Entwicklungsorganisation ist von der Menge, Komplexität und Häufigkeit an Kundenanpassungen in ihren SAP Systemen abhängig (_Make-or-Buy_ _bzw. „Do nothing“_ _Entscheidung_). Gehören Sie zu den Kunden, die SAP Software im Rahmen einer Standard-Software ohne größere Anpassungen nutzen können, lohnt sich die Investition in eine eigene SAP Entwicklungsabteilung aus wirtschaftlicher Sicht in der Regel nicht. Für den Fall empfiehlt es sich, auf externe Spezialisten mit entsprechender Kernkompetenz und Reputation zurückzugreifen und die geringe Menge von Kundenanpassungen im SAP System unter dem Schirm von definierten Dokumentationsrichtlinien (Änderungsdokumentation, Betriebshandbücher, etc.) und klar definierter Service Level / KPIs abzuwickeln.  Die genaue Ausprägung der Entscheidung ist vom individuellen Einzelfall in Ihrem Unternehmen abhängig und kann von geringfügigen Änderungen, bis hin zu einem kompletten Plattformbetrieb durch ein eigenes Team oder einen externen Service Partner variieren. 
 
 Besteht die Notwendigkeit Ihre SAP-Systeme auf Grund von fehlender Funktionalität in Ihren Kerngeschäftsprozessen, bzw. der notwendigen Integration von Alleinstellungsmerkmalen, die Ihnen zu Wettbewerbsvorteilen verhelfen mittels Kundenindividualentwicklung häufig anzupassen, lohnt sich die Investitionsprüfung in eine eigene SAP Entwicklungsorganisation. Der Aufbau einer erfolgreichen  Entwicklungsorganisation ist ein komplexes Vorhaben und muss neben den technologischen Themen besonders auf sozioökonomische Aspekte Rücksicht nehmen. Nutzen Sie die nachfolgenden Punkte, um die Stellschrauben in Ihrem Unternehmen auf Ihre Bedürfnisse anzupassen.
+
 
 ##### Teamorganisation und Teamzusammensetzung
 
@@ -63,6 +65,7 @@ Softwareentwicklungs-Teams sind das Schlüsselelement für die erfolgreiche Umse
 | Weiterführende Internetquellen und Literaturempfehlung |
 | --- |
 | <ul><li>[Inverse Conway Maneuver](https://www.thoughtworks.com/en-de/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams)</li><li>https://teamtopologies.com/</li><li>https://flowengineering.org/</li><li>https://github.com/ddd-crew/core-domain-charts</li><li>https://managingtheunmanageable.net/</li><li>[Lean Software Development – An Agile Toolkit](https://www.pearson.de/lean-software-development-an-agile-toolkit-an-agile-toolkit-9780133812954)</ul> |
+
 
 #### Definition der passenden Custom Code Strategie
 
@@ -81,7 +84,7 @@ Eine klar definierte Custom-Code-Strategie unterstützt Sie bei der transparente
     
 *   Folgen Sie offiziellen Coding Standards wie den [SAP ABAP Programmierrichtlinien](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap_pgl.htm), [SAP Code Style Guides](https://github.com/SAP/styleguides) und natürlich den Empfehlungen aus dem aktuell vorliegenden Dokument. Sorgen sie dafür, dass die Überprüfung der Regeln nach Möglichkeit automatisch erfolgt, die Entwickler Werkzeuge mit kurzen Feedback-Zyklen und Korrekturvorschlägen verwenden und neben der automatischen Regelüberprüfung auch ein manuelles Code Review stattfindet.
 *   Definieren sie konkrete Entwicklungstypen und legen sie Entwicklungstyp-spezifische Qualitätsstandards und Vorgehensweisen fest. Beispielsweise ist ein einmalig auszuführendes Korrekturprogramm kurzfristig und zweckgebunden, wodurch Effizienz, Zeitersparnis und geringe Kosten im Fokus stehen. Eine Developer-On-Stack-Applikation für kundenindividuelle Anarbeitungsprozesse hingegen erfordert höhere Qualitätsstandards, da sie langfristig genutzt, regelmäßig erweitert und gewartet wird. Hier sind Wartbarkeit, Skalierbarkeit sowie die Minimierung langfristiger Kosten entscheidend. Die unterschiedlichen Standards helfen den Entwicklern dabei, sich auf die Kernaufgabe zu konzentrieren und ihre begrenzte Zeit effektiv einzusetzen. Zusätzlich empfehlen wir als Leitlinie einen abstrakten Makro-Qualitätsstandard zu definieren, auf dessen Grundlage sich die Entwicklungstyp spezifischen Szenarien ableiten lassen.
-    
+
 
 Beispiel: „Was ist guter ABAP-Code?“
 
@@ -103,6 +106,7 @@ Unternehmen mit einem geringen Reifegrad in der Softwareentwicklung fahren oft e
 | Weiterführende Internetquellen und Literaturempfehlung |
 | --- |
 | <ul><li>https://www.langlebige-softwarearchitekturen.de/</li><li>https://refactoring.com/</li><li>https://software-architektur.tv/</li><li>[SAP Application Extension Methodology](https://help.sap.com/docs/sap-btp-guidance-framework/sap-application-extension-methodology/sap-application-extension-methodology-overview)</li></ul> |
+
 
 #### Prozesse und Methodik
 
@@ -130,9 +134,11 @@ Darüber hinaus ist „agile“ definiert durch Werte und Prinzipien, so dass ke
 
 Welche Änderung auch immer für ihr Unternehmen gut ist – bedenken sie, dass es letztendlich und Menschen und Kommunikation geht. Versuchen sie ein gemeinsames Ziel, einen „Unity of Puprose“ zu schaffen, an dem sie ihr Vorgehen messen können und Konflikte auflösen können. Ansonsten besteht die Gefahr, dass ihre Initiative unter verschiedenen Richtungen („weniger Regeln und Struktur“ vs „mehr Vorgaben“) oder Interessen (z.B. Gegenläufigen Jahreszielen von Führungskräften) zerrieben wird. Oft gibt es auch die Aufstellung, dass ein agiles Team dennoch einen Projektmanager oder Projektleiter hat und somit hybride entstehen. Hier empfiehlt es sich im Kontext der Organisation zu prüfen, ob ein Wechsel „from projects to products“ hilfreich sein kann.
 
+
 #### Status Quo in gewachsenen Landschaften
 
 Aus unserer Erfahrung im DSAG-Netzwerk wissen wir: Die Qualität der Softwareentwicklung hängt stark von der Kompetenz und Motivation der Entwicklungsteams und den Bedingungen innerhalb des Unternehmens ab. Oft fehlt dem Management das technische Verständnis. Vorgaben von außen oder oben wirken selten motivierend. Die Folge: mangelhafte Umsetzung von Qualitätsmaßnahmen oder deren bewusste Umgehung. Kurzfristige Anreize, wie z.B. der Einsatz von Gamification-Elementen oder ein direktes Coaching mit Experten können helfen, aber langfristige organisatorische Veränderungen sind notwendig, um Entwickler zu motivieren, hohe Qualitäts- und Entwicklungsstandards zu setzen. Oft beginnt dieser Prozess damit ein Bewusstsein zu schaffen, dass hohe Softwarequalität und deren positive Effekte nicht ein implizit oder explizit existierender Anspruch von verschiedenen Stakeholdern ist, sondern vor allem auch den Entwicklern selbst hilft.
+
 
 #### Best Practice
 
@@ -156,19 +162,23 @@ Moderne ABAP-Entwicklung erfordert Entwicklungsrichtlinien als gemeinsame Basis.
 
 Erst durch organisatorische Änderungen, wie z.B. eine Development Factory, Community Of Practice oder ein interdisziplinäres Team, beginnt der eigentliche Veränderungsprozess. Wenn Sie eine Clean-Core-Strategie verfolgen, dann ist es umso wichtiger, das Sie das Change Management richtig angehen. Eine Umschulung bestehender Entwickler wird nicht ausreichen um Veränderung zu leben. 
 
+
 #### Der nächste Schritt
 
 Ohne Schlüsselpersonen, die Qualität vorantreiben, neigen Teams unter dem andauernden Druck von Projektarbeit und Fachbereich dazu, Funktionalität über Qualität zu stellen. Kontrolle und Qualitätsprüfungen sind auch für externe Mitwirkende entscheidend. Die Initiative benötigt engagierte Hauptentwickler, die intrinsisch motiviert sind, Veränderungen  über Jahre hinweg zu unterstützen und zu managen (= Change Management).
 
 Es muss eine klare Vision, Strategie und definierte Ziele geben, die vom Management unterstützt werden, oder am besten explizit von der Geschäftsleitung gefordert werden. Die strikte Trennung von SAP-Standardcode und Eigenentwicklungen - die sogenannte Clean-Core-Strategie - wird verfolgt, um das System langfristig wartbar, erweiterbar und entwicklungsfähig zu halten (siehe Kapitel Clean Core). Wir konzentrieren uns daher auf die Vision und die Umsetzung der Strategie.
 
+
 #### Erfahrungsbericht aus der Praxis: Brownfield in S/4HANA
 
 Das nachfolgende Beispiel soll die Umsetzung der Clean Core Strategie anhand eines SAP-Kunden im gewachsenen Brownfield aufzeigen. Hier wurde der Bottom-Up Ansatz im Change Management gewählt; Die globalen Entwicklerteams definieren durch Repräsentanten in einem Clean-Core-Governance Gremium, die Entwicklungslandschaft und die Richtlinien in der SAP Entwicklung.
 
+
 ##### **Vision**
 
 Wir wollen die ABAP Cloud-Technologien und den SAP-Standard effektiv nutzen. Wir setzen Custom Code richtig, sauber und gezielt ein um Wettwerbevorteile zu erhalten. Dadurch reduzieren wir die Fehler und den Wartungsaufwands um 90%!
+
 
 ##### **Umsetzung**
 
@@ -188,7 +198,7 @@ Wir wollen die ABAP Cloud-Technologien und den SAP-Standard effektiv nutzen. Wir
 *   Beschaffung von Werkzeugen für die Qualitätssicherung
 *   Einführung von Code Reviews und statischen Code Checks als obligatorische Elemente des Entwicklungsprozesses
 *   Weitere Schulung aller ABAP-Entwickler, teilweise durch Train-the-Trainer
-     
+
 
 ## Schlusswort
 
