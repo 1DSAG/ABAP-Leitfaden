@@ -25,9 +25,9 @@ Der [Business Accelerator Hub](https://api.sap.com/) von SAP stellt standardisie
 
 In diesem Abschnitt geht es um verschiedene Schnittstellentechnologien und Sie erhalten hier einen groben Überblick über die gängigen Technologien.
 
-### IDOC
+### IDoc
 
-Intermediate Document, kurz IDOC, ist ein Datenaustauschformat von SAP, um verschiedene Systeme miteinander zu integrieren. Die Daten können dabei ins System geladen oder daraus exportiert werden. Die meisten IDOCs werden auf Positionsbasis erstellt, das heißt der gesamte Datensatz steht auf einer Zeile und es wird per Identifikation (meist der erste Teil der Zeile) das Format für die Daten abgeleitet. In aktuelleren Systemen gibt es auch IDOCs im XML Format.
+Intermediate Document, kurz IDoc, ist ein Datenaustauschformat von SAP, um verschiedene Systeme miteinander zu integrieren. Die Daten können dabei ins System geladen oder daraus exportiert werden. Die meisten IDocs werden auf Positionsbasis erstellt, das heißt der gesamte Datensatz steht auf einer Zeile und es wird per Identifikation (meist der erste Teil der Zeile) das Format für die Daten abgeleitet. In aktuelleren Systemen gibt es auch IDocs im XML Format.
 
 ### RFC
 
@@ -69,6 +69,6 @@ Dazu erhalten Sie hier die Übersicht der oben genannten Technologien unterteilt
 | Verwenden   | Vermeiden |
 | ----------- | --------- |
 | OData       | RFC       |
-| SOAP        | IDOC      |
+| SOAP        | IDoc      |
 | Events      |           |
 | HTTP (REST) |           |
