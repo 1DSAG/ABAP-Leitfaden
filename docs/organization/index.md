@@ -19,26 +19,17 @@ Wieso sollte das Management in Softwarequalität und eine gut aufgestellte Entwi
 Aus Managementsicht ist ein solcher Invest (Zeit, Ressourcen, Tooling) mit einem Business Case zu hinterlegen, der sich am einfachsten für ihr Unternehmen individuell erarbeiten lässt, wenn Sie einen Blick auf die aktuellen Probleme ihres Unternehmens und ihrer IT werfen. Falls sie einige dieser bei sich wiederfinden, kann eine Optimierung ihrer Entwicklungsabteilung und Kultur mit Fokus auf Qualität und Technologien ein Lösungsansatz sein:
 
 *   (zu) langsame Umsetzung von Innovationen und gesetzlichen Anforderungen im Vergleich zu ihren Konkurrenten
-    
 *   Unzufriedene Endkunden aufgrund von IT-Themen, Fehlern, Prozessen oder nicht eingehaltene SLAs etc.
-    
 *   Fehlerhafte Prozesse und Daten in ihren Systemen mit entsprechenden Aufwänden für Korrekturen
-    
 *   Dauerhafte Überlastung der IT-Abteilung, Tendenz zu Burnout, Personalfluktuation, Wissenssilos, Wissensverlust
-    
 *   Schwierige Kooperation zwischen Fachabteilungen und IT
-    
 *   Implementierungen erfüllen nicht die fachlichen Anforderungen der Fachbereiche
-    
 *   Lange Projektlaufzeiten und Feedbackprozesse, hoher Bedarf an Nacharbeit
-    
 *   Historisch gewachsene komplexe Systemkonstellationen und Code-Basen
-    
 
 Die Lösungen dieser Probleme sind in der Regel in zwei Kategorien einzuteilen, für die dieser DSAG Leitfaden sowie weitere Leitfäden mögliche Lösungsoptionen aufzeigen:
 
 *   Kulturell-Organisatorisch: Querschnittliche Teams, Auflösung von Silos, klare Rollenverteilungen und Verantwortlichkeiten, Vertrauen, Kommunikationsstrukturen, gemeinsames Ziel und Vision, Förderung von Kooperation statt Konkurrenz etc.
-    
 *   Software-Qualität: Automatisierung, professionelles Testen, Entwicklungsrichtlinien, Software-Architekturmanagement, Enterprise Architecture Management (EAM), gezielte Trainings, Pair-Programming, Code Reviews, Community of Practice etc.
     
 
@@ -63,13 +54,9 @@ Besteht die Notwendigkeit Ihre SAP-Systeme auf Grund von fehlender Funktionalit�
 Softwareentwicklungs-Teams sind das Schlüsselelement für die erfolgreiche Umsetzung und Implementierung Ihrer Entwicklungsvorhaben. Hier spielt die Musik, wenn es darum geht, die fachlichen Anforderungen in Technologie zu gießen und die Lösung über Jahrzehnte hinweg kostengünstig und wartbar zu halten. Damit das Team dieser Anforderung gerecht werden kann, muss es mit entsprechenden Kompetenzen, Mitteln und Prozessen ausgestattet und unterstützt werden. Wenn Sie z.B. feststellen, dass Ihre Teams erhebliche Zeit und Energie darauf verwenden, sich gegen Schuldzuweisungen anderer Teams abzusichern, oder dass es zu langen Wartezeiten zwischen den einzelnen Schritten in ihrem Softwareentwicklungsprozess kommt, könnte dies ein Hinweis auf einen suboptimalen Teamschnitt sein, der dringend optimiert werden sollte. Beigefügte finden sie einige  Handlungsempfehlungen um Probleme bei der Teamorganisation zu vermeiden.
 
 *   Die richtige Teamzusammensetzung ist essentiell für die effektive Bewältigung der an das Team herangetragenen Aufgaben. Hierbei spielen die Teamgröße, kultureller Hintergrund, fachliche und technische Kompetenz und die Hilfsmittelausstattung eine wesentliche Rolle. Achten Sie darauf, dass das Team alle Tätigkeiten zur Aufgabenerfüllung und Ergebnislieferung nach Möglichkeit eigenständig durchführen kann und Abhängigkeiten zu vor- bzw. nachgelagerten Prozessen so gering wie möglich sind.
-    
 *   Berücksichtigen Sie bei der Teamzusammenstellung die fachliche und technische Komplexität. Gerade im SAP Umfeld stellt die Komplexitätsbewältigung in den unterschiedlichen Anwendungsbereichen oft eine Herausforderung dar. Neben dem fachlichen Kontext muss sich das Team zusätzlich mit anwendungsspezifischen Frameworks, kundenseitigem Bestandscode, Technologietrends und unterschiedlichen Technologie Stacks auseinandersetzen. Achten Sie darauf, dass das Team nicht in zu viel unterschiedlichen Aufgabenbereichen arbeitet und stattdessen Fokus auf einen beherrschbaren Bereich, wie z.B. auf ein fachliches Modul, setzen kann. Nehmen Sie Ihr Team ernst, wenn es über eine zu hohe Komplexitätsbewältigung klagt. Anderenfalls riskieren Sie durch zu häufigen Kontextwechsel und kognitive Überforderung des Teams langfristige Gesundheitsschäden und negative Produktivität.
-    
 *   Achten Sie besonders darauf, dass sich die Entwickler auf ihre Kernkompetenz, das Designen und Erstellen von qualitativ angemessener Software, konzentrieren können und sich nicht zusätzlich um Themen wie Anforderungsmanagement oder Prozessdokumentationen kümmern müssen. Eine Ausnahme bildet hier die zeitlich begrenzte Durchführung dieser Aktivitäten, um die fachliche Problemdomäne präziser zu erfassen und die zugrunde liegenden Konzepte besser zu verstehen. In der Regel führt ein vertieftes Verständnis der Problemdomäne zu einem effizienteren Softwaredesign und bildet somit einen Mehrwert für den Entwickler. 
-    
-*   Stellen Sie Ihren Softwareentwicklungsteams den angemessenen Freiraum für Experimente, Weiterbildung und zur Produktoptimierung bereit. Vermeiden Sie es Ihre Entwickler dauerhaft mit einer 100% Auslastung zu verheizen. Ermöglichen Sie den Entwicklern, durch Maßnahmen wie die Einrichtung einer Community of Practice, voneinander zu lernen. Experimentieren Sie z.B. mit [Pair-Programming](https://en.wikipedia.org/wiki/Pair_programming#:~:text=Pair programming is a software,as it is typed in. "https://en.wikipedia.org/wiki/Pair_programming#:~:text=Pair programming is a software,as it is typed in.") und profitieren Sie von den damit verbundenen [Vorteilen](https://medium.com/the-liberators/in-depth-the-costs-and-benefits-of-pair-programming-b4b54b27c6ff "https://medium.com/the-liberators/in-depth-the-costs-and-benefits-of-pair-programming-b4b54b27c6ff"), wie einer potentiell höheren Code Qualität und besserem Software Design.
-    
+*   Stellen Sie Ihren Softwareentwicklungsteams den angemessenen Freiraum für Experimente, Weiterbildung und zur Produktoptimierung bereit. Vermeiden Sie es Ihre Entwickler dauerhaft mit einer 100% Auslastung zu verheizen. Ermöglichen Sie den Entwicklern, durch Maßnahmen wie die Einrichtung einer Community of Practice, voneinander zu lernen. Experimentieren Sie z.B. mit [Pair-Programming](https://en.wikipedia.org/wiki/Pair_programming) und profitieren Sie von den damit verbundenen [Vorteilen](https://medium.com/the-liberators/in-depth-the-costs-and-benefits-of-pair-programming-b4b54b27c6ff "https://medium.com/the-liberators/in-depth-the-costs-and-benefits-of-pair-programming-b4b54b27c6ff"), wie einer potentiell höheren Code Qualität und besserem Software Design.
 *   Geben sie den Teams die Mittel und Tools in die Hand, um Transparenz über ihr Arbeitsgebiet zu erlangen. Eine effektive Optimierung lässt sich nur auf Grundlage von Zahlen, Daten und Fakten (**Verweis auf Kapitel ALM**) durchführen. Sind die Informationen über Custom Code und Prozess-Metriken nicht vorhanden, ist eine betriebswirtschaftlich sinnvolle Entscheidung über eine lohnenswerte Investition in ein Optimierungsprojekt nahezu unmöglich.
     
 
@@ -89,28 +76,20 @@ Eine klar definierte Custom-Code-Strategie unterstützt Sie bei der transparente
     
 
 1.  Bevor Sie die Entwicklung einer neuen Funktionalität beginnen, prüfen Sie, ob sich ihre Anforderung durch einen bestehenden Workaround lösen lässt. 
-    
 2.  Ist das nicht der Fall, oder verursacht der Workaround zu hohe Kosten, prüfen Sie, ob eine Standardlösung von einem Drittanbieter ihre Anforderung erfüllt und profitieren Sie davon, dass sich der Anbieter um die Wartung und Weiterentwicklung (idealerweise außerhalb ihrer Systemlandschaft) kümmert.
-    
 3.  Erst nach Prüfung der oben genannten Optionen sollten Sie eine Individualentwicklung in Betracht ziehen. Beachten  Sie dabei, dass jede zusätzliche Codezeile in ihrem Namensraum laufende Unterstützung erfordert: Neben der initialen Entwicklung ihrer neuen Lösung muss diese langfristig von ihren Mitarbeitern gelesen, debuggt und gewartet werden, was zusätzliche Ressourcen und Kosten bedeutet.
     
-
 *   Folgen Sie offiziellen Coding Standards wie den [SAP ABAP Programmierrichtlinien](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap_pgl.htm "https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap_pgl.htm"), [SAP Code Style Guides](https://github.com/SAP/styleguides "https://github.com/SAP/styleguides") und natürlich den Empfehlungen aus dem aktuell vorliegenden Dokument. Sorgen sie dafür, dass die Überprüfung der Regeln nach Möglichkeit automatisch erfolgt, die Entwickler Werkzeuge mit kurzen Feedback-Zyklen und Korrekturvorschlägen verwenden und neben der automatischen Regelüberprüfung auch ein manuelles Code Review stattfindet.
-    
 *   Definieren sie konkrete Entwicklungstypen und legen sie Entwicklungstyp-spezifische Qualitätsstandards und Vorgehensweisen fest. Beispielsweise ist ein einmalig auszuführendes Korrekturprogramm kurzfristig und zweckgebunden, wodurch Effizienz, Zeitersparnis und geringe Kosten im Fokus stehen. Eine Developer-On-Stack-Applikation für kundenindividuelle Anarbeitungsprozesse hingegen erfordert höhere Qualitätsstandards, da sie langfristig genutzt, regelmäßig erweitert und gewartet wird. Hier sind Wartbarkeit, Skalierbarkeit sowie die Minimierung langfristiger Kosten entscheidend. Die unterschiedlichen Standards helfen den Entwicklern dabei, sich auf die Kernaufgabe zu konzentrieren und ihre begrenzte Zeit effektiv einzusetzen. Zusätzlich empfehlen wir als Leitlinie einen abstrakten Makro-Qualitätsstandard zu definieren, auf dessen Grundlage sich die Entwicklungstyp spezifischen Szenarien ableiten lassen.
     
 
 Beispiel: „Was ist guter ABAP-Code?“
 
 1.  Guter ABAP-Code **muss** die funktionalen Anforderungen korrekt erfüllen und hat keine negativen Auswirkungen auf Sicherheitsthemen oder andere Entwicklungen.
-    
 2.  Guter ABAP-Code **soll** fachlich präzise strukturiert sein. Er wird in kleinen, semantisch zusammenpassenden und modularen Einheiten entwickelt. Diese Einheiten sind gut lesbar und für andere Entwickler leicht verständlich. Externe Zugriffe und modulübergreifende Abhängigkeiten sind über klar definierte Schnittstellen geregelt.
-    
 3.  Guter ABAP-Code **soll** moderne Programmiertechniken verwenden. Er enthält keine veralteten oder nicht unterstützten Anweisungen.
     
-
 *   Regeln Sie die Zuordnung der Code Ownership auf Team-Ebene. Zwei Rollen sind bei der Code Ownership ausschlaggebend: Auf der fachlichen Seite steht der Product Owner, der für die Priorisierung von Änderungen verantwortlich ist und Aussagen über den Lebenszyklus und die Angemessenheit der technischen Qualität für die Kundenentwicklung treffen kann. Dieser wird auf der technischen Seite von einem Architekten / Lead-Developer, der die Verantwortung für die konzeptionelle Integrität technischer Konzepte und das Kommunizieren von notwendigen Aufräumarbeiten in der zu verantwortenden Softwarearchitektur übernimmt, ergänzt. Als Hilfsmittel für die klare Zuordnung der technischen Artefakte zu einer Rolle steht ihnen das Paket- und Softwarekomponentenkonzept zur Verfügung.
-    
 *   Erlangen Sie das Mandat für die kontinuierliche Verbesserung ihrer Kundenindividualsoftware. Gewährleisten sie, dass sich ihre Entwickler mit der Strukturoptimierung zur besseren Wartbarkeit mittels [Refactorings](https://refactoring.com/ "https://refactoring.com/"), oder mit dem [Tidy First Ansatz](https://software-architektur.tv/2024/07/26/episode225.html "https://software-architektur.tv/2024/07/26/episode225.html"), auseinandersetzen können. Achten Sie dabei auf ein ausgewogenes Verhältnis zwischen funktionalen Erweiterungen und struktureller Optimierung. Überzeugen Sie die Stakeholder mit Zahlen, Daten und Fakten aus dem Application Lifecycle und Custom Code Management und zeigen Sie die Kausalzusammenhänge auf, warum es Sinn macht, in die Code Qualität zu investieren. 
     
 
@@ -133,23 +112,14 @@ Wenn Sie eine Entwicklungsabteilung haben, dann sollten Sie auch in Prozesse und
 Eine allgemeingültige Empfehlung lässt sich daher nicht geben, wir möchten allerdings einige Punkte aus unseren Erfahrungen teilen, die eine Einordnung für ein individuelles Vorgehen ermöglichen:
 
 *   Viele Organisationen machen seit Jahren klassisches Projektmanagement mit klar definierten Rollen, Konzepten, Artefakten. Eine Änderung dieser Vorgehensmodelle an sich ist ein großes Change Projekt, dass viel Nachdenken, Zeit und Know-How bedarf. Konsistent und über Jahre hinweg.
-    
 *   Oft ist ein Vorschlag, „agiler zu werden“. Letztendlich sind Stakeholder oft unzufrieden mit der Innovationskraft oder Umsetzungsgeschwindigkeit von Anforderungen und sehen agile Methoden als geeignetes Instrument. Teils kommen diese Vorschläge auch aus der Entwicklungsorganisation selbst, da Mitarbeitende dort mit dem aktuellen Abläufen unzufrieden sind.
-    
 *   Vorgehensmodelle, Methoden, Prozesse und Strategien sind kontextabhängig – nicht jede Organisation, jedes Team oder jedes Projekt ist für jedes Modell sinnvoll. Daher bietet sich es an, nicht zu starten mit dem Statement „Wir sind jetzt agil!“ oder „Wir machen jetzt Scrum!“, sondern zu prüfen, wo Herausforderungen und Probleme sind, wo man als Unternehmen besser werden möchte, wie KnowHow und Ressourcen verteilt sind – und auf dieser Basis mit dem Problem zu starten und nicht mit einer potentiellen Lösung. Beziehen Sie die Menschen mit ein, die die wertschöpfende Arbeit machen und die Probleme lösen müssen.
-    
 *   In Unternehmen gibt es teils gescheiterte Implementierung von „agile“, so dass dieses Wort einen negativen Beigeschmack hat. Die Ursachen hierfür sind mannigfaltig und multifaktoriell: zu wenig Coaching, zu viel Load in Kombination mit einem komplexen Projekt, zu wenig Ausbildung, schlechtes Tooling, kein Grund oder Wille zum Change, Big Bangs etc. Wenn sie agile Methoden nutzen möchten, müssen sie diesen Kontext bzw. die Historie ihres Unternehmens und Mitarbeitenden beachten.
-    
 *   Die erwünschten Ergebnisse eines Weg hin zur Agilität, lässt sich nicht isoliert erzielen: Es nutzt wenig, wenn eine Entwicklungsabteilung agil arbeitet, aber vor- und nachgelagerte Teams und Prozesse weiter wie zuvor arbeiten. Wenn beispielsweise ein Change Advisory Board zur Freigabe von Entwicklungen nur alle 2 Monate tagt, kann die Entwicklungsabteilung nicht flexibler sein, als diese gegebene Rahmenbedingung es ermöglicht.
-    
 *   Eine Hoffnung, die an agile Methoden geknüpft ist, ist dass sie schneller Ergebnisse liefern. Dies ist nicht zwangsweise der Fall: Agile Methoden zielen auf Flexibilität, d.h. sich ändernde Anforderungen und Priorisierungen ab sowie auf schnelles Feedback – das Wissen, das Richtige umzusetzen, da Anforderungen oft nicht vorab ausreichend ermittelbar sind. Damit werden drei zentrale Probleme adressiert: Der stetige Wandel, Ungewissheit und Kommunikation.
-    
 *   Methoden bedürfen eine technische Basis und Unterstützung – wenn heute noch aufwendige manuelle Prozesse existieren, sollten sie diese optimieren.
-    
 *   Es existieren viele Strategien und Methoden, die sich in ihrem Ansatz, ihren Ideen und ihrem Freiheitsgrad unterscheiden. Auszugsweise sind dies beispielsweise:
-    
 *   Auf Team-Ebene: [Scrum](https://www.scrum.org/ "https://www.scrum.org/"), [Kanban](https://de.wikipedia.org/wiki/Kanban_\(Entwicklung\) "https://de.wikipedia.org/wiki/Kanban_(Entwicklung)"), [Extreme Programming](https://de.wikipedia.org/wiki/Extreme_Programming "https://de.wikipedia.org/wiki/Extreme_Programming"), [Scrumban](https://de.wikipedia.org/wiki/Scrumban "https://de.wikipedia.org/wiki/Scrumban")
-    
 *   Teamübergreifend  / organisationsweit: [LeSS](https://less.works "https://less.works"), [Nexus](https://www.scrum.org/resources/scaling-scrum "https://www.scrum.org/resources/scaling-scrum"), [SAFe](https://scaledagileframework.com/ "https://scaledagileframework.com/"), Scaled Kanban
     
 
@@ -169,19 +139,12 @@ Aus unserer Erfahrung im DSAG-Netzwerk wissen wir: Die Qualität der Softwareent
 Es gibt eine breite Möglichkeit von Entwicklungsstandards, die beispielsweise im ABAP Leitfaden 2016 [dsag\_handlungsempfehlung\_abap\_2016\_0.pdf](https://www.dsag.de/wp-content/uploads/2021/12/dsag_handlungsempfehlung_abap_2016_0.pdf "https://www.dsag.de/wp-content/uploads/2021/12/dsag_handlungsempfehlung_abap_2016_0.pdf"), Clean ABAP sowie diversen Büchern zu entnehmen sind. Aus unserer Sicht sind grobe Pfeiler zu denen ein Konsens besteht:
 
 *   Namenskonventionen für die kundeneigene Entwicklungen, optional im separaten Namensraum
-    
 *   Strukturiertes Paketkonzeptes, optional mit klaren Paketschnittstellen
-    
 *   Statische Codeprüfung (z.B. ATC Checks) als Teil des Transportwesens mit der Prüfung nach den folgenden Code-Kriterien: Performance, Sicherheit, Compliance, Robustheit, Wartbarkeit, Erweiterbarkeit (ABAP Cloud). Siehe hierzu auch den DSAG ATC Leitfaden [dsag\_leitfaden\_atc\_2020\_06.pdf](https://www.dsag.de/wp-content/uploads/2021/12/dsag_leitfaden_atc_2020_06.pdf "https://www.dsag.de/wp-content/uploads/2021/12/dsag_leitfaden_atc_2020_06.pdf")
-    
 *   Dokumentation von öffentlichen Methoden/Funktionsbausteinen
-    
 *   Dokumentation von angemessener Dokumentation (todo: Verweis auf Kapitel Dokumentaiton) .
-    
 *   Der Einsatz von ABAP Unit und Code Coverage
-    
 *   Genehmigungsverfahren für Classical Extensibility – der Erweiterungs-Programmierung, welche nicht ABAP Cloud konform ist.
-    
 *   Anpassung der Geschäftsprozess- und technischen Dokumentation nach einer Programmänderung
     
 
@@ -199,8 +162,6 @@ Ohne Schlüsselpersonen, die Qualität vorantreiben, neigen Teams unter dem anda
 
 Es muss eine klare Vision, Strategie und definierte Ziele geben, die vom Management unterstützt werden, oder am besten explizit von der Geschäftsleitung gefordert werden. Die strikte Trennung von SAP-Standardcode und Eigenentwicklungen - die sogenannte Clean-Core-Strategie - wird verfolgt, um das System langfristig wartbar, erweiterbar und entwicklungsfähig zu halten (siehe Kapitel Clean Core). Wir konzentrieren uns daher auf die Vision und die Umsetzung der Strategie.
 
- 
-
 #### Erfahrungsbericht aus der Praxis: Brownfield in S/4HANA
 
 Das nachfolgende Beispiel soll die Umsetzung der Clean Core Strategie anhand eines SAP-Kunden im gewachsenen Brownfield aufzeigen. Hier wurde der Bottom-Up Ansatz im Change Management gewählt; Die globalen Entwicklerteams definieren durch Repräsentanten in einem Clean-Core-Governance Gremium, die Entwicklungslandschaft und die Richtlinien in der SAP Entwicklung.
@@ -214,30 +175,20 @@ Wir wollen die ABAP Cloud-Technologien und den SAP-Standard effektiv nutzen. Wir
 **Jahr 1****: „Strategie finden“**
 
 *   Definition einer Clean-Core-Strategie, unter Abwägung diverser SAP und Non-SAP Software
-    
 *   Aufbau einer Community of Practice: Senior ABAP Coaches
-    
 *   Aktivierung der ersten ATC-Checks (z.B. Fokus Security, HANA Readiness) auf Basis der "Low hanging fruits"
-    
 *   Schulung der ABAP-Entwickler, wo benötigt.
-    
 *   Einführung eines Paketkonzepts mit Benennung von Verantwortlichkeiten für alle  Pakethierarchien.
     
 
 **Jahr 2** **„Strategie umsetzen“**
 
 *   Eine gestaffelte Einführung der Clean-Core-Entwicklung 
-    
 *   Definition und Implementierung von Rollen für das Change Management: Lead Developer (nach SAFe: Product Architect), Verantwortlich für: Richtlinien im Team vermitteln, Code Reviews (Verweis auf Kapitel ALM - CodeReview), Pair-Programming, ATC Checks -  Code Findings für Ihre Team-Pakete verteilen, ABAP Unit in die Entwicklungslandschaft bringen.
-    
 *   Beschaffung von Werkzeugen für die Qualitätssicherung
-    
 *   Einführung von Code Reviews und statischen Code Checks als obligatorische Elemente des Entwicklungsprozesses
-    
 *   Weitere Schulung aller ABAP-Entwickler, teilweise durch Train-the-Trainer
-    
-
- 
+     
 
 ## Schlusswort
 
