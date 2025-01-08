@@ -42,7 +42,7 @@ Der Aufruf von Funktionsbausteinen von Non-SAP-Systemen ist ebenfalls möglich, 
 
 ### SOAP
 
-Simple Object Access Protocol, kurz SOAP, ist ein standardisiertes Schnittstellenformat zum Austausch von XML Nachrichten zwischen verschiedenen Systemen. Die Technologie wird auch außerhalb der SAP Welt für Schnittstellen genutzt. Das Format der Payload beschränkt sich nicht auf XML, sondern es können auch CSV oder BASE64 Daten verwendet werden.
+Simple Object Access Protocol, kurz SOAP, ist ein standardisiertes Schnittstellenformat zum Austausch von XML Nachrichten zwischen verschiedenen Systemen. Die Technologie wird auch außerhalb der SAP Welt für Schnittstellen genutzt. Das Format der Payload beschränkt sich nicht auf XML, sondern es können auch CSV oder BASE64 Daten verwendet werden (muss noch geprüft werden).
 
 ### OData
 
