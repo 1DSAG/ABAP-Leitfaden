@@ -36,8 +36,9 @@ Remote Function Call, kurz RFC, ist die Verwendung von klassischen Funktionsbaus
 Der Aufruf von Funktionsbausteinen von Non-SAP-Systemen ist ebenfalls möglich, dafür gibt es für die verschiedenen Programmiersprachen Adapter, die meist durch SAP zur Verfügung gestellt werden. Dazu finden Sie hier einige Beispiele:
 
 - [JCo](https://support.sap.com/en/product/connectors/jco.html) (Java)
-- [PyRFC](https://github.com/SAP-archive/PyRFC) (Python)
-- [gorfc](https://github.com/SAP-archive/gorfc) (Go)
+- [SAP Connector for Microsoft .NET](https://support.sap.com/en/product/connectors/msnet.html)
+- [SAP Cloud SDK](https://sap.github.io/cloud-sdk/docs/java/features/bapi-and-rfc/overview) (Java)
+- [@sap/cds-rfc](https://www.npmjs.com/package/@sap/cds-rfc) (Node.js für CAP)
 
 ### SOAP
 
