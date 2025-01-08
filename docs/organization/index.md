@@ -64,7 +64,7 @@ Softwareentwicklungs-Teams sind das Schlüsselelement für die erfolgreiche Umse
 
 | Weiterführende Internetquellen und Literaturempfehlung |
 | --- |
-| <ul><li>[Inverse Conway Maneuver](https://www.thoughtworks.com/en-de/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams)</li><li>https://teamtopologies.com/</li><li>https://flowengineering.org/</li><li>https://github.com/ddd-crew/core-domain-charts</li><li>https://managingtheunmanageable.net/</li><li>[Lean Software Development – An Agile Toolkit](https://www.pearson.de/lean-software-development-an-agile-toolkit-an-agile-toolkit-9780133812954)</ul> |
+| [Inverse Conway Maneuver](https://www.thoughtworks.com/en-de/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams) · [teamtopologies.com](https://teamtopologies.com/) · [flowengineering.org](https://flowengineering.org/) · [core-domain-charts](https://github.com/ddd-crew/core-domain-charts) · [managingtheunmanageable.net](https://managingtheunmanageable.net/) · [Lean Software Development – An Agile Toolkit](https://www.pearson.de/lean-software-development-an-agile-toolkit-an-agile-toolkit-9780133812954) |
 
 
 #### Definition der passenden Custom Code Strategie
@@ -105,7 +105,7 @@ Unternehmen mit einem geringen Reifegrad in der Softwareentwicklung fahren oft e
 
 | Weiterführende Internetquellen und Literaturempfehlung |
 | --- |
-| <ul><li>https://www.langlebige-softwarearchitekturen.de/</li><li>https://refactoring.com/</li><li>https://software-architektur.tv/</li><li>[SAP Application Extension Methodology](https://help.sap.com/docs/sap-btp-guidance-framework/sap-application-extension-methodology/sap-application-extension-methodology-overview)</li></ul> |
+| [langlebige-softwarearchitekturen.de](https://www.langlebige-softwarearchitekturen.de/) · [refactoring.com](https://refactoring.com/) · [software-architektur.tv](https://software-architektur.tv/) · [SAP Application Extension Methodology](https://help.sap.com/docs/sap-btp-guidance-framework/sap-application-extension-methodology/sap-application-extension-methodology-overview) |
 
 
 #### Prozesse und Methodik
