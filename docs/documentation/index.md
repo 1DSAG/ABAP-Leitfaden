@@ -2,7 +2,6 @@
 layout: page
 title: Dokumentation
 permalink: /documentation/
-next_page_title: Dokumentation
 nav_order: 1
 ---
 

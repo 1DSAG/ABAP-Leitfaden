@@ -2,8 +2,7 @@
 layout: page
 title: Autoren & Reviewer
 permalink: /authors/
-next_page_title: Autoren & Reviewer
-nav_order: 14
+nav_order: 15
 ---
 
 {: .no_toc}

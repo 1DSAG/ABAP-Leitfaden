@@ -3,10 +3,6 @@ layout: page
 title: Andere Test Tools
 permalink: /testing/other-test-tools/
 parent: Testen
-prev_page_link: /testing/abap_unit/
-prev_page_title: ABAP Unit Framework
-next_page_link: /testing/recommended-tools/
-next_page_title: Empfehlungen für Testwerkzeuge
 nav_order: 2
 ---
 

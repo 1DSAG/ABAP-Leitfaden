@@ -3,8 +3,6 @@ layout: page
 title: Qualitätssicherung und -Monitoring
 permalink: /application-lifecycle-management/ensuring-quality/
 parent: ALM
-prev_page_link: /application-lifecycle-management/success-factors/
-prev_page_title: Rahmenbedingungen für ein erfolgreiches ALM
 nav_order: 2
 ---
 

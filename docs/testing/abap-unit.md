@@ -3,10 +3,6 @@ layout: page
 title: ABAP Unit Framework
 permalink: /testing/abap_unit/
 parent: Testen
-prev_page_link: /testing/
-prev_page_title: Testen
-next_page_link: /testing/other-test-tools/
-next_page_title: Andere Test Tools
 nav_order: 1
 ---
 

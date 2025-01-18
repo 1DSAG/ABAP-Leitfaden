@@ -2,8 +2,7 @@
 layout: page
 title: Formulare
 permalink: /forms/
-next_page_title: Formulare
-nav_order: 11
+nav_order: 12
 ---
 
 {: .no_toc}

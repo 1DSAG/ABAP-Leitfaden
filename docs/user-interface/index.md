@@ -2,8 +2,7 @@
 layout: page
 title: UI
 permalink: /user-interface/
-next_page_title: UI
-nav_order: 7
+nav_order: 8
 ---
 
 {: .no_toc}

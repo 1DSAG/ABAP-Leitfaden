@@ -3,8 +3,6 @@ layout: page
 title: Empfehlungen für Testwerkzeuge
 permalink: /testing/recommended-tools/
 parent: Testen
-prev_page_link: /testing/other-test-tools/
-prev_page_title: Andere Test Tools
 nav_order: 3
 ---
 
