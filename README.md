@@ -81,7 +81,8 @@ Installieren Sie die Folgenden Programme
 - [Docker](https://code.visualstudio.com/docs/remote/containers)
 
 <details>
-    <summary>Docker unter Windows in Linux (WSL) installieren</summary>
+    <summary>**Docker unter Windows in Linux (WSL) installieren**</summary>
+
     Unter Windows kann Docker auch im Windows Subsystem für Linux (WSL) installiert werden, um u.A. die Lizenzthematik von Docker Desktop zu umgehen.
 
     Dazu muss in VS Code die [WSL Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) installiert werden. Eine
