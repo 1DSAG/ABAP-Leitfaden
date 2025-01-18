@@ -83,7 +83,7 @@ Installieren Sie die Folgenden Programme
 <details>
 <summary>Docker unter Windows in Linux (WSL) installieren</summary>
 
-##### Docker unter Windows in Linux (WSL) installieren
+##### Docker in WSL nutzen statt Docker Desktop
 
 Unter Windows kann Docker auch im Windows Subsystem für Linux (WSL) installiert werden, um u.A. die Lizenzthematik von Docker Desktop zu umgehen.
 
