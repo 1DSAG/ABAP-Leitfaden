@@ -7,7 +7,6 @@ nav_order: 2
 ---
 
 {: .no_toc}
-
 # Sauberen und modernen ABAP Code schreiben
 
 1. TOC
@@ -22,10 +21,68 @@ Empfehlungen aus den Clean ABAP Guidelines werden in diesem Abschnitt so hervorg
 
 Daneben entwickelt die SAP ABAP auch stetig weiter. Eine Übersicht über neue Entwicklungen liefert etwa die [ABAP Feature Matrix](https://software-heroes.com/en/abap-feature-matrix).
 
-## Voraussetzungen
-
-Dieser Abschnitt zeigt Beispiele für modernen ABAP Code, erhebt jedoch keinen Anspruch auf Vollständigkeit. Eine grundlegende Kenntnis von ABAP und insbesondere ABAP Objects
+Die folgenden Abschnitte zeigen Beispiele für modernen ABAP Code, erhebt jedoch keinen Anspruch auf Vollständigkeit. Eine grundlegende Kenntnis von ABAP und insbesondere ABAP Objects
 wird vorausgesetzt.
+
+## Grundlagen sauberer Entwicklung
+
+- [ ] Prinzipien von Clean Code und Clean ABAP
+- [X] Ein paar Clean ABAP Regeln zum Eisntieg
+- [ ]Nutzung ABAP Cleaner
+
+Dieser Abschnitt gibt eine kurze Auswahl wichtiger Regeln für saubere Entwicklung mit Verweis auf Quellen mit weiteren Informationen wieder.
+
+### Ausdrucksstarke Namen
+
+Ein wichtiges Element von Clean ABAP ist [die richtige Benennung von Entwicklungsobjekten](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#names). Gute Namen
+sind lesbar und verständlich, und machen direkt klar, worum es geht. In der alltäglichen ABAP-Entwicklung ist die Versuchung groß, technische Namen der SAP wiederzuverwenden; dies
+kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständlich als `active_status` oder erfordert wenigstens mehr ABAP-Kenntnisse.
+
+### Nutzung von Objektorientierung
+
+Beim Einstieg in ABAP Objects geschieht es schnell, dass aus einer Funktionsgruppe mit mehreren Funktionsbausteinen einfach eine Klasse mit mehreren statischen Methoden wird. So
+können jedoch die Vorteile der Objektorientierung nicht genutzt werden. Die Nutzung von statischen Methoden verhindert etwa, dass Abhängigkeiten in Unit Tests durch Mocks
+ersetzt werden können. [Mehr Informationen dazu im Clean ABAP-Guide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-objects-to-static-classes).
+
+Ein Hilfsmittel für objektorientierte Entwürfe sind die SOLID-Prinzipien. Jeder Buchstabe gibt ein Prinzip für objektorientierte Entwicklung vor. Hier geben wir
+nur eine kurze Übersicht der Prinzipien, eine ausführliche Erklärung findet sich z.B. [im Blog von Uncle Bob](https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html), dem Autor von Clean Code.
+
+<dl>
+  <dt>Single Responsibility Principle</dt>
+  <dd>
+    Eine Codeeinheit (Klasse, Methode, ...) sollte immer einen Zweck und damit einen Grund für Anpassungen haben. Eine Methode, die etwa
+    Customizing-Einträge liest, anhand derer Daten aufbereitet, und anschließend ein Formular ausgibt, hat drei Zwecke und auch mögliche Gründe für
+    Anpassungen (nämlich immer, wenn sich etwas an Customizing/Daten/Formular) ändern soll. Diese Methode sollte also aufgeteilt werden.
+  </dd>
+
+  <dt>Open/Closed Principle</dt>
+  <dd>
+    Ein Modul sollte offen für Erweiterungen und geschlossen für Veränderungen sein. Das heißt, das Anpassungen vorgenommen werden können, ohne
+    dazu z.B. die ursprünglich genutzte Klasse zu bearbeiten. Eine Klasse `Drucker`, die etwa im Konstruktor die zu druckenden Daten beschafft, kann
+    ohne Anpassung des ursprünglichen Codes nichts anderes drucken. Bekommt diese Klasse hingegen eine Instanz des Interfaces `Datenbeschaffung` im
+    Konstruktor übergeben und ruft passende Methoden dieser auf, kann zur Anpassung einfach eine zweite Datenbeschaffungsklasse entwickelt werden.
+  </dd>
+
+  <dt>Liskov Substitution Principle</dt>
+  <dd>
+    Code, der mit einer Klasse oder einem Interface arbeitet, sollte immer mit implementieren oder erbenden Klassen funktionieren. Eine erbende Klasse
+    sollte also beispielsweise nicht in einer der implementierten Methoden eine unerwartete Exception werfen und somit einen Dump auslösen.
+  </dd>
+
+  <dt>Interface Segregation Principle</dt>
+  <dd>
+    Interfaces sollten so aufgeteilt sein, dass Nutzer nur notwendige Abhängigkeiten erhalten. Eine Datenbankzugriffsklasse, die in einer Anwendung
+    verwendete Daten lesen und schreiben kann, könnte etwa ein Interface `Datenleser` und ein Interface `Datenschreiber` implementieren, so dass
+    nur lesende Nutzer keine Abhängigkeit zu schreibenden Methoden haben.
+  </dd>
+
+  <dt>Dependency Inversion Principle</dt>
+  <dd>
+    Abhängigkeiten wie z.B. die Instanz einer Klasse, die das Interface `Datenbeschaffung` implementiert, sollten nicht durch eine verwendende Klasse `Anzeiger`
+    erzeugt werden, sondern dieser stattdessen im Konstruktor oder einer Methode übergeben werden. So kann für den Test von `Anzeiger` einfach eine andere
+    Implementierung für die Datenbeschaffung übergeben werden.
+  </dd>
+</dl>
 
 ## Moderne ABAP-Sprachmittel
 
@@ -193,27 +250,6 @@ dref = NEW struct_type( name   = `Test`
 ### REDUCE
 
 ### FILTER
-
-## Clean ABAP
-
-- Prinzipien von Clean Code und Clean ABAP
-- Ein paar Clean ABAP Regeln zum Eisntieg
-- Nutzung ABAP Cleaner
-
-----
-OO vorausgesetzt
-Viele alte Anweisungen ersetzt durch Ausdrücke und Funktionen -> lesbarer wenn jemand z.B. keinen ABAP Background hat
-Z.B. CONDENSE text. Durch text = condense( text )
-
-Konstruktoroperatoren
-VALUE – Nutzung für Definition von Strukturen und Tabellen
-VALUE mit FOR – Iteration über Tabellen, äqualivalent zu map in anderen Sprachen
-Ggf. VALUE mit groups als äquivalent zur LOOP AT-Syntax
-Ggf. VALUE mit UNTIL
-
-REDUCE – als äquivalent zu reduce() in vielen Sprachen
-FILTER -
-CORRESPONDING – als Ersatz zu MOVE-CORRESPONDING
 
 ## Namenskonventionen - Empfehlungen NCs vs. Clean Code
 
