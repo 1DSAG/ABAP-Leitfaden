@@ -55,7 +55,7 @@ Sie können das Endergebnis nicht sofort sehen, aber auch das kann GitHub für S
    Sie können sich die finale Seite auch auf GitHub ansehen.
 
    Wechseln Sie einfach in die Einstellungen Ihres Repositories und dann auf `Pages`.
-   Der Link dahin setzt sich wie folgt zusammen <https://github.com/YOURUSERNAME/ ABAP-Leitfaden/settings/pages>.
+   Der Link dahin setzt sich wie folgt zusammen <<https://github.com/YOURUSERNAME/> ABAP-Leitfaden/settings/pages>.
    Wählen Sie Ihren Branch aus auf dem Sie gerade arbeiten und wählen Sie den `docs` Ordner.
    Nachdem Sie gespeichert haben, dauert es ein paar Minuten bis die Seite unter der angegeben URL erreichbar ist.
    Von da an wird die Seite nach jedem Commit neu erzeugt.  
@@ -77,10 +77,26 @@ Sie erhalten einen gebrauchsfertig konfigurierten Debian-Container, der von Visu
 Installieren Sie die Folgenden Programme
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Remote Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) (frühe Remote Containers Extension)
 - [Docker](https://code.visualstudio.com/docs/remote/containers)
 
-Klonen Sie das Repository mit dem Befehl command _[Remote-Containers: Clone Repository in Container Volume...](https://code.visualstudio.com/docs/remote/containers-advanced#_use-clone-repository-in-container-volume)_
+<details>
+    <summary>Docker unter Windows in Linux (WSL) installieren</summary>
+    Unter Windows kann Docker auch im Windows Subsystem für Linux (WSL) installiert werden, um u.A. die Lizenzthematik von Docker Desktop zu umgehen.
+
+    Dazu muss in VS Code die [WSL Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) installiert werden. Eine
+    Anleitung zur Installation der WSL findet sich bei [Microsoft: Installieren von Linux unter Windows mit WSL](https://learn.microsoft.com/de-de/windows/wsl/install).
+    Anschließend kann Docker [anhand dieser Anleitung](https://docs.docker.com/engine/install/ubuntu/) installiert werden.
+
+    Bitte beachte auch den Schritt mit der Docker-Nutzergruppe in der [Post-Installation-Anleitung](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user).
+
+    Anschließend kannst du in den Einstellungen von VS Code nach der Einstellung *Dev Containers > Execute in WSL* für das Dev Containers Plugin suchen und diese aktivieren:
+    ![Setting: Dev Containers > Execute in WSL](img/01-dev-containers-wsl-setting.png)
+
+    Anschließend kannst du entsprechend der normalen Anleitung mit dem Klonen des Repositories weitermachen.
+</details>
+
+Klonen Sie das Repository mit dem Befehl command _[Dev Containers: Clone Repository in Container Volume...](https://code.visualstudio.com/docs/remote/containers-advanced#_use-clone-repository-in-container-volume)_
 
 Dadurch werden die folgenden Aufgaben ausgeführt:
 
