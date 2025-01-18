@@ -58,15 +58,6 @@ Es gibt verschiedene Metadaten (siehe [Front Matter](https://jekyllrb.com/docs/f
 | parent       | Bezeichnung der übergeordneten Seite (`title`-Attribut) falls die Seite eine Unterseite ist                      |
 | grand_parent | Bezeichnung der übergeordneten Seite in der 3. Stufe - siehe `parent`                                            |
 
-Außerdem gibt es noch die folgenden Einstellungen für die Navigation im Fußbereich einer Seite, um zur nächsten bzw. voherigen Kapitel navigieren zu können.
-
-| Einstellung     | Beschreibung                                                                             |
-| --------------- | ---------------------------------------------------------------------------------------- |
-| next_page_link  | `permalink` auf die nächste Seite                                                        |
-| next_page_title | Titel der nächsten Seite. Kann vom Wert des `title`-Attributes der Zielseite abweichen   |
-| prev_page_link  | `permalink` auf die vorherige Seite                                                      |
-| prev_page_title | Titel der vorherigen Seite. Kann vom Wert des `title`-Attributes der Zielseite abweichen |
-
 Beispiel:
 
 ```text
@@ -76,10 +67,6 @@ title: ABAP Views
 parent: Funktionen von ADT
 grand_parent: Arbeiten mit ADT
 permalink: /working-with-adt/features/abap-views/
-prev_page_link: /working-with-adt/features/other-object-types/
-prev_page_title: Andere Objekttypen
-next_page_link: /working-with-adt/features/refactoring/
-next_page_title: Refactoring
 nav_order: 5
 ---
 ```

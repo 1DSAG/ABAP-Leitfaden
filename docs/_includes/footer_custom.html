@@ -14,22 +14,22 @@
 
 {% comment %} 
     Add navigation to next/previous page 
-{% endcomment %} 
-{% if page.next_page_link or page.prev_page_link %}
+{% endcomment %}
+
+{% include get_page_navigation %}
+
+{% if previous_page or next_page %}
 <p style="padding-bottom: 3em">
-    {% if page.prev_page_link %}
+    {% if previous_page %}
     <span class="prev float-left">
         ←
-        <a href="{{site.baseurl}}{{ page.prev_page_link }}"
-            >{{ page.prev_page_title }}</a
-        >
+        <a href="{% link {{ previous_page.path }} %}">{{ previous_page.title }}</a>
     </span>
     {% endif %} 
-    {% if page.next_page_link %}
-    <span class="next float-right"
-        ><a href="{{site.baseurl}}{{ page.next_page_link }}"
-            >{{ page.next_page_title }}</a
-        >
+
+    {% if next_page %}
+    <span class="next float-right">
+        <a href="{% link {{ next_page.path }} %}">{{ next_page.title }}</a>
         →
     </span>
     {% endif %}
