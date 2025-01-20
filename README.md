@@ -55,7 +55,7 @@ Sie können das Endergebnis nicht sofort sehen, aber auch das kann GitHub für S
    Sie können sich die finale Seite auch auf GitHub ansehen.
 
    Wechseln Sie einfach in die Einstellungen Ihres Repositories und dann auf `Pages`.
-   Der Link dahin setzt sich wie folgt zusammen <<https://github.com/YOURUSERNAME/> ABAP-Leitfaden/settings/pages>.
+   Der Link dahin setzt sich wie folgt zusammen `https://github.com/YOURUSERNAME/ABAP-Leitfaden/settings/pages`.
    Wählen Sie Ihren Branch aus auf dem Sie gerade arbeiten und wählen Sie den `docs` Ordner.
    Nachdem Sie gespeichert haben, dauert es ein paar Minuten bis die Seite unter der angegeben URL erreichbar ist.
    Von da an wird die Seite nach jedem Commit neu erzeugt.  
