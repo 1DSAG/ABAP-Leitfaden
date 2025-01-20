@@ -23,13 +23,13 @@
     {% if previous_page %}
     <span class="prev float-left">
         ←
-        <a href="{% link {{ previous_page.path }} %}">{{ previous_page.title }}</a>
+        <a href="{{site.baseurl}}{{ previous_page.url }}">{{ previous_page.title }}</a>
     </span>
     {% endif %} 
 
     {% if next_page %}
     <span class="next float-right">
-        <a href="{% link {{ next_page.path }} %}">{{ next_page.title }}</a>
+        <a href="{{site.baseurl}}{{ next_page.url }}">{{ next_page.title }}</a>
         →
     </span>
     {% endif %}
