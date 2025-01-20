@@ -15,7 +15,7 @@ nav_order: 5
 
 ## Einleitung
 
-Open Source hat es in der ABAP-Entwicklung besonders schwer Fuß zu fassen. Immer noch halten sich Einwände, dass der Einsatz von frei verfügbarer Software in den geschäftskritischen SAP-Systemen mit den Unternehmensdaten gar nicht möglich oder zu rechtfertigen sei. Dabei gibt es für viele der berechtigten Einwände Lösungen, um die _Risiken_ zu minimieren und die _Chancen_, die Open-Source-Software bietet, nutzen zu können. In anderen Programmierumfeldern überwiegen die Chancen bereits lange gegenüber den Restrisiken und es wurden Prozesse und Tools geschaffen, um Open-Source-Bestandteile effektiv in den eigenen Entwicklungsprozess zu integrieren. Dieses Kapitel soll Ihnen einen Überblick zum aktuellen Stand von Open Source in der ABAP-Entwicklung geben sowie Prozesse und Tools vorstellen, um...
+Open Source hat es in der ABAP-Entwicklung besonders schwer Fuß zu fassen. Immer noch halten sich Einwände, dass der Einsatz von frei verfügbarer Software in den geschäftskritischen SAP-Systemen mit den Unternehmensdaten gar nicht möglich oder zu rechtfertigen sei. Dabei gibt es für viele der berechtigten Einwände Lösungen, um die [_Risiken_ zu minimieren und die _Chancen_](opportunities-and-risks), die Open-Source-Software bietet, nutzen zu können. In anderen Programmierumfeldern überwiegen die Chancen bereits lange gegenüber den Restrisiken und es wurden Prozesse und Tools geschaffen, um Open-Source-Bestandteile effektiv in den eigenen Entwicklungsprozess zu integrieren. Dieses Kapitel soll Ihnen einen Überblick zum aktuellen Stand von Open Source in der ABAP-Entwicklung geben sowie Prozesse und Tools vorstellen, um...
 
 1. ...Open-Source-Projekte in die eigenen Lösungen zu integrieren ([Einsatz von Open Source](using-open-source))
 2. ...an Open-Source-Projekten mitzuwirken ([Beteiligung an Open Source](contributing-to-open-source))
@@ -33,19 +33,19 @@ SAP S/4HANA ist nicht "Open Source" nur weil Sie als Entwickler den von der SAP 
 
 ## Ausbaustufen
 
-Eine mögliche Herangehensweise an das Thema ist die verschiedenen Anwendungsfälle als aufeinander aufbauend zu sehen. Zusätzlich lässt sich der Einsatz von Open-Source-Komponenten in der eigenen Software aufteilen in die Nutzung im Entwicklungsprozess und die Integration in das Produktivcoding.
+Eine mögliche Herangehensweise an das Thema ist die verschiedenen Anwendungsfälle als aufeinander aufbauend zu sehen:
 
-```mermaid
-flowchart LR
- subgraph nutzung["Nutzung von Open-Source-Lösungen"]
-        nutzung_dev("Nutzung von Entwicklertools im Entwicklungsprozess")
-        nutzung_prd("Nutzung von Bibliotheken im Produktivcoding")
-  end
-    nutzung_dev -.-> nutzung_prd
-    nutzung --> beteiligung("Beteiligung an Open-Source-Lösungen")
-    beteiligung --> bereitstellung("Bereitstellung eigener Open-Source-Lösungen")
+1. Sie können sich zunächst mit dem Thema befassen, wie Sie __Open Source Tools in Ihren Entwicklungsprozess integrieren__ und damit unmittelbar einen Mehrwert erzielen. Dabei geht es zunächst noch nicht um Open-Source-Softwarebestandteile, die sich in Ihrem Coding befinden, sondern lediglich um Tools, die in Ihrem Entwicklungsprozess und damit auch nur in Ihrer Entwicklungssystemlandschaft einziehen würden.  
+Diese Ausbaustufe ist in [Einsatz von Open Source](using-open-source) beschrieben.
+    1. Diese Stufe lässt sich optional erweitern mit der __Nutzung von Open-Source-Bibliotheken in Ihren entwickelten Softwarelösungen__. In diesem Fall erreichen die Open-Source-Bestandteile auch Ihr Produktivsystem oder werden mit als Bestandteil Ihrer Software ausgeliefert.
 
-```
+2. Als nächstes können Sie die __Beteiligung an Open-Source-Projekten__ ins Auge fassen. Dabei erweitern oder verändern Sie eine Open-Source-Bibliothek und stellen diese Anpassungen der Community wieder zur Verfügung, sodass auch andere Unternehmen davon profitieren können. Damit Entwickler so sich beteiligen können, muss in Ihrem Unternehmen eine Richtlinie vorhanden sein, wie dies konkret ausgestaltet werden kann.  
+Diese Stufe wird in [Beteiligung an Open Source](contributing-to-open-source) behandelt.
+
+3. Die letzte Stufe ist die __Entwicklung eigener Software als Open-Source-Software__. In diesem Fall bieten Sie selbst ausgewählte Komponenten Ihrer eigenen Softwarelösungen als Open-Source-Software an und ermöglichen es so, dass andere sie einsetzen, aber auch sich daran beteiligen können.  
+Diese Stufe wird in [Entwicklung von Open Source](developing-open-source) thematisiert.
+
+Die einzelnen Stufen bieten unterschiedliche Chancen, aber kommen auch mit unterschiedlichen Risiken und Aufwänden. Diese werden in den genannten Unterkapiteln und unter [Chancen und Risiken](opportunities-and-risks) aufgegriffen.
 
 > Notizen:
 >
