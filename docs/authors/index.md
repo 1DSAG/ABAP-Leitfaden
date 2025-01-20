@@ -72,8 +72,8 @@ nav_order: 15
 <td></td>
 </tr>
 <tr class="header">
-<td>Fabian Lupa</td>
-<td>Adesso</td>
+<td><a href="https://www.linkedin.com/in/fabianlupa/">Fabian Lupa</a></td>
+<td>adesso orange AG</td>
 <td>Schreiben, Review</td>
 </tr>
 <tr class="odd">
