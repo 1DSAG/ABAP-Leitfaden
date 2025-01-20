@@ -35,7 +35,7 @@ SAP S/4HANA ist nicht "Open Source" nur weil Sie als Entwickler den von der SAP 
 
 Eine mögliche Herangehensweise an das Thema ist die verschiedenen Anwendungsfälle als aufeinander aufbauend zu sehen:
 
-1. Sie können sich zunächst mit dem Thema befassen, wie Sie __Open Source Tools in Ihren Entwicklungsprozess integrieren__ und damit unmittelbar einen Mehrwert erzielen. Dabei geht es zunächst noch nicht um Open-Source-Softwarebestandteile, die sich in Ihrem Coding befinden, sondern lediglich um Tools, die in Ihrem Entwicklungsprozess und damit auch nur in Ihrer Entwicklungssystemlandschaft einziehen würden.  
+1. Sie können sich zunächst mit dem Thema befassen, wie Sie __Open Source Tools in Ihren Entwicklungsprozess integrieren__ und damit unmittelbar einen Mehrwert erzielen. Dabei geht es zunächst noch nicht um Open-Source-Softwarebestandteile, die sich in Ihrem Coding befinden, sondern lediglich um Tools, die in Ihrem Entwicklungsprozess und damit auch nur in Ihrer Entwicklungssystemlandschaft einziehen würden. Dies ist oft der am einfachsten zu betrachtende Fall und ein guter Einstiegspunkt in das Thema.  
 Diese Ausbaustufe ist in [Einsatz von Open Source](using-open-source) beschrieben.
     1. Diese Stufe lässt sich optional erweitern mit der __Nutzung von Open-Source-Bibliotheken in Ihren entwickelten Softwarelösungen__. In diesem Fall erreichen die Open-Source-Bestandteile auch Ihr Produktivsystem oder werden mit als Bestandteil Ihrer Software ausgeliefert.
 
@@ -47,59 +47,89 @@ Diese Stufe wird in [Entwicklung von Open Source](developing-open-source) themat
 
 Die einzelnen Stufen bieten unterschiedliche Chancen, aber kommen auch mit unterschiedlichen Risiken und Aufwänden. Diese werden in den genannten Unterkapiteln und unter [Chancen und Risiken](opportunities-and-risks) aufgegriffen.
 
-> Notizen:
->
-> An dieser Stelle ist bereits eine Unterscheidung erkennbar, die bei einer stückweisen Einführung einer Open-Source-Strategie im SAP- und speziell im ABAP-Kontext helfen kann. Punkt 1, die Optimierung der Entwicklungsprozesse, betrifft Tooling, welches _im Entwicklungsprozess_ genutzt wird. Dies ist oft zunächst einfacher zu betrachten als Punkt 2, die Umsetzung von betriebswirtschaftlichen Anforderungen. Bibliotheken, die dabei genutzt werden, erreichen zwangsläufig an der Stelle auch Ihr Produktivsystem und sind somit nochmal unter anderen Gesichtspunkten zu betrachten.
->
-> - Fertige Lösungen für eigene Probleme existieren bereits
->   - Kostenersparnis gegenüber Eigenentwicklung und Wartung
->   - End-User-Benefit gegenüber "Aufwand zu groß" / rentiert sich nicht
-> - Open-Source-Tools für den Entwicklungsprozess erhöhen die Softwarequalität, verkürzen Entwicklungszeiten, verringern Fehler
-> - Aushängeschild in der Personalsuche: Nutzung moderner Tools, wir entwickeln modern
-> - Möglichkeit externer Contributions
-> - Enablement der Nutzung eigener Lösungen für Kunden (SDK/API für ABAP)
-
 ## Lizenzen
 
-> Aspekte von Lizenzen:
+Die Lizenz einer Software ist ausschlaggebend dafür, wie Sie sie einsetzen können. Konkret in Bezug auf Open Source macht eine Open-Source-Lizenz eine Software zur Open Source Software. Open-Source-Lizenzen gewähren ausdrücklich Rechte gegebenüber dem Lizenznehmer, geben ihm aber auf Pflichten auf, wie der mit der Software umzugehen hat. Wenn Sie ein Softwareprojekt finden, welches seinen Quellcode öffentlich zugänglich publiziert hat, aber keine Lizenz zu finden ist, dann handelt es sich nicht um Open Source, sondern lediglich um _Source Available_. Bei einer Einführung von Open Source sollten Sie sich in Ihrem Unternehmen schlau machen, ob beziehungsweise wer sich mit dem Lizenzthema beschäftigt. Gerade in größeren Unternehmen, die viele verschiedene Programmiersprachen einsetzen, kann es eine zentrale Instanz geben, die sich um Kompatibilität der Lizenzen beim Einsatz von Open-Source-Komponenten kümmert.
+
+TODO Aspekte von Lizenzen
+
+In nachfolgender Tabelle finden Sie populäre Open-Source-Lizenzen, die auch in der ABAP-Entwicklung verwendet werden (Quelle [dotabap.org](https://dotabap.org/)). Details finden Sie zum Beispiel unter [choosealicense](https://choosealicense.com) beziehungsweise [choosealicense Appendix](https://choosealicense.com/appendix/).
 
 <!-- markdownlint-disable MD033 -->
 <table>
     <tr>
         <th></th>
         <th><a href="https://choosealicense.com/licenses/mit/">MIT</a></th>
-        <th>Apache 2.0</th>
-        <th>GPL 3.0 </th>
-        <th>GPL 2.0 </th>
-        <th>...</th>
+        <th><a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a></th>
+        <th><a href="https://choosealicense.com/licenses/gpl-3.0/">GPL 3.0</a></th>
+        <th><a href="https://choosealicense.com/licenses/gpl-2.0/">GPL 2.0</a></th>
     </tr>
     <tr>
-        <td colspan="6" class="bg-grey-lt-000">Rechte</td>
+        <td colspan="5" class="bg-grey-lt-000">Rechte</td>
     </tr>
     <tr>
         <td>Kommerzielle Nutzung</td>
         <td><span class="label label-green">Erlaubt</span></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><span class="label label-red">Nicht Erlaubt</span></td>
+        <td><span class="label label-green">Erlaubt</span></td>
+        <td><span class="label label-green">Erlaubt</span></td>
+        <td><span class="label label-green">Erlaubt</span></td>
     </tr>
     <tr>
         <td>Weiterverbreitung</td>
         <td><span class="label label-green">Erlaubt</span></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><span class="label label-green">Erlaubt</span></td>
+        <td><span class="label label-green">Erlaubt</span></td>
+        <td><span class="label label-green">Erlaubt</span></td>
     </tr>
     <tr>
-        <td colspan="6" class="bg-grey-lt-000">Pflichten</td>
+        <td>Modifikation</td>
+        <td><span class="label label-green">Erlaubt</span></td>
+        <td><span class="label label-green">Erlaubt</span></td>
+        <td><span class="label label-green">Erlaubt</span></td>
+        <td><span class="label label-green">Erlaubt</span></td>
+    </tr>
+    <tr>
+        <td colspan="5" class="bg-grey-lt-000">Pflichten</td>
+    </tr>
+    <tr>
+        <td>Veröffentlichung von Quellcode zu Modifikationen</td>
+        <td></td>
+        <td></td>
+        <td><span class="label label-blue">Erforderlich</span></td>
+        <td><span class="label label-blue">Erforderlich</span></td>
+    </tr>
+    <tr>
+        <td>Angabe der Lizenz / Copyright im eigenen Produkt</td>
+        <td><span class="label label-blue">Erforderlich</span></td>
+        <td><span class="label label-blue">Erforderlich</span></td>
+        <td><span class="label label-blue">Erforderlich</span></td>
+        <td><span class="label label-blue">Erforderlich</span></td>
+    </tr>
+    <tr>
+        <td>Nutzung der selben Lizenz für Modifikationen</td>
+        <td></td>
+        <td></td>
+        <td><span class="label label-blue">Erforderlich</span></td>
+        <td><span class="label label-blue">Erforderlich</span></td>
+    </tr>
+    <tr>
+        <td colspan="5" class="bg-grey-lt-000">Limitierungen</td>
+    </tr>
+    <tr>
+        <td>Haftung</td>
+        <td><span class="label label-red">Eingeschränkt</span></td>
+        <td><span class="label label-red">Eingeschränkt</span></td>
+        <td><span class="label label-red">Eingeschränkt</span></td>
+        <td><span class="label label-red">Eingeschränkt</span></td>
+    </tr>
+    <tr>
+        <td>Garantie</td>
+        <td><span class="label label-red">Eingeschränkt</span></td>
+        <td><span class="label label-red">Eingeschränkt</span></td>
+        <td><span class="label label-red">Eingeschränkt</span></td>
+        <td><span class="label label-red">Eingeschränkt</span></td>
     </tr>
 </table>
 <!-- markdownlint-enable MD033 -->
 
-[choosealicense](https://choosealicense.com)
-
-<https://choosealicense.com/appendix/>
-
-Bereitstellung von Lizenzen in ABAP-Code...
+TODO: Bereitstellung von Lizenzen in ABAP-Code...
