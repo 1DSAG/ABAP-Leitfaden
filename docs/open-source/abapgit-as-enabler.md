@@ -3,10 +3,6 @@ layout: page
 title: abapGit als Enabler von Open Source
 permalink: /open-source/abapgit-as-enabler/
 parent: Open Source
-prev_page_link: /open-source/developing-open-source/
-prev_page_title: Entwicklung von Open Source
-next_page_link: /open-source/open-source-projects/
-next_page_title: Vorstellung ausgewählter Projekte
 nav_order: 4
 ---
 

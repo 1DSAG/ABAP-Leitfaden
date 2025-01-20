@@ -3,10 +3,6 @@ layout: page
 title: Problemfelder und Herausforderungen
 permalink: /clean-core/problems-and-challenges/
 parent: Clean Core
-prev_page_link: /clean-core/why-clean-core/
-prev_page_title: Warum Clean Core
-next_page_link: /clean-core/architectural-concepts/
-next_page_title: Architekturkonzepte
 nav_order: 3
 ---
 

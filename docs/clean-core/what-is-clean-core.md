@@ -3,10 +3,6 @@ layout: page
 title: Was ist Clean Core
 permalink: /clean-core/what-is-clean-core/
 parent: Clean Core
-prev_page_link: /clean-core/
-prev_page_title: Clean Core
-next_page_link: /clean-core/why-clean-core/
-next_page_title: Warum Clean Core
 nav_order: 1
 ---
 

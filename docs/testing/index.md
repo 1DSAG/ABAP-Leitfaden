@@ -2,10 +2,8 @@
 layout: page
 title: Testen
 permalink: /testing/
-next_page_title: ABAP Unit Framework
-next_page_link: /testing/abap_unit/
 has_children: true
-nav_order: 8
+nav_order: 9
 ---
 
 {: .no_toc}

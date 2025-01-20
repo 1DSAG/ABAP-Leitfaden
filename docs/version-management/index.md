@@ -2,7 +2,6 @@
 layout: page
 title: Versionsverwaltung
 permalink: /version-management/
-next_page_title: Versionsverwaltung
 nav_order: 6
 ---
 

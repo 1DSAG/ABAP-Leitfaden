@@ -2,8 +2,7 @@
 layout: page
 title: Integration
 permalink: /integration/
-next_page_title: Integration
-nav_order: 9
+nav_order: 10
 ---
 
 {: .no_toc}

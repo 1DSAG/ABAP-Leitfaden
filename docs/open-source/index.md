@@ -2,8 +2,6 @@
 layout: page
 title: Open Source
 permalink: /open-source/
-next_page_link: /open-source/using-open-source/
-next_page_title: Einsatz von Open Source
 has_children: true
 nav_order: 5
 ---
