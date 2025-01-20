@@ -3,7 +3,7 @@ layout: page
 title: Einsatz von Open Source
 permalink: /open-source/using-open-source/
 parent: Open Source
-nav_order: 1
+nav_order: 2
 ---
 
 {: .no_toc}

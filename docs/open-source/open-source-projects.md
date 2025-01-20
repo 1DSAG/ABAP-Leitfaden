@@ -3,7 +3,7 @@ layout: page
 title: Vorstellung ausgewählter Projekte
 permalink: /open-source/open-source-projects/
 parent: Open Source
-nav_order: 5
+nav_order: 6
 ---
 
 {: .no_toc}
