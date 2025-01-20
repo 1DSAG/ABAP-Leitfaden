@@ -12,6 +12,17 @@ nav_order: 3
 1. TOC
 {:toc}
 
+# Clean Core und die Herausforderungen für Brownfield-Kunden
+
+Für etablierte **Brownfield-Kunden** und/oder SAP-Add-Ons, die auf Legacy-Technologien basieren, ist die konsequente Umsetzung eines **Clean Core** in der **Public Cloud** ohne ein Redesign der Prozesse nicht realisierbar. 
+
+## **Herausforderungen:**
+- **Neugestaltung von Custom Code**: 
+  - Der Großteil des über Jahrzehnte gewachsenen Custom Codings muss überarbeitet werden. 
+  - **Grund**: Die bestehende Entwicklung basiert häufig auf nicht freigegebenen APIs oder Entwicklungskomponenten im SAP-Standard.
+- **Architekturentscheidungen**: 
+  - Unternehmen müssen analysieren, ob das SAP-System Cloud-fähig gemacht werden soll. 
+  - Hierbei sind verschiedene Architekturkonzepte zu bewerten.
 
 * Clean Core im S/4HANA Kontext in Verbindung mit “legacy” Technologie ``(z.B. embedded TM -> BOPF -> FPM (Jens) / Variantenkonfiguration (Beispiel Timo?) )``
 * Die alten Herrausvorderungen bestehen bleiben – z.b. WhiteSpots im Standard Coding.
