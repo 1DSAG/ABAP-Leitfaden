@@ -6,14 +6,23 @@ nav_order: 1
 ---
 
 {: .no_toc}
-# Dokumentation
+# Dokumentation von ABAP Entwicklungen
 
 1. TOC
 {:toc}
 
-Die Dokumentation von Software ist in vielen Fällen genauso wichtig wie die Entwicklung selbst. Fehlt die Dokumentation oder ist sie nicht in ausreichendem Maß vorhanden, führt dies spätestens bei der Weiterentwicklung oder dem Wechsel von Entwicklern zu erhöhten Aufwänden. In diesem Kapitel werden unterschiedliche Möglichkeiten zur Dokumentation von Entwicklungen in einem SAP-System dargestellt.
+## Zielgruppe
+Dieses Kapitel ist an ABAP Entwickler, Software Architekten, technische Schreiber und Entwicklungsleiter gerichtet. Wir möchten sie mit den Inhalten des Kapitels bei der Einführung und Optimierung ihrer technischen Dokumentaitonsaufgaben von ABAP Entwicklungen unterstützen und ihnen nach Möglichkeit pragmatische Lösungen anbieten, die sie und ihre Kollegen langfristig bei der Wissensvermittlung über ihre Individualsoftware unterstützt.   
 
-Allgemein ist es bei jeder Dokumentation wichtig, das richtige Maß zu finden und umzusetzen. In der Praxis findet man leider immer wieder die beiden Extreme: entweder eine sehr umfangreiche oder gar keine Dokumentation. Die umfangreiche Dokumentation ist allerdings inhaltlich oft mangelhaft, weil sie viele redundante/kopierte Informationen enthält und nicht aktuell gehalten wird. Sind die offiziellen Anforderungen an die Dokumentation zu hoch oder zu abstrakt, führt dies manchmal dazu, dass sie gar nicht erst erstellt wird.
+## Inhalt des Kapitels
+
+## Allgemeine Dokumentations-Tips
+
+Technische Dokumentation dient der Wissensvermittlung und soll dem Leser einen schnellen Einstieg in die Architektur und die Funktionsweise eines Softwaresystems vermitteln, ohne dass man sich auf Quellcode-Ebene mit den Details des Systems auseinandersetzen muss. Fehlt die Dokumentation oder ist sie nicht in ausreichendem Maß vorhanden, führt dies spätestens bei der Weiterentwicklung oder dem Wechsel von Entwicklern zu erhöhten Aufwänden. 
+
+Allgemein ist es bei jeder Dokumentation wichtig, das richtige Maß zu finden und die beiden Extreme einer zu umfangreichen und oft veralteten Dokumentation, oder gar keiner Dokumentation zu vermeiden. Abhilfe schafft die Definition klarer, leicht verständlicher, mit Beispielen angereicherte Dokumentationsrichtlinien. Sind die offiziellen Anforderungen an die Dokumentation zu hoch oder zu abstrakt, führt dies in der Regel dazu, dass die Dokumentaiton entweder gar nicht, oder mit schlechter Qualität erst wird.
+
+Tip: Binden Sie die Autoren und die Leser, für die die Dokumentation geschrieben wird, in den Definitionsprozess der Dokumentationsrichtlinien mit ein. 
 
 Die Dokumentation sollte während der Entwicklung, unbedingt aber vor der Produktivsetzung bzw. Bereitstellung erstellt werden und es sollte keine Produktivsetzung ohne fertige Dokumentation geben. Ansonsten ergibt sich in der Regel ein Mehraufwand oder letztlich eine fehlende Dokumentation.
 
@@ -43,11 +52,15 @@ Darüber hinaus kann eine veraltete Dokumentation irreführend sein. Deshalb sol
 |---------------|
 |Es sollte im Unternehmen geklärt werden, wie Dokumentation von Software erfolgen soll.|
 
-Innerhalb einer SAP-Systemlandschaft bietet der SAP Solution Manager Möglichkeiten zur Projektdokumentation. Die nachfolgenden Links bieten weitere Informationen dazu.
+Innerhalb einer SAP-Systemlandschaft bietet der SAP Solution Manager Möglichkeiten zur Projektdokumentation. 
+
+Die nachfolgenden Links bieten weitere Informationen dazu.
 
 WEITERE QUELLEN  
 1.	Das arc42-Template zur Architekturdokumentation, [Arc42-Template](https://arc42.org/download)  (aufgerufen am: 19.09.2024)
 2.	Stefan Zörner: Softwarearchitekturen dokumentieren und kommunizieren. Carl Hanser Verlag GmbH Co KG, 2021. ISBN: 978-3446469280
+3.  [Master Guide SAP Solution Manager - Solution Documentation](https://help.sap.com/docs/SAP_Solution_Manager/c3c5ec585ee248228ddb6c3f08073ea9/2cb3e75e134249a2bd091a40fe2f6d61.html?locale=en-US) (aufgerufen am: 26.01.2025)
+4. [ABAP Development Tools: User Guide - Documentation of Development Objects](https://help.sap.com/docs/ABAP_PLATFORM_NEW/c238d694b825421f940829321ffa326a/52546a60ba3f436d8f5b54b83044d0b7.html?locale=en-US&q=documentation) (aufgerufen am: 26.01.2025)
 
 ## Dokumentation zur Versionsverwaltung
 
