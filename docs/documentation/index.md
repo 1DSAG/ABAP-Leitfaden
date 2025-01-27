@@ -70,9 +70,12 @@ Oftmals hilft es zum Transportauftrag zu dokumentieren
 * Wichtigste Entwicklungsobjekte im Transport
 * Abhängigkeiten zu anderen Transporten (sofern vorhanden)
 * Kurzbeschreibung zu Änderungen im Transport
-Die Dokumentation zu jeder Aufgabe und zu jedem Auftrag während der Auftragsbearbeitung im Reiter "Dokumentation" zu erfassen. Die Dokumentation kann bis zur Freigabe laufend erweitert werden. Nach der Freigabe des Auftrags ist dies nicht mehr möglich.
+Die Dokumentation zu jeder Aufgabe und zu jedem Auftrag lässt sich während der Auftragsbearbeitung innerhalb des Transport Request Editors im Reiter "Dokumentation" erfassen. Die Dokumentation kann bis zur Freigabe laufend erweitert werden. Beachten sie, dass nach der Freigabe des Auftrags die Bearbeitung nicht mehr möglich ist.
 
-Diese Dokumentation auf dem Reiter "Dokumentation" kann man für jeden Transportauftrag erstellen, der ins Produktive Systeme geht. Transporte von Kopien sollte man nicht dokumentieren, um redundante Dokumentation zu vermeiden. Letztlich interessieren nur die Transporte, die ins Produktiv System gehen sollen, bzw. bereits gegangen sind.
+Diese Dokumentation auf dem Reiter "Dokumentation" kann man für jeden Transportauftrag erstellen, der in das Produktivsysteme geht. Vermeiden sie redundante Dokumentation und dokumentieren sie keine Transporte von Kopien. Letztlich interessieren nur die Transporte, die ins Produktiv System gehen sollen, bzw. bereits gegangen sind.
+
+WEITERE QUELLEN
+* [SAP Help: Change and Transport System - Request Editor - Writing Documentation](https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/d636153aab4a0c0ee10000000a114084.html?locale=en-US) (aufgerufen am: 26.01.2025)
 
 ### Git-Client
 Sollte ein Git-Client wie abapGit oder gCTS eingesetzt werden, werden Code-Änderungen protokolliert. Zu jedem sogenannten Commit werden neben den Code-Änderungen noch Metadaten gespeichert. Zu den Metadaten zählen eine kurze Beschreibung, sogenannte Commit-Nachricht, Autor und  Datum. Die so entstehende Commit-Historie ermöglicht, vergangene Commits zu sehen und die Code-Änderungen nachzuvollziehen. Wird ein Ticket-System, wie zum Beispiel Jira oder Azure DevOps, für die Erfassung der Anforderungen benutzt, hat jede Anforderung an die Entwicklung eine eindeutige ID. Viele Teams haben die Vorgabe oder die interne Vereinbarung, diese ID in den Commit-Nachrichten einzutragen, damit sich die Commits den Aufgaben zuordnen lassen. Wird das konsistent gemacht, lassen sich mittels Freitextsuche in den Commit-Nachrichten alle Commits identifizieren, die zu einer bestimmten Aufgabe gehören. Das erleichtert wesentlich das Wiederfinden und die Überprüfung der Umsetzung im Fall von Bugs. Gleichzeitig lassen sich dadurch ähnliche Aufgaben sehr schnell umsetzen, weil die Entwickler das bereits funktionierende Beispiel finden und verfolgen können.
