@@ -28,7 +28,7 @@ Mit [abapOpenChecks](https://github.com/larshp/abapOpenChecks) werden Prüfungen
 - **Standardbranch**: main
 - **Programmiersprache**: ABAP
 - **Lizenz**: MIT License
-- **Sterne**: 265
+- **Sterne**: 276
 - **Forks**: 79
 - **Offene Issues**: 304
 - **Geschlossene Issues**: 439
