@@ -44,7 +44,7 @@ Mit [abaplint/abaplint](https://github.com/abaplint/abaplint) können statische 
 - **Standardbranch**: main
 - **Programmiersprache**: Hauptsächlich TypeScript (97,6 %), gefolgt von ABAP (1,7 %), JavaScript (0,6 %), CSS (0,1 %) und HTML sowie Less (< 0,1 %)
 - **Lizenz**: MIT License
-- **Sterne**: 224
+- **Sterne**: 227
 - **Forks**: 70
 - **Offene Issues**: 370
 - **Geschlossene Issues**: 1.588
