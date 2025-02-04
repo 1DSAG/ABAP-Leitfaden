@@ -2,7 +2,6 @@
 layout: page
 title: Sicherheit
 permalink: /security/
-next_page_title: Sicherheit
 nav_order: 2
 ---
 

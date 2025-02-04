@@ -3,10 +3,6 @@ layout: page
 title: Architekturkonzepte
 permalink: /clean-core/architectural-concepts/
 parent: Clean Core
-prev_page_link: /clean-core/problems-and-challenges/
-prev_page_title: Problemfelder und Herausforderungen
-next_page_link: /clean-core/solution-approach/
-next_page_title: Lösungsansatz
 nav_order: 4
 ---
 

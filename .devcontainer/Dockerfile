@@ -6,7 +6,7 @@ WORKDIR /workspace
 
 # Install necessary packages
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends curl gnupg ruby-full
+    && apt-get -y install --no-install-recommends curl gnupg ruby-full vim
 
 # Install GitHub CLI
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg \

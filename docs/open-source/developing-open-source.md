@@ -3,11 +3,7 @@ layout: page
 title: Entwicklung von Open Source
 permalink: /open-source/developing-open-source/
 parent: Open Source
-prev_page_link: /open-source/contributing-to-open-source/
-prev_page_title: Beteiligung an Open Source
-next_page_link: /open-source/abapgit-as-enabler/
-next_page_title: abapGit als Enabler von Open Source
-nav_order: 3
+nav_order: 4
 ---
 
 # Entwicklung von Open Source

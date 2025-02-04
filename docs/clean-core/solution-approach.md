@@ -3,8 +3,6 @@ layout: page
 title: Lösungsansatz
 permalink: /clean-core/solution-approach/
 parent: Clean Core
-prev_page_link: /clean-core/architectural-concepts/
-prev_page_title: Architekturkonzepte
 nav_order: 5
 ---
 

@@ -3,10 +3,6 @@ layout: page
 title: Das ABAP Restful Application Programming Model (RAP)
 permalink: /abap/restful_abap/
 parent: Moderne ABAP Entwicklung
-prev_page_link: /abap/clean_and_modern_abap/
-prev_page_title: Sauberer und moderner ABAP Code
-next_page_link: /abap/enabling_modern_development/
-next_page_title: Rahmenbedingungen und Enabling moderne ABAP Entwicklung im Team
 nav_order: 3
 ---
 
