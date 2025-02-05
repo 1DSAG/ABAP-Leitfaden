@@ -28,9 +28,11 @@ wird vorausgesetzt.
 
 - [ ] Prinzipien von Clean Code und Clean ABAP
 - [X] Ein paar Clean ABAP Regeln zum Eisntieg
-- [ ]Nutzung ABAP Cleaner
+- [ ] Nutzung ABAP Cleaner
 
 Dieser Abschnitt gibt eine kurze Auswahl wichtiger Regeln für saubere Entwicklung mit Verweis auf Quellen mit weiteren Informationen wieder.
+
+Ziel von Clean ABAP ist es, sauberen und für Menschen leicht verständlichen Code zu schreiben. Dies zeigt sich etwa in kurzen Methoden und ausdrucksstarken Namen
 
 ### Ausdrucksstarke Namen
 
@@ -39,6 +41,10 @@ sind lesbar und verständlich, und machen direkt klar, worum es geht. In der all
 kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständlich als `active_status` oder erfordert wenigstens mehr ABAP-Kenntnisse.
 
 ### Nutzung von Objektorientierung
+
+
+TODO zu Architektur verschieben
+{: .label .label-red }
 
 Beim Einstieg in ABAP Objects geschieht es schnell, dass aus einer Funktionsgruppe mit mehreren Funktionsbausteinen einfach eine Klasse mit mehreren statischen Methoden wird. So
 können jedoch die Vorteile der Objektorientierung nicht genutzt werden. Die Nutzung von statischen Methoden verhindert etwa, dass Abhängigkeiten in Unit Tests durch Mocks
@@ -84,13 +90,14 @@ nur eine kurze Übersicht der Prinzipien, eine ausführliche Erklärung findet s
   </dd>
 </dl>
 
-## Moderne ABAP-Sprachmittel
+## Moderne Sprachmittel
 
 Dieser Abschnitt zeigt eine kurze Übersicht moderner Sprachmittel von ABAP.
 
-TODO
+TODO bisherige Abschnitte zu Deklarationen etc. hier lassen oder in Anhang verschieben? Checkliste nochmal prüfen
 {: .label .label-red }
 
+- [ ] moderne SQL Syntax
 - [ ] Stil von modernem ABAP
 - [ ] SAP SAMPLES als Referenz bibliothek
 - [ ] Todo check SAP Samples (ABap OO Basics)– und clean code bzgl. patterns -
@@ -201,7 +208,10 @@ CLASS demo DEFINITION.
 
 Weitere Informationen finden sich im [Abschnitt Dokumentation](../../documentation/).
 
-## Konstruktoroperatoren
+### Konstruktoroperatoren
+
+TODO Feedback zu viel Basics, Teile in Anhang schieben
+{: .label .label-red }
 
 Konstruktoroperatoren sind ein recht neues ABAP-Sprachmittel und bestehen aus dem Operator selbst, einer Typangabe, und Parameter innerhalb von Klammern. So
 ist bei `data(instance) = new class( number = 1 ).` der Operator `NEW`, der Typ `class`, und `number = 1` ist die Parameterangabe. Mit einem Konstruktoroperator
@@ -229,27 +239,181 @@ DATA(object) = NEW lcl_configuration( number = 1 ).
 CREATE OBJECT object TYPE lcl_configuration.
 ~~~
 
-Weiterhin können auch Datenobjekte mit `NEW` erzeugt werden, um Referenzen auf Daten zu befüllen:
+### Nutzung neuer Befehlsvarianten (CALL TRANSACTION WITH AUTHORITY-CHECK)
+
+TODO Beispiel aufnehmen
+{: .label .label-red }
+
+## Beispiele für modernes ABAP
+
+Dieser Abschnitt zeigt einige Beispiele für moderne Alternativen zu alter und veralteter ABAP-Syntax.
+
+TODO Template entfernen
+{: .label .label-red }
+
+Die Beispiele der folgenden Abschnitte verwenden teilweise die folgende Struktur- und Tabellendefinition
 
 ~~~ abap
-DATA dref TYPE REF TO data.
-dref = NEW struct_type( name   = `Test`
-                        number = 10 ).
+TYPES: BEGIN OF person,
+            age  TYPE i,
+            name TYPE string,
+        END OF person.
+
+TYPES persons TYPE STANDARD TABLE OF person WITH EMPTY KEY.
 ~~~
 
-### Strukturen und Tabellen mit VALUE erzeugen
+~~~ abap
 
-### CORRESPONDING
+~~~
 
-### CONV und CAST
+### Strukturen und Tabellen erzeugen
 
-### COND
+~~~ abap
+" Alte Variante
+DATA old_person  TYPE person.
+DATA old_persons TYPE persons.
 
-### SWITCH
+old_person-age  = 30.
+old_person-name = `Max Mustermann`.
 
-### REDUCE
+INSERT old_person INTO TABLE old_persons.
 
-### FILTER
+
+" Moderne Syntax
+DATA(new_persons) = VALUE persons( ( age = 30 name = `Max Mustermann` ) ).
+~~~
+
+### Werte aus Tabellen auslesen
+
+Zum Lesen von Tabellen kann anstelle des alten `READ TABLE`-Befehls auch die neue Syntax von Tabellenausdrücken bzw. Table Expressions verwendet werden:
+
+~~~ abap
+" Alte Variante
+READ TABLE persons INDEX 1 INTO DATA(first_person_old).
+
+" Moderne Syntax
+DATA(first_person_new) = persons[ 1 ].
+~~~
+
+Tabellenausdrücke können auch zusammengesetzt sein, mit `nested_tables[1][2]` wird die zweite Zeile der Tabelle gelesen, die wiederum in der ersten Zeile von `nested_tables` liegt.
+
+Der Vorteil der neuen Syntax zeigt sich beispielsweise, wenn direkt auf eine bestimmte Spalte zugegriffen werden soll:
+
+~~~ abap
+" Alte Variante
+READ TABLE persons WITH KEY name = `Maria Musterfrau` INTO DATA(maria_old).
+DATA(age_maria_old) = maria_old-age.
+
+" Moderne Syntax
+DATA(age_maria_new) = persons[ name = `Maria Musterfrau` ]-age.
+~~~
+
+Wichtig ist die unterschiedliche Fehlerbehandlung: Findet `READ TABLE` eine Zeile nicht, zeigt ein Wert von `sy-subrc` ungleich 0 (oder 2) dies an. Ein Tabellenausdruck
+hingegen wirft die Exception `cx_sy_itab_line_not_found`. Statt diese Exception abzufangen, existieren jedoch zwei kurze Varianten für den typischen Umgang mit nicht 
+gefunden Werten, nämlich das Zurückgeben eines initialen Werts oder eines vorgegebenen Standardwerts:
+
+~~~ abap
+" Alte Variante
+READ TABLE persons WITH KEY name = `unbekannt` INTO DATA(unknown_person_old).
+IF sy-subrc <> 0.
+    " tue etwas anderes
+ENDIF.
+
+" Moderne Syntax
+" Variante 1: Ergebnis ist initial, wenn Zeile nicht gefunden
+DATA(unknown_person_new_optional) = VALUE #( persons[ name = `unbekannt` ] OPTIONAL ).
+" Variante 2: Ergebnis entspricht Default-Fall, wenn Zeile nicht gefunden
+DATA(unknown_person_new_default) = VALUE #( persons[ name = `unbekannt` ]
+                                            DEFAULT VALUE #( name = `Standardergebnis`
+                                                                age  = 99 ) ).
+~~~
+
+### Tabellen umwandeln
+
+Häufig muss aus einer Tabelle eines Typs eine Tabelle eines anderen Typs bestimmt werden. In anderen Programmiersprachen steht dafür häufig eine `map`-Methode bereit.
+
+In ABAP hingegen kann dies auch mithilfe eines `VALUE`-Statements umgesetzt werden. Wenn z.B. die Methode `read_person` zu der genutzten `person`-Struktur ein Objekt lädt,
+sieht das Umwandeln der Tabelle wie folgt aus:
+
+~~~ abap
+" Alte Variante
+DATA(person_objects_old) = VALUE person_objects( ).
+
+LOOP AT persons INTO DATA(loop_person).
+    INSERT read_person_info( loop_person ) INTO TABLE person_objects_old.
+ENDLOOP.
+
+" Moderne Syntax
+DATA(person_objects_new) = VALUE person_objects( FOR p IN persons
+                                                    ( read_person_info( p ) ) ).
+~~~
+
+Die folgenden Beispiele zeigen, wie nur bestimmte Zeilen einer Tabelle übernommen werden können:
+
+Übernahme von Zeilen anhand des Index:
+
+~~~ abap
+" Alte Syntax
+DATA(shorter_table_old) = VALUE persons( ).
+
+LOOP AT persons INTO DATA(loop_person).
+    IF sy-tabix >= 2.
+    INSERT loop_person INTO TABLE shorter_table_old.
+    ENDIF.
+ENDLOOP.
+
+" Moderne Syntax                                                         
+DATA(shorter_table_new) = VALUE persons( ( LINES OF persons FROM 2 ) ).
+~~~
+
+Sollen Zeilen anhand einer Bedingung gefiltert werden, sieht die moderne Syntax so aus:
+
+~~~ abap
+DATA(younger_persons) = VALUE persons( FOR p IN persons WHERE ( age < 20 )
+                                           ( p ) ).
+~~~
+
+Für viele Möglichkeiten, die `LOOP AT` bietet, gibt es auch in der `VALUE`-Variante Entsprechungen.
+
+TODO Beispiele für alles?
+{: .label .label-red }
+
+- [ ] Zwischenberechnungen mit `LET`
+- [ ] GROUP
+- [ ] BASE
+- [ ] FOR i = 1 UNTIL i > 3
+
+### String Templates und Konvertierungsexits
+
+In klassischer Syntax mussten Strings
+
+### Bestimmung von Werten aus Tabellen, z.B. Minimum
+
+~~~ abap
+" Alte Variante
+DATA(youngest_person_old) = VALUE #( persons[ 1 ] OPTIONAL ).
+
+LOOP AT persons INTO DATA(loop_person).
+    IF loop_person-age < youngest_person_old-age.
+    youngest_person_old = loop_person.
+    ENDIF.
+ENDLOOP.
+
+" Moderne Syntax
+DATA(youngest_person_new) = REDUCE #( INIT youngest = VALUE person( persons[ 1 ] OPTIONAL )
+                                        FOR p IN persons
+                                        NEXT youngest = COND #( WHEN p-age < youngest-age
+                                                                THEN p
+                                                                ELSE youngest ) ).
+~~~
+
+TODO andere Beispiele
+{: .label .label-red }
+
+- [ ] fancy line_exists
+- [ ] GROUP
+- [ ] BASE
+- [ ] FOR i = 1 UNTIL i > 3
 
 ## Namenskonventionen - Empfehlungen NCs vs. Clean Code
 
