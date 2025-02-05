@@ -1,28 +1,30 @@
+---
 layout: page
-title: Sauberen und modernen ABAP Code schreiben
-permalink: /abap/clean_and_modern_abap/
+title: Notizzettel für Struktur und Inhalte
+permalink: /abap/Content_notes/
 parent: Moderne ABAP Entwicklung
 nav_order: 6
 ---
 
 
 **Notizen und Inhaltsplanung**
- Strukturierung
+ Strukturierung:  
  Trennung Backend Frontend erfordert gute Architektur
-    Beispiel einer groben konzeptstruktur für die technische Anforderung zeigen?
- API 
- Neue UI / ODATA
- Paketkonzept
- Design for testability
+ 
+ Beispiel einer groben konzeptstruktur für die technische Anforderung zeigen?
+ - API 
+ - Neue UI / ODATA
+ - Paketkonzept
+ - Design for testability
 
-ABAP OO - SOLID Prinzipien umsetzen
-ABAP OO als Schlüssel für gute Architektur wenn Prinzipien umgesetzt werden.  vpnj der Paket zur Objektstrukturierung
+- ABAP OO - SOLID Prinzipien umsetzen
+- ABAP OO als Schlüssel für gute Architektur wenn Prinzipien umgesetzt werden.  vpnj der Paket zur Objektstrukturierung
 
 ## SAP Paket Konzept
-Was ist es basics
-Warum Pakete
-Erklärbarkeit
-Flexibilität
++ Was ist es basics
++ Warum Pakete
++ Erklärbarkeit
++ Flexibilität
 
 
 - Erstellung Pakete
