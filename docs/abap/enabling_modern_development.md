@@ -3,7 +3,7 @@ layout: page
 title: Rahmenbedingungen und Enabling moderne ABAP Entwicklung im  Unternehmen und in den Teams
 permalink: /abap/enabling_modern_development/
 parent: Moderne ABAP Entwicklung
-nav_order: 4
+nav_order: 5
 ---
 
 
@@ -14,6 +14,10 @@ nav_order: 4
 
 
 ## Schulung und Motivation der Entwickler
+
+Den Inhalt dieses Kapitels findet sich sehr gut beschrieben im Kapitel Organization.
+Wird am Ende nach finaler Abstimmmung mit Kapitelteam gelöscht.
+
 
 - .was braucht man als Organization
 - .wie im Projekt 
