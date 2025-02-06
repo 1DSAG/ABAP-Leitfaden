@@ -1,6 +1,6 @@
 ---
 layout: page
-title: -->Rahmenbedingungen sind im Kap. Organisation gut beschrieben .... kommt raus hier
+title: DELETE___ Rahmenbedingungen sind im Kap. Organisation gut beschrieben .... kommt raus hier
 permalink: /abap/enabling_modern_development/
 parent: Moderne ABAP Entwicklung
 nav_order: 5
