@@ -2,8 +2,6 @@
 layout: page
 title: Clean Core
 permalink: /clean-core/
-next_page_link: /clean-core/what-is-clean-core/
-next_page_title: Was ist Clean Core
 has_children: true
 nav_order: 7
 ---

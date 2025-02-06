@@ -2,7 +2,6 @@
 layout: page
 title: ALM
 permalink: /application-lifecycle-management/
-next_page_title: ALM
 nav_order: 4
 ---
 
@@ -20,7 +19,7 @@ Unter dem Begriff "Application Lifecycle Management" (ALM) werden von SAP Prozes
 
 Dazu wurde ab Mitte der 2000er-Jahre(?) der SAP Solution Manager als On-Premise-System augeliefert und stetig erweitert, der jedoch zum Ende des Jahres 2027 - analog der Business Suite - aus der Mainstream-Wartung läuft.
 
-Das Nachfolgeprodukt des SAP Solution Managers nennt sich SAP Cloud ALM und ist - wie der Name schon sagt - eine reine Cloud-Lösung, die auf der SAP Business Technology Platform (BTP) läuft. SAP Cloud ALM befindet sich seit einigen Jahren im Aufbau und wird kontinuierlich weierentwickelt, in enger Abstimmung mit der DSAG und Anwenderundernehmen. Der Funktionsumfang ist im Vergleich zum SAP Solution Manager derzeit noch eingeschränkt und aktuell (Stand: Anfang 2025) eher für kleinere Unternehmen ohne über Jahre gewachsenes ALM sowie für cloud-zentrierte Systemlandschaften geeignet/brauchbar.
+Das Nachfolgeprodukt des SAP Solution Managers nennt sich SAP Cloud ALM und ist - wie der Name schon sagt - eine reine Cloud-Lösung, die auf der SAP Business Technology Platform (BTP) läuft. SAP Cloud ALM befindet sich seit einigen Jahren im Aufbau und wird kontinuierlich weiterentwickelt, in enger Abstimmung mit der DSAG und Anwenderundernehmen. Der Funktionsumfang ist im Vergleich zum SAP Solution Manager derzeit noch eingeschränkt und aktuell (Stand: Anfang 2025) eher für kleinere Unternehmen ohne über Jahre gewachsenes ALM sowie für cloud-zentrierte Systemlandschaften geeignet/brauchbar.
 
 Weitere SAP-Produkte aus der ALM-Familie sind SAP Focused Run als eigenständiges On-Premise-System für den Monitoring-Bereich, das in diesem ABAP-Leitfaden jedoch keine (große?) Rolle spielt, sowie die SAP Solution Manager-Addons Focused Build (mit Erweiterungen im (agil...Verweis???) und im Testmamagement, siehe dazu Kapitel ...Verweis...) und Focused Insights für Dashboards jeglicher Art.
 
@@ -38,29 +37,4 @@ Grafik??
 
 Hinsichtlich der Dokumentation besteht unter anderem die Möglichkeit, Entwicklungsobjekte automatisch aus den angebundenen SAP-Systemen auszulesen und anschließend (manuell) den entsprechenden Prozessen zuzuweisen, was etwa die Änderung von Prozessen durch den Entwickler vereinfachen kann.
 
-Im Bereich der Verwaltung von kundeneigenem Code stehen Werkzeuge zur Verfügung, um die (ABAP-)Codequalität aus ATC-Prüfungen über einen Zeitverlauf darzustellen () und um nicht mehr gebrauchten Code zu identifizieren mit dem Ziel, diesen aus den ABAP(?)-Systemen zu entfernen. Gerade im Hinblick auf eine geplante S/4HANA-Migration kann das Codestillegungscockpit ein Baustein sein, um unnötigen Ballast schon vor der Syntax(?)-Anpassung loszuwerden und damit Zeit und Ressourcen(?) einzusparen.
-
----
-Braindump:
-ALM: (Marco)
-
-
-– Rahmenbedingungen für ein erfolgreiches ALM
-  o Definierter Prozess (wenige Steps / effiziente Rollen) 
-    § Requirements Management
-    § Build to Deploy
-      · Quality Gate
-        o Code Review
-        o und andere
-    § Test Management -> Verweis auf “Kapitel Testmanagement”
-    § Release / Transport Management 
-    § Process Management 
-      · Traceability
-        o -> Verweis auf Requirements Management
-        o Bibliotheken (Entwicklungsbibliothek) Solution Documentation 
-    § CCLM 
-      · kurz anschneiden und auf separates Unterkapitel verweisen
-        o Flow optimiert 
-    § Requirements Management
-    § Ausblick -> ChaRM Integration mit anderen Workforce tools (Jira /  serviceNow)
-      · Kurze Erläuterung von Vor- und Nachteilen + Fallstricke
+Im Bereich der Verwaltung von kundeneigenem Code stehen Werkzeuge zur Verfügung, um die (ABAP-)Codequalität aus ATC-Prüfungen über einen Zeitverlauf darzustellen (?) und um nicht mehr gebrauchten Code zu identifizieren mit dem Ziel, diesen aus den ABAP(?)-Systemen zu entfernen. Gerade im Hinblick auf eine geplante S/4HANA-Migration kann das Codestillegungscockpit ein Baustein sein, um unnötigen Ballast schon vor der Syntax(?)-Anpassung loszuwerden und damit Zeit und Ressourcen(?) einzusparen.

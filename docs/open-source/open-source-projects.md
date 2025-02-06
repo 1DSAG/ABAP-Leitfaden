@@ -3,12 +3,11 @@ layout: page
 title: Vorstellung ausgewählter Projekte
 permalink: /open-source/open-source-projects/
 parent: Open Source
-prev_page_link: /open-source/abapgit-as-enabler/
-prev_page_title: abapGit als Enabler von Open Source
-nav_order: 5
+nav_order: 6
 ---
 
 {: .no_toc}
+
 # Vorstellung ausgewählter Projekte
 
 1. TOC
@@ -29,7 +28,7 @@ Mit [abapOpenChecks](https://github.com/larshp/abapOpenChecks) werden Prüfungen
 - **Standardbranch**: main
 - **Programmiersprache**: ABAP
 - **Lizenz**: MIT License
-- **Sterne**: 265
+- **Sterne**: 276
 - **Forks**: 79
 - **Offene Issues**: 304
 - **Geschlossene Issues**: 439
@@ -45,7 +44,7 @@ Mit [abaplint/abaplint](https://github.com/abaplint/abaplint) können statische 
 - **Standardbranch**: main
 - **Programmiersprache**: Hauptsächlich TypeScript (97,6 %), gefolgt von ABAP (1,7 %), JavaScript (0,6 %), CSS (0,1 %) und HTML sowie Less (< 0,1 %)
 - **Lizenz**: MIT License
-- **Sterne**: 224
+- **Sterne**: 227
 - **Forks**: 70
 - **Offene Issues**: 370
 - **Geschlossene Issues**: 1.588
@@ -69,7 +68,7 @@ Mit [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap) bzw. [Code Pal
 
 ### ABAP OpenAPI Client & Server Generator
 
-Mit [abap-openapi/abap-openapi](https://github.com/abap-openapi/abap-openapi) können aus einer OpenAPI Spezifikation ein ABAP Client- bzw. Server generiert werden. Überblick:
+Mit [abap-openapi/abap-openapi](https://github.com/abap-openapi/abap-openapi) können aus einer OpenAPI Spezifikation ein ABAP Client- bzw. Server generiert werden. Viele SAP SaaS und auch Anwendungen außerhalb der SAP Welt stellen APIs mit einer OpenAPI Spezifikation bereit. Um diese in ABAP zu verwenden kann mit ABAP OpenAPI ein Client basierend auf einem ABAP Interface für die Datendefinitionen und einer ABAP Klasse für die Client Implementierung generiert werden. Damit lassen sich direkt aus ABAP heraus nicht nur SOAP und OData, sondern auch REST APIs ansprechen. Überblick:
 
 - **Besitzer**: [abap-openapi](https://github.com/abap-openapi)
 - **Erstellt am**: 19. Januar 2021
@@ -116,3 +115,8 @@ Mit [abap2xlsx/abap2xlsx](https://github.com/abap2xlsx/abap2xlsx) können im ABA
 - **Geschlossene Issues**: 722
 - **Letzter Push**: 25. Oktober 2024
 - **Homepage**: [abap2xlsx.github.io/abap2xlsx](https://abap2xlsx.github.io/abap2xlsx/)
+
+#### Anwendungsfälle
+
+- Erzeugung formatierter Berichte
+- Download und Upload zur Datenpflege

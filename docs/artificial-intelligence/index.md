@@ -2,8 +2,7 @@
 layout: page
 title: Künstliche Intelligenz
 permalink: /artificial-intelligence/
-next_page_title: Künstliche Intelligenz
-nav_order: 12
+nav_order: 13
 ---
 
 {: .no_toc}

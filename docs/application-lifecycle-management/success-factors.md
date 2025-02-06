@@ -3,8 +3,6 @@ layout: page
 title: Rahmenbedingungen für ein erfolgreiches ALM
 permalink: /application-lifecycle-management/success-factors/
 parent: ALM
-next_page_link: /application-lifecycle-management/ensuring-quality/
-next_page_title: Qualitätssicherung und -Monitoring
 nav_order: 1
 ---
 
@@ -14,6 +12,9 @@ nav_order: 1
 1. TOC
 {:toc}
 
+Das Application Lifecycle Management sollte einem definierten Prozess folgen, der die relevanten Schritte in einer klaren Abfolge darstellt. Dieser Prozess muss auf das Unternehmen angepasst sein, in Abstimmung zwischen dem Business und der IT. Ein entscheidender Faktor dabei ist die effiziente Defintion der Rollen innerhalb des ALM-Prozesses.
+
+Ein Beispiel könnte wie folgt dargestellt werden: ... (Abbildung) ??
 
 - Definierter Prozess (wenige Steps / effiziente Rollen) 
   - Requirements Management

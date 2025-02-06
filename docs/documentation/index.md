@@ -2,19 +2,27 @@
 layout: page
 title: Dokumentation
 permalink: /documentation/
-next_page_title: Dokumentation
 nav_order: 1
 ---
 
 {: .no_toc}
-# Dokumentation
+# Dokumentation von ABAP Entwicklungen
 
 1. TOC
 {:toc}
 
-Die Dokumentation von Software ist in vielen Fällen genauso wichtig wie die Entwicklung selbst. Fehlt die Dokumentation oder ist sie nicht in ausreichendem Maß vorhanden, führt dies spätestens bei der Weiterentwicklung oder dem Wechsel von Entwicklern zu erhöhten Aufwänden. In diesem Kapitel werden unterschiedliche Möglichkeiten zur Dokumentation von Entwicklungen in einem SAP-System dargestellt.
+## Zielgruppe
+Dieses Kapitel ist an ABAP Entwickler, Software Architekten, technische Schreiber und Entwicklungsleiter gerichtet. Wir möchten sie mit den Inhalten des Kapitels bei der Einführung und Optimierung ihrer technischen Dokumentaitonsaufgaben von ABAP Entwicklungen unterstützen und ihnen nach Möglichkeit pragmatische Lösungen anbieten, die sie und ihre Kollegen langfristig bei der Wissensvermittlung über ihre Individualsoftware unterstützt.   
 
-Allgemein ist es bei jeder Dokumentation wichtig, das richtige Maß zu finden und umzusetzen. In der Praxis findet man leider immer wieder die beiden Extreme: entweder eine sehr umfangreiche oder gar keine Dokumentation. Die umfangreiche Dokumentation ist allerdings inhaltlich oft mangelhaft, weil sie viele redundante/kopierte Informationen enthält und nicht aktuell gehalten wird. Sind die offiziellen Anforderungen an die Dokumentation zu hoch oder zu abstrakt, führt dies manchmal dazu, dass sie gar nicht erst erstellt wird.
+## Inhalt des Kapitels
+
+## Allgemeine Dokumentations-Tips
+
+Technische Dokumentation dient der Wissensvermittlung und soll dem Leser einen schnellen Einstieg in die Architektur und die Funktionsweise eines Softwaresystems vermitteln, ohne dass man sich auf Quellcode-Ebene mit den Details des Systems auseinandersetzen muss. Fehlt die Dokumentation oder ist sie nicht in ausreichendem Maß vorhanden, führt dies spätestens bei der Weiterentwicklung oder dem Wechsel von Entwicklern zu erhöhten Aufwänden. 
+
+Allgemein ist es bei jeder Dokumentation wichtig, das richtige Maß zu finden und die beiden Extreme einer zu umfangreichen und oft veralteten Dokumentation, oder gar keiner Dokumentation zu vermeiden. Abhilfe schafft die Definition klarer, leicht verständlicher, mit Beispielen angereicherte Dokumentationsrichtlinien. Sind die offiziellen Anforderungen an die Dokumentation zu hoch oder zu abstrakt, führt dies in der Regel dazu, dass die Dokumentaiton entweder gar nicht, oder mit schlechter Qualität erst wird.
+
+Tip: Binden Sie die Autoren und die Leser, für die die Dokumentation geschrieben wird, in den Definitionsprozess der Dokumentationsrichtlinien mit ein. 
 
 Die Dokumentation sollte während der Entwicklung, unbedingt aber vor der Produktivsetzung bzw. Bereitstellung erstellt werden und es sollte keine Produktivsetzung ohne fertige Dokumentation geben. Ansonsten ergibt sich in der Regel ein Mehraufwand oder letztlich eine fehlende Dokumentation.
 
@@ -44,11 +52,15 @@ Darüber hinaus kann eine veraltete Dokumentation irreführend sein. Deshalb sol
 |---------------|
 |Es sollte im Unternehmen geklärt werden, wie Dokumentation von Software erfolgen soll.|
 
-Innerhalb einer SAP-Systemlandschaft bietet der SAP Solution Manager Möglichkeiten zur Projektdokumentation. Die nachfolgenden Links bieten weitere Informationen dazu.
+Innerhalb einer SAP-Systemlandschaft bietet der SAP Solution Manager Möglichkeiten zur Projektdokumentation. 
+
+Die nachfolgenden Links bieten weitere Informationen dazu.
 
 WEITERE QUELLEN  
 1.	Das arc42-Template zur Architekturdokumentation, [Arc42-Template](https://arc42.org/download)  (aufgerufen am: 19.09.2024)
 2.	Stefan Zörner: Softwarearchitekturen dokumentieren und kommunizieren. Carl Hanser Verlag GmbH Co KG, 2021. ISBN: 978-3446469280
+3.  [Master Guide SAP Solution Manager - Solution Documentation](https://help.sap.com/docs/SAP_Solution_Manager/c3c5ec585ee248228ddb6c3f08073ea9/2cb3e75e134249a2bd091a40fe2f6d61.html?locale=en-US) (aufgerufen am: 26.01.2025)
+4. [ABAP Development Tools: User Guide - Documentation of Development Objects](https://help.sap.com/docs/ABAP_PLATFORM_NEW/c238d694b825421f940829321ffa326a/52546a60ba3f436d8f5b54b83044d0b7.html?locale=en-US&q=documentation) (aufgerufen am: 26.01.2025)
 
 ## Dokumentation zur Versionsverwaltung
 
@@ -58,16 +70,19 @@ Oftmals hilft es zum Transportauftrag zu dokumentieren
 * Wichtigste Entwicklungsobjekte im Transport
 * Abhängigkeiten zu anderen Transporten (sofern vorhanden)
 * Kurzbeschreibung zu Änderungen im Transport
-Die Dokumentation zu jeder Aufgabe und zu jedem Auftrag während der Auftragsbearbeitung im Reiter "Dokumentation" zu erfassen. Die Dokumentation kann bis zur Freigabe laufend erweitert werden. Nach der Freigabe des Auftrags ist dies nicht mehr möglich.
+Die Dokumentation zu jeder Aufgabe und zu jedem Auftrag lässt sich während der Auftragsbearbeitung innerhalb des Transport Request Editors im Reiter "Dokumentation" erfassen. Die Dokumentation kann bis zur Freigabe laufend erweitert werden. Beachten sie, dass nach der Freigabe des Auftrags die Bearbeitung nicht mehr möglich ist.
 
-Diese Dokumentation auf dem Reiter "Dokumentation" kann man für jeden Transportauftrag erstellen, der ins Produktive Systeme geht. Transporte von Kopien sollte man nicht dokumentieren, um redundante Dokumentation zu vermeiden. Letztlich interessieren nur die Transporte, die ins Produktiv System gehen sollen, bzw. bereits gegangen sind.
+Diese Dokumentation auf dem Reiter "Dokumentation" kann man für jeden Transportauftrag erstellen, der in das Produktivsysteme geht. Vermeiden sie redundante Dokumentation und dokumentieren sie keine Transporte von Kopien. Letztlich interessieren nur die Transporte, die ins Produktiv System gehen sollen, bzw. bereits gegangen sind.
+
+WEITERE QUELLEN
+* [SAP Help: Change and Transport System - Request Editor - Writing Documentation](https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/d636153aab4a0c0ee10000000a114084.html?locale=en-US) (aufgerufen am: 26.01.2025)
 
 ### Git-Client
-Sollte ein Git-Client wie abapGit oder gCTS eingesetzt werden, werden Code-Änderungen protokolliert. Zu jedem sogenannten Commit werden neben den Code-Änderungen noch Metadaten gespeichert. Zu den Metadaten zählen eine kurze Beschreibung, sogenannte Commit-Nachricht, Autor und  Datum. Die so entstehende Commit-Historie ermöglicht, vergangene Commits zu sehen und die Code-Änderungen nachzuvollziehen. Wird ein Ticket-System, wie zum Beispiel Jira oder Azure DevOps, für die Erfassung der Anforderungen benutzt, hat jede Anforderung an die Entwicklung eine eindeutige ID. Viele Teams haben die Vorgabe oder die interne Vereinbarung, diese ID in den Commit-Nachrichten einzutragen, damit sich die Commits den Aufgaben zuordnen lassen. Wird das konsistent gemacht, lassen sich mittels Freitextsuche in den Commit-Nachrichten alle Commits identifizieren, die zu einer bestimmten Aufgabe gehören. Das erleichtert wesentlich das Wiederfinden und die Überprüfung der Umsetzung im Fall von Bugs. Gleichzeitig lassen sich dadurch ähnliche Aufgaben sehr schnell umsetzen, weil die Entwickler das bereits funktionierende Beispiel finden und verfolgen können.
+Die Verwendung eines Git-Clients wie abapGit oder gCTS protokolliert Code-Änderungen automatisch bei jedem Commit. Zusätzlich werden bei dem Commit Metadaten gespeichert, die eine kurze Beschreibung, sogenannte Commit-Nachricht, den Autor und das Datum enthalten. Die so entstehende Commit-Historie ermöglicht, vergangene Commits zu sehen und die Code-Änderungen nachzuvollziehen. Wird ein Ticket-System, wie zum Beispiel Jira oder Azure DevOps, für die Erfassung der Anforderungen benutzt, hat jede Anforderung an die Entwicklung eine eindeutige ID. Viele Teams haben die Vorgabe oder die interne Vereinbarung, diese ID in den Commit-Nachrichten einzutragen, damit sich die Commits den Aufgaben zuordnen lassen. Wird das konsistent gemacht, lassen sich mittels Freitextsuche in den Commit-Nachrichten alle Commits identifizieren, die zu einer bestimmten Aufgabe gehören. Das erleichtert wesentlich das Wiederfinden und die Überprüfung der Umsetzung im Fall von Bugs. Gleichzeitig lassen sich dadurch ähnliche Aufgaben sehr schnell umsetzen, weil die Entwickler das bereits funktionierende Beispiel finden und verfolgen können.
 
 | BEST PRACTICE |
 |---------------|
-|Wir empfehlen bei Änderungen, die ins produktive Systeme gehen egal ob mit Transportauftrag oder Git-Client mit Angabe was geändert wurde und mit Bezug zu einem externen Tool wie Ticketsystem|
+|Steigern sie die Nachverfolgbarkeit und Transparenz von Änderungen an Entwicklungsobjekten, indem sie  im Transportauftrag oder Git-Client die Änderungen dokumentieren - idealerweise mit Bezug zu dem auslösenden Vorgang im Ticketsystem.|
 
 ## Dokumentation von Entwicklungsobjekten
 Neben Methoden, Funktionsbausteinen und Reports, die Dokumentation im Quellcode enthalten können, existieren weitere Entwicklungsobjekte im ABAP-System, die keinen Quellcode besitzen und daher auf anderem Weg dokumentiert werden müssen. Beispiele dafür sind:

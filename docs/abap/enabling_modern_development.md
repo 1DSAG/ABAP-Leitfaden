@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Rahmenbedingungen und Enabling moderne ABAP Entwicklung im  Unternehmen und in den Teams
+title: DELETE___ Rahmenbedingungen sind im Kap. Organisation gut beschrieben .... kommt raus hier
 permalink: /abap/enabling_modern_development/
 parent: Moderne ABAP Entwicklung
-prev_page_link: /abap/restful_abap/
-prev_page_title: Das ABAP Restful Application Programming Model (RAP)
-nav_order: 4
+nav_order: 5
 ---
 
 
@@ -15,7 +13,11 @@ nav_order: 4
 {:toc}
 
 
-## Schulung und Motivation der Entwickler
+## Siehe Kapitel Organisation : 
+
+Den Inhalt dieses Kapitels findet sich sehr gut beschrieben im Kapitel Organization.  
+Dieser Abschnitt hier Wird am Ende nach finaler Abstimmmung mit Kapitelteam gelöscht.
+
 
 - .was braucht man als Organization
 - .wie im Projekt 
