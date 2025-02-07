@@ -30,12 +30,29 @@ Extensibility Szenarien
 
 ### On-Stack
 
-Auf der linken Seite finden Sie die On-Stack Extensibility, unterteilt nach Pro Code und Low Code. Im Bereich Pro Code finden sie die klassische ABAP Cloud Entwicklung mit dem 3-TIER Modell, der Verwendung von freigegebenen APIs und der Erweiterung von Objekten (C0 Objekte). Im Low Code Bereich gibt es vor allem die Key User Extensibility, dabei handelt es sich um einige Fiori Anwendungen mit denen sie das System erweitern können. Die häufigsten Szenarien in diesem Bereich sind:
+Auf der linken Seite finden Sie die On-Stack Extensibility, unterteilt nach Pro Code und Low Code. Im Bereich Pro Code finden sie die klassische ABAP Cloud Entwicklung mit dem 3-TIER Modell, der Verwendung von freigegebenen APIs und der Erweiterung von Objekten (C0 Objekte). Mehr zum Thema ABAP Cloud, finden Sie im entsprechenden Abschnitt von Clean Core. 
 
-- Felderweiterung - Erzeugen neuer Z-Felder 
-- UI Anpassungen - Anpassung der 
+Im Low Code Bereich gibt es vor allem die Key User Extensibility, dabei handelt es sich um einige Fiori Anwendungen mit denen sie das System erweitern können. Die häufigsten Szenarien in diesem Bereich sind:
+
+- Felderweiterung - Erzeugen Sie über die Anwendung neue Z-Felder von der Datenbank bis zur UI.
+- UI Anpassungen - Passen Sie Fiori Anwendungen an, nennen Elemente um oder zeigen sich die neuen Z-Felder an. Sie können damit Varianten erzeugen und Ihrem Fachbereich zur Verfügung stellen.
+- Eigene Logik - Implementieren Sie eigene BADIs und erweitern den Prozess um eigene Prüfungen.
+- Eigene Core Data Services - Erzeugen Sie eigene Core Data Services auf Basis von freigegebenen Views und geben diese als APIs nach Außen zur Verfügung.
+- uvm.
+
 
 ### Side-by-Side
+
+Auf der rechten Seite finden Sie die Side-by-Side Extensibility, hier geht es um die entkoppelte Entwicklung außerhalb des Kernsystems. In diesem Beispiel wirde die Business Technology Plattform, kurz BTP genannt. Dort finden Sie verschiedene Werkzeuge und Systeme, mit denen sie Anwendungen zur Erweiterung des Systems erstellen können.
+
+- SAP BTP ABAP Environment - Erweiterungen auf Basis von ABAP in der Cloud entwickeln.
+- SAP Build Code - Erweiterungen auf Basis von Java oder JavaScript entwickeln.
+
+Neben der Pro Code Lösung finden sie auch hier Low Code und No Code Lösungen aus dem SAP Build Portolio. Dazu eine kleine Übersicht der gängigen Tools und deren Nutzung.
+
+- SAP Build Apps - Erstellen Sie hier Firoi und Mobile Apps per Drag'n Drop und einfachen Scripts. Die Anwendungen werden dann in der BTP zur Verfügung gestellt.
+- SAP Build Process Automation - Sie benötigen einen Workflow oder eine Automatisierung, dann können sie diese mit der Process Automation erstellen und SAP, sowie Non-SAP Systeme anbinden.
+- SAP Build Work Zone - Wollen Sie einen zentralen Zugriff für alle SAP Anwendungen, egal ob On-Stack oder Side-by-Side, dann kann die Work Zone eine Alternative sein. Neben der Standard Edition, gibt es auch eine Advanced Edition mit kollaborativen Funktionen.
 
 
 ## Strategie
