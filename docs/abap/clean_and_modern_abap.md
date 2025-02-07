@@ -3,7 +3,7 @@ layout: page
 title: Sauberen und modernen ABAP Code schreiben
 permalink: /abap/clean_and_modern_abap/
 parent: Moderne ABAP Entwicklung
-nav_order: 3
+nav_order: 4
 ---
 
 {: .no_toc}

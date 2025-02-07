@@ -27,13 +27,16 @@ Der Leitfaden im Generellen und dieses Kapitel in Bezug zu ABAP möchte hier Hil
 Der Weg zur Erstellung moderner Anwendungen ist kein Leichter und es ist eine Investition, deren Ertrag nicht sofort anfällt. Weshalb es sich aber lohnt diese Reise anzugehen und Reisetipps finden sie auf den folgenden Seiten. 
 Dieses Kapitel teilt sich in folgende Abschnitte auf:
 
-- [**Architektur und Design moderner ABAP Entwicklungen**](architecture_and_design.md)  
-    Warum es wichtig ist und Vorteile hat ABAP Entwicklungen in Paketen zu strukturieren, die Paketfunktionalitäten zu nutzen und warum die Anwendung von Objektorientierung und gute Strukturierung der Funktionalitäten in Klassen sich auszahlt.
+- [**Architektur und Design moderner ABAP Entwicklungen**](/ABAP-Leitfaden/abap/architecture_and_design)  
+    Hier erfahren Sie warum es wichtig ist und viele Vorteile bringt, ABAP Entwicklungen in Paketen zu strukturieren, die Paketfunktionalitäten zu nutzen und was Sie wissen müssen um unsere Empfehlungen umzusetzen. 
 
-- [**Sauberer und moderner Code**](clean_and_modern_abap.md)  
+- [**Design und Erstellung von ABAP Entwicklungen mit ABAP OO**](/ABAP-Leitfaden/abap/software_design_of_object_structur)  
+    Die Anwendung von Objektorientierung ist ein essentieller Faktor eine moderne, robuste und Anpassungsfähige Software zu erstellen. In diesem Kapitel finden Sie unsere Empfehlungen OO gut und effizient umzusetzen und warum die Anwendung von Objektorientierung und gute Strukturierung der Funktionalitäten in Klassen sich auszahlt.
+
+- [**Sauberer und moderner Code**](/ABAP-Leitfaden/abap/clean_and_modern_abap)  
     Was für die übergeordnete Struktur gilt, ist auch für ABAP Code gültig. Clean Code Prinzipien anzuwenden und modernen ABAP Code zu schreiben zahlt sich bereits während der Entwicklung aus.
 
-- [**Restful Application Programming Model - RAP**](restful_abap.md)  
+- [**Restful Application Programming Model - RAP**](/ABAP-Leitfaden/abap/restful_abap)  
     Empfehlungen und das Vorgehen bei Entwicklung von RAP Applikationen finden Sie in diesem Kapitel.
 
 Für eine effiziente Transformation der Organisation und der Entwickler zu moderner SAP Entwicklung braucht es Rahmenbedingungen und ein Enabling der Entwicklungsteams. 
