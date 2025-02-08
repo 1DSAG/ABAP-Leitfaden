@@ -34,8 +34,8 @@ Quelle: SAP Help Portal
 Clean Core
 {: .img-caption}
 
-Das Clean Core Konzept mit seinen verschiedenen Facetten wird von SAP in der [TechEd2023 - Clean Core: What It Is, Why to Do It, and How to Get There] (https://www.youtube.com/watch?v=jlzdD55ahqY) klar kommuniziert. Die Schritt-für-Schritt-Anleitung ist jedoch für etablierte Kunden, die verschiedene „Legacy“-Technologien in ihren SAP-Systemen einsetzen, unklar. 
-Es gibt zahlreiche Bestandskunden und SAP-Partner, die durch Eigenentwicklungen und Systemerweiterungen Mehrwerte in ihren Systemen geschaffen haben. Diese Mehrwerte gehören per Definition nicht zum Clean Core - die Erweiterungen basieren fast immer auf nicht freigegebenen Schnittstellen. Für die sogenannten RICEFW-Objekte gibt es verschiedene [Nachfolgetechnologie-Matrizen] (https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html). Intern stellen sich vor allem die Fragen: „Wie können wir den Technologiewechsel gegenüber unseren Kunden vertreten? Und warum soll ich gut funktionierende Prozesse, die z.B. auf Idocs, Messages, RFCs und ALV-Transaktionen basieren, jetzt umstellen?
+Das Clean Core Konzept mit seinen verschiedenen Facetten wird von SAP in der [TechEd2023 - Clean Core: What It Is, Why to Do It, and How to Get There](https://www.youtube.com/watch?v=jlzdD55ahqY) klar kommuniziert. Die Schritt-für-Schritt-Anleitung ist jedoch für etablierte Kunden, die verschiedene „Legacy“-Technologien in ihren SAP-Systemen einsetzen, unklar. 
+Es gibt zahlreiche Bestandskunden und SAP-Partner, die durch Eigenentwicklungen und Systemerweiterungen Mehrwerte in ihren Systemen geschaffen haben. Diese Mehrwerte gehören per Definition nicht zum Clean Core - die Erweiterungen basieren fast immer auf nicht freigegebenen Schnittstellen. Für die sogenannten RICEFW-Objekte gibt es verschiedene [Nachfolgetechnologie-Matrizen](https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html). Intern stellen sich vor allem die Fragen: „Wie können wir den Technologiewechsel gegenüber unseren Kunden vertreten? Und warum soll ich gut funktionierende Prozesse, die z.B. auf Idocs, Messages, RFCs und ALV-Transaktionen basieren, jetzt umstellen?
 
 ### Clean Core Definition
 Im Kern dreht sich das Clean-Core-Konzept um die Trennung der Kerngeschäftslogik von der Nicht-Kernfunktionalität innerhalb der SAP-Software-Suite. Durch die Isolierung von Kerngeschäftsprozessen und Datenstrukturen strebt SAP eine schlankere und agilere Basis an, die sich an veränderte Geschäftsanforderungen anpassen kann. 
@@ -101,22 +101,22 @@ Die digitale Transformation eines jeden SAP-Kunden hängt von der im Unternehmen
 
 ### Zielbild - Reise mit SAP, der Weg in die Public Cloud?
 
-## **Unterschiede zwischen Public und Private Cloud:**
+## Unterschiede zwischen Public und Private Cloud:
 
-### 1. **Public Cloud**
-- **Erfordert Clean Core**: Ein Redesign der Prozesse und eine Neugestaltung des Custom Codings sind unabdingbar. 
-- **Definition**: Die **SAP S/4HANA Cloud, public edition (GROW)** ist per Definition "clean". 
+### 1. Public Cloud
+- Erfordert Clean Core: Ein Redesign der Prozesse und eine Neugestaltung des Custom Codings sind unabdingbar. 
+- Definition: Die SAP S/4HANA Cloud, public edition (GROW) ist per Definition "clean". 
 
-### 2. **Private Cloud**
-- **Flexiblere Anforderungen**: Keine strikte Clean Core-Entwicklung erforderlich.
-- **Fokus**: Vereinfachung der **Industry Solutions**-Entwicklungen, ohne alle Prozesse vollständig neu zu gestalten.
+### 2. Private Cloud
+- Flexiblere Anforderungen: Keine strikte Clean Core-Entwicklung erforderlich.
+- Fokus: Vereinfachung der Industry Solutions-Entwicklungen, ohne alle Prozesse vollständig neu zu gestalten.
 
-## **Anwendbarkeit von Clean Core:**
-- **Relevante Szenarien**:
-  - **SAP S/4HANA on-premise**
-  - **SAP S/4HANA Cloud, private edition (RISE)**
-- **Public Cloud ist clean by default**:
-  - Die **SAP S/4HANA Cloud, public edition (GROW)** ist von Grund auf auf Clean-Core-Prinzipien aufgebaut.
+## Anwendbarkeit von Clean Core:
+- Relevante Szenarien:
+  - SAP S/4HANA on-premise
+  - SAP S/4HANA Cloud, private edition (RISE)
+- Public Cloud ist clean by default:
+  - Die SAP S/4HANA Cloud, public edition (GROW) ist von Grund auf auf Clean-Core-Prinzipien aufgebaut.
 
 ### S/4 HANA Transformation
 
@@ -124,10 +124,10 @@ Die digitale Transformation eines jeden SAP-Kunden hängt von der im Unternehmen
 
 Diese Abgrenzung hilft bei der Entscheidungsfindung, welcher Ansatz am besten zu den Zielen, Ressourcen und Gegebenheiten eines Unternehmens passt.
 
-## **Greenfield-Ansatz**
+## Greenfield-Ansatz
 Der Greenfield-Ansatz beschreibt eine vollständige Neuimplementierung eines SAP-Systems. Dabei wird das bestehende System nicht migriert, sondern ein komplett neues System auf der „grünen Wiese“ aufgebaut.
 
-### **Merkmale:**
+### Merkmale:
 - **Neustart**: Vollständige Neuimplementierung ohne Altlasten.
 - **Flexibilität**: Möglichkeit, Prozesse, Strukturen und Architekturen komplett neu zu gestalten.
 - **Aufwand**: Erfordert intensive Vorbereitungen, Schulungen und hohe Investitionen.
@@ -136,10 +136,10 @@ Der Greenfield-Ansatz beschreibt eine vollständige Neuimplementierung eines SAP
 
 ---
 
-## **Brownfield-Ansatz**
+## Brownfield-Ansatz
 Der Brownfield-Ansatz bezeichnet die Umstellung eines bestehenden SAP-Systems auf ein neues SAP-System (z. B. SAP S/4HANA) durch Migration. Im Gegensatz zum Greenfield-Ansatz werden hier bestehende Systeme, Daten und Prozesse weitgehend übernommen.
 
-### **Merkmale:**
+### Merkmale:
 - **Bestandserhaltung**: Nutzung vorhandener Systeme und Prozesse.
 - **Effizienz**: Schnellere Implementierung durch Nutzung bestehender Infrastruktur.
 - **Aufwand**: Geringerer Aufwand im Vergleich zum Greenfield-Ansatz.
@@ -148,10 +148,10 @@ Der Brownfield-Ansatz bezeichnet die Umstellung eines bestehenden SAP-Systems au
 
 ---
 
-## **Bluefield-Ansatz**
+## Bluefield-Ansatz
 Der Bluefield-Ansatz stellt einen hybriden Ansatz zwischen Greenfield und Brownfield dar. Dabei wird eine selektive Daten- und Prozessmigration durchgeführt, wodurch sowohl Altlasten eliminiert als auch bestehende Systeme genutzt werden können.
 
-### **Merkmale:**
+### Merkmale:
 - **Selektivität**: Unternehmen können entscheiden, welche Daten und Prozesse übernommen oder neu gestaltet werden.
 - **Flexibilität und Kontrolle**: Optimierung bestehender Prozesse ohne vollständige Neuimplementierung.
 - **Aufwand**: Zwischen Greenfield und Brownfield.
@@ -173,8 +173,6 @@ Der Bluefield-Ansatz stellt einen hybriden Ansatz zwischen Greenfield und Brownf
 | **Geeignet für**   | Unternehmen mit radikalem Neugestaltungsbedarf | Unternehmen mit bewährten Prozessen | Unternehmen mit gemischten Anforderungen |
 
 ---
-
-
 
 
 Siehe auch den folgenden SAP Leitpfaden für weitere S/4HANA und Cloud-Themengebiete [Mapping your journey to SAP S/4HANA Cloud Private Edition - A practical guide for senior IT leadership](https://d.dam.sap.com/x/HvXc6b7/94115_92460_enUS.pdf?rc=19&inline=true)
@@ -199,7 +197,7 @@ Hier wären ein paar Hilfestellungen für SAP Kunden, welche mittelfristig noch 
   - **BAdIs (Business Add-Ins)**: Flexible Erweiterungspunkte im SAP-Standard.  
   - **Enhancements (Erweiterungen)**: Technologien wie Enhancement Framework und Switch Framework für gezielte Änderungen.  
 
-## **“NIEMALS SAP CODE KOPIEREN”**  
+## “NIEMALS SAP CODE KOPIEREN”  
 - **SAP-Help-Grundsatz**:  
   Das Kopieren von SAP-Standardcode birgt das Risiko von Inkonsistenzen und erschwert sowohl die Nachvollziehbarkeit als auch die Wartung. Änderungen sollten ausschließlich über die bereitgestellten SAP-Erweiterungsoptionen wie User-Exits, BAdIs oder Enhancements Points vorgenommen werden.  
 - **Ausnahmeregelung**:  
@@ -228,11 +226,10 @@ Modifikationen dürfen nur nach gründlicher Abwägung vorgenommen werden. Die G
 ## Einführung  
 Wenn Sie den SAP-Standard verändern möchten, beachten Sie die folgenden Regeln und Best Practices. Die Einhaltung dieser Richtlinien sorgt für wartbaren, nachvollziehbaren und zukunftssicheren Code, der SAP-Upgrades und Patches standhält.  
 
----
 
-## **DOs and DON'Ts bei Modifikationen**  
+## DOs and DON'Ts bei Modifikationen
 
-### **DO**  
+### DO 
 - **SAP-Code öffnen und einen Enhancement-Spot anlegen**:  
   - Legen Sie in der Modifikation einen **Enhancement-Spot** an.  
   - Nutzen Sie alle Vorteile der Enhancements, z. B. die Trennung von Standard- und kundeneigenem Code, sowie die Speicherung im **Z-Paket**.  
@@ -245,7 +242,7 @@ Wenn Sie den SAP-Standard verändern möchten, beachten Sie die folgenden Regeln
     - Auswirkungen auf zukünftige Updates.  
     - Getestete Szenarien.  
 
-### **DON'T**  
+### DON'T
 - **Geschäftsprozesslogik direkt in der Modifikation schreiben**:  
   - Derartige Änderungen erschweren zukünftige Wartungen und Tests.  
 - **Kopieren von SAP-Standardcode**:  
@@ -258,8 +255,11 @@ Wenn Sie den SAP-Standard verändern möchten, beachten Sie die folgenden Regeln
 Clean ABAP stellt die Anapssung der Prinzipien aus dem Buch von Robert C. Martin auf ABAP dar. Das offizielle, im Repository der SAP freigegebene Dokument wurde von Florian Hoffmann und Klaus Häuptle 2019 auf den Weg gebracht und wird seit dem als open source durch die ABAP Community erweitert. https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md
 
 Beispielregel mit Erläuterung:
-![Clean ABAP Excample Rule Prefer inline to up-front declarations](image.png)
 
+![Clean ABAP Excample Rule Prefer inline to up-front declarations](./img/image-10.png)
+
+Clean ABAP Excample Rule Prefer inline to up-front declarations
+{: .img-caption}
 
 Der Gedanken von Clean ABAP ist, dass es nicht eine Version von Clean ABAP gibt, mit einem festen unveränderlichen Set an Regeln. 
 Teams sind eingeladen, die Regeln anzupassen und veränden so wie sie für ihren spezifischen Fall am besten passen. 
