@@ -91,4 +91,4 @@ Die beiden Szenarien der Kopplung sind:
 
 ## Make the Core clean
 
-Haben Sie den Brownfield Ansatz gewählt, ihr System auf S/4HANA migriert und entscheiden sich für Clean Core. Dann empfiehlt sich die schrittweise Migration Ihrer Anwendungen. Dabei lohnen sich vor allem die häufig genutzten Anwendungen, um so einen schnellen Benefit von SAP Fiori zu erhalten. So können Sie Anwendung für Anwendung prüfen, welche Sie modernisieren wollen oder vielleicht sogar stilllegen können, da sie nicht mehr benötigt werden. Ein erster Überblick mit einer Invetarisierung macht daher Sinn.
+Haben Sie den Brownfield Ansatz gewählt, ihr System auf S/4HANA migriert und entscheiden sich für Clean Core, dann empfiehlt sich die schrittweise Migration Ihrer Anwendungen. Dabei lohnen sich vor allem die häufig genutzten Anwendungen, um so einen schnellen Benefit von SAP Fiori zu erhalten. So können Sie Anwendung für Anwendung prüfen, welche Sie modernisieren wollen oder vielleicht sogar stilllegen können, da sie nicht mehr benötigt werden. Ein erster Überblick mit einer Invetarisierung macht daher Sinn.
