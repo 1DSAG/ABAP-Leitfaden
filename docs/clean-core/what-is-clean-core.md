@@ -160,7 +160,7 @@ Der Bluefield-Ansatz stellt einen hybriden Ansatz zwischen Greenfield und Brownf
 
 ---
 
-## **Abgrenzung im Überblick**
+## Abgrenzung im Überblick
 
 | Merkmal           | **Greenfield**                 | **Brownfield**                 | **Bluefield**                  |
 |--------------------|--------------------------------|--------------------------------|--------------------------------|
