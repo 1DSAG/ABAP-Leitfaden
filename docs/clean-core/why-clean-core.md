@@ -55,18 +55,14 @@ Die Nutzung von SAP-Standard-Prozessen und Erweiterungsmöglichkeiten bietet Unt
   - SAP-Standardprozesse und Schnittstellen vereinfachen die Integration von Drittanbieter-Lösungen, wodurch Unternehmen ihre IT-Landschaft schnell erweitern können.  
 
 
-## Nachteile des Clean Core Ansatzes in der Entwicklung
+## Nachteile des Clean Core Ansatzes
 
+### Wirtschaftlichkeit
 
+Ist die Umstellung auf Clean Core für Ihr Unternehmen überhaupt wirtschaftlich? Teilweise sind Lösungen über Jahrzehnte hinweg entwickelt worden und bringen einen hohen Mehrwert im Unternehmen. Eine Umstellung zu Clean Core bedeutet eine hohe Investition und teilweise einen kompletten Neubau dieser Lösungen.
 
-... Notizen
+### Know How
 
-### Wirtschaftlichkeit? 
-
-Ist eine Studie vorhanden? Gartner?
-
-### Vor und Nachteile 
-
-SAP vs. Non SAP Technologie
+Besitzen Sie bereits im Unternehmen das nötige Know How für die Transformation? Die Entwicklung, aber auch die Beratung, benötigen für den Umstieg auf Clean Core eine Menge an neuem Wissen für aktuelle Technologien und Best Practices auf einem S/4 HANA System.
 
 
