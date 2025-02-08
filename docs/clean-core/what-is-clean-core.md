@@ -12,7 +12,6 @@ nav_order: 1
 1. TOC
 {:toc}
 
-## Was ist Clean Core
 
 Clean Core ist ein Konzept und für einige SAP-Kunden eine Philosophie - Clean Core wird unterschiedlich verstanden, interpretiert und gelebt. Ein gemeinsames Verständnis der DSAG-Community wäre folgendes:
 
@@ -89,27 +88,37 @@ Laut SAP geht es bei Clean Core vor allem, dass die Kunden sich die Zukunft nich
 Die Clean Core Strategie ist für viele Bestandskunden eine Philosophie, bis interne Richtlinien die Nutzungen der Nachfolge-Technologien regeln. Basierend auf den Richtlinien werden Entwickler organisatorisch ausgerichtet, und geschult. Ein Gremium um die „Clean Core Governance“ einzuhalten ist Pflicht, mit dem Mandat die Richtlinien zu pflegen, zu erweitern und zu forcieren. Research und Development sollte häufig betrieben werden, um die Mehrwerte durch SAP-Service herauszuarbeiten.
 
 ### Zielgruppe
-Im Wesentlichen sind im DSAG-Netzwerk zwei große Kundengruppen sichtbar: Die erste Gruppe entscheidet sich für eine große Investition in ihre SAP-Landschaft und arbeitet mit SAP und ihren Partnern zusammen, um auf einen Clean Core im Sinne der SAP-Definition zu gehen. Die andere Gruppe entscheidet sich für einen skalierten Ansatz, bei dem die Investitionen über mehrere Jahre verteilt werden. Hier einige Beispiele für mögliche SAP Kunden:
+Im Wesentlichen sind im DSAG-Netzwerk zwei große Kundengruppen sichtbar: Die erste Gruppe entscheidet sich für eine große Investition in ihre SAP-Landschaft und arbeitet mit SAP und ihren Partnern zusammen, um auf einen Clean Core im Sinne der SAP-Definition zu gehen. Die andere Gruppe entscheidet sich für einen skalierten Ansatz, bei dem die Investitionen über mehrere Jahre verteilt werden. 
 
-* Szenario eins: Neue SAP-Kunden, die auf S/4 HANA migrieren. Hier sollte der Greenfield-Ansatz und das strikte Clean Core laut SAP angewendet werden.
-* Szenario zwei - Brownfield to Bluefield: Bestandskunden von SAP, die seit Jahrzehnten mit SAP arbeiten und auf S/4 HANA migrieren. Je nach Investitionsbereitschaft kann schrittweise der Clean Core definiert und die Neuentwicklung konform dazu gehalten werden. Bestehende Kundenerweiterungen werden in Großprojekten auf eine Clean Core konforme Entwicklung umgestellt.
-* Szenario drei - Brownfield to Greenfield: Bestands SAP Kunden, welche seit Jahrzenten mit SAP zusammenarbeiten und auf S/4 HANA migrieren. Hier kann eine Abbildung der Kundenerweiterungen mit sehr hohem Investitionsvolumen erfolgen.
-* Szenario vier - Brownfield im S/4 HANA: Ist identisch mit Szenario zwei.
+Hier einige Beispiele für mögliche SAP Kunden:
+
+1. Neue SAP-Kunden, die auf S/4 HANA migrieren. Hier sollte der Greenfield-Ansatz und das strikte Clean Core laut SAP angewendet werden.
+2. Brownfield to Bluefield: Bestandskunden von SAP, die seit Jahrzehnten mit SAP arbeiten und auf S/4 HANA migrieren. Je nach Investitionsbereitschaft kann schrittweise der Clean Core definiert und die Neuentwicklung konform dazu gehalten werden. Bestehende Kundenerweiterungen werden in Großprojekten auf eine Clean Core konforme Entwicklung umgestellt.
+3. Brownfield to Greenfield: Bestands SAP Kunden, welche seit Jahrzenten mit SAP zusammenarbeiten und auf S/4 HANA migrieren. Hier kann eine Abbildung der Kundenerweiterungen mit sehr hohem Investitionsvolumen erfolgen.
+4. Brownfield im S/4 HANA: Ist identisch mit Szenario zwei.
 
 ### Private/Public Cloud/BTP
 Die digitale Transformation eines jeden SAP-Kunden hängt von der im Unternehmen vorhandenen Expertise, den Partnern, den Investitionsmöglichkeiten und vielen weiteren Faktoren ab. Das DSAG-Netzwerk kann empfehlen, beim Hersteller nachzufragen und zu evaluieren, für welche SAP-Systeme eine Transformation in die Cloud möglich ist. Die Analysetools und die Beratungsbereitschaft der Firma SAP sind sehr hoch. Danach sind die Schritte vielfältig. Nur die Frage muss irgendwann beantwortet werden: Soll das Unternehmen mit seinen SAP-Systemen in die Public Cloud? Hier einige Tipps zu Cloud-Szenarien.
 
-### Zielbild - Reise mit SAP, der Weg in die Public Cloud?
 
-## Unterschiede zwischen Public und Private Cloud:
+## Unterschiede zwischen den Modellen
 
-### 1. Public Cloud
-- Erfordert Clean Core: Ein Redesign der Prozesse und eine Neugestaltung des Custom Codings sind unabdingbar. 
-- Definition: Die SAP S/4HANA Cloud, public edition (GROW) ist per Definition "clean". 
+### Public Cloud
 
-### 2. Private Cloud
-- Flexiblere Anforderungen: Keine strikte Clean Core-Entwicklung erforderlich.
-- Fokus: Vereinfachung der Industry Solutions-Entwicklungen, ohne alle Prozesse vollständig neu zu gestalten.
+Die SAP S/4HANA Cloud, public edition (GROW) ist per Definition "clean". Starten Sie als Kunde mit GROW oder migrieren Sie ihr System auf ein S/4HANA Public Cloud System, dann können Sie nur noch Clean Core entwickeln und haben keine Möglichkeit auf nicht freigegebene Objekte im Standard zurückzugreifen.
+
+Möchten Sie mit bestehendem Kundencode auf ein Public Cloud System, muss dieser ABAP-Cloud-fähig sein und ihr Prozesse müssen sich mit dem Standard der SAP abbilden lassen.
+
+
+### Private Cloud
+
+Die SAP S/4HANA Cloud, private edition (RISE) ist ein durch SAP betriebenes On-Premise System. Hier müssen Sie kein striktes Clean Core einhalten und haben alle Freiheiten der klassischen On-Premise Entwicklung. Der Fokus liegt hier auf der Vereinfachung der Industry Solutions-Entwicklungen, ohne alle Prozesse vollständig neu zu gestalten. Allerdings kann es sein, dass nicht mehr alle Modifikationen am System durch SAP erlaubt werden.
+
+
+### On-Premise
+
+Sie möchten Ihr System im eigenen Rechenzentrum oder durch einen Dienstleister betreiben lassen, dann sind Sie im klassischen On-Premise Umfeld. Für die Upgrades sind Sie verantwortlich und haben alle Freiheiten bei der Modifikation Ihres Systems.
+
 
 ## Anwendbarkeit von Clean Core:
 - Relevante Szenarien:
@@ -118,47 +127,43 @@ Die digitale Transformation eines jeden SAP-Kunden hängt von der im Unternehmen
 - Public Cloud ist clean by default:
   - Die SAP S/4HANA Cloud, public edition (GROW) ist von Grund auf auf Clean-Core-Prinzipien aufgebaut.
 
-### S/4 HANA Transformation
 
-# Abgrenzung von Green-, Brown- und Bluefield für SAP-Transformationen
+## S/4 HANA Transformation
 
 Diese Abgrenzung hilft bei der Entscheidungsfindung, welcher Ansatz am besten zu den Zielen, Ressourcen und Gegebenheiten eines Unternehmens passt.
 
-## Greenfield-Ansatz
+### Greenfield-Ansatz
 Der Greenfield-Ansatz beschreibt eine vollständige Neuimplementierung eines SAP-Systems. Dabei wird das bestehende System nicht migriert, sondern ein komplett neues System auf der „grünen Wiese“ aufgebaut.
 
-### Merkmale:
-- **Neustart**: Vollständige Neuimplementierung ohne Altlasten.
-- **Flexibilität**: Möglichkeit, Prozesse, Strukturen und Architekturen komplett neu zu gestalten.
-- **Aufwand**: Erfordert intensive Vorbereitungen, Schulungen und hohe Investitionen.
-- **Vorteil**: Ideale Lösung für Unternehmen, die ihre Geschäftsprozesse grundlegend überarbeiten und optimieren möchten.
-- **Risiko**: Höherer Implementierungsaufwand, längere Projektlaufzeiten.
+Merkmale:
+- Neustart: Vollständige Neuimplementierung ohne Altlasten.
+- Flexibilität: Möglichkeit, Prozesse, Strukturen und Architekturen komplett neu zu gestalten.
+- Aufwand: Erfordert intensive Vorbereitungen, Schulungen und hohe Investitionen.
+- Vorteil: Ideale Lösung für Unternehmen, die ihre Geschäftsprozesse grundlegend überarbeiten und optimieren möchten.
+- Risiko: Höherer Implementierungsaufwand, längere Projektlaufzeiten.
 
----
 
-## Brownfield-Ansatz
+### Brownfield-Ansatz
 Der Brownfield-Ansatz bezeichnet die Umstellung eines bestehenden SAP-Systems auf ein neues SAP-System (z. B. SAP S/4HANA) durch Migration. Im Gegensatz zum Greenfield-Ansatz werden hier bestehende Systeme, Daten und Prozesse weitgehend übernommen.
 
-### Merkmale:
-- **Bestandserhaltung**: Nutzung vorhandener Systeme und Prozesse.
-- **Effizienz**: Schnellere Implementierung durch Nutzung bestehender Infrastruktur.
-- **Aufwand**: Geringerer Aufwand im Vergleich zum Greenfield-Ansatz.
-- **Vorteil**: Minimale Unterbrechung des Geschäftsbetriebs; geringere Risiken.
-- **Risiko**: Übernahme von Altlasten (z. B. veraltete Prozesse oder schlechte Datenqualität).
+Merkmale:
+- Bestandserhaltung: Nutzung vorhandener Systeme und Prozesse.
+- Effizienz: Schnellere Implementierung durch Nutzung bestehender Infrastruktur.
+- Aufwand: Geringerer Aufwand im Vergleich zum Greenfield-Ansatz.
+- Vorteil: Minimale Unterbrechung des Geschäftsbetriebs; geringere Risiken.
+- Risiko: Übernahme von Altlasten (z. B. veraltete Prozesse oder schlechte Datenqualität).
 
----
 
-## Bluefield-Ansatz
+### Bluefield-Ansatz
 Der Bluefield-Ansatz stellt einen hybriden Ansatz zwischen Greenfield und Brownfield dar. Dabei wird eine selektive Daten- und Prozessmigration durchgeführt, wodurch sowohl Altlasten eliminiert als auch bestehende Systeme genutzt werden können.
 
-### Merkmale:
-- **Selektivität**: Unternehmen können entscheiden, welche Daten und Prozesse übernommen oder neu gestaltet werden.
-- **Flexibilität und Kontrolle**: Optimierung bestehender Prozesse ohne vollständige Neuimplementierung.
-- **Aufwand**: Zwischen Greenfield und Brownfield.
-- **Vorteil**: Optimale Balance zwischen Innovation und Effizienz.
-- **Risiko**: Komplexität in der Planung und Durchführung, da sowohl alte als auch neue Komponenten integriert werden müssen.
+Merkmale:
+- Selektivität: Unternehmen können entscheiden, welche Daten und Prozesse übernommen oder neu gestaltet werden.
+- Flexibilität und Kontrolle: Optimierung bestehender Prozesse ohne vollständige Neuimplementierung.
+- Aufwand: Zwischen Greenfield und Brownfield.
+- Vorteil: Optimale Balance zwischen Innovation und Effizienz.
+- Risiko: Komplexität in der Planung und Durchführung, da sowohl alte als auch neue Komponenten integriert werden müssen.
 
----
 
 ## Abgrenzung im Überblick
 
@@ -172,15 +177,11 @@ Der Bluefield-Ansatz stellt einen hybriden Ansatz zwischen Greenfield und Brownf
 | **Risiken**        | Lange Implementierungszeit    | Übernahme von Altlasten        | Hohe Komplexität               |
 | **Geeignet für**   | Unternehmen mit radikalem Neugestaltungsbedarf | Unternehmen mit bewährten Prozessen | Unternehmen mit gemischten Anforderungen |
 
----
-
 
 Siehe auch den folgenden SAP Leitpfaden für weitere S/4HANA und Cloud-Themengebiete [Mapping your journey to SAP S/4HANA Cloud Private Edition - A practical guide for senior IT leadership](https://d.dam.sap.com/x/HvXc6b7/94115_92460_enUS.pdf?rc=19&inline=true)
 
 
 ## Modifikationen in SAP Code
-
-# Richtlinien für den Umgang mit Modifikationen in ABAP-Entwicklung  
 
 Hier wären ein paar Hilfestellungen für SAP Kunden, welche mittelfristig noch nicht in die Public Cloud migrieren können.
 
