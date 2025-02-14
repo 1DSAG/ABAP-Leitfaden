@@ -1,31 +1,27 @@
 ---
 layout: page
-title: Architektur und Design moderner ABAP Entwicklungen
+title: Architektur und Strukturierung in der ABAP Entwicklung
 permalink: /abap/architecture_and_design/
 parent: Moderne ABAP Entwicklung
 nav_order: 2
 ---
 
 {: .no_toc}
-# Architektur und Design moderner ABAP Entwicklung
+# Architektur und Strukturierung in der ABAP Entwicklung
 
 1. TOC
 {:toc}
 
->**Empfehlungen**  
-- Erstellen Sie für Ihre Eigenentwicklungen Hauptpakete die sich an architektonischen Erfordernissen (Single Responsibility) orientieren 
-- Kapseln Sie das Paket  
-- Gruppieren und Strukturieren Sie das Paket mit Unterpaketen anhand den Zuständigkeiten und nicht nach Objekttyp  
--  Machen Sie während des Entwicklungsprozesses regelmässig Paketchecks um Abhängigkeiten zu erkennen  
-- Entfernen Sie nicht sichtbare Objekte durch Ersatz von sichtbaren Objekten oder Eigendefinition wenn möglich  
-- Nehmen Sie gewünschte Abhängigkeiten in den Verwendungsnachweis auf. 
-{: .highlight}
 
 # Architektur und Struktur als Fundament und Rahmen einer guten SAP Anwendung  
 
- Viele SAP ERP Systeme wurden über viele Jahre mit Eigenentwicklungen angereichert. Die Entwicklung begann zu Zeiten als es in ABAP das Paketkonzept in heutiger Ausprägung noch nicht gab. Vielen ABAP-Entwicklern ist das Konzept von Softwarepaketen, wie sie in anderen Programmiersprachen bestens bekannt sind, nicht vertraut. So finden sich in vielen ERP Systemen Paketstrukturen, die sehr grob strukturiert sind und sich nicht an gängigen Softwarearchitekturprinzipien orientieren. Z.B. können Pakete Modul oder Entwicklungsteams strukturiert sein.
+Viele SAP ERP Systeme wurden über viele Jahre mit Eigenentwicklungen angereichert. Diese SAP Anwendungen wurden über die Jahre immer umfangreicher und komplexer. Erweiterungen und Ergänzungen sind oft aufwändig, zeitintensiv und müssen anschliessend umfassend getestet werden. Neue Fehler treten in der Produktion auf und sollten mehrere Anforderungen gleichzeitig umgesetzt werden, wird es noch komplizierter. Eine Situation, die man in vielen Unternehmen vorfinden kann.
 
-Der Nutzen der Strukturierung der Software durch Pakete bei SAP Anwendungen ist im ABAP Umfeld nicht hinreichend bekannt oder bewusst und wenn eine Entwicklung unter Zeitdruck erstellt werden muss, wird die Frage, wie die Anwendung strukturiert werden soll und somit wie die Pakete erstellt werden oft nicht gestellt.    
+Die Entwicklung begann zu Zeiten als es in ABAP das Paketkonzept in heutiger Ausprägung noch nicht gab. Vielen ABAP-Entwicklern ist das Konzept von Softwarepaketen, wie sie in anderen Programmiersprachen bestens bekannt sind, nicht vertraut. So finden sich in vielen ERP Systemen Paketstrukturen, die sehr grob strukturiert sind und sich nicht an gängigen Softwarearchitekturprinzipien orientieren. Z.B. können Pakete Modulweise oder pro Entwicklungsteam vorhanden sein. Innerhalb dieser Strukturen kann es mitunter unübersichtlich zugehen.
+
+Software wird in der Komplexität sehr gern unterschätzt und nur wer von Anfang an sich Gedanken über eine gute Softwarearchitektur gemacht hat und die Anwendung dauernd auch technisch und strukturell auf dem aktuellen Stand hält, wird mit der oben beschriebenen Problematik weniger konfrontiert sein. Die Nutzung des SAP Paketkonzepts ist ein wichtiges Werkzeug, um Software in SAP zu strukturieren und die Grundlagen für eine atmungsaktive Anwendungslandschaft zu sorgen.  
+
+Der Nutzen der Strukturierung der Software durch Pakete bei SAP Anwendungen ist im ABAP Umfeld auch heute nicht hinreichend bekannt oder bewusst und wenn eine Entwicklung unter Zeitdruck erstellt werden muss, wird die Frage, wie die Anwendung strukturiert werden soll und somit wie die Pakete erstellt werden oft nicht gestellt.    
 Allerdings ist es bei der heutigen Anwendungskomplexität essentiell sich zuallererst Gedanken zu machen, welche Funktionen und Zuständigkeiten eine zu erstellende Anwendung haben soll, wie die Verantwortlichkeiten *geregelt* sind und wie sich das letztendlich im Anwendungsdesign widerspiegelt.  
 Daher ist die Frage nach dem Paket und der Strukturierung der Unterpakete der erste wichtige Schritt, die Basis für eine saubere und zukunftsfähige Anwendungsarchitektur zu legen. 
 Allerdings ist es bei der heutigen Anwendungskomplexität essentiell sich zuerst Gedanken zu machen welche Funktionen und Zuständigkeiten eine zu erstellende Anwendung haben soll, wie die Verantwortlichkeiten *geregelt* sind und wie sich das letztendlich im Anwendungsdesign widerspiegelt.  
@@ -37,18 +33,28 @@ Daher ist die Frage nach dem Paket und der Strukturierung der Unterpakete der er
 SAP hat in ABAP wie in anderen Programmiersprachen wie JAVA üblich, auch in ABAP ein Paketkonzept implementiert, mit dem es Möglich ist, die Software auf verschiedenen Ebenen zu strukturieren. Der Vorgänger der Pakete waren übrigens die Entwicklungsklassen. Mit der Einführung des Paketkonzepts ergeben sich allerdings deutlich erweiterte Möglichkeiten der Softwarestrukturierung, die zwar nicht direkt auf die Funktionalität an sich wirken, aber spätestens bei der Wartung, Pflege und Erweiterung der Eigenentwicklung deutliche Vorteile mit sich bringen. Da es seitens SAP eine ausführliche und gut verständliche Dokumentation des Paketkonzeptes gibt, werden wir hier nicht auf das Paketkonzept im Detail eingehen, sondern Empfehlungen geben wie bei Erstellung von Eigententwicklungen, im Weiteren "Software" genannt, vorgegangen werden kann, um Pakete in ABAP sinnvoll und nutzbringend einzusetzen. 
 [LINK SAP Doku Pakete]
 
-## Grundlagen und Begriffserklärungen zum Paketkonzepts
-Ein **Paket** ist in erster Linie ein Mittel um Software zu strukturieren. Mit einem Paket werden Softwareartefakte zusammengefasst, die für einen bestimmten Zweck zuständig sind. Pakete können (und sollten auch) gekapselt sein. Das bedeutet, dass ein Objekt eines Paketes ein Objekt eines anderen Pakets nicht verwenden kann bzw. von einem Objekt eines anderen Pakets nicht verwendet werden kann.
-Details hierzu erfolgen im weitern Abschnitt (technische bzw. gewünschte Verwendung).
+>**Empfehlungen**  
+- ***Nutzen Sie das Paketkonzept:***
++ Erstellen Sie für Ihre Eigenentwicklungen Hauptpakete die sich an architektonischen Erfordernissen (Single Responsibility) orientieren 
+- Kapseln Sie das Paket  
+- Gruppieren und Strukturieren Sie das Paket mit Unterpaketen anhand den Zuständigkeiten und nicht nach Objekttyp  
+-  Machen Sie während des Entwicklungsprozesses regelmässig Paketchecks um Abhängigkeiten zu erkennen  
+- Entfernen Sie nicht sichtbare Objekte durch Ersatz von sichtbaren Objekten oder Eigendefinition wenn möglich  
+- Nehmen Sie gewünschte Abhängigkeiten in den Verwendungsnachweis auf. 
+{: .highlight}
 
-Es gibt die sogenannten **Hauptpakete**, die zur Strukturierung der zu erstellenden Softwarekompnente dienen, diese können selbst nur Unterpakete aber keine Entwicklungsobjekte enthalten. Und es gibt **Unterpakete**, die einem Hauptpaket zugeordnet sind. Die Unterpakete dienen der internen Strukturierung der Artefakte des Hauptpaketes.  
+## Grundlagen und Begriffserklärungen zum Paketkonzepts
+Ein **Paket** ist in erster Linie ein Mittel um Software zu strukturieren. In einem Paket werden Softwareartefakte zusammengefasst, die für einen bestimmten Zweck zuständig sind. Pakete können (und sollten auch) gekapselt sein. Das bedeutet, dass ein Objekt eines Paketes ein Objekt eines anderen Pakets nicht verwenden kann bzw. von einem Objekt eines anderen Pakets nicht verwendet werden kann, sofern diese nicht über eine Paketschnittstelle öffentlich gemacht werden und beim Verwender im Verwendungsnachweis deklariert werden.  
+Um unsere Empfehlung für Sie umsetzbar zu machen werden im Folgenden ein paar Grundlagen genannt um dann den  Nutzen und die Vorteilen zu erläutern.
+
+Im SAP Paketkonzept gibt es die sogenannten **Hauptpakete**, die zur Strukturierung der zu erstellenden Softwarekompnente dienen, diese können selbst nur Unterpakete aber keine Entwicklungsobjekte enthalten. Und es gibt **Unterpakete**, die einem Hauptpaket zugeordnet sind. Die Unterpakete dienen der internen Strukturierung der Artefakte des Hauptpaketes.  
 In SAP gibt es dazu noch die **Strukturpakete**, die übergeordnet zu den Hauptpaketen sind und eine größere Organisation von Hauptpaketen hin zu Applikationen (-Komponenten?) ermöglicht.  
-In Sinne der Komplexitätsreduzierung wird allerdings hier nicht weiter eingegangen, sondern ist in der SAP Dokumentation beschrieben. Strukturpakete einzusetzen, kann sinnvoll sein, wenn im Unternehmen das Paketkonzept umfänmglich mit Haupt- und Unterpaketen bereits angewendet wird.  
-Mit der Strukturierung von Softwareobjekten mittels Pakete ergeben sich bereits Vorteile durch verbesserte Übersichtlichkeit und Ordnung bezüglich der erstellten Artefakte. Der Vorteil von Paketen ergibt sich aber erst durch die Funktionalität von **Paketschnittstellen**.  
+In Sinne der Komplexitätsreduzierung wird allerdings auf die Strukturpakete nicht weiter eingegangen, sondern Details finden Sie hierzu in der SAP Dokumentation. Strukturpakete einzusetzen, kann sinnvoll sein, wenn im Unternehmen das Paketkonzept bereits umfänglich mit Haupt- und Unterpaketen angewendet wird.  
+Mit der Strukturierung von Softwareobjekten mittels Paketen ergeben sich bereits Vorteile durch verbesserte Übersichtlichkeit und Ordnung bezüglich der erstellten Artefakte. Der Vorteil von Paketen ergibt sich aber erst durch die Funktionalität von **Paketschnittstellen**.  
 Eine Paketschnittstelle definiert, welche Artefakte eines Paketes (Haupt- oder Unterpaket) nach außen sichtbar sind.
 
 Als letzten hier zu erklärendem Begriff kommt die **Verwendungserklärung**, die in einem Paket gepflegt wird.  
-Verwendet ein Paket A ein Artefakt aus einem Paket B, wird in der Verwendungserklärung des Paketes A, das Paket B aufgenommen. Somit ist auf Paketebene sofort ersichtlich, welche Abhängigkeiten das Paket A besitzt. Dazu ist die Verwendungserklärung auch im Verwendungsnachweis auswertbar. Somit ist es möglich herauszufinden, welche Pakete Abhängigkeiten zu dem Paket haben. 
+Verwendet ein Paket A ein Artefakt aus einem Paket B, wird in der Verwendungserklärung des Paketes A, das Paket B aufgenommen. Somit ist auf Paketebene sofort ersichtlich, welche Abhängigkeiten das Paket A besitzt (nämlich zu Paket B). Dazu ist die Verwendungserklärung auch im Verwendungsnachweis auswertbar. Somit ist es möglich herauszufinden, welche Pakete Abhängigkeiten zu dem Paket haben. 
 
 ## Anwendung des Paketkonzepts in der Praxis
 
@@ -72,14 +78,14 @@ Die Unterteilung des Hauptpaketes in Unterpakete sollte nicht nach Objekttyp erf
 * **.._TEST** - Objekte für Unit Tests und Testhelper wie auch Mock-Objekte
 * **.._HLP**  - Unterpaket für Hilfobjekte oder Funktionen die in mehreren Unterpaketen verwendet werden.
 
-### Szenario SAP BADI Implementierung / kleine Erweiterungen.
+### Einsatz von Paketen bei der Implementierung von BAdIs und bei kleinen Erweiterungen.
 Die oben beschriebene Struktur ist sinnvoll für größere Entwicklungen bei denen zahlreiche Objekte erstellt werden und schafft Ordnung und Übersicht. Die gleiche Vorgehensweise in reduzierter Form macht aber auch für kleine Erweiterungen wie BAdI-Implementierungen durchaus Sinn. Hierbei erstellt man ein Hauptpaket als Entsprechung des Paketes des SAP Enhancement Spots, orientiert sich an der Namensgebung und vergibt die selbe Applikationskomponente.  
 Die Unterpakete kann man hier entsprechend den Teilbereichen der einzelnen BADIs strukturieren, je nach Umfang der einzelnen BADIs des Enhancement Spots. 
 Für Funktionen, die in mehreren BADIs wiederverwendet werden, können wie oben beschrieben, Objekte in Helper und Core Unterpaketen erstellt und in den BADIs entsprechend aufgerufen werden.
 
 Manchmal sind Entwicklungen sehr kleine Objekte wie Hilfsreports, oder einzelne Klassen die mehrfach über Pakete verteilte Funktionen bereitstellen. Hierfür jeweils einzelne Hauptpakete mit Unterpaketen bereitzustellen wäre überdimensioniert. Für diesen Fall empfehlen wir die Anlage von Hauptpaketen, die Funktionsorientiert, gemeinsame Funktionen bereitstellen (z.B. xy_UTILS). DIe Unterpakete können dann weiter die einzelnen Bereiche gliedern und zentrale Funktionen werden im Core Unterpaket gesammelt.
 
-Eine Erstellung eines recht globalen Sammlerpakets (z.B. auf Basis Modulbebene) empfehlen wir ausdrücklich nicht, da dies zu Problemen mit der Übersichtlichkeit und zu ungewünschten Abhängigkeiten führen kann. Das Risiko besteht dass irgendwann jede kleine Klasse in diesem Sammler landet und grundsätzliche architektonische Überlegungen nicht angestellt werden.
+Eine Erstellung eines recht globalen Sammlerpakets (z.B. auf Basis Modulebene) empfehlen wir ausdrücklich nicht, da dies zu Problemen mit der Übersichtlichkeit und zu ungewünschten Abhängigkeiten führen kann. Das Risiko besteht dass irgendwann jede kleine Klasse in diesem Sammler landet und grundsätzliche architektonische Überlegungen nicht angestellt werden.
 
 ### Paketschnittstellen
 Mit den bisher genannten Ausführungen sind zwar unsere Entwicklungen besser geordnet, wir bekommen eine bessere Übersicht und durch den Zwang der Strukturierung werden automatisch architektonische Überlegungen der Entwicklung vorangestellt.  
@@ -110,7 +116,7 @@ Bei der Gestaltung der Pakete sollte auch immer der Blick auf die Entwicklungen 
 
 Ein anderer Anwendungsfall wäre z.B. die selbe Funktionalität für verschiedene Releases bereitzustellen, wobei die Kernfunktion in einem Paket und die Differenzierungen, die sich durch das Release (ERP / S/4HANA) ergeben, in unterschiedlichen Hauptpaketen implementiert sind.
 
-# Vorteile und Nutzen
+# Vorteile und Nutzen durch Nutzung des Paketkonzeptes
 NAch den hier beschriebenen Ausführungen wird deutlich, dass die Umsetzung des Paketkonzepts einiges an Überlegung und Aufwand bedarf. Dieser Aufwand zahlt sich aber durch zahlreiche Vorteile aus, die hier im Folgenden aufgeführt werden:
 
 ## Eindeutig deklarierte Abhängigkeiten
@@ -126,11 +132,13 @@ Soll Software Systemübergreifend transportiert werdem, sollte das Erstellen der
 ## Flexibilität
 Ist eine Softwarekomponente gut strukturiert, lassen sich Ergänzungen, Änderungen, Erweiterungen und Korrekturen besser durchführen als in dem Fall wenn eine Anwendung sich aus lose zusammengestellten und in einem großen ungeordneten Paket befindlichen Objekten besteht, in dem andere Objekte für andere Funktionen enthalten sind. Somit ergibt sich bei guter Strukturierung auch eine erhöhte Flexibilität. Insbesondere wenn Funktionalitäten im Laufe des Lebenszyklus wachsen und der Umfang wächst, kann es erforderlich sein, die Struktur anzupassen und ggf. Funktionalitäten in globalere Pakete auszulagern um Wiederverwendbarkeit zu erlangen oder im umgekehrten Fall, mehrere kleinere Anwendungen in ein Hauptpaket zusammenzufassen.  ...
 
+# Weitere Aspekte
+Weitere Themen die hier behandelt werden können sind aber für den Anfang den Umfang des Leitfadens übersteigen:
++ Utility Pakete und Komponenten die nirgends reinpassen  - was tun
++ Vermeidung statischer Abhängigkeiten - verschiedene Lösungsansätze
++ Größe von Paketen - zu klein oder zu groß - beides ungünstig
++ Paket Refactoring
++ brauch ich das alles wenn ich eine klassische 3-System Linie habe ?
 
-# Testbarkeit als Designprinzip 
-Im klassischen ABAP-Umfeld besteht die Vorgehensweise klassischerweise darin, dass zeitnah eine Entwicklung durch die Entwickler bereitgestellt werden und sobald als möglich die Tests durch die Entwickler und die Fachabteilung erfolgt. Beim Auftreten eines Fehlers oder Defekts wird dann die Entwicklung korrigiert und weitere Anpassungen vorgenommen. Dies kann dann zu zahlreichen Zyklen von Entwicklung - Test - Korrektur - Test usw. führen. Tests einzelner Komponenten ist entweder schwierig oder bedingt durch die monolithische Anwendungsstruktur nicht möglich. Daher können hier auch nur vollständige Funktions- oder gar Prozesstests mit entsprechend hohem Aufwand durchgeführt werden. Dabei kann nicht ausgeschlossen werden, dass einige Fehler erst im Rahmen des Produktivbetriebes erkannt werden, da auf Testsystem weder die kompletten Prozessdaten vorhanden sind, weder die Masse an Transaktionen durchgeführt wird, noch die Varianz an Transaktionsausführung vorhanden ist. Daher sollte dieses Vorgehen vermieden werden.  
-Moderne Softwareentwicklung bietet mittels moderner Softwarearchitektur das Testing in die frühe Phase der Softwareerstellung zu verschieben und Fehler frühzeitig zu finden.
-Ziel einer modernen Anwendungsarchitektur ist es, eine Anwendung in kleine, abgrenzbare und testbare Komponenten aufzuteilen. Diese werden in entsprechenden Unterpaketen des Anwendungspaketes gekapselt. Da diese Komponenten kaum manuell testbar sind, ist hier UNIT Testing mit ABAP UNIT einzusetzen. Dies erfordert aber eine gute Strukturierung und weitere Hilfspakete, die Testfunktionalitäten bereitstellen.
+Bitte erstellen Sie Issues in unserem Github wenn Sie Interesse an diesen Themen haben
 
-
-Bei der modernen Entwicklungsmethodik werden potenzielle Fehler bereits in der Designphase betrachtet, das gewünschte Programmverhalten definiert und evtl. Problematiken im Vorfeld mit dem Anforderer besprochen.
