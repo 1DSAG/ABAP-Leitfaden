@@ -13,49 +13,38 @@ nav_order: 2
 {:toc}  
 
 ## Eine Management-freundliche Zusammenfassung  
-Die Nutzung von SAP-Standard-Prozessen und Erweiterungsmöglichkeiten bietet Unternehmen eine zukunftssichere, wartbare und agile Basis für Innovation, Digitalisierung und Transformation. Mit einem klaren Fokus auf Standardlösungen minimieren Sie technische Schulden, fördern effiziente Upgrades und sind optimal für die Herausforderungen der Cloud-Ära vorbereitet.  
+Die Nutzung von SAP-Standardprozessen und Erweiterungsmöglichkeiten bietet Unternehmen eine zukunftssichere, wartbare und agile Basis für Innovation, Digitalisierung und Transformation. Mit einem klaren Fokus auf Standardlösungen minimieren Sie technische Schulden, fördern effiziente Upgrades und sind optimal auf die Herausforderungen des Cloud-Zeitalters vorbereitet. Wägen Sie immer ab, wann Sie kundenspezifische Erweiterungen erstellen und wann Sie eine andere Plattform für die Erweiterung oder den Geschäftsprozess verwenden sollten. 
 
 ## Gründe für die Nutzung von SAP-Standard-Prozessen und Erweiterungsmöglichkeiten  
 
 ### Zukunftssicherheit und Innovation  
-- Standard-Prozesse als Basis für Innovation:  
-  - SAP bietet neue Innovationen ausschließlich auf Standard-Prozessen an, insbesondere in der Public Cloud.  
-  - Die Nutzung dieser Prozesse gewährleistet, dass Unternehmen von zukünftigen Updates und Weiterentwicklungen profitieren können.  
+SAP Standardtransaktionen und -anwendungen werden mit jedem S/4 HANA Release verbessert und erweitert. SAP bietet neue Innovationen ausschließlich auf Standardprozessen an, insbesondere in der Public Cloud. Die Nutzung dieser Prozesse stellt sicher, dass Unternehmen von zukünftigen Updates und Weiterentwicklungen profitieren können. Eine Entwicklung auf Basis von Standard-APIs und damit Standard-Datenprodukten ist zukunftssicher.   
 
 ### Reduzierung technischer Schulden  
-- Refactoring und Anpassungen ermöglichen:  
-  - Die Reduktion technischer Schulden erleichtert die Einführung von Audit-/Compliance-konformen und Security by Default-Techniken.  
-  - Beispiel: Custom APIs, basierend auf RAP im Managed-Szenario, ermöglichen einen sicheren Datenaktualisierungsprozess.  
-  - Langfristig wird der Aufwand für Wartung und Anpassungen reduziert, was eine agile und sichere IT-Landschaft unterstützt.  
+ Die Reduzierung der technischen Schulden erleichtert die Einführung von Audit/Compliance-konformen und Security-by-Default-Techniken. Beispiel: Kundenspezifische APIs auf Basis von RAP im Managed Szenario ermöglichen einen sicheren Datenaktualisierungsprozess. Langfristig wird der Aufwand für Wartung und Anpassungen reduziert, was eine agile und sichere IT-Landschaft unterstützt. 
+ Entweder bei einer Bestandsaufnahme oder bei jeder neuen Anforderung können Sie mit dem 4R-Ansatz: Reuse, Retire, Refactor und Replatform eine Bewertung Ihres kundenspezifischen Codes durchführen. Durch die Definition Ihrer Clean Core Richtlinien können Sie ein aktives Refactoring (Get Clean Phase) durch Projekte durchführen. Danach oder davor sollten alle Neuentwicklungen nach den Richtlinien durchgeführt werden (Stay Clean Phase). 
 
 ### Verbesserung der Upgrade-Fähigkeit  
-- Schnelle und reibungslose Upgrades:  
-  - Standardprozesse ermöglichen Upgrades ohne umfangreiche Anpassungen und Tests.  
-  - Unternehmen können so schneller auf neue Technologien und SAP-Innovationen zugreifen.  
+Ein großer Vorteil des Clean Core-Konzepts ist die Möglichkeit schneller und reibungsloser Upgrades. Standardprozesse ermöglichen Upgrades ohne umfangreiche Anpassungen und Tests. Unternehmen können so schneller von neuen Technologien und SAP-Innovationen profitieren.  
 
 ### Förderung von Digitalisierung und Innovation  
-- SAP-Innovationen reibungslos konsumieren:  
-  - Durch die Nutzung des SAP-Standards können Unternehmen neue Technologien nahtlos integrieren und Innovationen in ihre Geschäftsprozesse einfließen lassen.  
-- Digitalisierung von Geschäftsprozessen:  
-  - Standardlösungen, wie etwa Standard Fiori Apps, können in der SAP BTP durch Künstliche Intelligenz erweitert werden und bilden die Grundlage für eine durchgängige Digitalisierung und Automatisierung.  
+Bitte beachten Sie zwei Aspekte für zukünftige Geschäftsprozessverbesserungen:
+* SAP-Innovationen nahtlos nutzen: Durch die Nutzung des SAP-Standards können Unternehmen neue Technologien nahtlos integrieren und Innovationen in ihre Geschäftsprozesse integrieren.  
+* Digitalisierung von Geschäftsprozessen: Standardlösungen, wie z.B. Standard Fiori Apps, können in SAP BTP um künstliche Intelligenz erweitert werden und bilden die Grundlage für eine durchgängige Digitalisierung und Automatisierung.  
 
 ### Effiziente Nutzung und Erweiterung von SAP-Lösungen  
-- Wiederverwendung statt Redundanz:  
-  - SAP-Standardlösungen und Schnittstellen (z. B. Business Accelerator Hub) ermöglichen die Nutzung einer einheitlichen Quelle, anstatt mehrere isolierte Nicht-Standardlösungen zu pflegen.  
-- Optimierte Erweiterungsmöglichkeiten:  
-  - Anpassungen basieren auf bewährten SAP-Erweiterungsmechanismen, die eine zukunftssichere Architektur fördern.  
+ SAP-Standardlösungen und -Schnittstellen (z.B. Business Accelerator Hub) ermöglichen die Nutzung einer einzigen Quelle, anstatt mehrere isolierte Nicht-Standardlösungen zu unterhalten. Die Anpassungen basieren auf den bewährten SAP-Erweiterungsmechanismen, die eine zukunftssichere Architektur fördern und auch in Zukunft von SAP erweitert und genutzt werden.  
 
 ### Vorbereitung auf die Cloud-Transformation  
-- Schrittweise Migration in die Cloud:  
-  - Unternehmen können Geschäftsprozesse in die Cloud überführen, sobald dies sinnvoll ist.  
-  - Mit SAP-Tools und Plattformen lässt sich die Transformation flexibel und bedarfsgerecht gestalten.  
+Durch das Clean Core-Konzept und die Nutzung von SAP-Standardtransaktionen und -anwendungen können Unternehmen ihre Geschäftsprozesse in die Cloud verlagern, sobald dies sinnvoll ist. Mit SAP-Tools, aber auch mit Nicht-SAP-Systemen und -Plattformen kann die Transformation flexibel und bedarfsgerecht gestaltet werden.  
 
 ### Einfache Integration von Drittanbieter-Tools  
-- Nahtlose Einbindung von Third-Party-Tools:  
-  - SAP-Standardprozesse und Schnittstellen vereinfachen die Integration von Drittanbieter-Lösungen, wodurch Unternehmen ihre IT-Landschaft schnell erweitern können.  
+Erfinden Sie das Rad nicht neu, insbesondere nicht mit ABAP Legacy Tools. Evaluieren Sie andere Lösungen, auch von Drittanbietern, siehe [SAP Store](https://www.sap.com/germany/store.html). Denken Sie daran, dass die SAP-Standardprozesse und -Schnittstellen die Integration von Drittlösungen vereinfachen, so dass Unternehmen ihre IT-Landschaft schnell erweitern können.  
 
 
 ## Nachteile des Clean Core Ansatzes
+
+Seieh auch Kapitel [Organisation](/clean-core/problems-and-challanges)
 
 ### Wirtschaftlichkeit
 

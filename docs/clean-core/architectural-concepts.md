@@ -15,12 +15,11 @@ nav_order: 4
 
 ## Einstieg
 
-In diesem Abschnitt geht es um die möglichen Architekturen im Bereich Clean Core, dabei erfahren Sie mehr über das Thema On-Stack und Side-by-Side und wie sie diese in ihre Architektur implementieren können. Extensibility und deren Implementierung ist der Schlüsselbestandteil für Ihr Unternehmen, um Clean Core zu erreichen. Dabei beschreibt die Extensibility alle Kundenerweiterungen in einem SAP Standardsystem, ebenso wie Partner-AddOns.
+Dieser Abschnitt befasst sich mit den möglichen Architekturen im Bereich Clean Core, wobei Sie mehr über On-Stack und Side-by-Side erfahren und wie Sie diese in Ihrer Architektur implementieren können. Die Extensibility und ihre Implementierung ist die Schlüsselkomponente für Ihr Unternehmen, um Clean Core zu erreichen. Dabei beschreibt Extensibility alle Kundenerweiterungen in einem SAP-Standardsystem sowie Partner-AddOns.
 
 
 ## Szenarien
-
-Grundsätzlich haben Sie die Möglichkeit ihr System über On-Stack und/oder Side-by-Side Extensibility zu erweitern. Dazu erhalten Sie hier eine schematische Darstellung der Möglichkeiten. 
+Grundsätzlich haben Sie die Möglichkeit, Ihr System über On-Stack und/oder Side-by-Side Extensibility zu erweitern. Hier finden Sie eine schematische Darstellung der Möglichkeiten. 
 
 ![Extensibility Szenarien](./img/image-08.png)
 
@@ -30,30 +29,30 @@ Extensibility Szenarien
 
 ### On-Stack
 
-Auf der linken Seite finden Sie die On-Stack Extensibility, unterteilt nach Pro Code und Low Code. Im Bereich Pro Code finden sie die klassische ABAP Cloud Entwicklung mit dem 3-TIER Modell, der Verwendung von freigegebenen APIs und der Erweiterung von Objekten (C0-Objekte). Mehr zum Thema ABAP Cloud, finden Sie im entsprechenden Abschnitt von Clean Core. 
+Auf der linken Seite finden Sie die On-Stack Extensibility, unterteilt in Pro Code und Low Code. Im Bereich Pro Code finden Sie die klassische ABAP Cloud Entwicklung mit dem 3-TIER Modell, der Verwendung von Shared APIs und der Erweiterung von Objekten (C0-Objekte). Mehr zum Thema ABAP Cloud finden Sie im entsprechenden Abschnitt von Clean Core. 
 
-Im Low Code Bereich gibt es vor allem die Key User Extensibility, dabei handelt es sich um einige Fiori Anwendungen mit denen sie das System erweitern können. Die häufigsten Szenarien in diesem Bereich sind:
+Im Low Code Bereich gibt es vor allem die Key-User Extensibility, das sind einige Fiori Anwendungen, mit denen man das System erweitern kann. Die häufigsten Szenarien in diesem Bereich sind
 
-- Felderweiterung - Erzeugen Sie über die Anwendung neue Z-Felder von der Datenbank bis zur UI.
-- UI Anpassungen - Passen Sie Fiori Anwendungen an, nennen Elemente um oder zeigen sich die neuen Z-Felder an. Sie können damit Varianten erzeugen und Ihrem Fachbereich zur Verfügung stellen.
-- Eigene Logik - Implementieren Sie eigene BADIs und erweitern den Prozess um eigene Prüfungen.
-- Eigene Core Data Services - Erzeugen Sie eigene Core Data Services auf Basis von freigegebenen Views und geben diese als APIs nach Außen zur Verfügung.
-- uvm.
+* Field Extension - Erstellen Sie neue Z-Felder von der Datenbank bis zur UI über die Anwendung.
+* Anpassung der Benutzeroberfläche - Passen Sie Fiori-Anwendungen an, benennen Sie Elemente um oder zeigen Sie die neuen Z-Felder an. Erstellen Sie Varianten und stellen Sie diese Ihren Fachabteilungen zur Verfügung.
+* Eigene Logik - Implementieren Sie eigene BADIs und erweitern Sie den Prozess um eigene Prüfungen.
+* Eigene Core Data Services - Erstellen Sie auf Basis der freigegebenen Views eigene Core Data Services und stellen Sie diese als APIs nach außen zur Verfügung.
+* uvm.
 
-Die Apps sind vor allem für Ihre Key User gedacht, da damit einfache Änderungen im System durchgeführt werden können. Die Änderungen werden per Standard Changemanagement (z.B. CTS) produktiv gesetzt.
+Die Apps sind in erster Linie für Ihre Key-User gedacht, da sie einfache Änderungen im System ermöglichen. Die Änderungen werden über das Standard Change Management (z.B. CTS) produktiv gesetzt.
 
 ### Side-by-Side
 
-Auf der rechten Seite finden Sie die Side-by-Side Extensibility, hier geht es um die entkoppelte Entwicklung außerhalb des Kernsystems. In diesem Beispiel wirde die Business Technology Plattform, kurz BTP genannt. Dort finden Sie verschiedene Werkzeuge und Systeme, mit denen sie Anwendungen zur Erweiterung des Systems erstellen können.
+Auf der rechten Seite finden Sie die Side-by-Side Extensibility, hier geht es um die entkoppelte Entwicklung außerhalb des Kernsystems. In diesem Beispiel handelt es sich um die Business Technology Platform, kurz BTP. Hier finden Sie verschiedene Werkzeuge und Systeme, mit denen Sie Anwendungen zur Erweiterung des Systems erstellen können.
 
-- SAP BTP ABAP Environment - Erweiterungen auf Basis von ABAP in der Cloud entwickeln.
-- SAP Build Code - Erweiterungen auf Basis von Java oder JavaScript entwickeln.
+* SAP BTP ABAP Environment - Erweiterungen auf Basis von ABAP in der Cloud entwickeln.
+* SAP Build Code - Erweiterungen auf Basis von Java oder JavaScript entwickeln.
 
-Neben der Pro Code Lösung finden sie auch hier Low Code und No Code Lösungen aus dem SAP Build Portolio. Dazu eine kleine Übersicht der gängigen Tools und deren Nutzung.
+Neben den Pro Code Lösungen finden Sie hier auch Low Code und No Code Lösungen aus dem SAP Build Portfolio. Hier ein kleiner Überblick über die gängigen Tools und deren Einsatz.
 
-- SAP Build Apps - Erstellen Sie hier Firoi und Mobile Apps per Drag'n Drop und einfachen Scripts. Die Anwendungen werden dann in der BTP zur Verfügung gestellt.
-- SAP Build Process Automation - Sie benötigen einen Workflow oder eine Automatisierung, dann können sie diese mit der Process Automation erstellen und SAP, sowie Non-SAP Systeme anbinden.
-- SAP Build Work Zone - Wollen Sie einen zentralen Zugriff für alle SAP Anwendungen, egal ob On-Stack oder Side-by-Side, dann kann die Work Zone eine Alternative sein. Neben der Standard Edition, gibt es auch eine Advanced Edition mit kollaborativen Funktionen.
+* SAP Build Apps - Erstellen Sie hier Fiori und Mobile Apps per Drag'n Drop und einfachen Skripten. Die Apps werden dann im BTP zur Verfügung gestellt.
+* SAP Build Process Automation - Wenn Sie einen Workflow oder eine Automatisierung benötigen, können Sie diese mit der Process Automation erstellen und sowohl SAP- als auch Non-SAP-Systeme anbinden.
+* SAP Build Work Zone - Wenn Sie einen zentralen Zugriff auf alle SAP Anwendungen benötigen, egal ob On-Stack oder Side-by-Side, dann kann die Work Zone eine Alternative sein. Neben der Standard Edition gibt es auch eine Advanced Edition mit kollaborativen Funktionen.
 
 
 ## Strategie
@@ -61,14 +60,13 @@ Neben der Pro Code Lösung finden sie auch hier Low Code und No Code Lösungen a
 Bevor Sie mit der Arbeit beginnen, sollten Sie sich Gedanken um die Erweiterungsstrategie machen. Das heißt, welche Tools und Umgebungen wollen Sie für die Erweiterungen einsetzen. 
 
 ### Modelle
+Dabei sind einige Faktoren des Unternehmens zu berücksichtigen:
 
-Dabei sollten Sie einige Faktoren des Unternehmens berücksichtigen:
-
-- Plattform - Welches Erweiterungsmodell wollen Sie im Unternehmen nutzen (CAP oder RAP). Damit verbunden, wieviele Entwickler brauchen Sie in den Bereichen.
-- Know How - Ist das entsprechende Know How für die Umgebung vorhanden oder muss hier erst aufgebaut werden. Im Bereich ABAP wäre das CDS, RAP und Fiori Elements. Im Bereich CAP JavaScript oder Java, Build Pipelines, Git und BTP.
+* Plattform - Welches Erweiterungsmodell möchten Sie im Unternehmen einsetzen (CAP oder RAP). Damit verbunden, wie viele Entwickler benötigen Sie in den Bereichen.
+* Know-how - Ist das entsprechende Know-how für die Umgebung vorhanden oder muss es erst aufgebaut werden? Im Bereich ABAP wären dies CDS, RAP und Fiori Elements. Im Bereich CAP JavaScript oder Java, Build Pipelines, Git und BTP.
 
 
-Dazu die folgende detailierte Grafik mit den verschiedenen Szenarien.
+Dazu die folgende Detailgrafik mit den verschiedenen Szenarien.
 
 
 ![Tools und Strategie](./img/image-09.png)
@@ -76,19 +74,16 @@ Dazu die folgende detailierte Grafik mit den verschiedenen Szenarien.
 Tools und Strategie
 {: .img-caption}
 
-Dabei steht Ihnen das ganze Produktportfolio der SAP zur Verfügung zur Verfügung, wobei jedes Produkt seine eigenen Fertigkeiten und Voraussetzungen benötigt. Die Festlegung einer Strategie empfehlen wir Ihnen daher ausdrücklich.
-
+Ihnen steht das gesamte Produktportfolio der SAP zur Verfügung, wobei jedes Produkt eigene Kompetenzen und Voraussetzungen erfordert. Wir empfehlen daher dringend, eine Strategie zu entwickeln.
 
 ### Kopplung
 
-Bei der Kopplung geht es um verschiedene Voraussetzungen, die eine Anwendung mit sich bringt. Sollt die Anwendung On-Premise oder Side-by-Side gebaut werden? In diesem [Artikel](https://software-heroes.com/blog/abap-cloud-clean-core-szenarien) finden Sie verschiedene Kriterien, wann sich welche Umgebung lohnt. Grundsätzlich sollten Sie aber auch verstehen, dass sie Clean Core auch On-Premise auf ihrem eigenen System erreichen können und die Side-by-Side Entwicklung nicht zwingend benötigen.
+Bei der Kopplung geht es um die unterschiedlichen Anforderungen, die eine Anwendung mit sich bringt. Soll die Anwendung On-Premise oder Side-by-Side entwickelt werden? In diesem [Artikel](https://software-heroes.com/blog/abap-cloud-clean-core-szenarien) finden Sie verschiedene Kriterien, wann sich welche Umgebung lohnt. Grundsätzlich sollten Sie aber verstehen, dass Sie Clean Core auch On-Premise auf Ihrem eigenen System erreichen können und nicht zwingend die Side-by-Side Entwicklung benötigen.
 
-Die beiden Szenarien der Kopplung sind:
+Die beiden Kopplungsszenarien sind:
 
-- Eng gekoppelt - Die Anwendung sollte On-Premise erstellt werden.
-- Lose gekoppelt - Die Anwendung kann auch in der Cloud entwickelt werden.
-
+* Eng gekoppelt - Die Anwendung sollte On-Premise erstellt werden.
+* Lose gekoppelt - Die Anwendung kann auch in der Cloud entwickelt werden.
 
 ## Make the Core clean
-
-Haben Sie den Brownfield Ansatz gewählt, ihr System auf S/4HANA migriert und entscheiden sich für Clean Core, dann empfiehlt sich die schrittweise Migration Ihrer Anwendungen. Dabei lohnen sich vor allem die häufig genutzten Anwendungen, um so einen schnellen Benefit von SAP Fiori zu erhalten. So können Sie Anwendung für Anwendung prüfen, welche Sie modernisieren wollen oder vielleicht sogar stilllegen können, da sie nicht mehr benötigt werden. Ein erster Überblick mit einer Invetarisierung macht daher Sinn.
+Wenn Sie den Brownfield-Ansatz gewählt und Ihr System auf S/4HANA migriert haben und sich für Clean Core entscheiden, empfiehlt sich eine schrittweise Migration Ihrer Anwendungen. Dabei lohnen sich vor allem häufig genutzte Anwendungen, um schnell von SAP Fiori zu profitieren. So können Sie Anwendung für Anwendung prüfen, welche Sie modernisieren oder vielleicht sogar stilllegen können, weil sie nicht mehr benötigt werden. Ein erster Überblick mit einer Inventarisierung ist daher sinnvoll.
