@@ -19,14 +19,14 @@ Eine gesamthafte Analyse erfordert auch die Betrachtung von Alterativen zu SAP-P
 
 Die Umsetzung des Clean Core-Konzepts erfordert einen strategischen Ansatz und eine sorgfältige Planung. Organisationen können den folgenden Ansatz anwenden, um das Clean Core-Konzept von SAP effektiv zu nutzen. 
  
-1. API-First-Ansatz: Begrüßen einen API-First-Ansatz für die Entwicklung, indem Sie Kernfunktionalitäten als wiederverwendbare APIs freigeben, die von internen und externen Anwendungen genutzt werden können. Dies fördert Agilität, Skalierbarkeit und Innovation und gewährleistet gleichzeitig Sicherheit und Governance. Stichwort: SOA - Service Oriented Architecture, oder auch Microservices.
+1. **API-First-Ansatz**: Begrüßen einen API-First-Ansatz für die Entwicklung, indem Sie Kernfunktionalitäten als wiederverwendbare APIs freigeben, die von internen und externen Anwendungen genutzt werden können. Dies fördert Agilität, Skalierbarkeit und Innovation und gewährleistet gleichzeitig Sicherheit und Governance. Stichwort: SOA - Service Oriented Architecture, oder auch Microservices.
     * Neue Schnittstellen, werden nur mit Standard APIs der SAP angelegt.
     * Oder eigene Z* REST APIs werden intern geschaffen.
-2. Modularisierung und Standardisierung: Zerlegen Sie monolithische Systeme in modulare Komponenten und standardisieren Sie Datenstrukturen und Schnittstellen, wo möglich. Dies ermöglichten eine größere Flexibilität, Wiederverwendbarkeit und Interoperabilität im gesamten Unternehmen.
+2. **Modularisierung und Standardisierung**: Zerlegen Sie monolithische Systeme in modulare Komponenten und standardisieren Sie Datenstrukturen und Schnittstellen, wo möglich. Dies ermöglichten eine größere Flexibilität, Wiederverwendbarkeit und Interoperabilität im gesamten Unternehmen.
     * Entscheiden Sie, wo die kundenspezifischen Daten gespeichert werden sollen. Wenn Sie zusätzliche Daten für Ihre Geschäftsprozesse benötigen, dann am besten integriert in ein Standarddatenprodukt, vermeiden Sie parallele Datenmodelle zur Standardtabellen.
     * Harmonisieren Sie Ihre Geschäftsprozesse und starten Sie Projekte um Z-Transaktionen auf Standard Fiori Apps zu kommen.
     * Entscheiden Sie welche Kundenerweiterung bestehen bleiben. 
-3.	Bewertung und Rationalisierung: Führen Sie eine gründliche Bewertung der bestehenden SAP-Landschaften durch, um Bereiche der Komplexität und Redundanz zu identifizieren. Rationalisieren Sie Systeme und Prozesse, um sie mit den Prinzipien des Clean Core in Einklang zu bringen und Prioritäten für Vereinfachungsmaßnahmen zu setzen.
+3.	**Bewertung und Rationalisierung**: Führen Sie eine gründliche Bewertung der bestehenden SAP-Landschaften durch, um Bereiche der Komplexität und Redundanz zu identifizieren. Rationalisieren Sie Systeme und Prozesse, um sie mit den Prinzipien des Clean Core in Einklang zu bringen und Prioritäten für Vereinfachungsmaßnahmen zu setzen.
     * Führen Sie Fit-Gap-Workshops durch und starten Sie Bereinigungsprojekte von performanten, unsicheren, oder ungenutzten Code. 
     * Bilden Sie Ihre Architekten aus, um anhand Richtlinien bewusst neue Technologien zu nutzen.
 
