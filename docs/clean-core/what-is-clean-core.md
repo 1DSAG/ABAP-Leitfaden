@@ -253,47 +253,12 @@ Wenn Sie den SAP-Standard verändern möchten, beachten Sie die folgenden Regeln
 - **Unübersichtliche Änderungen**:  
   - Vermischen Sie nicht Standardcode und kundenspezifischen Code.  
 
-
-## Clean ABAP 
-
-Clean ABAP stellt die Anapssung der Prinzipien aus dem Buch von Robert C. Martin auf ABAP dar. Das offizielle, im Repository der SAP freigegebene Dokument wurde von Florian Hoffmann und Klaus Häuptle 2019 auf den Weg gebracht und wird seit dem als [open source durch die ABAP Community](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) erweitert.
-
-Beispielregel mit Erläuterung:
-
-![Clean ABAP Excample Rule Prefer inline to up-front declarations](./img/image-10.png)
-
-Clean ABAP Excample Rule Prefer inline to up-front declarations
-{: .img-caption}
-
-Der Gedanken von Clean ABAP ist, dass es nicht eine Version von Clean ABAP gibt, mit einem festen unveränderlichen Set an Regeln. 
-Teams sind eingeladen, die Regeln anzupassen und veränden so wie sie für ihren spezifischen Fall am besten passen. 
-Wichtig ist hier nur, dass diese Regeln verbindlich und alle teams eines Unternehmens hinweg gültig sind. Der Grundgedanken von Clean ABAP - einheitliche Code Reviews - würde gebrochen wenn das Financials Team andere ABAP Regeln hat als Sales.
-
-Die öffentliche Version von Clean ABAL stellt eine excellente Grundlage hierfür dar. 
-Alle Regelen von Clean ABAP heute sind und sollten immer begründet und erläutert werden. 
-
-Clean ABAP kann generell auf jede Sprachvesion von ABAP angewendet werden von R2 bis hin zu ABAP Cloud. 
-
-### Clean ABAP & Entwicklungsrichtlinien
-Die auf das Untrenehmen angepasste Form von Clean ABAP sollte ein ergänzendes Dokument der gültigen Entwicklungsrichtlinien sein, so dass es überall Anwendung findet. 
-Es ist hilfreich die Anwendung der Regeln mit automatischen Tool wie Code Pal for ABAP (https://github.com/SAP/code-pal-for-abap) zu überprüfen und sicherzustellen. 
-
-### Clean ABAP owner
-In jedem Entwicklungsteam sollte es - gerne auch rollierend - einen Clean ABAP Owner geben, der Ansprechpatner und Verantwortlicher für Änderungen ist. 
-Änderungen und Erweiterungen müssen separat in den Teams kommuniziert und Abgestimmt werden. 
-Clean ABAP funktioner am besten wenn alle Beteiligten hiner den Regeln stehen, hierfür sind immer wieder Team Kompromisse und Abstimmungen möglich. 
-
-### Clean ABAP ist ein Prozess  
-Die Anwendung / Erlernen von Clean ABAP ist kein einmaliger Workshop oder eine Managementdirektive. 
-Es braucht Zeit, Übung, Motivation und den konstanten Willen bessere ABAP Programme zu schreiben. 
-
-Die Tätigkeiten, die das Anwenden von Clean ABAP sichderstellen heißen Pair-Programming, Code Reviews, Refactoring und Schulung.
-Hierfür müssen von der Organisation entsprechende Bedingungen geschaffen werden. 
-
-
-### Differenzierung zu Clean Core
+## Clean ABAP - Abgrenzung
 Bei Clean ABAP geht um das schreiben von ABAP Code dessen Fokus auf Verständlichkeit und Wartbarkeit liegt. 
 Bei Clean Core der SAP geht es um die Behandlung der Grenzen von Kundenindividuellen Programen im SAP Standard. 
 
 Nur weil eine Umsetzung der Clean Core Stategie enspricht ist diese nicht automatisch Clean ABAP und umgedreht. 
+
+siehe Kapitel ABAP <<?LINK?>>
+
 
