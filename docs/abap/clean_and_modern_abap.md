@@ -66,8 +66,8 @@ Hierfür müssen von der Organisation entsprechende Bedingungen geschaffen werde
 ## Grundlagen sauberer Entwicklung
 
 - [ ] Prinzipien von Clean Code und Clean ABAP
-- [X] Ein paar Clean ABAP Regeln zum Eisntieg
-- [ ] Nutzung ABAP Cleaner
+- [X] Ein paar Clean ABAP Regeln zum Einstieg
+- [ ] Nutzung des ABAP Cleaners in ADT
 
 Dieser Abschnitt gibt eine kurze Auswahl wichtiger Regeln für saubere Entwicklung mit Verweis auf Quellen mit weiteren Informationen wieder.
 
@@ -80,54 +80,14 @@ sind lesbar und verständlich, und machen direkt klar, worum es geht. In der all
 kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständlich als `active_status` oder erfordert wenigstens mehr ABAP-Kenntnisse.
 
 ### Nutzung von Objektorientierung
-
-
-TODO zu Architektur verschieben
+=>TODO zu Architektur verschieben
 {: .label .label-red }
 
-Beim Einstieg in ABAP Objects geschieht es schnell, dass aus einer Funktionsgruppe mit mehreren Funktionsbausteinen einfach eine Klasse mit mehreren statischen Methoden wird. So
-können jedoch die Vorteile der Objektorientierung nicht genutzt werden. Die Nutzung von statischen Methoden verhindert etwa, dass Abhängigkeiten in Unit Tests durch Mocks
-ersetzt werden können. [Mehr Informationen dazu im Clean ABAP-Guide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-objects-to-static-classes).
+===>>> Verschiebung in Software Design Abschnitt <<<<======= 
 
-Ein Hilfsmittel für objektorientierte Entwürfe sind die SOLID-Prinzipien. Jeder Buchstabe gibt ein Prinzip für objektorientierte Entwicklung vor. Hier geben wir
-nur eine kurze Übersicht der Prinzipien, eine ausführliche Erklärung findet sich z.B. [im Blog von Uncle Bob](https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html), dem Autor von Clean Code.
+....... TEXT wurde Übertragen ...........
 
-<dl>
-  <dt>Single Responsibility Principle</dt>
-  <dd>
-    Eine Codeeinheit (Klasse, Methode, ...) sollte immer einen Zweck und damit einen Grund für Anpassungen haben. Eine Methode, die etwa
-    Customizing-Einträge liest, anhand derer Daten aufbereitet, und anschließend ein Formular ausgibt, hat drei Zwecke und auch mögliche Gründe für
-    Anpassungen (nämlich immer, wenn sich etwas an Customizing/Daten/Formular) ändern soll. Diese Methode sollte also aufgeteilt werden.
-  </dd>
-
-  <dt>Open/Closed Principle</dt>
-  <dd>
-    Ein Modul sollte offen für Erweiterungen und geschlossen für Veränderungen sein. Das heißt, das Anpassungen vorgenommen werden können, ohne
-    dazu z.B. die ursprünglich genutzte Klasse zu bearbeiten. Eine Klasse `Drucker`, die etwa im Konstruktor die zu druckenden Daten beschafft, kann
-    ohne Anpassung des ursprünglichen Codes nichts anderes drucken. Bekommt diese Klasse hingegen eine Instanz des Interfaces `Datenbeschaffung` im
-    Konstruktor übergeben und ruft passende Methoden dieser auf, kann zur Anpassung einfach eine zweite Datenbeschaffungsklasse entwickelt werden.
-  </dd>
-
-  <dt>Liskov Substitution Principle</dt>
-  <dd>
-    Code, der mit einer Klasse oder einem Interface arbeitet, sollte immer mit implementieren oder erbenden Klassen funktionieren. Eine erbende Klasse
-    sollte also beispielsweise nicht in einer der implementierten Methoden eine unerwartete Exception werfen und somit einen Dump auslösen.
-  </dd>
-
-  <dt>Interface Segregation Principle</dt>
-  <dd>
-    Interfaces sollten so aufgeteilt sein, dass Nutzer nur notwendige Abhängigkeiten erhalten. Eine Datenbankzugriffsklasse, die in einer Anwendung
-    verwendete Daten lesen und schreiben kann, könnte etwa ein Interface `Datenleser` und ein Interface `Datenschreiber` implementieren, so dass
-    nur lesende Nutzer keine Abhängigkeit zu schreibenden Methoden haben.
-  </dd>
-
-  <dt>Dependency Inversion Principle</dt>
-  <dd>
-    Abhängigkeiten wie z.B. die Instanz einer Klasse, die das Interface `Datenbeschaffung` implementiert, sollten nicht durch eine verwendende Klasse `Anzeiger`
-    erzeugt werden, sondern dieser stattdessen im Konstruktor oder einer Methode übergeben werden. So kann für den Test von `Anzeiger` einfach eine andere
-    Implementierung für die Datenbeschaffung übergeben werden.
-  </dd>
-</dl>
+===>>> Verschiebung in Software Design Abschnitt <<<<======= 
 
 ## Kommentare 
 
