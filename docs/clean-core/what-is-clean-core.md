@@ -16,14 +16,15 @@ nav_order: 1
 ## Clean Core auf den ersten Blick
 Clean Core ist ein Konzept und für einige SAP-Kunden eine Philosophie - Clean Core wird unterschiedlich verstanden, interpretiert und gelebt. Ein gemeinsames Verständnis der DSAG-Community wäre folgendes:
 
-**"Clean Core"** - Streng genommen ist das Konzept so zu interpretieren: System-Upgrades sollen keinen Einfluss auf Kundenerweiterungen haben. Daher 
+- **"Clean Core"** - Streng genommen ist das Konzept so zu interpretieren: System-Upgrades sollen keinen Einfluss auf Kundenerweiterungen haben. Daher 
 dürfen SAP-Kunden nur freigegebene Schnittstellen für Geschäftsprozesserweiterungen verwenden.
 
-**“Keep the core clean”** - Bedeutet, dass ein Unternehmen Neuentwicklungen nach Clean-Core-Prinzipien - definierten Richtlinien in einem Unternehmen - durchführt.
+- **“Keep the core clean”** - Bedeutet, dass ein Unternehmen Neuentwicklungen nach Clean-Core-Prinzipien - definierten Richtlinien in einem Unternehmen - durchführt.
 
-**"Make the core clean"** - Bezieht sich auf die Unternehmenstransformation und die iterative Reise zu einem Clean Core.
+- **"Make the core clean"** - Bezieht sich auf die Unternehmenstransformation und die iterative Reise zu einem Clean Core.
 
-Clean Core hat fünf Schwerpunkte: S/4 HANA Software Versioenn, Geschäftsprozesse, Kundenerweiterungen, Geschäftsdaten, Betrieb und Integration. Vor allem die neuen Wege der Kundenerweiterungen stehen im Mittelpunkt diesem Kapitel.
+
+Clean Core hat fünf Schwerpunkte: S/4 HANA Software Versionen, Geschäftsprozesse, Kundenerweiterungen, Geschäftsdaten, Betrieb und Integration. Vor allem die neuen Wege der Kundenerweiterungen stehen im Mittelpunkt diesem Kapitel.
 
 > „Die Erweiterbarkeitsfunktionen umfassen viele Optionen, die  Kunden und Partner dabei unterstützen, Standard-Business-Software an ihre Geschäftsanforderungen anzupassen.“
 
@@ -34,60 +35,59 @@ Quelle: SAP Help Portal
 Clean Core
 {: .img-caption}
 
-Das Clean Core-Konzept mit seinen verschiedenen Facetten wird von SAP in der [TechEd2023 - Clean Core: What It Is, Why to Do It, and How to Get There](https://www.youtube.com/watch?v=jlzdD55ahqY) klar kommuniziert. Die Schritt-für-Schritt-Anleitung ist jedoch für etablierte Kunden, die verschiedene „Legacy“-Technologien in ihren SAP-Systemen einsetzen, unklar. 
-Es gibt zahlreiche Bestandskunden und SAP-Partner, die durch Eigenentwicklungen und Systemerweiterungen Mehrwerte in ihren Systemen geschaffen haben. Diese Mehrwerte gehören per Definition nicht zum Clean Core - die Erweiterungen basieren fast immer auf nicht freigegebenen Schnittstellen. Für die sogenannten RICEFW-Objekte gibt es verschiedene [Nachfolgetechnologie-Matrizen](https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html). Intern stellen sich vor allem die Fragen: „Wie können wir den Technologiewechsel gegenüber unseren Kunden vertreten? Und warum soll ich gut funktionierende Prozesse, die z.B. auf Idocs, Messages, RFCs und ALV-Transaktionen basieren, jetzt umstellen?
+Das Clean Core-Konzept mit seinen verschiedenen Facetten wird von SAP in der [TechEd2023 - Clean Core: What It Is, Why to Do It, and How to Get There](https://www.youtube.com/watch?v=jlzdD55ahqY) klar kommuniziert. Die Schritt-für-Schritt-Anleitung ist jedoch für etablierte Kunden, die verschiedene "Legacy"-Technologien in ihren SAP-Systemen einsetzen, unklar. 
+Es gibt zahlreiche Bestandskunden und SAP-Partner, die durch Eigenentwicklungen und Systemerweiterungen Mehrwerte in ihren Systemen geschaffen haben. Diese Mehrwerte gehören per Definition nicht zum Clean Core - die Erweiterungen basieren fast immer auf nicht freigegebenen Schnittstellen. Für die sogenannten RICEFW-Objekte gibt es verschiedene [Nachfolgetechnologie-Matrizen](https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html). Intern stellen sich vor allem die Fragen: "Wie können wir den Technologiewechsel gegenüber unseren Kunden vertreten? Und warum soll ich gut funktionierende Prozesse, die z.B. auf IDocs, Messages, RFCs und ALV-Transaktionen basieren, jetzt umstellen?"
 
 ## Clean Core Definition
-Im Kern dreht sich das Clean Core-Konzept um die Trennung der Kerngeschäftslogik von der Nicht-Kernfunktionalität innerhalb der SAP-Software-Suite. Durch die Isolierung von Kerngeschäftsprozessen und Datenstrukturen strebt SAP eine schlankere und agilere Basis an, die sich an veränderte Geschäftsanforderungen anpassen kann. 
+Im Kern dreht sich das Clean Core-Konzept um die Trennung der Kerngeschäftslogik von der Nicht-Kernfunktionalität innerhalb der SAP-Software-Suite. Durch die Isolierung von Kerngeschäftsprozessen und Datenstrukturen strebt SAP eine schlankere und agilere Basis an, die sich an veränderte Geschäftsanforderungen anpassen kann. Die neuen Wege der Kundenerweiterung heißen: ABAP Cloud und Side-by-Side Extensibility. 
 
-Die neuen Wege der Kundenerweiterung heißen: ABAP Cloud und “Side-by-Side Extensibility”. 
+- **ABAP Cloud oder auch "On-Stack Extensibility"** - Das sind zwei unterschiedliche Technologien: "Developer Extensibility" und "Key-User Extensibility".
 
-**ABAP Cloud oder auch “On-Stack Extensibility”** - Das sind zwei unterschiedliche Technologien: “Developer Extensibility” und “Key-User Extensibility”.
+- **Side-by-Side Extensibility** - Ist die Auslagerung von Kundenerweiterungen in die Business Technology Platform - BTP.
 
-**Side-by-Side Extensibility** - Ist die Auslagerung von Kundenerweiterungen in die Business Technology Platform - BTP.
 
-Ein Beispiel: Anstatt das MATMAS Idoc in heterogener Form an verschiedene Systeme zu senden, sollte die standardisierte Schnittstelle: [Product Master API](https://api.sap.com/api/API_PRODUCT_SRV/overview) verwendet werden. Zur Versorgung der SAP- und Non-SAP-Systeme dient dann eine Schnittstelle, die homogen ausgeprägt werden kann.
+Ein Beispiel: Anstatt das MATMAS IDoc in heterogener Form an verschiedene Systeme zu senden, sollten Sie die standardisierte Schnittstelle [Product Master API](https://api.sap.com/api/API_PRODUCT_SRV/overview) verwenden. Zur Versorgung der SAP- und Non-SAP-Systeme dient dann eine Schnittstelle, die homogen ausgeprägt werden kann.
 
-Das Datenmodell darunter wird durch Key-User-Extensibility erweitert und auch in generischen Reports wie „Embedded Analytics“ oder auch der SAP Analytic Cloud (SAC) verwendet. Bei komplexer Kundenlogik muss der Entwickler diese Kundenlogik mit Developer Extensibility und dem RESTful Application Programming Model (RAP) erweitern.
+Das Datenmodell darunter wird durch Key-User-Extensibility erweitert und auch in generischen Reports wie Embedded Analytics oder auch der SAP Analytic Cloud (SAC) verwendet. Bei komplexer Kundenlogik muss der Entwickler diese Kundenlogik mit Developer Extensibility und dem ABAP RESTful Application Programming Model (RAP) erweitern.
 
 Grundsätzlich ist Clean Core so, wie es der Hersteller beschreibt: 
 1. Erweiterungen sind klar vom SAP-Code getrennt und Erweiterungen verändern keine SAP-Objekte.
 2. Nutzen Sie die neuen Erweiterungstechnologien und den SAP-Standard. Erweiterungen verwenden die neuen Erweiterungsmethoden wie Key-User, Developer und Side-by-Side Extensibility. 
-3. Erweiterungen verwenden nur stabile, freigegebene SAP APIs und Erweiterungspunkte. Classical Extensibility sollte nur in freigegebenen Business Add-Ins mit freigegebenen Entwicklungsobjekten stattfinden. 
-4. Legacy Technologien wie RFCs, Idocs und kundeneigene Dynprotransaktionen oder SAP SEGW Projekte sollten nicht mehr für Neuentwicklungen verwendet werden. 
-5. Alte kundeneigene Entwicklungen / Erweiterungen sollen auf neue Technologien migriert werden, oder die Geschäftsprozessanforderung wird im SAP Standard wiedergefunden.
+3. Erweiterungen verwenden nur stabile, freigegebene SAP APIs und Erweiterungspunkte. Classical Extensibility sollte nur in freigegebenen Business Add-Ins (BADI) mit freigegebenen Entwicklungsobjekten stattfinden. 
+4. Legacy Technologien wie RFCs, IDocs und kundeneigene Dynprotransaktionen oder SAP SEGW Projekte sollten nicht mehr für Neuentwicklungen verwendet werden. 
+5. Alte kundeneigene Entwicklungen und Erweiterungen sollen auf neue Technologien migriert werden oder die Geschäftsprozessanforderung wird im SAP Standard wiedergefunden.
 
 Aus den Herstellerangaben ergeben sich vier Anwendungsbereiche und die Fakten zur Erreichung eines Clean Core sehen wie folgt aus:
 
 #### Datenmodelle
-* Unabhängig davon, ob einfache oder komplexe Anwendungsfälle implementiert werden sollen, ist eine Datenmodellierung / ein Umgang mit dem Virtual Data Model (VDM) erforderlich. 
+* Unabhängig davon, ob einfache oder komplexe Anwendungsfälle implementiert werden sollen, ist eine Datenmodellierung mit dem Virtual Data Model (VDM) erforderlich. 
 * Es sollte kein direkter Zugriff auf SAP Standardtabellen erfolgen.
 * SAP konzentriert sich auf Standarddatenprodukte (z.B. Kundenauftrag). Kundenprozesse und Datenmodelle außerhalb des SAP-Standards bleiben in der Verantwortung des SAP-Kunden.
 
 #### Anwendungslogik
 * SAP Standard Coding soll nicht mehr klassisch erweitert werden.
-* Erweiterungen am Standard sollen in definierte, freigegebene Badis migriert werden.
+* Erweiterungen am Standard sollen in definierte und freigegebene BADIs migriert werden.
 * Eigenentwicklungen müssen Clean Core konforme Entwicklungsobjekte verwenden (Stichwort: Release Contracts).
 
 #### Applikationen
 * Grundsätzlich sollen Kunden die Standard Fiori Apps oder SAP GUI for HTML mit Screen Personas verwenden, um bestehende SAP Standardtransaktionen zu nutzen.
 * Die Standard Fiori Apps und die dahinterliegenden Standard APIs sollen erweitert werden.
-* Für Custom Apps sollten zunächst Fiori Elements und Standard APIs (basierend auf RAP) verwendet werden. Der nächste Schritt wären dann Freestyle Fiori Apps. 
+* Für Custom Apps sollten zunächst Fiori Elements und Standard APIs (basierend auf RAP) verwendet werden. Die App kann dann über das Flexbile Programming Model (FPM) erweitert werden. Der letzte Schritt wären dann Freestyle Fiori Apps. 
 * Weitere Lösungswege: Cloud Native Applikationen in einem Cloud-Umgebung (Side-by-Side Extensibility). Low-/No-Code Plattformen und das SAP Build Portfolio bieten weitere Lösungsansätze.
 
 #### Schnittstellen
 * Es werden nur Clean Core konforme, freigegebene Schnittstellen verwendet.
-* Erweiterungen werden an APIs / Microservices vorgenommen, um die Funktionalität von SAP zu erweitern, ohne die Integrität des Kernsystems zu beeinträchtigen.
+* Erweiterungen werden an APIs und Microservices vorgenommen, um die Funktionalität von SAP zu erweitern, ohne die Integrität des Kernsystems zu beeinträchtigen.
 * Die Integration nach außen muss klar geregelt sein, Prozessintegration und Middleware für das API-Management müssen vorhanden sein.
-* Legacy-Technologien wie Idocs, RFCs und SAP SEGW-Projekte müssen sukzessive abgelöst werden.
+* Legacy-Technologien wie IDocs, RFCs und SAP SEGW-Projekte müssen sukzessive abgelöst werden.
 
 
 Zusammenfassend stellt das Clean Core-Konzept der SAP einen Paradigmenwechsel im Design von Unternehmenssoftware dar. SAP setzt darauf, neue Services nur noch in der Cloud anzubieten und die Schnittstellen zum Core weiter auszubauen. Der Mehrwert, gut laufende Lösungen auf eine neue Plattform zu bringen, ist vorerst nicht gegeben. Neue Lösungen sollte ein Unternehmen mit den neuen Erweiterungsarten gehen, um für die Zukunft gerüstet zu sein. So profitiert ein SAP-Kunde von den Innovationen rund um den Standard. Zum Paradigmenwechsel gehört auch die digitale Transformation: weg vom SAP GUI und Dynpros hin zum Fiori Launchpad, die Endanwender sollen primär im Browser arbeiten. Zu einem Clean Core gehört auch ein massives Change Management durch die IT und die Fachbereiche.
 
 Durch die Umsetzung der Prinzipien des Clean Core und strategischer Initiativen können sich Organisationen auf zukünftige SAP-Strategien, insbesondere Cloud-Technologien, vorbereiten. 
 
-Laut SAP geht es bei Clean Core vor allem, dass die Kunden sich die Zukunft nicht versperren und standardisiert Schnittstellen aufbauen. Durch die Standardisierung von Geschäftsprozessen und den Einsatz der SAP BTP können SAP Services, oder auch Lösungen von SAP Partnern komplett verwendet werden.  
-Die Clean Core Strategie ist für viele Bestandskunden eine Philosophie, bis interne Richtlinien die Nutzungen der Nachfolge-Technologien regeln. Basierend auf den Richtlinien werden Entwickler organisatorisch ausgerichtet, und geschult. Ein Gremium um die „Clean Core Governance“ einzuhalten ist Pflicht, mit dem Mandat die Richtlinien zu pflegen, zu erweitern und zu forcieren. Research und Development sollte häufig betrieben werden, um die Mehrwerte durch SAP-Service herauszuarbeiten.
+Laut SAP geht es bei Clean Core vor allem, dass die Kunden sich die Zukunft nicht versperren und standardisiert Schnittstellen aufbauen. Durch die Standardisierung von Geschäftsprozessen und den Einsatz der SAP BTP können SAP Services oder auch Lösungen von SAP Partnern komplett verwendet werden.  
+Die Clean Core Strategie ist für viele Bestandskunden eine Philosophie, bis interne Richtlinien die Nutzungen der Nachfolge-Technologien regeln. Basierend auf den Richtlinien werden Entwickler organisatorisch ausgerichtet, und geschult. Ein Gremium um die "Clean Core Governance" einzuhalten ist Pflicht, mit dem Mandat die Richtlinien zu pflegen, zu erweitern und zu forcieren. Research und Development sollte häufig betrieben werden, um die Mehrwerte durch SAP-Service herauszuarbeiten.
 
 ## Zielgruppe
 Im Wesentlichen sind im DSAG-Netzwerk zwei große Kundengruppen sichtbar: Die erste Gruppe entscheidet sich für eine große Investition in ihre SAP-Landschaft und arbeitet mit SAP und ihren Partnern zusammen, um auf einen Clean Core im Sinne der SAP-Definition zu gehen. Die andere Gruppe entscheidet sich für einen skalierten Ansatz, bei dem die Investitionen über mehrere Jahre verteilt werden. 
@@ -190,7 +190,7 @@ Hier wären ein paar Hilfestellungen für SAP Kunden, welche mittelfristig noch 
 ### Grundsätze für Modifikationen  
 - **Definition laut SAP Help**:  
   Eine Modifikation bezeichnet das direkte Ändern des SAP-Standardcodes. Dies ist eine Maßnahme, die von SAP ausdrücklich nicht empfohlen wird, da sie zukünftige Updates und Wartungszyklen erschwert. Mit jedem System-Upgrade wird eine Abarbeitung mit der Transaktion SPAU zwingend duchzuführen sein.
-  **Definition laut dem Dokument"Extend SAP S/4HANA in the cloud and on premise with ABAP based extensions"**:
+  **Definition laut dem Dokument "Extend SAP S/4HANA in the cloud and on premise with ABAP based extensions"**:
    Sie sollten auch die verbleibenden klassischen Standard-Erweiterungstypen kritisch betrachten und die Verwendung von BADIs bevorzugen.
   Siehe: ["5.3.2 Using classical business logic extension techniques"](https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html)
 - **Empfohlener Umgang**:  
@@ -230,8 +230,6 @@ Modifikationen dürfen nur nach gründlicher Abwägung vorgenommen werden. Die G
 ## Saubere Modifikationen
 Wenn Sie den SAP-Standard verändern möchten, beachten Sie die folgenden Regeln und Best Practices. Die Einhaltung dieser Richtlinien sorgt für wartbaren, nachvollziehbaren und zukunftssicheren Code, der SAP-Upgrades und Patches standhält.  
 
-### DOs and DON'Ts bei Modifikationen
-
 ### DO
 - **SAP-Code öffnen und einen Enhancement-Spot anlegen**:  
   - Legen Sie in der Modifikation einen **Enhancement-Spot** an.  
@@ -254,11 +252,7 @@ Wenn Sie den SAP-Standard verändern möchten, beachten Sie die folgenden Regeln
   - Vermischen Sie nicht Standardcode und kundenspezifischen Code.  
 
 ## Clean ABAP - Abgrenzung
-Bei Clean ABAP geht um das schreiben von ABAP Code dessen Fokus auf Verständlichkeit und Wartbarkeit liegt. 
-Bei Clean Core der SAP geht es um die Behandlung der Grenzen von Kundenindividuellen Programen im SAP Standard. 
 
-Nur weil eine Umsetzung der Clean Core Stategie enspricht ist diese nicht automatisch Clean ABAP und umgedreht. 
-
-siehe Kapitel ABAP <<?LINK?>>
+Bei Clean ABAP geht um das Schreiben von ABAP Code dessen Fokus auf Verständlichkeit und Wartbarkeit liegt. Bei Clean Core der SAP geht es um die Behandlung der Grenzen von kundenindividuellen Programen im SAP Standard. Nur weil eine Umsetzung der Clean Core Stategie enspricht ist diese nicht automatisch Clean ABAP und umgedreht. Mehr dazu im Kapitel [ABAP](/abap).
 
 
