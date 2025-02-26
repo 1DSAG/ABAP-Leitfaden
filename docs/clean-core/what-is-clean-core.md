@@ -59,23 +59,23 @@ Grundsätzlich ist Clean Core so, wie es der Hersteller beschreibt:
 
 Aus den Herstellerangaben ergeben sich vier Anwendungsbereiche und die Fakten zur Erreichung eines Clean Core sehen wie folgt aus:
 
-#### **Datenmodelle**
+#### Datenmodelle
 * Unabhängig davon, ob einfache oder komplexe Anwendungsfälle implementiert werden sollen, ist eine Datenmodellierung / ein Umgang mit dem Virtual Data Model (VDM) erforderlich. 
 * Es sollte kein direkter Zugriff auf SAP Standardtabellen erfolgen.
 * SAP konzentriert sich auf Standarddatenprodukte (z.B. Kundenauftrag). Kundenprozesse und Datenmodelle außerhalb des SAP-Standards bleiben in der Verantwortung des SAP-Kunden.
 
-#### **Anwendungslogik**
+#### Anwendungslogik
 * SAP Standard Coding soll nicht mehr klassisch erweitert werden.
 * Erweiterungen am Standard sollen in definierte, freigegebene Badis migriert werden.
 * Eigenentwicklungen müssen Clean Core konforme Entwicklungsobjekte verwenden (Stichwort: Release Contracts).
 
-#### **Applikationen**
+#### Applikationen
 * Grundsätzlich sollen Kunden die Standard Fiori Apps oder SAP GUI for HTML mit Screen Personas verwenden, um bestehende SAP Standardtransaktionen zu nutzen.
 * Die Standard Fiori Apps und die dahinterliegenden Standard APIs sollen erweitert werden.
 * Für Custom Apps sollten zunächst Fiori Elements und Standard APIs (basierend auf RAP) verwendet werden. Der nächste Schritt wären dann Freestyle Fiori Apps. 
 * Weitere Lösungswege: Cloud Native Applikationen in einem Cloud-Umgebung (Side-by-Side Extensibility). Low-/No-Code Plattformen und das SAP Build Portfolio bieten weitere Lösungsansätze.
 
-#### **Schnittstellen**
+#### Schnittstellen
 * Es werden nur Clean Core konforme, freigegebene Schnittstellen verwendet.
 * Erweiterungen werden an APIs / Microservices vorgenommen, um die Funktionalität von SAP zu erweitern, ohne die Integrität des Kernsystems zu beeinträchtigen.
 * Die Integration nach außen muss klar geregelt sein, Prozessintegration und Middleware für das API-Management müssen vorhanden sein.
@@ -232,7 +232,7 @@ Wenn Sie den SAP-Standard verändern möchten, beachten Sie die folgenden Regeln
 
 ### DOs and DON'Ts bei Modifikationen
 
-### **DO**
+### DO
 - **SAP-Code öffnen und einen Enhancement-Spot anlegen**:  
   - Legen Sie in der Modifikation einen **Enhancement-Spot** an.  
   - Nutzen Sie alle Vorteile der Enhancements, z. B. die Trennung von Standard- und kundeneigenem Code, sowie die Speicherung im **Z-Paket**.  
@@ -245,7 +245,7 @@ Wenn Sie den SAP-Standard verändern möchten, beachten Sie die folgenden Regeln
     - Auswirkungen auf zukünftige Updates.  
     - Getestete Szenarien.  
 
-### **DON'T**
+### DON'T
 - **Geschäftsprozesslogik direkt in der Modifikation schreiben**:  
   - Derartige Änderungen erschweren zukünftige Wartungen und Tests.  
 - **Kopieren von SAP-Standardcode**:  
