@@ -44,7 +44,7 @@ Erfinden Sie das Rad nicht neu, insbesondere nicht mit ABAP Legacy Tools. Evalui
 
 ## Nachteile des Clean Core Ansatzes
 
-Seieh auch Kapitel [Organisation](/clean-core/problems-and-challanges)
+Siehe auch Kapitel [Organisation](/clean-core/problems-and-challanges)
 
 ### Wirtschaftlichkeit
 
