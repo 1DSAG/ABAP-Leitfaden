@@ -24,19 +24,19 @@ Schon seit vielen Jahren gibt es in ABAP die Möglichkeit objektorientiert zu pr
 Und obwohl die oben genannten Nachteile der prozeduralen und Vorteile der Objektorientierten Programmierung bekannt sind, werden auch in aktuellen Projekten weiterhin Funktionalitäten nicht objektorientiert umgesetzt bzw. nicht das volle Potenzial moderner Entwicklungsmethoden genutzt. Dies können z.B. Programme sein, die prozedural implementiert werden, Klassen die objektorientierte Prinzipien nicht umsetzen oder Implementierung von Funktionsbausteinen oder direkte Implementierung von komplexen Code in BAdI-Implementierung direkt ohne weitere Strukturierung 
 
 >**Empfehlungen**  
-***Fordern Sie bei allen Entwicklungen die Umsetzung in ABAP Objects unter Einsatz objektorientierter Methoden ein:***
-- Sämtlicher Code ist in ABAP Klassen unter Einhaltung Objektorientierter Prinzipien zu erstellen
-- Bei der Erfordernis der Implementierung von Reports, Funktionsbausteinen oder Form Routinen (z.B. Formular Form Routinen) sind diese als Wrapper zu sehen und die Logik ist in Klassen zu implementieren, deren Methode(n) in diesen Objekttypen aufgerufen werden. 
-- Trennen Sie die unterschiedlichen Belange der Geschäftsanwendungen in Klassen auf (z.B. Controller Klasse, Datenzugriff, Geschäftslogiken, Prüfungen etc.)
-- Fordern Sie vor der Implementierung ein Konzeptdokument des Entwicklers ein, in dem die Umsetzung beschrieben wird (s. auch Kapitel [**Dokumentation**](/ABAP-Leitfaden/documentation/index)).
+* Fordern Sie bei allen Entwicklungen die Umsetzung in ABAP Objects unter Einsatz objektorientierter Methoden ein
+* Achten Sie auf die Anwendung der SOLID Prinzipien der Objektorientierung
+* Wenden Sie beim Anwendungsdesign die gängigen objektorientierten Designpatterns an. 
+* Trennen Sie die unterschiedlichen Belange der Geschäftsanwendungen in Klassen auf (z.B. Controller Klasse, Datenzugriff, Geschäftslogiken, Prüfungen etc.)
+* Halten Sie die Schnittstellen klein und nutzen Sie die Factory für Übergabe wichtiger Daten an das Objekt
 {: .highlight}
 
 
-Die detaillierte Erläuterung der Objektorientierung und die zahlreichen Möglichkeiten des modernen ABAP können wir in diesem Leitfaden nicht umfämglich abhandeln, möchten Ihnen aber bezüglich des Vorgehens Empfehlungen, Hinweise und Hilfen geben, die den Einstieg erleichtern und einen Überblick über Handlungsfelder geben, die schnell zu Verbesserungen führen können.
+Die detaillierte Erläuterung der Objektorientierung und die zahlreichen Möglichkeiten des modernen ABAP können wir in diesem Leitfaden nicht umfänglich abhandeln, möchten Ihnen aber bezüglich des Vorgehens Empfehlungen, Hinweise und Hilfen geben, die den Einstieg erleichtern und einen Überblick über Handlungsfelder geben, die schnell zu Verbesserungen führen können.
 
 ## Grundlagen und einfache Anwendung von Objektorientierung im ABAP Kontext
 
-Das Thema Objektorientierung ist komplex und viele existierende Funktionalitäten in SAP folgen nicht den Designprinzipien der Objektorientierung, auch dann nicht wenn diese in ABAP-Klassen implementiert sind. Für dieses Kapitel sollten die Grundprinzipien der Objektorientierung bereits bekannt sein.    
+Das Thema Objektorientierung ist komplex und viele existierende Funktionalitäten in SAP folgen nicht den Designprinzipien der Objektorientierung, auch dann nicht wenn diese in ABAP-Klassen implementiert sind. Für dieses Kapitel sollten die Grundprinzipien der Objektorientierung bereits bekannt sein.  
 Die Hinweise und Tipps erfolgen hier in sehr vereinfachter Form. Es soll ein Vorgehen aufzeigen um die Objektorientierung nutzbringend anzuwenden und unsere Empfehlungen praxisorientiert untermauern.  
 Dies ist ein Anfang und kann helfen das Verständnis für ABAP-OO in den Entwicklerteams zu schaffen, erste Erfolgserlebnisse zu erzielen und mittels weitere Unterstützung durch Trainings, Dokumentation und Literatur und Coachings das Thema nachhaltig in der Organisation gewinnbringend zu nutzen.
 
@@ -44,10 +44,10 @@ Dies ist ein Anfang und kann helfen das Verständnis für ABAP-OO in den Entwick
 
 Eine Klasse bildet eine spezielle (Teil-)Aufgabe ab, die in überschaubaren Methoden implementiert wird.  
 Eine ABAP-Klasse besteht aus Attributen, die Werte speichern können oder Konstanten sein können. 
-Es es gibt Methoden, die Funktionen implementieren und in *Public*, *Protected* und *Private* Methoden unterteilt sind. Man kann auch Klassenspezifische Typen definieren, die in der Klasse aber auch von Aufrufern verwendet werden können (wenn in Public Section definiert).    
+Es es gibt Methoden, die Funktionen implementieren und in *Public*, *Protected* und *Private* Methoden unterteilt sind. Man kann auch Klassenspezifische Typen definieren, die in der Klasse aber auch von Aufrufern verwendet werden können (wenn in Public Section definiert).  
 Darüber hinaus definieren Klassen weitergehende Eigenschaften wie Paketzugehörigkeit und die Art der Instanziierbarkeit und ggf. Vererbungsinformationen.  
 Oft werden ABAP-Klassen als eine moderne Form von Funktionsbausteinen betrachtet, dieser Vergleich wird den Möglichkeiten einer Klasse nicht gerecht.
-Der Entscheidende Unterschied ist die Instanziierbarkeit, d.h. es können für Klassen mehrere Objekte im gleichen Programmkontext erzeugt werden.   
+Der Entscheidende Unterschied ist die Instanziierbarkeit, d.h. es können für Klassen mehrere Objekte im gleichen Programmkontext erzeugt werden.  
 Bei einer Klasse, die nur statische Methoden beinhaltet und in der Verwendung nicht instanziiert wird, handelt es sich somit nicht bereits um vollumfängliche Objektorientierte Programmiermethodik.  
 Klassen sollten eher übersichtlich gestaltet werden und Methoden mit einer Länge von bis max ~150 Zeilen besitzen. Ebenso sollten die Klassen nicht zu viele Methoden besitzen. Die Größenbeschränkung zwingt dazu, Aufgaben in verschiedene Klassen zu delegieren. Damit sind die einzelnen Klassen weniger Komplex, die Komplexität verschiebt sich damit je nach Anwendung in das Klassengeflecht und dem Zusammenspiel der einzelnen Klassen.  Dieses Zusammenspiel und die übergeordnete Logik wird in einem **Controller** gebündelt.  
 Um hier nicht einfach eine Komplexitätsverschiebung zu erhalten, bedarf es guter Überlegung und eines entsprechenden Paketdesigns und guter Grobplanung der Anwendung. 
@@ -103,15 +103,9 @@ nur eine kurze Übersicht der Prinzipien, eine ausführliche Erklärung findet s
   </dd>
 </dl>
 
->**Empfehlungen**  
-* Erstellen Sie ein Konzeptdokument der zu erstellenden Klassen mit deren Aufgaben und deren Zusammenwirken.
-* Übertragen Sie die Erstellung von Objektinstanzen bei kleinen Anwendungen den einzelnen Klassen mittels einer Factory Methode
-* Verwenden Sie bei komplexeren Anwendungen mit mehreren Klassen eine Factory Klasse, die die Objektbeziehungen verwaltet 
-* Teilen Sie die Teilfunktionalitäten in einzelne Klassen auf.
-* Halten Sie die Schnittstellen klein und nutzen Sie die Factory für Übergabe wichtiger Daten
-* Achten Sie auf die Anwendung der Solid Prinzipien
-... **Bitte mal checken ob so der Stil in die richtige Richtung geht**
-{: .highlight}
+## Entwurfsmuster
+In der Objektorientierung gibt es zahlreiche Entwurfsmuster (Design Pattern), die für verschiedene Problemstellungen und Anwendungsfälle bereits vorgefertigte und erprobte softwaretechnische Mechanismen bieten, die auch in ABAP umgesetzt werden können. Auch hier können wir leider nicht Detail darauf eingehen, im Internet und der Fachliteratur finden sie zahlreiche Möglichkeiten sich dem Thema Anzunähern und in die Organisation zu bringen.
+
 
 ## Vergleich Vorgehen prozedurale vs. objektorientierter Entwicklung
 ### Ablauf Prozedurale Entwicklung
@@ -139,46 +133,54 @@ Die Details zum ABAP UNIT und wie man Unit Tests erstellt finden Sie im Kapitel 
 #### Erstellung eines Konstruktors pro Klasse 
 Jedes Objekt sollte eine Factory methode haben und die Übergabe nötiger parameter erfolgt über den Konstruktur in die Klasse. Die Factory Methode der Klasse wird dann in der Factory Klasse gerufen. 
 
-#### Beispiel: Verschalung des Customizing in der Factory Methode
-Die Customizing Klasse kann nun so gestaltet werden, dass in der Factory Methode die Customizing Tabelle geprüft wird und nur im Falle eines vorhandenen Eintrages in der Tabelle zu den Parametern, eine Instanz an den Aufrufer übergeben wird. Damit muss der Aufrufer nicht mehr die Prüfung übernehmen, sondern durch Abfrage der Objektinstanz kann ermittelt werden, ob eine Funktion aufgerufen werden soll. Damit vereinfacht sich der Code der Geschäftslogik und die Komplexität des Customizing wird verschalt.  
+#### Beispiel: Verschalung des Customizing in der Factory Methode Issue+117
+Die Customizing Klasse kann nun so gestaltet werden, dass in der Factory Methode die Customizing Tabelle geprüft wird und nur im Falle eines vorhandenen Eintrages in der Tabelle zu den Parametern, eine Instanz an den Aufrufer übergeben wird. Damit muss der Aufrufer nicht mehr die Prüfung übernehmen, sondern durch Abfrage der Objektinstanz kann ermittelt werden, ob eine Funktion aufgerufen werden soll. 
+**Thema: Macht man das so oder ist das ein gutes Pattern? Oder wenn kein Customizing dann exception rufen? ***s
+Damit vereinfacht sich der Code der Geschäftslogik und die Komplexität des Customizing wird verschalt.  
 Einzelne Parameter des Customizings können in Attributen der Customizing Klasse vorgehalten werden und mittels sog. Getter-Methoden bei Bedarf in anderen zugehörigen Klassen abgefragt werden.  
 Da über die Factory dem Objektkonstrukt die Customizing Instanz bekannt ist und bei Bedarf diese in anderen Objekten als Attribut abgelegt werden kann, ist der Zugriff auf das Customizing standardisiert im gesamten Konstrukt ohne redundanten Code möglich.    
 Dies bedeutet einen initialen Erstellungsaufwand, der sich aber bei Änderungen und Ergänzungen auszahlt, da auf vorhandene Services effizient und aufwandslos zugegriffen werden kann und fehleranfällige Coderedundanzen nicht mehr erforderlich sind.
-*--- eigentlich voll cool --- muss aber noch knackiger beschreiben werden und ggf. kleine Grafik zur besseren Veranschaulichung*
 
 Die Erstellung der zahlreichen Objekte erscheint deutlich aufwändiger als der Top-Down Ansatz beim prozeduralen Vorgehen. Man gewinnt hier aber durch die Aufteilung der Funktionen gemäß der Verantwortlichkeiten eine deutlich höhere Flexibilität und Robustheit und durch die Mechanismen eine Form der Automatisierung.  
 Ist dieses Muster erst einmal eingeübt, übertreffen die Vorteile dieses Verfahrens den Nachtteil des vermeintlich erhöhten initialen Aufwands bei weitem.
 
 Die Effizienz kann ergibt sich allerdings nur durch den Einsatz der ABAP Development Tools in Eclipse (ADT). Mittels Autovervollständigung, Nutzung von Code Templates und Quickfixes kann viel Code sehr schnell und einfach erstellt werden, wodurch sich der Mehraufwand sehr in Grenzen hält.  
 Natürlich muss dass Vorgehen auch eingeübt werden um eine gewisse Entwicklungsperformanz und -effizienz zu entwickeln.   
-Bitte beachten Sie hierzu den ADT-Leitfaden der DSAG, der Sie unterstützt, ADT effizient und flächendeckend im Unternehmen einzusetzen.
+Bitte beachten Sie hierzu den ADT-Leitfaden der DSAG, der Sie unterstützt, ADT effizient und flächendeckend im Unternehmen einzusetzen * **Link**.
 
 ## Weitere Konzepte in der Objektorientierung
 Neben den Grundlagen, gibt es weitere Konzepte und Techniken, durch deren Einsatz erst der volle Mehrwert der Objektorientierung zum Einsatz kommt und auch komplexe Problemstellungen elegant gelöst werden können, was mit klassischen Technologien deutlich aufwändiger oder gar nicht möglich war. Auch hier können wir in der ersten Version des neuen Leitfadens nur in sehr kurzer Form hinweisen. In der ABAP Dokumentation und in Trainings und Büchern finden Sie weitere Informationen.
 
-### Fehlerbehandlung mit Exceptions
+### Fehlerbehandlung mit Ausnahmeklassen
 Während bei Funktionsbausteinen und Programmen die Fehlerbehandlung mittels Exception Codes oder Parametern oder Messages gelöst wurden und so sich in den Parameterschnittstellen wiedergefunden haben, verwendet man in der Objektorientierung die sogenannten Klassenbasierten Exceptions.  
-Ein in OO geübter Entwickler definiert in der Konzeptionsphase die auftretenden Fehlersituationen, die in einem (Unter)Paket auftreten können und erstellt darauf basierend die entsprechenden Exceptionklassen mit den Fehlermeldungen (als Text-ID oder Nachrichtenbasiert).
+Ein in OO geübter Entwickler definiert in der Konzeptionsphase die auftretenden Fehlersituationen, die in einem (Unter)Paket auftreten können und erstellt darauf basierend die entsprechenden Ausnahmeklassen mit den Fehlermeldungen (als Text-ID oder Nachrichtenbasiert).
 Wenn der Code der Geschäftslogik implementiert wird und die Fehler behandelt werden müssen, wird an der betreffenden Stelle die Exception aufgerufen. Die Behandlung muss nun nicht wie bei Funktionsbausteinen in jeweils jeder Aufrufschicht erfolgen, sondern kann zentral an einer Stelle erfolgen.   
 Dies gewährleistet eine konsistente Behandlung und vermindert den Aufwand wenn Fehler an mehreren Stellen auftreten können.
 
 ### Interfaces 
 Durch den Einsatz von Interfaces wird die Definition von Methoden und deren Implementierung voneinander entkoppelt. Wird ein Interface verwendet, kann die Implementierung der Klasse geändert, bzw, flexibilisiert werden. Das Interface definiert sozusagen den Vertrag zwischen Verwender und implementierender Klasse.
-Interfaces werden bei UNIT-Tests benötigt, da z.B. Datenbankzugriffe in Unit Tests durch programmierte Testdaten ersetzt werden müssen. Die Datenbankklasse implementiert ein Interface, das im Produktcode aufgerufen wird. Wird der Unit-Test ausgeführt, wird statt der Datenbankklasse, eine sog. Mockklasse aufgerufen, die statisch hinterlegte Daten behinhaltet und zurückliefert oder Das OSQL Framework nutzt um die Datenbankabfragen im Test zu simulieren.  
+Interfaces werden bei UNIT-Tests benötigt, da z.B. Datenbankzugriffe in Unit Tests durch programmierte Testdaten ersetzt werden müssen. Die Datenbankklasse implementiert ein Interface, das im Produktcode aufgerufen wird. Wird der Unit-Test ausgeführt, wird statt der Datenbankklasse, eine sog. Mockingklasse aufgerufen, die statisch hinterlegte Daten beinhaltet und zurückliefert oder Das OSQL Framework nutzt um die Datenbankabfragen im Test zu simulieren.  
 Die Ausführungen dazu finden Sie im Kapitel [**Testing**](/ABAP-Leitfaden/testing/index).
 
 ### Vererbung
 Ein wichtiges Konzept in der Objektorientierung ist die Vererbung. Dabei kann eine Klasse von einer anderen Klasse abgeleitet werden und somit die Eigenschaften der übergeordneten Klasse erben. So hat eine erbende Klasse die Attribute und Methoden der übergeordneten Klasse, kann aber weitere spezifische Methoden ergänzen oder ererbte Methoden redefinieren, d.h. eine Ergänzung der vererbten Implementierung oder gar eine eigene Implementierung der Methode erhalten.  
 Bei der Vererbung ist das Liskovsche Substitutionsprinzip zu beachten und genau zu prüfen, ob im vorgesehenen Kontext Vererbung Sinn macht. Oft ist es besser statt Vererbung Interfaces zu verwenden oder die Methode der Delegation zu verwenden und verschiedene Aspekte einer Klasse auf verschiedene Klassen zu verteilen und das Zusammenspiel über einen Controller und die Instanzen über eine Factory zu regeln.  
 
+### Was tun wenn Funktionen in Funktionsbausteinen oder anderen klassischen Artefakten umgesetzt werden müssen
+Manmchmal ist es erforderlich, dass Funktionalitäten in vorgegebenen Artefakten umgesetzt werden müssen. Z.B. Funktionsbausteine in AIF, Remote Funktionsbausteine, Form Interface Routinen bei Adobe Forms usw.
+In diesem Fall dienen diese Entwicklungsobbjekte als Verschalung und rufen die eigentliche Funktionalität nur auf, die dann in ABAP Klassen und deren Methoden implementiert ist. Der Code in diesen Entwicklungsobjekten sollte sich nur auf technisches Coding beschränken wie z.B. Datenzuordnungen, Objektinstanziierung oder minimale Prüfungen.   
+Dies bietet wiederum den Vorteil von möglicher Wiederverwendung und Implementierung von Unit Test.
+
 ### Hab ich was vergessen ? 
 CHECKPOINT -> Empfehlungen prüfen
 
+# Die Rolle der Organisation
+
 ### 
 Wie Sie an den Ausführungen sehen können, ist es unabdingbar für moderne und flexible Softwareanwendungen neben einem guten Paketdesign auch ein gutes Design der einzelnen Softwarekomponenten unter Anwendung moderner Softwareentwicklungsmethodiken einzufordern und umzusetzen.  
-Dazu muss es Instanzen geben, die diese Aspekte verantworten, definieren und auch für die Umsetzung in der täglichen Arbeit sorgen.  
+Die Objektorientierung ist ein grosses und komplexes Thema dass sich nicht kurzfristig erschliessen lässt, sondern einiges an Erfahrung benötigt um gute objektorientierte Software zu erstellen. Daher ist es wichtig, dass die Entwicklungsorganisation sich intensiv darum kümmert, die Entwickler gut aus- und weiterzubilden, Anreize zu schaffen neues Auszuprobieren und durch Anwendung moderner Methoden wie z.B. Pairprogramming kann die Etablierung moderner Entwicklung gelingen.  
+Und es muss Instanzen geben, die diese Aspekte verantworten, definieren und auch für die Umsetzung in der täglichen Arbeit sorgen.  
 Ein Upskilling und die Motivation der Entwickler ist ein unabdingbarer Erfolgsfaktor.  Dafür braucht es Rahmenbedingungen die im Unternehmen und in der täglichen Arbeit der Entwickler gegeben sein müssen. 
 Wertvolle und ausführliche Informationen finden Sie im Kapitel [Organisation](/ABAP-Leitfaden/organization/index))
 
-
-
+Bitte lesen Sie für Informationen und Empfehlungen hierzu das Kapitel [**Organisation**](/ABAP-Leitfaden/organization/index) 
