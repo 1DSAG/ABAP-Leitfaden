@@ -1,0 +1,24 @@
+{
+  "version": "0.2",
+  "language": "de,en",
+  "enabledLanguageIds": [
+    "markdown"
+  ],
+  "minWordLength": 2,
+  "allowCompoundWords": true,
+  "words": [
+    "ABAP",
+    "abapGit",
+    "DSAG",
+    "ERP",
+    "Fiori",
+    "HANA",
+    "OSS",
+    "S/4HANA",
+    "SAP"
+  ],
+  "flagWords": [
+    "S4HANA",
+    "S4/HANA"
+  ]
+}

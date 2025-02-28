@@ -2,7 +2,6 @@
 layout: page
 title: Einleitung
 permalink: /introduction/
-next_page_title: Einführung
 nav_order: 0
 ---
 

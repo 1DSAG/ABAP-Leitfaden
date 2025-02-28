@@ -3,11 +3,7 @@ layout: page
 title: Beteiligung an Open Source
 permalink: /open-source/contributing-to-open-source/
 parent: Open Source
-prev_page_link: /open-source/using-open-source/
-prev_page_title: Einsatz von Open Source
-next_page_link: /open-source/developing-open-source/
-next_page_title: Entwicklung von Open Source
-nav_order: 2
+nav_order: 3
 ---
 
 {: .no_toc}

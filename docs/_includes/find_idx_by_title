@@ -1,0 +1,16 @@
+{%- comment -%}
+This include has two parameters:
+title:  title of page to search for
+pages:  array of pages to search
+
+It will either print the index of the page with provided title in the given array, or nothing.
+
+You can use the result by capturing it.
+{%- endcomment -%}
+
+{%- for _p in include.pages -%}
+    {%- if _p.title == include.title -%}
+        {{ forloop.index0 }}
+        {%- break -%}
+    {%- endif -%}
+{%- endfor -%} 
