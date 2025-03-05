@@ -133,9 +133,10 @@ Die Details zum ABAP UNIT und wie man Unit Tests erstellt finden Sie im Kapitel 
 #### Erstellung eines Konstruktors pro Klasse 
 Jedes Objekt sollte eine Factory methode haben und die Übergabe nötiger parameter erfolgt über den Konstruktur in die Klasse. Die Factory Methode der Klasse wird dann in der Factory Klasse gerufen. 
 
-#### Beispiel: Verschalung des Customizing in der Factory Methode Issue+117
-Die Customizing Klasse kann nun so gestaltet werden, dass in der Factory Methode die Customizing Tabelle geprüft wird und nur im Falle eines vorhandenen Eintrages in der Tabelle zu den Parametern, eine Instanz an den Aufrufer übergeben wird. Damit muss der Aufrufer nicht mehr die Prüfung übernehmen, sondern durch Abfrage der Objektinstanz kann ermittelt werden, ob eine Funktion aufgerufen werden soll. 
-**Thema: Macht man das so oder ist das ein gutes Pattern? Oder wenn kein Customizing dann exception rufen? ***s
+#### Beispiel: Verschalung des Customizing in der Factory Methode (s.Issue #117 - Klärung Pattern)
+Die Customizing Klasse kann nun so gestaltet werden, dass in der Factory Methode die Customizing Tabelle geprüft wird und nur im Falle eines vorhandenen Eintrages in der Tabelle zu den Parametern, eine Instanz an den Aufrufer übergeben wird. Damit muss der Aufrufer nicht mehr die Prüfung übernehmen, sondern durch Abfrage der Objektinstanz kann ermittelt werden, ob eine Funktion aufgerufen werden soll.  
+**Thema: Macht man das so oder ist das ein gutes Pattern? Oder wenn kein Customizing dann exception rufen? ***
+
 Damit vereinfacht sich der Code der Geschäftslogik und die Komplexität des Customizing wird verschalt.  
 Einzelne Parameter des Customizings können in Attributen der Customizing Klasse vorgehalten werden und mittels sog. Getter-Methoden bei Bedarf in anderen zugehörigen Klassen abgefragt werden.  
 Da über die Factory dem Objektkonstrukt die Customizing Instanz bekannt ist und bei Bedarf diese in anderen Objekten als Attribut abgelegt werden kann, ist der Zugriff auf das Customizing standardisiert im gesamten Konstrukt ohne redundanten Code möglich.    
@@ -145,8 +146,8 @@ Die Erstellung der zahlreichen Objekte erscheint deutlich aufwändiger als der T
 Ist dieses Muster erst einmal eingeübt, übertreffen die Vorteile dieses Verfahrens den Nachtteil des vermeintlich erhöhten initialen Aufwands bei weitem.
 
 Die Effizienz kann ergibt sich allerdings nur durch den Einsatz der ABAP Development Tools in Eclipse (ADT). Mittels Autovervollständigung, Nutzung von Code Templates und Quickfixes kann viel Code sehr schnell und einfach erstellt werden, wodurch sich der Mehraufwand sehr in Grenzen hält.  
-Natürlich muss dass Vorgehen auch eingeübt werden um eine gewisse Entwicklungsperformanz und -effizienz zu entwickeln.   
-Bitte beachten Sie hierzu den ADT-Leitfaden der DSAG, der Sie unterstützt, ADT effizient und flächendeckend im Unternehmen einzusetzen * **Link**.
+Natürlich muss dass Vorgehen auch eingeübt werden um eine gewisse Entwicklungsperformanz und -effizienz zu entwickeln.  
+Bitte beachten Sie hierzu den **[ADT-Leitfaden](https://1dsag.github.io/ADT-Leitfaden/)** der DSAG, der Sie unterstützt, ADT effizient und flächendeckend im Unternehmen einzusetzen.
 
 ## Weitere Konzepte in der Objektorientierung
 Neben den Grundlagen, gibt es weitere Konzepte und Techniken, durch deren Einsatz erst der volle Mehrwert der Objektorientierung zum Einsatz kommt und auch komplexe Problemstellungen elegant gelöst werden können, was mit klassischen Technologien deutlich aufwändiger oder gar nicht möglich war. Auch hier können wir in der ersten Version des neuen Leitfadens nur in sehr kurzer Form hinweisen. In der ABAP Dokumentation und in Trainings und Büchern finden Sie weitere Informationen.
@@ -171,12 +172,12 @@ Manmchmal ist es erforderlich, dass Funktionalitäten in vorgegebenen Artefakten
 In diesem Fall dienen diese Entwicklungsobbjekte als Verschalung und rufen die eigentliche Funktionalität nur auf, die dann in ABAP Klassen und deren Methoden implementiert ist. Der Code in diesen Entwicklungsobjekten sollte sich nur auf technisches Coding beschränken wie z.B. Datenzuordnungen, Objektinstanziierung oder minimale Prüfungen.   
 Dies bietet wiederum den Vorteil von möglicher Wiederverwendung und Implementierung von Unit Test.
 
-### Hab ich was vergessen ? 
-CHECKPOINT -> Empfehlungen prüfen
+### TODO before Review ? 
+CHECKPOINT -> Empfehlungen prüfen - was fehlt? 
 
 # Die Rolle der Organisation
 
-### 
+*** Vielleicht noch in der Einleitung zu ABAP oder am Schluss? ***
 Wie Sie an den Ausführungen sehen können, ist es unabdingbar für moderne und flexible Softwareanwendungen neben einem guten Paketdesign auch ein gutes Design der einzelnen Softwarekomponenten unter Anwendung moderner Softwareentwicklungsmethodiken einzufordern und umzusetzen.  
 Die Objektorientierung ist ein grosses und komplexes Thema dass sich nicht kurzfristig erschliessen lässt, sondern einiges an Erfahrung benötigt um gute objektorientierte Software zu erstellen. Daher ist es wichtig, dass die Entwicklungsorganisation sich intensiv darum kümmert, die Entwickler gut aus- und weiterzubilden, Anreize zu schaffen neues Auszuprobieren und durch Anwendung moderner Methoden wie z.B. Pairprogramming kann die Etablierung moderner Entwicklung gelingen.  
 Und es muss Instanzen geben, die diese Aspekte verantworten, definieren und auch für die Umsetzung in der täglichen Arbeit sorgen.  

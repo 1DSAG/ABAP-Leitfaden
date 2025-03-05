@@ -1,6 +1,6 @@
 ---
 layout: page
-title: DELETE___ Rahmenbedingungen sind im Kap. Organisation gut beschrieben .... kommt raus hier
+title: DELETE__ Organisations- und Enabling Themen - s. Kapitel Orga
 permalink: /abap/enabling_modern_development/
 parent: Moderne ABAP Entwicklung
 nav_order: 6

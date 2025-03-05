@@ -16,7 +16,7 @@ nav_order: 2
 
 Die ABAP Entwicklung ist stark im Wandel, insbesondere der Weg der SAP in die Cloud wird auch die ABAP Entwicklung mit deren Tools und Methoden in naher Zukunft weiterhin maßgeblich beeinflussen.  
 In den folgenden Abschnitten wird auf die Anwendung des Paketkonzepts eingegangen, welches auf On-Premise Systemen ab Netweaver Relase 7.4 eingesetzt werden kann.  
-Im Kontext von ABAP Cloud, ist das hier beschriebene Konzept nicht mehr 1:1 anwendbar, da die Paketschnittstellen dort nicht mehr unterstützt werden.   
+Im Kontext von ABAP Cloud, ist das hier beschriebene Konzept nicht mehr 1:1 anwendbar, da die Paketschnittstellen dort nicht mehr unterstützt werden.  
 Das Prinzip der Trennung und Definition von Abhängigkeitsbeziehungen wird in ABAP Cloud mit Softwarekomponenten und API Release Status* abgebildet. Die Umsetzung und Anwendung des hier beschriebenen Prinzips macht in jedem Fall und auf allen Systemständen Sinn. Dies bereitet sowohl die Entwickler, als auch die Entwicklerorganisation auf zukünftige Anforderungen und Erfordernisse vor.  
 
 
