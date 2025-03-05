@@ -14,8 +14,10 @@ nav_order: 2
 
 # Vorbemerkung zum Paketkonzept
 
-Die ABAP Entwicklung ist stark im Wandel, insbesondere der Weg der SAP in die Cloud wird auch die ABAP Entwicklung mit deren Tools und Methodiken in naher Zukunft weiterhin maßgeblich beeinflussen. In den folgenden Abschnitten wird auf die Anwendung des Paketkonzepts eingegangen, welches auf On-Premise Systemen >= 7.4 eingesetzt werden kann. 
-Im Kontext von ABAP Cloud, welches auf neuen Releases auf Paketebene eingestellt werden kann, ist das hier beschriebene Konzept nicht mehr 1:1 anwendbar, da die Paketschnittstellen dort nicht mehr unterstützt werden. Das Prinzip der Trennung und Definition von Abhängigkeitsbeziehungen wird in ABAP Cloud mit Softwarekomponents* und API Release Status* abgebildet. Die Umsetzung und Anwendung des hier beschriebenen Prinzips macht in jedem Fall und auf allen Systemständen Sinn. Dies bereitet sowohl die Entwickler, als auch die Entwicklerorganisation auf zukünftige Anforderungen und Erfordernisse vor.  
+Die ABAP Entwicklung ist stark im Wandel, insbesondere der Weg der SAP in die Cloud wird auch die ABAP Entwicklung mit deren Tools und Methoden in naher Zukunft weiterhin maßgeblich beeinflussen.  
+In den folgenden Abschnitten wird auf die Anwendung des Paketkonzepts eingegangen, welches auf On-Premise Systemen ab Netweaver Relase 7.4 eingesetzt werden kann.  
+Im Kontext von ABAP Cloud, ist das hier beschriebene Konzept nicht mehr 1:1 anwendbar, da die Paketschnittstellen dort nicht mehr unterstützt werden.  
+Das Prinzip der Trennung und Definition von Abhängigkeitsbeziehungen wird in ABAP Cloud mit Softwarekomponenten und API Release Status* abgebildet. Die Umsetzung und Anwendung des hier beschriebenen Prinzips macht in jedem Fall und auf allen Systemständen Sinn. Dies bereitet sowohl die Entwickler, als auch die Entwicklerorganisation auf zukünftige Anforderungen und Erfordernisse vor.  
 
 
 *(SWC und API Release status = Klärung mit SAP zur genauen Benennung und Begriffsdefiniton)*
@@ -50,6 +52,7 @@ SAP hat in ABAP wie in anderen Programmiersprachen wie JAVA üblich, auch in ABA
 -  Machen Sie während des Entwicklungsprozesses regelmässig Paketchecks um Abhängigkeiten zu erkennen  
 - Entfernen Sie nicht sichtbare Objekte durch Ersatz von sichtbaren Objekten oder Eigendefinition wenn möglich  
 - Nehmen Sie gewünschte Abhängigkeiten in den Verwendungsnachweis auf. 
+- Vermeiden Sie die Erstellung sehr grosser Pakete oder "Sammelpakete" die zahlreiche unabhängige Funktionen bündeln.
 {: .highlight}
 
 ## Grundlagen und Begriffserklärungen zum Paketkonzepts
@@ -128,7 +131,7 @@ Gerade bei Sammlerpaketen kann es sinnvoll sein, bei entsprechender Größe, ein
 
 ### Pakethierarchien
 Mit den oben genannten Methoden und Werkzeugen kann eine gute Softwarearchitektur in SAP über die Pakete mit den Abhängigkeiten dargestellt werden. Die Überlegungen die für ein gutes Paketdesign angestellt werden müssen führen letztlich zu einer guten Anwendungsarchitektur, wenn die Designprinzipien für sauberer Architektur eingehalten werden *(VERwEIS AUF CLEAN ARCHITECTUR oder anders ....)*
-Bei der Gestaltung der Pakete sollte auch immer der Blick auf die Entwicklungen paketübergreifend erfolgen und bei der Anlage neuer bzw. Erweiterung bestehender Pakete geprüft werden, inwieweit die Pakete zueinander passen und zu prüfen ob Eigenentwicklungen eigener Funktionen in verschiedene Pakete getrennt werden soll. Bei komplexeren Systemlandschaften kann es sinnvoll sein, Framework Pakete zu definieren, die Basisfunktionen anbieten, dann Grundfunktionspakete, die die Geschäftslogik abbilden und optionale Add-On Pakete zu erstellen, die unterschiedliche Oberflächentechnologien oder Ausprägungen der Funktionalitäten abbilden. Dadurch entsteht eine Hierarchie von Hauptpaketen, deren Abhängigkeiten über die Paketschnittstellen gut abgebildet und dokumentiert werden können.  Wichtig ist hierbei zu achten, dass die Abhängigkeit immer nur in eine Richtung definiert sein darf. ----
+Bei der Gestaltung der Pakete sollte auch immer der Blick auf die Entwicklungen paketübergreifend erfolgen und bei der Anlage neuer bzw. Erweiterung bestehender Pakete geprüft werden, inwieweit die Pakete zueinander passen und zu prüfen ob Eigenentwicklungen eigener Funktionen in verschiedene Pakete getrennt werden soll. Bei komplexeren Systemlandschaften kann es sinnvoll sein, Framework Pakete zu definieren, die Basisfunktionen anbieten, dann Grundfunktionspakete, die die Geschäftslogik abbilden und optionale Add-On Pakete zu erstellen, die unterschiedliche Oberflächentechnologien oder Ausprägungen der Funktionalitäten abbilden. Dadurch entsteht eine Hierarchie von Hauptpaketen, deren Abhängigkeiten über die Paketschnittstellen gut abgebildet und dokumentiert werden können.  Wichtig ist hierbei zu achten, dass die Abhängigkeit immer nur in eine Richtung definiert sein darf.
 
 Ein anderer Anwendungsfall wäre z.B. die selbe Funktionalität für verschiedene Releases bereitzustellen, wobei die Kernfunktion in einem Paket und die Differenzierungen, die sich durch das Release (ERP / S/4HANA) ergeben, in unterschiedlichen Hauptpaketen implementiert sind.
 
@@ -149,7 +152,7 @@ Soll Software Systemübergreifend transportiert werdem, sollte das Erstellen der
 Ist eine Softwarekomponente gut strukturiert, lassen sich Ergänzungen, Änderungen, Erweiterungen und Korrekturen besser durchführen als in dem Fall wenn eine Anwendung sich aus lose zusammengestellten und in einem großen ungeordneten Paket befindlichen Objekten besteht, in dem andere Objekte für andere Funktionen enthalten sind. Somit ergibt sich bei guter Strukturierung auch eine erhöhte Flexibilität. Insbesondere wenn Funktionalitäten im Laufe des Lebenszyklus wachsen und der Umfang wächst, kann es erforderlich sein, die Struktur anzupassen und ggf. Funktionalitäten in globalere Pakete auszulagern um Wiederverwendbarkeit zu erlangen oder im umgekehrten Fall, mehrere kleinere Anwendungen in ein Hauptpaket zusammenzufassen.  ...
 
 # Weitere Aspekte
-Wir haben hier grundlegende Aspekte der Nutzung des Paketkonzepts beschrieben, die ihnen helfen soll, die Vorteile gut strukturierter Pakete zu erkennen, aber auch sehr konkret Hilfestellung gegeben, wie ein Paketkonzept praxisorientiert umgsetzt werden kann.  
+Wir haben hier grundlegende Aspekte der Nutzung des Paketkonzepts beschrieben, die ihnen helfen soll, die Vorteile gut strukturierter Pakete zu erkennen, aber auch sehr konkret Hilfestellung gegeben, wie ein Paketkonzept praxisorientiert umgesetzt werden kann.  
 Dies ist nur der Anfang und es gibt einige Aspekte auf die in dieser Version nicht eingegangen werden kann, da dies den Umfang des Leitfadens übersteigen würde. Folgende Aspekte sind relevant und sollten im Unternehmen definiert und in den Handbüchern beschrieben werden: 
 + Vermeidung statischer Abhängigkeiten - verschiedene Lösungsansätze (Definition BAdIs / Aufrufe über Funktionsbausteine)
 + Größe von Paketen - Architektonische Grenzen - Abgrenzung - Kosten (Clean Architecture)
@@ -160,4 +163,4 @@ Wenn Sie Interesse an diesen Themen haben, erstellen Sie Issues in unserem Githu
 
 # Von der Architektur zum Design
 Nachdem mit den hier genannten Ausführungen die Voraussetzung für eine gute Architektur geschaffen wurden, die sich in der Paketstruktur wiederfindet, muss nun anschließend in den einzelnen Unterpaketen die Anwendungsarchitektur in konkreter Form von Klassen definiert/designed werden. Die Ausführungen hierzu finden Sie im folgenden Abschnitt:
- [Design von ABAP Anwendungen mit OO ](/ABAP-Leitfaden/abap/oo-design#design-und-erstellung-von-abap-entwicklungen-mit-abap-oo).
+ [Design von ABAP Anwendungen mit OO](/ABAP-Leitfaden/abap/oo-design#design-und-erstellung-von-abap-entwicklungen-mit-abap-oo).
