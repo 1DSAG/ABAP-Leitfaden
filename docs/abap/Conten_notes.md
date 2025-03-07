@@ -15,7 +15,7 @@ nav_order: 7
 check ob nicht voll in Test schon drin ... Connect Design zu test ... noch checken.  
 Passt gut zu Softwaredesign (OO) Abschnitt - Aber nur Basis und Verweis auf Testkapitel ...
  
-*** TEXTSAVER ****
+*** TEXTSAVER - ****
 # Testbarkeit - besserer Titel und Bezug zum Testkapitel herstellen - ist mehr Teaser hier
 Wenn die Grundlagen einer guten Softwarearchitektur und eines guten Designs gegeben sind, sind auch die Voraussetzungen gegeben um die Methodik des Unit Tests anzuwenden.  Ein Punkt der oft verhindert ABAP-UNIT einzusetzen ist neben mangelnder OO Kenntnisse das Problem des Zeitaufwands und der Diskrepanz der zur Verfügung stehenden Zeit. Hier erfordert es einige Anstrengungen, gute Kenntnisse und hohe Motivation im Entwicklerteam um UNIT Tests nicht nur vereinzelt anzuwenden.  
 
@@ -30,3 +30,31 @@ Ziel einer modernen Anwendungsarchitektur ist es, eine Anwendung in kleine, abgr
 Das Schreiben der UNIT-Tests und der benötigten Mocks und Testdaten erfordert einiges an Aufwand. Die Bereitstellung einer testbaren Version verzögert sich durch den Aufwand der sich durch die Erstellung des Objektgeflechts und der Testartefakte ergeben.    
 
 Im Gegenzug entsteht der sogenannte Produktcode, der die Logik enthält anschließend fast von selbst. Die Erkenntnisse, die sich beim Design der Testdaten und der Tests ergeben, führen dazu, dass viele Situationen und Fragestellungen der Anwendung sich schon frühzeitig ergeben und vorab geklärt werden und über die automatisieren Tests abgedeckt werden können. Viele Fehler werden frühzeitig während der Entwicklung entdeckt und behoben und müssen nicht erst durch die Fachabteilung entdeckt werden. Die Anwendung wird damit robuster und ausgereifter als sie es ohne die Unit Test Erstellung wäre und somit entfallen auch zahlreiche Transportzyklen von Entwicklungs- in Test- oder gar Produktivsysteme.
+
+
+# Notebook: Reihenfolge der Kapitel:
+- Einleitung - klar was sonst  
+
+**Strategie Blocks**
+- Organisation - Rahmenbedingungen und Grundsätze, die in den einzelnen Kapiteln wieder aufgegriffen werden
+- Clean Core - Basis Strategie - wie und mit welchen Prinzipien will man entwicklen (wie clean)
+
+**Technologie Block**
+- Core Data Service (vor ABAP, weil benötigt in ABAP zum Datenzugriff und anderes Programmiermodell) 
+- ABAP -  Basis der Programmierung
+- UI
+- Testen - Software tests - braucht wiederum ABAP wegen OO und so
+- Formulare
+- Dokumentation - Doku der Entwicklung - ABAP DOC nich ausführlicher
+
+**Übergreifende Themen**
+- Integration
+- Sicherheit
+- Open Source
+- ALM  (alm und VW mergen in Softwaremanagment)
+- Versionsverwaltung
+- KI
+
+
+Textsave Cloud SWC
+Als transportierbare Einheit fungiert in der Cloud die Softwarekomponente. In dieser können Access Permissions (Verwendungserlaubnisse) für andere Softwarekomponenten erteilt werden, bzw. in Abhängigkeiten die Softwarekomponenten beschrieben werden, zu denen eine Abhängigkeit besteht.
