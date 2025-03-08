@@ -22,7 +22,8 @@ Dem Leitfaden liegen implizit die Grundlagen der [ABAP-Programmierrichtlinien](h
 ABAP ist die Programmiersprache im SAP Umfeld und wird von zahlreichen Entwicklern seit langem umfangreich eingesetzt. Seit den Anfängen von ABAP als Berichtsprogrammiersprache hat sich, wie generell in der IT, sehr viel getan und insbesondere in den letzten Jahren hat sich auch ABAP umfassend weiterentwickelt, insbesondere durch die Einführung von S/4HANA.  
 
 ABAP hat den Vorteil, dass mit geringen Aufwand und ohne tiefgreifende Kenntnisse in Programmierung schnell Anforderungen umgesetzt werden können, sofern sie nicht komplexerer Natur sind. Somit kann sich die Umsetzung von Anforderungen in ABAP ohne zahlreiche Zwischenschritte an den Geschäftsanforderungen orientieren. Dieser Geschäftsprozessorientierte Einsatz von ABAP findet sich  mannigfaltig im Unternehmen und viele ABAP-Programmierer sind über den Weg von Customizing, Erstellung einfacher Reports, Debugging, Implementierung von User-Exits usw. in die ABAP-Welt eingestiegen.  
-Im Jahr 2025, wo viele Unternehmen den Sprung auf S/4HANA bereits angehen oder angehen werden, sind die neuen Technologien, Methoden und Tools noch nicht in dem Umfang im Einsatz wie es beim klassischen ABAP der Fall ist. Hier steht für die ABAP-Entwicklung" eine Transformation an, die sowohl für den Entwickler als auch für das Unternehmen herausfordernd ist.  
+Im Jahr 2025, wo viele Unternehmen den Sprung auf S/4HANA bereits angehen oder angehen werden, sind die neuen Technologien, Methoden und Tools noch nicht in dem Umfang im Einsatz wie es beim klassischen ABAP der Fall ist. Hier steht für die ABAP-Entwicklung" eine Transformation an, die sowohl für den Entwickler als auch für das Unternehmen herausfordernd ist.
+
 Der Leitfaden im Generellen und dieses Kapitel in Bezug zu ABAP möchte hier Hilfestellung geben und den Weg erleichtern.
 Der Weg zur Erstellung moderner Anwendungen ist kein Leichter und es ist eine Investition, deren Ertrag nicht sofort anfällt. Weshalb es sich aber lohnt diese Reise anzugehen und Reisetipps finden sie auf den folgenden Seiten. 
 Dieses Kapitel teilt sich in folgende Abschnitte auf:
@@ -41,9 +42,16 @@ Dieses Kapitel teilt sich in folgende Abschnitte auf:
     Die Empfehlungen der vorigen Abschnitte gelten für alle Entwicklungen in SAP, deren Umsetzung sind aber eine gute Grundlage, um für die Anwendungsentwicklung mit RAP gerüstet zu sein.  
     Empfehlungen zu RAP und das Vorgehen bei Entwicklung von RAP Applikationen finden Sie in diesem Kapitel.
 
-Für eine effiziente Transformation der Organisation und der Entwickler zu moderner SAP Entwicklung braucht es Rahmenbedingungen und ein Enabling der Entwicklungsteams.  
-Ausführliche Empfehlungen und Hintergründe hierzu finden Sie im Kapitel [**Organisation**](/ABAP-Leitfaden/organization/index) dieses Leitfadens.
+## Die Rolle der Organisation
 
+Wie Sie an den folgenden Ausführungen sehen werden, ist es unabdingbar für moderne und flexible Softwareanwendungen, neben einem guten Paketdesign auch ein gutes Design der einzelnen Softwarekomponenten unter Anwendung moderner Softwareentwicklungsmethodiken einzufordern und umzusetzen.  
+Die Objektorientierung ist ein grosses und komplexes Thema, dass sich nicht kurzfristig erschliessen lässt, sondern einiges an Erfahrung benötigt um gute objektorientierte Software zu erstellen.  
+Für eine effiziente Transformation der Organisation und der Entwickler zu moderner SAP Entwicklung braucht es Rahmenbedingungen und ein Enabling der Entwicklungsteams.  
+Entwicklungsvorgaben, Richtlinien, Prinzipien,  Handbücher und Kontrollmechanismen alleine sind nicht ausreichend, um die Techniken und Methoden moderner Softwareentwicklung im ABAP-Umfeld in den Entwicklungsalltag und somit "auf die Straße" zu bringen.  
+Es wichtig, dass die Entwicklungsorganisation sich intensiv darum kümmert, die Entwickler gut aus- und weiterzubilden, Anreize zu schaffen neues Auszuprobieren und auch anzuwenden. Dafür müssen Rahmenbedingungen geschaffen werden und manche Vorgehensweisen überdacht werden.  
+Ein Upskilling und die Motivation der Entwickler ist ein unabdingbarer Erfolgsfaktor.  Dafür braucht es Rahmenbedingungen die im Unternehmen und in der täglichen Arbeit der Entwickler gegeben sein müssen.  
+Und es muss Instanzen geben, die diese Aspekte definieren, verantworten und auch für die Umsetzung in der täglichen Arbeit sorgen. Andernfalls fungieren die o.g. organisatorischen Maßnahmen als "zahnloser Tiger", die Organisationsvorgaben und die reale Arbeit weichen signifikant voneinander ab.
+Wertvolle und ausführliche Informationen zu diesen Themen finden Sie im Kapitel [**Organisation**](/ABAP-Leitfaden/organization/index))
 
 ## Zielgruppe des Kapitels  
 Wir sprechen in erster Linie den Personenkreis der ABAP Entwickler und in die ABAP-Entwicklung Involvierte an. Wir möchten aber auch Entscheider und Vorgesetzte von Entwicklungsteams ansprechen, da für die ABAP-Transformation Rahmenbedingungen gegeben sein müssen um auf dieser Reise erfolgreich zu sein. Und dafür möchten wir die Motivation im Unternehmen schaffen indem wir die Vorteile und Praxisempfehlungen hier aufzeigen.
