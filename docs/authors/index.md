@@ -158,8 +158,8 @@ nav_order: 15
 </tr>
 <tr class="odd">
 <td>Peter Luz</td>
-<td>Bosch</td>
-<td>Schreiben, Review</td>
+<td>Robert Bosch GmbH</td>
+<td>Kapitel ABAP Schreiben, Review</td>
 </tr>
 <tr class="header">
 <td>Sebastian Freilinger-Huber</td>
@@ -196,3 +196,15 @@ nav_order: 15
 <tbody>
 </tbody>
 </table>
+
+### Für die Autoren etwas ausführlicher (analog ADT Leitfaden):
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Firma und Jobbezeichnung</th>
+<th style="text-align: left">Kurzbeschreibung eurer Tätigkeiten und Motivation der Mitarbeit am ABAP Leitfaden</th>
+</tr>
+</table>
+
+### Danksagungen
