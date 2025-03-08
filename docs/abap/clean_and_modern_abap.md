@@ -65,9 +65,9 @@ Hierfür müssen von der Organisation entsprechende Bedingungen geschaffen werde
 
 ## Grundlagen sauberer Entwicklung
 
-- [ ] Prinzipien von Clean Code und Clean ABAP
+- [X] Prinzipien von Clean Code und Clean ABAP
 - [X] Ein paar Clean ABAP Regeln zum Einstieg
-- [ ] Nutzung des ABAP Cleaners in ADT
+- [X] Nutzung des ABAP Cleaners in ADT
 
 Dieser Abschnitt gibt eine kurze Auswahl wichtiger Regeln für saubere Entwicklung mit Verweis auf Quellen mit weiteren Informationen wieder.
 
@@ -79,21 +79,12 @@ Ein wichtiges Element von Clean ABAP ist [die richtige Benennung von Entwicklung
 sind lesbar und verständlich, und machen direkt klar, worum es geht. In der alltäglichen ABAP-Entwicklung ist die Versuchung groß, technische Namen der SAP wiederzuverwenden; dies
 kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständlich als `active_status` oder erfordert wenigstens mehr ABAP-Kenntnisse.
 
-### Nutzung von Objektorientierung
-=>TODO zu Architektur verschieben
-{: .label .label-red }
-
-===>>> Verschiebung in Software Design Abschnitt <<<<======= 
-
-....... TEXT wurde Übertragen ...........
-
-===>>> Verschiebung in Software Design Abschnitt <<<<======= 
 
 ## Kommentare 
 
 "Drücke dich durch Code aus - nicht durch Kommentare" 
-Dieses solte einer der Leitsätze beim Scheiben von ABAP sein. Prüfen sie jeden Kommentar ob dieser nicht ein Ersatz für eine zu verbessernde namensgebung / modularisierung ist. 
-Eine lange Code Strecke in der ein Kommtar "Positionen verarbeiten beginnt" deutet darauf hier, dass hier eine Methode geanu dies aussagen und erledigen könnte. 
+Dieses sollte einer der Leitsätze beim Scheiben von ABAP sein. Prüfen sie jeden Kommentar ob dieser nicht ein Ersatz für eine zu verbessernde Namensgebung / Modularisierung ist Eine lange Codestrecke die mit dem Kommentar "Positionen verarbeiten" beginnt, deutet darauf hier, dass hier eine Methode über einen Namen genau dies Aussagen und erledigen könnte. Ein Kommentar soll viel mehr Hinweise geben warum etwas wie gemacht wird und ggf. den Kontext knapp erläutern und nicht beschreiben was gemacht.   
+Zur Code Dokumentation ist ABAPDoc zu verwenden, somit sind Code Kommentare nur für noch spezifische, zeilenbezogene Erläuterungen zu verwenden. Z.B. wenn Funktionen und Fehlerbehandlungsblöcke nicht ausprogrammiert wurden, noch TODOs oder offene Fragen bestehen, die im Laufe des Lebenszyklus behoben werden müssen. 
 
 Stark veraltete ABAP Richtlinien mit Aussagen wie:
 "Logisch zusammenhängende Einheiten sollten kommentiert werden, wobei der Kommentar vor dem jeweiligen Block steht." 
