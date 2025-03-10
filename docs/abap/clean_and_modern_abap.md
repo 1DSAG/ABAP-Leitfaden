@@ -79,6 +79,12 @@ Ein wichtiges Element von Clean ABAP ist [die richtige Benennung von Entwicklung
 sind lesbar und verständlich, und machen direkt klar, worum es geht. In der alltäglichen ABAP-Entwicklung ist die Versuchung groß, technische Namen der SAP wiederzuverwenden; dies
 kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständlich als `active_status` oder erfordert wenigstens mehr ABAP-Kenntnisse.
 
+### Verwendung von SAP Code
+Die Verwendung von SAP Code ( CDS views, Klassen, Funktionsbausteinen, BAPIs , etc  ) sollte immer in einer eigenen Zugriffschicht liegen. Der Einsatz von ABAP Cloud forciert dies durch das 3 Tier konzept ebenso. 
+Auch wenn es sich um freigegebene Elemente handelt sollten diese stets mit einer Klasse gekapselt werden, damit es nur einen Ort des Übergangs Z-Code -> SAP gibt. 
+Erstellen sie sich Klassen, deren Aufgabe es ist den Pogrammcode der Anwendung frei von jeglichen Abhängigkleiten zum SAP Code zu halten. Dies wird auch die Wiederverwndung fördern. 
+
+Eine hilfreiche Erweiterung dieser Klassen ist die transormation der klassischen Ausnahmen von vielem SAP Code hin zu Ausnahmelassen. 
 
 ## Kommentare 
 
@@ -254,6 +260,17 @@ CREATE OBJECT object TYPE lcl_configuration.
 
 TODO Beispiel aufnehmen
 {: .label .label-red }
+
+### Vollständiger Einsatz von klasssenbasierten Ausnahmen. 
+Es sollte ohne Ausnahme für die Beandlung von Fehlern klassenbasierte Ausnahmen verwendet werden. 
+Diese sollten auch nur für den Fall von Fehlern eingesetzt werden. 
+Lediglich technische einschränkungen seiten der SAP zwingen Sie an einigen wenigen Stellen dazu klassische Exceptions einzusetzen. 
+
+von der Verwendung von returncodes raten wir ihnen ebenso ab wie von der alleinigen Rückgabe von Message Tabellen wie z.B. BapiRet2
+diese Konzepte erzeugen das Problem, dass im Aurufenden Programm in mitten des Ablaufs der Geschäftslogik geprüft werden muss, ob ein Fehlerfall vorliegt. 
+Beim Einsatz von Ausnahmeklassen ist dies nicht der Fall. 
+
+[Siehe Auch](https://github.com/SAP/styleguides/blob/main/clean-abap/sub-sections/Exceptions.md)
 
 ## Beispiele für modernes ABAP
 
