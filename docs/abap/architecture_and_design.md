@@ -7,7 +7,6 @@ nav_order: 2
 ---
 
 {: .no_toc}
-
 # Architektur und Strukturierung in der ABAP Entwicklung
 
 1. Toc
@@ -62,10 +61,9 @@ Des Weiteren bereitet es sowohl die Entwickler, als auch die Entwicklerorganisat
 
 SAP hat, wie in anderen Programmiersprachen wie z.B. JAVA üblich, auch in ABAP ein Paketkonzept implementiert, mit dem es Möglich ist, die Software auf verschiedenen Ebenen zu strukturieren. Vor der Verfügbarkeit des Paketkonzepts waren Entwicklungsobjekte in Entwicklungsklassen als flache Struktur organisiert.  
 Mit der Einführung des Paketkonzepts ergeben sich deutlich erweiterte Möglichkeiten der Softwarestrukturierung, die zwar nicht direkt auf die Funktionalität an sich wirken, aber spätestens bei der Wartung, Pflege und Erweiterung der Eigenentwicklung deutliche Vorteile mit sich bringen. Da es seitens SAP eine ausführliche und gut verständliche Dokumentation des Paketkonzeptes gibt, werden wir hier nicht auf das Paketkonzept im Detail eingehen, einen praxisnahen Überblick und Empfehlungen geben, wie bei Erstellung von Eigenentwicklungen, im Weiteren "Software" genannt, vorgegangen werden kann, um Pakete in ABAP sinnvoll und nutzbringend einzusetzen.
-[SAP Dokumentation ABAP Workbench - Package Builde](https://help.sap.com/docs/ABAP_PLATFORM_NEW/bd833c8355f34e96a6e83096b38bf192/af40bd38652c8c42e10000009b38f8cf.html?locale=de-DE)
+[SAP Dokumentation ABAP Workbench - Package Builder](https://help.sap.com/docs/ABAP_PLATFORM_NEW/bd833c8355f34e96a6e83096b38bf192/af40bd38652c8c42e10000009b38f8cf.html?locale=de-DE)
 
 >**Empfehlungen**  
-
 - ***Nutzen Sie das Paketkonzept:***
 - Schalten Sie auf ihren SAP-Systemen die Paketprüfung ein.
 - Erstellen Sie für Ihre Eigenentwicklungen Hauptpakete die sich an architektonischen Erfordernissen (Single Responsibility) orientieren.

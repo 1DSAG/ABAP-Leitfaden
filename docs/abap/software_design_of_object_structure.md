@@ -7,7 +7,6 @@ nav_order: 3
 ---
 
 {: .no_toc}
-
 # Design und Erstellung von SAP-Anwendungen
 
 1. TOC
