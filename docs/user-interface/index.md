@@ -25,7 +25,7 @@ Die reinen Design- und UX-Empfehlungen der SAP lassen sich theoretisch auch mit 
 
 Abgesehen von der rein optischen und interaktiven Betrachtung der Fiori Guidelines wird unter Fiori im Allgemeinen auch die tatsächliche Entwicklung und Technologie hinter den Fiori-Apps bezeichnet. Hier lässt sich zwischen den generierten Fiori Elements Apps ohne FrontEnd-Coding und Freestyle-Applikationen entscheiden, die mit SAPUI5 (also Type- bzw. JavaScript) entwickelt werden. Das Flexible Programming Model bietet eine Mischform aus beiden. Diese verschiedenen Möglichkeiten werden später im Kapitel näher erleutert. Allgemein lässt sich jedoch sagen, dass Fiori-Applikationen als Browser-Website von Anwender:innen konsumiert werden. Daher ist die Nutzung auch nicht mehr auf Endgeräte eingeschränkt, auf denen die SAP GUI installierbar ist - ein moderner Webbrowser ist ausreichend. Somit können Fiori Apps auch auf mobilen Geräten wie Smartphones, Tablets oder AR-Headsets genutzt werden.
 
-Einhergehend mit dieser Trennung geht auch die stärkere Unterscheidung von Front- und BackEnd-Entwicklung als Sie dies vielleicht aus bisherigen SAP-Entwicklungen kennen.
+Einhergehend mit dieser Trennung geht auch die stärkere Unterscheidung von Front- und BackEnd-Entwicklung als Sie dies vielleicht aus bisherigen SAP-Entwicklungen kennen. Das S/4 System liefert als BackEnd die Datenhaltung, Prüfung von Berechtigungen und den Großteil der Transaktionslogik für Apps. Nach außen hin wird dies als OData Service veröffentlicht.  Dieser dient als Schnittstelle für die tatsächliche FrontEnd-App (die im Browser ausgeführte Fiori-App) um Daten zu lesen, schreiben oder Aktionen ausführen zu können. Diese Kommunikation über OData ist per Definition stateless, das BackEnd ist also die Single Source of Truth zum Datenstand und verwaltet den Großteil der Datenlogik. In bestimmten Szenarien kann diese Zweiteilung die Entwicklung verkomplizieren. Beispielsweise entstand dadurch auch die Notwendigkeit des Draft-Konzeptes um die Vorhaltung von Zwischenständen zu Datensätzen zu ermöglichen.
 
 Wenn auch mittlerweile archiviert sei an dieser Stelle dennoch auf den (englischsprachigen) [DSAG UI5 Best Practice Guide](https://1dsag.github.io/UI5-Best-Practice/) hingewiesen.  In der folgenden Tabelle werden die Vor- und Nachteile von SAPUI5 gegenübergestellt: 
 
@@ -44,12 +44,15 @@ Wenn auch mittlerweile archiviert sei an dieser Stelle dennoch auf den (englisch
 Zur Entwicklung wird auf den [DSAG ADT Leitfaden](https://1dsag.github.io/ADT-Leitfaden/) verwiesen, da die nötigen UI Annotationen zur Generierung von Fiori Elements Apps nur in der Entwicklungsumgebung Eclipse angelegt werden können. Grundsätzlich ist auch die Entwicklung mit dem Cloud Application Programming Model (CAP) möglich - im Kontext dieses ABAP Leitfadens jedoch nicht weiter im Fokus.
 
 ### Fiori Freestyle
+Text von Julius //
+
+*Input Fabian Küng*
 
 ### Flexible Programming Model
-Input Gregor Wolf
+*Input Gregor Wolf / Fabian Küng*
 
 ## CRM Web UI
-Input Gregor Wolf
+*Input Gregor Wolf*
 
 ## Legacy Technologien
 Dieses Kapitel soll einen kurzen Überblick über bisher nicht genannte Oberflächentechnologien geben. Da diese im Laufe der Zeit immer mehr an Relevanz verlieren wird an dieser Stelle nicht näher auf einzelne Technologien eingegangen.  
