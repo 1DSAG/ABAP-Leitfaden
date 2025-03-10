@@ -45,6 +45,7 @@ Zur Entwicklung wird auf den [DSAG ADT Leitfaden](https://1dsag.github.io/ADT-Le
 
 ### Fiori Freestyle
 Text von Julius //
+Unter dem Namen [OpenUI5](https://openui5.org/) wird SAPUI5 auch unter einer Open-Source-Lizenz vertrieben. Hierbeit sind allerdings einige Komponenten nicht in der Distribution enthalten.
 
 *Input Fabian Küng*
 
