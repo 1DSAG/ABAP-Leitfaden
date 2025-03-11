@@ -14,7 +14,7 @@ nav_order: 4
 
 ABAP gibt es seit 1983, und der Sprachumfang ist seitdem stetig gewachsen. Dadurch bildet die Sprache verschiedene Paradigmen ab, und es gibt häufig verschiedene Alternativen für ähnliche Zwecke. Als Beispiel können Funktionsgruppen und -bausteine etwa als imperativer Vorläufer ähnlich wie Klassen in ABAP OO genutzt werden. Daneben gibt es auch viele als obsolet gekennzeichnete Befehle, die häufig in bereits entwickelten Programmen oder Beispielcode im Internet zu finden sind und damit auch weiterhin für neue Entwicklungen genutzt werden.
 
-Die SAP hat dieses Problem selbst erkannt und als eine Unterstützung für Entwickler die [Clean ABAP Guidelines](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) erstellt. Diese basieren auf dem Buch Clean Code von Robert C. Martin und adaptieren verschiedene Best Practices für ABAP. Die Guidelines liefern Vorgaben für viele Bereich, etwa von zur Benennung von Objekten und Variablen, über die Wahl der richtigen Sprachmittel, bis hin zur Formatierung und Kommentierung von Code.
+Die SAP hat dieses Problem selbst erkannt und als eine Unterstützung für Entwickler die [Clean ABAP Guidelines](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) erstellt. Diese basieren auf dem Buch Clean Code von Robert C. Martin und adaptieren verschiedene Best Practices für ABAP. Die Guidelines liefern Vorgaben für viele Bereiche, etwa zur Benennung von Objekten und Variablen, über die Wahl der richtigen Sprachmittel, bis hin zur Formatierung und Kommentierung von Code.
 
 {: .note }
 Empfehlungen aus den Clean ABAP Guidelines werden in diesem Abschnitt so hervorgehoben. Dabei wird immer auf den entsprechenden Abschnitt der Guidelines verlinkt.
@@ -25,7 +25,7 @@ Die folgenden Abschnitte zeigen Beispiele für modernen ABAP Code, erhebt jedoch
 wird vorausgesetzt.
 
 ## Clean ABAP 
-Clean ABAP stellt die Anapssung der Prinzipien aus dem Buch von Robert C. Martin auf ABAP dar. Das offizielle, im Repository der SAP freigegebene Dokument wurde von Florian Hoffmann und Klaus Häuptle 2019 auf den Weg gebracht und wird seit dem als [open source durch die ABAP Community](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) erweitert.
+Clean ABAP stellt die Anpassung der Prinzipien aus dem Buch von Robert C. Martin auf ABAP dar. Das offizielle, im Repository der SAP freigegebene Dokument wurde von Florian Hoffmann und Klaus Häuptle 2019 auf den Weg gebracht und wird seitdem als [open source durch die ABAP Community](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) erweitert.
 
 Beispielregel mit Erläuterung:
 
@@ -34,32 +34,32 @@ Beispielregel mit Erläuterung:
 Clean ABAP Excample Rule Prefer inline to up-front declarations
 {: .img-caption}
 
-Der Gedanken von Clean ABAP ist, dass es nicht eine Version von Clean ABAP gibt, mit einem festen unveränderlichen Set an Regeln. 
-Teams sind eingeladen, die Regeln anzupassen und veränden so wie sie für ihren spezifischen Fall am besten passen. Die öffentliche Version von Clean ABAB stellt eine excellente Grundlage hierfür dar. 
-Wichtig ist hier nur, dass diese Regeln verbindlich und alle teams eines Unternehmens hinweg gültig sind. Der Grundgedanken von Clean ABAP - einheitliche Code Reviews - würde gebrochen wenn das Financials Team andere ABAP Regeln hat als Sales.
-Alle Regelen von Clean ABAP sind heute und sollten immer begründet und erläutert werden. 
+Der Gedanke von Clean ABAP ist, dass es nicht eine Version von Clean ABAP gibt, mit einem festen unveränderlichen Set an Regeln. 
+Teams sind eingeladen, die Regeln anzupassen und zu verändern so wie sie für ihren spezifischen Fall am besten passen. Die öffentliche Version von Clean ABAP stellt eine exzellente Grundlage hierfür dar. 
+Wichtig ist hier nur, dass diese Regeln verbindlich und für alle Teams eines Unternehmens hinweg gültig sein sollten. Der Grundgedanken von Clean ABAP - einheitliche Code Reviews - würde gebrochen wenn das Financials Team andere ABAP Regeln hat als das Sales Team.
+Alle Regeln von Clean ABAP sind heute und sollten immer begründet und erläutert werden. 
 
-Clean ABAP kann generell auf jede Sprachvesion von ABAP angewendet werden von R2 bis hin zu ABAP Cloud. 
+Clean ABAP kann generell auf jede Sprachversion von ABAP angewendet werden von R2 bis hin zu ABAP Cloud. 
 
-### DASG Empfehlung
-Die Regeln im offentlichen Repository sind anerkannt unter den meisten ABAP-Experten.
-Die Autoren des DSAG Leitfaden empfehlen ihnen den Einsatz der Clean ABAP Regeln für Ihr Coding und als Grundlage für Code Reviews.
+### DSAG Empfehlung
+Die Regeln im öffentlichen Repository sind anerkannt unter den meisten ABAP-Experten.
+Die Autoren des DSAG Leitfaden empfehlen Ihnen den Einsatz der Clean ABAP Regeln für Ihr Coding und als Grundlage für Code Reviews.
 Diskussionen über Code unter Entwicklern können nicht selten mit einer Clean ABAP Regel gelöst werden. 
 
 ### Clean ABAP & Entwicklungsrichtlinien
-Die auf das Untrenehmen angepasste Form von Clean ABAP sollte ein ergänzendes Dokument der gültigen Entwicklungsrichtlinien sein, so dass es überall Anwendung findet. 
+Die auf das Unternehmen angepasste Form von Clean ABAP sollte ein ergänzendes Dokument der gültigen Entwicklungsrichtlinien sein, sodass es überall Anwendung findet. 
 Prüfen Sie die Anwendung der Regeln mit einem automatischen Tool wie Code Pal for ABAP im ABAP Test Cockpit (https://github.com/SAP/code-pal-for-abap). 
 
 ### Clean ABAP owner
 In jedem Entwicklungsteam sollte es - gerne auch rollierend - einen Clean ABAP Owner geben, der Ansprechpatner und Verantwortlicher für Änderungen ist. 
-Änderungen und Erweiterungen müssen separat in den Teams kommuniziert und Abgestimmt werden. 
-Clean ABAP funktioner am besten wenn alle Beteiligten hiner den Regeln stehen, hierfür sind immer wieder Team Kompromisse und Abstimmungen möglich. 
+Änderungen und Erweiterungen müssen separat in den Teams kommuniziert und abgestimmt werden. 
+Clean ABAP funktioniert am besten, wenn alle Beteiligten hinter den Regeln stehen, hierfür sind immer wieder Kompromisse und Abstimmungen im Team nötig. 
 
 ### Clean ABAP ist ein Prozess  
-Die Anwendung / Erlernen von Clean ABAP ist kein einmaliger Workshop oder eine Managementdirektive. 
-Es braucht Zeit, Übung, Motivation und den konstanten Willen bessere ABAP Programme zu schreiben. 
+Die Anwendung bzw. das Erlernen von Clean ABAP ist kein einmaliger Workshop oder eine Managementdirektive. 
+Es braucht Zeit, Übung, Motivation und den konstanten Willen um bessere ABAP Programme zu schreiben. 
 
-Die Tätigkeiten, die das Anwenden von Clean ABAP sichderstellen heißen Pair-Programming, Code Reviews, Refactoring und Schulung.
+Die Tätigkeiten, die das Anwenden von Clean ABAP sicherstellen, heißen Pair-Programming, Code Reviews, Refactoring und Schulung.
 Hierfür müssen von der Organisation entsprechende Bedingungen geschaffen werden. 
 
 
@@ -71,7 +71,7 @@ Hierfür müssen von der Organisation entsprechende Bedingungen geschaffen werde
 
 Dieser Abschnitt gibt eine kurze Auswahl wichtiger Regeln für saubere Entwicklung mit Verweis auf Quellen mit weiteren Informationen wieder.
 
-Ziel von Clean ABAP ist es, sauberen und für Menschen leicht verständlichen Code zu schreiben. Dies zeigt sich etwa in kurzen Methoden und ausdrucksstarken Namen
+Ziel von Clean ABAP ist es, sauberen und für Menschen leicht verständlichen Code zu schreiben. Dies zeigt sich etwa in kurzen Methoden und ausdrucksstarken Namen.
 
 ### Ausdrucksstarke Namen
 
@@ -83,21 +83,21 @@ kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständli
 ## Kommentare 
 
 "Drücke dich durch Code aus - nicht durch Kommentare" 
-Dieses sollte einer der Leitsätze beim Scheiben von ABAP sein. Prüfen sie jeden Kommentar ob dieser nicht ein Ersatz für eine zu verbessernde Namensgebung / Modularisierung ist Eine lange Codestrecke die mit dem Kommentar "Positionen verarbeiten" beginnt, deutet darauf hier, dass hier eine Methode über einen Namen genau dies Aussagen und erledigen könnte. Ein Kommentar soll viel mehr Hinweise geben warum etwas wie gemacht wird und ggf. den Kontext knapp erläutern und nicht beschreiben was gemacht.   
-Zur Code Dokumentation ist ABAPDoc zu verwenden, somit sind Code Kommentare nur für noch spezifische, zeilenbezogene Erläuterungen zu verwenden. Z.B. wenn Funktionen und Fehlerbehandlungsblöcke nicht ausprogrammiert wurden, noch TODOs oder offene Fragen bestehen, die im Laufe des Lebenszyklus behoben werden müssen. 
+Dieses sollte einer der Leitsätze beim Scheiben von ABAP sein. Prüfen Sie jeden Kommentar, ob dieser nicht ein Ersatz für eine zu verbessernde Namensgebung bzw. Modularisierung ist. Eine lange Codestrecke, die mit dem Kommentar "Positionen verarbeiten" beginnt, deutet darauf, dass hier eine Methode über einen entsprechenden Namen genau dies aussagen und erledigen könnte. Ein Kommentar soll vielmehr Hinweise geben, warum etwas wie gemacht wird und ggf. den Kontext knapp erläutern anstatt zu beschreiben was gemacht wird.   
+Zur Code Dokumentation ist ABAPDoc zu verwenden, somit sind Code Kommentare nur noch für spezifische, zeilenbezogene Erläuterungen zu verwenden. Z.B. wenn Funktionen und Fehlerbehandlungsblöcke nicht ausprogrammiert wurden, noch TODOs oder offene Fragen bestehen, die im Laufe des Lebenszyklus behoben werden müssen. 
 
 Stark veraltete ABAP Richtlinien mit Aussagen wie:
 "Logisch zusammenhängende Einheiten sollten kommentiert werden, wobei der Kommentar vor dem jeweiligen Block steht." 
 "Das Erkennen solcher Blöcke wird bei langen und tief verschachtelten Kontrollstrukturen dadurch erleichtert, dass man am Ende einen auf den Beginn referenzierenden Kommentar einfügt"
 
-Hier nehmen die ABAP-Guidelines bereits an dass so genanter (Spaghetti Code)[https://en.wikipedia.org/wiki/Spaghetti_code] geschrieben wird. 
-Kommentare können nie die Lösung für fehlende Modularisierung und aufbrechen von tiefen schachtellungen sein. 
-Diese Probleme in der Lesbarkeit sollten durch konstequente Modularisierung und nicht durch Kommetare gelöst werden. 
+Hier nehmen die ABAP-Guidelines bereits an, dass so genanter (Spaghetti Code)[https://en.wikipedia.org/wiki/Spaghetti_code] geschrieben wird. 
+Kommentare können nie die Lösung für fehlende Modularisierung und Aufbrechen von tiefen Schachtelungen sein. 
+Diese Probleme in der Lesbarkeit sollten durch konsequente Modularisierung und nicht durch Kommentare gelöst werden. 
 
 {: .note }
-Clean ABAP rät (Erklärung über Code nicht Kommentare)[https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#use-methods-instead-of-comments-to-segment-your-code]
+Clean ABAP rät zur (Erklärung über Code nicht Kommentare)[https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#use-methods-instead-of-comments-to-segment-your-code]
 
-Im Leitfaden von clean ABAP steht alles was Sie zu kommentaren beachten sollten (Siehe)[https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#express-yourself-in-code-not-in-comments]
+Im Leitfaden von Clean ABAP steht alles was Sie zu Kommentaren beachten sollten, (Siehe)[https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#express-yourself-in-code-not-in-comments].
 
 
 
@@ -449,10 +449,10 @@ Entwicklungsobjekt eingesetzt werden.
 
 
 ## ABAP Cleaner
-Der 2023 öffentlich erschinene ABAP Cleaner ist einer Erweiterung für ADT welches die Anwendung von mehr als 90 Regeln zur Formatierung und Gestaltung von ABAP Code ermöglicht. 
+Der 2023 öffentlich erschienene ABAP Cleaner ist eine Erweiterung für ADT, welche die Anwendung von mehr als 90 Regeln zur Formatierung und Gestaltung von ABAP Code ermöglicht. 
 [ABAP Cleaner Link](https://github.com/SAP/abap-cleaner)
-ABAP Code wird nicht nur wie bei Pritty Printer formatiert, es werden auch, basierend auf den eingestellen Regeln Optimierungen des ABAP Codes vorgenommen. 
-Nicht verndete Methoden-Parameter werden durch Kommenate kenntlich gemacht und es können - je nach Einstellung - nicht verwendete Variablen automatisch gelöscht werden. 
-Das Ergebis der Anwendung ist einheitlicher, besser lesbarer Programm code und eine effektive Beschleunigung der Entwicklung, da der Cleaner aufgaben des Programmierer übernimmt. 
+ABAP Code wird nicht nur wie bei Pretty Printer formatiert, es werden auch, basierend auf den eingestellen Regeln, Optimierungen des ABAP Codes vorgenommen. 
+Nicht verwendete Methoden-Parameter werden durch Kommentare kenntlich gemacht und es können - je nach Einstellung - nicht verwendete Variablen automatisch gelöscht werden. 
+Das Ergebnis der Anwendung ist einheitlicher, besser lesbarer Code und eine effektive Beschleunigung der Entwicklung, da der Cleaner Aufgaben des Programmierers übernimmt. 
 
-Der einsatz des ABAP Cleaners bringt eine Vielzahl von Vorteilen für das moderene Entwickeln von ABAP Code. Aus sicht der Autoren dieses Leitfadens ist der Einsatz vom ABAP Cleaner unbedingt nötig. 
+Der Einsatz des ABAP Cleaners bringt eine Vielzahl von Vorteilen für das moderene Entwickeln von ABAP Code. Aus Sicht der Autoren dieses Leitfadens ist der Einsatz vom ABAP Cleaner in ADT unbedingt nötig. 
