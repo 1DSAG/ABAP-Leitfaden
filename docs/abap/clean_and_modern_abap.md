@@ -79,6 +79,7 @@ Ein wichtiges Element von Clean ABAP ist [die richtige Benennung von Entwicklung
 sind lesbar und verständlich, und machen direkt klar, worum es geht. In der alltäglichen ABAP-Entwicklung ist die Versuchung groß, technische Namen der SAP wiederzuverwenden; dies
 kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständlich als `active_status` oder erfordert wenigstens mehr ABAP-Kenntnisse.
 
+***WICHTIG * CHECK***
 ### Verwendung von SAP Code
 
 Die Verwendung von SAP Code ( CDS views, Klassen, Funktionsbausteinen, BAPIs , etc  ) sollte immer in einer eigenen Zugriffschicht liegen. Der Einsatz von ABAP Cloud forciert dies durch das 3 Tier konzept ebenso. 
