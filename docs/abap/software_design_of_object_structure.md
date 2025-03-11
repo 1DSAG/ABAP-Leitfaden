@@ -184,6 +184,20 @@ Ein in OO geübter Entwickler definiert in der Konzeptionsphase die auftretenden
 Wenn der Code der Geschäftslogik implementiert wird und die Fehler behandelt werden müssen, wird an der betreffenden Stelle die Exception aufgerufen. Die Behandlung muss nun nicht wie bei Funktionsbausteinen in jeweils jeder Aufrufschicht erfolgen, sondern kann zentral an einer Stelle erfolgen.   
 Dies gewährleistet eine konsistente Behandlung und vermindert den Aufwand wenn Fehler an mehreren Stellen auftreten können.
 
+*add*
+## Vollständiger Einsatz von klasssenbasierten Ausnahmen. 
+Es sollte ohne Ausnahme für die Beandlung von Fehlern klassenbasierte Ausnahmen verwendet werden. 
+Diese sollten auch nur für den Fall von Fehlern eingesetzt werden. 
+Lediglich technische einschränkungen seiten der SAP zwingen Sie an einigen wenigen Stellen dazu klassische Exceptions einzusetzen. 
+
+von der Verwendung von returncodes raten wir ihnen ebenso ab wie von der alleinigen Rückgabe von Message Tabellen wie z.B. BapiRet2
+diese Konzepte erzeugen das Problem, dass im Aurufenden Programm in mitten des Ablaufs der Geschäftslogik geprüft werden muss, ob ein Fehlerfall vorliegt. 
+Beim Einsatz von Ausnahmeklassen ist dies nicht der Fall. 
+
+[Siehe Auch](https://github.com/SAP/styleguides/blob/main/clean-abap/sub-sections/Exceptions.md)
+*add*
+
+
 ### Interfaces
 
 Durch den Einsatz von Interfaces wird die Definition von Methoden und deren Implementierung voneinander entkoppelt. Wird ein Interface verwendet, kann die Implementierung der Klasse geändert, bzw. flexibilisiert werden. Das Interface definiert sozusagen den Vertrag zwischen Verwender und implementierender Klasse.
