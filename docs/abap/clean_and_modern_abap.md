@@ -62,7 +62,6 @@ Es braucht Zeit, Übung, Motivation und den konstanten Willen bessere ABAP Progr
 Die Tätigkeiten, die das Anwenden von Clean ABAP sichderstellen heißen Pair-Programming, Code Reviews, Refactoring und Schulung.
 Hierfür müssen von der Organisation entsprechende Bedingungen geschaffen werden. 
 
-
 ## Grundlagen sauberer Entwicklung
 
 - [X] Prinzipien von Clean Code und Clean ABAP
@@ -79,17 +78,7 @@ Ein wichtiges Element von Clean ABAP ist [die richtige Benennung von Entwicklung
 sind lesbar und verständlich, und machen direkt klar, worum es geht. In der alltäglichen ABAP-Entwicklung ist die Versuchung groß, technische Namen der SAP wiederzuverwenden; dies
 kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständlich als `active_status` oder erfordert wenigstens mehr ABAP-Kenntnisse.
 
-***WICHTIG * CHECK***
-### Verwendung von SAP Code
-
-Die Verwendung von SAP Code ( CDS views, Klassen, Funktionsbausteinen, BAPIs , etc  ) sollte immer in einer eigenen Zugriffschicht liegen. Der Einsatz von ABAP Cloud forciert dies durch das 3 Tier konzept ebenso. 
-Auch wenn es sich um freigegebene Elemente handelt sollten diese stets mit einer Klasse gekapselt werden, damit es nur einen Ort des Übergangs Z-Code -> SAP gibt. 
-Erstellen sie sich Klassen, deren Aufgabe es ist den Pogrammcode der Anwendung frei von jeglichen Abhängigkleiten zum SAP Code zu halten. Dies wird auch die Wiederverwndung fördern. 
-
-Eine hilfreiche Erweiterung dieser Klassen ist die transormation der klassischen Ausnahmen von vielem SAP Code hin zu Ausnahmelassen. 
-
-
-## Kommentare 
+## Kommentare
 
 "Drücke dich durch Code aus - nicht durch Kommentare" 
 Dieses sollte einer der Leitsätze beim Scheiben von ABAP sein. Prüfen sie jeden Kommentar ob dieser nicht ein Ersatz für eine zu verbessernde Namensgebung / Modularisierung ist Eine lange Codestrecke die mit dem Kommentar "Positionen verarbeiten" beginnt, deutet darauf hier, dass hier eine Methode über einen Namen genau dies Aussagen und erledigen könnte. Ein Kommentar soll viel mehr Hinweise geben warum etwas wie gemacht wird und ggf. den Kontext knapp erläutern und nicht beschreiben was gemacht.   
