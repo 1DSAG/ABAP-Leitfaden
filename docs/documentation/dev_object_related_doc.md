@@ -72,14 +72,19 @@ WEITERE QUELLEN
 
 1. Horst Keller, Wolf Hagen Thümmel: ABAP-Programmierrichtlinien. SAP Press, 2009. ISBN: 9783836212861
 
-## abapDoc
+## ABAP Doc
 
-abapDoc ermöglicht es Klassen, Interfaces und Funktionsbausteine zu dokumentieren. Die Kommentare bestehen aus einer oder mehr kommentierte Zeile. abapDoc beginnt mit dem Präfix "!.
+ABAP Doc ermöglicht es Klassen, Interfaces und Funktionsbausteine zu dokumentieren. Die Kommentare bestehen aus einer oder mehrerer kommentierte Zeilen.  
+ABAP Doc beginnt mit dem Präfix  `"!.`  .  
+ABAP Doc kann verwendet werden um grundsätzliche Informationen zur Klasse, Methode oder Interface direkt im Quellcode zu dokumentieren. Des Weiteren können die Parameter einer Methode über ABAP Doc im Einzelnen mit Dokumentation versehen werden. Diese ABAP Doc Kommentare werden direkt vor deklarative Statements platziert.  
+In ABAP Doc können zudem HTML Tags zur Formatierung verwendet werden, was die Lesbarkeit und Struktur der Dokumentation erhöht und verschönert.  
+Bei der empfohlenen Nutzung von ADT ist die Erstellung von ABAP Doc durch Nutzung von Quickfix sehr einfach und effizient durchzuführen [DSAG AG ADT Leitfaden: Was sind ABAP Doc](https://1dsag.github.io/ADT-Leitfaden/working-with-adt/features/abap-doc/#was-sind-abap-doc)
 
-Im Quelltexteditor können abapDoc Kommentare vor deklarativen Statements platziert werden.
-
-abapDoc Kommentare werden angezeigt in
+Der Vorteil der Nutzung von ABAP Doc besteht darin, dass diese Kommentare in folgenden Funktionen der ADT angezeigt werden und damit dem Entwickler wertvolle Informationen direkt bei der Code Erstellung zur Verfügung stehen.
 
 * ABAP Element Info view
 * Element Information Popup
 * Code Completion Liste.
+
+Und diese ABAP Doc Kommentare können aus ADT in eine HTML Datei extrahiert und somit für eine weitere Verwendung ausserhalb des Codes z.B. auf internen Seiten, verwendet werden. Wird der Code und die dazu bestehende ABAP Doc Dokumentation gleichzeitig gepflegt und nach jeder Änderung ABAP Doc extrahiert, ist auch die externe Dokumentation ohne Mehraufwand aktuell.
+Wird die ABAP Doc Dokumentation strukturiert erstellt, kann diese ausserdem für die Verwendung mit unterstützender generativer AI zur Erstellung von weiteren Dokumentationen verwendet werden (s.[Kapitel Künstliche Intelligenz](/ABAP-Leitfaden/artificial-intelligence/#ai-als-werkzeug-bei-dokumentationserstellung)).
