@@ -188,8 +188,8 @@ nav_order: 15
 </tr>
 <tr class="odd">
 <td>Volodymyr Vashchenko</td>
-<td>Festo</td>
-<td>Schreiben, Review</td>
+<td>Festo SE & Co.KG</td>
+<td>Hauptsächlich beteiligt an den Kapiteln Clean Core, Organisation und Core Data Services</td>
 </tr>
 
 </thead>
