@@ -207,7 +207,7 @@ Manchmal ist es erforderlich, dass Funktionalitäten in vorgegebenen Artefakten 
 In diesem Fall dienen diese Entwicklungsobjekte als Verschalung und rufen die eigentliche Funktionalität nur auf, die dann in ABAP-Klassen und deren Methoden implementiert ist. Der Code in diesen Entwicklungsobjekten sollte sich nur auf technisches Coding beschränken wie z.B. Datenzuordnungen, Objektinstanziierung oder minimale Prüfungen.
 Dies bietet wiederum den Vorteil von möglicher Wiederverwendung und Implementierung von Unit Test.
 
-### Verwendung von SAP Code
+## Verwendung von SAP Code
 
 Die Verwendung von SAP-Code (CDS Views, Klassen, Funktionsbausteinen, BAPIs, etc.) oder auch paketfremder Code, sollte immer in einer eigenen Zugriffsschicht liegen. Dies entspricht dann auch einer sauberen Trennung der Belange (S - Separation of Concerns). Der Einsatz von ABAP Cloud forciert dies durch das 3-Tier Konzept ebenso s. Kapitel [Clean Core](Link Kap. CC).  
 Auch wenn es sich um freigegebene Elemente handelt, sollten diese stets mit einer Klasse gekapselt werden, damit es nur einen Ort des Übergangs von Eigen- an Fremdcode gibt.
