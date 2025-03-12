@@ -62,7 +62,6 @@ Es braucht Zeit, Übung, Motivation und den konstanten Willen um bessere ABAP Pr
 Die Tätigkeiten, die das Anwenden von Clean ABAP sicherstellen, heißen Pair-Programming, Code Reviews, Refactoring und Schulung.
 Hierfür müssen von der Organisation entsprechende Bedingungen geschaffen werden. 
 
-
 ## Grundlagen sauberer Entwicklung
 
 - [X] Prinzipien von Clean Code und Clean ABAP
@@ -79,8 +78,7 @@ Ein wichtiges Element von Clean ABAP ist [die richtige Benennung von Entwicklung
 sind lesbar und verständlich, und machen direkt klar, worum es geht. In der alltäglichen ABAP-Entwicklung ist die Versuchung groß, technische Namen der SAP wiederzuverwenden; dies
 kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständlich als `active_status` oder erfordert wenigstens mehr ABAP-Kenntnisse.
 
-
-## Kommentare 
+## Kommentare
 
 "Drücke dich durch Code aus - nicht durch Kommentare" 
 Dieses sollte einer der Leitsätze beim Scheiben von ABAP sein. Prüfen Sie jeden Kommentar, ob dieser nicht ein Ersatz für eine zu verbessernde Namensgebung bzw. Modularisierung ist. Eine lange Codestrecke, die mit dem Kommentar "Positionen verarbeiten" beginnt, deutet darauf, dass hier eine Methode über einen entsprechenden Namen genau dies aussagen und erledigen könnte. Ein Kommentar soll vielmehr Hinweise geben, warum etwas wie gemacht wird und ggf. den Kontext knapp erläutern anstatt zu beschreiben was gemacht wird.   
@@ -455,4 +453,4 @@ ABAP Code wird nicht nur wie bei Pretty Printer formatiert, es werden auch, basi
 Nicht verwendete Methoden-Parameter werden durch Kommentare kenntlich gemacht und es können - je nach Einstellung - nicht verwendete Variablen automatisch gelöscht werden. 
 Das Ergebnis der Anwendung ist einheitlicher, besser lesbarer Code und eine effektive Beschleunigung der Entwicklung, da der Cleaner Aufgaben des Programmierers übernimmt. 
 
-Der Einsatz des ABAP Cleaners bringt eine Vielzahl von Vorteilen für das moderene Entwickeln von ABAP Code. Aus Sicht der Autoren dieses Leitfadens ist der Einsatz vom ABAP Cleaner in ADT unbedingt nötig. 
+Der Einsatz des ABAP Cleaners bringt eine Vielzahl von Vorteilen für das moderene Entwickeln von ABAP Code. Aus Sicht der Autoren dieses Leitfadens ist der Einsatz vom ABAP Cleaner unbedingt nötig. 

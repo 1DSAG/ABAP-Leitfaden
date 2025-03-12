@@ -7,7 +7,6 @@ nav_order: 3
 ---
 
 {: .no_toc}
-
 # Design und Erstellung von SAP-Anwendungen
 
 1. TOC
@@ -41,6 +40,8 @@ Und obwohl die oben genannten Nachteile der prozeduralen und Vorteile der Objekt
 * Wenden Sie beim Anwendungsdesign die gängigen objektorientierten Designpatterns an. 
 * Trennen Sie die unterschiedlichen Belange der Geschäftsanwendungen in Klassen auf (z.B. Controller Klasse, Datenzugriff, Geschäftslogiken, Prüfungen etc.)
 * Halten Sie die Schnittstellen klein und nutzen Sie die Factory für Übergabe wichtiger Daten an das Objekt
+* Verschalen und konzentrieren Sie Aufrufe von SAP-Code bzw. Paketfremden Code in eigenen privaten Methoden.
+* Verwenden Sie klassenbasierte Ausnahmen für das komplette Fehlerhandling inklusive Nachrichtenabwicklung in der Anwendung
 {: .highlight}
 
 
@@ -68,6 +69,7 @@ Um hier nicht einfach eine Komplexitätsverschiebung zu erhalten, bedarf es gute
 Dass während der Entwicklung Methoden und Attribute verschoben und umbenannt werden und Objekte umstrukturiert = Refactored werden, gehört zum Softwareentwicklungsprozess dazu und ist Dank moderner Softwareentwicklungswerkzeuge in den ABAP-Development Tools in Eclipse und zusätzlichen AddOns einfach und sicher durchzuführen.
 
 Weitere Erkennnungsmerkmale einer Klasse, die objektorientierten Prinzipien folgt sind:
+
 + **Größe der Klasse** - ein zu große Klasse zeigt vermutlich auf dass das Single Responsibility Prinzip verletzt wurde 
 + **Größe der Methoden** - zu große Methoden weisen auf Strukturdefizite und redundanten Code hin. Die maximale Zielgröße liegt bei ca. 150 Zeilen.
 + **Umfangreiche Parameterschnittstellen** - Objekte arbeiten mit Objekten und nicht mit Parametern, dies geht meistens mit zu großen Methoden einher
@@ -147,7 +149,7 @@ Wenn die Anforderungen bekannt sind und analysiert wurden, sind zuerst die unter
 + Definition Objekt zum Lesen und Auswerten des Customizings auf Basis Organisationsdaten = **Customizing Objekt**
 + Definition Objekt zum Lesen der Datenbank, ggf. je nach Komplexität Aufteilung nach Geschäftsobjekt = **Datenobjekt(e)**.
 + Definition Objekt welches die Datenprüfungen und Validierungen durchführt = **Check Objekt**
-+ Definition Objekt welches die Datenprozessierung durchführt und für die Erstellung des Ergebnisses zuständig ist **Geschäftslogig**.
++ Definition Objekt welches die Datenprozessierung durchführt und für die Erstellung des Ergebnisses zuständig ist **Geschäftslogik**.
 + Definition Objekt welches die Geschäftsfunktionalität abbildet und das Zusammenwirken der einzelnen Objekte orchestriert und verwaltet = **Controller**.
 + Erstellung einer Factory Klasse, die die einzelnen Objektinstanzen erzeugt.
 + Definition einer Injektorklasse, mittels der das Mocking einzelner Funktionen ermöglicht wird.
@@ -155,6 +157,7 @@ Wenn die Anforderungen bekannt sind und analysiert wurden, sind zuerst die unter
 Die Details zum ABAP UNIT und wie man Unit Tests erstellt finden Sie im Kapitel [**Testing**](/ABAP-Leitfaden/testing/index))
 
 ## Konzepte in der Objektorientierung
+
 Neben den Grundlagen, gibt es weitere Konzepte und Techniken, durch deren Einsatz erst der volle Mehrwert der Objektorientierung zum Einsatz kommt und auch komplexe Problemstellungen elegant gelöst werden können, was mit klassischen Technologien deutlich aufwändiger oder gar nicht möglich war. Auch hier können wir in der ersten Version des neuen Leitfadens nur in sehr kurzer Form hinweisen. In der ABAP Dokumentation und in Trainings und Büchern finden Sie weitere Informationen.
 
 ### Erstellung eines Konstruktors pro Klasse
@@ -163,12 +166,9 @@ Jedes Objekt sollte eine Factory methode haben und die Übergabe nötiger parame
 
 ### Beispiel: Verschalung des Customizing in der Factory Methode (s.Issue #117 - Klärung Pattern)
 
-Die Customizing Klasse kann nun so gestaltet werden, dass in der Factory Methode die Customizing Tabelle geprüft wird und nur im Falle eines vorhandenen Eintrages in der Tabelle zu den Parametern, eine Instanz an den Aufrufer übergeben wird. Damit muss der Aufrufer nicht mehr die Prüfung übernehmen, sondern durch Abfrage der Objektinstanz kann ermittelt werden, ob eine Funktion aufgerufen werden soll.  
-***Thema: Macht man das so oder ist das ein gutes Pattern? Oder wenn kein Customizing dann exception rufen?****
-
-Damit vereinfacht sich der Code der Geschäftslogik und die Komplexität des Customizing wird verschalt.  
-Einzelne Parameter des Customizings können in Attributen der Customizing Klasse vorgehalten werden und mittels sog. Getter-Methoden bei Bedarf in anderen zugehörigen Klassen abgefragt werden.  
-Da über die Factory dem Objektkonstrukt die Customizing Instanz bekannt ist und bei Bedarf diese in anderen Objekten als Attribut abgelegt werden kann, ist der Zugriff auf das Customizing standardisiert im gesamten Konstrukt ohne redundanten Code möglich.    
+Die Customizing Klasse kann nun so gestaltet werden, dass in der Factory Methode die Customizing Tabelle geprüft wird, in der die Steuerung der Funktion hinterlegt ist. Nur wenn sich ein Eintrag in dieser Tabelle zu den Parametern der Faktorymethode (z.B. Werk oder Buchungskreis etc.) befindet, wird eine Instanz an den Aufrufer übergeben. Falls kein Eintrag vorliegt oder ein Problem vorliegt, sollte eine Ausnahme ausgelöst werden, die auf vom Aufrufer abgefangen wird. Somit muss der Aufrufer nicht mehr die Prüfung der Tabelle übernehmen, sondern die Instanz ist nur in dem Fall vorhanden, wenn die Funktion auch aktiv ist. Im Positivfall kann dann über die zurückgegebene Instanz die entsprechenden Methoden  aufgerufen werden.  
+Damit vereinfacht sich der Code der Geschäftslogik und die Komplexität des Customizing wird verschalt bzw. automatisiert. Einzelne Parameter des Customizings können in Attributen der Customizing Klasse vorgehalten werden und mittels sog. Getter-Methoden bei Bedarf in anderen zugehörigen Klassen abgefragt werden.  
+Da über die Factory dem Objektkonstrukt die Customizing Instanz bekannt ist und bei Bedarf diese in anderen Objekten als Attribut abgelegt werden kann, ist der Zugriff auf das Customizing standardisiert im gesamten Konstrukt ohne redundanten Code möglich.  
 Dies bedeutet einen initialen Erstellungsaufwand, der sich aber bei Änderungen und Ergänzungen auszahlt, da auf vorhandene Services effizient und aufwandslos zugegriffen werden kann und fehleranfällige Coderedundanzen nicht mehr erforderlich sind.
 
 Die Erstellung der zahlreichen Objekte erscheint deutlich aufwändiger als der Top-Down Ansatz beim prozeduralen Vorgehen. Man gewinnt hier aber durch die Aufteilung der Funktionen gemäß der Verantwortlichkeiten eine deutlich höhere Flexibilität und Robustheit und durch die Mechanismen eine Form der Automatisierung.  
@@ -178,11 +178,16 @@ Die Effizienz kann ergibt sich allerdings nur durch den Einsatz der ABAP Develop
 Natürlich muss dass Vorgehen auch eingeübt werden um eine gewisse Entwicklungsperformanz und -effizienz zu entwickeln.  
 Bitte beachten Sie hierzu den **[ADT-Leitfaden](https://1dsag.github.io/ADT-Leitfaden/)** der DSAG, der Sie unterstützt, ADT effizient und flächendeckend im Unternehmen einzusetzen.
 
-### Fehlerbehandlung mit Ausnahmeklassen
+### Vollständiger Einsatz von klasssenbasierten Ausnahmen zur Fehlerbehandlung.
 
-Während bei Funktionsbausteinen und Programmen die Fehlerbehandlung mittels Exception Codes oder Parametern oder Messages gelöst wurden und so sich in den Parameterschnittstellen wiedergefunden haben, verwendet man in der Objektorientierung die sogenannten Klassenbasierten Exceptions.  
-Ein in OO geübter Entwickler definiert in der Konzeptionsphase die auftretenden Fehlersituationen, die in einem (Unter)Paket auftreten können und erstellt darauf basierend die entsprechenden Ausnahmeklassen mit den Fehlermeldungen (als Text-ID oder Nachrichtenbasiert).
-Wenn der Code der Geschäftslogik implementiert wird und die Fehler behandelt werden müssen, wird an der betreffenden Stelle die Exception aufgerufen. Die Behandlung muss nun nicht wie bei Funktionsbausteinen in jeweils jeder Aufrufschicht erfolgen, sondern kann zentral an einer Stelle erfolgen.   
+Verwenden Sie für die Behandlung von Fehlern ausschließlich klassenbasierte Ausnahmen. Diese sollen auch nur für den Fall von Fehlern eingesetzt werden und nicht für Erfolgs- oder Statusmeldungen aus der Anwendung missbraucht werden. Lediglich technische Einschränkungen von Seiten SAP zwingen Sie an einigen wenigen Stellen dazu klassische Exceptions einzusetzen.  
+Von der Verwendung von Returncodes raten wir ihnen ebenso ab wie von der alleinigen Rückgabe von Message Tabellen wie z.B. BAPIRET2, wie Sie dies z.B. in BAPI-Funktionsbausteinen oft vorfinden. diese Konzepte erzeugen das Problem, dass im aufrufenden Programm innerhalb des Ablaufs der Geschäftslogik geprüft werden muss, ob ein Fehlerfall vorliegt und somit eine saubere Trennung von technischen Belangen und Geschäftslogik nicht gegeben ist.
+Der Einsatz von Ausnahmeklassen ermöglicht hier eine deutlich bessere Trennung, Des Weiteren können Sie die Fehlerbehandlung aufgrund der Propagierung von Ausnahmen an zentralen Stellen bündeln. Bitte beachtens Sie hierzu auch die Empfehlungen des 
+[Clean-ABAP Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/sub-sections/Exceptions.md)
+
+
+Ein in ABAP-OO geübter Entwickler definiert in der Konzeptionsphase die auftretenden Fehlersituationen, die in einem (Unter)Paket auftreten können und erstellt darauf basierend die entsprechenden Ausnahmeklassen mit den Fehlermeldungen (als Text-ID oder Nachrichtenbasiert).
+Wenn der Code der Geschäftslogik implementiert wird und die Fehler behandelt werden müssen, wird an der betreffenden Stelle die Exception aufgerufen. Die Behandlung muss nun nicht wie bei Funktionsbausteinen in jeweils jeder Aufrufschicht erfolgen, sondern kann zentral an einer Stelle erfolgen.
 Dies gewährleistet eine konsistente Behandlung und vermindert den Aufwand wenn Fehler an mehreren Stellen auftreten können.
 
 ### Interfaces
@@ -201,6 +206,17 @@ Bei der Vererbung ist das Liskovsche Substitutionsprinzip zu beachten und genau 
 Manchmal ist es erforderlich, dass Funktionalitäten in vorgegebenen Artefakten umgesetzt werden müssen. Z.B. Funktionsbausteine in AIF, Remote Funktionsbausteine, Form Interface Routinen bei Adobe Forms usw.
 In diesem Fall dienen diese Entwicklungsobjekte als Verschalung und rufen die eigentliche Funktionalität nur auf, die dann in ABAP-Klassen und deren Methoden implementiert ist. Der Code in diesen Entwicklungsobjekten sollte sich nur auf technisches Coding beschränken wie z.B. Datenzuordnungen, Objektinstanziierung oder minimale Prüfungen.
 Dies bietet wiederum den Vorteil von möglicher Wiederverwendung und Implementierung von Unit Test.
+
+## Verwendung von SAP Code
+
+Die Verwendung von SAP-Code (CDS Views, Klassen, Funktionsbausteinen, BAPIs, etc.) oder auch paketfremder Code, sollte immer in einer eigenen Zugriffsschicht liegen. Dies entspricht dann auch einer sauberen Trennung der Belange (S - Separation of Concerns). Der Einsatz von ABAP Cloud forciert dies durch das 3-Tier Konzept ebenso s. Kapitel [Clean Core](Link Kap. CC).  
+Auch wenn es sich um freigegebene Elemente handelt, sollten diese stets mit einer Klasse gekapselt werden, damit es nur einen Ort des Übergangs von Eigen- an Fremdcode gibt.
+Erstellen Sie Klassen, deren Aufgabe es ist, den Programmcode der Anwendung frei von jeglichen Abhängigkeiten zum SAP Code oder zu paketfremden Code zu halten. Dies wird auch die Wiederverwendung fördern.  
+Falls die Erstellung eigener Klassen überdimensioniert ist, kann in Sonderfällen die Trennung auch durch den Aufruf des fremden Codes in eigens dafür erstellten privaten Methoden erfolgen. Die Schnittstellendefinition sollte sich dabei eher an den Aufrufer und nicht am aufgerufenen Objekt orientieren. Somit ist später ein Austausch des verwendeten Fremdcodes einfacher. Je nach Komplexität kann das Mapping zwischen Eigen- und Fremdcodeschnittstellen in eigene Methoden ausgelagert werden.
+
+Eine hilfreiche Erweiterung dieser Klassen ist die Transformation der klassischen Ausnahmen, oder Return Codes, die von SAP Code zur Fehlerbehandlung verwendet werden, hin zu Ausnahmeklassen.  
+Diese Trennung ist auch eine wichtige Voraussetzung für die Testbarkeit einer Anwendung.
+
 
 ## Testbarkeit durch gutes Design
 
