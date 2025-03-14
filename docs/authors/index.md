@@ -177,9 +177,9 @@ nav_order: 15
 <td>Review</td>
 </tr>
 <tr class="odd">
-<td>Timo John</td>
-<td>ADventas</td>
-<td>Schreiben, Review</td>
+<td><a href="https://timojohn.short.gy/">Timo John</a></td>
+<td>ADventas Gmbh</td>
+<td>KAP Testing, KAP ABAP, KAP Clean Core, Review</td>
 </tr>
 <tr class="header">
 <td>Urs Bühlmann</td>
