@@ -44,6 +44,29 @@ Mein Vorschlag für die generelle Struktur:
 
 *** TEXTSAVER - ****
 
+### Dynamic Logpoints mit ADT
+Mit dynamischen Logpoints können Sie ohne Änderung der Programme LogPoints erstellen, die wertvolle Informationen zum Ablauf von Programmen liefern. 
+
+Lop-Points helfen ihnen bei der Analye fon Prozessen die mit anderen Benutzer ausgeführt werdne und wo ein Debugging nicht / schwer möglich ist. 
+Sie Erhalten die Möglichkeit auf einfache Weise den Inhalt von Variablen auf zu zeichnen und zu prüfen wann und wie oft eine Funktion aufgerufen wird. 
+
+Folgende Fragestellungen können einfach beantwortet werden: 
+* von welchen Benutzern wurde eine stück Code duchlaufen
+* mit welchen Parametern wurde diese Funktion aufgerufen
+* Wie war die Aufrufhierarchie?
+* vieles mehr 
+
+Tipp: 
+Verwenden und üben sie den Einsatz von dynamischen Logpoints sie werden Ihnen sehr nützlich sein. 
+
+
+Don't:
+seit der Möglichkeit Logpoints dynamisch zu definieren, verzichten sie auf die Erstellung von ```LOG-POINTs ``` im ABAP Code und nutzen sie die Dynamische Variante. Dies gilt nicht für Dynamische ```Break-Points``` oder ```ASSERTIONS```. 
+
+
+Die SAP Hilfe bietet [erweiterte Informationen](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/using-dynamic-logpoints) 
+
+
 ### ABGLEICH TEST Kapitel ob dort was fehlt
 
 Moderne Softwareentwicklung bietet die Möglichkeit mittels moderner Softwarearchitektur das Testing in die frühe Phase der Softwareerstellung zu verschieben und Fehler frühzeitig zu finden. potenzielle Fehler werden bereits in der Designphase betrachtet, das gewünschte Programmverhalten definiert und evtl. Problematiken im Vorfeld mit dem Anforderer besprochen.

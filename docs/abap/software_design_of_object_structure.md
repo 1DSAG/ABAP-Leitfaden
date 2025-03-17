@@ -196,6 +196,18 @@ Durch den Einsatz von Interfaces wird die Definition von Methoden und deren Impl
 Interfaces werden bei UNIT-Tests benötigt, da z.B. Datenbankzugriffe in Unit Tests durch programmierte Testdaten ersetzt werden müssen. Die Datenbankklasse implementiert ein Interface, das im Produktcode aufgerufen wird. Wird der Unit-Test ausgeführt, wird statt der Datenbankklasse, eine sog. Mockingklasse aufgerufen, die statisch hinterlegte Daten beinhaltet und zurückliefert oder Das OSQL Framework nutzt um die Datenbankabfragen im Test zu simulieren.  
 Die Ausführungen dazu finden Sie im Kapitel [**Testing**](/ABAP-Leitfaden/testing/index).
 
+
+------
+An @ABAP-Pete25 von  @TimoJohn 
+" ich würde gerne noch dazu schreiben das grundsätzlich immer Iinterfaces zu verwenden sind für die Lose Kopplung. Das Unit Test das nutzen ist gut. Klingt hier aber so als würde man dies nur für unit test machen. Und dann kommen wieder Leute auf creative Gründe "ich brauche das nicht weil ..."
+Vorschlag: 
+
+Sie sollten grundsätzlich Methoden die Funktionen für andere Klassen bereitstellen in Interfaces defineren und dafür sorgen, dass die Verwender nur mit diesen Intetrfaces Arbeiten. Das Erzeugen von konkreten Obkjekten über nimmt eine separate Factory Klasse oder in besonders einfachen Fällen eine Factory Methode der Klasse. 
+```ZCL_BUSINESS_LOGIC=>GET_INSTANCE( ConpanyCode )``` 
+
+[Siehe](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-multiple-static-creation-methods-to-optional-parameters)
+--------
+
 ### Vererbung
 
 Ein wichtiges Konzept in der Objektorientierung ist die Vererbung. Dabei kann eine Klasse von einer anderen Klasse abgeleitet werden und somit die Eigenschaften der übergeordneten Klasse erben. So hat eine erbende Klasse die Attribute und Methoden der übergeordneten Klasse, kann aber weitere spezifische Methoden ergänzen oder ererbte Methoden redefinieren, d.h. eine Ergänzung der vererbten Implementierung oder gar eine eigene Implementierung der Methode erhalten.  
