@@ -6,7 +6,7 @@ nav_order: 15
 ---
 
 {: .no_toc}
-# Autoren & Reviewer
+# Mitarbeiter
 
 <table>
 <thead>
@@ -15,24 +15,25 @@ nav_order: 15
 <th style="text-align: left">Unternehmen</th>
 <th style="text-align: left">Tätigkeit beim Leitfaden</th>
 </tr>
-
+</thead>
+<tbody>
 <tr class="odd">
-<td>Alexander Lukas</td>
+<td><a href="https://www.linkedin.com/in/alexander-lukas/">Alexander Lukas</a></td>
 <td>EnBW</td>
 <td>Schreiben, Review</td>
 </tr>
 <tr class="header">
-<td>Andrea Schlotthauer</td>
+<td><a href="https://www.linkedin.com/in/andrea-schlotthauer-45a9a4312/">Andrea Schlotthauer</a></td>
 <td>SAP</td>
 <td>Review</td>
 </tr>
 <tr class="odd">
-<td>Andreas Göb</td>
+<td><a href="https://www.linkedin.com/in/andreasgoeb/">Andreas Göb</a></td>
 <td>CQSE</td>
 <td></td>
 </tr>
 <tr class="header">
-<td>Armin Junge</td>
+<td><a href="https://www.linkedin.com/in/armin-junge-b9b42323a/">Armin Junge</a></td>
 <td>msg systems ag</td>
 <td>Schreiben, Review</td>
 </tr>
@@ -47,7 +48,7 @@ nav_order: 15
 <td>Organisation, Schreiben, Review</td>
 </tr>
 <tr class="odd">
-<td>Carine Tchoutouo Djomo</td>
+<td><a href="https://www.linkedin.com/in/carine-tchoutouo/">Carine Tchoutouo Djomo</a></td>
 <td>SAP</td>
 <td>Review</td>
 </tr>
@@ -62,7 +63,7 @@ nav_order: 15
 <td>Schreiben, Review</td>
 </tr>
 <tr class="header">
-<td>Enno Wulff</td>
+<td><a href="https://www.linkedin.com/in/enno-wulff/">Enno Wulff</a></td>
 <td>Inwerken</td>
 <td>Schreiben, Review</td>
 </tr>
@@ -82,12 +83,12 @@ nav_order: 15
 <td>Schreiben, Review</td>
 </tr>
 <tr class="header">
-<td>Frank Engert</td>
+<td><a href="https://www.linkedin.com/in/frank-engert/">Frank Engert</a></td>
 <td>Softway AG</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Gregor Wolf</td>
+<td><a href="https://www.linkedin.com/in/gregorwolf/">Gregor Wolf</a></td>
 <td>profes</td>
 <td></td>
 </tr>
@@ -117,12 +118,12 @@ nav_order: 15
 <td></td>
 </tr>
 <tr class="odd">
-<td>Josephine Reinhold</td>
+<td><a href="https://www.linkedin.com/in/josephinereinhold/">Josephine Reinhold</a></td>
 <td>Softway AG</td>
 <td>Schreiben, Review</td>
 </tr>
 <tr class="header">
-<td>Julius Dacheneder</td>
+<td><a href="https://www.linkedin.com/in/julius-dacheneder-503934152/">Julius Dacheneder</a></td>
 <td>msg systems ag</td>
 <td>Schreiben, Review</td>
 </tr>
@@ -142,7 +143,7 @@ nav_order: 15
 <td>Schreiben, Review</td>
 </tr>
 <tr class="header">
-<td>Marcus Richter</td>
+<td><a href="https://www.linkedin.com/in/marcus-richter-cgi/">Marcus Richter</a></td>
 <td>CGI</td>
 <td>Schreiben, Review</td>
 </tr>
@@ -157,22 +158,22 @@ nav_order: 15
 <td>Schreiben, Review</td>
 </tr>
 <tr class="odd">
-<td>Peter Luz</td>
+<td><a href="https://www.linkedin.com/in/abap-pete/">Peter Luz</a></td>
 <td>Robert Bosch GmbH</td>
 <td>Kapitel ABAP Schreiben, Review</td>
 </tr>
 <tr class="header">
-<td>Sebastian Freilinger-Huber</td>
+<td><a href="https://www.linkedin.com/in/sebastian-freilinger-huber/">Sebastian Freilinger-Huber</a></td>
 <td>msg systems ag</td>
 <td>Organisation, Review</td>
 </tr>
 <tr class="odd">
-<td>Sven Treutler</td>
+<td><a href="https://www.linkedin.com/in/sven-treutler-87b470109/">Sven Treutler</a></td>
 <td>rku IT</td>
 <td>Schreiben, Review</td>
 </tr>
 <tr class="header">
-<td>Thomas Fiedler</td>
+<td><a href="https://www.linkedin.com/in/thomas-fiedler-2813202a/">Thomas Fiedler</a></td>
 <td>SAP</td>
 <td>Review</td>
 </tr>
@@ -182,29 +183,39 @@ nav_order: 15
 <td>KAP Testing, KAP ABAP, KAP Clean Core, Review</td>
 </tr>
 <tr class="header">
-<td>Urs Bühlmann</td>
+<td><a href="https://www.linkedin.com/in/urs-b%C3%BChlmann-3944b7/">Urs Bühlmann</a></td>
 <td>inpeek AG</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Volodymyr Vashchenko</td>
+<td><a href="https://www.linkedin.com/in/volodymyrvashchenko/">Volodymyr Vashchenko</a></td>
 <td>Festo SE & Co.KG</td>
-<td>Hauptsächlich beteiligt an den Kapiteln Clean Core, Organisation und Core Data Services</td>
+<td>Schreiben, Review</td>
 </tr>
-
-</thead>
-<tbody>
 </tbody>
 </table>
 
-### Für die Autoren etwas ausführlicher (analog ADT Leitfaden):
+# Autoren
+
+Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, was sie in der realen Welt tun und was sie motiviert hat am Leitfaden mitzuarbeiten.
+
 <table>
 <thead>
 <tr class="header">
 <th style="text-align: left">Name</th>
-<th style="text-align: left">Firma und Jobbezeichnung</th>
-<th style="text-align: left">Kurzbeschreibung eurer Tätigkeiten und Motivation der Mitarbeit am ABAP Leitfaden</th>
+<th style="text-align: left">Beteiligte Kapitel</th>
+<th style="text-align: left">Tätigkeit und Motivation</th>
 </tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Volodymyr Vashchenko</td>
+<td>Clean Core, Organisation, Core Data Services</td>
+<td>-</td>
+</tr>
+</tbody>
 </table>
 
-### Danksagungen
+# Danksagungen
+
+Hier weitere Danksagungen ...
