@@ -7,17 +7,22 @@ nav_order: 7
 ---
 
 
-## Vroschlag: Reihenfolge der Kapitel:
+## Vorschlag: Reihenfolge und Strukturierung der Kapitel:
+
 Mein Vorschlag für die generelle Struktur:
+
 - Einleitung - klar was sonst  
 
 **Strategie Blocks**
+
 - Organisation - Rahmenbedingungen und Grundsätze, die in den einzelnen Kapiteln wieder aufgegriffen werden
     Unterteilung in subfiles sinnvoll - Inhaltlich top !  
 - Clean Core - Basis Strategie - wie und mit welchen Prinzipien will man entwicklen (wie clean)
 
 **Moderne SAP Entwicklung - Technologien**
--    Core Data Service (vor ABAP, weil benötigt in ABAP zum Datenzugriff und anderes Programmiermodell) 
+
+- Core Data Service (vor ABAP, weil benötigt in ABAP zum Datenzugriff und anderes Programmiermodell) 
+
 - ABAP -  Basis der Programmierung - Unterteilung in weitere Files wegen größe
 - UI
 - Testen - Software tests - braucht wiederum ABAP wegen OO und so
@@ -25,9 +30,10 @@ Mein Vorschlag für die generelle Struktur:
 - Dokumentation - Doku der Entwicklung - ABAP DOC nich ausführlicher
 
 **Übergreifende Themen**
+
 - Software Lifecycle Management
-    - ALM  (alm und VW mergen in Softwaremanagment)
-    - Versionsverwaltung
+   - ALM  (alm und VW mergen in Softwaremanagment)
+   - Versionsverwaltung
 - Open Source
 - Integration
 - Sicherheit
