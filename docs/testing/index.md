@@ -159,21 +159,6 @@ Bei anfälligen, kritischen oder komplexen Methoden kann es sinnvoll sein, nur f
     * SQL
     * Funktionsbausteine
 
-## Testunterstützung:
-* Ecatt? 
-  * Wohl nicht mehr relevant
-* TestdatenContainer Ecatt für Testdaten 
-  * Nutzen für CDS /DB Mocks
-* Andere TestFriends:
-  * Dynamische Logpoints => ABAP Kaptiel, ADT Leitfaden,  Link 
-  * End2End Trace Cross Trace  …
-  * https://github.com/dominikpanzer/cacamber-BDD-for-ABAP
-  * ATC &  Transportintegration
-
-
-
-
-
 
 ##### Mermaid Demo
 ```mermaid

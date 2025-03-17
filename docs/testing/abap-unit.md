@@ -13,6 +13,12 @@ nav_order: 1
 {:toc}
 
 
+## offene Punkte:
+- Erfahrungen und bekannte Probleme bei Unit Tests.  Z.B. das SAP Factories immer wieder gemockt werden müssen.
+* Andere TestFriends:
+  * End2End Trace Cross Trace  …
+
+
 ## ABAP Unit Tests
 Dieses Kapitel handelt von automatisierten Entwicklertests (Unit Tests) und richtet sich an Programmierende jeglichen Niveaus als auch an managende und organisierende Personen. Jede Person, die in irgendeiner Form mit ABAP-Programmierungen in Berührung kommt, sollte wissen, was Unit Tests sind, wie sie eingesetzt werden und welche Grenzen sie haben.
 
@@ -138,6 +144,28 @@ Doppelter Code, fehlende Modularisierung ist hier ebenso zu vermeiden wie in pro
 * TEARDOWN
 * FOR TESTING
 * genereller Ablauf
+
+
+#### Risiko Level 
+* @all:   Gibt es Erfahrungen mit den Einstellungen 
+
+Folgen sie den Vorgaben der SAP zum Risiko Level:
+* CRITICAL - a test changes system settings or customizing data (default)
+* DANGEROUS - a test changes persistent data
+* HARMLESS - a test does not change system settings or persistent data
+
+Grundsätzlich sollten Sie es vermeiden Tests zu schreiben, die wirkliche Ändrungen an der Datenbank vornehmen ( müssen ) während ihrer Laufzeit. Dies ist oft ein Indiktor für fehlendes Management von Abhängikeiten bzw. deren Austausch. 
+ 
+Ihr Ziel muss sein möglichst alle Tests als Hamrless definieren zu können. 
+
+Mit hilfe der von SAP bereitgestellten Framworks zum Mocken von Datenbanktabellen und CDS Views ist dies ermöglicht worden. Siehe Abschnitt [Mocking..](Mocking, faking, spying und stubbing)
+
+#### Dauer / Duration
+
+Einstellung der verschiedenen Laufzeiten können sie via Transaktion: SAUNIT_CLIENT_SETUP vornehmen. 
+
+Auch hier gilt das klare Ziel, dass ihre Tests schnell sein müssen, damit sie immer wiedr ausgeführt werden können. 
+
 
 ### ASSERT
 * Vorstellung CL_ABAP_UNIT_ASSERT ?? macht das wirklich Sinn das zu erklären ?? 
@@ -307,8 +335,6 @@ Hinweis: Dies ist keine Empfehlung, alle Tests in einer Testmethode unterzubring
 
 
 
-
-
 ### Testumgebung
 ABAP Unit test können in ADT als auch im SAP GUI ausgeführt und ihre Ergebnisse analysiert werden. 
 Empfohlen wird hier klar ADT, da hier auch die verwendung von [Test Relations](https://www.youtube.com/watch?app=desktop&v=yiKhKlQz89Y&t=14s) möglich ist. 
@@ -317,11 +343,6 @@ Empfohlen wird hier klar ADT, da hier auch die verwendung von [Test Relations](h
 It's a good idea to run all available unit test on daily basis using RS_AUCV_RUNNER and mail the results to the developers. 
 
 
-
-
-
-# Do's & Dont's 
-* CL_Aunit_Assert nicht mehr benutzen bzw ersetzen, da sie obsolet ist. Entsprechend auch das Erben von der Klasse ersetzen. 
 
 
  
@@ -347,29 +368,44 @@ Test-Double-Frameworks sind in der Regel umständlich zu bedienen und sehr unüb
 * Datenbankzugriffe (oSQL)
 * Funktionsbausteine
 
-#### Test-Double-Framework für Datenbankzugriffe
 
-tbd
+#### Test-Double-Framework für ABAP Datenbankzugriffe / CDS Views / AMDP
+
+SAP stellt Ihnen verchiedenen Frameworks zur Seite um Abhängigkeiten von verschiedenen Datenbankartefakten zu lösen. 
+Diese Frameworks basieren auf Techniken womit die echten Daten in den Tabellen durch vorkonfigurierte MOCK Daten ersetzt werden können.
+
+Ziel ist es hierbei eine stabile wiedrholbare Umgebung aufzubaue in der sich Test beliebig oft wiederholen lassen ohne das Belege neu erstellt werden müssen. 
+
+Eine Übersich der vorhandenen Möglichkeiten finden Sie bei der SAP
+https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/managing-database-dependencies-with-abap-unit
+
+
+Die Herausforderung ligt nun in der Identifizierung der Tabellen / Views und dem Befüllen der Mock-Datenbank. 
+Planen Sie hierfür Zeit in der Entwicklung ein eine Infrastruktur zu schaffen, die es Ihnen für viele Tests ermöglicht von der Mock Datenbank für einen Geschäftsbereich zu profitieren. 
+
 
 #### Test-Double-Framework für Funktionsbausteine
 
-tbd
+Analog zu anderen Mocking Frameworks ermöglich Ihnen das Test-Double-Framework für Funktionsbausteine die Aufrufe an konfigurierbare Doubles um zu leiten. 
+Sie sind somit in der Lage für den unit tests zu bestimmen wie sich der Funktionsbaustein verhalten soll, ohne auf die korrtekten Parameterübrgaben angewiesen zu sein. Somit ist es z.B. einfach möglich die möglichen Feherfälle zu provozieren und den Bunsiness Code auf korrekrte behandlung derer zu prüfen.  
+
 
 ### Test-Seams
 
-Die Technik der Test-Seams ist keien bevorzugte Technik für Unit Tests. Sie sollten nur Temporär eingesetzt werden. 
+Die Technik der Test-Seams ist **keien** bevorzugte Technik für Unit Tests. Sie sollten nur Temporär eingesetzt werden. 
 Test-Seams ersetzen kein tesbar gestaltete software architektur. 
 Siehe [Clean ABAP Test Seams](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#use-test-seams-as-temporary-workaround)
 
+
+
+
+## Erweiterte Techniken
 
 #### SAP Komponenten wie Bapis & Funktionsbausteine in Unit Test
 Sollten sie in Ihren Komponenten oder Integrationstest darauf angewiesen sein, dass eine BAPI oder ein Funktionsbause oder auch eine Klasse von SAP einen Schritt ausführt der Teil Ihrest Tests sein soll, ist es meist nötig wiederholbare und stabile Testdaten in den relevanten Tabellen zu haben.  siehe [Mocking von Datenbanktabellen](Testdatenverwaltung in ECATT-Containern). 
 
 In allen anderen Fällen ist es ratsam die 
 
-
-
-## Erweiterte Techniken
 
 #### Mockdaten aus DB-Tabelle erstellen in Eclipse
 tbd 
@@ -395,10 +431,8 @@ Schneller:
 
 
 
-
-
-
-##  tbd Beispiele Anbringen: 
-- ?Woher bekommen wir Beispiele mit Fleisch dran, die nicht nur SFLIGHT sind. 
-- Erfahrungen und bekannte Probleme bei Unit Tests.  Z.B. das SAP Factories immer wieder gemockt werden müssen.
+## Do's & Dont's 
+* Im Zweifel einen UNit test mehr anlegen
++ weniger in einem Test prüfen
+* CL_Aunit_Assert nicht mehr benutzen bzw ersetzen, da sie obsolet ist. Entsprechend auch das Erben von der Klasse ersetzen. 
 
