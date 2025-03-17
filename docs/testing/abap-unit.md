@@ -20,9 +20,9 @@ nav_order: 1
 
 
 ## ABAP Unit Tests
-Dieses Kapitel handelt von automatisierten Entwicklertests (Unit Tests) und richtet sich an Programmierende jeglichen Niveaus als auch an managende und organisierende Personen. Jede Person, die in irgendeiner Form mit ABAP-Programmierungen in Berührung kommt, sollte wissen, was Unit Tests sind, wie sie eingesetzt werden und welche Grenzen sie haben.
+Dieses Kapitel handelt von automatisierten Entwicklertests (Unit Tests) in ABAP und richtet sich an Programmierende jeglichen Niveaus als auch an managende und organisierende Personen. Jede Person, die in irgendeiner Form mit ABAP-Programmierungen in Berührung kommt, sollte wissen, was Unit Tests sind, wie sie eingesetzt werden und welche Grenzen sie haben.
 
-Wenn im Folgenden von _Unit Tests_ die Rede ist, dann sind ABAP Unit Tests mit Hilfe des ABAP Unit Frameworks gemeint. Das ABAP bezieht sich lediglich auf die Besonderheiten von Unit Tests im SAP-Kontext.
+Wenn im Folgenden von _Unit Tests_ die Rede ist, dann sind ABAP Unit Tests mit Hilfe des ABAP Unit Frameworks gemeint. Das ABAP bezieht sich lediglich auf die Besonderheiten von Unit Tests im ABAP-Unit Framework. 
 
 ### Einstieg
 
@@ -39,8 +39,7 @@ Wir wollen Anregungen und Hilfestellungen dazu geben. Gleichwohl können wir an 
 
 
 
-
-### Was sind Unit Test nun genau?
+### Was sind Unit Test genau?
 Unit Tests sind Funktionen, die modularisierte Einheiten (Methoden, Funktionsbausteine) oder ganze Prozesse mit vorgegebenen Funktionen aufrufen und das Ergebnis mit den erwarteten Vorgaben abgleichen. 
 
 Folgendes Beispiel demonstriert die Vorgehensweise: Es gibt eine Klasse mit einer Methode, die aus einem Text die Straße und die Hausnummer ermitteln soll. Es werden nun Unit Tests erstellt, die aus bereits bekannten Problemen testen, ob das erwartete Ergebnis ermittelt wird.
@@ -66,10 +65,25 @@ Es gibt Programmbereiche, die nicht mittels ABAP Unit Tests überprüft werden k
 Für alles andere gibt es möglichkeiten diese Programme mit unittest ab zu sichern. Anfänglich wird dies aufwändig und müsam sein. Die Mühe wird sich aber lohnen uns schnell auszahlen.
 Es is definitiv möglich Bapis / Badis / RFC / IDOC / mit Unitest ab zu sichern. 
 
+### Behandlung von Mandanten in Unit Tests 
+Die klassischen Systemkonfikuration im Entwicklungsystem mit einen Entwicklungs- und einem Testmandanten stellen eine Hürde für den reibungslosen Ablauf Komponenten- oder Integrationstests dar, da diese meinst von Daten der datenbank abhängig zu sein seinen. 
+
+>**Empfehlung**  
+Erstellen sie ihre ABAP Unit Test Unabhänhig von der Datenbank, so dass sie mit hilfe von dependency Injection und Mocks
+in jedem Mandanten laufen. Die Hürde dabei entsteht, dass im Mandant 100 entwickelt wird und in 110 die Unit Test laufen führt dazu, dass Entwickler seltener Unit Tests laufen lassen.\
+Sie sollten alles dafür Einsetzen das Unit Test in jedem Mandanten immer lauffähig sind. 
+Welche Techniken Sie beim Erreichten dieser Unabhängigkeit untestützen finden sie hier im  Abschnit [Erweiterte Techniken](#erweiterte-techniken)
+{: .highlight}
+
+
 
 ### Testumgebung
 
-Die ABAP-Unit-Tests können aus der SAP-Entwicklungsumgebung (SE80, SE24) oder den ABAP-Development-Tools heraus verwendet werden. Die Vorgehensweise unterscheidet sich nur in Kleinigkeiten. Die Techniken, die zur Erstellung notwendig sind, ähneln sich jedoch stark. Unit Test, die in der SE80 erstellt wurden, können auch in Eclipse gewartet und getestet werden und umgekehrt. Die Tastenkombination zum Ausführen der Unit Test ist in beiden Tools STRG + SHIFT + F10. Andere Funktionen sind in der ABAP Workbench teilweise nur durch das Menü erreichbar während es im ADT eine Tastenkombination dafür gibt.
+Die ABAP-Unit-Tests können aus den ABAP-Development-Tools heraus oder der SAP-GUI Entwicklungsumgebung (SE80, SE24) erstellt und verwendet werden. Die Vorgehensweise unterscheidet sich nur in Kleinigkeiten.
+Empfohlen wird hier klar ADT, da hier auch die verwendung von [Test Relations](https://www.youtube.com/watch?app=desktop&v=yiKhKlQz89Y&t=14s) möglich ist. \
+Die Techniken, die zur Erstellung notwendig sind, ähneln sich jedoch stark. Unit Test, die in der SE80 erstellt wurden, können auch in Eclipse gewartet und getestet werden und umgekehrt. Die Tastenkombination zum Ausführen der Unit Test ist in beiden Tools **STRG + SHIFT + F10.** Andere Funktionen sind in der ABAP Workbench teilweise nur durch das Menü erreichbar während es im ADT eine Tastenkombination dafür gibt.
+
+
 
 In den folgenden Kapiteln werden diese Themen behandelt:
 * Erstellen von Unit Tests
@@ -79,7 +93,7 @@ In den folgenden Kapiteln werden diese Themen behandelt:
 
 Wir gehen davon aus, dass Sie Erfahrung mit dem jeweiligen Tool haben. Aus diesem Grund erfolgt keine Schritt-für-Schritt-Anleitung, sondern lediglich eine grobe Darstellung des Vorgehens.
 
-#### Tastenkombinationen
+#### Tastenkombinationen  ( TJOHN:"Würde ich streichen, zu detailliert hier das Tooling zu erklären")
 
 ADT
 
@@ -95,45 +109,42 @@ ABAP Workbench
 * Ctrl + Shift + F11: Lokale Testklassen anzeigen (nur formularbasierter Editor)
 * Ctrl + F11: Lokale Testklassen anzeigen (nur Quelltext-basierter Editor)
 
-#### Eclipse
+#### Eclipse ( TJOHN:"Würde ich streichen, zu detailliert hier das Tooling zu erklären")
 
 * Öffnen globale Klasse
 * Tab "Test Classes"
 * Muster testClass
 
 
-#### SAPGUI/ SE80
+#### SAPGUI/ SE80 ( TJOHN:"Würde ich streichen, zu detailliert hier das Tooling zu erklären")
 
 * Öffnen globale Klasse SE24/ SE80
 * Menü: Utilities - Test Classes - Generate
 
 
+
 ### GIVEN - WHEN - THEN
 GIVEN-WHEN-THEN ist ein Stil, um Unit Test zu formulieren. Mit GIVEN wird eine Bedingung angegeben, unter denen der Test stattfinden soll. WHEN beschreibt die Aktion, die durchgeführt wird und THEN beschreibt das erwartete Ergebnis.
 
-Bezogen auf unser Beispiel mit der Hausnummer könnte die Formulierung heißen:
-GIVEN: ABC-Straße 13
-WHEN: die Hausnummer aus diesem String ermittelt wird
+Bezogen auf unser Beispiel mit der Hausnummer könnte die Formulierung heißen:\
+GIVEN: ABC-Straße 13\
+WHEN: die Hausnummer aus diesem String ermittelt wird\
 THEN: Sollte die Hausnummer 13 sein
-
-Link: [CACAMBER - the BDD-Framework for ABAP](https://github.com/dominikpanzer/cacamber-BDD-for-ABAP)
 
 
 ### Clean Code in Unit Tests
-Oft trifft man auf die Einstellung, dass es in unit tests nicht nötig ist sich an Regen der Code Qualität zu halten #cleanABAP. Schlechte wartbarkeit Qualität in Unit Tests wird dazu führen dass die Tests nicht weiterentwickelt werden und nutzlos werden. 
-Doppelter Code, fehlende Modularisierung ist hier ebenso zu vermeiden wie in produktiven code. 
+Oft trifft man auf die Einstellung, dass es in Unit Tests nicht nötig ist sich an Regen der Code Qualität zu halten #CleanABAP. Schlechte wartbarkeit Qualität in Unit Tests wird dazu führen dass die Tests nicht weiterentwickelt werden und nutzlos werden. Doppelter Code, fehlende Modularisierung ist hier ebenso zu vermeiden wie in produktiven code. 
 
 #### Unit Test sauber halten
-<<keine Roten Unit tests dann kommen schnell noch mehr hinzu - AUSFORMILEREN>>
+Ebenso ist es zwingend nötig alle Unit Test Erfolgreich durch zu führen. Seien sie hier nicht nachlässig und priorisieren sie diese Augaben die es bedürfen den Geschäfts-Code oder den Unit Test zu repariern, bis wieder alle Tests erfolgreich sind. 
 
-### RAISING cx_static_check
+### RAISING cx_static_check  #Review: Timo John"Alte Dokumentation( in aktueller nciht mehr drin) & meiner Ansicht nach nicht sinnvoll als Regel"
 
 [SAP empfiehlt](https://help.sap.com/doc/saphelp_crm700_ehp03/7.0.3.11/de-DE/dd/587324e2424b14ab5afb3239a77a8d/frameset.htm): Wenn der zu testende Code in der Lage ist, eine Ausnahme auszulösen, sollte die Testmethode selbst diese nicht behandeln, sondern sie in ihrer Signatur deklarieren (abgesehen von provozierten Ausnahmen), so dass der Testfall fehlschlägt, wenn er zur Laufzeit auftritt. 
 
 
 
-### Unit Test Klasse
-?? macht das wirklich Sinn das zu erklären ?? 
+### Unit Test Klasse  #Review TJOHN macht das wirklich Sinn das zu erklären ?? 
 * Beschreibung, wie eine Klasse aufgebaut ist
 * Risklevel
 * Duration
@@ -167,7 +178,8 @@ Einstellung der verschiedenen Laufzeiten können sie via Transaktion: SAUNIT_CLI
 Auch hier gilt das klare Ziel, dass ihre Tests schnell sein müssen, damit sie immer wiedr ausgeführt werden können. 
 
 
-### ASSERT
+### ASSERT  #Review TJOHN macht das wirklich Sinn das zu erklären ?? 
+
 * Vorstellung CL_ABAP_UNIT_ASSERT ?? macht das wirklich Sinn das zu erklären ?? 
 
 
@@ -242,23 +254,34 @@ Die Methode `prepare_setup( ).` erstellt zwei Instanzen, die zur Verifizierung d
 
 #### Hilfsmethoden zum Aufbau von Testdaten
 
-Wenn Testdaten aus vielen Komponenten bestehen (Kopfdaten, Positionsdaten, Partner, Materialien usw.), dann kann das Zusammenstellen dieser Daten umfangreich werden. Entsprechende Hilfsmethoden können die Zusammenstellung erleichtern.
+Wenn Testdaten aus vielen Komponenten bestehen (Kopfdaten, Positionsdaten, Partner, Materialien usw.), dann kann das Zusammenstellen dieser Daten umfangreich werden. Entsprechende Hilfsmethoden sind hier unbedingt erforderlich um die Zusammenstellung erleichtern.
 
 **Beispiel:**
 
-Die Methode `get_setup_for_document( i_doc_id = 123 ).` stellt alle notwendigen Daten zur Verfügung, die zu dem geforderten Dokument gehören.
+Die Methode `get_setup_for_document( doc_id = c_nice_docuemt_id ).` stellt alle notwendigen Daten zur Verfügung, die zu dem geforderten Dokument gehören.
+{: .note }
+Wenn sie auf Dokumente der Datenban zurückgreifen müssen, pflegen Sie zentral Konstanten mit sprechenden Namen und Erläuterungen.  Sie werden irgendwann nicht mehr wissen welche Eigenarten Beleg 564 hatte.   
+```ABAP
+CONSTANTS:  "! Sales order that has one item, Material ..., not released ... 
+             c_order_one_iten_ok
+```
+
 
 #### Hilfsmethoden zur Modularisierung von Tests
 
-Bei Tests kann es notwendig sein, dass nicht nur ein Aspekt des Ergebnisses  getestet wird, sondern viele. Solche Programmierungen können in der Regel gut in Methoden ausgelagert werden.
+Bei Tests kann es notwendig sein, dass nicht nur ein Aspekt des Ergebnisses getestet wird, sondern viele. Solche Programmierungen können in der Regel gut in Methoden ausgelagert werden.
 
 **Beispiel:**
 
-Die Methode `verify_address_is_valid( i_address = data ).` prüft nicht nur, ob Straßenname und Hausnummer erfolgreich extrahiert werden konnten, sondern auch, ob die Postleitzahl aus fünf Zahlen besteht und mit dem Ortsnamen übereinstimmt.
+Die Methode `verify_address_is_valid( address = data )` prüft nicht nur, ob Straßenname und Hausnummer erfolgreich extrahiert werden konnten, sondern auch, ob die Postleitzahl aus fünf Zahlen besteht und mit dem Ortsnamen übereinstimmt.
 
+### Testen von privaten, geschützten und öffentlichen Methoden
+Es gibt die Meinung, dass nur öffentliche Methoden getestet werden sollten. Über die Codeabdeckung kann analysiert werden, ob alle Codestrecken durchlaufen wurden.
+Allerdings kann das Bereitstellen der notwendigen Daten sehr aufwändig sein, so dass es sinnvoll sein kann, die kleineren Einheiten (private und geschützte Methoden) zu testen. Zudem "verwässern" umfangreiche Datenkonstellationen den Zweck eines Unit Tests. Tests für private Methoden können ebenfall helfen den Ursprung eine Fehlers schneller zu lokalisieren. 
 
-#### Test von privaten Methoden
-Beispiel Adressaufbereitung: Nehmen wir an, wir haben eine Klasse, die Adressen entgegen nimmt und analysiert. Die eine Methode ```SEPARATE_HOUSENO_FROM_STREET``` haben wir bereits kennengelernt. Zusätzlich gibt es eine Methode ```CHECK_POST_CODE```, die sicherstellen soll, dass die Postleitzahl 5-stellig ist und nur aus Zahlen besteht. Wenn beide privaten Methoden von der öffentlichen Methode ```CHECK_ADDRESS``` aufgerufen werden, müssen wir zum Testen immer eine komplette Adresse übergeben. Einfacher und auch deutlicher ist es, wenn wir die privaten Methoden separat testen.
+**Beispiel Adressaufbereitung:**\
+Nehmen wir an, wir haben eine Klasse, die Adressen entgegen nimmt und analysiert. Die eine Methode ```SEPARATE_HOUSENO_FROM_STREET``` haben wir bereits kennengelernt. Zusätzlich gibt es eine Methode ```CHECK_POST_CODE```, die sicherstellen soll, dass die Postleitzahl 5-stellig ist und nur aus Zahlen besteht. Wenn beide privaten Methoden von der öffentlichen Methode ```CHECK_ADDRESS``` aufgerufen werden, müssen wir zum Testen immer eine komplette Adresse übergeben. Einfacher und auch deutlicher ist es, wenn wir die privaten Methoden separat testen.
+Sie können so nur die eigentliche Funktion der Methode ```SEPARATE_HOUSENO_FROM_STREET``` testen, das Aufteilen,  da die Prüfmethoden  `CHECK-` eigene Tests besitzen. 
 
 ### Unit Tests erweitern
 Wenn wir uns das Beispiel mit dem Ermitteln der Hausnummer ansehen, dann gibt es viele Fallstricke, die ein unerwartetes Ergebnis hervorrufen können. Die Eingaben, die zu einem fehlerhafte Ergebnis führen, kennen wir im Vorfeld jedoch nicht. Wir lernen sie erst kennen, wenn sich Anwender beschweren, die ein falsches Ergebnis erhalten. In diesem Fall können die Eingaben, die zu fehlerhaften Ausgaben geführt haben, in einen Unit Test aufgenommen werden. Nach der Änderung des Codings werden alle bereits definierten Unit Tests durchgeführt und der Entwickelnde kann sicher sein, dass alles wie zuvor funktioniert.
@@ -274,7 +297,7 @@ Also zum Beispiel:
 
 Die Testklasse könnte dann wie folgt aussehen:
 
-```
+```ABAP
 CLASS ltcl_verify_addresses_helper DEFINITION FINAL FOR TESTING
   DURATION SHORT
   RISK LEVEL HARMLESS.
@@ -285,8 +308,8 @@ CLASS ltcl_verify_addresses_helper DEFINITION FINAL FOR TESTING
       setup,
       verify_address
         IMPORTING
-          i_street   TYPE string
-          i_house_no TYPE string,
+          street   TYPE string
+          house_no TYPE string,
 
       test_german_standards FOR TESTING.
 ENDCLASS.
@@ -296,9 +319,9 @@ CLASS ltcl_verify_addresses_helper IMPLEMENTATION.
 
   METHOD test_german_standards.
 
-    verify_address( i_street = |Straße des 17. Juni| i_house_no = |134| ).
-    verify_address( i_street = |ABC-Straße| i_house_no = |89| ).
-    verify_address( i_street = |Parkallee| i_house_no = |11 a-f| ).
+    verify_address( street = |Straße des 17. Juni| house_no = |134| ).
+    verify_address( street = |ABC-Straße| house_no = |89| ).
+    verify_address( street = |Parkallee| house_no = |11 a-f| ).
   ENDMETHOD.
 
   METHOD setup.
@@ -307,16 +330,16 @@ CLASS ltcl_verify_addresses_helper IMPLEMENTATION.
 
   METHOD verify_address.
 
-    DATA(address_string) = |{ i_street } { i_house_no }|.
+    DATA(address_string) = |{ street } { house_no }|.
     DATA(address_result) = cut->split_address( address_string ).
     cl_abap_unit_assert=>assert_equals(
-      exp = i_street
+      exp = street
       act = address_result-street
-      msg = |Streetname should be { i_street }| ).
+      msg = |Streetname should be { street }| ).
     cl_abap_unit_assert=>assert_equals(
-      exp = i_house_no
+      exp = house_no
       act = address_result-house_no
-      msg = |House number should be { i_house_no }| ).
+      msg = |House number should be { house_no }| ).
 
   ENDMETHOD.
 
@@ -333,20 +356,15 @@ Diese Variante erlaubt es, auch weiterhin Tests durchzuführen, die nach einem a
 
 Hinweis: Dies ist keine Empfehlung, alle Tests in einer Testmethode unterzubringen. Das Beispiel soll lediglich aufzeigen, dass Hilfsmethoden genutzt werden können, um die Unit Tests kompakter, besser wartbar und lesbarer zu gestalten.
 
+##### Aufteilen von lokalen & globalen Testklassen 
 
 
 ### Testumgebung
 ABAP Unit test können in ADT als auch im SAP GUI ausgeführt und ihre Ergebnisse analysiert werden. 
 Empfohlen wird hier klar ADT, da hier auch die verwendung von [Test Relations](https://www.youtube.com/watch?app=desktop&v=yiKhKlQz89Y&t=14s) möglich ist. 
 
-- RS_AUCV_RUNNER  
-It's a good idea to run all available unit test on daily basis using RS_AUCV_RUNNER and mail the results to the developers. 
-
-
-
-
  
-### Mocking, faking, spying und stubbing
+### Auflösen von Abhängigkeiten mit Mocking, faking,stubbing und spying
 
 Eine wichtige Eigenschaft von testbarem Code ist, dass (Geschäfts-)Logik, Datenbeschaffung und Präsentation strikt getrennt sind. Wenn dies gewährleistet ist, dann können abhängige Klassen durch nicht-produktive Objekte ersetzt werden. Diese Objekte können unterschiedliche Aufgaben haben und werden dementsprechend benannt. Die folgenden Arten sind möglich:
 
@@ -412,10 +430,12 @@ tbd
 #### Testdatenverwaltung in ECATT-Containern
 Zur Erstellung stabiler Testdaten können ECATT-Testdaten-Container verwendet werden. 
 
-
 Zugriff auf die Ecatt Test Daten: 
-  data(lo_tdc_api) = cl_apl_ecatt_tdc_api=>get_instance( i_testdatacontainer         = get_tdc_name( )
+ 
+ ```ABAP 
+ data(lo_tdc_api) = cl_apl_ecatt_tdc_api=>get_instance( i_testdatacontainer         = get_tdc_name( )
                                                          i_testdatacontainer_version = get_tdc_version( )  ).
+```
 
 Diese Testdaten aus den ECATT-Containern können dann in die mock Datenbank eingefügt werden. 
 
@@ -429,10 +449,24 @@ Diese Testdaten aus den ECATT-Containern können dann in die mock Datenbank eing
 Schneller: 
   sql_environment->insert_test_data 
 
+#### Automatisierte regelmäßige Läufe von Unit Tests
+Es gibt mehrere Möglichkeiten Unit Test regelmäßig laufen zu lassen. 
 
+- Programm RS_AUCV_RUNNER  
+- ATC Läufte 
+- Rest Service ( Communication scenario SAP_COM_0735 )
+
+>**Empfehlung**  
+Planen Sie die Unit Test eines Systems regelmäßig ein und erstellen Sie Benachrichtigungen hierfür. 
+Für jeden Enwickler sollte es zur Morgenroutine gehören zu prüfen ob alle Test fehlerfrei sind, damit dies gegebenenfalls Daily besprochen werden kann. 
+{: .highlight}
 
 ## Do's & Dont's 
 * Im Zweifel einen UNit test mehr anlegen
 + weniger in einem Test prüfen
 * CL_Aunit_Assert nicht mehr benutzen bzw ersetzen, da sie obsolet ist. Entsprechend auch das Erben von der Klasse ersetzen. 
+
+##  tbd Beispiele Anbringen: 
+- ?Woher bekommen wir Beispiele mit Fleisch dran, die nicht nur SFLIGHT sind. 
+- Erfahrungen und bekannte Probleme bei Unit Tests.  Z.B. das SAP Factories immer wieder gemockt werden müssen.
 

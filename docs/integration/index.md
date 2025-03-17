@@ -10,11 +10,13 @@ nav_order: 10
 # Integration
 
 1. TOC
-   {:toc}
+{:toc}
 
 ## Einführung
 
-Die Integration von SAP Systemen würde an sich den Rahmen dieses Leitfadens sprengen, daher finden Sie hier vor allem aktuell genutzte Technologien und eine ungefähre Richtung, welche Technologien die nächsten Jahre bestehen werden. Dabei sollten Sie immer im Hinterkopf behalten, dass auch das Thema Middleware eine wichtige Rolle beim Verteilen von Daten und dem Monitoring sind.
+Die Integration von SAP Systemen, und auch Non-SAP Systemen, würde an sich den Rahmen dieses Leitfadens sprengen. Daher finden Sie hier vor allem aktuell genutzte Technologien und eine ungefähre Richtung, welche Technologien die nächsten Jahre bestehen werden. Dabei sollten Sie immer im Hinterkopf behalten, dass auch das Thema Middleware eine wichtige Rolle beim Verteilen von Daten und dem Monitoring sind. Siehe auch Rubrik [Kapitel Clean Core](/ABAP-Leitfaden//clean-core//what-is-clean-core/) 
+
+Zusätzlich sollten Sie beachten, dass mit der zunehmenden Migration von SAP-Systemen in die Cloud, nicht-funktionale Anforderungen (NFRs) wie Verfügbarkeit, Sicherheit, Skalierbarkeit und Beobachtbarkeit (Englisch: observability) von Anfang an zu berücksichtigen. Diese Aspekte sind in On-Premise-Umgebungen oft selbstverständlich, müssen aber in der Cloud neu durchdacht und aktiv integriert werden. Eine unzureichende Planung kann zu hohen Kosten für Nachbesserungen führen, insbesondere wenn ein System erst bei steigender Nutzerzahl oder im Ernstfall seine Grenzen aufzeigt. [Siehe Artikel "The Seven Reasons Your SAP Tech Initiatives Are Failing"](https://secondphase.com.au/seven-reasons-sap-tech-failing/)
 
 ### Business Accelerator Hub
 
@@ -61,8 +63,7 @@ Welche Technologien sind bei der Umstellung auf Clean Core eigentlich noch relev
 
 ![Clean Integration](./img/image-01.png)
 
-Empfehlung zu Clean Core Integration
-{: .img-caption}
+Empfehlung zu Clean Core Integration{: .img-caption}
 
 Dazu erhalten Sie hier die Übersicht der oben genannten Technologien unterteilt in die Bereiche zum Weiterführen und zum Vermeiden. Die Verteilung ergibt sich aus den Empfehlungen des Leitfadens.
 
@@ -72,3 +73,40 @@ Dazu erhalten Sie hier die Übersicht der oben genannten Technologien unterteilt
 | SOAP        | IDoc      |
 | Events      |           |
 | HTTP (REST) |           |
+
+## Empfehlungen für Grenzfälle
+
+Bei der Integration von SAP-Systemen gibt es Grenzfälle, in denen nicht alle standardisierten SAP-Integrationsarten optimal genutzt werden können. In solchen Szenarien ist es essenziell, eine sorgfältige Abgrenzung zu anderen SAP- sowie Non-SAP-Tools vorzunehmen.
+
+#### Berücksichtigung zukünftiger Entwicklungen
+
+SAP entwickelt seine Integrationslösungen kontinuierlich weiter. Daher sollte stets geprüft werden, welche Technologien zukünftig an Bedeutung gewinnen und welche möglicherweise durch neuere Lösungen ersetzt werden. Eine zukunftsorientierte Planung hilft, technologische Sackgassen zu vermeiden und die Integration langfristig stabil und nachhaltig zu gestalten.
+
+#### Bestand alter Technologien
+
+Obwohl SAP kontinuierlich neue Integrationslösungen bereitstellt, sind einige ältere Technologien weiterhin wertvoll und können noch nicht vollständig abgelöst werden. Daher ist es wichtig, bestehende Lösungen nicht vorschnell außer Betrieb zu nehmen, sondern ihre Relevanz im jeweiligen Unternehmenskontext zu bewerten. Beispielsweise sind **IDoc** und **RFC** in vielen Legacy-Systemen tief verankert und bieten weiterhin zuverlässige Kommunikationsmöglichkeiten.
+
+#### Nachhaltige Architektur und Clean-Core-Strategie
+
+Die Gestaltung einer nachhaltigen Architektur sollte unter Berücksichtigung der **Clean-Core-Strategie** erfolgen. Die Public Cloud dient hier oft als Vorbild für Musterintegrationen, die sich durch hohe Standardisierung und Wartungsfreundlichkeit auszeichnen. Ziel ist es, den individuellen Code-Anteil gering zu halten und Standardlösungen zu bevorzugen.
+
+#### Wichtige Entscheidungsfaktoren bei Grenzfällen
+
+- **Kosten:** Der finanzielle Aufwand für Entwicklung(sressourcen), Betrieb, Lizensen und Wartung muss gegen den Nutzen abgewogen werden.
+- **Features:** Prüfen, ob bestehende Integrationslösungen alle benötigten Funktionen abdecken oder Anpassungen erforderlich sind.
+- **Vendor Lock-In:** Abhängigkeiten von bestimmten SAP- oder Drittanbieter-Technologien sollten kritisch betrachtet werden.
+- **Monitoring:** Eine effektive Überwachung der Integration ist essenziell, um Probleme frühzeitig zu erkennen und zu beheben. Für den Fall von Systemausfällen sind Reprozessierung-szenarien vorzusehen.
+
+
+### Beispiel: Massendatentransferierung 
+
+#### EDI (Electronic Data Interchange) im S/4 HANA
+
+(Web) APIs basierend auf REST oder SOAP haben ihre Grenzen. Dafür sollten anderen Technologien eingesetzt werden. Beispielsweise SAP EDI ist für die Verarbeitung großer Mengen elektronischer Daten konzipiert für 100.000+ Nachrichten pro Tag – und erfolgt mit zahlreichen B2B-Partnern unter Verwendung standardisierter Formate wie EDIFACT.
+
+Im direkten Vergleich wird schnell klar, warum IDOCs für SAP EDI die bessere Wahl sind: Sie sind asynchron, für Massendaten ausgelegt und bieten vordefinierte Validierungen sowie robuste Monitoring- und Reprocessing-Mechanismen. APIs hingegen sind synchron, verarbeiten Nachrichten einzeln und erfordern zusätzlichen Aufwand für Fehlerbehandlung und Mappings. In Hochlast-Szenarien kann eine API-basierte EDI-Integration daher erhebliche Performance-Probleme und hohe Betriebskosten verursachen.
+
+#### Weitere Lösungswege für Massendatentranferierung
+
+- [SAP Landscape Transformation Replication Server](https://www.sap.com/germany/products/technology-platform/landscape-replication-server.html), ABAP und NetWeaver basiert 
+- [SAP HANA Smart Data Integration (SDI)](https://help.sap.com/docs/SUPPORT_CONTENT/hanasdi/4740563873.html?mt=de-DE), SAP HANA Datenbank basiert
