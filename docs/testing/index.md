@@ -3,7 +3,7 @@ layout: page
 title: Testen
 permalink: /testing/
 has_children: true
-nav_order: 9
+nav_order: 5
 ---
 
 {: .no_toc}

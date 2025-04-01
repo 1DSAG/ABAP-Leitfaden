@@ -3,7 +3,7 @@ layout: page
 title: Open Source
 permalink: /open-source/
 has_children: true
-nav_order: 5
+nav_order: 11
 ---
 
 {: .no_toc}

@@ -2,7 +2,7 @@
 layout: page
 title: UI
 permalink: /user-interface/
-nav_order: 8
+nav_order: 6
 ---
 
 {: .no_toc}
@@ -11,11 +11,14 @@ nav_order: 8
 1. TOC
 {:toc}
 
-## Einleitung 
+## Einleitung
+
 Dieses Kapitel gibt einen Überblick über verschiedene UI-Technologien, die im Kontext von ABAP-System zum Einsatz kommen. Der Hauptfokus liegt relevanzbedingt auf Fiori (SAPUI5). Im späteren Verlauf wird jedoch auch auf CRM Web UI sowie andere, teils ältere Technologien eingegangen.
 
 ## Fiori & SAPUI5
-SAP Fiori bezeichnet die neue User Experience aktueller Lösungen der SAP, die auf Basis moderner Design-Prinzipen entstanden sind. Fiori ist die strategische Oberflächentechnologie der SAP und sollte in den meisten Fällen von Neuentwicklungen als gesetzte Technologie angesehen werden. Der Begriff **Fiori** meint dabei jedoch teils unterschiedliche Themen:
+
+SAP Fiori bezeichnet die neue User Experience aktueller Lösungen der SAP, die auf Basis moderner Design-Prinzipien entstanden sind. Fiori ist die strategische Oberflächentechnologie der SAP und sollte in den meisten Fällen von Neuentwicklungen als gesetzte Technologie angesehen werden. Der Begriff **Fiori** meint dabei jedoch teils unterschiedliche Themen:
+
 * Fiori als Designsprache moderner Oberflächen
 * Fiori-Empfehlungen zu guter User Experience
 * Fiori Elements Technologie zur annotationsgestützten Generierung von Applikationen

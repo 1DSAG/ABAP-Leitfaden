@@ -2,7 +2,7 @@
 layout: page
 title: Sicherheit
 permalink: /security/
-nav_order: 2
+nav_order: 13
 ---
 
 {: .no_toc}
