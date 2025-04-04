@@ -12,6 +12,23 @@ nav_order: 5
 1. TOC
 {:toc}
 
+## Kapitel Struktur:
+
+- Inhalte & Einführung
+- Motivation - Spannung mit Realität ansprechecn
+- Zielgruppe
+- =>> INDEX
+- ABAP-UNIT file
+ - Empfehlungen vorgehen / Orga - Einsatz Unit Tests
+ - Basics und das Prinzip des Unit Tests
+ - Methodiken und Techniken
+ - Einstiegsbeispiel
+ - Best Practices
+
+ - Frust raus
+
+
+
 
 ## Zielgruppe
 In diesem Kapitel möchten wir einerseits den Entscheidern und Verantwortlichen Empfehlungen und Hinweise geben, warum ABAP-UNIT Test für die heutige Form der modernen ABAP Programmierung sehr wichtig ist und welchen Nutzen Sie für dieses Investment erhalten können.  
