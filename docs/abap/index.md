@@ -3,7 +3,7 @@ layout: page
 title: Moderne ABAP Entwicklung
 permalink: /abap/
 has_children: true
-nav_order: 1
+nav_order: 4
 ---
 
 {: .no_toc}

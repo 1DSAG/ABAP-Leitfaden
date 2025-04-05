@@ -3,7 +3,7 @@ layout: page
 title: Dokumentation
 permalink: /documentation/
 has_children: true
-nav_order: 1
+nav_order: 7
 ---
 
 {: .no_toc}

@@ -1,2 +1,4 @@
 {: .note }
-Aktuell befindet sich der Leitfaden in Erstellung und wurde noch keinem Review unterzogen. Es können daher fehlerhafte, lückenhafte oder unvollständige Informationen enthalten sein.
+Dieser Leitfaden befindet sich aktuell in der Erstellung durch das Autorenteam und wurde bisher noch keinem Review unterzogen. Daher ist dieser Leitfaden zum aktuellen Zeitpunkt noch nicht vollständig.
+Es können daher fehlerhafte, lückenhafte oder unvollständige Informationen enthalten sein.
+
