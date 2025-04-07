@@ -120,12 +120,23 @@ nur eine kurze Übersicht der Prinzipien, eine ausführliche Erklärung findet s
 </dl>
 
 ## Entwurfsmuster
-In der Objektorientierung gibt es zahlreiche Entwurfsmuster (Design Pattern), die für verschiedene Problemstellungen und Anwendungsfälle bereits vorgefertigte und erprobte softwaretechnische Mechanismen bieten, die auch in ABAP umgesetzt werden können. So sind in ABAP folgende Pattern direkt und sinnvoll anwendbar:
-- Factory Pattern
+In der Objektorientierung gibt es zahlreiche Entwurfsmuster (Design Pattern), die für verschiedene Problemstellungen und Anwendungsfälle bereits vorgefertigte und erprobte softwaretechnische Mechanismen bieten, die auch in ABAP umgesetzt werden können. So sind in ABAP folgende Pattern direkt und sinnvoll anwendbar, diese werden im folgenden näher erläutert:
 - Singleton
+- Factory
 - Facade
-- MVC
-**TODO**: Sammlung der wichtigsten und am besten verwendbaren Entwurfsmuster - Bitte melden !
+- MVC (Model-View-Controller)
+
+### Singleton-Pattern
+Das Singleton-Pattern zielt darauf ab, dass zu einer Klasse nur eine einzige Objektinstanz zur Laufzeit existiert bzw. existieren kann. Dazu wird die erste durch den Konstruktor erzeugte Instanz in eine Klassenvariable (CLASS-DATA) geschrieben und bei den folgenden Aufrufen des Klassenkonstruktors zur Erzeugung eines neuen Objektes wird ebendiese gespeicherte Instanz aus der Klassenvariable gelesen und zurückgegeben. So kann man kontrollieren, dass zu jeder Zeit nur eine Instanz einer Klasse existiert. Anwendungsbeispiele hierfür wären *!!TODO!!*
+
+### Factory-Pattern
+...
+
+### Facade-Pattern
+...
+
+### MVC-Pattern
+Das MVC-Pattern wird verwendet, um die Programmierlogik in die 3 Bereiche Model (Datenmodell), View (Präsentationslogik) und Controller (Businesslogik) zu unterteilen. 
 
 Auch hier können wir leider nicht im Detail darauf eingehen, im Internet und der Fachliteratur finden sie zahlreiche Möglichkeiten sich dem Thema Anzunähern und in die Organisation zu bringen. [ABAP-OO Design Patterns m. Beispielen](https://zevolving.com/category/abapobjects/oo-design-patterns/).
 
@@ -164,11 +175,11 @@ Neben den Grundlagen, gibt es weitere Konzepte und Techniken, durch deren Einsat
 
 Jedes Objekt sollte eine Factory methode haben und die Übergabe nötiger parameter erfolgt über den Konstruktur in die Klasse. Erfolgt die Instanziierung der Klassen der Anwendung über eine zentrale Factory, wird die Factory Methode der Klasse in der Factory Klasse gerufen.
 
-### Beispiel: Verschalung des Customizing in der Factory Methode (s.Issue #117 - Klärung Pattern)
+### Beispiel: Verschalung des Customizing in der Factory-Methode (s.Issue #117 - Klärung Pattern)
 
-Die Customizing Klasse kann nun so gestaltet werden, dass in der Factory Methode die Customizing Tabelle geprüft wird, in der die Steuerung der Funktion hinterlegt ist. Nur wenn sich ein Eintrag in dieser Tabelle zu den Parametern der Faktorymethode (z.B. Werk oder Buchungskreis etc.) befindet, wird eine Instanz an den Aufrufer übergeben. Falls kein Eintrag vorliegt oder ein Problem vorliegt, sollte eine Ausnahme ausgelöst werden, die auf vom Aufrufer abgefangen wird. Somit muss der Aufrufer nicht mehr die Prüfung der Tabelle übernehmen, sondern die Instanz ist nur in dem Fall vorhanden, wenn die Funktion auch aktiv ist. Im Positivfall kann dann über die zurückgegebene Instanz die entsprechenden Methoden  aufgerufen werden.  
+Die Customizing Klasse kann nun so gestaltet werden, dass in der Factory Methode die Customizing Tabelle geprüft wird, in der die Steuerung der Funktion hinterlegt ist. Nur wenn sich ein Eintrag in dieser Tabelle zu den Parametern der Factory-Methode (z.B. Werk oder Buchungskreis etc.) befindet, wird eine Instanz an den Aufrufer übergeben. Falls kein Eintrag oder ein Problem vorliegt, sollte eine Ausnahme ausgelöst werden, die vom Aufrufer abgefangen wird. Somit muss der Aufrufer nicht mehr die Prüfung der Tabelle übernehmen, sondern die Instanz ist nur dann vorhanden, wenn die Funktion auch aktiv ist. Im Positivfall können dann über die zurückgegebene Instanz die entsprechenden Methoden aufgerufen werden.  
 Damit vereinfacht sich der Code der Geschäftslogik und die Komplexität des Customizing wird verschalt bzw. automatisiert. Einzelne Parameter des Customizings können in Attributen der Customizing Klasse vorgehalten werden und mittels sog. Getter-Methoden bei Bedarf in anderen zugehörigen Klassen abgefragt werden.  
-Da über die Factory dem Objektkonstrukt die Customizing Instanz bekannt ist und bei Bedarf diese in anderen Objekten als Attribut abgelegt werden kann, ist der Zugriff auf das Customizing standardisiert im gesamten Konstrukt ohne redundanten Code möglich.  
+Da dem Objektkonstrukt mittels der Factory die Customizing Instanz bekannt ist und bei Bedarf diese in anderen Objekten als Attribut abgelegt werden kann, ist der Zugriff auf das Customizing standardisiert im gesamten Konstrukt ohne redundanten Code möglich.  
 Dies bedeutet einen initialen Erstellungsaufwand, der sich aber bei Änderungen und Ergänzungen auszahlt, da auf vorhandene Services effizient und aufwandslos zugegriffen werden kann und fehleranfällige Coderedundanzen nicht mehr erforderlich sind.
 
 Die Erstellung der zahlreichen Objekte erscheint deutlich aufwändiger als der Top-Down Ansatz beim prozeduralen Vorgehen. Man gewinnt hier aber durch die Aufteilung der Funktionen gemäß der Verantwortlichkeiten eine deutlich höhere Flexibilität und Robustheit und durch die Mechanismen eine Form der Automatisierung.  
