@@ -3,23 +3,22 @@ layout: page
 title: ABAP Unit Framework
 permalink: /testing/abap_unit/
 parent: Testen
-nav_order: 1
+nav_order: 2
 ---
 
 {: .no_toc}
-# ABAP Unit Test
+# Testing mit dem ABAP Unit Test Framework
 
 1. TOC
 {:toc}
 
 
 ## offene Punkte:
-- Erfahrungen und bekannte Probleme bei Unit Tests.  Z.B. das SAP Factories immer wieder gemockt werden müssen.
-* Andere TestFriends:
-  * End2End Trace Cross Trace  …
 
+- Erfahrungen und bekannte Probleme bei Unit Tests.  Z.B. das SAP Factories immer wieder gemockt werden müssen.
 
 ## ABAP Unit Tests
+
 Dieses Kapitel handelt von automatisierten Entwicklertests (Unit Tests) in ABAP und richtet sich an Programmierende jeglichen Niveaus als auch an managende und organisierende Personen. Jede Person, die in irgendeiner Form mit ABAP-Programmierungen in Berührung kommt, sollte wissen, was Unit Tests sind, wie sie eingesetzt werden und welche Grenzen sie haben.
 
 Wenn im Folgenden von _Unit Tests_ die Rede ist, dann sind ABAP Unit Tests mit Hilfe des ABAP Unit Frameworks gemeint. Das ABAP bezieht sich lediglich auf die Besonderheiten von Unit Tests im ABAP-Unit Framework. 
@@ -28,6 +27,10 @@ Wenn im Folgenden von _Unit Tests_ die Rede ist, dann sind ABAP Unit Tests mit H
 
 Unit Tests sind wichtig. Das Erstellen, Verwalten und Entwickeln von Unit Tests erfordert umfangreiche Kenntnisse, die über das reine schreiben von ABAP hinaus gehen. Das widerspricht der Aussage, dass sich dieses Kapitel an alle Programmierende richtet, unabhängig vom Wissensstand. Das ist jedoch nur auf den ersten Blick widersprüchlich, denn wir wollen mit diesem Kapitel alle erreichen. Wenn jemand noch nicht gut oder gar nicht objektorientiert programmieren kann, sich nicht mit Entwurfsmustern und anderen Programmierparadigmen auskennt, dann sollte das gelernt werden. Unit Test können eine gute Umgebung darstellen Techniken zu erlenen und diese anschließend auf den Produktiven Code zu übertragen.
 Wir wollen Anregungen und Hilfestellungen dazu geben. Gleichwohl können wir an dieser Stelle nur begrenzt Informationen zu diesem Thema bereitstellen.
+
+>**Empfehlungen**
+- Wir empfehlen Unit Tests
+{: .highlight}
 
 
 #### Skills die beim Arbeiten mit Unit Tests trainiert werden

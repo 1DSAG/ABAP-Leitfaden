@@ -3,15 +3,16 @@ layout: page
 title: Andere Test Tools
 permalink: /testing/other-test-tools/
 parent: Testen
-nav_order: 2
+nav_order: 5
 ---
 
 {: .no_toc}
-# Andere Test Tools
+# Andere Test Tools - Dieser Abschnitt wird in kürze gelöscht und nicht teil des Leitfadens
 
 1. TOC
 {:toc}
 
+BZW. Übernahme in Unit Advanced.
 Andere Test Tools: 
 –	Wo hören Unit tests auf? Und wo fangen andere Tools an. 
 –	Andre Tools / Frameworks für ABAP UNIT? 
