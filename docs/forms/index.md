@@ -30,10 +30,9 @@ Das Debuggen ist relativ unkomfortable und eigentlich nicht mehr zeitgemäß. Es
 
 Mittels Funktionsbaustein OPEN_FORM wird das SAPscript Formular aufgerufen.
 
-Relevante Transaktionen:
-
-| SE71 | SAPscript Editor |
+| Transaktion | Beschreibung |
 | --- | --- |
+| SE71 | SAPscript Editor |
 | SE72 | SAPscript Stil |
 | SE78 | Verwaltung Formulargrafiken |
 | SO10 | (SAPscript-) Standardtexte |
@@ -51,10 +50,9 @@ Möchte man ein SmartForms Formular debuggen setzt man am Besten einen Breakpoin
 
 Der SAP Standard liefert diverse Testprogramme und Testformulare aus. Diese beginnen mit „SF_\*“.
 
-Relevante Transaktionen:
-
-| SMARTFORMS | SmartForms Editor für Formulare und Stile |
+| Transaktion | Beschreibung |
 | --- | --- |
+| SMARTFORMS | SmartForms Editor für Formulare und Stile |
 
 ### Adobe Forms
 
@@ -94,21 +92,23 @@ Der Tabreiter „PDF-Vorschau“ ermöglicht eine Vorschau auf das Formularlayou
 Wird bei Bearbeiten > Formulareigenschaften > Vorschau eine XFD.xml Datei mit Beispieldaten (welche z.B. aus einem Test- oder Produktivsystem generiert und heruntergeladen wurde) hinterlegt, so werden diese Formularinhalte dann auch in einem Entwicklungssystem unter “PDF-Vorschau” angezeigt. Dies ist äußerst hilfreich um z.B. inhaltsabhängige Formatierungen zu testen o.ä.
 {: .highlight}
 
-![Extensibility Szenarien](./img/image-01.png)
+<br/>
 
-Extensibility Szenarien
+![Vorschau](./img/image-01.png)
+
+Vorschau
 {: .img-caption}
 
 
-<br/>Hinweis:  
+_Hinweis:_  
 Der LCD lässt Anpassungen im Anzeigenmodus zu. Diese können NICHT gespeichert werden!  
 Vergewissern Sie sich also vor der Arbeit an einem Adobe Formular, dass Sie sich im „Ändern-Modus“ der Transaktion SFP befinden.  
 
-<br/>Die Schnittstelle ist ein eigenständiges Objekt mit einem eindeutigen Namen. Sie kann mehrfach verwendet werden und stellt die Zuordnung der Anwendungsdaten, z.B. aus einem Druckprogramm, zum Formular dar.
+Die Schnittstelle ist ein eigenständiges Objekt mit einem eindeutigen Namen. Sie kann mehrfach verwendet werden und stellt die Zuordnung der Anwendungsdaten, z.B. aus einem Druckprogramm, zum Formular dar.
 
-![Extensibility Szenarien](./img/image-02.png)
+![Aufbau](./img/image-02.png)
 
-Extensibility Szenarien
+Aufbau
 {: .img-caption}
 
 
@@ -129,9 +129,12 @@ Die Schnittstelle besteht aus drei konkreten Bereichen:
 
 - Initialisierung  
     Möglichkeit zusätzliche Daten im Formular nachzulesen. Das Coding sollte kurz und knapp gehalten werden. Der Editor hat an dieser Stelle einige Einschränkungen wie z.B. keine Vorwärtsnavigation und kein Pretty-Printer.  
-    <br/>Empfehlung:  
+    
+    >*Empfehlung:*  
     Business Logik in eine Klasse auslagern, welche hier aufgerufen wird.  
-    <br/>Hinweis:  
+    {: .highlight}
+
+    Hinweis:  
     Um die Übersichtlichkeit nicht zu verlieren und die Logik des Formulardrucks nicht zu komplex zu machen, sollte vor jeder Implementierung überlegt werden, ob das nötige Coding im aufrufenden Druckprogramm hinterlegt wird oder in der Formularschnittstelle. Die Entscheidung hängt natürlich auch davon ab, ob ein SAP Standarddruckprogramm verwendet wird, oder ein kundeneigenes Druckprogramm.
 
 Wie bei SmartForms wird auch bei Adobe Forms Formularen ein vom SAP System generierter Funktionsbaustein benötigt, um das Formular auszugeben. Da dieser Funktionsbausteinname ebenfalls wie bei SmartForms von System zu System unterschiedlich ist, muss der Funktionsbaustein FP_FUCTION_MODULE_NAME verwendet werden, um zur Laufzeit den richtigen Namen des Funktionsbausteins zu ermitteln.  
@@ -145,49 +148,49 @@ Die Übersetzung eines Adobe Formulars kann direkt in der Transaktion SFP durchg
 
 Der SAP Standard liefert diverse Testprogramme und Testformulare aus. Diese beginnen mit „FP_TEST\*“.
 
-Relevante Transaktionen:
-
-| SFP | Adobe Form Builder für Formulare und Formularschnittstellen |
+| Transaktion | Beschreibung |
 | --- | --- |
+| SFP | Adobe Form Builder für Formulare und Formularschnittstellen |
 
-3.2 SAP S/4HANA Forms (2015 S/4HANA)  
-<br/>Grundlage sind Adobe Formulare mit Gateway-Schnittstellen, deren Datenbeschaffung mittels Gateway-Services (also keine klassischen Druckprogramme) erfolgt. Die Pflege erfolgt mit Fiori Apps und somit sind “SAP S/4HANA Forms” public-cloud-fähig.
+#### SAP S/4HANA Forms (2015 S/4HANA)  
 
-Das Layout wird ebenfalls mit dem LiveCycle Designer, jedoch als standalone, designed. Hierbei ist zu beachten, das die bearbeiteten Objekte manuell in Transportaufträge aufgenommen werden müssen (mittels Fiori-Ap ID F1589) und es keine automatische Objektsperre gibt.  
-<br/>Ebenso wie die “SAP Interactive Forms by Adobe” benötigen die SAP S/4HANA Forms einen Adobe Document Service (ADS —> SAP Forms Service by Adobe).
+Grundlage sind Adobe Formulare mit Gateway-Schnittstellen, deren Datenbeschaffung mittels Gateway-Services (also keine klassischen Druckprogramme) erfolgt. Die Pflege erfolgt mit Fiori Apps und somit sind “SAP S/4HANA Forms” public-cloud-fähig.
+
+Das Layout wird ebenfalls mit dem LiveCycle Designer, jedoch als standalone, designed. Hierbei ist zu beachten, das die bearbeiteten Objekte manuell in Transportaufträge aufgenommen werden müssen (mittels Fiori-App ID F1589) und es keine automatische Objektsperre gibt.  
+
+Ebenso wie die “SAP Interactive Forms by Adobe” benötigen die SAP S/4HANA Forms einen Adobe Document Service (ADS -> SAP Forms Service by Adobe).
 
 Zu nennen ist an dieser Stelle, dass kundenindividuelle Bedingungen nur sehr beschränkt abgebildet werden können.
 
 Diese Formulartechnologie ist nur zusammen mit der Ausgabelösung S/4HANA Output Control (siehe Abschnitt XYZ) möglich.
 
-Hinweis:  
-\- lokale Bearbeitung des Layouts / Formulars -> daher muss sich im Team abgestimmt werden!  
-\- keine autom. Transportanbindung -> Bedenken Sie das Sie alle Objekte manuell zusammensuchen und in einen Transport aufnehmen müssen.  
+_Hinweis:_  
+- lokale Bearbeitung des Layouts / Formulars -> daher muss sich im Team abgestimmt werden!  
+- keine autom. Transportanbindung -> Bedenken Sie das Sie alle Objekte manuell zusammensuchen und in einen Transport aufnehmen müssen.  
 
-Relevante Fiori App ID‘s:
-
-| F1434 | Formularvorlagen pflegen |
+| App ID | Beschreibung |
 | --- | --- |
+| F1434 | Formularvorlagen pflegen |
 | F2894 | Texte verwalten |
 | F2761 | Logos verwalten |
 | F1589 | Objekte in Transporte aufnehmen |
 
-Hinweis:  
+_Hinweis:_
 Um diese Fiori Apps finden zu können muss die Katalog-ID SAP_BASIS_TCR_T dem angemeldeten Benutzer über eine Rolle zugewiesen werden (Transaktion PFCG).
 
-![Extensibility Szenarien](./img/image-03.png)
+![Transaktion PFCG](./img/image-03.png)
 
-Extensibility Szenarien
+Transaktion PFCG
 {: .img-caption}
 
-![Extensibility Szenarien](./img/image-04.png)
+![Zuordnung Katalog](./img/image-04.png)
 
-Extensibility Szenarien
+Zuordnung Katalog
 {: .img-caption}
 
-![Extensibility Szenarien](./img/image-05.png)
+![Zuordnung Benutzer](./img/image-05.png)
 
-Extensibility Szenarien
+Zuordnung Benutzer
 {: .img-caption}
 
 Adobe Fragments
@@ -207,112 +210,105 @@ Wichtige Fragmente sind z.B:
 - SOMU_FORM_MASTER_A4
 - SOMU_FORM_MASTER_LETTER
 
-Darstellung im SAP-GUI:
+![Darstellung im SAP-GUI](./img/image-06.png)
 
-![Extensibility Szenarien](./img/image-06.png)
-
-Extensibility Szenarien
+Darstellung im SAP-GUI
 {: .img-caption}
 
 
-Darstellung in Fiori:
+![Darstellung in Fiori](./img/image-07.png)
 
-![Extensibility Szenarien](./img/image-07.png)
-
-Extensibility Szenarien
+Darstellung in Fiori
 {: .img-caption}
 
 
-![Extensibility Szenarien](./img/image-08.png)
+![Fragments](./img/image-08.png)
 
-Extensibility Szenarien
+Adobe Fragments sind nur im Zusammenhang mit Output Control nutzbar
 {: .img-caption}
 
-Adobe Fragments sind nur im Zusammenhang mit Output Control nutzbar.
 
 ## Ausgabelösungen
 
 Im Folgenden erhalten Sie einen Überblick über die möglichen Ausgabelösungen.
 
-- Nachrichtensteuerung (NAST)  
-    Mit der Nachrichtensteuerung werden verschiedene Ausgabearten wie Drucken, E-Mail, EDI, Workflows, Systemintegration (ALE) und Sonderfunktionen im SAP pro Nachricht zu diversen Modulen (z.B. SD und MM) gecustomzied. Über die sogenannte Konditionstechnik wird die produktive Ausgabe von Formularen und Etiketten gesteuert. Hinter einer Nachricht liegt die Zuordnung des Druckprogramms und des Formulars, welche angestoßen werden, wenn eine Nachricht erzeugt wird.  
-    Die Transaktion NACE dient als zentraler Einstiegspunkt zur Pflege der Nachrichtenfindung pro Applikation. Die dort gepflegten Einstellungen werden in der Datenbanktabelle TNAPR gespeichert.  
-    <br/>Hinweis:  
-    Eine Auswertung aller erzeugten Nachrichten kann über die Transaktion TAANA für die Datenbanktabelle NAST erstellt werden. Hierfür muss diese Transaktion im Produktivsystem ausgeführt werden. Um die Auswertung Jahresweise durchzuführen muss vorher ggf.noch ein neues „virtuelles Feld“ (ERYEAR) hinzugefügt werden. Die Ergebnisliste kann als Excel-Tabelle heruntergeladen werden und dort für eine leichtere Auswertung zur Pivot-Tabelle umgestellt werden.
+### Nachrichtensteuerung (NAST)  
+Mit der Nachrichtensteuerung werden verschiedene Ausgabearten wie Drucken, E-Mail, EDI, Workflows, Systemintegration (ALE) und Sonderfunktionen im SAP pro Nachricht zu diversen Modulen (z.B. SD und MM) gecustomzied. Über die sogenannte Konditionstechnik wird die produktive Ausgabe von Formularen und Etiketten gesteuert. Hinter einer Nachricht liegt die Zuordnung des Druckprogramms und des Formulars, welche angestoßen werden, wenn eine Nachricht erzeugt wird.  
+
+Die Transaktion NACE dient als zentraler Einstiegspunkt zur Pflege der Nachrichtenfindung pro Applikation. Die dort gepflegten Einstellungen werden in der Datenbanktabelle TNAPR gespeichert.  
+    
+_Hinweis:_  
+Eine Auswertung aller erzeugten Nachrichten kann über die Transaktion TAANA für die Datenbanktabelle NAST erstellt werden. Hierfür muss diese Transaktion im Produktivsystem ausgeführt werden. Um die Auswertung Jahresweise durchzuführen muss vorher ggf.noch ein neues „virtuelles Feld“ (ERYEAR) hinzugefügt werden. Die Ergebnisliste kann als Excel-Tabelle heruntergeladen werden und dort für eine leichtere Auswertung zur Pivot-Tabelle umgestellt werden.
 
 Eine solche Auswertung empfiehlt sich, um sich einen Überblick zu verschaffen, welche Nachrichtenarten überhaupt und hauptsächlich verwendet werden. In welchen Sprachen werden meine Belege (Formulare) ausgegeben und wie groß ist das jeweilige Volumen. Dies hilft bei einer weiteren Planung von Umstellungs- und Go-Live Szenarien.  
 
 Eine genaue Anleitung zur Nutzung der Transaktion TAANA finden Sie unter folgendem Link (HIER SOFTWAY LINK ERLAUBT BEI YOUTUBE????).
 
-![Extensibility Szenarien](./img/image-09.png)
+![Pflege der Tabelle](./img/image-09.png)
 
-Extensibility Szenarien
+Pflege der Tabelle
 {: .img-caption}
 
-![Extensibility Szenarien](./img/image-10.png)
+![Pflege der Felder](./img/image-10.png)
 
-Extensibility Szenarien
+Pflege der Felder
 {: .img-caption}
 
-- Post Processing Framework (PPF)
+### Post Processing Framework (PPF)
 
 Das PPF dient der Automatisierung von bestimmten Aktionen in der Lieferabwicklung zur Ausgabe von Dokumenten von Belegen per Drucker oder per E-Mail. Verwendung findet es z.B. im eWM und TM. Die Pflege erfolgt über die Transaktion SPPFCADM.  
 
-- Druck-Workbench
+### Druck-Workbench
 
 Die Ausgabe von Dokumenten erfolgt über die Definition von Korrespondenzarten. Verwendet wird sie vor allem als Branchenlösung im IS-U Bereich (Energieversorger), ist aber auch außerhalb von IS-U grundsätzlich verfügbar. In der Druck-Workbench wird die Datenversorgung eines Anwendungsformulars gekapselt. Es können zur Datenermittlung SAP Standard Objekte oder kundeneigene Objekte verwendet und hinterlegt werden. Mittels Transaktion EFRM werden die relevanten Einstelllungen vorgenommen werden.  
 
-- Applikationsspezifische Lösungen
+### Applikationsspezifische Lösungen
 
 Applikationsspezifisches Customizing bestimmt die Ausgabe von Dokumenten. Diese Art der Ausgabelösung wird z.B. im FI, PP und QM verwendet. Im FI zum Beispiel wird die Findung des Mahnformulars abhängig von der Mahnstufe durchgeführt.  
 
-- S/4HANA Output Control  
-    Mit SAP S/4HANA bietet SAP eine weitere Ausgabelösung mit dem Namen „SAP S/4HANA Output Management“ an. Diese beinhaltet den wiederverwendbaren Service „SAP S/4HANA Output Control“, welcher für viele komplexe Ausgabeszenarien verwendet werden kann.  
-    <br/>Auf Ebene von Organisationseinheiten kann die Findung von Masterformularvorlagen, Logos und allgemeine Kopf- und Fußtexte gecustomized werden.
+### S/4HANA Output Control  
+Mit SAP S/4HANA bietet SAP eine weitere Ausgabelösung mit dem Namen „SAP S/4HANA Output Management“ an. Diese beinhaltet den wiederverwendbaren Service „SAP S/4HANA Output Control“, welcher für viele komplexe Ausgabeszenarien verwendet werden kann. Auf Ebene von Organisationseinheiten kann die Findung von Masterformularvorlagen, Logos und allgemeine Kopf- und Fußtexte gecustomized werden. Mit dieser Ausgabelösung können sogenannte „Adobe Fragments“ verwendet werden. Siehe hierzu den entsprechenden Abschnitt. Im Vergleich zur Nachrichtensteuerung (NAST) haben Sie mit dem Output Control die Einschränkung, dass keine Workflows und Sonderfunktionen hinterlegt werden können.  
 
-Mit dieser Ausgabelösung können sogenannte „Adobe Fragments“ verwendet werden. Siehe hierzu den entsprechenden Abschnitt.  
-<br/>Im Vergleich zur Nachrichtensteuerung (NAST) haben Sie mit dem Output Control die Einschränkung, dass keine Workflows und Sonderfunktionen hinterlegt werden können.  
+![Output Szenarien](./img/image-11.png)
 
-![Extensibility Szenarien](./img/image-11.png)
-
-Extensibility Szenarien
+Output Szenarien
 {: .img-caption}
 
 Hinweis:  
 In diesem Zusammenhang wird oft BRFplus (oder BRF+) als Ausgabelösung genannt. Dies ist falsch. BRFplus ist _eine optionale Möglichkeit_ um eine Konfiguration für die Dokumentenausgabe zu hinterlegen (= ein Regelwerk, ähnlich der Konditionstechnik NAST).  
-<br/>Die Einstellungen im S/4HANA Output Control erfolgt in der GUI über den folgenden Pfad:  
+
+Die Einstellungen im S/4HANA Output Control erfolgt in der GUI über den folgenden Pfad:  
 Transaktion SPRO > Anwendungsübergreifende Komponenten > Ausgabesteuerung  
-<br/>Unter Hinweis [2791338](https://me.sap.com/notes/2791338/E) finden sich FAQs zum Thema Ausgabesteuerung.
+
+Unter Hinweis [2791338](https://me.sap.com/notes/2791338/E) finden sich FAQs zum Thema Ausgabesteuerung.
 
 ## Adobe Document Services  
 
-Adobe Document Services – auch kurz „ADS“ genannt – wird von SAP Interactive Forms als auch SAP S/4HANA Forms benötigt, um die gewünschten Datei- oder Druckformate zu erzeugen (Rendering).  
-Mit anderen Worten handelt es sich hierbei um die Services, welche die Dokumente zur Laufzeit erzeugen und generieren. 
+Adobe Document Services – auch kurz „ADS“ genannt – wird von SAP Interactive Forms als auch SAP S/4HANA Forms benötigt, um die gewünschten Datei- oder Druckformate zu erzeugen (Rendering). Mit anderen Worten handelt es sich hierbei um die Services, welche die Dokumente zur Laufzeit erzeugen und generieren. 
 
 Die erzeugten Dateiformate sind PDF oder PDF/A. Das Format PDF/A stellt hierbei eine Variante des PDF dar, welche verwendet wird um Langzeitarchivierung sicherzustellen. Damit können Dokumente, unabhängig von der verwendeten Software, immer wieder reproduziert werden, da alle relevanten Informationen in der Datei eingebettet sind.  
 
 Die folgenden wichtigsten Druckformate können von den ADS erzeugt werden:
-
 - PCL
 - ZPL
 - PostScript
 
 Abhängig von der ADS Version werden auch die Druckersprachen z.B. IPL, DPL oder TPCL unterstützt.
 
-Bei den Adobe Document Services muss zwischen zwei Versionen unterschieden werden.  
-Einer lokalen on-premise Version „lokalem ADS“ und einer Cloud Version „SAP Forms Service by Adobe (Cloud-ADS)“.
+Bei den Adobe Document Services muss zwischen zwei Versionen unterschieden werden. Einer lokalen on-premise Version „lokalem ADS“ und einer Cloud Version „SAP Forms Service by Adobe (Cloud-ADS)“.
 
-ADS On-Premise:
+**ADS On-Premise**
 
 - SAP Wartung und Support auf  
-    \- SAP NetWeaver Application Server Java bis 2027 (erweiterte Wartung bis 2030)  
-    \- SAP S/4 HANA Java bis 2030
+    - SAP NetWeaver Application Server Java bis 2027 (erweiterte Wartung bis 2030)  
+    - SAP S/4 HANA Java bis 2030
 - Die Nachfolgelösung wird auf SAP HANA Extended Application Services Advanced Model (XSA) laufen und ist für Q1 2027 mit dem S/4 HANA 2025 FPS03 geplant.
 - Für Druck-Formulare lizenzkostenfrei
-- Blog zur Maintenance Strategie von SAP  
-    <https://community.sap.com/t5/technology-blogs-by-sap/maintenance-strategy-adobe-forms-on-premise/ba-p/13627957>
+- [Blog zur Maintenance Strategie von SAP](https://community.sap.com/t5/technology-blogs-by-sap/maintenance-strategy-adobe-forms-on-premise/ba-p/13627957)
 
-SAP Forms Service by Adobe (Cloud-ADS):
+<br>
+
+**SAP Forms Service by Adobe (Cloud-ADS)**
 
 - Läuft als Service auf der SAP BTP (Cloud Foundry Environment)
 - Bereitstellung und Wartung durch SAP
