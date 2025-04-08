@@ -267,6 +267,7 @@ Die Ausgabe von Dokumenten erfolgt über die Definition von Korrespondenzarten. 
 Applikationsspezifisches Customizing bestimmt die Ausgabe von Dokumenten. Diese Art der Ausgabelösung wird z.B. im FI, PP und QM verwendet. Im FI zum Beispiel wird die Findung des Mahnformulars abhängig von der Mahnstufe durchgeführt.  
 
 ### S/4HANA Output Control  
+
 Mit SAP S/4HANA bietet SAP eine weitere Ausgabelösung mit dem Namen „SAP S/4HANA Output Management“ an. Diese beinhaltet den wiederverwendbaren Service „SAP S/4HANA Output Control“, welcher für viele komplexe Ausgabeszenarien verwendet werden kann. Auf Ebene von Organisationseinheiten kann die Findung von Masterformularvorlagen, Logos und allgemeine Kopf- und Fußtexte gecustomized werden. Mit dieser Ausgabelösung können sogenannte „Adobe Fragments“ verwendet werden. Siehe hierzu den entsprechenden Abschnitt. Im Vergleich zur Nachrichtensteuerung (NAST) haben Sie mit dem Output Control die Einschränkung, dass keine Workflows und Sonderfunktionen hinterlegt werden können.  
 
 ![Output Szenarien](./img/image-11.png)
@@ -297,7 +298,7 @@ Abhängig von der ADS Version werden auch die Druckersprachen z.B. IPL, DPL oder
 
 Bei den Adobe Document Services muss zwischen zwei Versionen unterschieden werden. Einer lokalen on-premise Version „lokalem ADS“ und einer Cloud Version „SAP Forms Service by Adobe (Cloud-ADS)“.
 
-**ADS On-Premise**
+### ADS On-Premise
 
 - SAP Wartung und Support auf  
     - SAP NetWeaver Application Server Java bis 2027 (erweiterte Wartung bis 2030)  
@@ -306,9 +307,7 @@ Bei den Adobe Document Services muss zwischen zwei Versionen unterschieden werde
 - Für Druck-Formulare lizenzkostenfrei
 - [Blog zur Maintenance Strategie von SAP](https://community.sap.com/t5/technology-blogs-by-sap/maintenance-strategy-adobe-forms-on-premise/ba-p/13627957)
 
-<br>
-
-**SAP Forms Service by Adobe (Cloud-ADS)**
+### SAP Forms Service by Adobe (Cloud-ADS)
 
 - Läuft als Service auf der SAP BTP (Cloud Foundry Environment)
 - Bereitstellung und Wartung durch SAP
