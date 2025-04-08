@@ -2,7 +2,7 @@
 layout: page
 title: Organisation
 permalink: /organization/
-nav_order: 14
+nav_order: 1
 ---
 
 {: .no_toc}

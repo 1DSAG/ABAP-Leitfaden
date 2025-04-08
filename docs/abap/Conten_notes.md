@@ -7,17 +7,22 @@ nav_order: 7
 ---
 
 
-## Vroschlag: Reihenfolge der Kapitel:
+## Vorschlag: Reihenfolge und Strukturierung der Kapitel:
+
 Mein Vorschlag für die generelle Struktur:
+
 - Einleitung - klar was sonst  
 
 **Strategie Blocks**
+
 - Organisation - Rahmenbedingungen und Grundsätze, die in den einzelnen Kapiteln wieder aufgegriffen werden
     Unterteilung in subfiles sinnvoll - Inhaltlich top !  
 - Clean Core - Basis Strategie - wie und mit welchen Prinzipien will man entwicklen (wie clean)
 
 **Moderne SAP Entwicklung - Technologien**
--    Core Data Service (vor ABAP, weil benötigt in ABAP zum Datenzugriff und anderes Programmiermodell) 
+
+- Core Data Service (vor ABAP, weil benötigt in ABAP zum Datenzugriff und anderes Programmiermodell) 
+
 - ABAP -  Basis der Programmierung - Unterteilung in weitere Files wegen größe
 - UI
 - Testen - Software tests - braucht wiederum ABAP wegen OO und so
@@ -25,9 +30,10 @@ Mein Vorschlag für die generelle Struktur:
 - Dokumentation - Doku der Entwicklung - ABAP DOC nich ausführlicher
 
 **Übergreifende Themen**
+
 - Software Lifecycle Management
-    - ALM  (alm und VW mergen in Softwaremanagment)
-    - Versionsverwaltung
+   - ALM  (alm und VW mergen in Softwaremanagment)
+   - Versionsverwaltung
 - Open Source
 - Integration
 - Sicherheit
@@ -37,6 +43,29 @@ Mein Vorschlag für die generelle Struktur:
 ## Parkplatz
 
 *** TEXTSAVER - ****
+
+### Dynamic Logpoints mit ADT
+Mit dynamischen Logpoints können Sie ohne Änderung der Programme LogPoints erstellen, die wertvolle Informationen zum Ablauf von Programmen liefern. 
+
+Lop-Points helfen ihnen bei der Analye fon Prozessen die mit anderen Benutzer ausgeführt werdne und wo ein Debugging nicht / schwer möglich ist. 
+Sie Erhalten die Möglichkeit auf einfache Weise den Inhalt von Variablen auf zu zeichnen und zu prüfen wann und wie oft eine Funktion aufgerufen wird. 
+
+Folgende Fragestellungen können einfach beantwortet werden: 
+* von welchen Benutzern wurde eine stück Code duchlaufen
+* mit welchen Parametern wurde diese Funktion aufgerufen
+* Wie war die Aufrufhierarchie?
+* vieles mehr 
+
+Tipp: 
+Verwenden und üben sie den Einsatz von dynamischen Logpoints sie werden Ihnen sehr nützlich sein. 
+
+
+Don't:
+seit der Möglichkeit Logpoints dynamisch zu definieren, verzichten sie auf die Erstellung von ```LOG-POINTs ``` im ABAP Code und nutzen sie die Dynamische Variante. Dies gilt nicht für Dynamische ```Break-Points``` oder ```ASSERTIONS```. 
+
+
+Die SAP Hilfe bietet [erweiterte Informationen](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/using-dynamic-logpoints) 
+
 
 ### ABGLEICH TEST Kapitel ob dort was fehlt
 

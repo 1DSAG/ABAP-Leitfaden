@@ -2,7 +2,7 @@
 layout: page
 title: Künstliche Intelligenz
 permalink: /artificial-intelligence/
-nav_order: 13
+nav_order: 14
 ---
 
 {: .no_toc}
@@ -10,7 +10,6 @@ nav_order: 13
 
 1. TOC
 {:toc}
-
 
 ## KI in der Entwicklung
 
