@@ -56,7 +56,9 @@ Der SAP Standard liefert diverse Testprogramme und Testformulare aus. Diese begi
 
 ### Adobe Forms
 
+
 #### SAP Interactive Forms by Adobe (2005)  
+
 
 Lassen Sie sich von dem Teil „Interactive“ im Namen nicht täuschen – hierbei handelt es sich sehr wohl um „Druckformulare“ und nicht ausschließlich um interaktive Formulare.  
 
@@ -130,11 +132,11 @@ Die Schnittstelle besteht aus drei konkreten Bereichen:
 - Initialisierung  
     Möglichkeit zusätzliche Daten im Formular nachzulesen. Das Coding sollte kurz und knapp gehalten werden. Der Editor hat an dieser Stelle einige Einschränkungen wie z.B. keine Vorwärtsnavigation und kein Pretty-Printer.  
     
-    >*Empfehlung:*  
+    >**Empfehlung**
     Business Logik in eine Klasse auslagern, welche hier aufgerufen wird.  
     {: .highlight}
 
-    Hinweis:  
+    *Hinweis:*  
     Um die Übersichtlichkeit nicht zu verlieren und die Logik des Formulardrucks nicht zu komplex zu machen, sollte vor jeder Implementierung überlegt werden, ob das nötige Coding im aufrufenden Druckprogramm hinterlegt wird oder in der Formularschnittstelle. Die Entscheidung hängt natürlich auch davon ab, ob ein SAP Standarddruckprogramm verwendet wird, oder ein kundeneigenes Druckprogramm.
 
 Wie bei SmartForms wird auch bei Adobe Forms Formularen ein vom SAP System generierter Funktionsbaustein benötigt, um das Formular auszugeben. Da dieser Funktionsbausteinname ebenfalls wie bei SmartForms von System zu System unterschiedlich ist, muss der Funktionsbaustein FP_FUCTION_MODULE_NAME verwendet werden, um zur Laufzeit den richtigen Namen des Funktionsbausteins zu ermitteln.  
@@ -152,7 +154,10 @@ Der SAP Standard liefert diverse Testprogramme und Testformulare aus. Diese begi
 | --- | --- |
 | SFP | Adobe Form Builder für Formulare und Formularschnittstellen |
 
+<br/>
+
 #### SAP S/4HANA Forms (2015 S/4HANA)  
+
 
 Grundlage sind Adobe Formulare mit Gateway-Schnittstellen, deren Datenbeschaffung mittels Gateway-Services (also keine klassischen Druckprogramme) erfolgt. Die Pflege erfolgt mit Fiori Apps und somit sind “SAP S/4HANA Forms” public-cloud-fähig.
 
