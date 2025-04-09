@@ -78,6 +78,15 @@ Eine Schnittstelle zwischen dem SAP Solution Manager und Tricentis Tosca existie
 
 "TTA for SAP" ist für die Verwendung mit der Test Suite des SAP Solution Manager gedacht. Dabei dient die Test Suite als Testmanagement-Tool (für Tests, Planung, Reporting und mehr) und TTA als Automatisierungs-Tool. Dazu wird in der Test Suite eine Testkonfiguration angelegt, die als Hülle für den automatischen Test dient. Der automatische Testfall kann direkt aus der Test Suite aufgerufen werden. Nach Ablauf des Testfalls wird der Status dann wieder an die Test Suite zurückgemeldet. Dies gilt analog für das Zusammenspiel des Solution Managers mit dem eigenständigen Automatisierungs-Tool Tricentis Tosca.
 
+>>>>>>>>>>>> Harald (09.04.2025)
+Tricentis Tosca wird von der SAP als "SAP Enterprise Continuous Testing by Tricentis" (ECT) angeboten.
+ 
+Auch für Cloud ALM gibt es eine integrierte Lösung zur Testautomatisierung. "Tricentis Test Automation for SAP Cloud ALM" ist ein gemeinsames cloudbasiertes Angebot von SAP und Tricentis. Es kombiniert die Application-Lifecycle-Management-Fähigkeiten von SAP Cloud ALM mit den Testautomatisierungsfunktionen von Tricentis. So werden automatisierte, funktionale und durchgängige Softwaretests für alle browserbasierten SAP Produkte und Anwendungen ermöglicht. Tricentis liefert dazu auch Möglichkeiten zur Testorchestrierung, Ausführungsüberwachung und zum Testreporting. Um diese Funktionalität zu verwenden muss ein Tricentis-Tenant eingerichtet und mit SAP Cloud ALM verbunden werden. Allerdings gibt es wie bei TTA Einschränkungen bzgl. Usern und Speicher. Für die volle Funktionalität muss auch hier ein eigenständiges Tricentis-Tool erworben werden, die "SAP Test Automation by Tricentis".
+ 
+Auch für Cloud ALM gibt es eine Schnittstelle zu Drittanbieter-Werkzeugen, das öffentliche "Test Automation API" (Link dazu: https://api.sap.com/api/CALM_TEST_AUTOMATION/overview). 
+Über diese Schnittstelle kann neben Produkten anderer Anbieter auch das umfassende Tricentis-Testautomatisierungstool "SAP Test Automation by Tricentis" angeschlossen werden. Damit sind integrierte Tests mit SAP und Drittanbieter-Software möglich. Auch dieses Produkt von Tricentis kann über den SAP-Vertrieb erworben werden.
+<<<<<<<<<<<<<<<<<<<
+
 ...verschiedene Ausprägungen...Lizenzen teilweise schon dabei...
         ·	Tosca: Integration in SAP SolMan – Link zu https://documentation.tricentis.com/tosca/2310/de/content/sap_solutionmanager/concept.htm 
         ·	TTA: Integration in SAP Cloud ALM – Link zu https://support.sap.com/en/alm/partners/test-automation.html 
