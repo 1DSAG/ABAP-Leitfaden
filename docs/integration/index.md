@@ -55,7 +55,7 @@ Grundsätzlich können alle Schnittstellen die über Hypertext Transfer Protocol
 
 ### Event
 
-Die aktuelle Integration können Sie mit Events schaffen. Dabei wird zu definierten Zeitpunkten im Standard- oder Kundenprozess ein Event erzeugt, welches in einer Queue (Event Mesh) zur Verfügung gestellt wird. Auf die Queue können sich interessierte Anwendungen und Prozesse registrieren, die dann über neue Events benachrichtigt werden. Ein Event ist meist eine einfache Nachricht mit dem auslösenden Event, dem Schlüssel des Objekts und einer Payload.
+Die aktuelle Integration können Sie mit Events schaffen. Dabei wird zu definierten Zeitpunkten im Standard- oder Kundenprozess ein Event erzeugt, welches in einer Queue (bspw. über SAP Event Mesh) zur Verfügung gestellt wird. Auf die Queue können sich interessierte Anwendungen und Prozesse registrieren, die dann über neue Events benachrichtigt werden. Ein Event ist meist eine einfache Nachricht mit dem auslösenden Event, dem Schlüssel des Objekts und einer Payload.
 
 ## Clean Core
 
@@ -78,19 +78,19 @@ Dazu erhalten Sie hier die Übersicht der oben genannten Technologien unterteilt
 
 Bei der Integration von SAP-Systemen gibt es Grenzfälle, in denen nicht alle standardisierten SAP-Integrationsarten optimal genutzt werden können. In solchen Szenarien ist es essenziell, eine sorgfältige Abgrenzung zu anderen SAP- sowie Non-SAP-Tools vorzunehmen.
 
-#### Berücksichtigung zukünftiger Entwicklungen
+### Berücksichtigung zukünftiger Entwicklungen
 
-SAP entwickelt seine Integrationslösungen kontinuierlich weiter. Daher sollte stets geprüft werden, welche Technologien zukünftig an Bedeutung gewinnen und welche möglicherweise durch neuere Lösungen ersetzt werden. Eine zukunftsorientierte Planung hilft, technologische Sackgassen zu vermeiden und die Integration langfristig stabil und nachhaltig zu gestalten.
+SAP entwickelt seine Integrationslösungen kontinuierlich weiter. Daher sollte stets geprüft werden, welche Technologien zukünftig an Bedeutung gewinnen und welche möglicherweise durch neuere Lösungen ersetzt werden. Eine zukunftsorientierte Planung hilft, technologische Sackgassen zu vermeiden und die Integration langfristig stabil und nachhaltig zu gestalten. 
 
-#### Bestand alter Technologien
+### Bestand alter Technologien
 
 Obwohl SAP kontinuierlich neue Integrationslösungen bereitstellt, sind einige ältere Technologien weiterhin wertvoll und können noch nicht vollständig abgelöst werden. Daher ist es wichtig, bestehende Lösungen nicht vorschnell außer Betrieb zu nehmen, sondern ihre Relevanz im jeweiligen Unternehmenskontext zu bewerten. Beispielsweise sind **IDoc** und **RFC** in vielen Legacy-Systemen tief verankert und bieten weiterhin zuverlässige Kommunikationsmöglichkeiten.
 
-#### Nachhaltige Architektur und Clean-Core-Strategie
+### Nachhaltige Architektur und Clean-Core-Strategie
 
 Die Gestaltung einer nachhaltigen Architektur sollte unter Berücksichtigung der **Clean-Core-Strategie** erfolgen. Die Public Cloud dient hier oft als Vorbild für Musterintegrationen, die sich durch hohe Standardisierung und Wartungsfreundlichkeit auszeichnen. Ziel ist es, den individuellen Code-Anteil gering zu halten und Standardlösungen zu bevorzugen.
 
-#### Wichtige Entscheidungsfaktoren bei Grenzfällen
+### Wichtige Entscheidungsfaktoren bei Grenzfällen
 
 - **Kosten:** Der finanzielle Aufwand für Entwicklung(sressourcen), Betrieb, Lizensen und Wartung muss gegen den Nutzen abgewogen werden.
 - **Features:** Prüfen, ob bestehende Integrationslösungen alle benötigten Funktionen abdecken oder Anpassungen erforderlich sind.
@@ -104,9 +104,10 @@ Die Gestaltung einer nachhaltigen Architektur sollte unter Berücksichtigung der
 
 (Web) APIs basierend auf REST oder SOAP haben ihre Grenzen. Dafür sollten anderen Technologien eingesetzt werden. Beispielsweise SAP EDI ist für die Verarbeitung großer Mengen elektronischer Daten konzipiert für 100.000+ Nachrichten pro Tag – und erfolgt mit zahlreichen B2B-Partnern unter Verwendung standardisierter Formate wie EDIFACT.
 
-Im direkten Vergleich wird schnell klar, warum IDOCs für SAP EDI die bessere Wahl sind: Sie sind asynchron, für Massendaten ausgelegt und bieten vordefinierte Validierungen sowie robuste Monitoring- und Reprocessing-Mechanismen. APIs hingegen sind synchron, verarbeiten Nachrichten einzeln und erfordern zusätzlichen Aufwand für Fehlerbehandlung und Mappings. In Hochlast-Szenarien kann eine API-basierte EDI-Integration daher erhebliche Performance-Probleme und hohe Betriebskosten verursachen.
+Im direkten Vergleich wird schnell klar, warum IDocs für SAP EDI die bessere Wahl sind: Sie sind asynchron, für Massendaten ausgelegt und bieten vordefinierte Validierungen sowie robuste Monitoring- und Reprocessing-Mechanismen. APIs hingegen sind **meistens** synchron, verarbeiten Nachrichten einzeln und erfordern zusätzlichen Aufwand für Fehlerbehandlung und Mappings. In Hochlast-Szenarien kann eine API-basierte EDI-Integration daher erhebliche Performance-Probleme und hohe Betriebskosten verursachen.
 
 #### Weitere Lösungswege für Massendatentranferierung
 
 - [SAP Landscape Transformation Replication Server](https://www.sap.com/germany/products/technology-platform/landscape-replication-server.html), ABAP und NetWeaver basiert 
 - [SAP HANA Smart Data Integration (SDI)](https://help.sap.com/docs/SUPPORT_CONTENT/hanasdi/4740563873.html?mt=de-DE), SAP HANA Datenbank basiert
+- [Master Data Governance (MDG)](https://www.sap.com/documents/2015/07/3a2f4c59-5b7c-0010-82c7-eda71af511fa.html), basiert auf den Data Repliaction Framework im ERP

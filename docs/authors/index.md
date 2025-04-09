@@ -210,8 +210,8 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <tbody>
 <tr class="odd">
 <td>Volodymyr Vashchenko</td>
-<td>Clean Core, Organisation, Core Data Services</td>
-<td>-</td>
+<td>Clean Core, Organisation, Core Data Services, Integration</td>
+<td>Als ABAP Lead Developer bei FESTO bin ich der Innovationstornado, der immer vorne mitmischt. Mit der DSAG-Community Standards zu setzen, ist für mich wie ein heiliger Ritterschlag – nur mit weniger Rüstung und mehr Kaffeekicks!</td>
 </tr>
 </tbody>
 </table>
