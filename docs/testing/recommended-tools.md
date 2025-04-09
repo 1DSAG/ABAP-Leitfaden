@@ -11,12 +11,12 @@ nav_order: 3
 
 1. TOC
 {:toc}
-Die nachfolgend aufgeführten Testwerkzeuge sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen. Das bedeutet auch, dass von Seiten des ABAP-Entwicklers (maskulin?) nichts beachtet werden muss, was die Tests in irgendeiner Weise, also weder positiv oder negativ, beeinflussen könnte.
+Die nachfolgend aufgeführten Testwerkzeuge sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen. Das bedeutet auch, dass von Seiten der ABAP-Entwicklung nichts beachtet werden muss, was die Tests in irgendeiner Weise, also weder positiv oder negativ, beeinflussen könnte.
 
-Die Auswahl in diesem Leitfaden beschränkt sich auf die von SAP bereitgestellten(?) oder (bereits) im Lizenzumfang enthaltenen Produkte. Daneben gibt es noch viele weitere Testmanagement-Lösungen auf dem Markt, die zur Unterstützung der ABAP-Entwicklung verwendet werden können.
+Die Auswahl in diesem Leitfaden beschränkt sich auf die von SAP präferierten und teilweise schon im Lizenzumfang enthaltenen Produkte. Daneben gibt es noch viele weitere Testmanagement-Lösungen auf dem Markt, die zur Unterstützung der ABAP-Entwicklung verwendet werden können.
 
 ## Testwerkzeuge im SAP Solution Manager
-Der SAP Solution Manager (https://support.sap.com/en/alm/solution-manager.html // die Seite ist auf EN...) ist ein ausgereiftes System für das Application Lifecycle Management (ALM, Link zu diesem Kapitel), das unter anderem verschiedene Testwerkzeuge enthält.
+Der [SAP Solution Manager](https://support.sap.com/en/alm/solution-manager.html) .......die Seite ist auf EN... ist ein ausgereiftes System für das Application Lifecycle Management (ALM, Link zu diesem Kapitel), das unter anderem verschiedene Testwerkzeuge enthält.
 
 ### Test-Suite
 Die Test-Suite des SAP Solution Managers (https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264795.html) besteht im Wesentlichen aus dem Testplan-Management zur Vorbereitung der Tests und einer Tester-App, mit der die Anwender die vorbereiteten und freigegebenen Testfälle durchführen. Dazu stehen für den Testmanager verschiedene Funktionen zur Auswertung und Analyse zur Verfügung.
