@@ -3,7 +3,7 @@ layout: page
 title: Empfehlungen für Testwerkzeuge
 permalink: /testing/recommended-tools/
 parent: Testen
-nav_order: 3
+nav_order: 4
 ---
 
 {: .no_toc}
