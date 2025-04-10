@@ -23,7 +23,7 @@ In S/4 HANA soll der Entwickler nicht mehr direkt auf die Datenbanken zugreifen,
 
 ![CDS_Ueberblick](./img/cds-image-01.png)
 
-Quelle: SAP Help Darstellung des VDMs 
+Quelle: SAP Help Darstellung des VDMs{: .img-caption} 
 
 Vor die Datenbanktabellen werden verschiedene CDS-View-Layer gelegt. Die VDM sorgt z.B. dafür, dass die Datenbankfelder verständlich sind und der Benutzer leichter auf die Inhalte zugreifen kann. Der Basic Interface Layer greift auf die Datenbank zu. Die Composite Interface Views fassen Logik und Basic Interface Views zusammen; das VDM kann verschiedene Abstraktionsschichten enthalten. Die Consumption-Views geben das Datenmodell für den Anwendungsfall frei.  
 Im Rahmen des [ABAP RESTful Application Programming Model](/abap/restful_abap) (RAP) werden von SAP auch weitere Begriffsdefinitionen, z.B. Business Object Projection Layer, vorgegeben.
@@ -143,7 +143,7 @@ where
 
 > Details finden Sie unter [SAP Help (CDS Enum Types)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_enumeration_types.htm)
 
-### Function Definitions
+## Function Definitions
 Aktuell bietet SAP nur die Definition einer _Scalar Function_ an. Dabei gibt es zwei verschiedene Arten von Funktionen.
 * Analytical scalar function
   * Diese Art der Funktionen ist aktuell nur SAP intern definierbar. Sie können die von SAP ausgelieferten Funktionen aber nutzen.
@@ -156,7 +156,11 @@ Aktuell bietet SAP nur die Definition einer _Scalar Function_ an. Dabei gibt es 
 
 > Details finden Sie unter [SAP Help (CDS Scalar Functions)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_scalar_functions.htm)
 
-### Data Definitions
+## Annotations
+
+TODO Armin 
+
+## Data Definitions
 
 #### DDIC-based views
 > DDIC basierte Views sind ab Release 7.55 ersetzt worden durch View Entities, welche nicht mehr von DDIC Objekten abhängig sind
@@ -260,8 +264,12 @@ define role ZC_BusinesspartnerAddress_DAC {
 [SAP ABAP CDS - Access Control Documentation](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_access_control.html) 
 
 
-> __Tipp__
-> Mit der Transaktion SACMSEL können Berechtigungsprüfergebnisse vereinfacht angezeigt werden.
+> Tipp
+Mit der Transaktion SACMSEL können Berechtigungsprüfergebnisse vereinfacht angezeigt werden.
+{: .highlight}
+
+## Associations
+TODO
 
 ## Erweiterbarkeit
 ### Stabilitätsverträge  
@@ -295,6 +303,7 @@ Dazu müssen zwei zusätzliche CDS Views erstellt und mit der Annotation versehe
 2. Consumption CDS View (Entity) `@Analytics.query: true` 
 
 ![CDS_Ueberblick](./img/SAC_CDS_Model.png)
+Musteraufbau: Direkter Zugriff vom SAC{: .img-caption}
 
 Dabei ist zu beachten, dass für den Consumption CDS View einen **Vertrag für den systeminternen Gebrauch (C1)** vergeben werden muss.
 Zusätlich werden noch die folgenden Authorisierungs-Objekte in den Rollen der Anwender benötigt.
@@ -324,5 +333,23 @@ S_RS_AUTH
 Die ODP-Schnittstelle ermöglicht den Zugriff auf Bewegungsdaten und Stammdaten (Attribute, Texte, Hierarchien). Das SAP BW/4HANA-System abonniert operative Delta-Queues und repliziert die Daten. Die Datenänderungsquellen unterstützen ebenfalls Deltaverfahren.
 
 > Weitere Informationen finden Sie im [SAP Help Portal](https://help.sap.com/docs/SAP_BW4HANA/107a6e8a38b74ede94c833ca3b7b6f51/202710d1cee84333a4f4d593324bdf51.html).  
+
+## Tipps und Trick
+
+>**Empfehlungen**  
+1. **Performance Tracing** - Untersuchen Sie immer jeden CDS-View! Egal ob SAP Standard oder selbst erstellt. Über einen SQL Trace in ST05 können Sie die SQL Ausführung nachvollziehen, dazu müssen Sie die .PLV Datei extrahieren und in Eclipse anzeigen. So können Sie Zeitverteilungen und Ausführungspläne analysieren. Achten Sie darauf, die Gesamtzahl der zurückgegebenen Datensätze zu überprüfen, um Designprobleme zu erkennen. 
+[Siehe DSAG Eclipse ADT Guides - Performance "Auswahl einer konkreten Selektion"](https://1dsag.github.io/ADT-Leitfaden/troubleshooting/performance-analysis/)
+
+1. **Massive JOINs und komplexe Abfragen** - Für massive JOINs (z.B. 7-14 Tabellen) können CDS Views effizienter sein, indem sie in Schichten mit Assoziationen aufgeteilt werden, um die Performance zu verbessern. Für komplexe Abfragen ermöglichen CDS Views Code Pushdown, aber Vorsicht bei AMDPs auf großen Tabellen (> 1 Million Einträge), da dies die Performance beeinträchtigen kann.
+Bitte beachten Sie, dass AMDPs pro Tabellenzeile selektieren. Mit welcher Selektion gehen Sie in die AMDP?
+
+1. **Schnelle Abfragen** - Halten Sie Selektionen klein und spezifisch, um die Leistung zu optimieren, und vermeiden Sie AMDPs auf großen Tabellen, um den Datenbankzugriff zu beschleunigen. Wir empfehlen den [Hinweis 2000002 - FAQ: SAP HANA SQL Optimization](https://me.sap.com/notes/2000002).
+Falls die Optimierung am SQL Engine selbst stattfinden soll nutzen Sie gerne dann diese Seite [HINT Details](https://help.sap.com/docs/SAP_HANA_PLATFORM/4fe29514fd584807ac9f2a04f6754767/4ba9edce1f2347a0b9fcda99879c17a1.html?locale=en-US&version=2.0.05).
+
+1. **Potenzial für eine SAC Query prüfen** - Für wiederholte, benutzerdefinierte Datenabfragen sind BAPIs, Funktionsbausteine oder ABAP SQL oft besser geeignet, da CDS Views für standardisierte, wiederverwendbare Modelle gedacht sind. Für SAC-Berichte sind CDS Views besonders nützlich, da sie direkt von SAC konsumiert werden können.
+
+1. **Bereitstellung von Daten für Subsysteme** - RAP kann verwendet werden, um CDS Views als OData Services zu exponieren, was ideal für die Bereitstellung von Daten für Subsysteme ist. Dies bietet modifikationsfreie Erweiterbarkeit, insbesondere in Cloud-Umgebungen. [Siehe Kapitel ABAP - RAP](/ABAP-Leitfaden/abap/restful_abap/) 
+{: .highlight}
+
 
  
