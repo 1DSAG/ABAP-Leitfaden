@@ -213,6 +213,11 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <td>Clean Core, Organisation, Core Data Services, Integration</td>
 <td>Als ABAP Lead Developer bei FESTO bin ich der Innovationstornado, der immer vorne mitmischt. Mit der DSAG-Community Standards zu setzen, ist für mich wie ein heiliger Ritterschlag – nur mit weniger Rüstung und mehr Kaffeekicks!</td>
 </tr>
+<tr class="odd">
+<td><a href="https://www.linkedin.com/in/dominik-panzer-690702248">Dominik Panzer</a></td>
+<td>Organisation</td>
+<td>Selbst die talentiertesten ABAP Entwickler*innen mit dem besten KnowHow werden nicht erfolgreich sein, wenn sie nicht im Unternehmen ein positiv unterstützendes Umfeld finden: vom Management bis zu den Team-Kolleg*innen, fundierend auf einer klaren Strategie, bewusst entschiedener Architektur und modernen Softwareentwicklungs-Prozessen. Deshalb engagiere ich mich neben "technischer Exzellenz" auch für Themen aus den Bereichen Oraganisation und Softwareentwicklungsprozesse/-vorgehensmodelle. Nur beides zusammen macht Menschen und damit die Unternehmen für die sie arbeiten erfolgreich.</td>
+</tr>
 </tbody>
 </table>
 
