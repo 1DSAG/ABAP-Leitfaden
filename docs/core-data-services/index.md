@@ -69,7 +69,7 @@ Die folgende SAP Community Seite [ZSCV_SEARCH_CDS_VIEWS](https://github.com/alwi
 ## Unterstützte Funktionen und Modellierungsmuster  
 
 ### Unterstützte Funktionen  
-Die unterstützten Funktionen geben an, wofür eine CDS-View am besten verwendet werden kann. Eine CDS-View kann mehrere unterstützte Funktionen haben, da sie für verschiedene Zwecke geeignet sein kann.  
+Die unterstützten Funktionen geben an, so die SAP, wofür eine CDS-View am besten verwendet werden kann. Eine CDS-View kann mehrere unterstützte Funktionen haben, da sie für verschiedene Zwecke geeignet sein kann.  
 
 Diese Funktionen beschreiben die beste Verwendung einer CDS-View. Sie können beispielsweise die Verwendung einer CDS-View als:  
 - Datenquelle  
@@ -308,7 +308,7 @@ Musteraufbau: Direkter Zugriff vom SAC{: .img-caption}
 Dabei ist zu beachten, dass für den Consumption CDS View einen **Vertrag für den systeminternen Gebrauch (C1)** vergeben werden muss.
 Zusätlich werden noch die folgenden Authorisierungs-Objekte in den Rollen der Anwender benötigt.
 
-```abap
+```
 S_RS_COMP
 		RSINFOAREA   *
 		RSINFOCUBE   *
