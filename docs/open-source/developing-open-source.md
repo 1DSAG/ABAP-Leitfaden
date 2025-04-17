@@ -3,7 +3,7 @@ layout: page
 title: Entwicklung von Open Source
 permalink: /open-source/developing-open-source/
 parent: Open Source
-nav_order: 4
+nav_order: 5
 ---
 
 # Entwicklung von Open Source
@@ -23,6 +23,10 @@ nav_order: 4
 - Minimierung von Abhängigkeiten zum SAP-Standard
 - Auswirkungen auf die Paketstruktur
 - "Inner Source" -> oder Versionsverwaltungskapitel
+
+## Lizenzen
+
+Siehe auch [Lizenzen Allgemein](/ABAP-Leitfaden/open-source/index#lizenzen)
 
 ## Beispielhafte Setups
 

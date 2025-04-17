@@ -3,7 +3,7 @@ layout: page
 title: Einsatz von Open Source
 permalink: /open-source/using-open-source/
 parent: Open Source
-nav_order: 2
+nav_order: 3
 ---
 
 {: .no_toc}
@@ -67,6 +67,8 @@ Eine umfangreiche Auflistung von auf GitHub gehosteten Open-Source-ABAP-Projekte
 ## Lizenzen
 
 - "Diese Lizenz ist wichtig. Sie kann auch die kommerzielle Nutzung untersagen oder eine kompatible Lizenz für alle durchgeführten Modifikationen erzwingen. Ebenfalls können Lizenzen verschiedener Open-Source-Projekte und die Lizenz der eigenen Software miteinander inkompatibel sein."
+
+Siehe auch [Lizenzen Allgemein](/ABAP-Leitfaden/open-source/index#lizenzen)
 
 ## Support
 

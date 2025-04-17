@@ -3,7 +3,7 @@ layout: page
 title: Beteiligung an Open Source
 permalink: /open-source/contributing-to-open-source/
 parent: Open Source
-nav_order: 3
+nav_order: 4
 ---
 
 {: .no_toc}
