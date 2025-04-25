@@ -2,7 +2,7 @@
 layout: page
 title: Empfehlungen für Testwerkzeuge
 permalink: /testing/recommended-tools/
-parent: Testen
+parent: Testen in SAP 
 nav_order: 4
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Testen
-permalink: /testing/
-has_children: true
-nav_order: 5
+title: backup_index_testing
+permalink: /none/
+has_children: false
+nav_order: 21
 ---
 
 {: .no_toc}
-# Testen in SAP 
+# ALTE Seite - Testen in SAP 
 
 1. TOC
 {:toc}
@@ -45,8 +45,6 @@ Des Weiteren geben wir Hinweise zu den Herausforderungen und erforderlichen Rahm
 Ergänzend finden Sie noch ein paar Hinweise zu weiteren Testtools und Methoden, diese werden aber nur kurz angesprochen.  
 Unter Unit Tests werden oft verschiedene Definitionen von Tests verstanden. Wenn wir hier von Unit Tests schreiben, handelt es sich um programmierte Tests mit dem ABAP-UNIT Framework, die automatisiert ausgeführt werden können.  
 Die manuelle Ausführen einzelner Code Einheiten z.B. mittels SE37 / SE24 / Reports ist kein Test, sondern das Ausprobieren von Funktionalitäten.  
-
-
 
 ## Motivation-old
 Unit Tests helfen dabei, Entwicklungen robuster zu machen. Programmierungen werden dabei automatisiert mit verschiedenen Parametern ausgeführt und auf Korrektheit überprüft. Robustheit und Korrektheit sind zwei Anforderungen, die in der modernen Softwareprogrammierung sehr hoch priorisiert werden sollten. Durch Unit Tests kann automatisiert sichergestellt werden, dass geschäftskritische Prozesse wie erwartet ausgeführt werden.
