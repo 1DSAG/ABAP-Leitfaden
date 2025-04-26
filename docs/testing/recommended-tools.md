@@ -1,17 +1,20 @@
 ---
 layout: page
-title: Empfehlungen für Testwerkzeuge
+title: Weitere Testwerkzeuge
 permalink: /testing/recommended-tools/
-parent: Testen in SAP 
+parent: Softwaretest mit ABAP Unit
 nav_order: 4
 ---
 
 {: .no_toc}
-# Empfehlungen für Testwerkzeuge
+# Weitere Testwerkzeuge
 
 1. TOC
 {:toc}
-Die nachfolgend aufgeführten Testwerkzeuge sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen. Das bedeutet auch, dass von Seiten der ABAP-Entwicklung nichts beachtet werden muss, was die Tests in irgendeiner Weise, also weder positiv oder negativ, beeinflussen könnte.
+
+Ergänzend zu den Ausführungen zu ABAP Unit möchten wir Ihnen noch weitere Testwerkzeuge aufzeigen, die im Kontext von Testing in SAP eingesetzt werden können. Diese dienen zur Unterstützung des Testens der Applikationen im Geschäftsprozess Kontext. Diese Werkzeuge sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen.  
+Dies bedeutet, dass von Seiten der ABAP-Entwicklung keine besonderen Vorkehrungen bezgl. der Tools vorgenommen werden müssen.  
+Allerdings ist ABAP Unit als Grundlage und Testunterstützung ist Voraussetzung, um grundlegende Fehler in der Entwicklungsphase zu vermeiden, zu entdecken und eine angemessene Softwarequalität sicherzustellen. Ist ABAP Unit umfangreich im Einsatz, können Sie sich beim Testen der Anwendungen mit den hier genannten Tools auf Fehler konzentrieren, die sich aus der Integration und das Zusammenspiel der Anwendungen ergeben. Die Tests werden nicht mehr durch Fehler in tieferen Softwareschichten unterbrochen und somit wird die Anzahl der Testzyklen und damit der Testaufwand signifikant reduziert.
 
 Die Auswahl in diesem Leitfaden beschränkt sich auf die von SAP präferierten und teilweise schon im Lizenzumfang enthaltenen Produkte. Daneben gibt es noch viele weitere Testmanagement-Lösungen auf dem Markt, die zur Unterstützung der ABAP-Entwicklung verwendet werden können.
 

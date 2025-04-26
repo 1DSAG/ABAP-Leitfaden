@@ -1,19 +1,21 @@
 ---
 layout: page
-title: Grundlagen zu ABAP Unit Testing
-permalink: /testing/abap_unit_basics/
-parent: Testen in SAP 
+title: Grundlagen zu Unit Tests
+permalink: /testing/abap_unit_methods/
+parent: Softwaretest mit ABAP Unit 
 nav_order: 1
 ---
 
 {: .no_toc}
-# Grundlagen zum Testen mit ABAP Unit
+# Grundlagen zu Unit Tests
 
 1. TOC
 {:toc}
 
 
 ### Trennung von Datenmodell, Geschäftslogik und Präsentationsschicht
+
+Referenz auf Paket und Objektstruktur - OO SOLID - S
 
 Im SAP-Umfeld hat es sich leider "etabliert", dass alles, was für den Programmablauf benötigt wird, dort passiert, wo es gerade passt. Die Daten werden mit zusätzlichen SELECTS angereichert, aufbereitet und ausgegeben. Bei einem Doppelklick werden weitere Daten gelesen und es wird ein Popup ausgegeben, das den Anwender über irgendetwas informiert. All dies passiert in einem Stück Software, welches orientiert an der der Business-Funktionen erstellt wurde und genau diese mit all dem was nötig ist umzusetzen. So kommt es zu Code wo eine Methode ```get_sales_order``` durchaus ein BAPI aufruft, der Daten Verbucht nur damit eine Auftragsnummer erstellt werden kann. In dieser klassischen, am Geschäftsprozess orientierten Entwicklung, wie sie viele Jahre üblich war und sich heute auch findet, findet keine Trennung verschiedener Belange statt. 
 

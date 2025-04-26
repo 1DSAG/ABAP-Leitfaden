@@ -1,18 +1,19 @@
 ---
 layout: page
-title: ABAP Unit Framework
-permalink: /testing/abap_unit/
-parent: Testen in SAP 
+title: ABAP Unit - Testtechniken
+permalink: /testing/abap-unit_basics/
+parent: Softwaretest mit ABAP Unit 
 nav_order: 2
 ---
 
+
 {: .no_toc}
-# Testing mit dem ABAP Unit Test Framework
+# ABAP Unit: Testtechniken
 
 1. TOC
 {:toc}
 
-
+Technische Grundlagen Objektebene
 ## offene Punkte:
 
 - Erfahrungen und bekannte Probleme bei Unit Tests.  Z.B. das SAP Factories immer wieder gemockt werden müssen.

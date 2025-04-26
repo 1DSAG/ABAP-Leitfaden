@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Testen in SAP 
+title: Softwaretest mit ABAP Unit 
 permalink: /testing/
 has_children: true
 nav_order: 5
 ---
 
 {: .no_toc}
-# Testen in SAP 
+# Softwaretest mit ABAP Unit
 
 1. TOC
 {:toc}
@@ -45,7 +45,7 @@ Ein wichtiger Faktor in SAP-Projekten ist die zur Verfügung stehende Zeit. Und 
 
 Warum soll man Aufwand und Zeit in die Erstellung von Unit Tests investieren ?  
 In ABAP Unit erfahrene Entwickler wissen dass die Erstellung von Software, die mit ABAP-UNIT Tests abgedeckt ist, neben der höheren Qualität auch Effizienz- und Geschwindigkeitsvorteile mit sich bringen.  
-Wir möchten zu Beginn des Kapitels Ihnen die Vorteile aufzeigen und gehen im Weiteren auf die ABAP UNIT Test Technik und die erforderlichen Maßnahmen und Vorgehenseisen ein.
+Wir möchten zu Beginn des Kapitels Ihnen die Vorteile aufzeigen und gehen im Weiteren auf die ABAP UNIT Test Technik und die erforderlichen Maßnahmen und Vorgehensweisen ein.
 
 **Vorteile die sich durch den Einsatz von Unit Tests ergeben:**
 
@@ -72,7 +72,6 @@ Neben den generellen Vorteilen die sich positiv auf den Aufwand und die Organisa
 
 ## Herausforderungen und Rahmenbedingungen
 
-
 ### Herausforderungen beim Einsatz von ABAP-UNIT  
 
 #### Mangelndes Wissen und Qualifikation
@@ -84,7 +83,12 @@ Auch im Jahr 2025 bleibt die Herausforderung für Unternehmen bestehen, dass ein
 In SAP-Projekten besteht oftmals hoher Zeit- und Erfolgsdruck. Die Zeit für die Umsetzung der Anforderungen ist für Entwickler knapp bemessen und es wird erwartet dass frühzeitig testbare Versionen der Anwendung bereitgestellt werden.
 Die Definition wann ein Artefakt geliefert wurde, besteht meistens daraus, dass die geforderte Funktionalität erfolgreich im Anwendertest abgenommen werden kann. Die Lieferung von Unit-Tests finden sich idealerweise in Handbüchern und Entwicklungsrichtlinien, ist aber nicht Teil der Abnahme oder das Fehlen dessen wird akzeptiert, da die Funktionalität auch ohne Unit Tests produktiv gesetzt werden kann. Die dadurch entstandenen technischen Schulden sind nicht offensichtlich und werden bewusst oder unbewusst in Kauf genommen.
 
-Techniken, die ein Entwickler nicht beherrscht und regelmässig anwendet und auch nicht zwingend anwenden muss, können unter Zeitdruck nicht angewendet werden. Unter derartigen Rahmenbedingungen wird der flächendeckende Einsatz von Unit Tests sich sehr schwierig umsetzen lassen. Die oben genannten Vorteile lassen sich nicht erreichen und die sich daraus ergebenden Nachteile oft de-facto Standard in SAP-Entwicklungsprojekten sind. Dies sind u.a. hohe Testaufwände, Fehler im Produktivsystem, schwierige und aufwändige Anpassungen der Software, Seiteneffekte nach Änderung usw.
+#### Erfahrungsdefizit als Umsetzungshürde
+
+> {: .Zitat }
+> "Ohne Tests keine Tests"
+
+Techniken und Methoden, die ein Entwickler nicht beherrscht, nicht regelmässig anwendet und auch nicht zwingend anwenden muss, werden unter Zeitdruck nicht zum Einsatz kommen. Unter derartigen Rahmenbedingungen wird der flächendeckende Einsatz von Unit Tests sich sehr schwierig umsetzen lassen. Die oben genannten Vorteile lassen sich nicht erreichen und die sich daraus ergebenden Nachteile oft de-facto Standard in SAP-Entwicklungsprojekten sind. Dies sind u.a. hohe Testaufwände, Fehler im Produktivsystem, schwierige und aufwändige Anpassungen der Software, Seiteneffekte nach Änderung usw.
 
 ### Die Rolle des Managements
 
@@ -93,18 +97,9 @@ Kenntnisse und Wissen zu ABAP-UNIT muss sich zu einem geforderten und geprüften
 
 ### Die Rolle der Entwicklungsorganisation
 
-Der Einsatz von ABAP-UNIT muss einerseits in den Entwicklungsrichtlinien und Handbüchern definiert und vorgeschrieben werden um eine Verbindlichkeit zu erzeugen. Die Formale Definition allein wird allerdings den flächendeckenden Einsatz von Unit Tests nicht hervorbringen. Um dies zu erreichen müssen neben formalen Voraussetzungen auch Rahmenbedingungen geschaffen werden, die die bestehenden Herausforderungen im moderen ABAP-Entwicklungsumfeld aufgreifen und die Entwicklungsteams befähigen ABAP-UNIT Tests in den Entwickleralltag zu integrieren.  
-Eine ausführliche Beschreibung und in der praxis bewährte Vorgehensweise finden Sie im Kapitel  
+Der Einsatz von ABAP-UNIT muss einerseits in den Entwicklungsrichtlinien und Handbüchern definiert und vorgeschrieben werden um eine Verbindlichkeit zu erzeugen. Wie oben beschrieben, wird die Formale Definition allein den flächendeckenden Einsatz von Unit Tests nicht hervorbringen.  
+Um dies zu erreichen müssen neben formalen Voraussetzungen auch Rahmenbedingungen geschaffen werden, die sowohl die oben beschriebenen Herausforderungen als auch die Herausforderungen im moderen ABAP-Entwicklungsumfeld aufgreifen und die Entwicklungsteams befähigen, ABAP-UNIT Tests in den Entwickleralltag zu integrieren.  
+Eine ausführliche Beschreibung der nötigen Rahmenbedingungen und in der Praxis bewährte Vorgehensweisen finden Sie im Kapitel  
 **[Organisation: Teamorganisation](https://1dsag.github.io/ABAP-Leitfaden/organization/#teamorganisation-und-teamzusammensetzung)**
-> {: .new }
 
-
-
-
-
-
->Empfehlungen:
-- Die Trennung der Belange wié Datenbankzugriffe und SAP-Aufruf sind essentiel für die Unit Testerstellung
-- Trennen Sie sauber die verschiedenen Belange
-- Verpflichten Sie die Entwickler zur erstellung von Unit tests - sind nicht optioneal DoD. fordern Sie eine 
-{: .highlight}
+## Die Rolle des DSAG ABAP-Leitfadens für die Umsetzung Ihrer Test Strategie

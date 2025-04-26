@@ -1,19 +1,23 @@
 ---
 layout: page
-title: Erweiterte Testtechniken mit ABAP-Unit
+title: ABAP Unit - erweiterte Techniken
 permalink: /testing/abap_unit_advanced/
-parent: Testen in SAP 
+parent: Softwaretest mit ABAP Unit
 nav_order: 3
 ---
 
 {: .no_toc}
-# Erweiterte Testtechniuken mit ABAP-Unit
+# ABAP Unit: erweiterte Techniken
 
 1. TOC
 {:toc}
 
-## Erweiterte Testtechniken mit ABAP Unit:
+## Erweiterte Testtechniken mit ABAP Unit  
 
-Fortgeschrittene Techniken die AU nutzen aber nicht als klassische Unit Tests betrachtet werden können.
+Fortgeschrittene Techniken die ABAP Unit nutzen aber nicht als klassische Unit Tests betrachtet werden.
+bzw. über die Grundlagen hinausgehen.
+
 Integrationstests ...
 DB Mocking und DB Frameworks.
+Open Source projekte für Unit Testing
+verschiedene DB Mockiung techniken - Vorteile nachteile FM Mocking etc.
