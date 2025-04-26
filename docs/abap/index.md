@@ -51,7 +51,7 @@ Beispielsweise ist die Aufteilung einer sehr umfangreichen Methode in überschau
 
 Refactoring sollte immer dann vorgenommen werden, wenn bestehende Anwendungen geändert oder erweitert werden müssen. Dafür muss Zeit eingeplant werden. Gute Hinweise für ein sinnvolles Vorgehen zum Refactoring ist z.B. im Clean-ABAP-Styleguide beschrieben.
 
-Refactoring beschreibt aber nicht nur die Verbesserung des Codes, sondern kann im übertragenen Sinne auch auf die Struktur in Form der Pakete angewendet werden. Objekte können sinnvoll in neue Unterpakete verteilt werden. Falls eine hauptpaketbasierte Struktur bisher nicht umgesetzt wurde, können Hauptpakete erstellt werden und bisherige Pakete diesen Paketen zugeordnet werden.  Eine Aufteilung zu grosser Pakete in kleinere Pakete ist möglich, allerdings sind hier die Abhängigkeiten zu prüfen, zu klären und ggf. zu elimineren. Dabei hilft aber die Paketkapselung und die Paketprüfung.
+Refactoring beschreibt aber nicht nur die Verbesserung des Codes, sondern kann im übertragenen Sinne auch auf die Struktur in Form der Pakete angewendet werden. Objekte können sinnvoll in neue Unterpakete verteilt werden. Falls eine hauptpaketbasierte Struktur bisher nicht umgesetzt wurde, können Hauptpakete erstellt werden und bisherige Pakete diesen Paketen zugeordnet werden.  Eine Aufteilung zu grosser Pakete in kleinere Pakete ist möglich, allerdings sind hier die Abhängigkeiten zu prüfen, zu klären und ggf. zu eliminieren. Dabei hilft aber die Paketkapselung und die Paketprüfung.
 Die Verbesserung an bestehender Software sollte kontinuierlich und in kleinen Schritten erfolgen und durch Tests abgesichert werden. Wenn dies im Entwicklungsprozess integriert ist und zum Tagesgeschäft der Entwicklung gehört, wird sich das mit besser wartbarer und weniger Fehleranfälligen Software auszahlen.
 
 ## Die Rolle der Organisation
@@ -69,4 +69,5 @@ Ein wichtiges Element dabei ist auch die Wertschätzung Entwicklern gegenüber d
 Wertvolle und ausführliche Informationen zu dem Themenkomplex Organisation und Rahmenbedingungen finden Sie im Kapitel [**Organisation**](/ABAP-Leitfaden/organization/index).
 
 ## Zielgruppe des Kapitels  
+
 Wir sprechen in erster Linie den Personenkreis der ABAP Entwickler und in die ABAP-Entwicklung Involvierte an. Wir möchten aber auch Entscheider und Vorgesetzte von Entwicklungsteams ansprechen, da für die ABAP-Transformation Rahmenbedingungen gegeben sein müssen um auf dieser Reise erfolgreich zu sein. Und dafür möchten wir die Motivation im Unternehmen schaffen indem wir die Vorteile und Praxisempfehlungen hier aufzeigen.
