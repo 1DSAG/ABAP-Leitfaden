@@ -38,6 +38,10 @@ Die "klassische" App "Meine Aufgaben / Tester-Arbeitsvorrat" ist etwas mächtige
 ![Darstellung: Möglichkeiten der SAP Solution Manager Test Suite und der Ergänzung aus Focused Build](./img/solman_test_suite_focused_build.png)
 (Bildunterschrift...// funktioniert der Link?? Erwartet: PDF)Möglichkeiten der SAP Solution Manager Test Suite (unten) und der Ergänzung aus Focused Build (oben) [(Quelle: SAP)](https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf)
 
+{: .highlight }
+Eine _Open-Source-Strategie_ muss jedes Unternehmen für sich selbst erschließen. Hier finden Sie eine Arbeitsgrundlage und Erfahrungsberichte.
+
+{: .highlight }
 > Tipp
 Sofern Ihre Anwender ein SAP Fiori-Launchpad als Einstiegspunkt in die SAP-Welt nutzen, betten Sie die Kachel “Meine Testausführungen” als iFrame ein, auf der die Anzahl der offenen Testpakete dargestellt wird, die dem jeweiligen Nutzer zugeordnet sind.
 {: .highlight} .........wie geht er gelbe Kasten???
