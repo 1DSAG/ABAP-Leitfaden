@@ -23,10 +23,11 @@ Die [Test-Suite des SAP Solution Managers](https://help.sap.com/docs/SUPPORT_CON
 
 Im Testplan-Management werden Testpläne angelegt und verwaltet. Das Herzstück ist die Auswahl der Testfälle, die als solche in der Struktur der [Lösungsdokumentation (engl. Solution Doumentation, kurz "SolDoc")](https://help.sap.com/docs/SAP_Solution_Manager/c3c5ec585ee248228ddb6c3f08073ea9/2cb3e75e134249a2bd091a40fe2f6d61.html?mt=de-DE) abgelegt sind. Diese können dann in kleinere Einheiten, die sogenannten Testpakete, aufgeteilt und den entsprechenden Testern bzw. Testergruppen zugewiesen werden. Auf diese Weise können passgenaue Testpläne, zum Beispiel für Funktionstests, Integrationstests, Regressionstests, Komponententests (engl. "Unit Tests") oder Akzeptanz- bzw. Abnahmetests (eng. "User Acceptance Tests") erstellt werden.
 
+![Darstellung Testmnagement im SAP Solution Manager](./img/darstellung_solman_testmanagement.png)
+(Bildunterschrift...wie geht das?)Schematische Darstellung Testplan mit Testpaketen und Testfällen
+
 Manuelle Testfälle werden oft in **Testdokumenten** (mit Microsoft Word, Microsoft Excel etc.) beschrieben, in denen die durchzuführenden Testschritte detailliert aufgeführt sind. Außerdem besteht die Möglichkeit, **URLs** zu hinterlegen, die zu Testfällen führen, welche an einem anderen Ort liegen. Der dritte Testfalltyp im Standard des SAP Solution Managers sind sogenannte **Testkonfigurationen**, die automatisierte Testfälle ansteuern, die zum Beispiel mittels CBTA (Link zu dem Abschnitt, falls es den gibt...), eCATT (Link zu dem Abschnitt, falls es den gibt...) oder mit Tricentis Tosca(!?!Test Automation?!) (Link zu dem Abschnitt weiter unten...) erstellt wurden (siehe dazu das [Kapitel zu den Testfällen im SAP Help Portal](https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/df49e0555937e263e10000000a44538d.html?locale=de-DE)). 
 Als weitere Variante für manuelle Testfälle wurden von SAP **Testschritte** eingeführt, die allerdings nur nach Installation des Add-on "Focused Build" zur Verfügung stehen (Link zu nächstem Abschnitt).
-
-(Screenshot Testfälle in der SolDoc?)
 
 Die Tester, welche die vom Testmanager bereitgestellten und freigegebenen Testfälle ausführen, bekommen diese in der App "Meine Aufgaben / Tester-Arbeitsvorrat" aufgelistet, mit allen für sie relevanten Informationen. Dort können die Testfälle abgarbeitet werden. Im Falle eines Fehlers kann dieser als sogenannter Testfallfehler (engl. "Test defect") gemeldet werden, der dann an das jeweilige Support-Team ausgesteuert wird und - nach Behebung des Fehlers - zum erneuten Testen ansteht.
 
