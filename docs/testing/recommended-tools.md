@@ -20,7 +20,7 @@ Die [Test-Suite des SAP Solution Managers](https://help.sap.com/docs/SUPPORT_CON
 Im Testplan-Management werden Testpläne angelegt und verwaltet. Das Herzstück ist die Auswahl der Testfälle, die als solche in der Struktur der [Lösungsdokumentation](https://help.sap.com/docs/SAP_Solution_Manager/c3c5ec585ee248228ddb6c3f08073ea9/2cb3e75e134249a2bd091a40fe2f6d61.html?mt=de-DE) (engl. Solution Doumentation, kurz "SolDoc") abgelegt sind. Diese können dann in kleinere Einheiten, die sogenannten Testpakete, aufgeteilt und den entsprechenden Testern bzw. Testergruppen zugewiesen werden. Auf diese Weise können passgenaue Testpläne, zum Beispiel für Funktionstests, Integrationstests, Regressionstests, Komponententests (engl. "Unit Tests") oder Akzeptanz- bzw. Abnahmetests (eng. "User Acceptance Tests") erstellt werden.
 
 ![Darstellung: Testmanagement im SAP Solution Manager](./img/darstellung_solman_testmanagement.png)
-(Bildunterschrift...wie geht das?)Schematische Darstellung: Testplan mit Testpaketen und Testfällen (Quelle: eigene Darstellung)
+*Schematische Darstellung: Testplan mit Testpaketen und Testfällen (Quelle: eigene Darstellung)*
 
 Manuelle Testfälle werden oft in **Testdokumenten** (mit Microsoft Word, Microsoft Excel etc.) beschrieben, in denen die durchzuführenden Testschritte detailliert aufgeführt sind. Außerdem besteht die Möglichkeit, **URLs** zu hinterlegen, die zu Testfällen führen, welche an einem anderen Ort liegen. Der dritte Testfalltyp im Standard des SAP Solution Managers sind sogenannte **Testkonfigurationen**, die automatisierte Testfälle ansteuern, die zum Beispiel mittels [CBTA](#Komponentenbasierte-Testautomatisierung-Component-Based-Test-Automation-kurz-CBTA), eCATT (Link zu dem Abschnitt, falls es den dann noch gibt...) oder mit [Tricentis Test Automation](#Tricentis-Test-Automation) erstellt wurden (siehe dazu das [Kapitel zu den Testfällen im SAP Help Portal](https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/df49e0555937e263e10000000a44538d.html?locale=de-DE)). 
 Als weitere Variante für manuelle Testfälle wurden von SAP [**Testschritte**](#Testschritt-Designer) eingeführt, die allerdings nur nach Installation des Add-on "Focused Build" zur Verfügung stehen.
@@ -36,15 +36,12 @@ Mit Focused Build wird eine weitere Tester-App namens "Meine Testausführungen" 
 Die "klassische" App "Meine Aufgaben / Tester-Arbeitsvorrat" ist etwas mächtiger, dafür allerdings auch schwieriger zu handhaben. Sie kann ebenso für beide Testfalltypen genutzt werden, wobei beim Aufruf eines Testschritt-Designer-Testfalls in "Meine Testausführungen" abgesprungen wird, was anfangs eventuell verwirrend sein kann.
 
 ![Darstellung: Möglichkeiten der SAP Solution Manager Test Suite und der Ergänzung aus Focused Build](./img/solman_test_suite_focused_build.png)
-(Bildunterschrift...// funktioniert der Link?? Erwartet: PDF)Möglichkeiten der SAP Solution Manager Test Suite (unten) und der Ergänzung aus Focused Build (oben) [(Quelle: SAP)](https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf)
-
-{: .highlight }
-Eine _Open-Source-Strategie_ muss jedes Unternehmen für sich selbst erschließen. Hier finden Sie eine Arbeitsgrundlage und Erfahrungsberichte.
+*Möglichkeiten der SAP Solution Manager Test Suite (unten) und der Ergänzung aus Focused Build (oben) [(Quelle: SAP)](https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf)* /// funktioniert der Link?? Erwartet: PDF
 
 {: .highlight }
 > Tipp
 Sofern Ihre Anwender ein SAP Fiori-Launchpad als Einstiegspunkt in die SAP-Welt nutzen, betten Sie die Kachel “Meine Testausführungen” als iFrame ein, auf der die Anzahl der offenen Testpakete dargestellt wird, die dem jeweiligen Nutzer zugeordnet sind.
-{: .highlight} .........wie geht er gelbe Kasten???
+{: .highlight} .........wie geht der gelbe Kasten wie z.B. im Open Source-Kapitel???
 
 ### Komponentenbasierte Testautomatisierung (Component-Based Test Automation, kurz CBTA)
 Die [komponentenbasierten Testautomatisierung](https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/00e90f0489994e76ad5999a63bbf4f30.html?locale=de-DE) ist das Bordwerkzeug des SAP Solution Managers zur Automatisierung von Testfällen und im Standardlieferumfang enthalten.
@@ -56,7 +53,7 @@ Die Testskripts werden in sogenannte Testkonfigurationen gepackt und können dar
 
 > Tipp
 Mit dem Wartungsende des SAP Solution Managers rückt auch das Ende von CBTA näher. Daher ist es ratsam zu überlegen, ob eine zukunftsfähige Drittanbieter-Lösung wie Tricentis Test Automation (Link zu deem Abschnitt) zur Testautomatiserung vielleicht jetzt schon die bessere Alternative ist.
-{: .highlight} .........wie geht er gelbe Kasten???
+{: .highlight} .........wie geht der gelbe Kasten wie z.B. im Open Source-Kapitel???
 
 Kann ich den Link hier brauchen???
 https://help.sap.com/docs/SUPPORT_CONTENT/sm/3530264810.html
