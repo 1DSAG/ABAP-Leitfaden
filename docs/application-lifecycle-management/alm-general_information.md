@@ -34,6 +34,10 @@ Zusammengefasst decken die oben genannten Produkte folgenden Funktionsumfang ab:
 - Planung, Durchführung und Dokumentation von Tests
 - Integration manueller und automatisierter Tests
 - Qualitätssicherung vor Produktivsetzungen
+>**Weiterführende Informationen**
+[**Testmanagement**](/ABAP-Leitfaden/testing/index)
+{: .highlight}
+
 
 **IT-Service-Management (ITSM)**
 - Unterstützung bei Störungsmanagement, Incident- und Problem-Handling
@@ -77,3 +81,4 @@ Grafik??
 
 Hinsichtlich der Dokumentation besteht unter anderem die Möglichkeit, Entwicklungsobjekte automatisch aus den angebundenen SAP-Systemen auszulesen und anschließend (manuell) den entsprechenden Prozessen zuzuweisen, was etwa die Änderung von Prozessen durch den Entwickler vereinfachen kann.
 
+## Unterscheidung ALM, DevOps, DevEx
