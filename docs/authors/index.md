@@ -74,7 +74,7 @@ nav_order: 15
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/fabianlupa/">Fabian Lupa</a></td>
-<td>adesso orange AG</td>
+<td>adesso business consulting AG</td>
 <td>Schreiben, Review</td>
 </tr>
 <tr class="odd">

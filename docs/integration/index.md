@@ -111,3 +111,30 @@ Im direkten Vergleich wird schnell klar, warum IDocs für SAP EDI die bessere Wa
 - [SAP Landscape Transformation Replication Server](https://www.sap.com/germany/products/technology-platform/landscape-replication-server.html), ABAP und NetWeaver basiert 
 - [SAP HANA Smart Data Integration (SDI)](https://help.sap.com/docs/SUPPORT_CONTENT/hanasdi/4740563873.html?mt=de-DE), SAP HANA Datenbank basiert
 - [Master Data Governance (MDG)](https://www.sap.com/documents/2015/07/3a2f4c59-5b7c-0010-82c7-eda71af511fa.html), basiert auf den Data Repliaction Framework im ERP
+
+## Cloud Connector
+
+Sind Sie im Bereich der Business Technology Platform (BTP) unterwegs, benötigen sie auch einen Cloud Connector in ihrer Infrastruktur, um eine Verbindung von der Cloud nach On-Premise aufbauen zu können. Der Cloud Connector fungiert als Gateway und Proxy und routet den Netzwerkverkehr aus dem Internet zu den richtigen Systemen in ihrer Landschaft hinter der Firewall.
+
+### Aufbau
+
+Beim Aufbau Ihrer Cloud Connector Landschaft sollten Sie auf die Trennung der Systemschienen achten, da in Produktion meist die strikteren Regeln für Zugriffe auf Ressourcen gelten. In diesem Fall werden mindestens zwei Instanzen vorgeschlagen, einmal für DEV/TEST und eine für PROD. Je nach laufenden Prozessen und Wichtigkeit, sollten Sie über eine entsprechende ausfallsichere Struktur nachdenken (Hochverfügbarkeit).
+
+### Protokolle
+
+Aktuell gibt es zwei Protokolle, die in den meisten Anwendungsfällen und Zugriffen verwendet werden.
+
+- HTTP - Führend ist hierbei das Protokoll OData und SOAP, es ist aber auch Plain HTTP möglich, um Daten und Systeme in On-Premise anzusprechen.
+- RFC - RFC-fähige Funktionsbausteine können ebenfalls konsumiert werden, auch wenn sie nicht mehr die strategische Zielrichtung der SAP sind, so stehen damit viele Funktionen des Systems zur Verfügung, ohne Clean Core zu verletzen.
+
+Die Freigabe der Ressourcen erfolgt in den jeweilig konfigurierten Systemen im Cloud Connector. Bei HTTP werden entsprechende Pfade/URLs freigegeben, bei RFC die entsprechenden Funktionsbausteine. In Produktion empfiehlt sich eine explizite Freigabe von Ressourcen und die Vermeidung von Wildcards (*).
+
+### Erweiterungen
+
+Erstellen Sie Erweiterungen in der BTP, dann tun sie das normalerweise mit CAP (Cloud Application Programming Model) oder RAP (ABAP RESTful Application Programming Model). Damit Sie dann auf Daten zugreifen können, benötigen Sie einen konfigurierten Cloud Connector an dem Sub-Account. Die Konfiguration ist nicht Teil dieses Leitfadens, da er meist durch Ihre SAP Basis durchgeführt wird. 
+
+In den meisten Fällen werden sie im Destination Service der BTP die Verbindung zum On-Premise System konfigurieren. Verwenden Sie das SAP BTP ABAP Environment um Ihre Erweiterungen zu erstellen, dann können Sie diese auch im System als Communication Arrangements und Communication Systems abbilden und benötigen die Konfiguration im Destination Service nicht. Wollen Sie allerdings Standard-Fiori Anwendungen erweitern, benötigen Sie einen Zugriff über den Sub-Account, um auf Ihre Systeme Zugriff zu erhalten.
+
+### Zugriffsrichtung
+
+Bisher hatten Sie vor allem von Zugriffen aus dem Internet oder der BTP Richtung On-Premise gelesen. Der Cloud Connector kann aber auch als Proxy genutzt werden, um von einem On-Premise System auf ein Cloud System zu routen und die direkte Anbindung des Cloud Systems zu vermeiden. Das ABAP Test Cockpit auf dem ABAP Environment ist zum Beispiel so ein Fall.
