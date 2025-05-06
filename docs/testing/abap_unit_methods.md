@@ -12,43 +12,46 @@ nav_order: 1
 1. TOC
 {:toc}
 
+## Voraussetzungen für ABAP-Unit Tests
+
+Nachdem im vorigen Abschnitt Herausforderungen und Voraussetzungen vor allem organisatorischer Art angesprochen wurden, gehen wir Im Folgenden Abschnitt auf technische Aspekte und Belange ein, die zu berücksichtigen sind um erfolgreich ABAP-Unit Tests zum Einsatz zu bringen.
 
 ### Trennung von Datenmodell, Geschäftslogik und Präsentationsschicht
 
-Referenz auf Paket und Objektstruktur - OO SOLID - S
+> {: .Zitat }
+> "Erst die Funktion implementieren- dann machen wir noch die Unit Tests (wenn dann noch Zeit ist)."
 
-Im SAP-Umfeld hat es sich leider "etabliert", dass alles, was für den Programmablauf benötigt wird, dort passiert, wo es gerade passt. Die Daten werden mit zusätzlichen SELECTS angereichert, aufbereitet und ausgegeben. Bei einem Doppelklick werden weitere Daten gelesen und es wird ein Popup ausgegeben, das den Anwender über irgendetwas informiert. All dies passiert in einem Stück Software, welches orientiert an der der Business-Funktionen erstellt wurde und genau diese mit all dem was nötig ist umzusetzen. So kommt es zu Code wo eine Methode ```get_sales_order``` durchaus ein BAPI aufruft, der Daten Verbucht nur damit eine Auftragsnummer erstellt werden kann. In dieser klassischen, am Geschäftsprozess orientierten Entwicklung, wie sie viele Jahre üblich war und sich heute auch findet, findet keine Trennung verschiedener Belange statt. 
+Im SAP-Umfeld hat es sich leider "etabliert", dass alles, was für den Programmablauf benötigt wird, dort passiert, wo es gerade passt. Die Daten werden mit zusätzlichen SELECTS angereichert, aufbereitet und ausgegeben. Bei einem Doppelklick werden weitere Daten gelesen und es wird ein Popup ausgegeben, das den Anwender über irgendetwas informiert. All dies passiert in einem Stück Software, welches als Business Funktion wie in der Geschäftsanforderung beschrieben erstellt wurde und genau diese mit all dem was nötig ist umsetzt.  
+So entsteht Code, in der eine Methode ```get_sales_order``` ein BAPI aufruft, der Daten Verbucht nur damit eine Auftragsnummer erstellt werden kann. In dieser klassischen, am Geschäftsprozess orientierten Entwicklung, wie sie viele Jahre üblich war und auch heute noch im Einsatz ist, findet keine Trennung verschiedener Belange gemäß dem "Separation of Concerns"-Prinzips statt-
 
-Eine grundlegende Regel von fachkompetenter Arbeit ist, dass die Geschäftslogik nicht mit der Datenausgabe (Präsentationsschicht) gemischt ist. In einem Unit Test gibt es keinen Anwender, der eine Info-Meldung wegklicken kann, was das Testen von solchen All-in_one Programmteilen stark erschwert. Ein weiterer Aspekt, der von der Geschäftslogik abgekoppelt sein sollte, ist die Datenbeschaffung (Datenmodell).
+Eine grundlegende Regel von fachkompetenter Arbeit ist, dass Datenbeschaffung, Geschäftslogik  und Datenausgabe (Präsentationsschicht) in der Anwendung technisch getrennt sind und sich im Code nicht vermischen. In einem Unit Test gibt es keinen Anwender, der eine Info-Meldung wegklicken kann, was das Testen von solchen All-in_one Programmteilen stark erschwert.  
 
-Es gibt Programmbereiche, die nicht mittels Unit Tests überprüft werden können. Dazu gehören alle Programmteile, die von einem Dialog oder anderen Präsentationsfunktionen wie z.B. ALV-Grid abhängig sind.  
-Eine Trennung von Datenbeschaffung, Geschäftslogik und Anzeige ist in jedem Fall eine Verbesserung für die Softwarequalität. Unit Tests können einfacher umgesetzt werden, wenn vorhandenen Programmen neu strukturiert (refactored) und nach den Regeln von Clean ABAP geschrieben werden.
+Es gibt Programmbereiche, die nicht mittels Unit Tests überprüft werden können. Dazu gehören alle Programmteile, die von einem Dialog oder anderen Präsentationsfunktionen, wie z.B. ALV-Grid, abhängig sind.  
+Eine Trennung von Datenbeschaffung, Geschäftslogik und Anzeige ist in jedem Fall eine Verbesserung für die Softwarequalität. Unit Tests können einfacher umgesetzt werden, wenn vorhandenen Programmen neu strukturiert (refactored) und nach den Regeln von Clean-ABAP geschrieben werden.
 
-### Unit Tests sind nicht optional
+Um ein umfangreiches Überarbeiten erstellter Software zu vermeiden, ist daher ein gutes Design der Anwendung, die die Trennung der Belange von Grund auf berücksichtigt und somit auch das Ersetzen nicht zu testender Einheiten (Mocken) ermöglicht, essentiell für die Umsetzung von Unit-Tests. Erläuterungen finden Sie hierzu im Kapitel [MOderne ABAP Entwicklung](/ABAP-Leitfaden/abap/oo-design/#design-und-erstellung-von-sap-anwendungen) und Abschnitt [Testbarkeit durch gutes Design](/ABAP-Leitfaden/abap/oo-design/#testbarkeit-durch-gutes-design).
+
+### Unit Tests sind nicht optional - Unit Tests als Teil der Definition of Done
 
 Erweitern sie Ihre "Definition of Done" und nehmen sie Unit Tests darin auf.  
 Es wird langfristig äußerst hilfreich sein das frühzeitige - wenn nicht vorab #TDD - Erstellen von Unit Test in den Entwicklungsprozess zu integrieren. Das spätere Erstellen von Test wird aufgrund von (Projekt-)Zeitdruck kaum funktionieren.\
-Jeder Entwicker solle stets die Möglichkeit haben qualitativ hochwertige Software zu erstellen. Hiervon sind automatische Tests ein wichtiger Bestandteil, auch wenn diese Tests länger und umfassender als das eigentliche Programm sein können. Dies ist ein Ausdruck der geschäftlichen Anforderung und Komplexität der Funktion.
+Jeder Softwareentwickler solle stets die Möglichkeit haben qualitativ hochwertige Software zu erstellen. Hiervon sind automatische Tests ein wichtiger Bestandteil, auch wenn diese Tests länger und umfassender als das eigentliche Programm sein können. Dies ist ein Ausdruck der geschäftlichen Anforderung und Komplexität der Funktion.
 
-#### TDD (Test-Driven-Development)
+### TDD (Test-Driven-Development)
 
-Wenn das Stichwort "Unit Tests" fällt, kommt es fast unweigerlich auch zu dem Thema _Test Driven Development_, kurz _TDD_. TDD ist ein Programmiervorgehen, bei dem - vereinfacht - zuerst definiert wird, welche Eingaben einer Funktion zu welchen Ergebnissen führen soll. Erst danach wird die Implementierung der Funktion realisiert. Durch das zuvor definierte Verhalten kann überpfüt werden, ob die gewünschte Funktionalität gegeben ist.
+Wenn das Stichwort "Unit Tests" fällt, kommt es fast unweigerlich auch zu dem Thema _Test Driven Development_, kurz _TDD_. TDD ist ein Programmiervorgehen, bei dem - vereinfacht - zuerst definiert wird, welche Eingaben einer Funktion zu welchen Ergebnissen führen soll. Erst danach wird die Implementierung der Funktion realisiert. Durch das zuvor definierte Verhalten kann überprüft werden, ob die gewünschte Funktionalität gegeben ist.
 
-Es geht an dieser Stelle explizit nicht um die Methode Test Driven Development. Unit Tests können auch dann sinnvoll eingesetzt werden, wenn nicht nach dieser Methode vorgegangen wurde. Das wichtigste ist aus unserer Sicht das Verständnis, wie Unit Tests funktionieren und welche Wichtigkeit sie haben.
+Es geht an dieser Stelle explizit nicht um die Methode des Test Driven Development. Unit Tests können auch dann sinnvoll eingesetzt werden, wenn nicht nach dieser Methode vorgegangen wurde. Das wichtigste ist aus unserer Sicht das Verständnis, wie Unit Tests funktionieren und welche Wichtigkeit sie haben.
 
-
-## Allgemeines zu Unit Tests - Basucs .Unit Test Methodik - Begriffserläutern - In bezug auf reine Lehre
-## Begriffsdefinitionen
+## Allgemeines zu Unit Tests - Begriffsdefinitionen und Erläuterungen
 
 ### Testlevel
 
 #### Methoden Tests
 
-Tests einzelner Methoden mit dem Fokus die korrekte Arbeitsweise der Methoden sicher zu stellen. Die tests sollten unbedingt unabhägig von der Datenbank ausgeführt werden. 
+Tests einzelner Methoden mit dem Fokus die korrekte Arbeitsweise der Methoden sicher zu stellen. Die tests sollten unbedingt unabhägig von der Datenbank ausgeführt werden.  
 Aus dieser Definition ergeben sich bereits oft die ersten Grundlagen für ein Refactoring, da viele Methoden mehrere Aufgaben ausführen.
 Eine große Anzal oder sehr umfangreiche Unit Tests deuten oft darauf hin, dass sie eine Methode zerlegen sollten.
-
-## Erweiterte Testtechniken - Aspekt beim Mittesten von Datenbank - als Anhang
 
 #### Komponententests
 
@@ -60,14 +63,11 @@ Hierzu eignen sich die entsprechenden Frameworks der SAP:
 - ABAP SQL Test Double Framework (Read and Write Access)  
   siehe [Managing Dependencies with ABAP Unit](https://help.sap.com/docs/ABAP_PLATFORM_NEW/c238d694b825421f940829321ffa326a/04a2d0fc9cd940db8aedf3fa29e5f07e.html?locale=en-US)
 
-
-
 #### Integrationstests
 
 Bei Integrationtests werden Teile von oder ganze Prozessen getestet, um das Zusammenspiel der Komponenten abzusichern. 
 Diese Tests sind oft davon gekennzeichnet das die Vorbereitung der Ausgangslage an Daten aufwändig ist. Es wird benötigt: Kunde mit Liefersperre, Material ohne bestand, aber mit eingehender Bestellung usw.  
 Hier wird eingroßteil der Tests auf eine Effiziente Bereitstellung dieser Testdaten verwendet werden. 
-
 
 ## Vorgehen und Methodik
 
@@ -92,7 +92,9 @@ Es gibt folgende zusätzliche Möglichkeiten, nach denen ebenfalls modularisiert
 
 
 ### Datenbankhandling - 
+
 #### Mocken der Datenbankzugriffsobjekte
+
 #### Mocken der Datenbank mit dem OSQL Framewrok 
 
 ### Code-Abdeckung (coverage)
@@ -103,14 +105,14 @@ Bei vorhandenen Klassen, bei denen nicht auf die Trennung geachtet wurde, ist ei
 
 
 ## Exemplarisches schematisches Vorgehen Erstellung einer BAdI Implementierung die mit ABAP Unit Tests unterlegt ist:
+
 - BADI im EWM - Filter und Rundung von Beständen - erklärung aufbau und vergleich kein Unit Test und Implementierung mit Unit test.
 - *Schreibt Pete .....
 Fachtest:
-Beschaffung daten / Aufbau testcase 
-Sicherehitsnetz 
+Beschaffung daten / Aufbau testcase
+Sicherheitsnetz
 er kann es ausführen ohne Berater und ohne TEstdaten. schneller identifikatinb
 weniger Angst was kaputtzumachen
-
 
 ## Weiterführende Links
 
@@ -123,8 +125,7 @@ weniger Angst was kaputtzumachen
 * [Agile ABAP-Entwicklung von Winfried Schwarzmann - Reinwerk](https://www.rheinwerk-verlag.de/agile-abap-entwicklung)
 * [ABAPKoans von Damir Majer](https://github.com/damir-majer/ABAPKoans)
 
-
-https://learning.sap.com/learning-journeys/acquire-core-abap-skills/implementing-code-tests-with-abap-unit_b23c7a00-c2e8-406d-8969-b00db3f1fd87
+[ABAP Unit Tests - SAP Learning Hub](https://learning.sap.com/learning-journeys/acquire-core-abap-skills/implementing-code-tests-with-abap-unit_b23c7a00-c2e8-406d-8969-b00db3f1fd87)
 
 #  TBD /Notizen / Fragen Anmerkungen zum Kapitel Ecke
 
