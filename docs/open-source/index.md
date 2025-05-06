@@ -7,7 +7,6 @@ nav_order: 11
 ---
 
 {: .no_toc}
-
 # Open Source
 
 1. TOC
