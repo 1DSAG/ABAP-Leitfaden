@@ -36,20 +36,16 @@ Je früher ein Mangel in der Softwareentwicklung gefunden werden kann, desto gü
 1. Die Disziplin des Entwicklers, den Code kontinuierlich auf Mängel zu prüfen
 2. Das Werkzeug mit dem der Entwickler arbeitet
 
->**Die richtige Entwicklungsumgebung verwenden**
+>**Die eingesetzte Entwicklungsumgebung ist ausschlaggebend für die Früherkennung und Behebung von Mängeln**
 - Bevorzugen sie die ABAP Development Tools für eclipse (ADT) als Entwicklungsumgebung für ABAP: Hierdurch können sie auf integrierte Refactoring-Möglichkeiten, erweitertes Syntax-Highlighting und erweiterte Code-Vervollständigung, Autokorrektur ausgewählter ATC-Fundstellen durch Quick-Fixes, Inline Anzeige von ATC-Fundstellen an der auftretenden Code-Zeile nach ausgeführter ATC Prüfung und eine frei konfigurierbare Benutzeroberfläche zugreifen. 
-- Nutzen sie das eclipse Ökosystem um die Effizienz Ihrer Entwickler zu steigern: Durch die Bereitstellung des ADT-SDKs wurde die Möglichkeit geschaffen, über standardisierte Schnittstellen die ABAP Development Tools zu erweitern. Hierdurch sind diverse Projekte entstanden, die unter anderem Erweiterungen der IDE unterstützen und das Entwicklerleben vereinfachen. Besonders erwähnenswert ist dabei der ABAP Cleaner, der Code Refactorings unterstützt, die sich primär auf den Einsatz von moderner ABAP Syntax und die Einhaltung eines einheitlichen Styleguides konzentrieren. Bitte beachten Sie vor Installation der Plug-Ins auf die in ihrem Unternehmen geltenden Vorgänge für Sicherheitsprüfungen und Freigabeprozesse für die Nutzung neuer Software. 
-
+- Nutzen sie das eclipse Ökosystem um die Effizienz Ihrer Entwickler zu steigern: Durch die Bereitstellung des ADT-SDKs existiert die Möglichkeit, die ABAP Development Tools über standardisierte Schnittstellen zu erweitern. Hierdurch sind in den verganenen Jahren diverse Projekte entstanden, die unter anderem Erweiterungen der IDE anbieten und das Entwicklerleben in vielerlei Hinsicht vereinfachen. Als Beispiel für so eine Erweiterung möchten wir den ABAP Cleaner erwähnen, der Code Refactorings unterstützt, die sich primär auf den Einsatz von moderner ABAP Syntax und die Einhaltung eines einheitlichen Styleguides konzentriert.
+- Achten sie bei dem Einsatz von eclipse Plug-Ins auf sicherheitsrelevante Rahmenbedingungen: Dieser Leitfaden soll keine Einladung sein, sämtliche Open Source oder frei verfügbaren eclipse Plug-Ins ohne weiteres in Ihrem produktiven Entwicklungsumfeld zu verwenden. Bitte beachten Sie vor Installation der Plug-Ins auf die in ihrem Unternehmen geltenden Vorgänge für Sicherheitsprüfungen und Freigabeprozesse für die Nutzung neuer Software. 
 {: .highlight}
-- IDE / Fast Feedback / ABAP Cleaner
-- Validierung statischer Code Analyse
+
 ### Webseiten & Ressourcen
 - [How To... Create RESTful APIs And Consume Them in ABAP Development Tools](https://www.sap.com/documents/2013/04/12289ce1-527c-0010-82c7-eda71af511fa.html)
 - [ABAP Open Source Projects](https://dotabap.org/)
 - [ABAP Cleaner](https://github.com/SAP/abap-cleaner)
-
-## In Verbindung mit Integrations und Deployment Aktivitäten
-- Quality Gates / Baseline / Verteilte Verantwortlichkeiten
 
 ## Code Review
 
@@ -111,6 +107,12 @@ Diese beiden Punkte können zu einem gewissen Grad durch Custom Code gelöst wer
 Zusammenfassend lässt sich sagen, dass für die Durchführung von Reviews für ABAP-Code aktuell *abapGit* die einzige praktikable Lösung ist.
 Allerdings ist abapGit ein zusätzliches Tool, das Entwickler:innen verwenden müssen. Ohne weitere Anpassung bettet es sich nicht natürlich in bestehende Entwicklungsprozesse ein. Eine erfolgreiche Lösung für Code Reviews erfordert daher einigen initialen Aufwand, um eine möglichst nahtlosen Integration in den eigenen Entwicklungsprozess sicherzustellen.
 Beispiele aus der Praxis zeigen jedoch, dass dies durchaus möglich ist und letztlich ein wertvoller Baustein zur Entwicklung hochwertigen Codes sein kann. Nicht zuletzt die Tatsache, dass SAP selbst auf Code Reviews in der ABAP-Entwicklung setzt, sollte Argument genug sein, sich mit der Thematik auseinanderzusetzen.
+
+## Definierte Quality Gates in Verbindung mit Release und Deployment Aktivitäten
+- Quality Gates / Baseline / Verteilte Verantwortlichkeiten
+>**Überschrift?**
+- Achten sie auf die Implementierung eines manipulationsfreien Prüf- und Freigabeprozesses: Die Freiheiten die ein Entwickler im Entwicklungssystem zur Verfügung hat können gerade in zeitkritischen Situationen (Entwicklung und Qualitätssicherung in mehreren Zeitzonen verteilt / Dezentrales Release Management / etc.) ein nicht zu unterschätzende Herausforderung darstellen. Gerade von keine vorgelagerte kontinuierliche Selbstkontrolle durch den Entwickler, fehlende Pair Programming oder Code Review Prozesse, zu große und über lange Zeiträume gestreckte Releases, dazu führen, dass Entwickler mit einem festen Lieferdatum im Nacken, zu Kurzschluss-Reaktionen neigen und über die vorhandenen Debug and Replace Berechtigungen die Quality Gates und damit verbundenen Qualitätsprüfungen aushebeln. Vertrauen ist gut, Kontrolle ist besser!  
+{: .highlight}
 
 ## Predictive Maintenance / Proactive Problem Management
 - Hotspots / technical debt
