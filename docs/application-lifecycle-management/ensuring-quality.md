@@ -21,8 +21,6 @@ Für SAP Business Suite Kunden mit SAP Enterprise Support enthält der SAP Solut
 
 Leider ist bis zum heutigen Tag (Stand 23.04.2025) noch kein adäquates Nachfolgeprodukt für das Custom Code Lifecycle Management im SAP Solution Manager offiziell bekannt, dass dessen Umfang und Leistung ansatzweise abdeckt. Stattdessen existieren verstreut spezialisierte Insellösungen und Services, die leider nur Zeitpunkt-bezogene Analysen und kein ganzheitliches und evolutionäres Monitorings gewährleisten (SAP for Me Custom Code Analytics Application, S/4HANA Readiness Check, Clean Core Cockpit, Intelligent Custom Code Management Service). Gerade im Hinblick auf das technologie-offene Ökosystem im SAP Umfeld macht es Sinn, sich mit Kollegen anderer Technologiebereiche auszutauschen und als Alternative ggf. auf ein bereits in Ihrem Unternehmen vorhandenes Software Analyse Werkzeug mit ABAP Auswertungsmöglichkeiten zuzugreifen.
 
-//ToDo: Erwartungshaltung? Partnership? 
-
 ## Weiterführende Internetquellen und Literaturempfehlung
 ### Webseiten & Ressourcen
 - [DSAG ATC-Leitfaden](https://dsag.de/wp-content/uploads/2021/12/dsag_leitfaden_atc_2020_06.pdf)
@@ -34,17 +32,21 @@ Leider ist bis zum heutigen Tag (Stand 23.04.2025) noch kein adäquates Nachfolg
 //ToDo: Übergang
 
 ## Kontinuierliche Selbstüberprüfung durch den Entwickler
-Je früher ein Mangel in der Softwareentwicklung gefunden werden kann, desto günstiger ist dessen Behebung. Gerade für den Entwickler ergibt sich hieraus ein hoher Anspruch an die eigene Verantwortung, die Codequalität adäquat im Auge zu behalten und frühzeitig Probleme aus dem Weg zu räumen. Zwei wesentliche Faktoren spielen dabei eine entscheidende Rolle: 
-1. Die Disziplin des Entwicklers, den Code kontinuierlich auf Mängel hin zu prüfen
+Je früher ein Mangel in der Softwareentwicklung gefunden werden kann, desto günstiger ist dessen Behebung. Gerade für den Entwickler ergibt sich hieraus ein hoher Anspruch an die eigene Verantwortung, die Codequalität adäquat im Auge zu behalten und frühzeitig Probleme aus dem Weg zu räumen. Zwei Faktoren spielen dabei eine entscheidende Rolle: 
+1. Die Disziplin des Entwicklers, den Code kontinuierlich auf Mängel zu prüfen
 2. Das Werkzeug mit dem der Entwickler arbeitet
 
 >**Die richtige Entwicklungsumgebung verwenden**
-- Bevorzugen sie die ABAP Development Tools für eclipse als Entwicklungsumgebung. Hierdurch können sie sich kofortabel die Ergebnisse der statischen Code Analyse an den jeweiligen Fundstellen anzeigen lassen. 
-- Nutzen sie das eclipse Ökosystem um auf zusätzliche Plug-Ins zur Effizienzsteigerung zu verwenden.
+- Bevorzugen sie die ABAP Development Tools für eclipse (ADT) als Entwicklungsumgebung für ABAP: Hierdurch können sie auf integrierte Refactoring-Möglichkeiten, erweitertes Syntax-Highlighting und erweiterte Code-Vervollständigung, Autokorrektur ausgewählter ATC-Fundstellen durch Quick-Fixes, Inline Anzeige von ATC-Fundstellen an der auftretenden Code-Zeile nach ausgeführter ATC Prüfung und eine frei konfigurierbare Benutzeroberfläche zugreifen. 
+- Nutzen sie das eclipse Ökosystem um die Effizienz Ihrer Entwickler zu steigern: Durch die Bereitstellung des ADT-SDKs wurde die Möglichkeit geschaffen, über standardisierte Schnittstellen die ABAP Development Tools zu erweitern. Hierdurch sind diverse Projekte entstanden, die unter anderem Erweiterungen der IDE unterstützen und das Entwicklerleben vereinfachen. Besonders erwähnenswert ist dabei der ABAP Cleaner, der Code Refactorings unterstützt, die sich primär auf den Einsatz von moderner ABAP Syntax und die Einhaltung eines einheitlichen Styleguides konzentrieren. Bitte beachten Sie vor Installation der Plug-Ins auf die in ihrem Unternehmen geltenden Vorgänge für Sicherheitsprüfungen und Freigabeprozesse für die Nutzung neuer Software. 
+
 {: .highlight}
 - IDE / Fast Feedback / ABAP Cleaner
 - Validierung statischer Code Analyse
-
+### Webseiten & Ressourcen
+- [How To... Create RESTful APIs And Consume Them in ABAP Development Tools](https://www.sap.com/documents/2013/04/12289ce1-527c-0010-82c7-eda71af511fa.html)
+- [ABAP Open Source Projects](https://dotabap.org/)
+- [ABAP Cleaner](https://github.com/SAP/abap-cleaner)
 
 ## In Verbindung mit Integrations und Deployment Aktivitäten
 - Quality Gates / Baseline / Verteilte Verantwortlichkeiten
