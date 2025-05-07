@@ -19,7 +19,7 @@ Darüberhinaus existieren Software Analyse Werkzeuge, deren Ausrichtung eher gan
 
 Für SAP Business Suite Kunden mit SAP Enterprise Support enthält der SAP Solution Manager ab Version 7.2 SP5 eine Zusammenstellung von Werkzeugen, die unter dem Begriff Custom Code Lifecycle Management ein sehr umfangreiches Portfolio an Analyse- und Verwaltungswerkzeugen anbieten. Als bekannter Stellvertreter dieser Werkzeuge ist das Custom Code Decommissioning Cockpit zu nennen, das häufig bei der Vorbereitung von Migrationsprojekten von SAP ECC auf SAP S/4HANA verwendet wird, um nicht mehr genutzten Kundencode vor der Migration kostengünstig stillzulegen. Eine ausführliche Beschreibung über die Funktionalität mit Präsentationsmaterial und Videos finden Sie im verlinkten Expert Content Custom Code Management with SAP Solution Manager.
 
-Leider ist bis zum heutigen Tag (Stand 23.04.2025) noch kein adäquates Nachfolgeprodukt für das Custom Code Lifecycle Management im SAP Solution Manager bekannt, dass dessen Umfang und Leistung ansatzweise abdeckt. Stattdessen existieren verstreut spezialisierte Insellösungen und Services, die leider nur Zeitpunkt-bezogene Analysen und kein ganzheitliches und evolutionäres Monitorings gewährleisten (SAP for Me Custom Code Analytics Application, S/4HANA Readiness Check, Clean Core Cockpit, Intelligent Custom Code Management Service). Gerade im Hinblick auf das technologie-offene Ökosystem im SAP Umfeld macht es Sinn, sich mit Kollegen anderer Technologiebereiche auszutauschen und als Alternative ggf. auf ein bereits in Ihrem Unternehmen vorhandenes Software Analyse Werkzeug mit ABAP Auswertungsmöglichkeiten zuzugreifen.
+Leider ist bis zum heutigen Tag (Stand 23.04.2025) noch kein adäquates Nachfolgeprodukt für das Custom Code Lifecycle Management im SAP Solution Manager offiziell bekannt, dass dessen Umfang und Leistung ansatzweise abdeckt. Stattdessen existieren verstreut spezialisierte Insellösungen und Services, die leider nur Zeitpunkt-bezogene Analysen und kein ganzheitliches und evolutionäres Monitorings gewährleisten (SAP for Me Custom Code Analytics Application, S/4HANA Readiness Check, Clean Core Cockpit, Intelligent Custom Code Management Service). Gerade im Hinblick auf das technologie-offene Ökosystem im SAP Umfeld macht es Sinn, sich mit Kollegen anderer Technologiebereiche auszutauschen und als Alternative ggf. auf ein bereits in Ihrem Unternehmen vorhandenes Software Analyse Werkzeug mit ABAP Auswertungsmöglichkeiten zuzugreifen.
 
 //ToDo: Erwartungshaltung? Partnership? 
 
@@ -28,11 +28,20 @@ Leider ist bis zum heutigen Tag (Stand 23.04.2025) noch kein adäquates Nachfolg
 - [DSAG ATC-Leitfaden](https://dsag.de/wp-content/uploads/2021/12/dsag_leitfaden_atc_2020_06.pdf)
 - [Custom Code Management with SAP Solution Manager](https://help.sap.com/docs/SUPPORT_CONTENT/sm/3627184393.html?locale=en-US)
 - [Intelligent Custom Code Management](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/intelligent-custom-code-management/ba-p/13472631)
+- [Managing Custom Code - SAP Cloud ALM or SAP Solution Manager?](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/managing-custom-code-sap-cloud-alm-or-sap-solution-manager/ba-p/13524454)
 
 
 //ToDo: Übergang
 
 ## Kontinuierliche Selbstüberprüfung durch den Entwickler
+Je früher ein Mangel in der Softwareentwicklung gefunden werden kann, desto günstiger ist dessen Behebung. Gerade für den Entwickler ergibt sich hieraus ein hoher Anspruch an die eigene Verantwortung, die Codequalität adäquat im Auge zu behalten und frühzeitig Probleme aus dem Weg zu räumen. Zwei wesentliche Faktoren spielen dabei eine entscheidende Rolle: 
+1. Die Disziplin des Entwicklers, den Code kontinuierlich auf Mängel hin zu prüfen
+2. Das Werkzeug mit dem der Entwickler arbeitet
+
+>**Die richtige Entwicklungsumgebung verwenden**
+- Bevorzugen sie die ABAP Development Tools für eclipse als Entwicklungsumgebung. Hierdurch können sie sich kofortabel die Ergebnisse der statischen Code Analyse an den jeweiligen Fundstellen anzeigen lassen. 
+- Nutzen sie das eclipse Ökosystem um auf zusätzliche Plug-Ins zur Effizienzsteigerung zu verwenden.
+{: .highlight}
 - IDE / Fast Feedback / ABAP Cleaner
 - Validierung statischer Code Analyse
 
