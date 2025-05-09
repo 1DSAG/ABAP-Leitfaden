@@ -7,7 +7,6 @@ nav_order: 2
 ---
 
 {: .no_toc}
-
 # Qualitätssicherung und -Monitoring
 
 1. TOC
@@ -21,12 +20,11 @@ Für SAP Business Suite Kunden mit SAP Enterprise Support enthält der SAP Solut
 
 Leider ist bis zum heutigen Tag (Stand 23.04.2025) noch kein adäquates Nachfolgeprodukt für das Custom Code Lifecycle Management im SAP Solution Manager offiziell bekannt, dass dessen Umfang und Leistung ansatzweise abdeckt. Stattdessen existieren verstreut spezialisierte Insellösungen und Services, die leider nur Zeitpunkt-bezogene Analysen und kein ganzheitliches und evolutionäres Monitorings gewährleisten (SAP for Me Custom Code Analytics Application, S/4HANA Readiness Check, Clean Core Cockpit, Intelligent Custom Code Management Service). Gerade im Hinblick auf das technologie-offene Ökosystem im SAP Umfeld macht es Sinn, sich mit Kollegen anderer Technologiebereiche auszutauschen und als Alternative ggf. auf ein bereits in Ihrem Unternehmen vorhandenes Software Analyse Werkzeug mit ABAP Auswertungsmöglichkeiten zuzugreifen.
 
-## Weiterführende Internetquellen und Literaturempfehlung
-### Webseiten & Ressourcen
-- [DSAG ATC-Leitfaden](https://dsag.de/wp-content/uploads/2021/12/dsag_leitfaden_atc_2020_06.pdf)
-- [Custom Code Management with SAP Solution Manager](https://help.sap.com/docs/SUPPORT_CONTENT/sm/3627184393.html?locale=en-US)
-- [Intelligent Custom Code Management](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/intelligent-custom-code-management/ba-p/13472631)
-- [Managing Custom Code - SAP Cloud ALM or SAP Solution Manager?](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/managing-custom-code-sap-cloud-alm-or-sap-solution-manager/ba-p/13524454)
+|**Weiterführende Internetquellen und Literaturempfehlung**|
+|- [DSAG ATC-Leitfaden](https://dsag.de/wp-content/uploads/2021/12/dsag_leitfaden_atc_2020_06.pdf)|
+|- [Custom Code Management with SAP Solution Manager](https://help.sap.com/docs/SUPPORT_CONTENT/sm/3627184393.html?locale=en-US)|
+|- [Intelligent Custom Code Management](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/intelligent-custom-code-management/ba-p/13472631)|
+|- [Managing Custom Code - SAP Cloud ALM or SAP Solution Manager?](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/managing-custom-code-sap-cloud-alm-or-sap-solution-manager/ba-p/13524454)|
 
 
 //ToDo: Übergang
@@ -42,10 +40,10 @@ Je früher ein Mangel in der Softwareentwicklung gefunden werden kann, desto gü
 - Achten sie bei dem Einsatz von eclipse Plug-Ins auf sicherheitsrelevante Rahmenbedingungen: Dieser Leitfaden soll keine Einladung sein, sämtliche Open Source oder frei verfügbaren eclipse Plug-Ins ohne weiteres in Ihrem produktiven Entwicklungsumfeld zu verwenden. Bitte beachten Sie vor Installation der Plug-Ins auf die in ihrem Unternehmen geltenden Vorgänge für Sicherheitsprüfungen und Freigabeprozesse für die Nutzung neuer Software. 
 {: .highlight}
 
-### Webseiten & Ressourcen
-- [How To... Create RESTful APIs And Consume Them in ABAP Development Tools](https://www.sap.com/documents/2013/04/12289ce1-527c-0010-82c7-eda71af511fa.html)
-- [ABAP Open Source Projects](https://dotabap.org/)
-- [ABAP Cleaner](https://github.com/SAP/abap-cleaner)
+| **Webseiten & Ressourcen** |
+|- [How To... Create RESTful APIs And Consume Them in ABAP Development Tools](https://www.sap.com/documents/2013/04/12289ce1-527c-0010-82c7-eda71af511fa.html)|
+|- [ABAP Open Source Projects](https://dotabap.org/)|
+|- [ABAP Cleaner](https://github.com/SAP/abap-cleaner)|
 
 ## Code Review
 

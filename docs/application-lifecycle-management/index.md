@@ -16,5 +16,4 @@ In diesem Kapitel erhalten Sie einen Überblick und nützlicher Handlungsempfehl
 
 - [**Hintergrundwissen und Werkzeugunterstützung**](/ABAP-Leitfaden/application-lifecycle-management/alm-general_information)
 - [**Qualitätssicherung und -Monitoring**](/ABAP-Leitfaden/application-lifecycle-management/ensuring-quality)
-
-//ToDo: - [**Versionsverwaltung**] ?
+- [**Versionsverwaltung**](/ABAP-Leitfaden/application-lifecycle-management/version-management) 
