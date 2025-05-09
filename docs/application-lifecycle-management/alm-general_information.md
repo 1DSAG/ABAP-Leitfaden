@@ -63,10 +63,9 @@ Zusammengefasst decken die oben genannten Produkte folgenden Funktionsumfang ab:
 - Zentrale Ablage von technischen und funktionalen Dokumentationen
 - Wiederverwendbarkeit von Informationen und Know-how-Sicherung
 
-## Weiterführende Internetquellen und Literaturempfehlung
-### Webseiten & Ressourcen
-- [SAP Support - Application Lifecycle Management (ALM)](https://support.sap.com/en/alm.html)
-- [E3-Special SAP Solution Manager](https://e3mag.com/wp-content/uploads/2018/03/1205-E-3_Extra.pdf)
+|**Webseiten & Ressourcen**|
+|- [SAP Support - Application Lifecycle Management (ALM)](https://support.sap.com/en/alm.html)|
+|- [E3-Special SAP Solution Manager](https://e3mag.com/wp-content/uploads/2018/03/1205-E-3_Extra.pdf)|
 
 ## Nutzen von ALM
 Der Mehrwert eines durchgängigen ALM-Ansatzes besteht in der strukturierten Erfassung, Dokumentation und Nachvollziehbarkeit aller Aktivitäten über den gesamten Lebenszyklus einer Anwendung hinweg. Hiervon profitieren unternehmensinterne und externe Akteure gleichermaßen.
@@ -76,8 +75,6 @@ So können durch das ALM - korrekt implementiert und stringent angewendet - die 
 Aus Sicht der SAP-Entwicklung ist in erster Linie das Change and Request Management (ChaRM) hervorzuheben, das die Prozesse und Anwendungen des Anforderungs- und Transportmanagements perfekt verbindet, inklusive definierbarer (Code?-)Prüfungen vor und während Transportvorgängen entlang der Systemlandschaft(?).
 
 //ToDo: Downgrade protection. Retrofit? Solution Documentation - Relation of documentaiton to feature, documentation, etc. Defect Feature Traceability.  
-
-Grafik??
 
 Hinsichtlich der Dokumentation besteht unter anderem die Möglichkeit, Entwicklungsobjekte automatisch aus den angebundenen SAP-Systemen auszulesen und anschließend (manuell) den entsprechenden Prozessen zuzuweisen, was etwa die Änderung von Prozessen durch den Entwickler vereinfachen kann.
 

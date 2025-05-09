@@ -7,7 +7,6 @@ nav_order: 2
 ---
 
 {: .no_toc}
-
 # Qualitätssicherung und -Monitoring
 
 1. TOC
@@ -21,12 +20,11 @@ Für SAP Business Suite Kunden mit SAP Enterprise Support enthält der SAP Solut
 
 Leider ist bis zum heutigen Tag (Stand 23.04.2025) noch kein adäquates Nachfolgeprodukt für das Custom Code Lifecycle Management im SAP Solution Manager offiziell bekannt, dass dessen Umfang und Leistung ansatzweise abdeckt. Stattdessen existieren verstreut spezialisierte Insellösungen und Services, die leider nur Zeitpunkt-bezogene Analysen und kein ganzheitliches und evolutionäres Monitorings gewährleisten (SAP for Me Custom Code Analytics Application, S/4HANA Readiness Check, Clean Core Cockpit, Intelligent Custom Code Management Service). Gerade im Hinblick auf das technologie-offene Ökosystem im SAP Umfeld macht es Sinn, sich mit Kollegen anderer Technologiebereiche auszutauschen und als Alternative ggf. auf ein bereits in Ihrem Unternehmen vorhandenes Software Analyse Werkzeug mit ABAP Auswertungsmöglichkeiten zuzugreifen.
 
-## Weiterführende Internetquellen und Literaturempfehlung
-### Webseiten & Ressourcen
-- [DSAG ATC-Leitfaden](https://dsag.de/wp-content/uploads/2021/12/dsag_leitfaden_atc_2020_06.pdf)
-- [Custom Code Management with SAP Solution Manager](https://help.sap.com/docs/SUPPORT_CONTENT/sm/3627184393.html?locale=en-US)
-- [Intelligent Custom Code Management](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/intelligent-custom-code-management/ba-p/13472631)
-- [Managing Custom Code - SAP Cloud ALM or SAP Solution Manager?](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/managing-custom-code-sap-cloud-alm-or-sap-solution-manager/ba-p/13524454)
+|**Weiterführende Internetquellen und Literaturempfehlung**|
+|- [DSAG ATC-Leitfaden](https://dsag.de/wp-content/uploads/2021/12/dsag_leitfaden_atc_2020_06.pdf)|
+|- [Custom Code Management with SAP Solution Manager](https://help.sap.com/docs/SUPPORT_CONTENT/sm/3627184393.html?locale=en-US)|
+|- [Intelligent Custom Code Management](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/intelligent-custom-code-management/ba-p/13472631)|
+|- [Managing Custom Code - SAP Cloud ALM or SAP Solution Manager?](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/managing-custom-code-sap-cloud-alm-or-sap-solution-manager/ba-p/13524454)|
 
 
 //ToDo: Übergang
@@ -42,10 +40,10 @@ Je früher ein Mangel in der Softwareentwicklung gefunden werden kann, desto gü
 - Achten sie bei dem Einsatz von eclipse Plug-Ins auf sicherheitsrelevante Rahmenbedingungen: Dieser Leitfaden soll keine Einladung sein, sämtliche Open Source oder frei verfügbaren eclipse Plug-Ins ohne weiteres in Ihrem produktiven Entwicklungsumfeld zu verwenden. Bitte beachten Sie vor Installation der Plug-Ins auf die in ihrem Unternehmen geltenden Vorgänge für Sicherheitsprüfungen und Freigabeprozesse für die Nutzung neuer Software. 
 {: .highlight}
 
-### Webseiten & Ressourcen
-- [How To... Create RESTful APIs And Consume Them in ABAP Development Tools](https://www.sap.com/documents/2013/04/12289ce1-527c-0010-82c7-eda71af511fa.html)
-- [ABAP Open Source Projects](https://dotabap.org/)
-- [ABAP Cleaner](https://github.com/SAP/abap-cleaner)
+| **Webseiten & Ressourcen** |
+|- [How To... Create RESTful APIs And Consume Them in ABAP Development Tools](https://www.sap.com/documents/2013/04/12289ce1-527c-0010-82c7-eda71af511fa.html)|
+|- [ABAP Open Source Projects](https://dotabap.org/)|
+|- [ABAP Cleaner](https://github.com/SAP/abap-cleaner)|
 
 ## Code Review
 
@@ -108,8 +106,10 @@ Zusammenfassend lässt sich sagen, dass für die Durchführung von Reviews für 
 Allerdings ist abapGit ein zusätzliches Tool, das Entwickler:innen verwenden müssen. Ohne weitere Anpassung bettet es sich nicht natürlich in bestehende Entwicklungsprozesse ein. Eine erfolgreiche Lösung für Code Reviews erfordert daher einigen initialen Aufwand, um eine möglichst nahtlosen Integration in den eigenen Entwicklungsprozess sicherzustellen.
 Beispiele aus der Praxis zeigen jedoch, dass dies durchaus möglich ist und letztlich ein wertvoller Baustein zur Entwicklung hochwertigen Codes sein kann. Nicht zuletzt die Tatsache, dass SAP selbst auf Code Reviews in der ABAP-Entwicklung setzt, sollte Argument genug sein, sich mit der Thematik auseinanderzusetzen.
 
-## Definierte Quality Gates in Verbindung mit Release und Deployment Aktivitäten
+## Quality Gates im Release-Prozess
+Vor der Freigabe eines neuen Features in den Release-Prozess empfiehlt sich eine finale und automomatisierte Qualitätskontrolle, die den erstellten Code auf kritische Fundstellen aus dem Bereich Sicherheitsschwachstellen überprüft. Alle anderen Fundstellen, wie z.B. die Verletzung von Wartbarkeits-, Robustheits- und Effizienz-Kriterien, sollten nach Möglichkeit durch die im Vorfeld aufgeführten Prozesse, kontinuierliche Qualitätsprüfung durch den Entwickler, Code Review, behandelt worden sein.  
 - Quality Gates / Baseline / Verteilte Verantwortlichkeiten
+
 >**Manipulation von Quality Gates**
 - Achten sie auf die Implementierung eines manipulationsfreien Prüf- und Freigabeprozesses: Die Freiheiten die ein Entwickler im Entwicklungssystem zur Verfügung hat, können in zeitkritischen Situationen (Entwicklung und Qualitätssicherung in mehreren Zeitzonen verteilt / Dezentrales Release Management / etc.) ein nicht zu unterschätzende Herausforderung darstellen. Gerade in Unternehmen die keine vorgelagerte kontinuierliche Selbstkontrolle durch den Entwickler, fehlende Pair Programming oder Code Review Prozesse, zu große und über lange Zeiträume gestreckte Releases, kann dies dazu führen, dass Entwickler mit einem festen Lieferdatum im Nacken, zu Kurzschluss-Reaktionen neigen und über die vorhandenen Debug and Replace Berechtigungen die Quality Gates und damit verbundenen Qualitätsprüfungen aushebeln. Die Manipulation des Prüf- und Freigabeprozesses ist nur durch kontinuierliches Monitoring von Debug- und Replace Aktivitöten im System-Logs (SM21) zu erkennen und kann nur teilweise durch Berechtigungseinschränkungen für die Freigabe von Transport Requests und Transport Tasks abgewehrt werden. Findige Entwickler finden fast immer einen Weg, vorhandene Quality Gates zu umgehen.
 - Beheben sie die Ursache des Problems, nicht nur das Symptom: Bei der Entdeckung von Quality Gate Manipulation ist es ratsam zuerst das Gespräch mit dem Entwickler zu suchen und die Ursache zu identifizieren, die zu der Notwendigkeit einer Manipulation geführt hat. Oft ist die "Not" unter der der Entwickler handelt Unkenntnis über den, oder ein Mangel an fehlender Flexibilität im Entwicklungsprozess. Hilfreich ist die Investition in leichtgewichtiges und gut nachvollziehbares On-Boarding Material für den Entwickler und für prozessbeteiligte Personen. Zusätzlich kann eine Aufmerksamkeitsinitiative innerhalb der Produktteams über die Notwendigkeit früher und kontinuierlicher Qualitätssicherungsmaßnahmen sinnvoll sein.

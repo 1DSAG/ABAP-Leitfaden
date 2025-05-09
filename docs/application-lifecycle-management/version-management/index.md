@@ -1,8 +1,9 @@
 ---
 layout: page
 title: Versionsverwaltung
-permalink: /version-management/
-nav_order: 10
+permalink: /application-lifecycle-management/version-management/
+parent: ALM
+nav_order: 3
 ---
 
 {: .no_toc}
