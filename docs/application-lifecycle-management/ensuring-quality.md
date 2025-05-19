@@ -20,6 +20,7 @@ Neben den nachfolgend aufgeführten Prozessen, Praktiken und Werkzeugen zur Erke
 
 ## Kontinuierliche Selbstüberprüfung durch den Entwickler
 
+
 Je früher ein Mangel in der Softwareentwicklung gefunden wird, desto günstiger ist dessen Behebung. Gerade für den Entwickler ergibt sich hieraus ein hoher Anspruch an die eigene Verantwortung, die Codequalität adäquat im Auge zu behalten und frühzeitig Probleme aus dem Weg zu räumen. Zwei Faktoren spielen dabei eine entscheidende Rolle:
 
 1. Die Disziplin des Entwicklers, den Code kontinuierlich auf Mängel zu prüfen

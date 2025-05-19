@@ -86,4 +86,3 @@ So können durch das ALM - korrekt implementiert und stringent angewendet - die 
 Aus Sicht der SAP-Entwicklung ist in erster Linie das Change Request Management (ChaRM) hervorzuheben, das die Prozesse und Anwendungen des Anforderungs- und Transportmanagements perfekt verbindet und um verschiedene Konsistenz- und Qualitätsprüfungen erweitert werden kann.
 
 Hinsichtlich der Dokumentation besteht unter anderem die Möglichkeit, Entwicklungsobjekte automatisch aus den angebundenen SAP-Systemen auszulesen und anschließend (manuell) den entsprechenden Prozessen zuzuweisen, was etwa die Änderung von Prozessen durch den Entwickler vereinfachen kann.
-
