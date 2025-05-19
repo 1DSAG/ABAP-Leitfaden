@@ -14,11 +14,11 @@ nav_order: 2
 
 ## ALM-Unterstützung durch die SAP
 
-Die SAP unterstützt den Themenbereich ALM durch die umfangreiche Bereitstellung verschiedener Werkzeuge, Best Practices und Services (siehe dazu https://support.sap.com/en/alm.html). Besonders deutlich wurde dies mit der Einführung des SAP Solution Managers 7.0 im Jahr 2008 und der im Release 7.1 (2011) enthaltenen Funktionserweiterungen. Seitdem ist der Solution Manager bei vielen SAP Kunden als zentraler Bestandteil der SAP-ALM-Strategie für On-Premise Systeme der SAP Business Suite 7 Komponenten im Einsatz. Der SAP Solution Manager folgt der Wartungsstrategie der SAP Business Suite 7 und wird, Stand April 2025, noch bis Ende 2027 (mit Extended Maintenance Support bis 2030) von der SAP gewartet.
+Die SAP unterstützt den Themenbereich ALM durch die umfangreiche Bereitstellung verschiedener Werkzeuge, Best Practices und Services (siehe dazu [SAP Support - ALM](https://support.sap.com/en/alm.html)). Besonders deutlich wurde dies mit der Einführung des SAP Solution Managers 7.0 im Jahr 2008 und der im Release 7.1 (2011) enthaltenen Funktionserweiterungen. Seitdem ist der Solution Manager bei vielen SAP Kunden als zentraler Bestandteil der SAP-ALM-Strategie für On-Premise Systeme der SAP Business Suite 7 Komponenten im Einsatz. Der SAP Solution Manager folgt der Wartungsstrategie der SAP Business Suite 7 und wird (Stand: Mai 2025) noch bis Ende 2027 (mit Extended Maintenance Support bis 2030) von der SAP gewartet.
 
-Das Nachfolgeprodukt des SAP Solution Managers nennt sich SAP Cloud ALM und ist - wie der Name schon sagt - eine reine Cloud-Lösung, die auf der SAP Business Technology Platform (BTP) läuft. SAP Cloud ALM befindet sich seit einigen Jahren im Aufbau und wird kontinuierlich, in enger Abstimmung mit der DSAG und Anwenderundernehmen, weiterentwickel. Der Funktionsumfang ist im Vergleich zum SAP Solution Manager derzeit noch eingeschränkt und aktuell (Stand: Anfang 2025) eher für kleinere Unternehmen ohne über Jahre gewachsenes ALM sowie für cloud-zentrierte Systemlandschaften geeignet.
+Das Nachfolgeprodukt des SAP Solution Managers nennt sich SAP Cloud ALM und ist - wie der Name schon sagt - eine reine Cloud-Lösung, die auf der SAP Business Technology Platform (BTP) läuft. SAP Cloud ALM befindet sich seit einigen Jahren im Aufbau und wird kontinuierlich, in enger Abstimmung mit der DSAG und Anwenderundernehmen, weiterentwickel. Der Funktionsumfang ist im Vergleich zum SAP Solution Manager derzeit noch eingeschränkt und aktuell (Stand: Mai 2025) eher für kleinere Unternehmen ohne über Jahre gewachsenes ALM sowie für cloud-zentrierte Systemlandschaften geeignet.
 
-Weitere SAP-Produkte aus der ALM-Familie sind SAP Focused Run als eigenständiges On-Premise-System für den Monitoring-Bereich, sowie die SAP Solution Manager-Addons Focused Build und Focused Insights für Dashboards jeglicher Art.
+Weitere SAP-Produkte aus der ALM-Familie sind SAP Focused Run als eigenständiges On-Premise-System für den Monitoring-Bereich, sowie die SAP Solution Manager-Addons Focused Build für z.B. agile Projekte und Focused Insights für Dashboards jeglicher Art.
 
 Zusammengefasst decken die oben genannten Produkte folgenden Funktionsumfang ab:
 
@@ -27,7 +27,7 @@ Zusammengefasst decken die oben genannten Produkte folgenden Funktionsumfang ab:
 - Erfassung, Dokumentation und Nachverfolgung von Geschäftsanforderungen
 - Unterstützung bei der Abstimmung von IT- und Business-Zielen
 
-**Change- und Release-Management**
+**Change- und Request-Management**
 
 - Steuerung von Änderungen an SAP-Systemen
 - Planung und Durchführung von Releases und Transporten
