@@ -55,11 +55,9 @@ Der Einsatz von TDD nach reiner Lehre ist nicht einfach und erfordert einige Erf
 
 ## Allgemeines zu Unit Tests - Begriffsdefinitionen und Erläuterungen
 
-
-
 ### Einstieg
 
-Unit Tests sind wichtig. Das Erstellen, Verwalten und Entwickeln von Unit Tests erfordert umfangreiche Kenntnisse, die über das reine schreiben von ABAP hinaus gehen. Das widerspricht der Aussage, dass sich dieses Kapitel an alle Programmierende richtet, unabhängig vom Wissensstand. Das ist jedoch nur auf den ersten Blick widersprüchlich, denn wir wollen mit diesem Kapitel alle erreichen. Wenn jemand noch nicht gut oder gar nicht objektorientiert programmieren kann, sich nicht mit Entwurfsmustern und anderen Programmierparadigmen auskennt, dann sollte das gelernt werden. Unit Test können eine gute Umgebung darstellen Techniken zu erlenen und diese anschließend auf den Produktiven Code zu übertragen.
+Unit Tests sind wichtig. Das Erstellen, Verwalten und Entwickeln von Unit Tests erfordert umfangreiche Kenntnisse, die über das reine schreiben von ABAP hinaus gehen. Das widerspricht der Aussage, dass sich dieses Kapitel an alle Programmierende richtet, unabhängig vom Wissensstand. Das ist jedoch nur auf den ersten Blick widersprüchlich, denn wir wollen mit diesem Kapitel alle erreichen. Wenn jemand noch nicht gut oder gar nicht objektorientiert programmieren kann, sich nicht mit Entwurfsmustern und anderen Programmierparadigmen auskennt, dann sollte das gelernt werden. Unit Test können eine gute Umgebung darstellen Techniken zu erlernen und diese anschließend auf den Produktiven Code zu übertragen.
 Wir wollen Anregungen und Hilfestellungen dazu geben. Gleichwohl können wir an dieser Stelle nur begrenzt Informationen zu diesem Thema bereitstellen.
 
 >**Empfehlungen**
@@ -76,6 +74,7 @@ Wir wollen Anregungen und Hilfestellungen dazu geben. Gleichwohl können wir an 
 
 
 ### Was sind Unit Test genau?
+
 Unit Tests sind Funktionen, die modularisierte Einheiten (Methoden, Funktionsbausteine) oder ganze Prozesse mit vorgegebenen Funktionen aufrufen und das Ergebnis mit den erwarteten Vorgaben abgleichen. 
 
 Folgendes Beispiel demonstriert die Vorgehensweise: Es gibt eine Klasse mit einer Methode, die aus einem Text die Straße und die Hausnummer ermitteln soll. Es werden nun Unit Tests erstellt, die aus bereits bekannten Problemen testen, ob das erwartete Ergebnis ermittelt wird.
@@ -87,6 +86,7 @@ Für die Prüfung des Ergebnisses gibt es eine Reihe von Methoden der Klasse ```
 Unit Tests werden in der Regel als lokale Testklassen zu einer globalen Klasse definiert. Die Unit Tests werden nur im Entwicklungssystem durchgeführt. 
 
 ### Wann sind Unit Tests sinnvoll?
+
 Beim Thema Unit Tests gibt es in der Regel zwei Lager: Die einen sagen, dass jegliches Coding mit Unit Tests geprüft werden muss (100% Code-Abdeckung). Die anderen sind der Meinung, dass Unit Tests überbewertet werden.
 Wir sind der Meinung, dass Unit Tests zum Programmieralltag dazugehören und dort eingesetzt werden sollten, wo sie sinnvoll sind. 
 
@@ -94,10 +94,10 @@ Was unter "sinnvoll" zu verstehen ist, sollte jedes Team für sich selbst heraus
 
 Besonders Prädestiniert für Unit Tests sind Methoden, die eine komplexe Logik haben und/ oder geschäftskritisch sind. 
 
-
 ### Mocking
 
-
+Ein sehr wichtiger und hier oft erwähnter Begriff ist das sogenannte Mocking. Generell versteht man unter Mocking, dass Objekte wie z.B: Funktionsbausteine oder Klassen von SAP, die nicht Teil des Unit-Tests sind, durch Stellvertreter Objekte ersetzt werden. Wie ein Mocking erreicht wird, wird in einschlägen Kursen zu ABAP oder auch Fachbüchern vermittelt, daher gehen wir wegen der technischen Detailtiefe hier nicht weiter darauf ein.  
+Es gibt auch verschiedene Formen des Mockings was im Abschnitt Testtechniken kurz erläutert wird.
 
 ### Testlevel
 
