@@ -20,25 +20,15 @@ Beide Programmiermodelle geben die nötigen Entwicklungsobjekte und deren Zusamm
 
 RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum veröffentlichten OData-Service ab. Das Business Objekt (BO) wird einerseits durch das virtuelle Datenmodell (VDM) sowie andererseits durch das (optional) verfügbare Verhalten definiert. Im VDM werden durch die Anlage von CDS-Views die Felder aus der Datenbank selektiert und über Beziehungen zwischen den CDS-Views der BO Composition Tree festgelegt. Dieser besteht immer aus einer Wurzel-Entität (Root, beispielsweise eine Reise mit entsprechend möglichen Instanzen) und beliebig vielen Kind-Entitäten (etwa eine oder mehrere Instanzen von Flugbuchungen unterhalb der Reise). Dieser Kompositionsbaum kann beliebig tief aufgebaut werden. Jede Kind-Entität kann dabei lediglich gemeinsam mit ihrem direkten Elter exististieren und dessen Schlüssel ist Teil des eigenen.  
 
-
-Motivation, wo anfangen? Spiritueller Nachfolger vom BOPF-basierten Programmiermodell für SAP Fiori.
-ABAP RESTful Application Programming Model (RAP)
-REST: Erklärung, Nutzung von OData-Service als Schnittstelle zwischen Consumer & ABAP B
-
-Das Prinzip von RAP  
-Framework - dedizierte Stellen wo was passiert  
-Trennung Technik von Businesslogik  
-Viele Geschenke durch Framework  
+>**Empfehlungen / Best Practices**  
+* RAP sollte erst ab Release 2020 produktiv genutzt werden. Setzen Sie sich bei Bedarf detailliert mit dem eingeschränkten Funktionsumfang im Release 2019 (wie das Fehlen von Validations, Determinations, Draft, ...) auseinander! 
+* Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
+* Empfehlung 3
+{: .highlight}
 
 
->Empfehlungen / Best Practices
-- RAP sollte erst ab Release 2020 produktiv genutzt werden. Setzen Sie sich bei Bedarf detailliert mit dem eingeschränkten Funktionsumfang im Release 2019 (wie das Fehlen von Validations, Determinations, Draft, ...) auseinander! 
-- Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
-- Empfehlung 3
+***Verfügbarkeitsübersicht der Features***  
 
-
-
-***Verfügbarkeitsübersicht der Features***
 **1909**
 + Erstes Release von RAP, EML in ABAP Syntax
 + Nur Unterstützung von Queries (read-only) und unmanaged transaktionalen Apps mit Legacy-Coding.
@@ -78,8 +68,15 @@ Viele Geschenke durch Framework
 + Initiales Release des Background Processing Framework
 + Migrations-Tool für bestehende BOPF BOs (siehe unten)
 + Consumption von Business Events
+  
 
+**Notizen TODOS**
 + [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)
 + Showcase Demo App hinweisen und erläutern für was gut.
 + aber auch CDS (annotationen) und UI5 Control Beispiele
 + [Feature Matrix der Software Heroes](https://software-heroes.com/en/abap-feature-matrix)
+
+
+Framework - dedizierte Stellen wo was passiert  
+Trennung Technik von Businesslogik  
+Viele Geschenke durch Framework 
