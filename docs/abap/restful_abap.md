@@ -23,7 +23,6 @@ RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum
 >**Empfehlungen / Best Practices**  
 * RAP sollte erst ab Release 2020 produktiv genutzt werden. Setzen Sie sich bei Bedarf detailliert mit dem eingeschränkten Funktionsumfang im Release 2019 (wie das Fehlen von Validations, Determinations, Draft, ...) auseinander! 
 * Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
-* Empfehlung 3
 {: .highlight}
 
 
@@ -75,8 +74,6 @@ RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum
 + Showcase Demo App hinweisen und erläutern für was gut.
 + aber auch CDS (annotationen) und UI5 Control Beispiele
 + [Feature Matrix der Software Heroes](https://software-heroes.com/en/abap-feature-matrix)
-
-
-Framework - dedizierte Stellen wo was passiert  
-Trennung Technik von Businesslogik  
-Viele Geschenke durch Framework 
++ Framework - dedizierte Stellen wo was passiert  
++ Trennung Technik von Businesslogik  
++ Viele Geschenke durch Framework 
