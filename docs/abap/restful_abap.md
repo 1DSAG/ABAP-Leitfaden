@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Das ABAP Restful Application Programming Model (RAP)
+title: Das ABAP RESTful Application Programming Model (RAP)
 permalink: /abap/restful_abap/
 parent: Moderne ABAP Entwicklung
 nav_order: 5
@@ -14,6 +14,12 @@ nav_order: 5
 
 
 ## Einleitung
+Das [ABAP RESTful Application Programming Model](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/289477a81eec4d4e84c0302fb6835035.html?locale=en-US), kurz _RAP_, wurde seitens der SAP 2019 erstmalig vorgestellt und ist seit dem S/4 Release 2019 nutzbar. Konzeptuell weist es viele Parallelen zum [ABAP-Programming Model for SAP Fiori](https://help.sap.com/docs/ABAP_PLATFORM/cc0c305d2fab47bd808adcad3ca7ee9d/3b77569ca8ee4226bdab4fcebd6f6ea6.html?mt=de-DE) auf und kann daher als dessen spiritueller Nachfolger gesehen werden.  
+
+Beide Programmiermodelle geben die nötigen Entwicklungsobjekte und deren Zusammenspiel vor um in einem S/4 System Applikationen und Schnittstellen mit eigener Datenhaltung aufzubauen. Die Weiterentwicklung zu RAP hat die Entwicklung nochmals deutlich vereinfacht und kommt gänzlich ohne SAP GUI Transaktionen oder SEGW Services aus. Auch bei RAP dreht sich die gesamte Anwendungslogik um ein sogenanntes Business Objekt, das Datenhaltung und vorhandene Businesslogik definiert und Konsumenten anbietet. Erste Wahl sollte RAP sein, wenn transaktionale Fiori Elements Applikationen zu entwickeln sind (List Report & Object Page). Aber auch rein lesende APIs, SAPUI5 Freestyle Apps oder SAP-fremde UI-Technologien lassen sich mit RAP umsetzen durch die Nutzung der resultierenden OData-Services.
+
+RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum veröffentlichten OData-Service ab. Das Business Objekt (BO) wird einerseits durch das virtuelle Datenmodell (VDM) sowie andererseits durch das (optional) verfügbare Verhalten definiert. Im VDM werden durch die Anlage von CDS-Views die Felder aus der Datenbank selektiert und über Beziehungen zwischen den CDS-Views der BO Composition Tree festgelegt. Dieser besteht immer aus einer Wurzel-Entität (Root, beispielsweise eine Reise mit entsprechend möglichen Instanzen) und beliebig vielen Kind-Entitäten (etwa eine oder mehrere Instanzen von Flugbuchungen unterhalb der Reise). Dieser Kompositionsbaum kann beliebig tief aufgebaut werden. Jede Kind-Entität kann dabei lediglich gemeinsam mit ihrem direkten Elter exististieren und dessen Schlüssel ist Teil des eigenen.
+
 Motivation, wo anfangen? Spiritueller Nachfolger vom BOPF-basierten Programmiermodell für SAP Fiori.
 ABAP RESTful Application Programming Model (RAP)
 REST: Erklärung, Nutzung von OData-Service als Schnittstelle zwischen Consumer & ABAP B
@@ -23,7 +29,12 @@ Framework - dedizierte Stellen wo was passiert
 Trennung Technik von Businesslogik  
 Viele Geschenke durch Framework  
 
-*=> Best Practices bei der RAP Entwicklung ....
+
+>Empfehlungen / Best Practices
+- RAP sollte erst ab Release 2020 produktiv genutzt werden. Setzen Sie sich bei Bedarf detailliert mit dem eingeschränkten Funktionsumfang im Release 2019 (wie das Fehlen von Validations, Determinations, Draft, ...) auseinander! 
+- Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
+- Empfehlung 3
+
 
 
 ***Verfügbarkeitsübersicht der Features***
@@ -31,7 +42,8 @@ Viele Geschenke durch Framework
 + Erstes Release von RAP, EML in ABAP Syntax
 + Nur Unterstützung von Queries (read-only) und unmanaged transaktionalen Apps mit Legacy-Coding.
 + Nur OData v2
-+ Empfehlung: Nutzbar erst ab 2020 (2019 keine unmanaged Validation, Determination, Draft) 2020
+
+**2020**
 + Virtuelle Elemente im CDS-View fürs RAP-BO (vgl. Transiente Felder im BOPF)
 + Managed Scenario, Unmanaged/Additional Save (Custom Save Handler), Unmanaged Lock
 + Draft Scenario (total eTag)
@@ -59,7 +71,6 @@ Viele Geschenke durch Framework
 + Instance Factory Actions zur Erzeugung von Entitäten
 + Read Access Logging für RAP BOs
 
-
 **2023**
 + Side Effects zum Triggern von Feld-Aktualisierungen
 + Erweiterbarkeit von Service Definitions
@@ -67,11 +78,7 @@ Viele Geschenke durch Framework
 + Migrations-Tool für bestehende BOPF BOs (siehe unten)
 + Consumption von Business Events
 
-+ Migration von BOPF zu RAP
-+ CDS-basiertem BOPF über Migration Guidehttps://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US
-+ Showcase Demo App
-+ Showcase Demo App hinweisen und erläutern für was gut. – aber auch CDS (annotationen)
-+ und UI5 Control Beispiele
-
-Feature Matrix der Software Heroes
-https://software-heroes.com/en/abap-feature-matrix
++ [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)
++ Showcase Demo App hinweisen und erläutern für was gut.
++ aber auch CDS (annotationen) und UI5 Control Beispiele
++ [Feature Matrix der Software Heroes](https://software-heroes.com/en/abap-feature-matrix)
