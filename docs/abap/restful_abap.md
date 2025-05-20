@@ -69,7 +69,7 @@ RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum
 + Consumption von Business Events
   
 
-**Notizen TODOS**
+## Notizen TODOS
 + [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)
 + Showcase Demo App hinweisen und erläutern für was gut.
 + aber auch CDS (annotationen) und UI5 Control Beispiele
