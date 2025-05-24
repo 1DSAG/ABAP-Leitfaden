@@ -3,7 +3,7 @@ layout: page
 title: Entwicklung von Open Source
 permalink: /open-source/developing-open-source/
 parent: Open Source
-nav_order: 5
+nav_order: 4
 ---
 
 # Entwicklung von Open Source

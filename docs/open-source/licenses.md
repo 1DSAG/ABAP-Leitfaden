@@ -3,12 +3,11 @@ layout: page
 title: Lizenzen
 permalink: /open-source/licenses/
 parent: Open Source
-nav_order: 2
+nav_order: 1
 ---
 
-{: .no_toc}
-
 # Lizenzen
+{: .no_toc}
 
 1. TOC
 {:toc}
