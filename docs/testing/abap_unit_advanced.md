@@ -44,9 +44,13 @@ Sollten sie in Ihren Komponenten oder Integrationstests darauf angewiesen sein, 
 
 In allen anderen Fällen ist es ratsam die ??? hier hörts auf ?
 
+### Open Source Frameworks für Unit Testing
+
+=> kurze neenung von ein paar Frameworks und Einsatzzwecke
+
 ### Mockdaten aus DB-Tabelle erstellen in ADT
 
-tbd
+tbd ???
 
 ### Testdatenverwaltung in ECATT-Containern
 
