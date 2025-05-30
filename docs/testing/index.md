@@ -12,31 +12,21 @@ nav_order: 5
 1. TOC
 {:toc}
 
-
-## Konsolidierungstexte aus anderen Abschnitten ABAP Unit:
-****************
-## ABAP Unit Tests
-
-Dieses Kapitel handelt von automatisierten Entwicklertests (Unit Tests) in ABAP und richtet sich an Programmierende jeglichen Niveaus als auch an managende und organisierende Personen. Jede Person, die in irgendeiner Form mit ABAP-Programmierungen in Berührung kommt, sollte wissen, was Unit Tests sind, wie sie eingesetzt werden und welche Grenzen sie haben.
-
-Wenn im Folgenden von _Unit Tests_ die Rede ist, dann sind ABAP Unit Tests mit Hilfe des ABAP Unit Frameworks gemeint. Das ABAP bezieht sich lediglich auf die Besonderheiten von Unit Tests im ABAP Unit Framework.  
-******************************
-
-
 ## Inhalt des Kapitels
 
 Wenn Software entwickelt wird, muss diese während der Entwicklung und vor der Inbetriebnahme ausgiebig getestet werden. Zum Testen von Software gibt es zahlreiche und vielfältige Methoden und Techniken. Testen ist aufwändig und wenn Software nicht sorgfältig und umfassend getestet wird, kann dies im besten Fall zu kleinen Störungen bis hin zu massiven Auswirkungen auf den Produktivsystem eines Systems führen. Dies führt mitunter zu hohen Kosten im Betrieb und der Weiterentwicklung von SAP-Systemen.  
 
-Effizientes und Effektives Testen muss im Softwareentwicklungsprozess so früh wie möglich erfolgen um Fehler und Probleme so früh wie möglich erkennen zu können. Mit ABAP Unit werden Tests in die frühe Phase der Softwareentwicklung integriert.
+Effizientes und effektives Testen muss im Softwareentwicklungsprozess so früh wie möglich erfolgen um Fehler und Probleme so früh wie möglich erkennen zu können. Mit ABAP Unit werden Tests in die frühe Phase der Softwareentwicklung integriert.
 In diesem Kapitel gehen wir darauf ein warum der Einsatz von ABAP Unit erforderlich und gewinnbringend ist, welche Herausforderungen sich ergeben und welche Rahmenbedingungen gegeben sein müssen um ABAP Unit Tests effektiv einzusetzen.
 
 Ergänzend finden Sie noch ein paar Hinweise zu weiteren Testtools und Methoden, diese werden aber nur kurz angesprochen.  
+Wenn im Folgenden von _Unit Tests_ die Rede ist, dann sind ABAP Unit Tests mit Hilfe des ABAP Unit Frameworks gemeint. Das ABAP bezieht sich lediglich auf die Besonderheiten von Unit Tests im ABAP Unit Framework. 
 
 {: .important}
 > **Begriffsabgrenzung Unit Test**  
 > Unter Unit Tests werden oft verschiedene Definitionen von Tests verstanden.  
-> Wenn wir hier von Unit Tests schreiben, handelt es sich um programmierte > Tests mit dem ABAP Unit Framework, die automatisiert ausgeführt werden können.  
-> **Die manuelle Ausführen einzelner Code Einheiten z.B. mittels SE37 / SE24 / Reports ist kein Testen, sondern das Ausprobieren von Funktionalitäten.**
+> Wenn wir hier von Unit Tests schreiben, handelt es sich um programmierte Tests mit dem ABAP Unit Framework, die automatisiert ausgeführt werden können.  
+> Die manuelle Ausführen einzelner Code Einheiten z.B. mittels SE37 / SE24 / Reports ist kein Testen, sondern das Ausprobieren von Funktionalitäten.
 
 ## Zielgruppe
 
@@ -51,6 +41,7 @@ Ein wichtiger Faktor in SAP-Projekten ist die zur Verfügung stehende Zeit. Und 
 > {: .Zitat }
 > Der Mitbegründer des agilen Manifests und Buchautor mehrerer Bücher zur Softwareentwicklung, Robert C. Martin sagte:  
 > **"The only way to go fast is, to go well."**
+
 Warum soll man Aufwand und Zeit in die Erstellung von Unit Tests investieren? Übersetzt in den ABAP-Kontext bedeutet diese Aussage, dass wer schnell sein will, gut vorgehen muss.  
 In ABAP Unit erfahrene Entwickler wissen dass die Erstellung von Software, die mit ABAP Unit Tests abgedeckt ist, neben der höheren Qualität auch Effizienz- und Geschwindigkeitsvorteile mit sich bringen.  
 Wir möchten zu Beginn des Kapitels Ihnen die Vorteile aufzeigen und gehen im Weiteren auf die ABAP Unit Test Technik und die erforderlichen Maßnahmen und Vorgehensweisen ein.
@@ -77,32 +68,28 @@ Neben den generellen Vorteilen die sich positiv auf den Aufwand und die Organisa
 - Sobald die ersten Tests geschrieben sind, können auf dem Entwicklungssystem die Komponenten der Anwendung ausgeführt und debugged werden und damit auch wertvolle Hinweise über das Laufzeitverhalten frühzeitig ermittelt werden und Fehlannahmen vermieden werden, die sonst aufwändig behoben werden müssten.
 - Der initiale Mehraufwand wird durch spätere Effizienzgewinne ausgeglichen. Verbunden damit, dass der Entwickler über UNIT TEST abgesicherte Software bessere Qualität liefert, schneller funktionierende Software auf den Testsystemen zur Verfügung gestellt werden kann und weniger Fehler in späteren Testphasen auftreten, verringert sich der Gesamtaufwand, es gibt weniger Testzyklen und dies steigert letztlich die Zufriedenheit sowohl auf Entwicklungs- als auch auf Anwenderseite.
 
-## Herausforderungen und Rahmenbedingungen
+## Herausforderungen die den Einsatz von ABAP Unit beeinflussen
 
-### Herausforderungen beim Einsatz von ABAP Unit  
-
-#### Mangelndes Wissen und Qualifikation
+### Mangelndes Wissen und Qualifikation
 
 Auch im Jahr 2025 bleibt die Herausforderung für Unternehmen bestehen, dass ein signifikanter Anteil der ABAP-Entwickler nicht das Wissen und Erfahrung verfügt, um effizient automatisierte Tests mit ABAP Unit zu erstellen. Denn dies erfordert einerseits hinreichende Kenntnisse in moderner Objektorientierter Programmierung, Trennung der Belange, guter Strukturierung der Software in testbare Einheiten und letztlich Kenntnisse der UNIT-Test Methodiken. Dies kann u.a. in der Ausbildungen begründet sein und ergibt sich auch daraus, dass die Anwendungsentwicklung auch gute Geschäftsprozesskenntnisse erfordert und daher bei vielen ABAP-Entwicklern die Kenntnistiefe im Bereich der Programmierung sehr gut in Bezug auf prozedurale Techniken und Umsetzungen von Reports und klassischen Anwendungen. Im Bereich des modernen ABAP mit Techniken und Methoden, die in anderen Programmiersprachen lange Standard sind, aber durchaus noch ausbaubar.  
 
-#### Zeitdruck und Definition of Done
-
-In SAP-Projekten besteht oftmals hoher Zeit- und Erfolgsdruck. Die Zeit für die Umsetzung der Anforderungen ist für Entwickler knapp bemessen und es wird erwartet dass frühzeitig testbare Versionen der Anwendung bereitgestellt werden.
-Die Definition wann ein Artefakt geliefert wurde, besteht meistens daraus, dass die geforderte Funktionalität erfolgreich im Anwendertest abgenommen werden kann. Die Lieferung von Unit-Tests finden sich idealerweise in Handbüchern und Entwicklungsrichtlinien, ist aber nicht Teil der Abnahme oder das Fehlen dessen wird akzeptiert, da die Funktionalität auch ohne Unit Tests produktiv gesetzt werden kann. Die dadurch entstandenen technischen Schulden sind nicht offensichtlich und werden bewusst oder unbewusst in Kauf genommen.
-
-#### Erfahrungsdefizit als Umsetzungshürde
+### Erfahrungsdefizit als Umsetzungshürde
 
 > {: .Zitat }
 > "Ohne Tests keine Tests"
 
 Techniken und Methoden, die ein Entwickler nicht beherrscht, nicht regelmässig anwendet und auch nicht zwingend anwenden muss, werden unter Zeitdruck nicht zum Einsatz kommen. Unter derartigen Rahmenbedingungen wird der flächendeckende Einsatz von Unit Tests sich sehr schwierig umsetzen lassen. Die oben genannten Vorteile lassen sich nicht erreichen und die sich daraus ergebenden Nachteile oft de-facto Standard in SAP-Entwicklungsprojekten sind. Dies sind u.a. hohe Testaufwände, Fehler im Produktivsystem, schwierige und aufwändige Anpassungen der Software, Seiteneffekte nach Änderung usw.
 
-### Die Rolle des Managements
+### Zeitdruck und die "Definition of Done"
+
+In SAP-Projekten besteht oftmals hoher Zeit- und Erfolgsdruck. Die Zeit für die Umsetzung der Anforderungen ist für Entwickler knapp bemessen und es wird erwartet dass frühzeitig testbare Versionen der Anwendung bereitgestellt werden.
+Die Definition wann ein Artefakt geliefert wurde, besteht meistens daraus, dass die geforderte Funktionalität erfolgreich im Anwendertest abgenommen werden kann. Die Lieferung von Unit-Tests finden sich idealerweise in Handbüchern und Entwicklungsrichtlinien, ist aber nicht Teil der Abnahme oder das Fehlen dessen wird akzeptiert, da die Funktionalität auch ohne Unit Tests produktiv gesetzt werden kann. Die dadurch entstandenen technischen Schulden sind nicht offensichtlich und werden bewusst oder unbewusst in Kauf genommen.
+
+## Rahmenbedingungen für den Einsatz von ABAP Unit
 
 Damit sich ABAP Unit Tests in der Anwendungsentwicklung durchsetzen und effektiv eingesetzt werden kann, ist ein Umdenken bei Entscheidern und Verantwortlichen für den Betrieb von SAP-Software nötig.  
 Kenntnisse und Wissen zu ABAP Unit muss sich zu einem geforderten und geprüften Skill von ABAP-Entwicklern etablieren. Die Erstellung von ABAP Unit Tests muss in die Definition of Done und den Lieferumfang von Software aufgenommen werden und nicht als optionales To-Do betrachtet werden.
-
-### Die Rolle der Entwicklungsorganisation
 
 Der Einsatz von ABAP Unit muss einerseits in den Entwicklungsrichtlinien und Handbüchern definiert und vorgeschrieben werden um eine Verbindlichkeit zu erzeugen. Wie oben beschrieben, wird die Formale Definition allein den flächendeckenden Einsatz von Unit Tests nicht hervorbringen.  
 Um dies zu erreichen müssen neben formalen Voraussetzungen auch Rahmenbedingungen geschaffen werden, die sowohl die oben beschriebenen Herausforderungen als auch die Herausforderungen im moderen ABAP-Entwicklungsumfeld aufgreifen und die Entwicklungsteams befähigen, ABAP Unit Tests in den Entwickleralltag zu integrieren.  

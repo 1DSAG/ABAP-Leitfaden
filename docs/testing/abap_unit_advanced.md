@@ -22,8 +22,7 @@ SAP stellt Ihnen verschiedenen Frameworks zur Seite um Abhängigkeiten von versc
 
 Ziel ist es hierbei eine stabile wiederholbare Umgebung aufzubaue in der sich Test beliebig oft wiederholen lassen ohne das Belege neu erstellt werden müssen.
 
-Eine Übersich der vorhandenen Möglichkeiten finden Sie bei der SAP
-https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/managing-database-dependencies-with-ABAP Unit
+Eine Übersich der vorhandenen Möglichkeiten finden Sie bei der [SAP-Hilfe](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/managing-database-dependencies-with-ABAP-Unit).
 
 
 Die Herausforderung liegt nun in der Identifizierung der Tabellen / Views und dem Befüllen der Mock-Datenbank. 
@@ -37,12 +36,10 @@ Sie sind somit in der Lage für den unit tests zu bestimmen wie sich der Funktio
 ### Test-Seams
 
 Die Technik der Test-Seams ist **keine** bevorzugte Technik für Unit Tests. Sie sollten nur Temporär eingesetzt werden oder
-Test-Seams ersetzen nicht eine sauber gestaltete Softwarearchitektur, die Testbarkeit als Merkmal besitzt. Testseams können aber eingsetzt werden, wenn in bestehende Software oder Legacy Software Unit Tests integriert werden sollen und ein Mocken von Bestandteilen oder Funktionen erforderlich ist. Mittelfristig solle die Software dann modernisiert und die Testseams beseitigt werden.  
+Test-Seams ersetzen nicht eine sauber gestaltete Softwarearchitektur, die Testbarkeit als Merkmal besitzt. Testseams können aber eingesetzt werden, wenn in bestehende Software oder Legacy Software Unit Tests integriert werden sollen und ein Mocken von Bestandteilen oder Funktionen erforderlich ist. Mittelfristig solle die Software dann modernisiert und die Testseams beseitigt werden.  
 Siehe [Clean ABAP Test Seams](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#use-test-seams-as-temporary-workaround)
 
-
-
-### SAP Komponenten wie Bapis & Funktionsbausteine in Unit Test
+### SAP Komponenten wie BAPIs & Funktionsbausteine in Unit Test
 Sollten sie in Ihren Komponenten oder Integrationstests darauf angewiesen sein, dass ein BAPI, ein Funktionsbaustein oder auch eine Klasse von SAP einen Schritt ausführt der Teil Ihres Tests sein soll, ist es meist nötig, wiederholbare und stabile Testdaten in den relevanten Tabellen zu haben. siehe [Mocking von Datenbanktabellen](Testdatenverwaltung in ECATT-Containern).
 
 In allen anderen Fällen ist es ratsam die ??? hier hörts auf ?
@@ -76,13 +73,7 @@ Schneller:
 
 
 
-Einiges schon in UKAP Methods drin
-
-Fortgeschrittene Techniken die ABAP Unit nutzen aber nicht als klassische Unit Tests betrachtet werden.
-bzw. über die Grundlagen hinausgehen.
-
-Integrationstests ...
-DB Mocking und DB Frameworks.
+Noch offen und ggf, hier erwähnen
 Open Source projekte für Unit Testing
 verschiedene DB Mockiung techniken - Vorteile nachteile FM Mocking etc.
 

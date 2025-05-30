@@ -15,24 +15,25 @@ nav_order: 2
 
 Technische Grundlagen Objektebene
 
-## Grundsätzlich ist fasst alles mit ABAP Unit testbar
+## Was ist mittels ABAP Unit testbar
 
 > {: .Zitat }
 > "Das kann man nicht testen"  
 
-Es gibt Programmbereiche, die nicht mittels ABAP Unit Tests überprüft werden können. Dazu gehören alle Programmteile, die auf einen Dialog angewiesen sind oder Daten darstellen (z.B. ALV-Grid).
+Grundsätzlich ist fasst alles mit ABAP Unit testbar. Es gibt Programmbereiche, die nicht mittels ABAP Unit Tests überprüft werden können. Dazu gehören alle Programmteile, die auf einen Dialog angewiesen sind oder Daten darstellen (z.B. ALV-Grid).
 Für alles Andere gibt es Möglichkeiten diese Programme mit ABAP Unit Tests abzusichern. Anfänglich wird dies aufwändig und mühsam sein. Die Mühe wird sich aber lohnen und schnell auszahlen. Es is definitiv möglich BAPIs / BAdIs / RFCs / IDOCs / mit Unitests abzusichern.  
 
-## Behandlung von Mandanten in Unit Tests - sollten wir allgemeiner schreiben. ...
+## Behandlung von Daten in Unit Tests
 
-Die klassischen Systemkonfiguration im Entwicklungssystem mit einen Entwicklungs- und einem Testmandanten stellen eine Hürde für den reibungslosen Ablauf von Komponenten- oder Integrationstests dar, da diese meist von Daten der Datenbank abhängig sind, wenn gängige Unit Test Methodiken nicht angewendet werden.
+Die klassischen Systemkonfiguration im Entwicklungssystem mit einen Entwicklungs- und einem Testmandanten stellen eine Hürde für den reibungslosen Ablauf von Komponenten- oder Integrationstests dar, da diese meist von Daten der Datenbank abhängig sind, wenn gängige Unit Test Methodiken nicht angewendet werden.  
+Dies gilt analog für Szenarien bei denen auf dem Entwicklungssystem sich keine Daten in der Datenbank befinden. 
 
 >**Empfehlung**  
-Erstellen Sie ihre ABAP Unit Tests unabhängig von der Datenbank, so dass sie mit Hilfe von Dependency-Injection und Mocks in jedem Mandanten lauffähig sind das gleiche Ergebnis liefern.  
-Wird Vorgehen nicht angewendet, die Tests im Mandant 100 entwickelt in Mandant 110 ausgeführt, würden die Tests keine belastbare Aussage liefern und somit seltener oder gar nicht ausgeführt.
-Sie sollten alles dafür Einsetzen das Unit Test in jedem Mandanten immer lauffähig sind.  Diese 
-
-Welche Techniken Sie beim Erreichten dieser Unabhängigkeit unterstützen finden sie hier im Abschnitt [Erweiterte Techniken](#erweiterte-techniken)
+> Erstellen Sie ihre ABAP Unit Tests unabhängig von der Datenbank, so dass sie mit Hilfe von Dependency-Injection und Mocks in jedem  Mandanten lauffähig sind das gleiche Ergebnis liefern.  
+> Wird dieses Vorgehen nicht angewendet, die Tests im Mandant x entwickelt, in Mandant y ausgeführt, würden die Tests keine belastbare Aussage liefern und somit seltener oder gar nicht ausgeführt.
+> Analog verhält es sich mit Unit Tests, die abhängig von einer Datenkonstellation auf dem Testsystem sind.
+> Gemäß Unit Test Methodik sind daher direkte Datenbankabfragen mittels Mocking oder Injection-Framework zu vermeiden.
+> Welche Techniken Sie beim Erreichten dieser Unabhängigkeit unterstützen finden sie hier im Abschnitt [Erweiterte Techniken](#erweiterte-techniken)
 {: .highlight}
 
 ## Testumgebung
@@ -50,7 +51,7 @@ Im folgenden Abschnitt werden diese Themen behandelt:
 
 Wir gehen davon aus, dass Sie Erfahrung mit dem jeweiligen Tool haben. Aus diesem Grund erfolgt keine Schritt-für-Schritt-Anleitung, sondern lediglich eine kurze Übersicht der wichtigsten Befehle.
 
-### Erstellen einer lokalen Testcalse in ADT
+### Erstellen einer lokalen Testklasse in ADT
 
 * Öffnen Globale Klasse
 * Springen zur View "Test Classes"
@@ -107,17 +108,14 @@ Ebenso ist es zwingend nötig alle Unit Test Erfolgreich durch zu führen. Seien
 * FOR TESTING
 * genereller Ablauf
 
-
 ### Risiko Level
-
-* @all:   Gibt es Erfahrungen mit den Einstellungen 
 
 Folgen sie den Vorgaben der SAP zum Risiko Level:
 * CRITICAL - a test changes system settings or customizing data (default)
 * DANGEROUS - a test changes persistent data
 * HARMLESS - a test does not change system settings or persistent data
 
-Grundsätzlich sollten Sie es vermeiden Tests zu schreiben, die wirkliche Änderungen an der Datenbank vornehmen ( müssen ) während ihrer Laufzeit. Dies ist oft ein Indikator für fehlendes Management von Abhängigkeiten bzw. deren Austausch. Ihr Ziel muss sein möglichst alle Tests als Hamrless definieren zu können.
+Grundsätzlich sollten Sie es vermeiden Tests zu schreiben, die wirkliche Änderungen an der Datenbank vornehmen ( müssen ) während ihrer Laufzeit. Dies ist oft ein Indikator für fehlendes Management von Abhängigkeiten bzw. deren Austausch. Ihr Ziel muss sein möglichst alle Tests als Harmless definieren zu können.
 
 Mit Hilfe der von SAP bereitgestellten Frameworks zum Mocken von Datenbanktabellen und CDS-Views ist dies ermöglicht worden. Siehe Abschnitt [Mocking..](Mocking, faking, spying und stubbing)
 
@@ -355,9 +353,4 @@ Für jeden Enwickler sollte es zur Morgenroutine gehören zu prüfen ob alle Tes
 
 ##  tbd Beispiele Anbringen: 
 - ?Woher bekommen wir Beispiele mit Fleisch dran, die nicht nur SFLIGHT sind. 
-- Erfahrungen und bekannte Probleme bei Unit Tests.  Z.B. das SAP Factories immer wieder gemockt werden müssen.
-
-
-## offene Punkte:
-
 - Erfahrungen und bekannte Probleme bei Unit Tests.  Z.B. das SAP Factories immer wieder gemockt werden müssen.

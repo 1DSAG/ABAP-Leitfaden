@@ -65,13 +65,13 @@ Wir wollen Anregungen und Hilfestellungen dazu geben. Gleichwohl können wir an 
 {: .highlight}
 
 #### Skills die beim Arbeiten mit Unit Tests trainiert werden
- - Objekrientiertes Desing z.B. Lose Kopplung
- - erstellen von testbaren Designs (IoC & DI)
- - Agile Prinzipien und Methoden der Software Entwicklung z.B. ( S.O.L.I.D )
- - Test Prinzipien ( F.I.R.S.T )
- - Erstellen von kleinen Einheiten
 
+* Objektorientiertes Design z.B. Lose Kopplung
+* erstellen von testbaren Designs (IoC & DI)
+* Agile Prinzipien und Methoden der Software Entwicklung z.B. ( S.O.L.I.D )
 
+* Test Prinzipien ( F.I.R.S.T )
+* Erstellen von kleinen Einheiten
 
 ### Was sind Unit Test genau?
 
@@ -148,26 +148,11 @@ Es gibt folgende zusätzliche Möglichkeiten, nach denen ebenfalls modularisiert
 * Methoden zum Aufbau von Testdaten
 * Methoden zur Modularisierung von Tests
 
-#### Mocken der Datenbankzugriffsobjekte
-
-#### Mocken der Datenbank mit dem OSQL Framework
-
 ### Code-Abdeckung (coverage)
 
 In den Entwicklungstools kann nachvollzogen werden, welche Code-Strecken beim Ausführen der Unit Tests durchlaufen wurden. Eine 100%-ige Codeabdeckung sollte dabei das Ziel sein.
 
 Bei vorhandenen Klassen, bei denen nicht auf die Trennung geachtet wurde, ist eine 100%-ige Testabdeckung kaum zu erreichen. Man muss den Aufwand eines Refactorings dem Nutzen entgegenstellen. Wenn eine Klasse keine 100%-ige Testabdeckung hat, ist es sicherlich nicht schlimm, aber es erleichtert die Bewertung, wie vertrauenswürdig Unit Tests zu einem Modul einzustufen sind. Wenn es eine Klasse gibt, die zu 100% Geschäftslogik enthält, dann können Sie bei einer Testabdeckung von 100% relativ sicher sein, dass diese Klasse so funktioniert, wie sie funktionieren soll, wenn wir annehmen, dass die Test korrekt sind.  Wenn eine Klasse jedoch ein Mix aus Geschäftslogik und Datenpräsentation besteht, dann ist es schwer festzustellen, ob Code-Teile nicht gut per Unit Test getestet werden konnten oder ob sie einfach vergessen wurden.
-
-
-## Exemplarisches schematisches Vorgehen Erstellung einer BAdI Implementierung die mit ABAP Unit Tests unterlegt ist:
-
-- BADI im EWM - Filter und Rundung von Beständen - erklärung aufbau und vergleich kein Unit Test und Implementierung mit Unit test.
-- *Schreibt Pete .....
-Fachtest:
-Beschaffung daten / Aufbau testcase
-Sicherheitsnetz
-er kann es ausführen ohne Berater und ohne TEstdaten. schneller identifikatinb
-weniger Angst was kaputtzumachen
 
 ## Weiterführende Links
 
@@ -182,19 +167,11 @@ weniger Angst was kaputtzumachen
 
 [ABAP Unit Tests - SAP Learning Hub](https://learning.sap.com/learning-journeys/acquire-core-abap-skills/implementing-code-tests-with-abap-unit_b23c7a00-c2e8-406d-8969-b00db3f1fd87)
 
-#  TBD /Notizen / Fragen Anmerkungen zum Kapitel Ecke
 
 ### Stichpunkte
 
-* sinnvolle Beispiele
-  * Test leiden immer unter (Projekt-)Zeitdruck 
-  * Grundsätzlich ist fast alles mit ABAP Unit testbar! 
-* NO excuses. 
-  * Experten Themen 
-  * Unittest / Infrastruktur ausbauen um Aufwand für neue Tests zu verringern. 
 * Technik
-  * ABAP Unit Tests SAPGUI/ Eclipse
-  * Test-Seams
+  * Test-Seams  - die alle noch in extended technologies
   * Test-Doubles
     * SQL
     * Funktionsbausteine
