@@ -38,8 +38,8 @@ Dieses Kapitel teilt sich in folgende Abschnitte auf:
 - [**Sauberer und moderner Code**](/ABAP-Leitfaden/abap/clean_and_modern_abap)  
     Neben den übergeordneten Strukturen in Form vom Paketdesigns und der Strukturierung der Anwendung in Objekten, bildet der ABAP-Code die Funktion der Anwendung her. Der Code wird einmal erstellt, im Laufe des Lebenszyklus vielmals gelesen, erweitert, geändert und überprüft. Daher zahlt sich die Investition in gut lesbaren, verständlichen und übersichtlichen Code aus. Die Anwendung der Clean Code Prinzipien und Anwendung moderner ABAP-Statements und Funktionen ist essentiell um zukunftsfähige Anwendungen zu erstellen und effizient zu betreiben.
 
-- [**Restful Apsplication Programming Model - RAP**](/ABAP-Leitfaden/abap/restful_abap)  
-    Mit dem Restful Application Programming Model hat SAP nach einigen Evolutionsschritten nun ein stabiles und ausgereiftes Programmiermodell veröffentlicht, das viele Möglichkeiten bietet, viele Vorteile mit sich bringt und Entwicklern einen guten Rahmen bietet, moderne Anwendungen zu bauen.  
+- [**RESTful Application Programming Model - RAP**](/ABAP-Leitfaden/abap/restful_abap)  
+    Mit dem RESTful Application Programming Model hat SAP nach einigen Evolutionsschritten nun ein stabiles und ausgereiftes Programmiermodell veröffentlicht, das viele Möglichkeiten bietet, viele Vorteile mit sich bringt und Entwicklern einen guten Rahmen bietet, moderne Anwendungen zu bauen.  
     Die Empfehlungen der vorigen Abschnitte gelten für alle Entwicklungen in SAP, deren Umsetzung sind aber eine gute Grundlage, um für die Anwendungsentwicklung mit RAP gerüstet zu sein.  
     Empfehlungen zu RAP und das Vorgehen bei Entwicklung von RAP Applikationen finden Sie in diesem Kapitel.
 
