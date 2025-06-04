@@ -183,7 +183,7 @@ where
 > Details finden Sie unter [SAP Help (CDS DDIC-Based Views)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_v1_views.htm)
 
 ### View Entities
-Mit einem CDS View Entity können Sie auf Felder einer Datenquelle (Datenbanktabellen, andere CDS Entitäten) zugreifen. Die View Entities dienen als Basis für die [ABAP Data Models](https://help.sap.com/docs/abap-cloud/abap-data-models/abap-data-models) und werden vom [ABAP RESTful Application Programming Model](/abap/restful_abap) verwendet. Sie sind also ein wichtiger Bestandteil für eine moderne ABAP Entwicklung.
+Mit einem CDS View Entity können Sie auf Felder einer Datenquelle (Datenbanktabellen, andere CDS Entitäten) zugreifen. Die View Entities dienen als Basis für die [ABAP Data Models](https://help.sap.com/docs/abap-cloud/abap-data-models/abap-data-models) und werden vom [ABAP RESTful Application Programming Model](../abap/restful_abap.md) verwendet. Sie sind also ein wichtiger Bestandteil für eine moderne ABAP Entwicklung.
 
 __Beispiel__
 
@@ -201,8 +201,8 @@ where
 
 ### Projection Views
 Ein Projection View basiert auf einem anderen CDS View Entity und wird für service-spezifische Anwendungsfälle genutzt. Dazu zählen:
-* Transaktionale Abfragen (relevant für [ABAP RESTful Application Programming Model](/abap/restful_abap))
-* Transaktionales Interface (relevant für [ABAP RESTful Application Programming Model](/abap/restful_abap))
+* Transaktionale Abfragen (relevant für [ABAP RESTful Application Programming Model](/../abap/restful_abap.md))
+* Transaktionales Interface (relevant für [ABAP RESTful Application Programming Model](../abap/restful_abap.md))
 * Analytical Abfragen
 
 > Details finden Sie unter [SAP Help (CDS Projection Views)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_proj_views.htm)
@@ -348,7 +348,7 @@ Falls die Optimierung am SQL Engine selbst stattfinden soll nutzen Sie gerne dan
 
 1. **Potenzial für eine SAC Query prüfen** - Für wiederholte, benutzerdefinierte Datenabfragen sind BAPIs, Funktionsbausteine oder ABAP SQL oft besser geeignet, da CDS Views für standardisierte, wiederverwendbare Modelle gedacht sind. Für SAC-Berichte sind CDS Views besonders nützlich, da sie direkt von SAC konsumiert werden können.
 
-1. **Bereitstellung von Daten für Subsysteme** - RAP kann verwendet werden, um CDS Views als OData Services zu exponieren, was ideal für die Bereitstellung von Daten für Subsysteme ist. Dies bietet modifikationsfreie Erweiterbarkeit, insbesondere in Cloud-Umgebungen. [Siehe Kapitel ABAP - RAP](/ABAP-Leitfaden/abap/restful_abap/) 
+1. **Bereitstellung von Daten für Subsysteme** - RAP kann verwendet werden, um CDS Views als OData Services zu exponieren, was ideal für die Bereitstellung von Daten für Subsysteme ist. Dies bietet modifikationsfreie Erweiterbarkeit, insbesondere in Cloud-Umgebungen. [Siehe Kapitel ABAP - RAP](../abap/restful_abap.md) 
 {: .highlight}
 
 
