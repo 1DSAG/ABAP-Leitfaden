@@ -66,8 +66,8 @@ Unter dem Namen [OpenUI5](https://openui5.org/) wird SAPUI5 auch unter einer Ope
 ### Flexible Programming Model
 Das [Flexible Programmiermodell (FPM)](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction) bietet eine Mischform aus generierten Fiori Elements- und manuell entwickelten SAPUI5 Freestyle-Oberflächen. Es steht ab SAPUI5 v1.94 und nur mit OData V4 zur Verfügung. Das FPM ermöglicht es dabei, über eigenständige Container Freestyle-Elemente in einer Fiori Elements Applikation einzubinden. Andererseits können auch Fiori Elements-Bausteine in einer Freestyle-App eingebaut werden. Um einen Eindruck zu den Vorteilen des FPM zu gewinnen bietet sich [dieser CodeJam](https://github.com/SAP-samples/fiori-elements-fpm-exercises-codejam) an.
 
-![Flexible Programming Model als Mischform von Fiori Elements und Freestyle SAPUI5](./img/FPM.png)
-Flexible Programming Model als Mischform von Fiori Elements und Freestyle SAPUI5
+![Flexible Programming Model als Mischform von Fiori Elements und Freestyle SAPUI5, © SAP](./img/FPM.png)
+Flexible Programming Model als Mischform von Fiori Elements und Freestyle SAPUI5, © SAP
 {: .img-caption}
 
 ## Legacy Technologien
