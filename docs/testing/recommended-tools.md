@@ -1,13 +1,23 @@
 ---
 layout: page
-title: Empfehlungen für Testwerkzeuge
+title: Weitere Testwerkzeuge
 permalink: /testing/recommended-tools/
-parent: Testen
+parent: Softwaretest mit ABAP Unit
 nav_order: 4
 ---
 
+
+{: .no_toc}
+# Weitere Testwerkzeuge
+
+1. TOC
+{:toc}
+
+Ergänzend zu den Ausführungen zu ABAP Unit möchten wir Ihnen noch weitere Testwerkzeuge aufzeigen, die im Kontext von Testing in SAP eingesetzt werden können. Diese dienen zur Unterstützung des Testens der Applikationen im Geschäftsprozess Kontext. Diese Werkzeuge sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen.  
+Dies bedeutet, dass von Seiten der ABAP-Entwicklung keine besonderen Vorkehrungen bezgl. der Tools vorgenommen werden müssen.  
+Allerdings ist ABAP Unit als Grundlage und Testunterstützung ist Voraussetzung, um grundlegende Fehler in der Entwicklungsphase zu vermeiden, zu entdecken und eine angemessene Softwarequalität sicherzustellen. Ist ABAP Unit umfangreich im Einsatz, können Sie sich beim Testen der Anwendungen mit den hier genannten Tools auf Fehler konzentrieren, die sich aus der Integration und das Zusammenspiel der Anwendungen ergeben. Die Tests werden nicht mehr durch Fehler in tieferen Softwareschichten unterbrochen und somit wird die Anzahl der Testzyklen und damit der Testaufwand signifikant reduziert.
+
 # Empfehlungen für Testwerkzeuge
-Die  nachfolgend aufgeführten Testwerkzeuge sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen. Das bedeutet auch, dass von Seiten der ABAP-Entwicklung nichts beachtet werden muss, was die Tests in irgendeiner Weise, also weder positiv oder negativ, beeinflussen könnte.
 
 Die Auswahl in diesem Leitfaden beschränkt sich auf die von SAP präferierten und teilweise schon im Lizenzumfang enthaltenen Produkte. Daneben gibt es noch viele weitere Testmanagement-Lösungen auf dem Markt, die zur Unterstützung der ABAP-Entwicklung verwendet werden können.
 
@@ -77,14 +87,14 @@ Eine Schnittstelle zwischen dem SAP Solution Manager und Tricentis Tosca existie
 
 "TTA for SAP" ist für die Verwendung mit der Test Suite des SAP Solution Manager gedacht. Dabei dient die Test Suite als Testmanagement-Tool (für Tests, Planung, Reporting und mehr) und TTA als Automatisierungs-Tool. Dazu wird in der Test Suite eine Testkonfiguration angelegt, die als Hülle für den automatischen Test dient. Der automatische Testfall kann direkt aus der Test Suite aufgerufen werden. Nach Ablauf des Testfalls wird der Status dann wieder an die Test Suite zurückgemeldet. Dies gilt analog für das Zusammenspiel des Solution Managers mit dem eigenständigen Automatisierungs-Tool Tricentis Tosca.
 
->>>>>>>>>>>> Harald (09.04.2025)
+
 Tricentis Tosca wird von der SAP als "SAP Enterprise Continuous Testing by Tricentis" (ECT) angeboten.
  
 Auch für Cloud ALM gibt es eine integrierte Lösung zur Testautomatisierung. "Tricentis Test Automation for SAP Cloud ALM" ist ein gemeinsames cloudbasiertes Angebot von SAP und Tricentis. Es kombiniert die Application-Lifecycle-Management-Fähigkeiten von SAP Cloud ALM mit den Testautomatisierungsfunktionen von Tricentis. So werden automatisierte, funktionale und durchgängige Softwaretests für alle browserbasierten SAP Produkte und Anwendungen ermöglicht. Tricentis liefert dazu auch Möglichkeiten zur Testorchestrierung, Ausführungsüberwachung und zum Testreporting. Um diese Funktionalität zu verwenden muss ein Tricentis-Tenant eingerichtet und mit SAP Cloud ALM verbunden werden. Allerdings gibt es wie bei TTA Einschränkungen bzgl. Usern und Speicher. Für die volle Funktionalität muss auch hier ein eigenständiges Tricentis-Tool erworben werden, die "SAP Test Automation by Tricentis".
  
 Auch für Cloud ALM gibt es eine Schnittstelle zu Drittanbieter-Werkzeugen, das öffentliche "Test Automation API" (Link dazu: https://api.sap.com/api/CALM_TEST_AUTOMATION/overview). 
 Über diese Schnittstelle kann neben Produkten anderer Anbieter auch das umfassende Tricentis-Testautomatisierungstool "SAP Test Automation by Tricentis" angeschlossen werden. Damit sind integrierte Tests mit SAP und Drittanbieter-Software möglich. Auch dieses Produkt von Tricentis kann über den SAP-Vertrieb erworben werden.
-<<<<<<<<<<<<<<<<<<<
+
 
 ...verschiedene Ausprägungen...Lizenzen teilweise schon dabei...
         ·	Tosca: Integration in SAP SolMan – Link zu https://documentation.tricentis.com/tosca/2310/de/content/sap_solutionmanager/concept.htm 
