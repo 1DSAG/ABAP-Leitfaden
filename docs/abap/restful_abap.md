@@ -21,10 +21,29 @@ Beide Programmiermodelle geben die nötigen Entwicklungsobjekte und deren Zusamm
 RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum veröffentlichten OData-Service ab. Das Business Objekt (BO) wird einerseits durch das virtuelle Datenmodell (VDM) sowie andererseits durch das (optional) verfügbare Verhalten definiert. Im VDM werden durch die Anlage von CDS-Views die Felder aus der Datenbank selektiert und über Beziehungen zwischen den CDS-Views der BO Composition Tree festgelegt. Dieser besteht immer aus einer Wurzel-Entität (Root, beispielsweise eine Reise mit entsprechend möglichen Instanzen) und beliebig vielen Kind-Entitäten (etwa eine oder mehrere Instanzen von Flugbuchungen unterhalb der Reise). Dieser Kompositionsbaum kann beliebig tief aufgebaut werden. Jede Kind-Entität kann dabei lediglich gemeinsam mit ihrem direkten Elter exististieren und dessen Schlüssel ist Teil des eigenen.  
 
 ## Empfehlungen / Best Practices 
->* RAP sollte erst ab Release 2020 produktiv genutzt werden. Setzen Sie sich bei Bedarf detailliert mit dem eingeschränkten Funktionsumfang im Release 2019 (wie das Fehlen von Validations, Determinations, Draft, ...) auseinander! 
+>* RAP sollte frühestens ab Release 2020 produktiv genutzt werden. Setzen Sie sich bei Bedarf detailliert mit dem eingeschränkten Funktionsumfang im Release 2019 (wie das Fehlen von Validations, Determinations, Draft, ...) auseinander!  
+* Da RAP als Technologie relativ neu ist gibt es teils eklatante Unterschiede je nach S/4 Release. Machen Sie sich mit den Einschränkungen ihres Systems vorab vertraut!  
 * Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
 {: .highlight}
 
+## Hauptinhalt
+Einleitung..
+
+![RAP Big Picture, © SAP](./img/RAP.png)
+  
+RAP Big Picture, © SAP
+{: .img-caption}
+
+Datenmodell: Datenbank
+
+Virtuelles Datenmodell (VDM) via CDS Views aufbauen - diese wurden zuvor im Kapitel [Core Data Services](./core-data-services/index.md) erläutert.
+
+RAP
+
+Die SAP stellt ein zentrales Repository bereit, das als Beispielapplikation in ihrem S/4 System installiert werden kann. Diese [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase) zeigt Ihnen interaktiv, welche Funktionalitäten mit RAP und Fiori Elements generell umgesetzt werden können und hilft Ihnen dabei, die nötigen Entwicklungen direkt im System nachzuvollziehen.
+
+## Migration von CDS-generiertem BOPF
+Sie haben die Möglichkeit [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)  
 
 ## Verfügbarkeitsübersicht der Features
 
@@ -72,12 +91,14 @@ RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum
 + RAP-Modellierung von Hierarchien
 + Fiori Elements Applikationen zur Änderung von RAP-Hierarchien
   
+## Weiterführende Quellen
++ [RAP Feature Matrix der Software Heroes](https://software-heroes.com/en/abap-feature-matrix)
++ [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)  
++ [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase)
+
 
 ## Notizen TODOS
-+ [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)
-+ Showcase Demo App hinweisen und erläutern für was gut.
 + aber auch CDS (annotationen) und UI5 Control Beispiele
-+ [Feature Matrix der Software Heroes](https://software-heroes.com/en/abap-feature-matrix)
 + Framework - dedizierte Stellen wo was passiert  
 + Trennung Technik von Businesslogik  
 + Viele Geschenke durch Framework 
