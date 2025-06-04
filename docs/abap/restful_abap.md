@@ -67,6 +67,10 @@ RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum
 + Initiales Release des Background Processing Framework
 + Migrations-Tool für bestehende BOPF BOs (siehe unten)
 + Consumption von Business Events
+
+**2025, verfügbar ab Herbst**
++ RAP-Modellierung von Hierarchien
++ Fiori Elements Applikationen zur Änderung von RAP-Hierarchien
   
 
 ## Notizen TODOS
@@ -77,3 +81,7 @@ RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum
 + Framework - dedizierte Stellen wo was passiert  
 + Trennung Technik von Businesslogik  
 + Viele Geschenke durch Framework 
++ Integrieren & Querverweise zu anderen Kapiteln
++ Framework gibt die Trennung der einzelnen Entwicklungsobjekte sowieso schon vor
++ Mehr zum Flex Model schreiben
++ Peter Bescheidgeben & um Feedback fragen
