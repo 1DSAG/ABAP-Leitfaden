@@ -9,6 +9,8 @@ nav_order: 4
 # Entwicklung von Open Source
 {: .no_toc}
 
+Dieser Abschnitt beschreibt den Anwendungsfall als Unternehmen eigene Komponenten als Open-Source-Projekt zu entwickeln.
+
 1. TOC
 {:toc}
 
