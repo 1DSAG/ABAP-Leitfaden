@@ -36,7 +36,7 @@ RAP Big Picture, © SAP
 
 Datenmodell: Datenbank
 
-Virtuelles Datenmodell (VDM) via CDS Views aufbauen - diese wurden zuvor im Kapitel [Core Data Services](./core-data-services/index.md) erläutert.
+Virtuelles Datenmodell (VDM) via CDS Views aufbauen - diese wurden zuvor im Kapitel [Core Data Services](../core-data-services/index.md) erläutert.
 
 RAP
 
@@ -92,6 +92,7 @@ Sie haben die Möglichkeit [Migration von CDS-generiertem BOPF zu RAP über Migr
 + Fiori Elements Applikationen zur Änderung von RAP-Hierarchien
   
 ## Weiterführende Quellen
++ [RAP Cloud Documentation](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/289477a81eec4d4e84c0302fb6835035.html?locale=en-US)
 + [RAP Feature Matrix der Software Heroes](https://software-heroes.com/en/abap-feature-matrix)
 + [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)  
 + [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase)

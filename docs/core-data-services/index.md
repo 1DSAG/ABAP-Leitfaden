@@ -26,7 +26,7 @@ In S/4 HANA soll der Entwickler nicht mehr direkt auf die Datenbanken zugreifen,
 Quelle: SAP Help Darstellung des VDMs{: .img-caption} 
 
 Vor die Datenbanktabellen werden verschiedene CDS-View-Layer gelegt. Die VDM sorgt z.B. dafür, dass die Datenbankfelder verständlich sind und der Benutzer leichter auf die Inhalte zugreifen kann. Der Basic Interface Layer greift auf die Datenbank zu. Die Composite Interface Views fassen Logik und Basic Interface Views zusammen; das VDM kann verschiedene Abstraktionsschichten enthalten. Die Consumption-Views geben das Datenmodell für den Anwendungsfall frei.  
-Im Rahmen des [ABAP RESTful Application Programming Model](./abap/restful_abap.md) (RAP) werden von SAP auch weitere Begriffsdefinitionen, z.B. Business Object Projection Layer, vorgegeben.
+Im Rahmen des [ABAP RESTful Application Programming Model](../abap/restful_abap.md) (RAP) werden von SAP auch weitere Begriffsdefinitionen, z.B. Business Object Projection Layer, vorgegeben.
 
 Hier wäre die folgenden Aufstellung der View Arten.
 Alle Standard Views beinhalten auch die Kennung / Annotation:
