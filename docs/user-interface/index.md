@@ -15,6 +15,11 @@ nav_order: 6
 
 Dieses Kapitel gibt einen Überblick über verschiedene UI-Technologien, die im Kontext von ABAP-System zum Einsatz kommen. Der Hauptfokus liegt relevanzbedingt auf Fiori (SAPUI5). Im späteren Verlauf wird jedoch auch ein Überblick auf ältere und teils weiterhin relevante Technologien gegeben.
 
+## Empfehlungen / Best Practices 
+>* Für Neuentwicklungen sollte in den allermeisten Fällen eine Fiori-konforme Oberfläche zum Einsatz kommen.  
+* Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
+{: .highlight}
+
 ## Fiori & SAPUI5
 
 SAP Fiori bezeichnet die neue User Experience aktueller Lösungen der SAP, die auf Basis moderner Design-Prinzipien entstanden sind. Fiori ist die strategische Oberflächentechnologie der SAP und sollte in den meisten Fällen von Neuentwicklungen als gesetzte Technologie angesehen werden. Der Begriff **Fiori** meint dabei jedoch teils unterschiedliche Themen:
@@ -62,6 +67,8 @@ Unter dem Namen [OpenUI5](https://openui5.org/) wird SAPUI5 auch unter einer Ope
 Das [Flexible Programmiermodell (FPM)](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction) bietet eine Mischform aus generierten Fiori Elements- und manuell entwickelten SAPUI5 Freestyle-Oberflächen. Es steht ab SAPUI5 v1.94 und nur mit OData V4 zur Verfügung. Das FPM ermöglicht es dabei, über eigenständige Container Freestyle-Elemente in einer Fiori Elements Applikation einzubinden. Andererseits können auch Fiori Elements-Bausteine in einer Freestyle-App eingebaut werden. Um einen Eindruck zu den Vorteilen des FPM zu gewinnen bietet sich [dieser CodeJam](https://github.com/SAP-samples/fiori-elements-fpm-exercises-codejam) an.
 
 ![Flexible Programming Model als Mischform von Fiori Elements und Freestyle SAPUI5](./img/FPM.png)
+Flexible Programming Model als Mischform von Fiori Elements und Freestyle SAPUI5
+{: .img-caption}
 
 ## Legacy Technologien
 Dieses Kapitel soll einen kurzen Überblick über bisher nicht genannte Oberflächentechnologien geben. Da diese im Laufe der Zeit immer mehr an Relevanz verlieren wird an dieser Stelle nicht näher auf einzelne Technologien eingegangen.  
