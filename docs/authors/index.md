@@ -104,8 +104,8 @@ nav_order: 15
 </tr>
 <tr class="header">
 <td>Jan Sauerland</td>
-<td>ebm-papst IT</td>
-<td></td>
+<td>ebm-papst St. Georgen GmbH & Co.KG</td>
+<td>Schreiben, Review</td>
 </tr>
 <tr class="odd">
 <td>Jens Knappik</td>
@@ -216,7 +216,12 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/dominik-panzer-690702248">Dominik Panzer</a></td>
 <td>Organisation</td>
-<td>Selbst die talentiertesten ABAP Entwickler*innen mit dem besten KnowHow werden nicht erfolgreich sein, wenn sie nicht im Unternehmen ein positiv unterstützendes Umfeld finden: vom Management bis zu den Team-Kolleg*innen, fundierend auf einer klaren Strategie, bewusst entschiedener Architektur und modernen Softwareentwicklungs-Prozessen. Deshalb engagiere ich mich neben "technischer Exzellenz" auch für Themen aus den Bereichen Oraganisation und Softwareentwicklungsprozesse/-vorgehensmodelle. Nur beides zusammen macht Menschen und damit die Unternehmen für die sie arbeiten erfolgreich.</td>
+<td>Selbst die talentiertesten ABAP Entwickler*innen mit dem besten KnowHow werden nicht erfolgreich sein, wenn sie nicht im Unternehmen ein positiv unterstützendes Umfeld finden: vom Management bis zu den Team-Kolleg*innen, fundierend auf einer klaren Strategie, bewusst entschiedener Architektur und modernen Softwareentwicklungs-Prozessen. Deshalb engagiere ich mich neben "technischer Exzellenz" auch für Themen aus den Bereichen Organisation und Softwareentwicklungsprozesse/-vorgehensmodelle. Nur beides zusammen macht Menschen und damit die Unternehmen für die sie arbeiten erfolgreich.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.linkedin.com/in/jan-sauerland-1543b3a9/">Jan Sauerland</a></td>
+<td>Moderne ABAP Entwicklung</td>
+<td>Als Hauptansprechpartner für ABAP-Programmierung im Unternehmen hatte ich auf Basis des alten ABAP-Leitfadens von 2016 bereits unternehmensinterne ABAP-Richtlinien entworfen. Daher freue ich mich sehr darüber, nun selbst am DSAG-Leitfaden für ABAP mitwirken und mein gesammeltes Wissen einbringen zu können.</td>
 </tr>
 </tbody>
 </table>
