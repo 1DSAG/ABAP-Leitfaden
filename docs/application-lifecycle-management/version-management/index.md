@@ -98,6 +98,56 @@ Mit SAP Business Application Studio steht Unternehmen ein Werkzeug für die Entw
 
 ## Vergleich der unterschiedlichen Versionskontrollsystemen
 
+### SAP-System
+In den folgenden SAP-Systemen ist das Versionskontrollsystem verfügbar.
+|                                                   | **SAP-System**            |               
+|---------------------------------------------------|---------------------------|
+| **SE80 (Lokale Versionsverwaltung)**              | SAP OnPrem                | 
+| **ABAP in Eclipse (Versionsverwaltung)**          | SAP OnPrem/SAP Cloud      |
+| **abapGit in SAP GUI**                            | SAP OnPrem                | 
+| **abapGit in ADT**                                | SAP Cloud/SAP OnPre       |
+| **abapGit in der Cloud**                          | SAP Cloud                 | 
+| **gCTS in der Cloud**                             | SAP Cloud                 | 
+| **gCTS OnPrem**                                   | SAP OnPrem                | 
+| **SAP BAS**                                       | SAP Cloud/SAP OnPrem      |
+
+### Funktionsumfang
+In den folgenden Dokumentation befindet sich der Funktionsumfang der jeweiligen Versionsverwaltung
+|                                                   | **SAP-System**            |               
+|---------------------------------------------------|---------------------------|
+| **SE80 (Lokale Versionsverwaltung)**              | https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/2b28ffa716c24348903f8ffbfeb81df8/e52a2c8d53f8400bb8a309cffe417275.html                     | 
+| **ABAP in Eclipse (Versionsverwaltung)**          | https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/comparing-source-code                      |
+| **abapGit in SAP GUI**                            | https://docs.abapgit.org/user-guide/       | 
+| **abapGit in ADT**                                | https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit                            | 
+| **abapGit in der Cloud**                          | https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit                                           | 
+| **gCTS in der Cloud**                             | https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/f319b168e87e42149e25e13c08d002b9.html                  | 
+| **gCTS OnPrem**                                   |https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/f319b168e87e42149e25e13c08d002b9.html                 |
+| **SAP BAS**                                       |                                            |
+### Triggerpunkt
+Die Versionsverwaltung wird folgendermaßen angetriggert.
+|                                                   | **SAP-System**            |               
+|---------------------------------------------------|---------------------------|
+| **SE80 (Lokale Versionsverwaltung)**              | Bei jeder Transportfreigabe                | 
+| **ABAP in Eclipse (Versionsverwaltung)**          | Nach jedem Speichern/Aktivieren            |
+| **abapGit in SAP GUI**                            | Bei manuellem Antriggern                   | 
+| **abapGit in ADT**                                | Bei manuellem Antriggern                   | 
+| **abapGit in der Cloud**                          | Bei manuellem Antriggern                   | 
+| **gCTS in der Cloud**                             |                                            | 
+| **gCTS OnPrem**                                   | Bei Transportfreigabe                      |
+| **SAP BAS**                                       | Bei manuellem Antriggern                   |
+
+### Versionsumfang
+Die Versionsverwaltung umfasst folgenden Versionsumfang
+|                                                   | **SAP-System**            |               
+|---------------------------------------------------|---------------------------|
+| **SE80 (Lokale Versionsverwaltung)**              | Jedes einzelne Objekt                      | 
+| **ABAP in Eclipse (Versionsverwaltung)**          | Jedes einzelne Objekt                      |
+| **abapGit in SAP GUI**                            | Auf Paketebene                             | 
+| **abapGit in ADT**                                | Auf Paketebene                             | 
+| **abapGit in der Cloud**                          |                                            | 
+| **gCTS in der Cloud**                             | Auf Transportschichtebene                  | 
+| **gCTS OnPrem**                                   | Auf Transportschichtebene                  |
+| **SAP BAS**                                       |                                            |
 ----
 **Das hier brauchen wir dann nicht mehr ? steht ja oben** ----
 ### Versionskontrollsysteme
