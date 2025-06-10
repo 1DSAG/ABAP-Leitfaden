@@ -111,29 +111,49 @@ Eine Unit-Test-Klasse hat - im Gengensatz zu einer gängigen ABAP-Klasse - ein p
 
 ### Genereller Ablauf
 
+Jede Klasse hat ein Include in dem mehrere lokale Klassen und Text-Klassen definiert werden können. Eine Testklasse beseitzt Attribute, die etwas über die _Gefährlichkeit_ (Risk level) und die _Dauer_ (Duration) der Tests aussagen. Jede Testklasse hat Testmethoden, die mit dem Zusatz _FOR TESTING_ als solche kenntlich gemacht werden. Testmethoden werden in zufälliger Reihenfolge ausgeführt und dürfen nicht voneinander abhängen.
 
-### Risiko Level
+In einer Testmethode wird eine (öffentliche) Methode der zu testenden Klasse ausgeführt und mit einem erwarteteten Ergebnis verglichen. Stimmt die Erwartung überein, dann ist der Test erfolgreich. Die Instanz der zu testenden Klasse wird _F_CUT_ oder _CUT_ genannt. _CUT_ steht für _Code Under Test_. Vor Ausführung der Tests kann optional die Methode _SETUP_ ausgeführt werden, in der Vorbereitungen zum Testfall vorgenommen werden können (z.B. die Erzeugung der Instanz _CUT_). Nach Ausführung einer Testmethode können in der Methode _TEARDOWN_ Aufräumarbeiten durchgeführt werden. Es können beliebig viele andere Methoden oder Klassen definiert werden, die zur Unterstützung der Tests dienen.
+
+### Risikostufe/ Risk Level
+
+Mit dem Zusatz _RSIK LEVEL_ definieren Sie die Risikostufe der Testfälle
 
 Folgen sie den Vorgaben der SAP zum Risiko Level:
 * CRITICAL - a test changes system settings or customizing data (default)
 * DANGEROUS - a test changes persistent data
 * HARMLESS - a test does not change system settings or persistent data
 
-Grundsätzlich sollten Sie es vermeiden Tests zu schreiben, die wirkliche Änderungen an der Datenbank vornehmen ( müssen ) während ihrer Laufzeit. Dies ist oft ein Indikator für fehlendes Management von Abhängigkeiten bzw. deren Austausch. Ihr Ziel muss sein möglichst alle Tests als Harmless definieren zu können.
+Grundsätzlich sollten Sie es vermeiden, Tests zu schreiben, die wirkliche Änderungen an der Datenbank vornehmen. Dies ist oft ein Indikator für fehlendes Management von Abhängigkeiten bzw. deren Austausch. Ihr Ziel muss sein, möglichst alle Tests als _Harmless_ definieren zu können. Mit Hilfe der von SAP bereitgestellten Frameworks zum Mocken von Datenbanktabellen und CDS-Views ist dies möglich. Siehe Abschnitt [Mocking..](Mocking, faking, spying und stubbing)
 
-Mit Hilfe der von SAP bereitgestellten Frameworks zum Mocken von Datenbanktabellen und CDS-Views ist dies ermöglicht worden. Siehe Abschnitt [Mocking..](Mocking, faking, spying und stubbing)
+### Dauer/ Duration
 
-### Dauer / Duration
+Mit dem Zusatz _DURATION_ definieren Sie die voraussichtliche Laufzeit der Testfälle. 
+Folgende Kategorien sind möglich. In den Klammen steht die voreingestelle Dauer in Sekunden:
+* LONG (3600 sec)
+* MEDIUM (300 sec)
+* SHORT (60 sec)
 
-Einstellung der verschiedenen Laufzeiten können sie via Transaktion: SAUNIT_CLIENT_SETUP vornehmen. Auch hier gilt das klare Ziel, dass ihre Tests schnell sein müssen, damit sie immer wieder ausgeführt werden können. 
+Überschreitet ein Test den im System definierten Wert, dann wird der Test abgebrochen und als "fehlgeschlagen" interpretiert.   
 
-### ASSERT  #Review TJOHN macht das wirklich Sinn das zu erklären ??  JA
+Die Einstellung der verschiedenen Laufzeiten können sie mit Transaktion SAUNIT_CLIENT_SETUP vornehmen. Auch hier gilt das klare Ziel, dass ihre Tests schnell sein müssen, damit sie immer wieder ausgeführt werden können. 
 
-* Vorstellung CL_ABAP_UNIT_ASSERT ?? macht das wirklich Sinn das zu erklären ??   JA aber nur warum und ganz kurz
+### ASSERT 
 
+Innerhalb einer Testmethode kann das Ergebnis einer Testmethode mit den Methoden der Klasse _CL_ABAP_UNIT_ASSERT_ geprüft werden. Die Klasse hat viele Methoden, die für entsprechende Vergleiche genutzt werden können. Die wohl am häufigsten gebrauchten Methoden sind:
+* ASSERT_EQUALS
+* ASSERT_FALSE
+* ASSERT_BOUND
+
+Ein _ASSERT_ wird durchgeführt, um den ermittelten Wert mit dem erwarteten Wert abzugleichen. Sie rufen also eine Methode der zu testenden Klasse auf und vergleichen das Ergebnis mit dem, was Sie als Ausgabe erwarten. Die Parameter der entsprechenden ASSERT-Methode heißen dabei immer gleich:
+* EXP ist der zu erwartende Wert (EXPECTED VALUE)
+* ACT ist der im Test ermittelte Wert (ACTUAL VALUE)
+* 
+Die Erwartung kann sein, dass das Ergebnis einen bestimmten Wert hat, eine bestimmte Tabellenzeile in der Ergebnistabelle vorhanden ist oder ein Objekt instaziiert wurde. Das Ergebnis muss dabei nicht direkt aus einer Methode kommen. Sie können auch mehrere Methoden der Testklasse ausführen und am Ende den Wert eines globalen Attributs prüfen.
+ 
 ### Beispiel Testklasse
 
-Das folgende Beispiel zeigt die Testklasse zu der globalen Klasse `ZCL_ADDRESS`, in der die Methode `SPLIT_ADDRESS` dafür zuständig ist, einen String, der Adresse und Hausnummer enthält, in die Bestandteile `Straße` und `Hausnummer` aufzuteilen.
+Das folgende Beispiel zeigt die Testklasse `LTCL_VERIFY_ADDRESSES` zu der globalen Klasse `ZCL_ADDRESS`. Die die Methode `SPLIT_ADDRESS` ist dafür zuständig, einen String, der Adresse und Hausnummer enthält, in die Bestandteile `Straße` und `Hausnummer` aufzuteilen.
 
 ```
 CLASS ltcl_verify_addresses DEFINITION FINAL FOR TESTING
@@ -208,7 +228,7 @@ Wenn Testdaten aus vielen Komponenten bestehen (Kopfdaten, Positionsdaten, Partn
 
 Die Methode `get_setup_for_document( doc_id = c_nice_docuemt_id ).` stellt alle notwendigen Daten zur Verfügung, die zu dem geforderten Dokument gehören.
 {: .note }
-Wenn sie auf Dokumente der Datenban zurückgreifen müssen, pflegen Sie zentral Konstanten mit sprechenden Namen und Erläuterungen.  Sie werden irgendwann nicht mehr wissen welche Eigenarten Beleg 564 hatte.   
+Wenn Sie auf Dokumente der Datenbank zurückgreifen müssen, pflegen Sie zentrale Konstanten mit sprechenden Namen und Erläuterungen.  Sie werden ansonsten irgendwann nicht mehr wissen welche Eigenarten Beleg 564 hatte.   
 ```ABAP
 CONSTANTS:  "! Sales order that has one item, Material ..., not released ... 
              c_order_one_iten_ok
@@ -225,15 +245,14 @@ Die Methode `verify_address_is_valid( address = data )` prüft nicht nur, ob Str
 
 ### Testen von privaten, geschützten und öffentlichen Methoden
 Es gibt die Meinung, dass nur öffentliche Methoden getestet werden sollten. Über die Codeabdeckung kann analysiert werden, ob alle Codestrecken durchlaufen wurden.
-Allerdings kann das Bereitstellen der notwendigen Daten sehr aufwändig sein, so dass es sinnvoll sein kann, die kleineren Einheiten (private und geschützte Methoden) zu testen. Zudem "verwässern" umfangreiche Datenkonstellationen den Zweck eines Unit Tests. Tests für private Methoden können ebenfall helfen den Ursprung eine Fehlers schneller zu lokalisieren. 
+Allerdings kann das Bereitstellen der notwendigen Daten sehr aufwändig sein, so dass es sinnvoll sein kann, die kleineren Einheiten (private und geschützte Methoden) zu testen. Zudem "verwässern" umfangreiche Datenkonstellationen den Zweck eines Unit Tests. Tests für private Methoden können ebenfalls helfen, den Ursprung eines Fehlers schneller zu lokalisieren. 
 
 **Beispiel Adressaufbereitung:**\
-Nehmen wir an, wir haben eine Klasse, die Adressen entgegen nimmt und analysiert. Die eine Methode ```SEPARATE_HOUSENO_FROM_STREET``` haben wir bereits kennengelernt. Zusätzlich gibt es eine Methode ```CHECK_POST_CODE```, die sicherstellen soll, dass die Postleitzahl 5-stellig ist und nur aus Zahlen besteht. Wenn beide privaten Methoden von der öffentlichen Methode ```CHECK_ADDRESS``` aufgerufen werden, müssen wir zum Testen immer eine komplette Adresse übergeben. Einfacher und auch deutlicher ist es, wenn wir die privaten Methoden separat testen.
-Sie können so nur die eigentliche Funktion der Methode ```SEPARATE_HOUSENO_FROM_STREET``` testen, das Aufteilen,  da die Prüfmethoden  `CHECK-` eigene Tests besitzen. 
+Nehmen wir an, wir haben eine Klasse, die Adressen entgegen nimmt und analysiert. Die eine Methode `SEPARATE_HOUSENO_FROM_STREET` haben wir bereits kennengelernt. Zusätzlich gibt es eine Methode `CHECK_POST_CODE`, die sicherstellen soll, dass die Postleitzahl 5-stellig ist und nur aus Zahlen besteht. Wenn beide privaten Methoden von der öffentlichen Methode `CHECK_ADDRESS` aufgerufen werden, müssen wir zum Testen immer eine komplette Adresse übergeben. Einfacher und auch deutlicher ist es, wenn wir die privaten Methoden separat testen. Sie können so die eigentliche Funktion der Methode `SEPARATE_HOUSENO_FROM_STREET` testen. 
 
 ### Unit Tests erweitern
 
-Wenn wir uns das Beispiel mit dem Ermitteln der Hausnummer ansehen, dann gibt es viele Fallstricke, die ein unerwartetes Ergebnis hervorrufen können. Die Eingaben, die zu einem fehlerhafte Ergebnis führen, kennen wir im Vorfeld jedoch nicht. Wir lernen sie erst kennen, wenn sich Anwender beschweren, die ein falsches Ergebnis erhalten. In diesem Fall können die Eingaben, die zu fehlerhaften Ausgaben geführt haben, in einen Unit Test aufgenommen werden. Nach der Änderung des Codings werden alle bereits definierten Unit Tests durchgeführt und der Entwickelnde kann sicher sein, dass alles wie zuvor funktioniert.
+Wenn wir uns das Beispiel mit dem Ermitteln der Hausnummer ansehen, dann gibt es viele Fallstricke, die ein unerwartetes Ergebnis hervorrufen können. Die Eingaben, die zu einem fehlerhaften Ergebnis führen, kennen wir im Vorfeld jedoch nicht. Wir lernen sie erst kennen, wenn sich Anwender beschweren, die ein falsches Ergebnis erhalten. In diesem Fall können die Eingaben, die zu fehlerhaften Ausgaben geführt haben, in einen Unit Test aufgenommen werden. Nach der Änderung des Codings werden alle bereits definierten Unit Tests durchgeführt und der Entwickelnde kann sicher sein, dass alles wie zuvor funktioniert.
 
 #### Beispiel Testklasse mit Hilfsmethode
 
@@ -296,7 +315,7 @@ ENDCLASS.
 
 Die Testklasse enthält nun nur noch die eine Testmethode `TEST_GERMAN_STANDARDS`, in der alle Tests durchgeführt werden.
 
-Es gibt eine Hilfsmethode `VERIFY_ADDRESS`, die einen Straßennamen und eine Hausnummer entgegennimmt, diese zusammensetzt und durch die zu testende Methode `SPLIT_ADDRESS` wieder aufteilen lässt. Da ein Testfall nun nicht mehr 1:1 einer Testmethode entspricht, wurde der Parameter `MSG` von `CL_ABAP_UNIT_ASSERT=>ASSERT_EQUALS` verwendet, um direkt auf den Fehlerhaften Testfall hinweist.
+Es gibt eine Hilfsmethode `VERIFY_ADDRESS`, die einen Straßennamen und eine Hausnummer entgegennimmt, diese zusammensetzt und durch die zu testende Methode `SPLIT_ADDRESS` wieder aufteilen lässt. Da ein Testfall nun nicht mehr 1:1 einer Testmethode entspricht, wurde der Parameter `MSG` von `CL_ABAP_UNIT_ASSERT=>ASSERT_EQUALS` verwendet, um direkt auf den fehlerhaften Testfall hinzuweisen.
 
 Die Testklasse ist nun deutlich übersichtlicher und die Testfälle sind auf einen Blick gut erkennbar.
 
@@ -304,18 +323,22 @@ Diese Variante erlaubt es, auch weiterhin Tests durchzuführen, die nach einem a
 
 Hinweis: Dies ist keine Empfehlung, alle Tests in einer Testmethode unterzubringen. Das Beispiel soll lediglich aufzeigen, dass Hilfsmethoden genutzt werden können, um die Unit Tests kompakter, besser wartbar und lesbarer zu gestalten.
 
-##### Aufteilen von lokalen & globalen Testklassen 
+#### Aufteilen von lokalen & globalen Testklassen 
 
 ### Testumgebung
 
 ABAP Unit test können in ADT als auch im SAP GUI ausgeführt und ihre Ergebnisse analysiert werden. 
-Empfohlen wird hier klar ADT, da hier auch die verwendung von [Test Relations](https://www.youtube.com/watch?app=desktop&v=yiKhKlQz89Y&t=14s) möglich ist. 
+Empfohlen wird hier klar ADT, da hier auch die Verwendung von [Test Relations](https://www.youtube.com/watch?app=desktop&v=yiKhKlQz89Y&t=14s) möglich ist. 
 
 ### Auflösen von Abhängigkeiten mit Mocking, Faking, Stubbing und Spying
 
 Eine wichtige Eigenschaft von testbarem Code ist, dass (Geschäfts-)Logik, Datenbeschaffung und Präsentation strikt getrennt sind. Wenn dies gewährleistet ist, dann können abhängige Klassen durch nicht-produktive Objekte ersetzt werden. Diese Objekte können unterschiedliche Aufgaben haben und werden dementsprechend benannt. Die folgenden Arten sind möglich:
+* Mock
+* Stub
+* Faker
+* Spy
 
-Ein **Mock**-Objekt ist ein Objekt, dass dynamisch auf die Eingaben der Aufrufers reagieren kann. Ein Mock-Objekt kann zum Beispiel eine Abfrage in einem externen System oder der Datenbank imitieren und testfallabhängig die gewünschten Daten liefern.
+Ein **Mock**-Objekt ist ein Objekt, das dynamisch auf die Eingaben der Aufrufers reagieren kann. Ein Mock-Objekt kann zum Beispiel eine Abfrage in einem externen System oder der Datenbank imitieren und testfallabhängig die gewünschten Daten liefern.
 
 Ein **Stub** ist ein Objekt mit minimaler Implementierung der zum Testen notwendigen Methoden. Dieses Objekt ist nur dazu da, um den fehlerfreien Aufruf der zu testenden Methoden zu gewährleisten.
 
@@ -329,12 +352,7 @@ Ein **Spion**-Objekt kann Eigenschaften von Stubs, Fakes und Mocks enthalten, ü
 
 Die Verwendung von Test-Doubles ist notwendig, wenn Abhängigkeiten bestehen, die nicht ausreichend aufgelöst wurden oder aufgelöst werden konnten. Mit entsprechenden Test-Double-Frameworks kann das Ergebnis von Datenbankzugriffe oder Funktionsbausteinaufrufen gefälscht werden. 
 
-Test-Double-Frameworks sind in der Regel umständlich zu bedienen und sehr unübersichtlich. Mit vielen Definitionen und Methoden müssen Eingabeparameter und die gewünschten Ergebnisse vorgegeben werden. Wenn möglich sollten Sie die Abhängigkeiten eliminieren um auf die Verwendung von Test-Doubles verzichten zu können. Dies ist jedoch nicht immer möglich. Deswegen stehen Test-Double-Frameworks für folgende Objekte zur Verfügung:
-
-* Datenbankzugriffe (oSQL)
-* Funktionsbausteine
-
-
+Test-Double-Frameworks sind in der Regel umständlich zu bedienen und sehr unübersichtlich. Mit vielen Definitionen und Methoden müssen Eingabeparameter und die gewünschten Ergebnisse vorgegeben werden. Wenn möglich sollten Sie die Abhängigkeiten eliminieren um auf die Verwendung von Test-Doubles verzichten zu können. Dies ist jedoch nicht immer möglich. Weiterführende Informationen zu den Test-Double-Frameworks stellen wir Ihnen im Abschnitt [Erweiterte Techniken](#abap_unit_advanced) vor.
 
 
 
@@ -351,10 +369,6 @@ Für jeden Enwickler sollte es zur Morgenroutine gehören zu prüfen ob alle Tes
 {: .highlight}
 
 ## Do's & Dont's 
-* Im Zweifel einen UNit test mehr anlegen
+* Im Zweifel einen Unit Test mehr anlegen
 + weniger in einem Test prüfen
-* CL_Aunit_Assert nicht mehr benutzen bzw ersetzen, da sie obsolet ist. Entsprechend auch das Erben von der Klasse ersetzen. 
-
-##  tbd Beispiele Anbringen: 
-- ?Woher bekommen wir Beispiele mit Fleisch dran, die nicht nur SFLIGHT sind. 
-- Erfahrungen und bekannte Probleme bei Unit Tests.  Z.B. das SAP Factories immer wieder gemockt werden müssen.
+* Klasse CL_AUNIT_ASSERT nicht mehr benutzen bzw ersetzen, da sie obsolet ist. Es muss die Klasse CL_ABAP_UNIT_ASSERT verwendet werden. 
