@@ -15,32 +15,32 @@ nav_order: 2
 
 Technische Grundlagen Objektebene
 
-## Was ist mittels ABAP Unit testbar
+## Was ist mittels ABAP Unit testbar?
 
 > {: .Zitat }
 > "Das kann man nicht testen"  
 
-Grundsätzlich ist fasst alles mit ABAP Unit testbar. Es gibt Programmbereiche, die nicht mittels ABAP Unit Tests überprüft werden können. Dazu gehören alle Programmteile, die auf einen Dialog angewiesen sind oder Daten darstellen (z.B. ALV-Grid).
-Für alles Andere gibt es Möglichkeiten diese Programme mit ABAP Unit Tests abzusichern. Anfänglich wird dies aufwändig und mühsam sein. Die Mühe wird sich aber lohnen und schnell auszahlen. Es is definitiv möglich BAPIs / BAdIs / RFCs / IDOCs / mit Unitests abzusichern.  
+Grundsätzlich ist fast alles mit ABAP Unit testbar. Es gibt Programmbereiche, die nicht mittels ABAP Unit Tests überprüft werden können. Dazu gehören alle Programmteile, die auf einen Dialog angewiesen sind oder Daten darstellen (z.B. ALV-Grid).
+Für alles Andere gibt es Möglichkeiten diese Programme mit ABAP Unit Tests abzusichern. Anfänglich wird dies aufwändig und mühsam sein. Die Mühe wird sich aber lohnen und schnell auszahlen. Es is definitiv möglich BAPIs, BAdIs, RFCs und IDOCs mit Unitests abzusichern.  
 
 ## Behandlung von Daten in Unit Tests
 
-Die klassischen Systemkonfiguration im Entwicklungssystem mit einen Entwicklungs- und einem Testmandanten stellen eine Hürde für den reibungslosen Ablauf von Komponenten- oder Integrationstests dar, da diese meist von Daten der Datenbank abhängig sind, wenn gängige Unit Test Methodiken nicht angewendet werden.  
+Die klassische Systemkonfiguration im Entwicklungssystem mit einen Entwicklungs- und einem Testmandanten stellt eine Hürde für den reibungslosen Ablauf von Komponenten- oder Integrationstests dar, da diese meist von Daten der Datenbank abhängig sind, wenn gängige Unit Test Methodiken nicht angewendet werden.  
 Dies gilt analog für Szenarien bei denen auf dem Entwicklungssystem sich keine Daten in der Datenbank befinden. 
 
 >**Empfehlung**  
-> Erstellen Sie ihre ABAP Unit Tests unabhängig von der Datenbank, so dass sie mit Hilfe von Dependency-Injection und Mocks in jedem  Mandanten lauffähig sind das gleiche Ergebnis liefern.  
+> Erstellen Sie ihre ABAP Unit Tests unabhängig von der Datenbank, so dass sie mit Hilfe von Dependency-Injection und Mocks in jedem  Mandanten lauffähig sind und das gleiche Ergebnis liefern.  
 > Wird dieses Vorgehen nicht angewendet, die Tests im Mandant x entwickelt, in Mandant y ausgeführt, würden die Tests keine belastbare Aussage liefern und somit seltener oder gar nicht ausgeführt.
 > Analog verhält es sich mit Unit Tests, die abhängig von einer Datenkonstellation auf dem Testsystem sind.
 > Gemäß Unit Test Methodik sind daher direkte Datenbankabfragen mittels Mocking oder Injection-Framework zu vermeiden.
-> Welche Techniken Sie beim Erreichten dieser Unabhängigkeit unterstützen finden sie hier im Abschnitt [Erweiterte Techniken](#erweiterte-techniken)
+> Welche Techniken Sie beim Erreichten dieser Unabhängigkeit unterstützen finden sie hier im Abschnitt [Erweiterte Techniken](#abap_unit_advanced)
 {: .highlight}
 
 ## Testumgebung
 
 Die ABAP Unit-Tests können aus den ABAP-Development-Tools heraus oder der SAP-GUI Entwicklungsumgebung (SE80, SE24) erstellt und verwendet werden. Die Vorgehensweise unterscheidet sich nur in Kleinigkeiten.
 Empfohlen wird hier klar ADT, da hier auch die Verwendung von [Test Relations](https://www.youtube.com/watch?app=desktop&v=yiKhKlQz89Y&t=14s) möglich ist.  
-Die Techniken, die zur Erstellung notwendig sind, ähneln sich jedoch stark. Unit Test, die in der SE80 erstellt wurden, können auch in Eclipse gewartet und getestet werden und umgekehrt. Die Tastenkombination zum Ausführen der Unit Test ist in beiden Tools **STRG + SHIFT + F10.** Andere Funktionen sind in der ABAP Workbench teilweise nur durch das Menü erreichbar während es im ADT eine Tastenkombination dafür gibt.
+Die Techniken, die zur Erstellung notwendig sind, ähneln sich jedoch stark. Unit Tests, die in der SE80 erstellt wurden, können auch in Eclipse gewartet und getestet werden und umgekehrt. Die Tastenkombination zum Ausführen der Unit Tests ist in beiden Tools **STRG + SHIFT + F10.** Andere Funktionen sind in der ABAP Workbench teilweise nur durch das Menü erreichbar während es im ADT eine Tastenkombination dafür gibt.
 
 Im folgenden Abschnitt werden diese Themen behandelt:
 
@@ -75,38 +75,42 @@ Wir gehen davon aus, dass Sie Erfahrung mit dem jeweiligen Tool haben. Aus diese
 
 ### GIVEN - WHEN - THEN
 
-GIVEN-WHEN-THEN ist ein Stil, um Unit Test zu formulieren. Mit GIVEN wird eine Bedingung angegeben, unter denen der Test stattfinden soll. WHEN beschreibt die Aktion, die durchgeführt wird und THEN beschreibt das erwartete Ergebnis.
+GIVEN-WHEN-THEN ist ein Stil, um Unit Tests zu formulieren. Mit GIVEN wird eine Bedingung angegeben, unter denen der Test stattfinden soll. WHEN beschreibt die Aktion, die durchgeführt wird und THEN beschreibt das erwartete Ergebnis.
 
 Bezogen auf unser Beispiel mit der Hausnummer könnte die Formulierung heißen:\
-GIVEN: ABC-Straße 13\
-WHEN: die Hausnummer aus diesem String ermittelt wird\
-THEN: Sollte die Hausnummer 13 sein
+GIVEN ist der Straßenname "ABC-Straße 13"\
+WHEN die Hausnummer aus diesem String ermittelt wird\
+THEN sollte die Hausnummer "13" sein
 
 ### Clean Code in Unit Tests
 
-Oft trifft man auf die Einstellung, dass es in Unit Tests nicht nötig ist sich an Regen der Code Qualität zu halten #CleanABAP. Schlechte Wartbarkeit Qualität in Unit Tests wird dazu führen dass die Tests nicht weiterentwickelt werden und nutzlos werden. Doppelter Code, fehlende Modularisierung ist hier ebenso zu vermeiden wie in produktiven code.
+Oft trifft man auf die Einstellung, dass es in Unit Tests nicht nötig ist sich an Regeln der Code Qualität zu halten (CleanABAP, Namenskonventionen, Modularisierung, ...). Schlechte Wartbarkeit und Qualität in Unit Tests wird dazu führen, dass die Tests nicht weiterentwickelt und nutzlos werden. Doppelter Code und fehlende Modularisierung ist hier ebenso zu vermeiden wie in produktivem code.
 
 ### Unit Test sauber halten
 
-Ebenso ist es zwingend nötig alle Unit Test Erfolgreich durch zu führen. Seien sie hier nicht nachlässig und priorisieren sie diese Ausgaben die es bedürfen den Geschäfts-Code oder den Unit Test zu reparieren, bis wieder alle Tests fehlerfrei ausgeführt werden.  
+Ebenso ist es zwingend nötig, alle Unit Tests Erfolgreich durchzuführen. Seien Sie hier nicht nachlässig und priorisieren Sie Aufgaben, die es bedürfen den Geschäfts-Code oder den Unit Test zu reparieren, bis wieder alle Tests fehlerfrei ausgeführt werden.  
 
 ### Behandlung von Ausnahmen
 
 [SAP empfiehlt](https://help.sap.com/doc/saphelp_crm700_ehp03/7.0.3.11/de-DE/dd/587324e2424b14ab5afb3239a77a8d/frameset.htm): Wenn der zu testende Code in der Lage ist, eine Ausnahme auszulösen, sollte die Testmethode selbst diese nicht behandeln, sondern sie in ihrer Signatur deklarieren (abgesehen von provozierten Ausnahmen), so dass der Testfall fehlschlägt, wenn er zur Laufzeit auftritt. 
 
 
+### Aufbau einer Unit Test Klasse
 
-### Unit Test Klasse  #Review TJOHN macht das wirklich Sinn das zu erklären ?? 
-* Beschreibung, wie eine Klasse aufgebaut ist
+Eine Unit-Test-Klasse hat - im Gengensatz zu einer gängigen ABAP-Klasse - ein paar Besonderheiten. In diesem Kapitel beschreiben wir, wie die Unit-Test-Klasse aufgebaut ist und welche Eigenschaften sie hat.
+
+* genereller Ablauf
 * Risklevel
 * Duration
-* erstellen in
+* Anlage in
   * Eclipse
   * SE80
 * SETUP 
 * TEARDOWN
 * FOR TESTING
-* genereller Ablauf
+
+### Genereller Ablauf
+
 
 ### Risiko Level
 
