@@ -123,7 +123,7 @@ nav_order: 15
 <td>Schreiben, Review</td>
 </tr>
 <tr class="header">
-<td><a href="https://www.linkedin.com/in/julius-dacheneder-503934152/">Julius Dacheneder</a></td>
+<td><a href="https://www.linkedin.com/in/julius-dacheneder/">Julius Dacheneder</a></td>
 <td>msg systems ag</td>
 <td>Schreiben, Review</td>
 </tr>
