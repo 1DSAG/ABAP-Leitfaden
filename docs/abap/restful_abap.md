@@ -36,18 +36,24 @@ RAP Big Picture, © SAP
 {: .img-caption}
 
 ### Datenbankebene
-Bei Neuentwicklungen sollte stets das Managed Szenario genutzt werden um möglichst viele Funktionalitäten (CRUD-Handlung, Draft, ...) automatisiert vom Framework zu nutzen und manuellen Entwicklungsaufwand zu reduzieren. Einige Unterschiede im [Unmanaged Szenario finden Sie unten](#unmanaged-szenario).Auf unterster Ebene wird das Datenmodell für das RAP Business Objekt klassisch via DDIC Tabellen oder auf neueren Systemen mit CDS Tabellenentitäten erstellt. Jeder Knoten, der später über RAP als eigenes EntitySet veröffentlicht werden soll, erhält eine eigene Datenhaltung
-Virtuelles Datenmodell (VDM) via CDS Views aufbauen - diese wurden zuvor im Kapitel [Core Data Services](../core-data-services/index.md) erläutert.
-
-RAP
+Bei Neuentwicklungen sollte stets das Managed Szenario genutzt werden um möglichst viele Funktionalitäten (CRUD-Handlung, Draft, ...) automatisiert vom Framework zu nutzen und manuellen Entwicklungsaufwand zu reduzieren. Einige Unterschiede im [Unmanaged Szenario](#unmanaged-szenario) finden Sie unten. Auf unterster Ebene wird das Datenmodell für das RAP Business Objekt klassisch via DDIC Tabellen oder auf neueren Systemen mit CDS Tabellenentitäten erstellt. Jeder Knoten, der später über RAP als eigenes EntitySet veröffentlicht werden soll, erhält eine eigene Datenhaltung. Es ist darauf zu achten, UUIDs als Schlüssel zu verwenden und den UUID-Schlüssel aller hierarchisch obergeordneten Knoten mit einzubeziehen.
 
 ### Virtuelles Datenmodell
+Basierend auf den Tabellen wird nun das Virtuelle Datenmodell (VDM) via CDS Views aufgebaut - mehr Informationen zu diesem Entwicklungsobjekt finden Sie im Kapitel [Core Data Services](../core-data-services/index.md). Gemäß der SAP-Empfehlungen sollten hierfür mehrere Ebenen oder Layer aufgebaut werden (von unten nach oben):
+* **I_** Interface Layer (Umbenennung der Felder, Definition der Annotationen, entfällt ggf. bei Nutzung von CDS Table Entities)  
+* **R_** Reuse Layer (Composition Tree für RAP)  
+* **C_** Consumption Layer (Projektion mit App-spezifischen UI-Annotationen)  
 
 ### Behavior Definition & Pool
+Bezieht sich auf die CDS Root Reuse View.
 
 ### Behavior Projection
+Bezieht sich auf die CDS Root Consumption View.
 
 ### OData Veröffentlichung
+
+### Erweiterbarkeit
+Beachten Sie, sämtliche Entwicklungsobjekte für die Erweiterung freizugeben, falls dies gewünscht ist.
 
 ### Unmanaged Szenario
 Unterschiede zum oben beschriebenen
@@ -110,6 +116,7 @@ Wie oben erwähnt machte das RAP-Framework insbesondere direkt nach Release gro�
 ## Weiterführende Quellen
 + [RAP Cloud Documentation](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/289477a81eec4d4e84c0302fb6835035.html?locale=en-US)
 + [RAP Feature Matrix der Software Heroes](https://software-heroes.com/en/abap-feature-matrix)
++ [RAP Feature Cheat Sheet](https://www.brandeis.de/blog/cheat-sheet-sap-rap-basics-de)
 + [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)  
 + [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase)  
 + [SAP Samples: RAP Repositories](https://github.com/orgs/SAP-samples/repositories?q=rap)
