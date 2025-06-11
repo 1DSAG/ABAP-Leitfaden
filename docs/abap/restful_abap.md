@@ -26,26 +26,36 @@ RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum
 * Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
 {: .highlight}
 
-## Hauptinhalt
-Einleitung..
+## Entwicklungen mit RAP
+Per Definition trennt das RAP-Framework die einzelnen Entwicklungsobjekte ohnehin und gibt dadurch die Softwarearchitektur und eine saubere Trennung ohnehin vor. Die tatsächliche Anwendungslogik wird dabei strikt von der Datenhaltung getrennt. Diese strikten Vorgaben des Framework erleichtern Entwickler:innen das Orientieren und Implementieren von Anwendungen und nimmt viel Arbeit diesbezüglich ab. Das nachstehende Bild zeigt das grobe Zusammenspiel der Teilelemente in RAP Programmierungen.  
 
 ![RAP Big Picture, © SAP](./img/RAP.png)
   
 RAP Big Picture, © SAP
 {: .img-caption}
 
-Datenmodell: Datenbank
-
+### Datenbankebene
+Auf unterster Ebene wird das Datenmodell für das RAP Business Objekt klassisch 
 Virtuelles Datenmodell (VDM) via CDS Views aufbauen - diese wurden zuvor im Kapitel [Core Data Services](../core-data-services/index.md) erläutert.
 
 RAP
 
-Die SAP stellt ein zentrales Repository bereit, das als Beispielapplikation in ihrem S/4 System installiert werden kann. Diese [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase) zeigt Ihnen interaktiv, welche Funktionalitäten mit RAP und Fiori Elements generell umgesetzt werden können und hilft Ihnen dabei, die nötigen Entwicklungen direkt im System nachzuvollziehen.
+### Virtuelles Datenmodell
 
-## Migration von CDS-generiertem BOPF
-Sie haben die Möglichkeit [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)  
+### Behavior Definition & Pool
+
+### Behavior Projection
+
+### OData Veröffentlichung
+
+### RAP Feature Showcase App
+Die SAP stellt ein zentrales Repository bereit, das als Beispielapplikation in ihrem S/4 System installiert werden kann. Diese [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase) zeigt Ihnen interaktiv, welche Funktionalitäten mit RAP und Fiori Elements generell umgesetzt werden können und hilft Ihnen dabei, die nötigen Entwicklungen direkt im System nachzuvollziehen. Nach der Installation können Sie die App auf Ihrem S/4 System ausführen und alle verfügbaren Möglichkeiten erkunden. Die App gibt auch konkrete Auskunft dazu, wie bestimmte Funktionen umgesetzt werden können.
+
+### Migration von CDS-generiertem BOPF
+Sie haben die Möglichkeit, bestehende BOPF-Anwendungen in das modernere RAP Framework zu migrieren, wenn diese nicht mit der BOBX-Transaktion sondern über @ObjectModel-Annotationen aus CDS heraus generiert wurden. Weitere Informationen zur Vorgehensweise finden Sie im offiziellen [Migration Guide Migration von CDS-generiertem BOPF zu RAP](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US).  
 
 ## Verfügbarkeitsübersicht der Features
+Wie oben erwähnt machte das RAP-Framework insbesondere direkt nach Release große Sprünge von S/4 Version zu S/4 Version. Welche Features Sie daher nutzen können hängt stark von Ihrem Systemstand ab. Vor dem Release 2020 ist in den meisten Fällen von der Nutzung abzuraten. Die folgende Auflistung soll Ihnen eine erste Orientierung ermöglichen, welche Features ab wann unterstützt werden und was künftig erwartet werden kann.
 
 **1909**
 + Erstes Release von RAP, EML in ABAP Syntax
@@ -90,7 +100,8 @@ Sie haben die Möglichkeit [Migration von CDS-generiertem BOPF zu RAP über Migr
 **2025, verfügbar ab Herbst**
 + Ausschließlich CDS-basiertes Datenmodell (CDS Table Entities als Persistenz, CDS Simple Types, CDS Exact Cardinalities, CDS Scalar Functions, CDS Aspects)
 + RAP-Modellierung von Hierarchien
-+ Fiori Elements Applikationen zur Änderung von RAP-Hierarchien
++ Kollaborativer Draft (Parallele Zusammenarbeit an einer BO-Instanz)
++ Fiori Elements Tabellen zur Anzeige und Änderung von RAP-Hierarchien
   
 ## Weiterführende Quellen
 + [RAP Cloud Documentation](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/289477a81eec4d4e84c0302fb6835035.html?locale=en-US)
@@ -98,14 +109,12 @@ Sie haben die Möglichkeit [Migration von CDS-generiertem BOPF zu RAP über Migr
 + [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)  
 + [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase)  
 + [SAP Samples: RAP Repositories](https://github.com/orgs/SAP-samples/repositories?q=rap)
++ [SAP Learning Course: Building Apps with RAP](https://learning.sap.com/courses/building-apps-with-the-abap-restful-application-programming-model)
++ [SAP Learning Journey: Creating a Fiori Elements App with RAP OData V4](https://learning.sap.com/learning-journeys/getting-started-with-creating-an-sap-fiori-elements-app-based-on-an-odata-v4-rap-service)
++ [SAP Technology Blog: Getting Started with RAP](https://community.sap.com/t5/technology-blog-posts-by-sap/getting-started-with-the-abap-restful-application-programming-model-rap/ba-p/13420829)
 
 
 ## Notizen TODOS
-+ aber auch CDS (annotationen) und UI5 Control Beispiele
-+ Framework - dedizierte Stellen wo was passiert  
-+ Trennung Technik von Businesslogik  
-+ Viele Geschenke durch Framework 
-+ Integrieren & Querverweise zu anderen Kapiteln
-+ Framework gibt die Trennung der einzelnen Entwicklungsobjekte sowieso schon vor
 + Mehr zum Flex Model schreiben
 + Peter Bescheidgeben & um Feedback fragen
++ [Fiori Elements Feature Map](https://sapui5.hana.ondemand.com/#/topic/62d3f7c2a9424864921184fd6c7002eb)
