@@ -27,7 +27,7 @@ RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum
 * Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
 {: .highlight}
 
-## Entwicklungen mit RAP
+## Managed Entwicklungen mit RAP
 Per Definition trennt das RAP-Framework die einzelnen Entwicklungsobjekte ohnehin und gibt dadurch die Softwarearchitektur und eine saubere Trennung ohnehin vor. Die tatsächliche Anwendungslogik wird dabei strikt von der Datenhaltung getrennt. Diese strikten Vorgaben des Framework erleichtern Entwickler:innen das Orientieren und Implementieren von Anwendungen und nimmt viel Arbeit diesbezüglich ab. Das nachstehende Bild zeigt das grobe Zusammenspiel der Teilelemente in RAP Programmierungen.  
 
 ![RAP Big Picture, © SAP](./img/RAP.png)
@@ -44,19 +44,33 @@ Basierend auf den Tabellen wird nun das Virtuelle Datenmodell (VDM) via CDS View
 * **R_** Reuse Layer (Composition Tree für RAP)  
 * **C_** Consumption Layer (Projektion mit App-spezifischen UI-Annotationen)  
 
+Pro Business Objekt gibt es genau einen gültigen Reuse Layer, zu dem auch das BO Verhalten definiert wird. Verwenden dieses BO jedoch mehrere, separate Applikationen haben Sie die Möglichkeit, später mehrere Consumption Layer anzulegen und können dort App-spezifische Virtuelle Felder im CDS an dieser Stelle ergänzen oder überflüssige Felder für den jeweiligen Use-Case aus der Selektion entfernen. Sind virtuelle Felder aber für das gesamte RAP BO relevant und gültig sollten sie entsprechend bereits tiefer im Reuse Layer eingeführt werden. Selbiges gilt für die Verknüpfung von Wertehilfen oder sprachspezifischen Texten, die im BO global genutzt werden sollen.
+
 ### Behavior Definition & Pool
-Bezieht sich auf die CDS Root Reuse View.
+Aufbauen auf dem Root Reuse CDS View wird in der nächsten RAP-Schicht eine zentrale Behavior Definition angelegt. Diese definiert das verfügbare transaktionale Verhalten zum Business Objekt und enthält zentrale Konfigurationen dafür. Sie ist einmalig und es können nicht mehrere Behavior Definitions zu einem gegebenen CDS Composition Tree existieren. Jeder Knoten des Baumes ist einzeln in der Behavior Definition aufgeführt und kann mit einem Alias versehen werden und kann im Anschluss via [EML](#entity-manipulation-language-eml) unter diesem angesprochen werden.
 
 ### Behavior Projection
-Bezieht sich auf die CDS Root Consumption View.
+Bezieht sich auf die Root Consumption CDS View.
 
 ### OData Veröffentlichung
+Der eigentliche OData Service wird im RAP Framework nicht mehr wie zuvor üblich über die Transaktion SEGW veröffentlicht. Vielmehr übernimmt die Generierung und Bereitstellung das Framework automatisiert und mit lediglich wenigen Konfigurationen ihrerseits.  
+
+Zunächst müssen Sie aufbauen auf Ihrem Root Consumption CDS View eine **Service Definition** erstellen. Diese listet all zu veröffentlichenden Consumption CDS Views auf und ermöglicht die Vergabe eines Alias pro Quelle. Unter diesem Alias ist die Entität im OData-Service später als EntitySet verfügbar. Andere, verknüpfte CDS Views beispielsweise als Stammdatenquellen müssen nicht explizit aufgenommen werden, diese werden bei Referenzierung aus veröffentlichten CDS-Views automatisch Teil des Services.
+
+Aufbauend auf der Service Definition wird im nächsten Schritt ein **Service Binding** angelegt. Hier können Sie festlegen ob der OData Service zur Nutzung von Fiori Oberflächen, für analytische Szenarien oder einfach als Web-API gedacht ist. Außerdem entscheiden Sie sich für OData V2 oder V4. Nach dem Pulishen können Sie für UI Services direkt die Fiori Preview aufrufen oder andernfalls beispielsweise via /IWFND/GW_CLIENT den OData-Service konsumieren und gelieferte Daten testen.
+
+## Weitergehende RAP-Funktionalitäten
+
+### RAP Unit Testing
 
 ### Erweiterbarkeit
 Beachten Sie, sämtliche Entwicklungsobjekte für die Erweiterung freizugeben, falls dies gewünscht ist.
 
 ### Unmanaged Szenario
-Unterschiede zum oben beschriebenen
+Unterschiede zum oben beschriebenen Managed Szenario sollten hier ergänzt werden
+
+### Entity Manipulation Language (EML)
+Für mehr Infos siehe [EML Cheat Sheet](https://github.com/SAP-samples/abap-cheat-sheets/blob/main/08_EML_ABAP_for_RAP.md)
 
 ### RAP Feature Showcase App
 Die SAP stellt ein zentrales Repository bereit, das als Beispielapplikation in ihrem S/4 System installiert werden kann. Diese [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase) zeigt Ihnen interaktiv, welche Funktionalitäten mit RAP und Fiori Elements generell umgesetzt werden können und hilft Ihnen dabei, die nötigen Entwicklungen direkt im System nachzuvollziehen. Nach der Installation können Sie die App auf Ihrem S/4 System ausführen und alle verfügbaren Möglichkeiten erkunden. Die App gibt auch konkrete Auskunft dazu, wie bestimmte Funktionen umgesetzt werden können.
@@ -115,6 +129,7 @@ Wie oben erwähnt machte das RAP-Framework insbesondere direkt nach Release gro�
   
 ## Weiterführende Quellen
 + [RAP Cloud Documentation](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/289477a81eec4d4e84c0302fb6835035.html?locale=en-US)
++ [EML Cheat Sheet](https://github.com/SAP-samples/abap-cheat-sheets/blob/main/08_EML_ABAP_for_RAP.md)
 + [RAP Feature Matrix der Software Heroes](https://software-heroes.com/en/abap-feature-matrix)
 + [RAP Feature Cheat Sheet](https://www.brandeis.de/blog/cheat-sheet-sap-rap-basics-de)
 + [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)  
