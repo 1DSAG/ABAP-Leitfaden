@@ -88,7 +88,7 @@ Sie haben die Möglichkeit [Migration von CDS-generiertem BOPF zu RAP über Migr
 + Consumption von Business Events
 
 **2025, verfügbar ab Herbst**
-+ Ausschließlich CDS-basiertes Datenmodell (CDS Table Entities als Persistenz, CDS Simple Types, CDS Exact Cardinalities)
++ Ausschließlich CDS-basiertes Datenmodell (CDS Table Entities als Persistenz, CDS Simple Types, CDS Exact Cardinalities, CDS Scalar Functions, CDS Aspects)
 + RAP-Modellierung von Hierarchien
 + Fiori Elements Applikationen zur Änderung von RAP-Hierarchien
   
