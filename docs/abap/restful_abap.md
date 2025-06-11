@@ -22,6 +22,7 @@ RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum
 
 ## Empfehlungen / Best Practices 
 >* RAP sollte frühestens ab Release 2020 produktiv genutzt werden. Setzen Sie sich bei Bedarf detailliert mit dem eingeschränkten Funktionsumfang im Release 2019 (wie das Fehlen von Validations, Determinations, Draft, ...) auseinander!  
+* In der Regel sollten Sie für Neuentwicklungen das integrierte Draft-Konzept nutzen und lediglich bei triftigen Gründen darauf verzichten.
 * Da RAP als Technologie relativ neu ist gibt es teils eklatante Unterschiede je nach S/4 Release. Machen Sie sich mit den Einschränkungen ihres Systems vorab vertraut!  
 * Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
 {: .highlight}
@@ -35,7 +36,7 @@ RAP Big Picture, © SAP
 {: .img-caption}
 
 ### Datenbankebene
-Auf unterster Ebene wird das Datenmodell für das RAP Business Objekt klassisch 
+Bei Neuentwicklungen sollte stets das Managed Szenario genutzt werden um möglichst viele Funktionalitäten (CRUD-Handlung, Draft, ...) automatisiert vom Framework zu nutzen und manuellen Entwicklungsaufwand zu reduzieren. Einige Unterschiede im [Unmanaged Szenario finden Sie unten](#unmanaged-szenario).Auf unterster Ebene wird das Datenmodell für das RAP Business Objekt klassisch via DDIC Tabellen oder auf neueren Systemen mit CDS Tabellenentitäten erstellt. Jeder Knoten, der später über RAP als eigenes EntitySet veröffentlicht werden soll, erhält eine eigene Datenhaltung
 Virtuelles Datenmodell (VDM) via CDS Views aufbauen - diese wurden zuvor im Kapitel [Core Data Services](../core-data-services/index.md) erläutert.
 
 RAP
@@ -47,6 +48,9 @@ RAP
 ### Behavior Projection
 
 ### OData Veröffentlichung
+
+### Unmanaged Szenario
+Unterschiede zum oben beschriebenen
 
 ### RAP Feature Showcase App
 Die SAP stellt ein zentrales Repository bereit, das als Beispielapplikation in ihrem S/4 System installiert werden kann. Diese [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase) zeigt Ihnen interaktiv, welche Funktionalitäten mit RAP und Fiori Elements generell umgesetzt werden können und hilft Ihnen dabei, die nötigen Entwicklungen direkt im System nachzuvollziehen. Nach der Installation können Sie die App auf Ihrem S/4 System ausführen und alle verfügbaren Möglichkeiten erkunden. Die App gibt auch konkrete Auskunft dazu, wie bestimmte Funktionen umgesetzt werden können.
