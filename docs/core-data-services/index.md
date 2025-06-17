@@ -269,7 +269,20 @@ Mit der Transaktion SACMSEL können Berechtigungsprüfergebnisse vereinfacht ang
 {: .highlight}
 
 ## Associations
-TODO
+Mit Associations können CDS Entitäten miteinander verknüpft werden. Die Quelle ist immer die eigene CDS View Entität. Als Ziel können DDIC-Tabellen und andere CDS Entitäten definiert werden. Wichtig sind die Angaben zur Kardinalität und die Kondition zur Verknüpfung. Die Kardinalität bestimmt die Relation, also z.B. 1:1 oder 0:n. Die Kondition bestimmt über welche Felder Quelle und Ziel verbunden sind.
+Eine Association wird immer nur in eine Richtung definiert. Wenn man zwei Entitäten in beide Richtungen mit einander verbinden möchte, muss man in beiden die Association zur jeweils anderen angeben.
+
+__Beispiel__
+
+```abap
+association [0..*] TO other_view AS _other ON _other.foreign_key_field = $projection.key_field
+```
+
+> Details finden Sie unter [SAP Help (CDS View Entity, SELECT, Associations)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_association_v2.htm)
+
+Eine spezielle Form der Association ist eine sog. `ASSOCIATION TO PARENT`. Damit kann man eine CDS Entität als Eltern-Entität definieren. Dies ist vor allem im Kontext von [RAP](/ABAP-Leitfaden/abap/restful_abap/) relevant. Die Association in die andere Richtung, also zur Kind-Entität, wird per `COMPOSITION` definiert. Sie müssen zunächst die Association zur Eltern-Entität eintragen und können erst danach die Association zur Kind-Entität angeben.
+
+> Details finden Sie unter [SAP Help (ASSOCIATION TO PARENT)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_to_parent_assoc_v2.htm) und [SAP Help (COMPOSITION)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_composition_v2.htm)
 
 ## Erweiterbarkeit
 ### Stabilitätsverträge  
