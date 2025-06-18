@@ -8,13 +8,12 @@ nav_order: 3
 
 {: .no_toc}
 
-# Sicherheitseinstellungen zu SAP Screen Personas 3.0
+# SAP Screen Personas 3.0
 
 1. TOC
 {:toc}
 
-
-## Allgemeines zu "SAP Screen Personas 3.0"
+## Allgemein
 
 Was ist “SAP Screen Personas 3.0”?
 
@@ -31,9 +30,9 @@ SICF Service
 
 Bei SAP Screen Personas handelt es sich um eine Benutzungsoberflächen-Technologie, die als  Add-On im Backend-System implementiert wird, Die Sicherheit ist deshalb abhängig von den für dieses System  verfügbaren Funktionen. zu Datenzugriff-Governance oder Datenschutz. Die  meisten dieser Systemfunktionen werden durch die zugrunde liegenden Systemmechanismen  und -richtlinien vorgegeben. Alle für SAP Screen Personas spezifischen Aspekte oder möglichen  Diskrepanzen und Bereiche von besonderem Interesse werden nachfolgend erläutert.
 
-**Spezielle Sicherheitsaspekte für "Screen  personas 3.0"**
+## Spezielle Sicherheitsaspekte
 
-**SSL Verschlüsselung der Verbindung**
+### SSL Verschlüsselung der Verbindung
 
 Die Services welche von Personas verwendet werden sind SSL zu verschlüsseln:
 
@@ -42,7 +41,7 @@ Die Services welche von Personas verwendet werden sind SSL zu verschlüsseln:
 Verschlüsselung
 {: .img-caption}
 
-**Schutz vor Cross Site Request Forgery für ITS**
+### Schutz vor Cross Site Request Forgery für ITS
 
 Zum Schutz von Cross Site Requests ist an den Services unter GUI Konfiguration der Parameter  ~XSRFCHECK = 1 zu setzen. Details sind im Hinweis 1481392 beschrieben.
 
@@ -51,9 +50,9 @@ Zum Schutz von Cross Site Requests ist an den Services unter GUI Konfiguration d
 Parametereinstellung
 {: .img-caption}
 
-**Allgemeine Empfehlungen für ITS und SAP  GUI for HTML**
+## Allgemeine Empfehlungen für ITS und SAP  GUI for HTML
 
-**Abmeldung für SAP GUI for HTML aktivieren**
+### Abmeldung für SAP GUI for HTML aktivieren
 
 Damit die Abmeldung aus dem HTML GUI sicher funktioniert müssen folgende Dinge beachtet  werden:
 
@@ -69,7 +68,7 @@ Bei der Abmeldeseite des WEBGUI Services den Service /sap/public/bc/icf/logoff a
 
 Details sind im SAP Hinweis 1777513 beschrieben (ebenso weitere Hintergrundinformationen)
 
-**Domain Relaxing deaktivieren (falls notwendig)**
+### Domain Relaxing deaktivieren (falls notwendig)
 
 Das Domain Relaxing ermöglicht es client-seitigen (zum Beispiel auf einem Browser)  Funktionen oder Anwendungen, mit anderen client-seitigen Funktionen in anderen Client Fenstern zu kommunizieren. Das Domain Relaxing ist nötig, falls Anwendungen von  verschiedenen Backend-Systemen (Servern) am Frontend Daten austauschen müssen. Es muss  dafür gesorgt werden, dass für alle betroffenen Anwendungen die gleiche Client Domain eingestellt ist, da andernfalls vom Client (Browser) ein Zugriffsfehler beim Versuch der  Kommunikation beanstandet wird.
 
@@ -84,15 +83,13 @@ Details sind im SAP Hinweis 2111099 beschrieben (ebenso weitere Hintergrundinfor
 
 \=> Einfügen Abschnitt
 
-**SAP Berechtigungen**
+## SAP Berechtigungen
 
 SAP Screen Personas 3.0 ist nur dann für einen Benutzer aktiviert, wenn er über die  erforderlichen Berechtigungen basierend auf Benutzerrolle verfügt. Die Rollenzuordnung erfolgt  im Rahmen des regulären Benutzerverwaltungsprozesses. SAP liefert folgende Standardrollen  aus:
 
-• Administrator: **/PERSONAS/ADMIN_ROLE** \- Diese Rolle hat vollständigen Zugriff  auf alle Funktionen, die SAP Screen Personas dem Flavor-Consumer zur Laufzeit zur  Verfügung stehen, kann den Zugriff auf alle Funktionen der Flavor-Builder-Aufgaben zur  Design-Zeit ermöglichen und Administrationsaufgaben in der Administrationsumgebung  ausführen.
-
-• Flavor-Konsument: **/PERSONAS/CONSUMER_ROLE** \- Diese Rolle hat  Berechtigungen für den Zugriff auf Flavors für klassische Anwendungen. Flavor Konsumenten können mit dem Flavor-Manager zwischen Flavors und dem  ursprünglichen Bild wählen und Flavors zwischen dem Flavor-Manager und der Flavor Galerie verschieben.
-
-• Flavor-Builder: **/PERSONAS/EDITOR_ROLE** \- Diese Rolle wird verwendet, um  Flavors und andere benutzereigene Objekte mit Bearbeitungsrechten in allen Design Zeit-Editoren zu erstellen.
+- Administrator: **/PERSONAS/ADMIN_ROLE** \- Diese Rolle hat vollständigen Zugriff  auf alle Funktionen, die SAP Screen Personas dem Flavor-Consumer zur Laufzeit zur  Verfügung stehen, kann den Zugriff auf alle Funktionen der Flavor-Builder-Aufgaben zur  Design-Zeit ermöglichen und Administrationsaufgaben in der Administrationsumgebung  ausführen.
+- Flavor-Konsument: **/PERSONAS/CONSUMER_ROLE** \- Diese Rolle hat  Berechtigungen für den Zugriff auf Flavors für klassische Anwendungen. Flavor Konsumenten können mit dem Flavor-Manager zwischen Flavors und dem  ursprünglichen Bild wählen und Flavors zwischen dem Flavor-Manager und der Flavor Galerie verschieben.
+- Flavor-Builder: **/PERSONAS/EDITOR_ROLE** \- Diese Rolle wird verwendet, um  Flavors und andere benutzereigene Objekte mit Bearbeitungsrechten in allen Design Zeit-Editoren zu erstellen.
 
 SAP liefert die Rollen ohne generiertes Berechtigungsprofil aus, deshalb muss das Profil jeweils  generiert und sehr wahrscheinlich auch angepasst werden.
 
