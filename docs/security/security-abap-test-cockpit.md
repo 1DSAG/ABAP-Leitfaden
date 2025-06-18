@@ -3,7 +3,7 @@ layout: page
 title: Sicherheit - ABAP Test Cockpit
 permalink: /security/abap-test-cockpit/
 parent: Sicherheit
-nav_order: 2
+nav_order: 7
 ---
 
 {: .no_toc}
