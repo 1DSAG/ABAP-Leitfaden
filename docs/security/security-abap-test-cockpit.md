@@ -28,7 +28,7 @@ Die Checks/die Prüfungen sind einmal in den „Code Inspector“ integriert, di
 
 Abgerundet werden die Prüfungen mit der Integration in das SAP CTS „Korrektur- und Transportsystem“ für Systemänderungen/Entwicklungen. Hier kann man das System so einstellen, dass bei jeder Transportfreigabe gegen die Checks des ATC geprüft wird. Werden Befunde festgestellt, so kann eingestellt werden, dass diese die Transportfreigabe verhindern. Damit wird sichergestellt, dass nur einwandfreier Code in die SAP-Systeme transportiert wird. Diese Funktion kann zusätzlich mit einem „Befreiungsworkflow“ erweitert werden.
 
-## SAP Systemlandschaft mit einem zentralen ATC
+## Zentrales ATC
 
 ![Schema Central ATC](./img/image7.png)
 
@@ -151,7 +151,7 @@ Eine sinnvolle Ergänzung zu den Code PAL Checks ist der ABAP Cleaner, eine Erwe
 
 Seit Mitte September 2023 gibt es [eine Version von "code pal" für ABAP in Cloud](https://github.com/SAP/code-pal-for-abap-cloud/) (BTP) Umgebungen. Grundsätzlich scheint (nach der Dokumentation) "code pal for cloud checks" genauso zu funktionieren wie der "normale" "code pal". SAP liefert über das GITHUB neue Checks aus, welche mit "abapgit" importiert werden können. Die Checks sind in einem eigenen Namensbereich /CC4A/CODE_PAL hintergelegt. Details sind von SAP in folgendem Blog beschrieben: "[Clean code checks for ABAP – Cloud Edition](https://blogs.sap.com/2023/09/11/clean-code-checks-for-abap-cloud-edition/)". Ebenso sind die Checks in der Entwicklungsplattform Eclipse verfügbar, so dass bereits beim Entwicklungsprozess auf Clean Code geprüft werden kann, wenn man mit ABAP Cloud entwickelt.
 
-## Sicherheitsprüfungen
+## Prüfungen - Sicherheit
 
 ### Standard-Sicherheitsprüfungen
 
@@ -164,9 +164,9 @@ CVA Prüfungen
 
 Die SAP Standard Sicherheitsprüfungen sollten für Hintergrundprüfungen und auch für die Onlineprüfung im Rahmen der Transportfreigaben aktiviert werden. Eventuell kann man auch mit den Entwicklern abgestimmt kritische Anweisungen definieren, auf die man noch prüfen kann/sollte
 
-### Zusätzliche CVA-Prüfungen (CVA Code Vulnerability Analyzer)
+### CVA - Code Vulnerability Analyzer
 
-Der [CVA ist ein Produkt der SAP](https://me.sap.com/notes/1855773) welches man zusätzlich lizenzieren muss. Im Rahmen der Rahmenvertragsverlängerung (Juli 2022) wurde dieses Produkt zu einem sehr günstigen Preis gekauft. Das Produkt erweitert die SAP-Sicherheitsprüfungen erheblich, die Prüfungen des CVA sind die gleichen Prüfungen mit denen SAP ihren eigenen Code (der Code welche mit den SAP ABAP Systemen ausgeliefert wird) prüft.
+Der [CVA ist ein Produkt der SAP](https://me.sap.com/notes/1855773) welches man zusätzlich lizenzieren muss. Im Rahmen der Rahmenvertragsverlängerung (Juli 2022) wurde dieses Produkt zu einem sehr günstigen Preis gekauft. Das Produkt erweitert die SAP-Sicherheitsprüfungen erheblich, die Prüfungen des CVA sind die gleichen Prüfungen mit denen SAP ihren eigenen Code (der Code welche mit den SAP ABAP Systemen ausgeliefert wird) prüft. Mittlerweile kann das CVA auch kostenlos zusammen mit einem SAP BTP ABAP Environment provisioniert werden, Voraussetzung ist dabei der Einsatz des ABAP Environments als zentrales Prüfsystem.
 
 Auch diese Prüfungen werden bei jedem Netweaver ABAP – Update erweitert.
 
