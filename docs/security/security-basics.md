@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sicherheit - Grundlagen
+title: Grundlagen
 permalink: /security/basics/
 parent: Sicherheit
 nav_order: 2

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sicherheit - Überblick
+title: Überblick
 permalink: /security/overview/
 parent: Sicherheit
 nav_order: 1

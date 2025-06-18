@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sicherheit - Sichere Entwicklung
+title: Sichere Entwicklung
 permalink: /security/secure-development/
 parent: Sicherheit
 nav_order: 4

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sicherheit - Entwicklungsprozess
+title: Entwicklungsprozess
 permalink: /security/process/
 parent: Sicherheit
 nav_order: 5

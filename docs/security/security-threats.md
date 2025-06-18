@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sicherheit - Bedrohungen
+title: Bedrohungen
 permalink: /security/threats/
 parent: Sicherheit
 nav_order: 3

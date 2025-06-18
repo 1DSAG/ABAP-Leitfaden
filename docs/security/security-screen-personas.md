@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sicherheit - Screen Personas 
+title: Screen Personas 
 permalink: /security/screen-personas/
 parent: Sicherheit
 nav_order: 8
