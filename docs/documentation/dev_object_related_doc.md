@@ -70,7 +70,8 @@ Für alle anderen Kommentare empfiehlt SAP, Inline-Kommentare zu verwenden. Dies
 
 WEITERE QUELLEN
 
-1. Horst Keller, Wolf Hagen Thümmel: ABAP-Programmierrichtlinien. SAP Press, 2009. ISBN: 9783836212861
+1. Horst Keller, Wolf Hagen Thümmel: ABAP-Programmierrichtlinien. SAP Press, 2009. ISBN: 978-3-8362-1286-1
+2. Klaus Haeuptle, Florian Hoffmann, Rodrigo Jordão, Michel Martin, Anagha Ravinarayan, Kai Westerholz: Clean ABAP. SAP PRESS, 2022. ISBN: 978-3-8362-8659-6
 
 ## ABAP Doc
 

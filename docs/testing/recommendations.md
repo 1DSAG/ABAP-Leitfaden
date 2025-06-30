@@ -19,7 +19,7 @@ Folgend möchten wir versuchen, Ihnen aus den vielen Informationen eine Empfehlu
 
 ## Konsens
 
-Unit Tests und damit Code-Qualität sind kein Selbstzweck, sondern ein wichtiger Bestandteil für Ihre produktiven Softwareprodukte.. Deswegen gibt es aus unserer Sicht keine Ausrede, Unit Tests nicht zu verwenden. 
+Unit Tests und damit Code-Qualität sind kein Selbstzweck, sondern ein wichtiger Bestandteil für Ihre produktiven Softwareprodukte. Deswegen gibt es aus unserer Sicht keine Ausrede, Unit Tests nicht zu verwenden. 
 
 Es gibt zwei verschiedene Perspektiven, die zusammenpassen müssen:
 1. Entwickelnde müssen Unit Tests erstellen wollen
@@ -30,7 +30,7 @@ Wenn das Management die Entwickelnden nicht unterstützt und keine Rückendeckun
 
 ## Verantwortlichkeiten
 
-Wir haben in dem Kapitel "ABAP Unit" versucht, die Notwendigkeit und die Vorteile von Unit Tests klarzumachen. In welcher Form und in welchem Umfang Sie dies in Ihrer Firma, in Ihrem Team einsetzen, müssen Sie erarbeiten. Aus diesem Grund sollte es eine verantwortliche Person geben, die in der Entwicklungsabteilung als auch auf Managementebene die Weichen stellt und Dinge vorantreibt.
+Wir haben in dem Kapitel [ABAP Unit](#abap_unit_advanced) versucht, die Notwendigkeit und die Vorteile von Unit Tests klarzumachen. In welcher Form und in welchem Umfang Sie dies in Ihrer Firma, in Ihrem Team einsetzen, müssen Sie erarbeiten. Aus diesem Grund sollte es eine verantwortliche Person geben, die in der Entwicklungsabteilung als auch auf Managementebene die Weichen stellt und Dinge vorantreibt.
 
 ## Am Anfang war das Konzept
 
@@ -46,7 +46,7 @@ Automatisierte Tests mit Hilfe von ABAP Unit sind ein sehr weites Feld. Es gibt 
 
 ## Management
 
-Das Erstellen und verwalten von Unit Tests ist ein zeitlicher Mehraufwand. Dieser wird durch eine höhrere Softwarequalität und damit geringere Anwendertests oder gar Produktionsausfälle jedoch wett gemacht. Entwickelnde benötigen - gerade in der Anfangszeit - deutlich mehr Zeit für Erstellung der Unit Tests. Dies muss durch das Management gewollt sein und muss unterstützt werden. Definieren Sie, was Sie vom Management erwarten, aber auch, was das Management dafür bekommt. Suchen Sie sich einen Bereich, eine Applikation oder ein Team, das Erfahrungen mit automatisiertem Testing sammelt. Setzen Sie sich Ziele, was Sie in einem betsimmten Zeitraum erreicht haben wollen.
+Das Erstellen und Verwalten von Unit Tests ist ein zeitlicher Mehraufwand. Dieser wird durch eine höhrere Softwarequalität und damit geringere Anwendertests oder gar Produktionsausfälle jedoch wett gemacht. Entwickelnde benötigen - gerade in der Anfangszeit - deutlich mehr Zeit für die Erstellung der Unit Tests. Dies muss durch das Management gewollt sein und muss unterstützt werden. Definieren Sie, was Sie vom Management erwarten, aber auch, was das Management dafür bekommt. Suchen Sie sich einen Bereich, eine Applikation oder ein Team, das Erfahrungen mit automatisiertem Testing sammelt. Setzen Sie sich Ziele, was Sie in einem betsimmten Zeitraum erreicht haben wollen.
 
 ## Weiterbildung
 

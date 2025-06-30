@@ -39,8 +39,10 @@ Darüber hinaus kann eine veraltete Dokumentation irreführend sein. Deshalb sol
 | BEST PRACTICE |
 |---------------|
 |Es sollte im Unternehmen geklärt werden, wie Dokumentation von Software erfolgen soll.|
+|Es sollte eine einheitliche Plattform genutzt werden, entweder eine strukturierte Ablage, Ticketsystem oder auch ein Prozessdokument mit fortgeführter Dokumentation (versioniert)|
+|Der Aufbau der Dokumente sollte immer gleichartig sein, auch von extern zugekaufter Software, das ermöglicht der Supportorganisation auch dort helfen zu können|
 
-Innerhalb einer SAP-Systemlandschaft bietet der SAP Solution Manager Möglichkeiten zur Projektdokumentation.
+Innerhalb einer SAP-Systemlandschaft bietet zum Beispiel der SAP Solution Manager Möglichkeiten zur Projektdokumentation.
 
 Die nachfolgenden Links bieten weitere Informationen dazu.
 
