@@ -209,16 +209,6 @@ Dabei muss nicht jedes Repository-Objekt einzeln zurückgeholt werden, sondern e
 
 ![Alt text](./img/dsagleitfaden-customcode.drawio.png)
 
-----
-**Das hier brauchen wir dann nicht mehr ? steht ja oben** ----
-– Kundenentwicklung in einer normalen 3-System-Landschaft
-– Entwicklung in verschiedene Systemlandschaften verteilen
-– Recovery in drei Systemlandschaft
-– Paralleles Arbeiten
-– Custom Code Migration (Backup Legacy)
-
-----
-
 
 ## Vergleich des Entwicklungsprozess mit verschiedenen Versionsverwaltungen
 
@@ -238,13 +228,44 @@ Dabei muss nicht jedes Repository-Objekt einzeln zurückgeholt werden, sondern e
 
 ## Security Aspekte 
 
+### Revisionssicherheit
+Durch die präzise und lückenlose Protokollierung aller Änderungen sorgt die Versionsverwaltung für eine Revisionssicherheit. Dies ist besonders wichtig, um Compliance Anforderungen zu erfüllen sowie bei der Überprüfung von Sicherheitsvorfällen oder Audits
+
+### Sicherung und Wiederherstellung
+
+Versionsverwaltungen verfügen über Mechanismen zur regelmäßigen Sicherung der Daten. Im Falle eines Datenverlusts oder einer Beschädigung können frühere Versionen der Daten wiederhergestellt werden. Dadurch wird das Risiko von Datenverlust minimiert und die Kontinuität der Geschäftsprozesse sichergestellt.
+
+### Verwaltung von Zugriffsrechten
+Durch den Einsatz von externen Versionsverwaltungssystemen gibt es Funktionen zur Steuerung von Zugriffsrechten. So kann von den Administratoren festgelegt werden, wer auf welche Daten zugreifen, bearbeiten oder anzeigen darf. So wird unbefugter Zugriff verhindert und die Vertraulichkeit der Daten gewahrt.
+
+### Änderungsverfolgung
+
+Jede Änderung wird dokumentiert, einschließlich des Zeitpunktes und des Bearbeiters. Dadurch wird Transparenz geschafft und die Fehlerbehbung erleichtert.
+
+### Manipulationseinsatz
+Mit Hilfe von externen Versionsverwaltungssystemen können durch deren kryptografische Hashing-Algorithmen, de Inhalt und der Änderungsverlauf vor Manipulation zu schützen
 ## Integration an andere Komponenten
+
+### CI/CD-Pipeline
+### Azure DevOps
+### Apache Jenkins
 
 ## Risiken
 
 ## Zusammenfassung
 
+
 ## Empfehlung
+
+
+### Definition der Anforderungen
+
+Die Wahl des richtigen Versionsverwaltung hängt von den spezifischen Anforderungen und dem Entwicklungsprozess des jeweiligen Projekts oder Unternehmens ab. Definieren Sie ihre Anforderungen und entscheiden sie dann welche Versionsverwaltung sie einsetzen möchte. 
+
+### Einsatz von weiteren Tools
+Es können mit Hilfe der Versionsverwaltung moderne Entwicklungspraktiken wie CI/CD genutzt werden
+
+
 
 ## Quellen
 https://www.rheinwerk-verlag.de/git-und-sap/?srsltid=AfmBOooMbM45uQOGPLDAiaKz5hHazrf45BIEVjmOIe8mz9HjpdHjgzZq
