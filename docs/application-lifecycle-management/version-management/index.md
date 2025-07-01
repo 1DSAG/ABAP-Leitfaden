@@ -231,6 +231,7 @@ SAP-Entwickler stehen im Spannungsfeld zwischen traditioneller Stabilität und d
 ## Integration an andere Komponenten
 Die SAP-Versionsverwaltung ist der Ausgangspunkt mit ABAP-Code außerhalb eines SAP-Systems zu arbeiten
 ### Azure DevOps
+Azure DevOps optimiert den Bereitstellungsprozess, indem Pipelines bereitgestellt werden, die Sie ausführen können.
 Quelle: 
 https://community.sap.com/t5/technology-blog-posts-by-members/sap-change-management-with-azure-devops-transforming-enterprise-operations/ba-p/14130760
 ### Apache Jenkins
