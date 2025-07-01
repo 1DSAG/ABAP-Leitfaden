@@ -226,6 +226,15 @@ Dabei muss nicht jedes Repository-Objekt einzeln zurückgeholt werden, sondern e
 
 ## Annäherung Entwicklungsprozesse ABAP und Non-ABAP über git-basierte Tools
 
+SAP-Entwickler stehen im Spannungsfeld zwischen traditioneller Stabilität und der Notwendigkeit für schnellere, flexiblere Entwicklungsprozesse. In vielen anderen IT-Abteilungen sind DevOps-Praktiken bereits erfolgreich implementiert, während SAP-Team noch mit langwierigen Release-Zyklen und komplexerer Transportmechanismen. DevOps ist eine Kombination aus „Development“ (Entwicklung) und „Operations“ (Betrieb) und zielt darauf ab, Entwicklungs- und Betriebsprozesse so zu verzahnen, dass Software schneller, verlässlicher und mit höherer Qualität ausgeliefert wird. Durch den Einsatz einer Versionsverwaltung lässt sich auch in der SAP-Welt eine agile und effiziente Entwicklungsumgebung schaffen. 
+
+## Integration an andere Komponenten
+
+### CI/CD-Pipeline
+
+### Azure DevOps
+### Apache Jenkins
+
 ## Security Aspekte 
 
 ### Revisionssicherheit
@@ -244,14 +253,13 @@ Jede Änderung wird dokumentiert, einschließlich des Zeitpunktes und des Bearbe
 
 ### Manipulationseinsatz
 Mit Hilfe von externen Versionsverwaltungssystemen können durch deren kryptografische Hashing-Algorithmen, de Inhalt und der Änderungsverlauf vor Manipulation zu schützen
-## Integration an andere Komponenten
 
-### CI/CD-Pipeline
-### Azure DevOps
-### Apache Jenkins
 
 ## Risiken
-
+- Langsame Release-Zyklen: Monatelange Entwicklungsphasen und manuelle Tests sorgen für Verzögerungen.
+- Komplexe Transportmechanismen: Das herkömmliche SAP-Transportmanagement ist nicht auf CI/CD optimiert.
+- Fehlende Automatisierung: Tests, Deployment und Code-Reviews sind oft noch manuell und fehleranfällig.
+- Widerstand gegen Veränderung: Viele SAP-Teams arbeiten nach klassischen Wasserfallmethoden und stehen agilen Prozessen skeptisch gegenüber.
 ## Zusammenfassung
 
 
