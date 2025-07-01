@@ -229,12 +229,16 @@ Dabei muss nicht jedes Repository-Objekt einzeln zurückgeholt werden, sondern e
 SAP-Entwickler stehen im Spannungsfeld zwischen traditioneller Stabilität und der Notwendigkeit für schnellere, flexiblere Entwicklungsprozesse. In vielen anderen IT-Abteilungen sind DevOps-Praktiken bereits erfolgreich implementiert, während SAP-Team noch mit langwierigen Release-Zyklen und komplexerer Transportmechanismen. DevOps ist eine Kombination aus „Development“ (Entwicklung) und „Operations“ (Betrieb) und zielt darauf ab, Entwicklungs- und Betriebsprozesse so zu verzahnen, dass Software schneller, verlässlicher und mit höherer Qualität ausgeliefert wird. Durch den Einsatz einer Versionsverwaltung lässt sich auch in der SAP-Welt eine agile und effiziente Entwicklungsumgebung schaffen. 
 
 ## Integration an andere Komponenten
-
-### CI/CD-Pipeline
-
+Die SAP-Versionsverwaltung ist der Ausgangspunkt mit ABAP-Code außerhalb eines SAP-Systems zu arbeiten
 ### Azure DevOps
+Quelle: 
+https://community.sap.com/t5/technology-blog-posts-by-members/sap-change-management-with-azure-devops-transforming-enterprise-operations/ba-p/14130760
 ### Apache Jenkins
+Jenkins ist eines der Standardwerkzeuge für Continuous Integration. Um Continuous Integration- oder Daily/Nightly Build-Komponenten einfach auf einem ABAP-Entwicklungssystem anzuwenden, kann der Startpunkt eine Versionsverwaltung sein.
 
+Quelle:
+https://github.com/SAP/jenkins-library
+https://community.sap.com/t5/application-development-and-automation-blog-posts/continuous-integration-and-abap-jenkins-the-missing-link/ba-p/13489906
 ## Security Aspekte 
 
 ### Revisionssicherheit
@@ -271,7 +275,7 @@ Mit Hilfe von externen Versionsverwaltungssystemen können durch deren kryptogra
 Die Wahl des richtigen Versionsverwaltung hängt von den spezifischen Anforderungen und dem Entwicklungsprozess des jeweiligen Projekts oder Unternehmens ab. Definieren Sie ihre Anforderungen und entscheiden sie dann welche Versionsverwaltung sie einsetzen möchte. 
 
 ### Einsatz von weiteren Tools
-Es können mit Hilfe der Versionsverwaltung moderne Entwicklungspraktiken wie CI/CD genutzt werden
+Es können mit Hilfe der Versionsverwaltung moderne Entwicklungspraktiken wie CI/CD genutzt werden. Überlegen Sie sich
 
 
 
