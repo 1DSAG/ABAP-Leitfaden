@@ -25,6 +25,7 @@ RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum
 * In der Regel sollten Sie für Neuentwicklungen das integrierte Draft-Konzept nutzen und lediglich bei triftigen Gründen darauf verzichten.
 * Da RAP als Technologie relativ neu ist gibt es teils eklatante Unterschiede je nach S/4 Release. Machen Sie sich mit den Einschränkungen ihres Systems vorab vertraut!  
 * Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
+* Vergessen Sie nicht, Ihre Entwicklungen mit RAP zur Erweiterbarkeit für andere Konsumenten freizugeben, falls dies gewünscht ist.
 {: .highlight}
 
 ## Managed Entwicklungen mit RAP
@@ -50,7 +51,7 @@ Pro Business Objekt gibt es genau einen gültigen Reuse Layer, zu dem auch das B
 Aufbauen auf dem Root Reuse CDS View wird in der nächsten RAP-Schicht eine zentrale Behavior Definition angelegt. Diese definiert das verfügbare transaktionale Verhalten zum Business Objekt und enthält zentrale Konfigurationen dafür. Sie ist einmalig und es können nicht mehrere Behavior Definitions zu einem gegebenen CDS Composition Tree existieren. Jeder Knoten des Baumes ist einzeln in der Behavior Definition aufgeführt und kann mit einem Alias versehen werden und kann im Anschluss via [EML](#entity-manipulation-language-eml) unter diesem angesprochen werden.
 
 ### Behavior Projection
-Bezieht sich auf die Root Consumption CDS View.
+Die zuvor genannte Behavior Definition existiert einmalig und zentral zu jedem Business Object (Composition Tree) und legt fest, welches Verhalten dieses BO grundsätzlich zur Verfügung stellt. Das BO kann nun jedoch in mehreren (oder keinen) Fiori Applikationen verwendet werden und hier unterscheiden sich die konkreten Anforderungen in der Regel. Beispielsweise soll nur die App für Administrationen erlauben, bestehende Instanzen zu löschen - dafür wird für den Admin die Neuanlage von Instanzen weniger relevant sein. Die Projection-Schicht ermöglich daher, das zur Verfügung stehende Verhalten des RAP BOs für jede einzelne App oder API einzuschränken. Validierungen und Determinierungen jedoch werden für das BO immer automatisch angewendet. Action beispielsweise lassen sich in der Behavior Projection ignorieren, indem sie eben nicht zur Verwendung freigegeben werden. Ähnlich hierzu werden in den CDS Projection Schicht die anzuzeigenden Felder eingeschränkt. Die Behavior Projection bezieht sich auf eine Root Consumption CDS View und diese wird später für die Service Definition genutzt.
 
 ### OData Veröffentlichung
 Der eigentliche OData Service wird im RAP Framework nicht mehr wie zuvor üblich über die Transaktion SEGW veröffentlicht. Vielmehr übernimmt die Generierung und Bereitstellung das Framework automatisiert und mit lediglich wenigen Konfigurationen ihrerseits.  
@@ -62,6 +63,7 @@ Aufbauend auf der Service Definition wird im nächsten Schritt ein **Service Bin
 ## Weitergehende RAP-Funktionalitäten
 
 ### RAP Unit Testing
+Das RAP Framework unterstützt natürlich auch die Erstellung von Unit Tests um eine hohe Anwendungsqualität als Priorität im Entwicklungszyklus zu unterstützen. Hierzu werden im Behavior Pool des Business Objects lokale Testklassen definiert um darin zum Beispiel die korrekte Funktionsweise einer RAP Validation zu überprüfen oder sicherzustellen, dass das Durchlaufen einer Action zum gewünschten Ergebnis führt. Diese rufen dann direkt die ABAP-Methoden der `class_under_test` auf und können im ATC durchlaufen und ausgewertet werden. Alternativ kann eine separate Testklasse definiert werden, die über EML das RAP BO testet; auch hier können genutzte Stammdaten über CDS Test Doubles gemockt und verwendet werden - die Referenz zum BO wird durch ein ABAP Doc Kommentar `"! @testing BDEF:<rap_bo_name>` hergestellt. Weiterführende Informationen und konkrete Beispiele stehen unter anderem in diesem [RAP Workshop](https://github.com/SAP-samples/abap-platform-rap-workshops/tree/main/rap4xx/rap400#readme) zur Verfügung.
 
 ### Erweiterbarkeit
 Beachten Sie, sämtliche Entwicklungsobjekte für die Erweiterung freizugeben, falls dies gewünscht ist.
@@ -70,7 +72,7 @@ Beachten Sie, sämtliche Entwicklungsobjekte für die Erweiterung freizugeben, f
 Unterschiede zum oben beschriebenen Managed Szenario sollten hier ergänzt werden
 
 ### Entity Manipulation Language (EML)
-Für mehr Infos siehe [EML Cheat Sheet](https://github.com/SAP-samples/abap-cheat-sheets/blob/main/08_EML_ABAP_for_RAP.md)
+Die Entity Manipulation Language würde extra für das RAP Framework zum ABAP Kernel hinzugefügt und erlaubt die Nutzung und Interaktion mit RAP Business Objecten aus ABAP Code heraus. Sie können Ihre BOs oder von der SAP freigegebene auf diese Weise also auch in individuellen Entwicklungen aufrufen. Es bestehen unter anderem Möglichkeiten zur Anlage neuer Instanzen, Aufruf von Action, Bearbeitung von Feldwerten und ähnlichem. Alle Knoten des Kompositionsbaumes können über die entsprechende Syntax genutzt werden. Für mehr Informationen bietet sich das [EML Cheat Sheet](https://github.com/SAP-samples/abap-cheat-sheets/blob/main/08_EML_ABAP_for_RAP.md) als weiterführende Quelle an.
 
 ### RAP Feature Showcase App
 Die SAP stellt ein zentrales Repository bereit, das als Beispielapplikation in ihrem S/4 System installiert werden kann. Diese [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase) zeigt Ihnen interaktiv, welche Funktionalitäten mit RAP und Fiori Elements generell umgesetzt werden können und hilft Ihnen dabei, die nötigen Entwicklungen direkt im System nachzuvollziehen. Nach der Installation können Sie die App auf Ihrem S/4 System ausführen und alle verfügbaren Möglichkeiten erkunden. Die App gibt auch konkrete Auskunft dazu, wie bestimmte Funktionen umgesetzt werden können.
@@ -140,7 +142,6 @@ Wie oben erwähnt machte das RAP-Framework insbesondere direkt nach Release gro�
 + [SAP Technology Blog: Getting Started with RAP](https://community.sap.com/t5/technology-blog-posts-by-sap/getting-started-with-the-abap-restful-application-programming-model-rap/ba-p/13420829)
 
 
-## Notizen TODOS
+## Notizen TODOS JULIUS
 + Mehr zum Flex Model schreiben
-+ Peter Bescheidgeben & um Feedback fragen
 + [Fiori Elements Feature Map](https://sapui5.hana.ondemand.com/#/topic/62d3f7c2a9424864921184fd6c7002eb)
