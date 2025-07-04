@@ -3,11 +3,11 @@ layout: page
 title: abapGit als Enabler von Open Source
 permalink: /open-source/abapgit-as-enabler/
 parent: Open Source
-nav_order: 5
+nav_order: 7
 ---
 
-{: .no_toc}
 # abapGit als Enabler von Open Source
+{: .no_toc}
 
 1. TOC
 {:toc}

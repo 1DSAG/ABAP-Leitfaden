@@ -9,6 +9,8 @@ nav_order: 3
 {: .no_toc}
 # Beteiligung an Open Source
 
+Dieser Abschnitt beschreibt den Anwendungsfall sich als Unternehmen an Open-Source-Projekten zu beteiligen.
+
 1. TOC
 {:toc}
 

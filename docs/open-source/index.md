@@ -7,7 +7,6 @@ nav_order: 11
 ---
 
 {: .no_toc}
-
 # Open Source
 
 1. TOC
@@ -26,20 +25,22 @@ Eine _Open-Source-Strategie_ muss jedes Unternehmen für sich selbst erschließe
 
 ## Was ist Open Source?
 
-Open Source Software (OSS) ist Software, welche unter einer [_Open-Source-Lizenz_](#lizenzen) bereitgestellt wird. In allen drei zuvor genannten Anwendungsfällen ist die Lizenz maßgeblich für die Nutzung, die Modifikation und die Weiterverbreitung des bereitgestellten Codings. Zudem muss dieses _frei verfügbar_ sein, also nicht nur einer bestimmten Gruppe an Personen bereitgestellt werden. Dies ermöglicht es Ihnen zum Beispiel den Quellcode einer Anwendung vor dem Einsatz zu prüfen und die Binärdateien zur Ausführung selbst zu erzeugen, anstatt darauf zu vertrauen, dass die bereitgestellten Dateien auch zu dem Quellcode gehören. Bugs können Sie im Zweifel selbst beheben, statt auf den Softwareanbieter warten zu müssen oder auf Support angewiesen zu sein. Zusatzfunktionalität und Integrationen können Sie selbst entwickeln und auch anderen Nutzern der Software bereitstellen. Versprochene Features wie Ende-zu-Ende-Verschlüsselung und deaktivierte Telemetrie können Sie selbst überprüfen.
+Open Source Software (OSS) ist Software, welche unter einer [_Open-Source-Lizenz_](licenses) bereitgestellt wird. In allen drei zuvor genannten Anwendungsfällen ist die Lizenz maßgeblich für die Nutzung, die Modifikation und die Weiterverbreitung des bereitgestellten Codings. Zudem muss dieses _frei verfügbar_ sein, also nicht nur einer bestimmten Gruppe an Personen bereitgestellt werden. Dies ermöglicht es Ihnen zum Beispiel den Quellcode einer Anwendung vor dem Einsatz zu prüfen und die Binärdateien zur Ausführung selbst zu erzeugen, anstatt darauf zu vertrauen, dass die bereitgestellten Dateien auch zu dem Quellcode gehören. Bugs können Sie im Zweifel selbst beheben, statt auf den Softwareanbieter warten zu müssen oder auf Support angewiesen zu sein. Zusatzfunktionalität und Integrationen können Sie selbst entwickeln und auch anderen Nutzern der Software bereitstellen. Versprochene Features wie Ende-zu-Ende-Verschlüsselung und deaktivierte Telemetrie können Sie selbst überprüfen.
+
+Eine umfangreiche Definition von Open Source finden Sie bei der open source initiative unter folgender URL: [The Open Source Definition](https://opensource.org/osd).
 
 {: .note }
-SAP S/4HANA ist nicht "Open Source" nur weil Sie als Entwickler den von der SAP geschriebenen Quellcode lesen können. Open Source ist viel mehr als die bloße Bereitstellung des Codings gegenüber dem Kunden und thematisiert die freie Nutzung, Modifikation und Weiterverbreitung _ohne in einem Kundenverhältnis_ mit dem Softwareanbieter zu stehen.
+SAP S/4HANA ist nicht "Open Source", nur weil Sie als Entwickler den von der SAP geschriebenen Quellcode lesen können. Open Source ist viel mehr als die bloße Bereitstellung des Codings gegenüber dem Kunden und thematisiert die freie Nutzung, Modifikation und Weiterverbreitung _ohne in einem Kundenverhältnis_ mit dem Softwareanbieter zu stehen.
 
 ## Motivation und Chancen
 
-Warum sollten Sie sich mit Open Source in der ABAP-Entwicklung beschäftigen? Langsam aber stetig steigt die Anzahl an Szenarien, in denen Ihnen Open Source, und _auch_ Open-Source-ABAP, im Alltag begegnet, statt, dass Sie danach selbst aktiv suchen müssen. Die Anzahl an in der Open Source Community verfügbaren ABAP-Projekten wächst - auf [dotabap.org](https://dotabap.org) werden zum Zeitpunkt der Erstellung dieses Kapitels 299 Projekte gelistet. Die SAP selbst veröffentlicht Software als Open-Source-Projekte, wie zum Beispiel [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap-cloud) oder auch den [RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) und diverse Tutorials oder Lerninhalte, wie zum Beispiel [RAP100](https://github.com/SAP-samples/abap-platform-rap100) oder [Fiori Elements Feature Showcase for RAP](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase). Sich dem kategorisch zu verschließen führt zunehmend mehr zu verpassten __Chancen...__
+Warum sollten Sie sich mit Open Source in der ABAP-Entwicklung beschäftigen? Langsam aber stetig steigt die Anzahl an Szenarien, in denen Ihnen Open Source, und _auch_ Open-Source-ABAP, im Alltag begegnet, statt, dass Sie danach selbst aktiv suchen müssen. Die Anzahl an in der Open Source Community verfügbaren ABAP-Projekten wächst - auf [dotabap.org](https://dotabap.org) werden zum Zeitpunkt der Erstellung dieses Kapitels 311 Projekte gelistet. Die SAP selbst veröffentlicht Software als Open-Source-Projekte, wie zum Beispiel [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap-cloud) oder auch den [RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) und diverse Tutorials oder Lerninhalte, wie zum Beispiel [RAP100](https://github.com/SAP-samples/abap-platform-rap100) oder [Fiori Elements Feature Showcase for RAP](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase). Sich dem kategorisch zu verschließen führt zunehmend mehr zu verpassten __Chancen...__
 
 ### ...in der Optimierung der eigenen Entwicklungsprozesse
 
-1. Mit Tools wie [ABAP Cleaner](https://github.com/SAP/abap-cleaner), [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap-cloud) und [abapOpenChecks](https://github.com/larshp/abapOpenChecks) können Sie Entwickler entlasten bei der Umsetzung von Entwicklungsrichtlinien und Best Practices, in dem diese teilweise automatisiert umgesetzt und in anderen Teilen statisch geprüft und Entwickler aktiv auf Findings hingewiesen werden. Und das weit über den Umfang der im SAP-Standard ausgelieferten Möglichkeiten hinaus (ABAP Formatter / Pretty Printer, ABAP Test Cockpit). Mit [zJoule](https://zjoule.com/) können Sie  unabhängig vom Joule-Rollout der SAP bereits KI-Unterstützung in der ABAP-Entwicklung einsetzen.  
+1. Mit Tools wie [ABAP Cleaner](https://github.com/SAP/abap-cleaner), [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap-cloud) und [abapOpenChecks](https://github.com/larshp/abapOpenChecks) können Sie Entwickler bei der Umsetzung von Entwicklungsrichtlinien und Best Practices entlasten, in dem diese teilweise automatisiert umgesetzt und in anderen Teilen statisch geprüft und Entwickler aktiv auf Findings hingewiesen werden. Und das weit über den Umfang der im SAP-Standard ausgelieferten Möglichkeiten hinaus.  
 2. Mit [abapGit](https://abapgit.org/) bietet sich Ihnen die Möglichkeit Ihre Entwicklungsprozesse _Technologie-übergreifend_ mit einheitlichem Tooling zu harmonisieren und Ihre gesamte Unternehmenscodebase in _einer_ Single Source of Truth zu verwalten, statt ABAP als Special Snowflake mit Sonderregeln zu betrachten. Sie können Code Reviews mit dafür ausgelegtem Tooling durchführen. Sie können angefangene Änderungen automatisiert zurücknehmen, wenn sie der Fachbereich nach Entwicklungszeit doch nicht mehr haben möchte ohne große manuelle Rückbauaufwände. Und das alles sogar bei Systemen ab SAP Basis 7.02.
-3. Mit Hilfe von [abaplint](https://abaplint.org/) können Sie außerhalb eines SAP-Systems ABAP Coding prüfen, entwickeln und mit dem Transpiler sogar [ausführen](https://transpiler.abaplint.org/). Sie können so Continuous Integration Pipelines aufsetzen ohne dafür spezielle SAP-Systeme kostenintensiv aufsetzen zu müssen und statische Codeanalyse und Unit Tests ausführen (mit Einschränkungen im Vergleich zu "nativer" Ausführung in ABAP-Systemen).  
+3. Mit Hilfe von [abaplint](https://abaplint.org/) können Sie außerhalb eines SAP-Systems ABAP Coding prüfen, entwickeln und mit dem Transpiler sogar [ausführen](https://transpiler.abaplint.org/). Sie können so Continuous Integration Pipelines aufsetzen ohne dafür spezielle SAP-Systeme kostenintensiv aufsetzen zu müssen und statische Codeanalyse und Unit Tests ausführen (mit Einschränkungen im Vergleich zu Ausführung in ABAP-Systemen).  
 4. Über Generatoren wie den [RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) oder [ABAP OpenAPI Generator](https://github.com/abap-openapi/abap-openapi) können Sie Boilerplate-Coding generieren und müssen dieses anschließend nur anpassen. So lassen sich Entwicklungsaufwände sparen und insbesondere auch schnell Prototypen aufsetzen.
 
 ### ...in der Umsetzung von betriebswirtschaftlichen Anforderungen
@@ -60,7 +61,7 @@ Beispiele: [ABAP SDK für Azure](https://github.com/microsoft/ABAP-SDK-for-Azure
 1. Durch die Auseinandersetzung mit externen Bibliotheken und deren Implementierung können Sie Ihre Kenntnisse erweitern mit Blick auf objektorientiertes Design und Softwarearchitektur. Sie können mit neuen Technologien oder Ansätzen vertraut werden und das direkt mit produktivem Quellcode, statt Demobeispielen. Dieser Effekt verstärkt sich insbesondere bei der Beteiligung durch eigene Features oder Bugfixes und Code Reviews.
 
 {: .highlight }
-Sie sehen es gibt viele Stellen an denen Open Source, _auch in der ABAP-Entwicklung_, einen erheblichen Mehrwert liefern kann. Eine Auseinandersetzung mit dem Thema lohnt sich daher in jedem Fall, selbst wenn nur einige der oben genannten Punkte in Ihrem Fall relevant sind.
+Sie sehen es gibt viele Stellen an denen Open Source, _auch in der ABAP-Entwicklung_, einen erheblichen Mehrwert liefern kann. Eine Auseinandersetzung mit dem Thema lohnt sich daher in jedem Fall, selbst wenn nur einige der oben genannten Punkte für Sie konkret relevant sind.
 
 ## Ausbaustufen
 
@@ -77,90 +78,3 @@ Diese Stufe wird in [Beteiligung an Open Source](contributing-to-open-source) be
 Diese Stufe wird in [Entwicklung von Open Source](developing-open-source) thematisiert.
 
 Die einzelnen Stufen bieten unterschiedliche Chancen, aber kommen auch mit unterschiedlichen Risiken und Aufwänden. Diese werden in den genannten Unterkapiteln aufgegriffen.
-
-## Lizenzen
-
-Die Lizenz einer Software ist ausschlaggebend dafür, wie Sie sie einsetzen können. Konkret in Bezug auf Open Source macht eine Open-Source-Lizenz eine Software zur Open Source Software. Open-Source-Lizenzen gewähren ausdrücklich Rechte gegebenüber dem Lizenznehmer, geben ihm aber auf Pflichten auf, wie der mit der Software umzugehen hat. Wenn Sie ein Softwareprojekt finden, welches seinen Quellcode öffentlich zugänglich publiziert hat, aber keine Lizenz zu finden ist, dann handelt es sich nicht um Open Source, sondern lediglich um _Source Available_. Bei einer Einführung von Open Source sollten Sie sich in Ihrem Unternehmen schlau machen, ob beziehungsweise wer sich mit dem Lizenzthema beschäftigt. Gerade in größeren Unternehmen, die viele verschiedene Programmiersprachen einsetzen, kann es eine zentrale Instanz geben, die sich um Kompatibilität der Lizenzen beim Einsatz von Open-Source-Komponenten kümmert.
-
-TODO Aspekte von Lizenzen
-
-In nachfolgender Tabelle finden Sie populäre Open-Source-Lizenzen, die auch in der ABAP-Entwicklung verwendet werden (Quelle [dotabap.org](https://dotabap.org/)). Details finden Sie zum Beispiel unter [choosealicense](https://choosealicense.com) beziehungsweise [choosealicense Appendix](https://choosealicense.com/appendix/).
-
-<!-- markdownlint-disable MD033 -->
-<table>
-    <tr>
-        <th></th>
-        <th><a href="https://choosealicense.com/licenses/mit/">MIT</a></th>
-        <th><a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a></th>
-        <th><a href="https://choosealicense.com/licenses/gpl-3.0/">GPL 3.0</a></th>
-        <th><a href="https://choosealicense.com/licenses/gpl-2.0/">GPL 2.0</a></th>
-    </tr>
-    <tr>
-        <td colspan="5" class="bg-grey-lt-000">Rechte</td>
-    </tr>
-    <tr>
-        <td>Kommerzielle Nutzung</td>
-        <td><span class="label label-green">Erlaubt</span></td>
-        <td><span class="label label-green">Erlaubt</span></td>
-        <td><span class="label label-green">Erlaubt</span></td>
-        <td><span class="label label-green">Erlaubt</span></td>
-    </tr>
-    <tr>
-        <td>Weiterverbreitung</td>
-        <td><span class="label label-green">Erlaubt</span></td>
-        <td><span class="label label-green">Erlaubt</span></td>
-        <td><span class="label label-green">Erlaubt</span></td>
-        <td><span class="label label-green">Erlaubt</span></td>
-    </tr>
-    <tr>
-        <td>Modifikation</td>
-        <td><span class="label label-green">Erlaubt</span></td>
-        <td><span class="label label-green">Erlaubt</span></td>
-        <td><span class="label label-green">Erlaubt</span></td>
-        <td><span class="label label-green">Erlaubt</span></td>
-    </tr>
-    <tr>
-        <td colspan="5" class="bg-grey-lt-000">Pflichten</td>
-    </tr>
-    <tr>
-        <td>Veröffentlichung von Quellcode zu Modifikationen</td>
-        <td></td>
-        <td></td>
-        <td><span class="label label-blue">Erforderlich</span></td>
-        <td><span class="label label-blue">Erforderlich</span></td>
-    </tr>
-    <tr>
-        <td>Angabe der Lizenz / Copyright im eigenen Produkt</td>
-        <td><span class="label label-blue">Erforderlich</span></td>
-        <td><span class="label label-blue">Erforderlich</span></td>
-        <td><span class="label label-blue">Erforderlich</span></td>
-        <td><span class="label label-blue">Erforderlich</span></td>
-    </tr>
-    <tr>
-        <td>Nutzung der selben Lizenz für Modifikationen</td>
-        <td></td>
-        <td></td>
-        <td><span class="label label-blue">Erforderlich</span></td>
-        <td><span class="label label-blue">Erforderlich</span></td>
-    </tr>
-    <tr>
-        <td colspan="5" class="bg-grey-lt-000">Limitierungen</td>
-    </tr>
-    <tr>
-        <td>Haftung</td>
-        <td><span class="label label-red">Eingeschränkt</span></td>
-        <td><span class="label label-red">Eingeschränkt</span></td>
-        <td><span class="label label-red">Eingeschränkt</span></td>
-        <td><span class="label label-red">Eingeschränkt</span></td>
-    </tr>
-    <tr>
-        <td>Garantie</td>
-        <td><span class="label label-red">Eingeschränkt</span></td>
-        <td><span class="label label-red">Eingeschränkt</span></td>
-        <td><span class="label label-red">Eingeschränkt</span></td>
-        <td><span class="label label-red">Eingeschränkt</span></td>
-    </tr>
-</table>
-<!-- markdownlint-enable MD033 -->
-
-TODO: Bereitstellung von Lizenzen in ABAP-Code...
