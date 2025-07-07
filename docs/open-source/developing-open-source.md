@@ -9,6 +9,8 @@ nav_order: 4
 # Entwicklung von Open Source
 {: .no_toc}
 
+Dieser Abschnitt beschreibt den Anwendungsfall als Unternehmen eigene Komponenten als Open-Source-Projekt zu entwickeln.
+
 1. TOC
 {:toc}
 
@@ -23,6 +25,10 @@ nav_order: 4
 - Minimierung von Abhängigkeiten zum SAP-Standard
 - Auswirkungen auf die Paketstruktur
 - "Inner Source" -> oder Versionsverwaltungskapitel
+
+## Lizenzen
+
+Siehe auch [Lizenzen Allgemein](/ABAP-Leitfaden/open-source/index#lizenzen)
 
 ## Beispielhafte Setups
 
