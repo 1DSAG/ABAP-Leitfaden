@@ -11,26 +11,37 @@ nav_order: 0
 1. TOC
 {:toc}
 
+Herzlich Willkommen beim neuen "ABAP-Leitfaden" der DSAG. Vor Ihnen befindet sich ein umfangreiches Dokument zum Thema Anwendungsentwicklung in SAP.  
+Bei diesem aktuellen ABAP-Leitfaden 2025 handelt es sich um die dritte Auflage. Der Leitfaden ist zuvor 2012 und 2016 erschienen. Seither hat sich im Bereich der SAP-Entwicklung sehr viel getan:  
+
+* Die Einführung der ABAP Development Tools (ADT)
+* HANA  
+* S/4HANA  
+* CDS für die Datenmodellierung  
+* das Restful Application Programming Model (RAP)  
+* und die rasante Weiterentwicklung der Programmiersprache ABAP hin zu ABAP-Cloud
+um hier die offensichtlichsten Punkte zu nennen.  
+
+Da sich somit auch die Entwicklung in SAP seit der Veröffentlichung der letzten Version maßgeblich verändert hat, wurde es erforderlich, einen aktualisierten Leitfaden zur Verfügung zu stellen, der diese Neuerungen berücksichtigt.  
+Im Jahr 2024 hat sich auf den Aufruf der DSAG wieder ein neues Team von Experten im SAP-Umfeld zusammengefunden um eine neue und aktuelle Version eines SAP-Entwicklungsleitfadens bereitzustellen, der sowohl Verantwortlichen in Unternehmen, als auch Entwicklern und Beratern Orientierung, Hinweise und Tipps aus der Praxis zu geben und helfen, bewährte und neue Technologien für die Anwendungsentwicklung erfolgreich und zielgerichtet einzusetzen.
+
 Die Software der SAP zeichnet sich als Standardsoftware durch ein hohes Maß an Flexibilität und Erweiterbarkeit aus. In nahezu allen Unternehmen, die SAP-Software einsetzen, finden sich kundenspezifische Anpassungen und Erweiterungen. Die SAP-Software unterliegt damit sowohl auf Hersteller- als auch auf Kundenseite der kontinuierlichen Anpassung und Erweiterung durch sich ändernde Kundenbedürfnisse.
 Das hohe Maß an Flexibilität und Erweiterbarkeit von SAP-Software bringt Vor- und Nachteile mit sich:
-- Die Software kann optimal an kundenspezifische Anforderungen angepasst und damit die Wertschöpfung durch den Einsatz deutlich gesteigert werden. 
-- Zeitgleich birgt die Erweiterbarkeit das Risiko kundenspezifischer Entwicklungen, die komplex, aufwendig wartbar und fehleranfällig sind.
 
-Das Dokument erschien bereits in zwei Auflagen, jeweils 2012 und 2016. Hierbei handelt es sich um die dritte Auflage.
+* Die Software kann optimal an kundenspezifische Anforderungen angepasst und damit die Wertschöpfung durch den Einsatz deutlich gesteigert werden.  
+* Zeitgleich birgt die Erweiterbarkeit das Risiko kundenspezifischer Entwicklungen, die komplex, aufwendig wartbar und fehleranfällig sind.
 
-Seither hat sich im Bereich der SAP-Entwicklung sehr viel getan, die Einführung von S/4HANA, die ABAP Development Tools, CDS, RAP und die rasante Weiterentwicklung der Programmiersprache ABAP um hier die offensichtlichsten Punkte zu nennen.
-
-Die Anwendungsentwicklung in SAP ist deutlich komplexer geworden und während früher der Großteil der Entwicklung in ABAP und GUI-basierten Tools erfolgte, ist es heute erforderlich verschiedene Technologien und Tools einzusetzen und zu beherrschen.
+Die Anwendungsentwicklung in SAP ist deutlich komplexer geworden und während früher der Großteil der Entwicklung in ABAP und GUI-basierten Tools erfolgte, ist es heute erforderlich, verschiedene Technologien und Tools einzusetzen und zu beherrschen.
 
 Es gibt zahlreiche Dokumentationen und mittlerweile sind auch zahlreiche Schulungsangebote in der Form von Learning Journeys frei zu den verschiedenen Themen verfügbar. Dennoch ist es nicht einfach, sich im Dschungel der Tools und Techniken zurechtzufinden.
 
-Daher hat sich auch im Jahr 2024 nach Aufruf der DSAG wieder ein neues Team von Experten im SAP-Umfeld zusammengefunden um eine neue und aktuelle Version eines SAP-Entwicklungsleitfadens bereitzustellen, der sowohl Verantwortlichen in Unternehmen, als auch Entwicklern und Beratern Orientierung, Hinweise und Tipps aus der Praxis zu geben und helfen, bewährte und neue Technologien für die Anwendungsentwicklung erfolgreich und zielgerichtet einzusetzen.
 
 ## Aufbau und Zielgruppe
 
-Wie das Dokument aufgebaut ist und wie Sie es effektiv nutzen können, erfahren Sie in diesem Abschnitt. Das Dokument unterteilt sich in spezifische Kapitel und Abschnitte:
-- Am Anfang des Kapitels finden Sie einleitende Informationen und einen Überblick über das Thema. Dieser Teil ist vor allem für Manager und Entscheider im Unternehmen gedacht, die sich einen Überblick über den Bereich machen wollen.
-- Je Tiefer Sie in das Kapitel einsteigen, desto detailiertere Informationen erhalten Sie. Diese Abschnitte sind vor allem für Architekten und Entwickler geeignet, die einen tieferen Einblick in das Thema erhalten wollen.
+Wie das Dokument aufgebaut ist und wie Sie es effektiv nutzen können, erfahren Sie in diesem Abschnitt. Das Dokument unterteilt sich in spezifische Kapitel und Abschnitte:  
+
+* Am Anfang des Kapitels finden Sie einleitende Informationen und einen Überblick über das Thema. Dieser Teil ist vor allem für Manager und Entscheider im Unternehmen gedacht, die sich einen Überblick über den Bereich machen wollen.
+* Je Tiefer Sie in das Kapitel einsteigen, desto detailiertere Informationen erhalten Sie. Diese Abschnitte sind vor allem für Architekten und Entwickler geeignet, die einen tieferen Einblick in das Thema erhalten wollen.
 
 ## Positionierung
 
@@ -48,4 +59,4 @@ Dieser Leitfaden dient nicht als Dokumentation und ist auch keine detaillierte A
 
 ## Disclaimer
 
-Das Dokument entsteht aus dem gesammelten Wissen der DSAG Mitglieder in den verschiedenen Bereichen und wird durch die Community weiterentwickelt. Es kann daher zu Abweichungen zum Standardvorgehen oder Best-Practices von SAP kommen, wenn in einem Unternehmen andere Erfahrungen gemacht wurden.
+Das Dokument entsteht aus dem gesammelten Wissen der DSAG Mitglieder in den verschiedenen Bereichen und wird durch die Community weiterentwickelt. Es kann daher zu Abweichungen zum Standardvorgehen oder Best-Practices von SAP kommen, wenn in einem Unternehmen andere Erfahrungen gemacht wurden.  
