@@ -57,6 +57,11 @@ Manche der neueren Technologien und Tools sind in der Breite noch nicht vollumf�
 
 Dieser Leitfaden dient nicht als Dokumentation und ist auch keine detaillierte Anleitung zu einzelnen Themen. Mit diesem Leitfaden möchten wir auf Basis von Praxiserfahrungen und gesammeltem Wissen der Autoren den Einstieg in neue Techniken erleichtern, eine Bewertung des Stands der SAP-Entwicklung im Unternehmen ermöglichen und Handlungsfelder aufzeigen, wie eine effiziente und gute SAP-Entwicklung ermöglicht wird.
 
+## Feedback
+
+Dieser Leitfaden wird neben der druckbaren Version auch als digitale Ausgabe als Git-Repository im Internet zur Verfügung stehen:  
+[DSAG ABAP-Leitfaden Git-Pages](https://1dsag.github.io/ABAP-Leitfaden/) und [DSAG ABAP Leitfaden Git-Repository](https://github.com/1DSAG/ABAP-Leitfaden). Sie haben damit auch die Möglichkeit sich zu beteiligen und über Git-issues sowohl Feedback als auch Korrekturen und Ergänzungen in den Leitfaden einzubringen. Dieses Dokument lebt von der Community und vom Feedback der Leser. Die DSAG und das Autorenteam freut sich über jede Rückmeldung zum ABAP-Leitfaden und ist sehr interessiert ob und wie Ihnen der Leitfaden geholfen hat.  
+
 ## Disclaimer
 
 Das Dokument entsteht aus dem gesammelten Wissen der DSAG Mitglieder in den verschiedenen Bereichen und wird durch die Community weiterentwickelt. Es kann daher zu Abweichungen zum Standardvorgehen oder Best-Practices von SAP kommen, wenn in einem Unternehmen andere Erfahrungen gemacht wurden.  
