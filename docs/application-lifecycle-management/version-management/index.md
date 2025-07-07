@@ -265,8 +265,6 @@ Mit Hilfe von externen Versionsverwaltungssystemen können durch deren kryptogra
 - Komplexe Transportmechanismen: Das herkömmliche SAP-Transportmanagement ist nicht auf CI/CD optimiert.
 - Fehlende Automatisierung: Tests, Deployment und Code-Reviews sind oft noch manuell und fehleranfällig.
 - Widerstand gegen Veränderung: Viele SAP-Teams arbeiten nach klassischen Wasserfallmethoden und stehen agilen Prozessen skeptisch gegenüber.
-## Zusammenfassung
-
 
 ## Empfehlung
 
