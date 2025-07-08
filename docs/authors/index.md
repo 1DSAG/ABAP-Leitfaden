@@ -124,8 +124,8 @@ nav_order: 15
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/julius-dacheneder/">Julius Dacheneder</a></td>
-<td>msg systems ag</td>
-<td>Schreiben, Review</td>
+<td>msg systems ag (ehemals)</td>
+<td>Schreiben</td>
 </tr>
 <tr class="odd">
 <td>Jürgen Creyaufmüller</td>
