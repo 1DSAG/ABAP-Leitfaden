@@ -140,8 +140,3 @@ Wie oben erw√§hnt machte das RAP-Framework insbesondere direkt nach Release gro√
 + [SAP Learning Course: Building Apps with RAP](https://learning.sap.com/courses/building-apps-with-the-abap-restful-application-programming-model)
 + [SAP Learning Journey: Creating a Fiori Elements App with RAP OData V4](https://learning.sap.com/learning-journeys/getting-started-with-creating-an-sap-fiori-elements-app-based-on-an-odata-v4-rap-service)
 + [SAP Technology Blog: Getting Started with RAP](https://community.sap.com/t5/technology-blog-posts-by-sap/getting-started-with-the-abap-restful-application-programming-model-rap/ba-p/13420829)
-
-
-## Notizen TODOS JULIUS
-+ Mehr zum Flex Model schreiben
-+ [Fiori Elements Feature Map](https://sapui5.hana.ondemand.com/#/topic/62d3f7c2a9424864921184fd6c7002eb)
