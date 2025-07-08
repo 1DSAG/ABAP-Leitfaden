@@ -72,6 +72,8 @@ Das [Flexible Programmiermodell (FPM)](https://ui5.sap.com/test-resources/sap/fe
 Flexible Programming Model als Mischform von Fiori Elements und Freestyle SAPUI5, © SAP
 {: .img-caption}
 
+Die durchs FPM ermöglichte Flexibilität bietet einem die Möglichkeiten, auch in generierten Applikationen mehr Freiheiten bei der Entwicklung zu genießen. Die strikte Wahl zwischen SAPUI5-Freestyle oder Fiori Elements rückt dadurch ein Stück weit in den Hintergrund. Gekapselt können Fiori Elements Teilbereiche über Building Blocks eingebettet werden. Der [Flexible Programming Model Explorer](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html) liefert live testbare Beispiele über FPM-Implementierungsmöglichkeiten.
+
 ## Legacy Technologien
 Dieses Kapitel soll einen kurzen Überblick über bisher nicht genannte Oberflächentechnologien geben. Da diese im Laufe der Zeit immer mehr an Relevanz verlieren wird an dieser Stelle nicht näher auf einzelne Technologien eingegangen.  
 
