@@ -1,6 +1,6 @@
 ---
 layout: page
-title: UI
+title: User Interface (UI)
 permalink: /user-interface/
 nav_order: 6
 ---
