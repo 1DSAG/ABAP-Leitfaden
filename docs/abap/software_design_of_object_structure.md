@@ -134,12 +134,12 @@ Hier ein Beispiel, wie dies umgesetzt werden könnte:
 CLASS zcl_singleton DEFINITION.
   PUBLIC SECTION.
     CLASS-METHODS:
-      get_instance RETURNING VALUE(ro_instance) TYPE REF TO zcl_singleton.
+      get_instance RETURNING VALUE(instance) TYPE REF TO zcl_singleton.
     METHODS:
       do_something.
   PRIVATE SECTION.
     CLASS-DATA:
-      mo_instance TYPE REF TO zcl_singleton.
+      instance_ref TYPE REF TO zcl_singleton.
     METHODS:
       constructor.
 ENDCLASS.
@@ -149,10 +149,10 @@ CLASS zcl_singleton IMPLEMENTATION.
     " Konstruktor ist privat, um direkte Instanziierung zu verhindern
   ENDMETHOD.
   METHOD get_instance.
-    IF mo_instance IS INITIAL.
-      CREATE OBJECT mo_instance.
+    IF instance_ref IS INITIAL.
+      CREATE OBJECT instance_ref.
     ENDIF.
-    ro_instance = mo_instance.
+    instance = instance_ref.
   ENDMETHOD.
   METHOD do_something.
     WRITE: / 'Singleton-Methode wurde aufgerufen'.
@@ -160,8 +160,8 @@ CLASS zcl_singleton IMPLEMENTATION.
 ENDCLASS.
 
 * Verwendung
-DATA(lo_singleton) = zcl_singleton=>get_instance( ).
-lo_singleton->do_something( ).
+DATA(singleton) = zcl_singleton=>get_instance( ).
+singleton->do_something( ).
 ~~~
 
 ### Factory-Pattern
@@ -170,29 +170,29 @@ Dies könnte beispielhaft folgendermaßen umgesetzt werden:
 
 ~~~ abap
 * Abstrakte Basisklasse oder Interface
-INTERFACE lif_vehicle.
+INTERFACE if_vehicle.
   METHODS drive.
 ENDINTERFACE.
 
 * Konkrete Implementierungen
 CLASS zcl_car DEFINITION.
   PUBLIC SECTION.
-    INTERFACES lif_vehicle.
+    INTERFACES if_vehicle.
 ENDCLASS.
 
 CLASS zcl_car IMPLEMENTATION.
-  METHOD lif_vehicle~drive.
+  METHOD if_vehicle~drive.
     WRITE: / 'Das Auto fährt los!'.
   ENDMETHOD.
 ENDCLASS.
 
 CLASS zcl_bike DEFINITION.
   PUBLIC SECTION.
-    INTERFACES lif_vehicle.
+    INTERFACES if_vehicle.
 ENDCLASS.
 
 CLASS zcl_bike IMPLEMENTATION.
-  METHOD lif_vehicle~drive.
+  METHOD if_vehicle~drive.
     WRITE: / 'Das Fahrrad fährt los!'.
   ENDMETHOD.
 ENDCLASS.
@@ -202,27 +202,27 @@ CLASS zcl_vehicle_factory DEFINITION.
   PUBLIC SECTION.
     CLASS-METHODS:
       create_vehicle
-        IMPORTING iv_type TYPE string
-        RETURNING VALUE(ro_vehicle) TYPE REF TO lif_vehicle.
+        IMPORTING type_name TYPE string
+        RETURNING VALUE(vehicle) TYPE REF TO if_vehicle.
 ENDCLASS.
 
 CLASS zcl_vehicle_factory IMPLEMENTATION.
   METHOD create_vehicle.
-    CASE iv_type.
+    CASE type_name.
       WHEN 'CAR'.
-        CREATE OBJECT ro_vehicle TYPE zcl_car.
+        CREATE OBJECT vehicle TYPE zcl_car.
       WHEN 'BIKE'.
-        CREATE OBJECT ro_vehicle TYPE zcl_bike.
+        CREATE OBJECT vehicle TYPE zcl_bike.
       WHEN OTHERS.
-        ro_vehicle = NULL.
+        vehicle = NULL.
     ENDCASE.
   ENDMETHOD.
 ENDCLASS.
 
 * Verwendung
-DATA(lo_vehicle) = zcl_vehicle_factory=>create_vehicle( iv_type = 'CAR' ).
-IF lo_vehicle IS BOUND.
-  lo_vehicle->drive( ).
+DATA(vehicle) = zcl_vehicle_factory=>create_vehicle( type_name = 'CAR' ).
+IF vehicle IS BOUND.
+  vehicle->drive( ).
 ENDIF.
 ~~~
 
@@ -273,19 +273,19 @@ ENDCLASS.
 
 CLASS zcl_order_facade IMPLEMENTATION.
   METHOD complete_order_process.
-    DATA(lo_processor) = NEW zcl_order_processor( ).
-    DATA(lo_invoice)   = NEW zcl_invoice_generator( ).
-    DATA(lo_shipping)  = NEW zcl_shipping_service( ).
+    DATA(processor) = NEW zcl_order_processor( ).
+    DATA(invoice)   = NEW zcl_invoice_generator( ).
+    DATA(shipping)  = NEW zcl_shipping_service( ).
 
-    lo_processor->process_order( ).
-    lo_invoice->generate_invoice( ).
-    lo_shipping->ship_order( ).
+    processor->process_order( ).
+    invoice->generate_invoice( ).
+    shipping->ship_order( ).
   ENDMETHOD.
 ENDCLASS.
 
 * Verwendung
-DATA(lo_facade) = NEW zcl_order_facade( ).
-lo_facade->complete_order_process( ).
+DATA(facade) = NEW zcl_order_facade( ).
+facade->complete_order_process( ).
 ~~~
 
 ### MVC-Pattern
@@ -298,15 +298,15 @@ Der Einsatz von MVC bietet folgende Vorteile: Bessere Wartbarkeit und Testbarkei
 CLASS zcl_model DEFINITION.
   PUBLIC SECTION.
     METHODS:
-      get_customer_name IMPORTING iv_id TYPE i RETURNING VALUE(rv_name) TYPE string.
+      get_customer_name IMPORTING customer_id TYPE i RETURNING VALUE(customer_name) TYPE string.
 ENDCLASS.
 
 CLASS zcl_model IMPLEMENTATION.
   METHOD get_customer_name.
-    CASE iv_id.
-      WHEN 1. rv_name = 'Max Mustermann'.
-      WHEN 2. rv_name = 'Erika Musterfrau'.
-      WHEN OTHERS. rv_name = 'Unbekannt'.
+    CASE customer_id.
+      WHEN 1. customer_name = 'Max Mustermann'.
+      WHEN 2. customer_name = 'Erika Musterfrau'.
+      WHEN OTHERS. customer_name = 'Unbekannt'.
     ENDCASE.
   ENDMETHOD.
 ENDCLASS.
@@ -315,12 +315,12 @@ ENDCLASS.
 CLASS zcl_view DEFINITION.
   PUBLIC SECTION.
     METHODS:
-      display_customer_name IMPORTING iv_name TYPE string.
+      display_customer_name IMPORTING customer_name TYPE string.
 ENDCLASS.
 
 CLASS zcl_view IMPLEMENTATION.
   METHOD display_customer_name.
-    WRITE: / 'Kundenname:', iv_name.  "hier könnte auch eine ALV-Ausgabe o.ä. stehen
+    WRITE: / 'Kundenname:', customer_name.  "hier könnte auch eine ALV-Ausgabe o.ä. stehen
   ENDMETHOD.
 ENDCLASS.
 
@@ -328,20 +328,20 @@ ENDCLASS.
 CLASS zcl_controller DEFINITION.
   PUBLIC SECTION.
     METHODS:
-      show_customer IMPORTING iv_id TYPE i.
+      show_customer IMPORTING customer_id TYPE i.
   PRIVATE SECTION.
     DATA:
-      mo_model TYPE REF TO zcl_model,
-      mo_view  TYPE REF TO zcl_view.
+      model TYPE REF TO zcl_model,
+      view  TYPE REF TO zcl_view.
 ENDCLASS.
 
 CLASS zcl_controller IMPLEMENTATION.
   METHOD show_customer.
-    CREATE OBJECT mo_model.
-    CREATE OBJECT mo_view.
+    CREATE OBJECT model.
+    CREATE OBJECT view.
 
-    DATA(lv_name) = mo_model->get_customer_name( iv_id ).
-    mo_view->display_customer_name( lv_name ).
+    DATA(name) = model->get_customer_name( customer_id ).
+    view->display_customer_name( name ).
   ENDMETHOD.
 ENDCLASS.
 ~~~
