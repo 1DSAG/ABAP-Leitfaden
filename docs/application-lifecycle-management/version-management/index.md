@@ -98,30 +98,83 @@ Mit SAP Business Application Studio steht Unternehmen ein Werkzeug für die Entw
 
 ## Vergleich der unterschiedlichen Versionskontrollsystemen
 
-----
-**Das hier brauchen wir dann nicht mehr ? steht ja oben** ----
-### Versionskontrollsysteme
+### SAP-System
+In den folgenden SAP-Systemen ist das Versionskontrollsystem verfügbar.
+|                                                   | **SAP-System**            |               
+|---------------------------------------------------|---------------------------|
+| **SE80 (Lokale Versionsverwaltung)**              | SAP OnPrem                | 
+| **ABAP Development Tools (Versionsverwaltung)**          | SAP OnPrem/SAP Cloud      |
+| **abapGit in SAP GUI**                            | SAP OnPrem                | 
+| **abapGit in ADT**                                | SAP Cloud/SAP OnPre       |
+| **abapGit in der Cloud**                          | SAP Cloud                 | 
+| **gCTS in der Cloud**                             | SAP Cloud                 | 
+| **gCTS OnPrem**                                   | SAP OnPrem                | 
+| **SAP BAS**                                       | SAP Cloud/SAP OnPrem      |
 
-#### Lokale Versionsverwaltung in der SE80
+### Systemverfügbarkeit
+In den folgenden SAP-Systemen ist das Versionskontrollsystem verfügbar.
+|                                                   | **Systemverfügbarkeit**            |               
+|---------------------------------------------------|---------------------------|
+| **SE80 (Lokale Versionsverwaltung)**              | Seit mindestens 2007      | 
+| **ABAP Development Toolse (Versionsverwaltung)**  | Seit 2012                 |
+| **abapGit in SAP GUI**                            | SAP BASIS version 702     | 
+| **abapGit in ADT**                                | Seit 2018                 |
+| **abapGit in der Cloud**                          | Seit 2018                 | 
+| **gCTS in der Cloud**                             | S/4HANA EM 1909 FPS00     | 
+| **gCTS OnPrem**                                   | S/4HANA EM 1909 FPS00     | 
+| **SAP BAS**                                       | Seit 2020                 |
 
-#### Versionsverwaltung in ABAP Development Tools
+### Funktionsumfang
+In den folgenden Dokumentation befindet sich der Funktionsumfang der jeweiligen Versionsverwaltung
+|                                                   | **Funktionsumfang**            |               
+|---------------------------------------------------|---------------------------|
+| **SE80 (Lokale Versionsverwaltung)**              | https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/2b28ffa716c24348903f8ffbfeb81df8/e52a2c8d53f8400bb8a309cffe417275.html                     | 
+| **ABAP Development Tools (Versionsverwaltung)**          | https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/comparing-source-code                      |
+| **abapGit in SAP GUI**                            | https://docs.abapgit.org/user-guide/       | 
+| **abapGit in ADT**                                | https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit                            | 
+| **abapGit in der Cloud**                          | https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit                                           | 
+| **gCTS in der Cloud**                             | https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/f319b168e87e42149e25e13c08d002b9.html                  | 
+| **gCTS OnPrem**                                   |https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/f319b168e87e42149e25e13c08d002b9.html                 |
+| **SAP BAS**                                       |                                            |
 
-#### abapGit in SAP GUI
+### Versionsumfang
+Die Versionsverwaltung umfasst folgenden Versionsumfang
+|                                                   | **Versionsumfang**            |               
+|---------------------------------------------------|---------------------------|
+| **SE80 (Lokale Versionsverwaltung)**              | Jedes einzelne Objekt                      | 
+| **ABAP Development Tools (Versionsverwaltung)**          | Jedes einzelne Objekt                      |
+| **abapGit in SAP GUI**                            | Auf Paketebene                             | 
+| **abapGit in ADT**                                | Auf Paketebene                             | 
+| **abapGit in der Cloud**                          |                                            | 
+| **gCTS in der Cloud**                             | Auf Transportschichtebene                  | 
+| **gCTS OnPrem**                                   | Auf Transportschichtebene                  |
+| **SAP BAS**                                       |                                            |
 
-#### abapGit in Eclipse
+### Triggerpunkt
+Die Versionsverwaltung wird folgendermaßen angetriggert.
+|                                                   | **Triggerpunkt**            |               
+|---------------------------------------------------|---------------------------|
+| **SE80 (Lokale Versionsverwaltung)**              | Bei jeder Transportfreigabe                | 
+| **ABAP Development Tools (Versionsverwaltung)**   | Nach jedem Speichern/Aktivieren     |
+| **abapGit in SAP GUI**                            | Bei manuellem Antriggern                   | 
+| **abapGit in ADT**                                | Bei manuellem Antriggern                   | 
+| **abapGit in der Cloud**                          | Bei manuellem Antriggern                   | 
+| **gCTS in der Cloud**                             | Bei Transportfreigabe                      | 
+| **gCTS OnPrem**                                   | Bei Transportfreigabe                      |
+| **SAP BAS**                                       | Bei manuellem Antriggern                   |
 
-#### abapGit in der Cloud
-
-#### gCTS onPremise
-
-#### gCTS in der Cloud
-
-#### SAP BAS
-----
-**Das hier brauchen wir dann nicht mehr ? steht ja oben** ----
-
-Vlt. noch Bewertung und Empfehlung vorgehen.
-
+### Anwendungen
+Folgende Anwendungen neben einem SAP-System werden benötigt, um die Versionsverwaltungen zu nutzen.
+|                                                   | **Triggerpunkt**            |               
+|---------------------------------------------------|---------------------------|
+| **SE80 (Lokale Versionsverwaltung)**              | Bei jeder Transportfreigabe                | 
+| **ABAP Development Tools (Versionsverwaltung)**   | ABAP Development Tools     |
+| **abapGit in SAP GUI**                            | Repository System sowie abapGit im SAP-System                  | 
+| **abapGit in ADT**                                | Repository System sowie abapGit im SAP-System und Plugin in ADT                 | 
+| **abapGit in der Cloud**                          | Repository System sowie abapGit im SAP-System und Plugin in ADT                   | 
+| **gCTS in der Cloud**                             | Repository System sowie gCTS Konfiguration                    | 
+| **gCTS OnPrem**                                   | Repository System sowie gCTS Konfiguration                      |
+| **SAP BAS**                                       | Repository System sowie Zugang zum SAP Bas (Lizenzen)    |
 
 ## Einsatzszenarien
 
@@ -156,16 +209,6 @@ Dabei muss nicht jedes Repository-Objekt einzeln zurückgeholt werden, sondern e
 
 ![Alt text](./img/dsagleitfaden-customcode.drawio.png)
 
-----
-**Das hier brauchen wir dann nicht mehr ? steht ja oben** ----
-– Kundenentwicklung in einer normalen 3-System-Landschaft
-– Entwicklung in verschiedene Systemlandschaften verteilen
-– Recovery in drei Systemlandschaft
-– Paralleles Arbeiten
-– Custom Code Migration (Backup Legacy)
-
-----
-
 
 ## Vergleich des Entwicklungsprozess mit verschiedenen Versionsverwaltungen
 
@@ -183,15 +226,57 @@ Dabei muss nicht jedes Repository-Objekt einzeln zurückgeholt werden, sondern e
 
 ## Annäherung Entwicklungsprozesse ABAP und Non-ABAP über git-basierte Tools
 
-## Security Aspekte 
+SAP-Entwickler stehen im Spannungsfeld zwischen traditioneller Stabilität und der Notwendigkeit für schnellere, flexiblere Entwicklungsprozesse. In vielen anderen IT-Abteilungen sind DevOps-Praktiken bereits erfolgreich implementiert, während SAP-Team noch mit langwierigen Release-Zyklen und komplexerer Transportmechanismen. DevOps ist eine Kombination aus „Development“ (Entwicklung) und „Operations“ (Betrieb) und zielt darauf ab, Entwicklungs- und Betriebsprozesse so zu verzahnen, dass Software schneller, verlässlicher und mit höherer Qualität ausgeliefert wird. Durch den Einsatz einer Versionsverwaltung lässt sich auch in der SAP-Welt eine agile und effiziente Entwicklungsumgebung schaffen. 
 
 ## Integration an andere Komponenten
+Die SAP-Versionsverwaltung ist der Ausgangspunkt mit ABAP-Code außerhalb eines SAP-Systems zu arbeiten
+### Azure DevOps
+Azure DevOps optimiert den Bereitstellungsprozess, indem Pipelines bereitgestellt werden, die Sie ausführen können.
+Quelle: 
+https://community.sap.com/t5/technology-blog-posts-by-members/sap-change-management-with-azure-devops-transforming-enterprise-operations/ba-p/14130760
+### Apache Jenkins
+Jenkins ist eines der Standardwerkzeuge für Continuous Integration. Um Continuous Integration- oder Daily/Nightly Build-Komponenten einfach auf einem ABAP-Entwicklungssystem anzuwenden, kann der Startpunkt eine Versionsverwaltung sein.
+
+Quelle:
+https://github.com/SAP/jenkins-library
+https://community.sap.com/t5/application-development-and-automation-blog-posts/continuous-integration-and-abap-jenkins-the-missing-link/ba-p/13489906
+## Security Aspekte 
+
+### Revisionssicherheit
+Durch die präzise und lückenlose Protokollierung aller Änderungen sorgt die Versionsverwaltung für eine Revisionssicherheit. Dies ist besonders wichtig, um Compliance Anforderungen zu erfüllen sowie bei der Überprüfung von Sicherheitsvorfällen oder Audits
+
+### Sicherung und Wiederherstellung
+
+Versionsverwaltungen verfügen über Mechanismen zur regelmäßigen Sicherung der Daten. Im Falle eines Datenverlusts oder einer Beschädigung können frühere Versionen der Daten wiederhergestellt werden. Dadurch wird das Risiko von Datenverlust minimiert und die Kontinuität der Geschäftsprozesse sichergestellt.
+
+### Verwaltung von Zugriffsrechten
+Durch den Einsatz von externen Versionsverwaltungssystemen gibt es Funktionen zur Steuerung von Zugriffsrechten. So kann von den Administratoren festgelegt werden, wer auf welche Daten zugreifen, bearbeiten oder anzeigen darf. So wird unbefugter Zugriff verhindert und die Vertraulichkeit der Daten gewahrt.
+
+### Änderungsverfolgung
+
+Jede Änderung wird dokumentiert, einschließlich des Zeitpunktes und des Bearbeiters. Dadurch wird Transparenz geschafft und die Fehlerbehbung erleichtert.
+
+### Manipulationseinsatz
+Mit Hilfe von externen Versionsverwaltungssystemen können durch deren kryptografische Hashing-Algorithmen, de Inhalt und der Änderungsverlauf vor Manipulation zu schützen
+
 
 ## Risiken
-
-## Zusammenfassung
+- Langsame Release-Zyklen: Monatelange Entwicklungsphasen und manuelle Tests sorgen für Verzögerungen.
+- Komplexe Transportmechanismen: Das herkömmliche SAP-Transportmanagement ist nicht auf CI/CD optimiert.
+- Fehlende Automatisierung: Tests, Deployment und Code-Reviews sind oft noch manuell und fehleranfällig.
+- Widerstand gegen Veränderung: Viele SAP-Teams arbeiten nach klassischen Wasserfallmethoden und stehen agilen Prozessen skeptisch gegenüber.
 
 ## Empfehlung
+
+
+### Definition der Anforderungen
+
+Die Wahl des richtigen Versionsverwaltung hängt von den spezifischen Anforderungen und dem Entwicklungsprozess des jeweiligen Projekts oder Unternehmens ab. Definieren Sie ihre Anforderungen und entscheiden sie dann welche Versionsverwaltung sie einsetzen möchte. 
+
+### Einsatz von weiteren Tools
+Es können mit Hilfe der Versionsverwaltung moderne Entwicklungspraktiken wie CI/CD genutzt werden. Überlegen Sie sich
+
+
 
 ## Quellen
 https://www.rheinwerk-verlag.de/git-und-sap/?srsltid=AfmBOooMbM45uQOGPLDAiaKz5hHazrf45BIEVjmOIe8mz9HjpdHjgzZq
