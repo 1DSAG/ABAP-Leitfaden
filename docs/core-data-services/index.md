@@ -186,7 +186,25 @@ Die SAP hat bereits eine Fülle von Annotationen definiert, die verwendet werden
 
 Ein großer Teil sind die [ABAP Annotationen (SAP Help)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_annotations_abap_tables.htm). Damit können u.a. Metadaten angegeben werden über die Art der Daten, den Datenzugriff, Erweiterbarkeit und Semantik von Daten.
 
+__Beispiel__
+
+```abap
+...
+@Semantics.currencyCode
+Currency,
+...
+```
+
 Außerdem gibt es noch die [Framework-Spezifischen Annotationen (SAP Help)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_annotations_frmwrk_tables.htm). Damit kann man z.B. Metadaten für Benutzeroberflächen definieren. Das Paradebeispiel im SAP-Umfeld ist dabei Fiori Elements.
+
+__Beispiel__
+
+```abap
+...
+@UI.lineItem: [{ position: 10 }]
+Field,
+...
+```
 
 ## Data Definitions
 
