@@ -82,12 +82,3 @@ SAP Cloud ALM bietet mit der "[SAP Cloud ALM Test Automation API](https://api.sa
 (Grafik selber machen auf deutsch, welches Tricentis-Tool für welches ALM-System etc., in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?) und die einzelnen Punkte kurz beschreiben
 ![Optionaler Alternativtext, falls sich das Bild nicht laden lässt](./img/tricentis_tools_uebersicht.png)
 
-
------------------
-
-Quellen (brauchen wir die irgendwo?):
-SAP Cloud ALM for Implementation: Test Management https://support.sap.com/en/alm/sap-cloud-alm/implementation/sap-cloud-alm-implementation-expert-portal/testmanagement.html?anchorId=section_1012737862
-
-
-
-----------------------
