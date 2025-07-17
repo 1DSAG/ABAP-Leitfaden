@@ -57,7 +57,8 @@ Mit dem Wartungsende des SAP Solution Managers rückt auch das Ende von CBTA nä
 ## Testwerkzeuge in SAP Cloud ALM
 Als Nachfolgeprodukt des SAP Solution Managers, dessen Mainstream-Wartungsende seitens SAP auf Ende 2027 datiert ist, wurde [SAP Cloud ALM](https://support.sap.com/en/alm/sap-cloud-alm.html) für die Umsetzung des [Application Lifecycle Management](/ABAP-Leitfaden/application-lifecycle-management) entwickelt. Das Cloud-Produkt beinhaltet - wie schon der Solution Manager - unter anderem ein integriertes Testmanagement, das sowohl eigenständig (für manuelle Testfälle) als auch in Verbindung mit einer Testautomatisierungslösung wie [Tricentis Test Automation](#Tricentis-Test-Automation) eingesetzt werden kann. SAP Cloud ALM und damit auch dessen Testmanagement-Funktionen werden von SAP kontinuierlich weiterentwickelt.
 
-Ähnlich wie im SAP Solution Manager gliedert sich das Testmangement in SAP Cloud ALM in eine App für die **Testvorbereitung** von manuellen und automatisierten Testfällen, eine App für die Verwaltung von **Testplänen**, eine für die **Testausführung**, eine Analytics-App für die **Testausführungsanalyse** (!!!ist-das-so???) sowie eine zur Übersicht über Testfallfehler, hier **Defekte** genannt.
+Ähnlich wie im SAP Solution Manager gliedert sich das [Testmangement in SAP Cloud ALM](https://support.sap.com/en/alm/sap-cloud-alm/implementation/sap-cloud-alm-implementation-expert-portal/testmanagement.html?anchorId=section_1012737862
+) in eine App für die **Testvorbereitung** von manuellen und automatisierten Testfällen, eine App für die Verwaltung von **Testplänen**, eine für die **Testausführung**, eine Analytics-App für die **Testausführungsanalyse** sowie eine zur Übersicht über Testfallfehler, hier **Defects** genannt.
 
 Eine (Stand: Mai 2025) in SAP Cloud ALM noch fehlende Funktion, die von vielen Anwendern im Solution Manager intensiv genutzt wird, ist de Gruppierung von Testfällen innerhalb eines Testplans in Testpakete, mit der Möglichkeit zur passgenauen Zuordnung von Testergruppen inklusive Wiederverwendung (!!!ist-das-noch-so???), wie im Abschnitt [Test-Suite](#Test-Suite) dargestellt.
 
@@ -70,22 +71,13 @@ Eine Schnittstelle zwischen dem SAP Solution Manager und Tricentis Tosca existie
 
 [TTA for SAP](https://support.sap.com/en/alm/partners/test-automation.html) ist eine Untermenge von Tricentis Tosca. Es verwendet die gleichen Konzepte für automatisierte Testfälle wie Tosca selbst, ist aber auf SAP-Anwendungen beschränkt. Weiterhin gibt es Funktionalitäten aus Tosca, die in "TTA for SAP" nicht vorhanden sind, wie z.B. die Testfallentwurfsfunktionen oder das Anforderungs- und Problem-Management.
 
-TTA for SAP ist für die [Verwendung mit der Test Suite des SAP Solution Managers](https://support-hub.tricentis.com/open?id=manual&lang=en&path=%2Ftosca%2F2510%2Fen%2Fcontent%2Fsap_solutionmanager%2Fconcept.htm&product=tosca&sessionRotationTrigger=true&type=product_manual&version=2025.1) gedacht. Dabei dient die Test Suite als Testmanagement-Tool (für Tests, Planung, Reporting und mehr) und TTA als Automatisierungs-Tool. Dazu wird in der Test Suite eine Testkonfiguration angelegt, die als Hülle für den automatischen Test dient. Der automatische Testfall kann direkt aus der Test Suite aufgerufen werden. Nach Ablauf des Testfalls wird der Status dann wieder an die Test Suite zurückgemeldet. Dies gilt analog für das Zusammenspiel des Solution Managers mit dem eigenständigen Automatisierungs-Tool Tricentis Tosca.
-
->>>>>>>>>>>> Harald (09.04.2025)
-Tricentis Tosca wird von der SAP als "SAP Enterprise Continuous Testing by Tricentis" (ECT) angeboten.
+TTA for SAP ist für die [Verwendung mit der Test Suite des SAP Solution Managers](https://support-hub.tricentis.com/open?id=manual&lang=en&path=%2Ftosca%2F2510%2Fen%2Fcontent%2Fsap_solutionmanager%2Fconcept.htm&product=tosca&sessionRotationTrigger=true&type=product_manual&version=2025.1) gedacht. Dabei dient die Test Suite als Testmanagement-Tool (für Tests, Planung, Reporting und mehr) und TTA als Automatisierungs-Tool. Dazu wird in der Test Suite eine Testkonfiguration angelegt, die als Hülle für den automatischen Test dient. Der automatische Testfall kann direkt aus der Test Suite aufgerufen werden. Nach Ablauf des Testfalls wird der Status dann wieder an die Test Suite zurückgemeldet. Dies gilt analog für das Zusammenspiel des Solution Managers mit dem eigenständigen Automatisierungs-Tool Tricentis Tosca. Dieses wird von SAP als "SAP Enterprise Continuous Testing by Tricentis" (ECT) angeboten.
  
-Auch für Cloud ALM gibt es eine integrierte Lösung zur Testautomatisierung. "Tricentis Test Automation for SAP Cloud ALM" ist ein gemeinsames cloudbasiertes Angebot von SAP und Tricentis. Es kombiniert die Application-Lifecycle-Management-Fähigkeiten von SAP Cloud ALM mit den Testautomatisierungsfunktionen von Tricentis. So werden automatisierte, funktionale und durchgängige Softwaretests für alle browserbasierten SAP Produkte und Anwendungen ermöglicht. Tricentis liefert dazu auch Möglichkeiten zur Testorchestrierung, Ausführungsüberwachung und zum Testreporting. Um diese Funktionalität zu verwenden muss ein Tricentis-Tenant eingerichtet und mit SAP Cloud ALM verbunden werden. Allerdings gibt es wie bei TTA Einschränkungen bzgl. Usern und Speicher. Für die volle Funktionalität muss auch hier ein eigenständiges Tricentis-Tool erworben werden, die "SAP Test Automation by Tricentis".
+Auch für SAP Cloud ALM gibt es eine integrierte Lösung zur Testautomatisierung. "Tricentis Test Automation for SAP integrated with SAP Cloud ALM" ist ein gemeinsames cloudbasiertes Angebot von SAP und Tricentis. Es kombiniert die Application-Lifecycle-Management-Fähigkeiten von SAP Cloud ALM mit den Testautomatisierungsfunktionen von Tricentis. So werden automatisierte, funktionale und durchgängige Softwaretests für alle browserbasierten SAP-Produkte und -Anwendungen ermöglicht. Tricentis liefert dazu auch Möglichkeiten zur Testorchestrierung, Ausführungsüberwachung und zum Testreporting. Um diese Funktionalität zu verwenden muss ein Tricentis-Tenant eingerichtet und mit SAP Cloud ALM verbunden werden. Allerdings gibt es wie bei TTA Einschränkungen bzgl. Usern und Speicher. Für die volle Funktionalität muss auch hier ein eigenständiges Tricentis-Tool erworben werden, die "[SAP Test Automation by Tricentis](https://www.sap.com/germany/products/technology-platform/test-automation.html)".
  
-Auch für Cloud ALM gibt es eine Schnittstelle zu Drittanbieter-Werkzeugen, das öffentliche "Test Automation API" (Link dazu: https://api.sap.com/api/CALM_TEST_AUTOMATION/overview). 
-Über diese Schnittstelle kann neben Produkten anderer Anbieter auch das umfassende Tricentis-Testautomatisierungstool "SAP Test Automation by Tricentis" angeschlossen werden. Damit sind integrierte Tests mit SAP und Drittanbieter-Software möglich. Auch dieses Produkt von Tricentis kann über den SAP-Vertrieb erworben werden.
-<<<<<<<<<<<<<<<<<<<
+SAP Cloud ALM bietet mit der "[SAP Cloud ALM Test Automation API](https://api.sap.com/api/CALM_TEST_AUTOMATION/overview)" eine Schnittstelle zu Drittanbieter-Werkzeugen. Über diese Schnittstelle kann neben Produkten anderer Anbieter auch das umfassende Tricentis-Testautomatisierungstool "SAP Test Automation by Tricentis" angeschlossen werden. Damit sind integrierte Tests mit SAP-Anwendungen und Drittanbier-Anwendungen möglich. Auch dieses Produkt von Tricentis kann über den SAP-Vertrieb erworben werden.
 
 ...verschiedene Ausprägungen...Lizenzen teilweise schon dabei...
-        ·	Tosca: Integration in SAP SolMan – Link zu https://documentation.tricentis.com/tosca/2310/de/content/sap_solutionmanager/concept.htm  
-        https://support-hub.tricentis.com/open?id=manual&lang=en&path=%2Ftosca%2F2510%2Fen%2Fcontent%2Fsap_solutionmanager%2Fconcept.htm&product=tosca&sessionRotationTrigger=true&type=product_manual&version=2025.1
-
-    §	Tool für automatische GUI-Tests über sämtliche Technologien (Webseiten, SAP GUI etc.)
 
 (Grafik selber machen auf deutsch, welches Tricentis-Tool für welches ALM-System etc., in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?) und die einzelnen Punkte kurz beschreiben
 ![Optionaler Alternativtext, falls sich das Bild nicht laden lässt](./img/tricentis_tools_uebersicht.png)
@@ -95,7 +87,7 @@ Auch für Cloud ALM gibt es eine Schnittstelle zu Drittanbieter-Werkzeugen, das 
 
 Quellen (brauchen wir die irgendwo?):
 SAP Cloud ALM for Implementation: Test Management https://support.sap.com/en/alm/sap-cloud-alm/implementation/sap-cloud-alm-implementation-expert-portal/testmanagement.html?anchorId=section_1012737862
-SAP Application Lifecycle Management: Test Automation https://support.sap.com/en/alm/partners/test-automation.html (englisch, abgerufen am ...)
-Tricentis: Die empfohlene Testlösung von SAP https://www.tricentis.com/de/sap
+
+
 
 ----------------------
