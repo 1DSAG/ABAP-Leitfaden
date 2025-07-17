@@ -363,7 +363,8 @@ Dazu müssen zwei zusätzliche CDS Views erstellt und mit der Annotation versehe
 2. Consumption CDS View (Entity) `@Analytics.query: true` 
 
 ![CDS_Ueberblick](./img/SAC_CDS_Model.png)
-Musteraufbau: Direkter Zugriff vom SAC {: .img-caption}
+Musteraufbau: Direkter Zugriff vom SAC 
+{: .img-caption}
 
 Dabei ist zu beachten, dass für den Consumption CDS View einen **Vertrag für den systeminternen Gebrauch (C1)** vergeben werden muss.
 Zusätlich werden noch die folgenden Authorisierungs-Objekte in den Rollen der Anwender benötigt.
