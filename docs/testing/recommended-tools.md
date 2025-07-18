@@ -65,7 +65,7 @@ Eine (Stand: Mai 2025) in SAP Cloud ALM noch fehlende Funktion, die von vielen A
 SAP liefert eine große Anzahl an Standardprozessen inklusive Prozessablauf-Diagrammen und der zugehörigen Testaktivitäten aus (!!!nochmal checken!!!), die sehr leicht in SAP Cloud ALM verwendet und bei Bedarf angepasst werden können, ähnlich wie beim [Testschritt-Designer](#Testschritt-Designer) aus dem Focused Build-Paket.
 
 ## Tricentis Test Automation
-Tricentis ist ein eigenständiges Unternehmen, das nicht zu SAP gehört, aber [durch eine strategische Partnerschaft sehr gut in die SAP-Welt integriert](https://support.sap.com/en/alm/partners/test-automation.html) und daher [im SAP-Kontext die empfohlene Lösung zur Testautomatisierung](https://www.tricentis.com/sap) ist.
+Tricentis ist ein eigenständiges Unternehmen, das nicht zu SAP gehört, aber [durch eine strategische Partnerschaft sehr gut in die SAP-Welt integriert](https://support.sap.com/en/alm/partners/test-automation.html) und daher im SAP-Kontext die empfohlene Lösung zur Testautomatisierung ist.
 
 Eine Schnittstelle zwischen dem SAP Solution Manager und Tricentis Tosca existiert schon seit 2017. Im Jahr 2020 wurde die strategische Partnerschaft zwischen SAP und Tricentis weiter vertieft. Seitdem ist die Automatisierungsfunktionalität von Tricentis Tosca im SAP Solution Manager und inzwischen auch in SAP Cloud ALM integriert. Alle SAP Kunden mit einem SAP Enterprise Support Vertrag sind berechtigt, Tricentis Test Automation für SAP ("TTA for SAP") als Laufzeitlizenz zu nutzen. Darüber hinaus wird die Plattform von Tricentis über den SAP-Vertrieb im Rahmen der SAP Solution Extensions verkauft.
 
