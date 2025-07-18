@@ -216,7 +216,7 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/krapf/">Marco Krapf</a></td>
 <td>ALM, Softwaretests (weitere Testwerkzeuge)</td>
-<td>Als SAP Solution Manager Libero bin ich seit zehn Jahren auf dem SAP-Spielfeld unterwegs - allerdings nicht in der Position des ABAP-Entwicklers, sondern auf der gesamten Spielfläche mit der ALM-Werkzeugkiste in der Hand, um meine Kolleginnen und Kolleginnen mit den Tools des Application Lifecycle Managements wie Prozessmanagement, Testmanagement, Custom Code Management oder Monitoring zu unterstützen. Das fühlt sich an wie ein Point-and-Click-Adventure, bei dem ich jeden Tag vor neuen Rätseln stehe, die ich durch logisches Denken, reden mit den anderen Charakteren und Klicken auf dem Bildschirm lösen muss, um weiterzukommen. SAP ist für mich ein Open-World-Spiel ohne richtiges Ende, das nie langweilig wird, wenn man den nötigen Humor mitbringt.</td>
+<td>Als SAP Solution Manager Libero bin ich seit zehn Jahren auf dem SAP-Spielfeld unterwegs - allerdings nicht in der Position des ABAP-Entwicklers, sondern mit der ALM-Werkzeugkiste in der Hand, um meine Kolleginnen und Kolleginnen mit den Tools des Application Lifecycle Managements wie Prozessmanagement, Testmanagement, Custom Code Management oder Monitoring zu unterstützen. Das fühlt sich an wie ein Point-and-Click-Adventure, bei dem ich jeden Tag vor neuen Rätseln stehe, die ich durch logisches Denken, reden mit den anderen Charakteren und Klicken auf dem Bildschirm lösen muss, um weiterzukommen. SAP ist für mich ein Open-World-Spiel ohne richtiges Ende, das nie langweilig wird, wenn man den nötigen Humor mitbringt.</td>
 </tr>
 </tbody>
 </table>
