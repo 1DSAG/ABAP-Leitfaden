@@ -38,8 +38,8 @@ Dieses Kapitel teilt sich in folgende Abschnitte auf:
 - [**Sauberer und moderner Code**](/ABAP-Leitfaden/abap/clean_and_modern_abap)  
     Neben den übergeordneten Strukturen in Form vom Paketdesigns und der Strukturierung der Anwendung in Objekten, bildet der ABAP-Code die Funktion der Anwendung her. Der Code wird einmal erstellt, im Laufe des Lebenszyklus vielmals gelesen, erweitert, geändert und überprüft. Daher zahlt sich die Investition in gut lesbaren, verständlichen und übersichtlichen Code aus. Die Anwendung der Clean Code Prinzipien und Anwendung moderner ABAP-Statements und Funktionen ist essentiell um zukunftsfähige Anwendungen zu erstellen und effizient zu betreiben.
 
-- [**Restful Apsplication Programming Model - RAP**](/ABAP-Leitfaden/abap/restful_abap)  
-    Mit dem Restful Application Programming Model hat SAP nach einigen Evolutionsschritten nun ein stabiles und ausgereiftes Programmiermodell veröffentlicht, das viele Möglichkeiten bietet, viele Vorteile mit sich bringt und Entwicklern einen guten Rahmen bietet, moderne Anwendungen zu bauen.  
+- [**RESTful Application Programming Model - RAP**](/ABAP-Leitfaden/abap/restful_abap)  
+    Mit dem RESTful Application Programming Model hat SAP nach einigen Evolutionsschritten nun ein stabiles und ausgereiftes Programmiermodell veröffentlicht, das viele Möglichkeiten bietet, viele Vorteile mit sich bringt und Entwicklern einen guten Rahmen bietet, moderne Anwendungen zu bauen.  
     Die Empfehlungen der vorigen Abschnitte gelten für alle Entwicklungen in SAP, deren Umsetzung sind aber eine gute Grundlage, um für die Anwendungsentwicklung mit RAP gerüstet zu sein.  
     Empfehlungen zu RAP und das Vorgehen bei Entwicklung von RAP Applikationen finden Sie in diesem Kapitel.
 
@@ -51,7 +51,7 @@ Beispielsweise ist die Aufteilung einer sehr umfangreichen Methode in überschau
 
 Refactoring sollte immer dann vorgenommen werden, wenn bestehende Anwendungen geändert oder erweitert werden müssen. Dafür muss Zeit eingeplant werden. Gute Hinweise für ein sinnvolles Vorgehen zum Refactoring ist z.B. im Clean-ABAP-Styleguide beschrieben.
 
-Refactoring beschreibt aber nicht nur die Verbesserung des Codes, sondern kann im übertragenen Sinne auch auf die Struktur in Form der Pakete angewendet werden. Objekte können sinnvoll in neue Unterpakete verteilt werden. Falls eine hauptpaketbasierte Struktur bisher nicht umgesetzt wurde, können Hauptpakete erstellt werden und bisherige Pakete diesen Paketen zugeordnet werden.  Eine Aufteilung zu grosser Pakete in kleinere Pakete ist möglich, allerdings sind hier die Abhängigkeiten zu prüfen, zu klären und ggf. zu elimineren. Dabei hilft aber die Paketkapselung und die Paketprüfung.
+Refactoring beschreibt aber nicht nur die Verbesserung des Codes, sondern kann im übertragenen Sinne auch auf die Struktur in Form der Pakete angewendet werden. Objekte können sinnvoll in neue Unterpakete verteilt werden. Falls eine hauptpaketbasierte Struktur bisher nicht umgesetzt wurde, können Hauptpakete erstellt werden und bisherige Pakete diesen Paketen zugeordnet werden.  Eine Aufteilung zu grosser Pakete in kleinere Pakete ist möglich, allerdings sind hier die Abhängigkeiten zu prüfen, zu klären und ggf. zu eliminieren. Dabei hilft aber die Paketkapselung und die Paketprüfung.
 Die Verbesserung an bestehender Software sollte kontinuierlich und in kleinen Schritten erfolgen und durch Tests abgesichert werden. Wenn dies im Entwicklungsprozess integriert ist und zum Tagesgeschäft der Entwicklung gehört, wird sich das mit besser wartbarer und weniger Fehleranfälligen Software auszahlen.
 
 ## Die Rolle der Organisation
@@ -69,4 +69,5 @@ Ein wichtiges Element dabei ist auch die Wertschätzung Entwicklern gegenüber d
 Wertvolle und ausführliche Informationen zu dem Themenkomplex Organisation und Rahmenbedingungen finden Sie im Kapitel [**Organisation**](/ABAP-Leitfaden/organization/index).
 
 ## Zielgruppe des Kapitels  
+
 Wir sprechen in erster Linie den Personenkreis der ABAP Entwickler und in die ABAP-Entwicklung Involvierte an. Wir möchten aber auch Entscheider und Vorgesetzte von Entwicklungsteams ansprechen, da für die ABAP-Transformation Rahmenbedingungen gegeben sein müssen um auf dieser Reise erfolgreich zu sein. Und dafür möchten wir die Motivation im Unternehmen schaffen indem wir die Vorteile und Praxisempfehlungen hier aufzeigen.

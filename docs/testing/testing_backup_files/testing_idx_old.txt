@@ -1,0 +1,120 @@
+## Kapitel Struktur:
+
+Dieses Kapitel ist gerade in der Strukturierung und Befüllung!
+- Inhalte & Einführung
+- Motivation - / Rahmenbedingungen -> Organization - Spannung mit Realität ansprechecn
+- Zielgruppe
+- =>> INDEX
+- ABAP-UNIT file
+ - Empfehlungen vorgehen / Orga - Einsatz Unit Tests
+ - Basics und das Prinzip des Unit Tests
+ - Methodiken und Techniken
+ - Einstiegsbeispiel
+ - Best Practices
+
+ - Frust raus
+
+
+
+
+## Zielgruppe
+
+In diesem Kapitel möchten wir einerseits den Entscheidern und Verantwortlichen Empfehlungen und Hinweise geben, warum ABAP-UNIT Test für die heutige Form der modernen ABAP Programmierung sehr wichtig ist und welchen Nutzen Sie für dieses Investment erhalten können.  
+Dieser Leitfaden dient aber auch Entwicklern und Lead-Developern oder vgl. Rollen dazu, ABAP-UNIT Testing sinnvoll einzusetzen, oder falls es noch nicht umfangreich im Einsatz ist, den Einstieg zu erleichtern.  
+Vielleicht hilft dieser Leitfaden auch dabei sowohl Entwickler als auch Entscheider zu motivieren, ABAP-UNIT Tests umfangreich im Entwicklungsprozess einzusetzen und die Rahmenbedingungen dafür zu schaffen.
+
+
+## Inhalt des Kapitels
+
+Im Rahmen des ABAP-Leitfadens, der moderne ABAP Entwicklung zum Kerninhalt hat, behandeln wir in diesem Kapitel vorrangig das Thema ABAP-UNIT und was aus entwicklungstechnischer Sicht erforderlich ist, sowohl testbare Software im Generellen zu schreiben, aber auch wie ABAP-UNIT Tests gut geschrieben werden können und wie das Vorgehen zur Erstellung von Unit Tests ist.  
+Des Weiteren geben wir Hinweise zu den Herausforderungen und erforderlichen Rahmenbedingungen.  
+Ergänzend finden Sie noch ein paar Hinweise zu weiteren Testtools und Methoden, diese werden aber nur kurz angesprochen.  
+Unter Unit Tests werden oft verschiedene Definitionen von Tests verstanden. Wenn wir hier von Unit Tests schreiben, handelt es sich um programmierte Tests mit dem ABAP-UNIT Framework, die automatisiert ausgeführt werden können.  
+Die manuelle Ausführen einzelner Code Einheiten z.B. mittels SE37 / SE24 / Reports ist kein Test, sondern das Ausprobieren von Funktionalitäten.  
+
+## Motivation-old
+Unit Tests helfen dabei, Entwicklungen robuster zu machen. Programmierungen werden dabei automatisiert mit verschiedenen Parametern ausgeführt und auf Korrektheit überprüft. Robustheit und Korrektheit sind zwei Anforderungen, die in der modernen Softwareprogrammierung sehr hoch priorisiert werden sollten. Durch Unit Tests kann automatisiert sichergestellt werden, dass geschäftskritische Prozesse wie erwartet ausgeführt werden.
+
+<<-Warum beschäftigen wir uns mit Unit-Tests?
+ - Geschäftskritikalität.>>
+ << Unit Test sind der Treiber für Agile Software Entwicklung und schnelle Änderungen => da sie Sicherheit geben. >>
+
+Die Entwickler, die schon einmal eine Änderung an einem Programm gemacht haben und ganz langsam vorsichtig rückwärts wieder raus aus dem Code gegangen sind wissen was es bedeutet, wenn ein Programm nicht wartbar ist.
+"Hoffentlich funktioniert noch alles und ich habe nichts kaputt gemacht" Mit jeder dieser Änderungen wird das Programm immer weniger wartbar, weil sich niemand mehr traut Verbesserungen an der Struktur durch zu führen. 
+Unit Test bilden hier eine enorme Unterstützung, da sie die Möglichkeit für den Entwickler schaffen zu prüfen, dass alle bisherigen Anforderungen noch wie angefordert funktionieren. 
+
+## Unit Tests als Ausführbar Spezifikation / Fallbeschreibungen
+
+Mit Hilfe von Unit Tests und der Beschreibung dieser Tests lässt sich sehr genau spezifizieren, wie sich die Software unter gegebenen Bedingungen verhalten soll. Diese Tests bieten dann eine Art ausführbare Spezifikation und Dokumentation.
+
+
+## Motivation - new 
+
+>Der mitbegrunder des agilen Manifests und Buchautor mehrerer Bücher zur Softwareentwicklung, Robert C. Martin sagte:  "The only way to go fast is, to go well."
+Warum soll man Aufwand und Zeit in die Erstellung von Unit Tests investieren? 
+
+**Vorteile für Manager:**
+
+- Software hat bessere Struktur - strukturell besser aufgebaut .Die Belange und verantwortlichkeiten sind getrennt (s.o.c.)
+- damit ist die Software flexibler und besser anpassbar.
+- Die Entwicklung enthält ein Sicherheitsnetz, dass von Entwicklern genutzt werden kann wenn Software weiterentwickelt wird.
+- Fehler werden bereits während der Entwicklung auf dem entwicklungssystem erkannt und spart später TEstaufwand
+- Durch due erforderliche Erstellung der Testfälle und programmatische Testdatenerstellung, werden Unklarheiten in der Anforderungsspezifikation in einer frühen Phase der Entwicklung festgestellt.
+- eine Testabdeckung durch Unit Test ermöglicht die ständige Verbesserung und das Refaktoring der Software was ein Aufbau von technsichen Schulden vermeidet.
+- Wissensverteikung in tean . bessere Resourcenverteilung durch geteiltes Wissen
+
+- Die UnitTEst sind programmierte Spezifikation des Verhaltens. Damit können
+
+
+- Spätestens bei  der 2. Code Änderung kommen die Benefits -
+
+
+Die o.g. Punkte führen im Ergebnis dazu, dass der Testaufwand der Anwendung durch die Fachabteilung deutlich reduziert wird. Anpassungen und Erweiterungen der Anwendungen werden durch die Implementierung von Unit Tests deutlich vereinfacht und vor allem sicherer, da neue Fehler bereits durch die bestehenden Unit Tests aufgedeckt werden und während der Entwickling unit tests 
+
+
+Die Erstellung von Software, die mit Unit Tests unterlegt ist, hat bediungt durch die erforderliche Massnahmen zur Testbarkeit eine klare struktur, die objektorienteierten Designprinzipien folgt. D
+
+**Vorteile für den Entwickler:**
+
+## Exemplares Beispiel eines unit TEsts zur Erläuterung der Vorteile konkret:
+BADI im EWM - Filter und Rundung von Beständen - erklärung aufbau und vergleich kein Unit Test und Implementierung mit Unit test.
+*Schreibe ich .....
+Fachtest:
+Beschaffung daten / Aufbau testcase 
+Sicherehitsnetz 
+er kann es ausführen ohne Berater und ohne TEstdaten. schneller identifikatinb
+weniger Angst was kaputtzumachen
+
+
+
+
+
+## Einleitung Testing => Voraussetzungen + Rahmenbedingungen
+
+### Mangelndes Wissen und Qualifikation
+
+----- kommt weg -----------
+* das hier müssen wir umdrehen -----
+Auch im Jahr 2025 bleibt die Herausforderung für Unternehmen bestehen, dass der großteil der SAP Entwickler nur über eine lückenhafte bis nicht vorhandene Ausbildung und Erfahrung im Bereich der automatisierten Softwaretest hat.  
+Dies hat eine Vielzahl von Gründen, die vor allem in der Nachfragesituation von SAP Projektkunden liegen. Eine große Anzahl an Fachkräften wird in Beratungsfirmen ausgebildet, diese Fähigkeiten von Kunden nicht nachgefragt sind.  
+In vielen extern besetzten Projekten wird durch den hohen Erfolgs- und Zeitdruck auf die vermeintlich optionale Möglichkeit Software durch automatische Tests zu stabilisieren und zu verifizieren verzichtet. Kunden wünsche automatische Tests meist nicht, da sie davon ausgehen, dass diese nicht zu einer Verkürzung der Gesamtentwicklungsdauer beitragen werden. Beratungsfirmen fördern aufgrund der mangelnden Nachfrage diese Fähigkeiten der Entwickler kaum. 
+Vielmehr ist es leider teilweise so das Entwickler, die aus eigenem Antrieb / Qualitätbewusstsein oder um sich selber mittelfristig ein Sicherheitsnetz zu erstellen, Unit tests schreiben, somit gegen projektregeln verstoßen und mit Problemen rechnen müssen.
+
+Damit sich Unit Tests in ABAP weiter durchsetzen ist hier in Umdenken aus dem Projektmanagement und bei den Verantwotlichen für den Betrieb von Software nötig.
+
+
+Erst wenn dies in den Organisationen angekommen ist, dass der vermeintliche zusätzliche Aufwand für unit test code kein zusätzlicher Aufwand ist, sondern nur eine Verlagerung der Tätigkeiten vom Fehlersuchen, manuellen Daten erstellen, Testen, hin zur Programmierung, wird es nachhaltig dazu kommen, dass Unit-Test flächendeckend eingesetzt werden. 
+Hier sollten wir uns aus dem Bereich SAP vorbilder aus anderen erfolgreichen Unternehmen suchen.
+
+Unit-tests und das Wissen dazu muss sich zu einem geforderten und geprüften Skill etablieren. Für einen ABAP-Entwickler muss analog zu anderen unabdingbaren bauteilen gehören unittests zu erstellen, zu pflegen und weiter zu entwickeln.
+----
+
+
+
+>Empfehlungen:
+- Die Trennung der Belange wié Datenbankzugriffe und SAP-Aufruf sind essentiel für die Unit Testerstellung
+- trennen Sie sauber die verschiedenen Belange
+- Verpflichten Sie die Entwickler zur erstellung von Unit tests - sind nicht optioneal DoD. fordern Sie eine 
+-
+{: .highlight}
+

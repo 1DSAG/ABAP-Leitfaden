@@ -3,6 +3,7 @@ layout: page
 title: Sicherheit
 permalink: /security/
 nav_order: 13
+has_children: true
 ---
 
 {: .no_toc}
@@ -11,6 +12,7 @@ nav_order: 13
 1. TOC
 {:toc}
 
-## Erster Punkt 
+Dieses Kapitel beschreibt ein paar Themengebiete rundum ABAP Entwicklung und es werden ein paar Konzepte erläurtert. Der Fokus liegt hier auf Applikationssicherheit; die SAP-Basis und System-Sicherheitsthemen nicht näher betrachtet. Wir empfehlen Ihnen einen Threat-Modelling-Workshop für SAP-System-Angriffszenarien und ihre Abdeckung durchzuführen.
 
-Hier beginnt das Kapitel
+Das Themengebiet Sicherheit in der ABAP Entwicklung ist komplex und die hier aufgeführten Sicherheitsthemen sind ein guter Start. Bei weiteren Fragen weist der Leitfaden auf Referenzen und weitergehende Literatur hin.
+
