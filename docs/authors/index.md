@@ -127,11 +127,6 @@ nav_order: 15
 <td>msg systems ag (ehemals)</td>
 <td>Schreiben</td>
 </tr>
-<tr class="odd">
-<td>Jürgen Creyaufmüller</td>
-<td>Würth IT GmbH</td>
-<td></td>
-</tr>
 <tr class="header">
 <td>Marc Zimmek</td>
 <td>Claas</td>
@@ -222,6 +217,11 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <td><a href="https://www.linkedin.com/in/jan-sauerland-1543b3a9/">Jan Sauerland</a></td>
 <td>Moderne ABAP Entwicklung</td>
 <td>Als Hauptansprechpartner für ABAP-Programmierung im Unternehmen hatte ich auf Basis des alten ABAP-Leitfadens von 2016 bereits unternehmensinterne ABAP-Richtlinien entworfen. Daher freue ich mich sehr darüber, nun selbst am DSAG-Leitfaden für ABAP mitwirken und mein gesammeltes Wissen einbringen zu können.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.linkedin.com/in/krapf/">Marco Krapf</a></td>
+<td>ALM, Softwaretests (weitere Testwerkzeuge)</td>
+<td>Als SAP Solution Manager Libero bin ich seit zehn Jahren auf dem SAP-Spielfeld unterwegs - allerdings nicht in der Position des ABAP-Entwicklers, sondern mit der ALM-Werkzeugkiste in der Hand, um meine Kolleginnen und Kolleginnen mit den Tools des Application Lifecycle Managements wie Prozessmanagement, Testmanagement, Custom Code Management oder Monitoring zu unterstützen. Das fühlt sich an wie ein Point-and-Click-Adventure, bei dem ich jeden Tag vor neuen Rätseln stehe, die ich durch logisches Denken, reden mit den anderen Charakteren und Klicken auf dem Bildschirm lösen muss, um weiterzukommen. SAP ist für mich ein Open-World-Spiel ohne richtiges Ende, das nie langweilig wird, wenn man den nötigen Humor mitbringt.</td>
 </tr>
 </tbody>
 </table>
