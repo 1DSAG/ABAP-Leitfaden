@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Entwicklung von Open Source
-permalink: /open-source/developing-open-source/
+title: Entwicklung von Open-Source-Software
+permalink: /open-source/developing-open-source-software/
 parent: Open Source
 nav_order: 4
 ---
 
-# Entwicklung von Open Source
+# Entwicklung von Open-Source-Software
 {: .no_toc}
 
 Dieser Abschnitt beschreibt den Anwendungsfall als Unternehmen eigene Komponenten als Open-Source-Projekt zu entwickeln.
