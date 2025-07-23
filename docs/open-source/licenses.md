@@ -14,7 +14,7 @@ nav_order: 1
 
 ## Aspekte von Software-Lizenzen
 
-Die Lizenz einer Software ist ausschlaggebend dafür, wie Sie sie einsetzen können. Konkret in Bezug auf Open Source macht eine Open-Source-Lizenz eine Software zur Open Source Software. Open-Source-Lizenzen gewähren ausdrücklich Rechte gegebenüber dem Lizenznehmer, geben ihm aber auf Pflichten auf, wie dieser mit der Software umzugehen hat. Wenn Sie ein Softwareprojekt finden, welches seinen Quellcode öffentlich zugänglich publiziert hat, aber keine Lizenz zu finden ist, dann handelt es sich nicht um Open Source, sondern lediglich um _Source Available_. Bei einer Einführung von Open Source sollten Sie sich in Ihrem Unternehmen schlau machen, ob beziehungsweise wer sich mit dem Lizenzthema beschäftigt. Gerade in größeren Unternehmen, die viele verschiedene Programmiersprachen einsetzen, kann es eine zentrale Instanz geben, die sich um Kompatibilität der Lizenzen beim Einsatz von Open-Source-Komponenten kümmert.
+Die Lizenz einer Software ist ausschlaggebend dafür, wie Sie sie einsetzen können. Konkret in Bezug auf Open Source macht eine Open-Source-Lizenz eine Software zur Open-Source-Software. Open-Source-Lizenzen gewähren ausdrücklich Rechte gegebenüber dem Lizenznehmer, geben ihm aber auch Pflichten auf, wie dieser mit der Software umzugehen hat. Wenn Sie ein Softwareprojekt finden, welches seinen Quellcode öffentlich zugänglich publiziert hat, aber keine Lizenz zu finden ist, dann handelt es sich nicht um Open Source, sondern lediglich um _Source Available_. Bei einer Einführung von Open Source sollten Sie sich in Ihrem Unternehmen informieren machen, ob, beziehungsweise wer sich mit dem Lizenzthema beschäftigt. Gerade in größeren Unternehmen, die viele verschiedene Programmiersprachen einsetzen, kann es eine zentrale Instanz geben, die sich um Kompatibilität der Lizenzen beim Einsatz von Open-Source-Komponenten kümmert.
 
 ## Übersicht von Open-Source-Lizenzen
 
@@ -97,4 +97,4 @@ In nachfolgender Tabelle finden Sie populäre Open-Source-Lizenzen, die auch in 
 </table>
 <!-- markdownlint-enable MD033 -->
 
-Details zu Lizenzen finden Sie auch in [Verwendung von Open Source - Lizenzen](using-open-source.md#lizenzen) und [Entwicklung von Open Source - Lizenzen](developing-open-source.md#lizenzen)
+Details zu Lizenzen finden Sie auch in [Verwendung von Open-Source-Software - Lizenzen](using-open-source-software.md#lizenzen) und [Entwicklung von Open-Source-Software - Lizenzen](developing-open-source-software.md#lizenzen).
