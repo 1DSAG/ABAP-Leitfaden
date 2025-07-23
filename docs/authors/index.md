@@ -155,7 +155,7 @@ nav_order: 15
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/abap-pete/">Peter Luz</a></td>
 <td>Robert Bosch GmbH</td>
-<td>Kapitel ABAP Schreiben, Review</td>
+<td>Schreiben (ABAP, Testen), Review</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/sebastian-freilinger-huber/">Sebastian Freilinger-Huber</a></td>
@@ -213,6 +213,16 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <td>Organisation</td>
 <td>Selbst die talentiertesten ABAP Entwickler*innen mit dem besten KnowHow werden nicht erfolgreich sein, wenn sie nicht im Unternehmen ein positiv unterstützendes Umfeld finden: vom Management bis zu den Team-Kolleg*innen, fundierend auf einer klaren Strategie, bewusst entschiedener Architektur und modernen Softwareentwicklungs-Prozessen. Deshalb engagiere ich mich neben "technischer Exzellenz" auch für Themen aus den Bereichen Organisation und Softwareentwicklungsprozesse/-vorgehensmodelle. Nur beides zusammen macht Menschen und damit die Unternehmen für die sie arbeiten erfolgreich.</td>
 </tr>
+
+<tr class="odd">
+
+<td><a href="https://www.linkedin.com/in/abap-pete/">Peter Luz</a></td>
+<td>ABAP, Testing, KI</td>
+<td>ABAP Entwickler seit 2010 bei Robert Bosch GmbH im Bereich der Entwicklung von SAP-Logistik Funktionen <br>
+    seit 2024 Lead-Developer in einem S/4 Template Entwicklungsprojekt im Bereich Logistik <br> 
+    Nach der Mitarbeit am DSAG ADT Leitfaden 2023 möchte ich meine Erfahrungen aus vielen Jahren ABAP Entwicklung einbringen und weitergeben. </td>
+</tr>
+
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/jan-sauerland-1543b3a9/">Jan Sauerland</a></td>
 <td>Moderne ABAP Entwicklung</td>

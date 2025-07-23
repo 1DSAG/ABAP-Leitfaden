@@ -98,56 +98,41 @@ Mit SAP Business Application Studio steht Unternehmen ein Werkzeug für die Entw
 
 ## Vergleich der unterschiedlichen Versionskontrollsysteme
 
-### SAP-System
+### SAP-System und Verfügbarkeit
 
 In den folgenden SAP-Systemen ist das Versionskontrollsystem verfügbar.
 
-| **Tool**                                          | **SAP-System**            |
-|:--------------------------------------------------|:--------------------------|
-| **SE80 (Lokale Versionsverwaltung)**              | SAP OnPrem                |
-| **ABAP Development Tools (Versionsverwaltung)**   | SAP OnPrem/SAP Cloud      |
-| **abapGit in SAP GUI**                            | SAP OnPrem                |
-| **abapGit in ADT**                                | SAP Cloud/SAP OnPre       |
-| **abapGit in der Cloud**                          | SAP Cloud                 |
-| **gCTS in der Cloud**                             | SAP Cloud                 |
-| **gCTS OnPrem**                                   | SAP OnPrem                |
-| **SAP BAS**                                       | SAP Cloud/SAP OnPrem      |
-
-### Systemverfügbarkeit
-
-In den folgenden SAP-Systemen ist das Versionskontrollsystem verfügbar.
-
-|                                                   | **Systemverfügbarkeit**   |
-|_--------------------------------------------------|:--------------------------|
-| **SE80 (Lokale Versionsverwaltung)**              | Seit mindestens 2007      |
-| **ABAP Development Toolse (Versionsverwaltung)**  | Seit 2012                 |
-| **abapGit in SAP GUI**                            | SAP BASIS version 702     |
-| **abapGit in ADT**                                | Seit 2018                 |
-| **abapGit in der Cloud**                          | Seit 2018                 |
-| **gCTS in der Cloud**                             | S/4HANA EM 1909 FPS00     |
-| **gCTS OnPrem**                                   | S/4HANA EM 1909 FPS00     |
-| **SAP BAS**                                       | Seit 2020                 |
+| **Tool**                                         | **SAP-System**            | **Systemverfügbarkeit**   |
+|:-------------------------------------------------|:--------------------------|:--------------------------|
+| **SE80 (Lokale Versionsverwaltung)**             | SAP OnPrem                | Seit mindestens 2007      |
+| **ABAP Development Tools (Versionsverwaltung)**  | SAP OnPrem/SAP Cloud      | Seit 2012                 |
+| **abapGit in SAP GUI**                           | SAP OnPrem                | SAP BASIS version 702     |
+| **abapGit in ADT**                               | SAP Cloud/SAP OnPre       | Seit 2018                 |
+| **abapGit in der Cloud**                         | SAP Cloud                 | Seit 2018                 |
+| **gCTS in der Cloud**                            | SAP Cloud                 | S/4HANA EM 1909 FPS00     |
+| **gCTS OnPrem**                                  | SAP OnPrem                | S/4HANA EM 1909 FPS00     |
+| **SAP BAS**                                      | SAP Cloud/SAP OnPrem      | Seit 2020                 |
 
 ### Funktionsumfang
 
-In den folgenden Dokumentation befindet sich der Funktionsumfang der jeweiligen Versionsverwaltung
+In den folgenden Dokumentationeb befindet sich der Funktionsumfang der jeweiligen Versionsverwaltung
 
-|                                                   | **Funktionsumfang**           |
-|:--------------------------------------------------|:------------------------------|
-| **SE80 (Lokale Versionsverwaltung)**              | https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/2b28ffa716c24348903f8ffbfeb81df8/e52a2c8d53f8400bb8a309cffe417275.html |
-| **ABAP Development Tools (Versionsverwaltung)**   | https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/comparing-source-code                               |
-| **abapGit in SAP GUI**                            | https://docs.abapgit.org/user-guide/                                                                                       |
-| **abapGit in ADT**                                | https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit                                        |
-| **abapGit in der Cloud**                          | https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit                                        |
-| **gCTS in der Cloud**                             | https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/f319b168e87e42149e25e13c08d002b9.html         |
-| **gCTS OnPrem**                                   |https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/f319b168e87e42149e25e13c08d002b9.html          |
-| **SAP BAS**                                       |                                             |
+| **Tool**                                         | **Funktionsumfang**           |
+|:-------------------------------------------------|:------------------------------|
+| **SE80 (Lokale Versionsverwaltung)**             | [SAP Versionsverwahltung](https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/2b28ffa716c24348903f8ffbfeb81df8/e52a2c8d53f8400bb8a309cffe417275.html)|
+| **ABAP Development Tools (Versionsverwaltung)**  | [ADT User Guide ](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/comparing-source-code)              |
+| **abapGit in SAP GUI**                           | [abapgit User Guide](https://docs.abapgit.org/user-guide/)                                                                   |
+| **abapGit in ADT**                               | [BTP Working with abapgit](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit)              |
+| **abapGit in der Cloud**                         | [abapgit](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit)                               |
+| **gCTS in der Cloud**                            | [gCTS](https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/f319b168e87e42149e25e13c08d002b9.html)   |
+| **gCTS OnPrem**                                  | [gCTS](https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/f319b168e87e42149e25e13c08d002b9.html)   |
+| **SAP BAS**                                      | [DOKU fehlt noch]                                            |
 
 ### Versionsumfang
 
 Die Versionsverwaltung umfasst folgenden Versionsumfang
 
-|                                                   | **Versionsumfang**                         |
+| **Tool**                                          | **Versionsumfang**                         |
 |:--------------------------------------------------|:-------------------------------------------|
 | **SE80 (Lokale Versionsverwaltung)**              | Jedes einzelne Objekt                      |
 | **ABAP Development Tools (Versionsverwaltung)**   | Jedes einzelne Objekt                      |
@@ -159,9 +144,10 @@ Die Versionsverwaltung umfasst folgenden Versionsumfang
 | **SAP BAS**                                       |                                            |
 
 ### Triggerpunkt
+
 Die Versionsverwaltung wird folgendermaßen angetriggert.
 
-|                                                   | **Triggerpunkt**                           |
+| **Tool**                                          | **Triggerpunkt**                           |
 |:--------------------------------------------------|:-------------------------------------------|
 | **SE80 (Lokale Versionsverwaltung)**              | Bei jeder Transportfreigabe                |
 | **ABAP Development Tools (Versionsverwaltung)**   | Nach jedem Speichern/Aktivieren            |
@@ -173,10 +159,11 @@ Die Versionsverwaltung wird folgendermaßen angetriggert.
 | **SAP BAS**                                       | Bei manuellem Antriggern                   |
 
 ### Anwendungen
+
 Folgende Anwendungen neben einem SAP-System werden benötigt, um die Versionsverwaltungen zu nutzen.
 
-|                                                   | **Triggerpunkt**            |               
-|---------------------------------------------------|---------------------------|
+|                                                   | **Triggerpunkt**                                                |
+|---------------------------------------------------|---------------------------                                      |
 | **SE80 (Lokale Versionsverwaltung)**              | Bei jeder Transportfreigabe                                     |
 | **ABAP Development Tools (Versionsverwaltung)**   | ABAP Development Tools                                          |
 | **abapGit in SAP GUI**                            | Repository System sowie abapGit im SAP-System                   |
@@ -220,16 +207,12 @@ Dabei muss nicht jedes Repository-Objekt einzeln zurückgeholt werden, sondern e
 
 ## Vergleich des Entwicklungsprozess mit verschiedenen Versionsverwaltungen
 
-
-| SAP-Standard | GIT-basiert |
-|----|----|
+| SAP-Standard  | git-basiert  |
+|:--------------|:-------------|
 | Auftrag muss am Anfang angelegt werden | Commit wird nach der Änderung durchgeführt |
-|----|----|
 | Verteilen von Code – keine Kontrolle über die Änderungen in anderen Systemen | Zentraler Anlaufpunkt |
-|----|----|
-| Versionierung einer Anwendung nicht möglich | Versionierung von einer ganzen Anwendung über standardfunktionalitäten möglich|
-|----|----|
-| Rückgängig machen der Änderungen eines Transports nur manuell mit massivem Aufwand mit Einschränkungen möglich | Zurückgehen auf vorigen Commit damit zurücksetzen aller Änderugen über gCTS oder ABAPGIT möglich |
+| Versionierung einer Anwendung nicht möglich | Versionierung von einer ganzen Anwendung über Standardfunktionalitäten möglich |
+| Rückgängig machen der Änderungen eines Transports nur manuell mit massivem Aufwand mit Einschränkungen möglich | Zurückgehen auf vorigen Commit damit zurücksetzen aller Änderungen über gCTS oder abapgit möglich |
 
 ## Annäherung Entwicklungsprozesse ABAP und Non-ABAP über git-basierte Tools
 
@@ -295,5 +278,4 @@ Die Wahl des richtigen Versionsverwaltung hängt von den spezifischen Anforderun
 Es können mit Hilfe der Versionsverwaltung moderne Entwicklungspraktiken wie CI/CD genutzt werden. Überlegen Sie sich
 
 ## Weitere Quellen
-https://www.rheinwerk-verlag.de/git-und-sap/?srsltid=AfmBOooMbM45uQOGPLDAiaKz5hHazrf45BIEVjmOIe8mz9HjpdHjgzZq
-
+[Git und SAP / Rheinwerk Verlag](https://www.rheinwerk-verlag.de/git-und-sap/?srsltid=AfmBOooMbM45uQOGPLDAiaKz5hHazrf45BIEVjmOIe8mz9HjpdHjgzZq)
