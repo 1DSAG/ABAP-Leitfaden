@@ -51,7 +51,7 @@ Damit haben Sie bereits einen guten Überblick über die Rahmenbedingungen. Die 
 
 geben Ihnen Erläuterungen, Empfehlungen und Details zu den technischen Aspekten und Technologien moderner SAP Entwicklung.
 Am Anfang dieser Kapitel finden Sie einleitende Informationen und einen Überblick über das Thema. Dieser Teil ist vor allem für Manager und Entscheider im Unternehmen gedacht, die sich einen Überblick über den Bereich machen wollen.  
-Je Tiefer Sie in das Kapitel einsteigen, desto detailiertere Informationen erhalten Sie zu den Themen. Diese Abschnitte sind vor allem für Architekten und Entwickler geeignet, die einen tieferen Einblick in das Thema erhalten wollen.  
+Je tiefer Sie in das Kapitel einsteigen, desto detailliertere Informationen erhalten Sie zu den Themen. Diese Abschnitte sind vor allem für Architekten und Entwickler geeignet, die einen tieferen Einblick in das Thema erhalten wollen.  
 
 Im weiteren Teil finden Sie dann Abschnitte zu den Themen **Open Source** mit wichtigen Ausführungen warum Open Source auch im ABAP-Bereich wichtig ist, Ausführungen zu ALM, bei denen Sie auch Erläuterungen zu modernen Methoden der **Versionsverwaltung** finden. Abschließend finden Sie noch Ausführungen zu den Themen **Sicherheit** und **Integration**, die bei Entwicklung von SAP Software heute wichtiger denn je sind.
 Und natürlich dürfen auch Hinweise zur künstlichen Intelligenz hier nicht fehlen.

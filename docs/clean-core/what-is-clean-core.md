@@ -189,7 +189,7 @@ Hier wären ein paar Hilfestellungen für SAP Kunden, welche mittelfristig noch 
 
 ### Grundsätze für Modifikationen  
 - **Definition laut SAP Help**:  
-  Eine Modifikation bezeichnet das direkte Ändern des SAP-Standardcodes. Dies ist eine Maßnahme, die von SAP ausdrücklich nicht empfohlen wird, da sie zukünftige Updates und Wartungszyklen erschwert. Mit jedem System-Upgrade wird eine Abarbeitung mit der Transaktion SPAU zwingend duchzuführen sein.
+  Eine Modifikation bezeichnet das direkte Ändern des SAP-Standardcodes. Dies ist eine Maßnahme, die von SAP ausdrücklich nicht empfohlen wird, da sie zukünftige Updates und Wartungszyklen erschwert. Mit jedem System-Upgrade wird eine Abarbeitung mit der Transaktion SPAU zwingend durchzuführen sein.
   **Definition laut dem Dokument "Extend SAP S/4HANA in the cloud and on premise with ABAP based extensions"**:
    Sie sollten auch die verbleibenden klassischen Standard-Erweiterungstypen kritisch betrachten und die Verwendung von BADIs bevorzugen.
   Siehe: ["5.3.2 Using classical business logic extension techniques"](https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html)
@@ -253,6 +253,6 @@ Wenn Sie den SAP-Standard verändern möchten, beachten Sie die folgenden Regeln
 
 ## Clean ABAP - Abgrenzung
 
-Bei Clean ABAP geht um das Schreiben von ABAP Code dessen Fokus auf Verständlichkeit und Wartbarkeit liegt. Bei Clean Core der SAP geht es um die Behandlung der Grenzen von kundenindividuellen Programen im SAP Standard. Nur weil eine Umsetzung der Clean Core Stategie enspricht ist diese nicht automatisch Clean ABAP und umgedreht. Mehr dazu im Kapitel [ABAP](/ABAP-Leitfaden/abap).
+Bei Clean ABAP geht es um das Schreiben von ABAP Code dessen Fokus auf Verständlichkeit und Wartbarkeit liegt. Bei Clean Core der SAP geht es um die Behandlung der Grenzen von kundenindividuellen Programmen im SAP Standard. Nur weil eine Umsetzung der Clean Core Strategie entspricht ist diese nicht automatisch Clean ABAP und umgekehrt. Mehr dazu im Kapitel [ABAP](/ABAP-Leitfaden/abap).
 
 
