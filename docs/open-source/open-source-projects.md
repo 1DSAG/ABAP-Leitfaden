@@ -37,7 +37,7 @@ Mit [abapOpenChecks](https://github.com/larshp/abapOpenChecks) werden Prüfungen
 
 ### abaplint
 
-Mit [abaplint/abaplint](https://github.com/abaplint/abaplint) können statische Codeanalysen für ABAP Durchgeführt werden. Überblick:
+Mit [abaplint/abaplint](https://github.com/abaplint/abaplint) können statische Codeanalysen für ABAP durchgeführt werden. Überblick:
 
 - **Besitzer**: [abaplint](https://github.com/abaplint)
 - **Erstellt am**: 20. Dezember 2015
