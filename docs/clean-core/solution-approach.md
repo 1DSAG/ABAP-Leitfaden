@@ -15,14 +15,14 @@ nav_order: 5
 ## Definieren Sie Ihren Lösungsweg
 Jedes Unternehmen muss für sich intern entscheiden, wie es die neuen Technologien anwendet. Und eine rationale Entscheidung beruht auf wirtschaftlichen Aspekten – Mehrwerte für die Fachbereiche, Zufriedenheit der Kunden, direkte (Lizenzkosten, Betriebskosten) und indirekte Kosten (Mitarbeiter Einstellung, Ausbildung, und Auslaufen des alten Know-hows). 
 
-Eine gesamthafte Analyse erfordert auch die Betrachtung von Alterativen zu SAP-Produkten. Bspw. Cloud Native Applikationen kann ein Entwickler nicht nur auf der SAP BTP erstellen. Die anderen Cloud-Anbieter müssen für eine ganzheitliche Bewertung mitbetrachtet werden. Genauso müssen die Tools für API-Management auch definiert und entschieden werden. Die organisatorischen Aspekte von „Fusion Teams“ sollten mit in die Bewertung hineinfließen; Sogenannte Citizen Developer können teilweise IT-Aufgaben, wie Front-End Design übernehmen. Neben SAP und non-SAP Produkten, gibt es auch openSource Projekte, welche diverse Anwendungsfälle, vor allem im Reporting lösen.
+Eine gesamthafte Analyse erfordert auch die Betrachtung von Alternativen zu SAP-Produkten. Bspw. Cloud Native Applikationen kann ein Entwickler nicht nur auf der SAP BTP erstellen. Die anderen Cloud-Anbieter müssen für eine ganzheitliche Bewertung mitbetrachtet werden. Genauso müssen die Tools für API-Management auch definiert und entschieden werden. Die organisatorischen Aspekte von „Fusion Teams“ sollten mit in die Bewertung hineinfließen; Sogenannte Citizen Developer können teilweise IT-Aufgaben, wie Front-End Design übernehmen. Neben SAP und non-SAP Produkten, gibt es auch openSource Projekte, welche diverse Anwendungsfälle, vor allem im Reporting lösen.
 
 Die Umsetzung des Clean Core-Konzepts erfordert einen strategischen Ansatz und eine sorgfältige Planung. Organisationen können den folgenden Ansatz anwenden, um das Clean Core-Konzept von SAP effektiv zu nutzen. 
  
 1. **API-First-Ansatz**: Begrüßen einen API-First-Ansatz für die Entwicklung, indem Sie Kernfunktionalitäten als wiederverwendbare APIs freigeben, die von internen und externen Anwendungen genutzt werden können. Dies fördert Agilität, Skalierbarkeit und Innovation und gewährleistet gleichzeitig Sicherheit und Governance. Stichwort: SOA - Service Oriented Architecture, oder auch Microservices.
     * Neue Schnittstellen, werden nur mit Standard APIs der SAP angelegt.
     * Oder eigene Z* REST APIs werden intern geschaffen.
-2. **Modularisierung und Standardisierung**: Zerlegen Sie monolithische Systeme in modulare Komponenten und standardisieren Sie Datenstrukturen und Schnittstellen, wo möglich. Dies ermöglichten eine größere Flexibilität, Wiederverwendbarkeit und Interoperabilität im gesamten Unternehmen.
+2. **Modularisierung und Standardisierung**: Zerlegen Sie monolithische Systeme in modulare Komponenten und standardisieren Sie Datenstrukturen und Schnittstellen, wo möglich. Dies ermöglicht eine größere Flexibilität, Wiederverwendbarkeit und Interoperabilität im gesamten Unternehmen.
     * Entscheiden Sie, wo die kundenspezifischen Daten gespeichert werden sollen. Wenn Sie zusätzliche Daten für Ihre Geschäftsprozesse benötigen, dann am besten integriert in ein Standarddatenprodukt, vermeiden Sie parallele Datenmodelle zur Standardtabellen.
     * Harmonisieren Sie Ihre Geschäftsprozesse und starten Sie Projekte um Z-Transaktionen auf Standard Fiori Apps zu kommen.
     * Entscheiden Sie welche Kundenerweiterung bestehen bleiben. 
@@ -56,7 +56,7 @@ Die Verwendung von freigegebenen APIs (Entwicklungsobjekte mit C1-Freigabe) ist 
 
 Das 3-TIER Modell ist zentraler Bestandteil, wenn Sie einen Übergang von klassischer ABAP Entwicklung in Richtung ABAP Cloud gehen. Dabei sind erst einmal alle Objekte, die außerhalb einer Software Komponente, kurz SWC, mit ABAP Cloud sind, nicht Clean Core. Die Aufgabe besteht für Sie nun darin, die Entwicklungen ABAP Cloud Ready zu migrieren. Dabei werden Objekte von TIER-3 auf TIER-1 verschoben und nicht freigegebene APIs ersetzt. 
 
-Sind die APIs aktuell nicht freigegeben, könnne Sie auf TIER-2 soganannte Wrapper erstellen, die SAP Funktionalität kapseln und für Ihre Entwicklung in TIER-1 freigeben. Im Zuge dessen sollten Sie einen Influence Request bei SAP erstellen, um die Freigabe oder eine alternative API zu erhalten. Weitere Informationen zur Erstellung von Wrappern und welche Objekte sich eignen, finden sie im SAP Guide: [ABAP Cloud API Enablement](https://www.sap.com/documents/2023/05/b0bd8ae6-747e-0010-bca6-c68f7e60039b.html).
+Sind die APIs aktuell nicht freigegeben, können Sie auf TIER-2 sogenannte Wrapper erstellen, die SAP Funktionalität kapseln und für Ihre Entwicklung in TIER-1 freigeben. Im Zuge dessen sollten Sie einen Influence Request bei SAP erstellen, um die Freigabe oder eine alternative API zu erhalten. Weitere Informationen zur Erstellung von Wrappern und welche Objekte sich eignen, finden sie im SAP Guide: [ABAP Cloud API Enablement](https://www.sap.com/documents/2023/05/b0bd8ae6-747e-0010-bca6-c68f7e60039b.html).
 
 
 ### Migration von Reports

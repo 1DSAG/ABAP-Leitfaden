@@ -20,7 +20,7 @@ Das ABAP Test Cockpit (ATC) ist ein Werkzeug zur Ausführung statischer und dyna
 
 Die SAP-Empfehlung ist ein zentrales ATC-System, dieses System soll recht „schmal“ gehalten sein, sprich nur ein ABAP Netweaver System mit entsprechender Datenbank und der Softwarekomponente SAP_BASIS. SAP spricht von „Sie müssen lediglich ein zentrales ATC-Prüfsystem installieren und konfigurieren: das reine SAP-Basissystem (SAP_BASIS >=7.51) innerhalb Ihrer SAP-Systemlandschaft“. Daraus folgt, man braucht eigentlich nur  ein AS ABAP System mit der Softwarekomponente SAP_BASIS
 
-Aber: Das zentrale ATC System sollte in der gesamten Systemlandschaft das softwaretechnisch neueste System sein, das hat den Vorteil, dass die neuesten Checks dort vorhanden sind und die Remote-Prüfungen einfacher durchlaufen .
+Aber: Das zentrale ATC System sollte in der gesamten Systemlandschaft das softwaretechnisch neueste System sein, das hat den Vorteil, dass die neuesten Checks dort vorhanden sind und die Remote-Prüfungen einfacher durchlaufen. Sollten Sie daher Probleme haben, ihr ATC Prüfsystem auf dem aktuellen Stand zu halten, sollten Sie sich das SAP BTP ABAP Environment als Option anschauen.
 
 SAP liefert alle Checks über die SAP_BASIS Komponente aus, deshalb wird empfohlen, jeweils den aktuellsten Stand einzusetzen, damit man auch mit den aktuellsten Checks arbeitet/prüft. Ein weiterer Vorteil mit dem „schmalen“ System ist, dass das ATC-System bei Bedarf recht „einfach“ aktualisiert (Supportpackage-Update) werden kann. Grundsätzlich sollte man 1–2mal im Jahr das ATC-System aktualisieren (die „Anwendung“ und die Datenbank).
 
@@ -94,62 +94,19 @@ Die S/4HANA Bereitschaftsprüfungen sollten für Hintergrundprüfungen und auch 
 
 ### abapOpenChecks
 
-[abapOpenChecks](https://docs.abapopenchecks.org/) sind Checks der SAP Community für den ATC und den Code Inspector. Die Installation erfolgt über abapGIT ([siehe vorherige Kapitel](https://docs.google.com/document/d/1--6biTn5OvRM4r8CO_19FLBKCQ3_bf1cIttiBDJJeRg/edit#heading=h.1ci93xb)).
-
-In der aktuellen Version liefert abapOpenChecks über 100 zusätzliche Checks für den ATC aus und erweitert die von SAP ausgelieferten Prüfungen.
-
-![abapOpenChecks Prüfungen (Teil-1)](./img/image12.png)
-
-abapOpenChecks Prüfungen (Teil-1)
-{: .img-caption}
-
-…
-
-![abapOpenChecks Prüfungen (Teil-2)](./img/image13.png)
-
-abapOpenChecks Prüfungen (Teil-2)
-{: .img-caption}
-
-Eine aktuelle Liste der Prüfungen ist hier einzusehen: [abapOpenChecks - Checks](https://docs.abapopenchecks.org/checks/)
-
-Die abapOpenChecks sollten für Hintergrundprüfungen und auch für die Onlineprüfung im Rahmen der Transportfreigaben aktiviert werden.
+[abapOpenChecks](https://docs.abapopenchecks.org/) sind Checks der SAP Community für den ATC und den Code Inspector. Die Installation erfolgt über abapGIT ([siehe vorherige Kapitel](https://docs.google.com/document/d/1--6biTn5OvRM4r8CO_19FLBKCQ3_bf1cIttiBDJJeRg/edit#heading=h.1ci93xb)). In der aktuellen Version liefert abapOpenChecks über 100 zusätzliche Checks für den ATC aus und erweitert die von SAP ausgelieferten Prüfungen. Eine aktuelle Liste der Prüfungen ist hier einzusehen: [abapOpenChecks - Checks](https://docs.abapopenchecks.org/checks/). Die abapOpenChecks sollten für Hintergrundprüfungen und auch für die Onlineprüfung im Rahmen der Transportfreigaben aktiviert werden.
 
 ### Code Pal for ABAP
 
-[Code PAL](https://github.com/SAP/code-pal-for-abap/blob/master/docs/check_documentation.md). Dieses Tool bietet eine Reihe von Prüfungen, die bei der Einhaltung des [Clean ABAP-Styleguides](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) helfen. Obwohl nicht alle Empfehlungen aus dem Leitfaden durch statische Codeanalyse überprüft werden können und in bestimmten Situationen die strikte Einhaltung des Leitfadens möglicherweise nicht empfohlen wird, bietet dies zumindest für eine Teilmenge von Empfehlungen eine robuste automatisierte Unterstützung.
+Dieses Tool bietet eine Reihe von Prüfungen, die bei der Einhaltung des [Clean ABAP-Styleguides](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) helfen. Obwohl nicht alle Empfehlungen aus dem Leitfaden durch statische Codeanalyse überprüft werden können und in bestimmten Situationen die strikte Einhaltung des Leitfadens möglicherweise nicht empfohlen wird, bietet dies zumindest für eine Teilmenge von Empfehlungen eine robuste automatisierte Unterstützung. SAP liefert die Code PAL Checks über GitHub aus, die Installation erfolgt ebenfalls über abapGIT. Die Installation ist hier beschrieben: [SAP/code-pal-for-abap](https://github.com/SAP/code-pal-for-abap/blob/master/pages/how-to-install.md). Die aktuelle Liste ist hier zu finden: [SAP/code-pal-for-abap](https://github.com/SAP/code-pal-for-abap/blob/master/docs/check_documentation.md)
 
-![CodePal](./img/image18.png)
+Die Code Pal Checks sollten mit den Entwicklern abgestimmt werden (welche Prüfungen sind sinnvoll), dann sollten die als „sinnvoll“ erachteten für Hintergrundprüfungen und auch für die Onlineprüfung im Rahmen der Transportfreigaben aktiviert werden.
 
-CodePal
-{: .img-caption}
-
-Wichtig: aktuell (im Juni 2023) sind die Code PAL Checks noch nicht RFC-fähig und können aktuell nur auf dem lokalen Entwicklungssystem geprüft werden, allerdings plant SAP im August 2023 die Checks remotefähig auszuliefern. Die Checks sind auch in den ATC und den Code Inspector integriert/integrierbar.
-
-SAP liefert die Code PAL Checks über GITHUB aus, die Installation erfolgt ebenfalls über abapGIT. Die Installation ist hier beschrieben: [code-pal-for-abap/how-to-install.md at master · SAP/code-pal-for-abap · GitHub](https://github.com/SAP/code-pal-for-abap/blob/master/pages/how-to-install.md)
-
-Im Mai 2023 gibt es folgende Checks (56 Checks):
-
-![CodePal Prüfungen (Teil-1)](./img/image19.png)
-
-CodePal Prüfungen (Teil-1)
-{: .img-caption}
-
-…
-
-![CodePal Prüfungen (Teil-2)](./img/image20.png)
-
-CodePal Prüfungen (Teil-2)
-{: .img-caption}
-
-Die aktuelle Liste ist hier zu finden: [SAP/code-pal-for-abap](https://github.com/SAP/code-pal-for-abap/blob/master/docs/check_documentation.md)
-
-Die Code PAL Checks sollten mit den Entwicklern abgestimmt werden (welche Prüfungen sind sinnvoll), dann sollten die als „sinnvoll“ erachteten für Hintergrundprüfungen und auch für die Onlineprüfung im Rahmen der Transportfreigaben aktiviert werden. Eventuell ist es sinnvoll die Installation erst im August/September 2023 zu machen, wenn die Checks remotefähig sind.
-
-Eine sinnvolle Ergänzung zu den Code PAL Checks ist der ABAP Cleaner, eine Erweiterung zu Eclipse. Hier kann bereits bei der Codeerstellung (bei der Codeeingabe) auf Clean ABAP Konzepteinhaltung geprüft werden.
+Eine sinnvolle Ergänzung zu den Code Pal Checks ist der ABAP Cleaner, eine Erweiterung zu Eclipse. Hier kann bereits bei der Codeerstellung (bei der Codeeingabe) auf Clean ABAP Konzepteinhaltung geprüft werden.
 
 ### Code Pal for ABAP Cloud
 
-Seit Mitte September 2023 gibt es [eine Version von "code pal" für ABAP in Cloud](https://github.com/SAP/code-pal-for-abap-cloud/) (BTP) Umgebungen. Grundsätzlich scheint (nach der Dokumentation) "code pal for cloud checks" genauso zu funktionieren wie der "normale" "code pal". SAP liefert über das GITHUB neue Checks aus, welche mit "abapgit" importiert werden können. Die Checks sind in einem eigenen Namensbereich /CC4A/CODE_PAL hintergelegt. Details sind von SAP in folgendem Blog beschrieben: "[Clean code checks for ABAP – Cloud Edition](https://blogs.sap.com/2023/09/11/clean-code-checks-for-abap-cloud-edition/)". Ebenso sind die Checks in der Entwicklungsplattform Eclipse verfügbar, so dass bereits beim Entwicklungsprozess auf Clean Code geprüft werden kann, wenn man mit ABAP Cloud entwickelt.
+Seit Mitte September 2023 gibt es eine Version von [Code Pal für ABAP Cloud](https://github.com/SAP/code-pal-for-abap-cloud/) (BTP) Umgebungen. Grundsätzlich scheint (nach der Dokumentation) "code pal for cloud checks" genauso zu funktionieren wie der "normale" "code pal". SAP liefert über das GitHub neue Checks aus, welche mit "abapgit" importiert werden können. Die Checks sind in einem eigenen Namensbereich /CC4A/CODE_PAL hintergelegt. Details sind von SAP in folgendem Blog beschrieben: "[Clean code checks for ABAP – Cloud Edition](https://blogs.sap.com/2023/09/11/clean-code-checks-for-abap-cloud-edition/)". Ebenso sind die Checks in der Entwicklungsplattform Eclipse verfügbar, so dass bereits beim Entwicklungsprozess auf Clean Code geprüft werden kann, wenn man mit ABAP Cloud entwickelt.
 
 ## Prüfungen - Sicherheit
 
@@ -166,35 +123,17 @@ Die SAP Standard Sicherheitsprüfungen sollten für Hintergrundprüfungen und au
 
 ### CVA - Code Vulnerability Analyzer
 
-Der [CVA ist ein Produkt der SAP](https://me.sap.com/notes/1855773) welches man zusätzlich lizenzieren muss. Im Rahmen der Rahmenvertragsverlängerung (Juli 2022) wurde dieses Produkt zu einem sehr günstigen Preis gekauft. Das Produkt erweitert die SAP-Sicherheitsprüfungen erheblich, die Prüfungen des CVA sind die gleichen Prüfungen mit denen SAP ihren eigenen Code (der Code welche mit den SAP ABAP Systemen ausgeliefert wird) prüft. Mittlerweile kann das CVA auch kostenlos zusammen mit einem SAP BTP ABAP Environment provisioniert werden, Voraussetzung ist dabei der Einsatz des ABAP Environments als zentrales Prüfsystem.
+Der [CVA ist ein Produkt der SAP](https://me.sap.com/notes/1855773) welches man zusätzlich lizenzieren muss. Im Rahmen der Rahmenvertragsverlängerung (Juli 2022) wurde dieses Produkt zu einem sehr günstigen Preis gekauft. Das Produkt erweitert die SAP-Sicherheitsprüfungen erheblich, die Prüfungen des CVA sind die gleichen Prüfungen mit denen SAP ihren eigenen Code (der Code welche mit den SAP ABAP Systemen ausgeliefert wird) prüft. Diese Prüfungen werden bei jedem Netweaver ABAP – Update erweitert.
 
-Auch diese Prüfungen werden bei jedem Netweaver ABAP – Update erweitert.
-
-Der CVA führt eine statische Analyse des ABAP-Sourcecodes durch und meldet mögliche Sicherheitsrisiken
-
-Auszug aus SAP [Hinweis  1921820 - SAP Code vulnerability Analyzer - Support Package Planning](https://me.sap.com/notes/1921820) zum Prüfumfang des CVA:
-
-Die Checks:
-
-![CVA Prüfungen (Teil-1)](./img/image15.png)
-
-CVA Prüfungen (Teil-1)
-{: .img-caption}
-
-…
-
-![CVA Prüfungen (Teil-2)](./img/image16.png)
-
-CVA Prüfungen (Teil-2)
-{: .img-caption}
-
-Aus Sicherheitsgründen hat SAP die CVA Check in 2 Prüfvarianten hinterlegt, so dass man „nur“ CVA komplett prüfen kann, d.h einzelne Prüfungen können nicht ausschalten werden.
+Der CVA führt eine statische Analyse des ABAP-Sourcecodes durch und meldet mögliche Sicherheitsrisiken. Einen Auszug der Prüfungen finden Sie im Hinweis [1921820](https://me.sap.com/notes/1921820). Aus Sicherheitsgründen hat SAP die CVA Check in 2 Prüfvarianten hinterlegt, so dass man „nur“ CVA komplett prüfen kann, d.h einzelne Prüfungen können nicht ausschalten werden.
 
 ![Komplette Prüfungen](./img/image17.png)
 
 Komplette Prüfungen
 {: .img-caption}
 
-BSP sind Checks für Business Server Pages, diese sind aus technischen Gründen separat.
+BSP sind Checks für Business Server Pages, diese sind aus technischen Gründen separat. Die Prüfungen des CVA sollten für Hintergrundprüfungen und auch für die Onlineprüfung im Rahmen der Transportfreigaben aktiviert werden.
 
-Die Prüfungen des CVA sollten für Hintergrundprüfungen und auch für die Onlineprüfung im Rahmen der Transportfreigaben aktiviert werden.
+### CVA - Code Vulnerability Analyzer (Cloud)
+
+Neben der kostenpflichtigen Variante für On-Premise Systeme können Sie über das ABAP Environment auch die Cloud Variante erhalten. Dazu müssen Sie nur das System provisionieren und anbinden und können die Prüfungen direkt nutzen. In diesem Szenario fallen keine Zusatzkosten für die Lizensierung der CVA Prüfungen an.

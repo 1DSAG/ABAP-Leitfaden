@@ -13,7 +13,7 @@ nav_order: 4
 {:toc}
 # Übersicht
 
-Nachfolgender Abschnitt liefert ihnen leicht anwendbare und nützlichen Tipps, wie sie einen effektiven Umgang mit Dokumentationsaufgaben erreichen können. Die Tipps beschränken sich nicht nur auf die Technische Dokumentation, sondern lassen sich universell auf Dokumentationsaufgaben anwenden.
+Nachfolgender Abschnitt liefert ihnen leicht anwendbare und nützliche Tipps, wie sie einen effektiven Umgang mit Dokumentationsaufgaben erreichen können. Die Tipps beschränken sich nicht nur auf die Technische Dokumentation, sondern lassen sich universell auf Dokumentationsaufgaben anwenden.
 
 **Goldene Dokumentationsregeln**
 

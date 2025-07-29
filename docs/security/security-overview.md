@@ -15,6 +15,27 @@ nav_order: 1
 
 ## ABAP Security: Warum sichere Programmierung in SAP entscheidend ist
 
+Ein SAP-System oder eine ABAP-Laufzeit enthält verschiedene Funktionen für das Identitäts- und Zugriffsmanagement von Benutzern, die ABAP-Programme ausführen. Die Funktionen umfassen:
+
+- Werkzeuge zur Benutzerverwaltung, wie z.B. das Anlegen, Sperren und Löschen von Benutzern gemäß den gängigen Compliance-Standards.
+- Verschiedene Authentifizierungsprotokolle, einschließlich Single-Sign-On-Optionen
+- Durchsetzung von Passwortrichtlinien und Credential Management für Benutzer
+- Ein erweiterbares Rollen- und Berechtigungsmanagement mit der Möglichkeit, individuelle Rollen für Benutzer zu entwerfen und zuzuweisen.
+- Implizite Zugriffskontrolle auf Programmebene beim Start eines ABAP-Programms durch Überprüfung der Startberechtigungen der Benutzer
+- APIs zur Zugriffskontrolle innerhalb eines Programms und implizite Zugriffskontrolle auf Anweisungsebene für bestimmte APIs (z.B. Zugriff auf das Dateisystem).
+
+SAP hat im Laufe der Zeit verschiedene Sicherheits-APIs und Sicherheitsfunktionen in den funktionalen Kern der Sprache und in die propagierten Frameworks implementiert, um es Programmierern zu ermöglichen, Sicherheitsanforderungen in ABAP-Programmen umzusetzen. Ein ABAP-Entwickler kann oft aus mehreren Anweisungen oder APIs auswählen, um bestimmte Funktionen zu implementieren. Implizite Sicherheitsfunktionen wie Eingabevalidierung und Verschlüsselung variieren ebenfalls je nach dem gewählten Framework. Die folgenden APIs und Sicherheitsframeworks stehen zur Wiederverwendung zur Verfügung:
+
+- OS-Befehlsbeschränkung
+- RFC-Callback-Whitelisting
+- Vereinheitlichtes Konnektivitäts-Framework (UCON)
+- HTTP-Pfad-Whitelist
+- Ausgabekodierung und
+- Dienstprogramme für die Eingabevalidierung
+- Virus-Scan-Schnittstelle
+- Zugangskontroll-API
+- Protokollierungs-APIs (eine Menge) und implizite Protokollierung
+
 ### Vom funktionierenden Code zur sicheren Anwendung
 
 Als ABAP-Entwickler kennen Sie das: Ein neues Projekt steht an, die Anforderungen sind klar definiert, und der Zeitdruck ist hoch. Die Prioritäten sind schnell gesetzt -- die Funktion muss implementiert werden, der Code soll wartbar und performant sein. Doch wo bleibt dabei die Sicherheit?

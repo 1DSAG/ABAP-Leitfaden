@@ -16,7 +16,7 @@ nav_order: 2
 Im Folgenden erhalten Sie einen Überblick über die möglichen Ausgabelösungen.
 
 ## Nachrichtensteuerung (NAST)  
-Mit der Nachrichtensteuerung werden verschiedene Ausgabearten wie Drucken, E-Mail, EDI, Workflows, Systemintegration (ALE) und Sonderfunktionen im SAP pro Nachricht zu diversen Modulen (z.B. SD und MM) gecustomzied. Über die sogenannte Konditionstechnik wird die produktive Ausgabe von Formularen und Etiketten gesteuert. Hinter einer Nachricht liegt die Zuordnung des Druckprogramms und des Formulars, welche angestoßen werden, wenn eine Nachricht erzeugt wird.  
+Mit der Nachrichtensteuerung werden verschiedene Ausgabearten wie Drucken, E-Mail, EDI, Workflows, Systemintegration (ALE) und Sonderfunktionen im SAP pro Nachricht zu diversen Modulen (z.B. SD und MM) gecustomized. Über die sogenannte Konditionstechnik wird die produktive Ausgabe von Formularen und Etiketten gesteuert. Hinter einer Nachricht liegt die Zuordnung des Druckprogramms und des Formulars, welche angestoßen werden, wenn eine Nachricht erzeugt wird.  
 
 Die Transaktion NACE dient als zentraler Einstiegspunkt zur Pflege der Nachrichtenfindung pro Applikation. Die dort gepflegten Einstellungen werden in der Datenbanktabelle TNAPR gespeichert.  
     
@@ -51,7 +51,7 @@ Applikationsspezifisches Customizing bestimmt die Ausgabe von Dokumenten. Diese 
 
 ## S/4HANA Output Control  
 
-Mit SAP S/4HANA bietet SAP eine weitere Ausgabelösung mit dem Namen „SAP S/4HANA Output Management“ an. Diese beinhaltet den wiederverwendbaren Service „SAP S/4HANA Output Control“, welcher für viele komplexe Ausgabeszenarien verwendet werden kann. Auf Ebene von Organisationseinheiten kann die Findung von Masterformularvorlagen, Logos und allgemeine Kopf- und Fußtexte gecustomized werden. Mit dieser Ausgabelösung können sogenannte „Adobe Fragments“ verwendet werden. Siehe hierzu den entsprechenden Abschnitt. Im Vergleich zur Nachrichtensteuerung (NAST) haben Sie mit dem Output Control die Einschränkung, dass keine Workflows und Sonderfunktionen hinterlegt werden können.  
+Mit SAP S/4HANA bietet SAP eine weitere Ausgabelösung mit dem Namen „SAP S/4HANA Output Management“ an. Diese beinhaltet den wiederverwendbaren Service „SAP S/4HANA Output Control“, welcher für viele komplexe Ausgabeszenarien verwendet werden kann. Auf Ebene von Organisationseinheiten kann die Findung von Masterformularvorlagen, Logos und allgemeine Kopf- und Fußtexte gecustomized werden. Mit dieser Ausgabelösung können sogenannte „Adobe Fragments“ verwendet werden. Siehe hierzu den entsprechenden Abschnitt. Im Vergleich zur Nachrichtensteuerung (NAST) haben Sie mit der Output Control die Einschränkung, dass keine Workflows und Sonderfunktionen hinterlegt werden können.  
 
 ![Output Szenarien](./img/image-11.png)
 

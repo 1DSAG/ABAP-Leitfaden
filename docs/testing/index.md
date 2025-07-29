@@ -14,7 +14,7 @@ nav_order: 5
 
 ## Inhalt des Kapitels
 
-Wenn Software entwickelt wird, muss diese während der Entwicklung und vor der Inbetriebnahme ausgiebig getestet werden. Zum Testen von Software gibt es zahlreiche und vielfältige Methoden und Techniken. Testen ist aufwändig und wenn Software nicht sorgfältig und umfassend getestet wird, kann dies im besten Fall zu kleinen Störungen bis hin zu massiven Auswirkungen auf den Produktivsystem eines Systems führen. Dies führt mitunter zu hohen Kosten im Betrieb und der Weiterentwicklung von SAP-Systemen.  
+Wenn Software entwickelt wird, muss diese während der Entwicklung und vor der Inbetriebnahme ausgiebig getestet werden. Zum Testen von Software gibt es zahlreiche und vielfältige Methoden und Techniken. Testen ist aufwändig und wenn Software nicht sorgfältig und umfassend getestet wird, kann dies im besten Fall zu kleinen Störungen bis hin zu massiven Auswirkungen auf das Produktivsystem eines Systems führen. Dies führt mitunter zu hohen Kosten im Betrieb und der Weiterentwicklung von SAP-Systemen.  
 
 Effizientes und effektives Testen muss im Softwareentwicklungsprozess so früh wie möglich erfolgen um Fehler und Probleme so früh wie möglich erkennen zu können. Mit ABAP Unit werden Tests in die frühe Phase der Softwareentwicklung integriert.
 In diesem Kapitel gehen wir darauf ein warum der Einsatz von ABAP Unit erforderlich und gewinnbringend ist, welche Herausforderungen sich ergeben und welche Rahmenbedingungen gegeben sein müssen um ABAP Unit Tests effektiv einzusetzen.

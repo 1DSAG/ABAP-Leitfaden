@@ -15,7 +15,7 @@ nav_order: 3
 
 ## SQL-Injection in ABAP: Angriffsvektoren und Abwehrmaßnahmen
 
-SQL-Injection gehört zu den gefährlichsten und zugleich am häufigsten übersehenen Schwachstellen in ABAP-Systemen. Während viele Entwickler glauben, dass OpenSQL automatisch vor Injection-Angriffen schützt, zeigt die Praxis ein anderes Bild.
+SQL-Injection gehört zu den gefährlichsten und zugleich am häufigsten übersehenen Schwachstellen in ABAP-Systemen. Während viele Entwickler glauben, dass OpenSQL automatisch vor Injection-Angriffen schützt, zeigt die Praxis ein anderes Bild. Im folgenden finden Sie verschiedene Beispiele aus dem Bereich der ABAP Entwicklung, wie sie die Entwicklung nicht gestalten sollten und was als Gegenmaßnahme hilft.
 
 ### Angriffsvektoren in ABAP
 
@@ -166,6 +166,8 @@ Ein Angreifer könnte kritische Systemmethoden aufrufen oder Daten manipulieren.
 ### Sichere Alternativen
 
 **1. Whitelist-Ansatz:**
+Erlauben Sie nur definierte Werte, Methoden und Parameter und blockieren Sie alle nicht bekannten Optionen.
+
 ```abap
 " Nur erlaubte Werte zulassen
 CASE p_method.

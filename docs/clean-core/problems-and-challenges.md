@@ -19,9 +19,9 @@ Für etablierte Brownfield-Kunden oder SAP-AddOn Hersteller (Partner), die auf L
 
 Der Großteil des über Jahrzehnte gewachsenen Kundencodes muss überarbeitet werden. Grund dafür ist, das bestehende Entwicklung häufig auf nicht freigegebenen APIs oder Entwicklungskomponenten aus dem SAP-Standard basiert. Dabei sollten Sie im ersten Schritt analysieren, ob sie ihr System Cloud-Ready machen wollen. Dabei sollten sie auch prüfen, welche Lösungen vielleicht bereits veraltete Technologien verwenden, wie zum Beispiel BOPF, die komplexe Variantenkonfiguration-Einstellungen oder den klassischen Report.
 
-Neben den Kundenerweiterungen im SAP Standard, gibt es in jedem SAP-System die Thematik der Custom SAP Applications, das sind Eigenentwicklungen, welche neben den SAP Standard parallel laufen. Die Ablösung solcher Anwendungen Bedarf eigener Großprojekte und muss weiterhin von Prozessexperten betreut werden. 
+Neben den Kundenerweiterungen im SAP Standard, gibt es in jedem SAP-System die Thematik der Custom SAP Applications, das sind Eigenentwicklungen, welche neben dem SAP Standard parallel laufen. Die Ablösung solcher Anwendungen bedarf eigener Großprojekte und muss weiterhin von Prozessexperten betreut werden. 
  
-Die Dissonanz zwischen der Sichtweise von SAP zum Clean Core und den lang-jährigen Kundenstamm ist die Anwendung der Clean Core Prinzipien/Konzepte. 
+Die Dissonanz zwischen der Sichtweise von SAP zum Clean Core und dem langjährigen Kundenstamm ist die Anwendung der Clean Core Prinzipien/Konzepte. 
 
 Die Standardtransaktionen, Standard BADIs und Standard Fiori Apps reichen oftmals nicht mehr aus, um die Geschäftsprozessanforderungen abzudecken. Die klassischen Erweiterungen / RICEFW Objekte haben Mehrwerte geschaffen, welche erst in S/4 HANA - dem Clean Core – wiedergefunden werden müssen. Um die neuen Technologien, beispielsweise SAP Build, vor allem auf der BTP zu benutzen, erfordert es an Investitionen in Organisation, Technologien und Prozessen.
  
@@ -29,18 +29,18 @@ Die Standardtransaktionen, Standard BADIs und Standard Fiori Apps reichen oftmal
 
 Von der Verhandlung der Lizenzen, Aufbau der Infrastruktur, Schulung der SAP Basis und Schulung der Entwickler der neuen Technologien bis zum Einkauf von Consulting Services, Betrachtung und Bewertung der Alternativen muss alles in der Evaluierung der Entwicklungslandschaft definiert werden.
 
-Vor allem alternative Technologien, welche mit vorhandenen ABAP-Entwicklern benutzbar sind, werden gebraucht, da existierende Kundenerweiterungen/ RICEFW Objekte weiterhin gepflegt werden müssen.
+Vor allem alternative Technologien, welche mit vorhandenen ABAP-Entwicklern nutzbar sind, werden gebraucht, da existierende Kundenerweiterungen/ RICEFW Objekte weiterhin gepflegt werden müssen.
  
 ## Organisation
-Der klassische Berater und Entwickler entwickelt sich durch die neuen Technologien zu einem Vollzeit-Entwickler mit breiten Entwicklungskenntnissen, hier ist massives Change-Management angesagt. Mehr dazu erfahren Sie im [Kapitel Organisation](/ABAP-Leitfaden/organization/).
+Der klassische Berater und Entwickler entwickelt sich durch die neuen Technologien zu einem Vollzeit-Entwickler mit breiten Entwicklungskenntnissen, hier ist massives Change Management angesagt. Mehr dazu erfahren Sie im [Kapitel Organisation](/ABAP-Leitfaden/organization/).
 
 Durch die No-Code und Low-Code Optionen, vor allem bei SAP Build, aber auch Key-User Extensibility können nicht-Entwickler in Fusion Teams mitarbeiten. Das erfordert auch eine moderne Arbeitsweise, welche agiler Natur sein sollte.
  
 ## (Geschäfts-)Prozesse
  
-Organisatorische Prozesse können bspw. im Reporting enorm verschlankt werden. Wenn Standard CDS Views, und Standard APIs genommen werden, dann ziehen die Berechtigungsprüfung in der CDS View. So können Sie Datenprodukte anbieten und die Fachbereichs Kollegen können ohne die IT Reporting betreiben. Ein mögliches Problem: Das bringt die Gefahr das un-performante CDS Views (Stichwort: Compatibility-Views) die Systemlast enorm beeinträchtigen.
+Organisatorische Prozesse können bspw. im Reporting enorm verschlankt werden. Wenn Standard CDS Views und Standard APIs genommen werden, dann ziehen die Berechtigungsprüfungen in der CDS View. So können Sie Datenprodukte anbieten und die Fachbereichs Kollegen können ohne die IT Reporting betreiben. Ein mögliches Problem: Das bringt die Gefahr das un-performante CDS Views (Stichwort: Compatibility-Views) die Systemlast enorm beeinträchtigen.
 
-Standardprozesse werden von der SAP unterstützt und Standard Fiori Apps kann auch ein Nicht-Entwockler recht simpel im UI anpassen. Kunden mit langer SAP Historie haben oftmals Geschäftsprozessanforderungen, welche weit über die Standard Apps hinaus gehen. Auch ein mögliches Thema sind die SAP SEGW Projekt-basierten Apps: wenn die Standard Fiori App erstmal auf den SAP SEGW-Projekte aufgebaut wird und dann nach einem Systemupgrade diese App auf das RAP-Model im Backend umzieht, so ist die Eigenentwicklung erstmal nachzubauen im neuen RAP-Modell.
+Standardprozesse werden von der SAP unterstützt und Standard Fiori Apps kann auch ein Nicht-Entwickler recht simpel im UI anpassen. Kunden mit langer SAP Historie haben oftmals Geschäftsprozessanforderungen, welche weit über die Standard Apps hinaus gehen. Auch ein mögliches Thema sind die SAP SEGW Projekt-basierten Apps: wenn die Standard Fiori App erstmal auf den SAP SEGW-Projekte aufgebaut wird und dann nach einem Systemupgrade diese App auf das RAP-Model im Backend umzieht, so ist die Eigenentwicklung erstmal nachzubauen im neuen RAP-Modell.
 
 ## Add-Ons
 
