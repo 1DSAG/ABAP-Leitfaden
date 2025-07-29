@@ -39,7 +39,7 @@ Screenshot dotabap.org
 
 ## Wer nutzt ABAP-Open-Source-Software?
 
-Auf der Seite [Who Uses abapGit?](https://docs.abapgit.org/user-guide/other/where-used.html) der abapGit-Dokumentation finden Sie eine Auflistung an Unternehmen, die abapGit einsetzen und sich aktiv für eine Listung entschieden haben. Daraus ist abzuleiten, dass sie mindestens abapGit selbst als Open-Source-Software nutzen. Auch SAP selbst nutzt Open-Source-ABAP. abapGit ist in einer angepassten Version in SAP S/4HANA Cloud Public Edition und dem SAP BTP ABAP Environment [vorinstalliert](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit?locale=en-US).
+Auf der Seite [Who Uses abapGit?](https://docs.abapgit.org/user-guide/other/where-used.html) der abapGit-Dokumentation finden Sie eine Auflistung an Unternehmen, die abapGit einsetzen und sich aktiv für eine Listung entschieden haben. Daraus ist abzuleiten, dass sie mindestens abapGit selbst als Open-Source-Software nutzen. Auch SAP nutzt Open-Source-ABAP. abapGit ist in einer angepassten Version in SAP S/4HANA Cloud Public Edition und dem SAP BTP ABAP Environment [vorinstalliert](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit?locale=en-US). Projekte wie [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap-cloud) und [RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) sind auf GitHub verfügbar und mit der Open-Source-Lizenz Apache 2.0 versehen.
 
 ## Integration von Open-Source-Tools im Entwicklungsprozess
 
@@ -57,17 +57,17 @@ Um die Chancen nutzen zu können, muss die gewählte Open-Source-Software instal
 
 ## Nutzung von Open-Source-Bibliotheken in der eigenen Software
 
-Eine optionale Erweiterung dieser Ausbaustufe ist die Nutzung von Open-Source-Bibliotheken in Ihrer eigenen Software. In diesem Fall integrieren Sie die gewählten Bibliotheken über API-Aufrufe und liefern die diese mit aus. Hier ergibt sich ein noch deutlich größerer Mehrwert, da Funktionen in Ihren Anwendungen bereitgestellt werden können, die andernfalls nicht mit verhältnismäßigem Aufwand entwickelbar oder wartbar gewesen wären.
+Eine optionale Erweiterung dieser Ausbaustufe ist die Nutzung von Open-Source-Bibliotheken in Ihrer eigenen Software. In diesem Fall integrieren Sie die gewählten Bibliotheken über API-Aufrufe und liefern die diese mit aus. Hier ergibt sich ein noch deutlich größerer Mehrwert, da Funktionen in Ihren Anwendungen bereitgestellt werden können, die andernfalls nicht mit verhältnismäßigem Aufwand entwickelbar oder wartbar gewesen wären. Es ergibt sich aber zwangsläufig die Fragestellung, wie mit solchen Open-Source-Komponenten in produktiven Umgebungen und in der Auslieferung von Software umgegangen wird. Die Wichtigkeit von [Bewertung und Lebenszyklus einer externen Abhängigkeit](#bewertung-und-lebenszyklus-einer-externen-abhängigkeit) wird damit nochmal deutlich erhöht.
 
-- Chancen
+- **Chancen**
   - Reduzierung von Aufwänden durch Integration von fertigen Komponenten
   - Erhöhung des Funktionsumfangs Ihrer Anwendungen
-- Risiken
+- **Risiken**
   - Installation und Auslieferung von Fremdsoftware
 
-TODO
-
 ## Bewertung und Lebenszyklus einer externen Abhängigkeit
+
+**TODO**
 
 - Verbreitung, aktive Weiterentwicklung, Anzahl Contributors
 - Wer kümmert sich um Updates, wer testet diese, bewertet diese
@@ -87,29 +87,21 @@ TODO
   - Empfiehlt die SAP ein bestimmtes Projekt, oder nutzt es gar selbst?
   - Was sagt die Community zu einem Projekt, wie ist das Feedback, wie bekannt ist es (in Diskussionsforen ...), wie ist die „Bewertung“?
   - ...
-- Andreas?
-
 - Externes Coding gelangt ins System, welches ggf. nicht geprüft wurde und Sicherheitslücken oder Schadsoftware enthält
 - Externes Coding gelangt ins System, welches einen separaten Softwarelebenszyklus hat. Wie mit Updates umgehen?
 - Externes Coding gelangt ins System, welches standardmäßig keinen Support hat. Wie mit Problemen umgehen? Was ist bei Betrieb-stilllegenden-Bug im Produktivsystem in der externen Software?
 - Tooling wird eingeführt, mit dem Entwickler einfach externes Coding installieren können. Wie halte ich die davon hab, dass sie einfach alles installieren und die Systemstabilität kompromittieren?
-
-### Sicherheitsaspekte
-
-- Horrorszenarien durchgehen
-
-### Verhalten bei Upgrades
-
-### Lizenzen
-
-- "Diese Lizenz ist wichtig. Sie kann auch die kommerzielle Nutzung untersagen oder eine kompatible Lizenz für alle durchgeführten Modifikationen erzwingen. Ebenfalls können Lizenzen verschiedener Open-Source-Projekte und die Lizenz der eigenen Software miteinander inkompatibel sein."
-
-Siehe auch [Lizenzen Allgemein](/ABAP-Leitfaden/open-source/index#lizenzen)
-
-### Support
-
-- Argument "Keine Software ohne Enterprise Support" durchgehen
+- Sicherheitsaspekte
+- Verhalten bei Upgrades
+- Bewertung der Lizenz und Kompatibilität zwischen Lizenzen
+- Support: Argument "Keine Software ohne Enterprise Support" durchgehen
+- Andreas?
 
 ## Auslieferung von Open-Source-Abhängigkeiten in eigenen Produkten
 
-- Namensräume, Rename, Lizenzen, kein Z beim Kunden
+Eine Problemstellung bei der Nutzung von Open-Source-Komponenten in der eigenen Software ergibt sich bei der Auslieferung an externe Systeme. Entwickeln Sie ein Produkt / Add-On, welches in Kundensystemen installiert wird, dann ist die Auslieferung der abhängigen Open-Source-Komponenten besonders zu betrachten.
+
+Die meisten Open-Source-ABAP-Projekte verwenden den Kundennamensraum (`Z`/`Y`). Kunden, an die Ihre Software ausgeliefert wird, verwenden auch den Kundennamensraum. Sollte Ihr Add-On einen reservierten Namensraum verwenden (`/NSPC/`), um Namenskollisionen zu verhindern, so gilt diese Garantie nicht für die abhängigen Open-Source-Komponenten. Zudem könnten Kunden Bedenken äußern, wenn Softwareanbieter in ihren Kundennamensraum "eindringen". Es kann sogar sein, dass im Kundensystem die Open-Source-Komponente bereits installiert ist und dort aktiv verwendet wird, aber in einer für Sie unpassenden Version.
+
+{: .solution }
+Ein möglicher Lösungsansatz ist die Open-Source-Komponente in Ihren Namensraum zu kopieren und somit isoliert auszuliefern und zu aktualisieren. Mit [abaplint](https://github.com/abaplint/abaplint) ist es möglich eine CI-Pipeline aufzusetzen, die ein Mirror-Repository der Open-Source-Komponente in Ihrem reserviertem Namensraum aufsetzt und automatisch aktualisiert. Dieses Repository können Sie dann mit ausliefern. abapGit verwendet diese Technik, um das [ajson](https://github.com/sbcgua/ajson) Projekt mit in abapGit auszuliefern. Details können Sie in folgendem Blog-Post lesen: [Automagic standalone renaming of ABAP objects](https://community.sap.com/t5/application-development-and-automation-blog-posts/automagic-standalone-renaming-of-abap-objects/ba-p/13499851).
