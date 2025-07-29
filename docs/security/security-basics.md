@@ -17,7 +17,7 @@ nav_order: 2
 
 Nach der Einführung in die Bedeutung sicherer ABAP-Programmierung ist es wichtig, die konkreten Bedrohungen zu verstehen, denen SAP-Systeme täglich ausgesetzt sind. Die Erfahrung aus Hunderten von SAP-Sicherheitsaudits zeigt ein klares Bild: Bestimmte Schwachstellen-Muster wiederholen sich immer wieder in ABAP-Code.
 
-### Die Top 5 der ABAP-Sicherheitslücken
+### Die Top ABAP-Sicherheitslücken
 
 **1. SQL-Injection durch dynamische Datenbankabfragen**
 Der Klassiker unter den Sicherheitslücken: Benutzereingaben werden ungefiltert in SQL-Statements eingebaut. Ein harmlos aussehender Report kann so zum Einfallstor für Datendiebstahl werden. Besonders tückisch: Die meisten Entwickler kennen SQL-Injection aus der Web-Entwicklung, übersehen aber die ABAP-spezifischen Varianten in Open SQL und Native SQL. ABAP Schützt hier vor dem den ganz großen Problemen, bspw. der Webentwicklung mit "DROP DATABASE;". Allerdings enthält das SAP System immer die Kronjuwelen der Daten, so dass unberechtigte Zugriffe schwerere Auswirkungen im BusinessKontext haben.
@@ -30,6 +30,9 @@ Sobald ABAP-Code Daten für Webanwendungen ausgibt, droht XSS. Ungefilterter HTM
 
 **4. Code-Injection in dynamischen ABAP-Konstrukten**
 ABAP bietet mächtige Funktionen für dynamische Programmierung: GENERATE SUBROUTINE POOL, dynamische Methodenaufrufe, RTTI (Run Time Type Information) oder XCO. Diese Flexibilität kann zum Sicherheitsrisiko werden, wenn Benutzereingaben ungefiltert in dynamischen Code-Konstrukten verwendet werden.
+
+**5. Directory Traversal (Write Access)**
+Directory-Traversal-Angriffe (Verzeichniswechselangriffe) funktionieren durch Manipulation des Dateinamens oder der Pfadinformationen durch Eingabe von Sonderzeichen in eine Zeichenkette, die als Datei-Locator dient. Wird eine derartige Zeichenkette zur Abänderung von Inhalten einer Datei verwendet, lässt sich eine Anwendung austricksen und dazu bringen, Dateien zu ändern, auf die der Benutzer keinen Zugriff besitzen sollte. Dieser Angriff ist möglich, da es der Anwendung nicht gelingt, Befehlszeichen in Eingaben zu ermitteln und zu entfernen, die als Bestandteil des Datei-Locators verwendet werden.
 
 ### Warum entstehen diese Schwachstellen immer wieder?
 
@@ -80,7 +83,7 @@ Dokumentieren Sie Ihre Sicherheitsmaßnahmen im Code. Verwenden Sie aussagekräf
 
 ### Der Weg zur Security-Kultur im Team
 
-Die Entwicklung eines Security-Mindsets ist nicht nur eine individuelle Aufgabe – sie erfordert eine Kulturveränderung im gesamten Entwicklungsteam:
+Die Entwicklung eines Security-Mindsets ist nicht nur eine individuelle Aufgabe – sie erfordert eine Kulturveränderung im gesamten Entwicklungsteam. Daher macht es Sinn, dass Sie sich im vorhinein Gedanken zu den folgenden Themen machen:
 
 **Wissensaufbau**: Regelmäßige Security-Schulungen und der Austausch über aktuelle Bedrohungen schaffen Bewusstsein. Nutzen Sie interne Präsentationen, um konkrete Beispiele aus Ihren eigenen Systemen zu diskutieren.
 
