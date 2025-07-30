@@ -96,5 +96,3 @@ In nachfolgender Tabelle finden Sie populäre Open-Source-Lizenzen, die auch in 
     </tr>
 </table>
 <!-- markdownlint-enable MD033 -->
-
-Details zu Lizenzen finden Sie auch in [Verwendung von Open-Source-Software - Lizenzen](using-open-source-software.md#lizenzen) und [Entwicklung von Open-Source-Software - Lizenzen](developing-open-source-software.md#lizenzen).
