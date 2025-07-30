@@ -248,6 +248,12 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <td>Als ABAP Lead Developer bei FESTO bin ich der Innovationstornado, der immer vorne mitmischt. Mit der DSAG-Community Standards zu setzen, ist für mich wie ein heiliger Ritterschlag – nur mit weniger Rüstung und mehr Kaffeekicks!</td>
 </tr>
 
+<tr class="odd">
+<td>Wulff, Enno</td>
+<td>ABAP Development, Tricktresor, Clean Code, TDD, Community</td>
+<td>ABAP-Dino (seit 1994). Seit 2003 teile ich meine Programmiererfahrungen im Tricktresor. Seit 2008 bei Inwerken als Entwickler, Programmierbegleiter, Initiator vom Code-Dojo, Produktentwicklung AppKnight, Ausrichter von SAP Inside Tracks und ABAP Code Retreats in Hannover. Durch die Mitarbeit beim DSAG-Leitfaden habe ich die Möglichkeit, Wissen weiterzugeben und selbst zu lernen.</td>
+</tr>
+
 </tbody>
 </table>
 
