@@ -24,14 +24,14 @@ Daneben entwickelt die SAP ABAP auch stetig weiter. Eine Übersicht über neue E
 Die folgenden Abschnitte zeigen Beispiele für modernen ABAP Code, erhebt jedoch keinen Anspruch auf Vollständigkeit. Eine grundlegende Kenntnis von ABAP und insbesondere ABAP Objects
 wird vorausgesetzt.
 
-## Clean ABAP 
+## Clean ABAP als Basis
+
 Clean ABAP stellt die Anpassung der Prinzipien aus dem Buch von Robert C. Martin auf ABAP dar. Das offizielle, im Repository der SAP freigegebene Dokument wurde von Florian Hoffmann und Klaus Häuptle 2019 auf den Weg gebracht und wird seitdem als [open source durch die ABAP Community](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) erweitert.
 
-Beispielregel mit Erläuterung:
+Beispielregel mit Erläuterung ([Prefer inline to up-front declarations](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-inline-to-up-front-declarations) im Clean ABAP Guide):
+![Clean ABAP Example Rule: Prefer inline to up-front declarations](../img/clean_abap_prefer_inline_rule.png)
 
-![Clean ABAP Excample Rule Prefer inline to up-front declarations](./img/image-10.png)
-
-Clean ABAP Excample Rule Prefer inline to up-front declarations
+Clean ABAP Example Rule Prefer inline to up-front declarations
 {: .img-caption}
 
 Der Gedanke von Clean ABAP ist, dass es nicht eine Version von Clean ABAP gibt, mit einem festen unveränderlichen Set an Regeln. 
@@ -42,20 +42,24 @@ Alle Regeln von Clean ABAP sind heute und sollten immer begründet und erläuter
 Clean ABAP kann generell auf jede Sprachversion von ABAP angewendet werden von R2 bis hin zu ABAP Cloud. 
 
 ### DSAG Empfehlung
+
 Die Regeln im öffentlichen Repository sind anerkannt unter den meisten ABAP-Experten.
 Die Autoren des DSAG Leitfaden empfehlen Ihnen den Einsatz der Clean ABAP Regeln für Ihr Coding und als Grundlage für Code Reviews.
 Diskussionen über Code unter Entwicklern können nicht selten mit einer Clean ABAP Regel gelöst werden. 
 
 ### Clean ABAP & Entwicklungsrichtlinien
+
 Die auf das Unternehmen angepasste Form von Clean ABAP sollte ein ergänzendes Dokument der gültigen Entwicklungsrichtlinien sein, sodass es überall Anwendung findet. 
 Prüfen Sie die Anwendung der Regeln mit einem automatischen Tool wie Code Pal for ABAP im ABAP Test Cockpit (https://github.com/SAP/code-pal-for-abap). 
 
-### Clean ABAP owner
+### Clean ABAP Owner
+
 In jedem Entwicklungsteam sollte es - gerne auch rollierend - einen Clean ABAP Owner geben, der Ansprechpatner und Verantwortlicher für Änderungen ist. 
 Änderungen und Erweiterungen müssen separat in den Teams kommuniziert und abgestimmt werden. 
 Clean ABAP funktioniert am besten, wenn alle Beteiligten hinter den Regeln stehen, hierfür sind immer wieder Kompromisse und Abstimmungen im Team nötig. 
 
-### Clean ABAP ist ein Prozess  
+### Clean ABAP ist ein Prozess
+
 Die Anwendung bzw. das Erlernen von Clean ABAP ist kein einmaliger Workshop oder eine Managementdirektive. 
 Es braucht Zeit, Übung, Motivation und den konstanten Willen um bessere ABAP Programme zu schreiben. 
 
@@ -63,10 +67,6 @@ Die Tätigkeiten, die das Anwenden von Clean ABAP sicherstellen, heißen Pair-Pr
 Hierfür müssen von der Organisation entsprechende Bedingungen geschaffen werden. 
 
 ## Grundlagen sauberer Entwicklung
-
-- [X] Prinzipien von Clean Code und Clean ABAP
-- [X] Ein paar Clean ABAP Regeln zum Einstieg
-- [X] Nutzung des ABAP Cleaners in ADT
 
 Dieser Abschnitt gibt eine kurze Auswahl wichtiger Regeln für saubere Entwicklung mit Verweis auf Quellen mit weiteren Informationen wieder.
 
@@ -78,30 +78,33 @@ Ein wichtiges Element von Clean ABAP ist [die richtige Benennung von Entwicklung
 sind lesbar und verständlich, und machen direkt klar, worum es geht. In der alltäglichen ABAP-Entwicklung ist die Versuchung groß, technische Namen der SAP wiederzuverwenden; dies
 kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständlich als `active_status` oder erfordert wenigstens mehr ABAP-Kenntnisse.
 
-## Kommentare
+### Kommentare
 
-"Drücke dich durch Code aus - nicht durch Kommentare" 
-Dieses sollte einer der Leitsätze beim Scheiben von ABAP sein. Prüfen Sie jeden Kommentar, ob dieser nicht ein Ersatz für eine zu verbessernde Namensgebung bzw. Modularisierung ist. Eine lange Codestrecke, die mit dem Kommentar "Positionen verarbeiten" beginnt, deutet darauf, dass hier eine Methode über einen entsprechenden Namen genau dies aussagen und erledigen könnte. Ein Kommentar soll vielmehr Hinweise geben, warum etwas wie gemacht wird und ggf. den Kontext knapp erläutern anstatt zu beschreiben was gemacht wird.   
+> Drücke dich durch Code aus - nicht durch Kommentare.
+
+Dieses sollte einer der Leitsätze beim Scheiben von ABAP sein. Prüfen Sie jeden Kommentar, ob dieser nicht ein Ersatz für eine zu verbessernde Namensgebung bzw. Modularisierung ist. Eine lange Codestrecke, die mit dem Kommentar "Positionen verarbeiten" beginnt, deutet darauf, dass hier eine Methode über einen entsprechenden Namen genau dies aussagen und erledigen könnte. Ein Kommentar soll vielmehr Hinweise geben, warum etwas wie gemacht wird und ggf. den Kontext knapp erläutern anstatt zu beschreiben was gemacht wird.
 Zur Code Dokumentation ist ABAPDoc zu verwenden, somit sind Code Kommentare nur noch für spezifische, zeilenbezogene Erläuterungen zu verwenden. Z.B. wenn Funktionen und Fehlerbehandlungsblöcke nicht ausprogrammiert wurden, noch TODOs oder offene Fragen bestehen, die im Laufe des Lebenszyklus behoben werden müssen. 
 
 Stark veraltete ABAP Richtlinien mit Aussagen wie:
-"Logisch zusammenhängende Einheiten sollten kommentiert werden, wobei der Kommentar vor dem jeweiligen Block steht." 
-"Das Erkennen solcher Blöcke wird bei langen und tief verschachtelten Kontrollstrukturen dadurch erleichtert, dass man am Ende einen auf den Beginn referenzierenden Kommentar einfügt"
 
-Hier nehmen die ABAP-Guidelines bereits an, dass so genanter (Spaghetti Code)[https://en.wikipedia.org/wiki/Spaghetti_code] geschrieben wird. 
-Kommentare können nie die Lösung für fehlende Modularisierung und Aufbrechen von tiefen Schachtelungen sein. 
-Diese Probleme in der Lesbarkeit sollten durch konsequente Modularisierung und nicht durch Kommentare gelöst werden. 
+> Logisch zusammenhängende Einheiten sollten kommentiert werden, wobei der Kommentar vor dem jeweiligen Block steht.
+
+oder
+
+> Das Erkennen solcher Blöcke wird bei langen und tief verschachtelten Kontrollstrukturen dadurch erleichtert, dass man am Ende einen auf den Beginn referenzierenden Kommentar einfügt.
+
+Hier nehmen die ABAP-Guidelines bereits an, dass so genanter [Spaghetti Code](https://en.wikipedia.org/wiki/Spaghetti_code) geschrieben wird.
+Kommentare können nie die Lösung für fehlende Modularisierung und Aufbrechen von tiefen Schachtelungen sein.
+Diese Probleme in der Lesbarkeit sollten durch konsequente Modularisierung und nicht durch Kommentare gelöst werden.
 
 {: .note }
-Clean ABAP rät zur (Erklärung über Code nicht Kommentare)[https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#use-methods-instead-of-comments-to-segment-your-code]
+Clean ABAP rät zur [Erklärung und Strukturierung über Code, nicht über Kommentare](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#use-methods-instead-of-comments-to-segment-your-code).
 
-Im Leitfaden von Clean ABAP steht alles was Sie zu Kommentaren beachten sollten, (Siehe)[https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#express-yourself-in-code-not-in-comments].
-
-
+Im Leitfaden von Clean ABAP steht alles was Sie zu Kommentaren beachten sollten, [Siehe](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#express-yourself-in-code-not-in-comments).
 
 ## Moderne Sprachmittel
 
-Dieser Abschnitt zeigt eine kurze Übersicht moderner Sprachmittel von ABAP.
+Dieser Abschnitt zeigt eine kurze Übersicht moderner Sprachmittel von ABAP ohne Anspruch auf Vollständigkeit.
 
 TODO bisherige Abschnitte zu Deklarationen etc. hier lassen oder in Anhang verschieben? Checkliste nochmal prüfen
 {: .label .label-red }
@@ -124,14 +127,14 @@ mein_string = `hello world`.
 mein_int = strlen( mein_string ).
 ~~~
 
-{: .note }
-[Clean ABAP](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-inline-to-up-front-declarations) empfiehlt, Inline-Deklarationen den klassischen Deklarationen vorzuziehen.
-
 Mithilfe von Inline-Deklarationen können stattdessen überall in der Methode Variablen deklariert und direkt zugewiesen werden:
 
 ~~~ abap
 DATA(mein_string) = `hello worlddd`.
 ~~~
+
+{: .note }
+[Clean ABAP empfiehlt](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-inline-to-up-front-declarations), Inline-Deklarationen den klassischen Deklarationen vorzuziehen.
 
 #### Deklaration mit FINAL
 
@@ -158,7 +161,7 @@ Im Rahmen dieser Änderung wurden auch weitere Aufruf ähnlich gestaltet wie in 
 Auch wurden für viele imperative ABAP-Anweisungen moderne Alternativen geschaffen.
 
 {: .note }
-[Clean ABAP](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-functional-to-procedural-language-constructs) empfiehlt, funktionale Sprachelemente immer vorzuziehen.
+[Clean ABAP empfiehlt](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-functional-to-procedural-language-constructs), funktionale Sprachelemente immer vorzuziehen.
 
 Ein Beispiel ist die alte und neue Syntax, um einen String in Großbuchstaben umzuwandeln:
 
@@ -206,7 +209,7 @@ Die ABAP-Hilfe bietet Listen von Funktionen für
 
 ### ABAP Doc
 
-ABAP Doc ist die moderne Variante, Dokumentation für Entwicklungsobjekte anzulegen.
+ABAP Doc ist die moderne Variante, Dokumentation für Entwicklungsobjekte anzulegen. In den ABAP Development Tools lässt sich diese Dokumentation für ein Element dann schnell mit `F2` anzeigen.
 
 Die Dokumentation für eine Klasse wird z.B. so angegeben:
 
@@ -255,12 +258,7 @@ TODO Beispiel aufnehmen
 
 ## Beispiele für modernes ABAP
 
-Dieser Abschnitt zeigt einige Beispiele für moderne Alternativen zu alter und veralteter ABAP-Syntax.
-
-TODO Template entfernen
-{: .label .label-red }
-
-Die Beispiele der folgenden Abschnitte verwenden teilweise die folgende Struktur- und Tabellendefinition
+Dieser Abschnitt zeigt einige Beispiele für moderne Alternativen zu alter und veralteter ABAP-Syntax. Die folgenden Beispiele verwenden teilweise die folgende Struktur- und Tabellendefinition:
 
 ~~~ abap
 TYPES: BEGIN OF person,
@@ -271,11 +269,9 @@ TYPES: BEGIN OF person,
 TYPES persons TYPE STANDARD TABLE OF person WITH EMPTY KEY.
 ~~~
 
-~~~ abap
-
-~~~
-
 ### Strukturen und Tabellen erzeugen
+
+Mit dem `VALUE`-Operator lassen sich interne Tabellen wesentlich schneller und übersichtlicher erzeugen:
 
 ~~~ abap
 " Alte Variante
@@ -357,9 +353,7 @@ DATA(person_objects_new) = VALUE person_objects( FOR p IN persons
                                                     ( read_person_info( p ) ) ).
 ~~~
 
-Die folgenden Beispiele zeigen, wie nur bestimmte Zeilen einer Tabelle übernommen werden können:
-
-Übernahme von Zeilen anhand des Index:
+Die folgenden Beispiele zeigen, wie nur bestimmte Zeilen einer Tabelle anhand eines Index übernommen werden können:
 
 ~~~ abap
 " Alte Syntax
@@ -382,7 +376,7 @@ DATA(younger_persons) = VALUE persons( FOR p IN persons WHERE ( age < 20 )
                                            ( p ) ).
 ~~~
 
-Für viele Möglichkeiten, die `LOOP AT` bietet, gibt es auch in der `VALUE`-Variante Entsprechungen.
+Für viele Möglichkeiten, die `LOOP AT` bietet - beispielsweise Gruppierungen - gibt es auch in der `VALUE`-Variante Entsprechungen. Weitere Informationen dazu finden sich [in der SAP-Dokumentation](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenvalue_constructor_params_itab.htm).
 
 TODO Beispiele für alles?
 {: .label .label-red }
