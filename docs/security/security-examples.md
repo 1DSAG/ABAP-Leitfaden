@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Entwicklung
+title: Weitere Beispiele
 permalink: /security/additional-examples/
 parent: Sicherheit
 nav_order: 6
