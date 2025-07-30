@@ -9,7 +9,7 @@ nav_order: 2
 {: .no_toc}
 # Einsatz von Open-Source-Software
 
-Dieser Abschnitt beschreibt den Anwendungsfall als Open-Source-Software in den eigenen Entwicklungsprozess oder die eigens entwickelte Software zu integrieren. Er thematisiert damit die erste [Ausbaustufe](/ABAP-Leitfaden/open-source/index.md#ausbaustufen)
+Dieser Abschnitt beschreibt den Anwendungsfall als Open-Source-Software in den eigenen Entwicklungsprozess oder die eigens entwickelte Software zu integrieren. Er thematisiert damit die erste [Ausbaustufe](/ABAP-Leitfaden/open-source/#ausbaustufen).
 
 1. TOC
 {:toc}
@@ -26,8 +26,6 @@ In beiden Fällen ermöglicht das Tool massenhaft Entwicklungsobjekte in Ihr Sys
 Von diesem Gedanken sollten Sie sich allerdings verabschieden. Sie können zwar auch die Verwendung von abapGit anhand von Berechtigungen einschränken, sogar [Exits](https://docs.abapgit.org/user-guide/reference/authorizations.html) können implementiert werden, um die Berechtigungslogik weiter zu verfeinern. Solange Entwickler aber die Möglichkeit haben im System zu entwickeln, was ihre eigentlich Tätigkeit ist, können Sie mit wenigen Zeilen Coding unter Umgehung aller Berechtigungsprüfungen ein eigenes Datenexportprogramm implementieren oder sich selbst die erforderlichen Berechtigungen zuweisen. Eine zu umfangreiche Reglementierung von Tooling führt zwangsläufig zum Bau von Workarounds und hindert den Entwicklungsprozess.  
 Es ist daher eher zu empfehlen, einen Prozess zu definieren, wie mit dem verfügbaren Tooling sinnvoll und im Team abgestimmt umgegangen wird.
 
-Weitere Informationen zu abapGit finden Sie auch unter [abapGit als Enabler von Open Source](/ABAP-Leitfaden/open-source/abapgit-as-enabler) und [abapGit als Versionsverwaltung](#abapgit-als-versionsverwaltung).
-
 ## Wer stellt ABAP-Open-Source-Software bereit?
 
 Eine umfangreiche Auflistung von auf GitHub publizierten Open-Source-ABAP-Projekten finden Sie auf [dotabap.org](https://dotabap.org). Eigene Projekte, die den Anforderungen für die Listung entsprechen, können Sie bei [dotabap-list](https://github.com/dotabap/dotabap-list) über eine Pull Request einreichen.
@@ -39,7 +37,7 @@ Screenshot dotabap.org
 
 ## Wer nutzt ABAP-Open-Source-Software?
 
-Auf der Seite [Who Uses abapGit?](https://docs.abapgit.org/user-guide/other/where-used.html) der abapGit-Dokumentation finden Sie eine Auflistung an Unternehmen, die abapGit einsetzen und sich aktiv für eine Listung entschieden haben. Daraus ist abzuleiten, dass sie mindestens abapGit selbst als Open-Source-Software nutzen. Auch SAP nutzt Open-Source-ABAP. abapGit ist in einer angepassten Version in SAP S/4HANA Cloud Public Edition und dem SAP BTP ABAP Environment [vorinstalliert](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit?locale=en-US). Projekte wie [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap-cloud) und [RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) sind auf GitHub verfügbar und mit der Open-Source-Lizenz Apache 2.0 versehen.
+Auf der Seite [Who Uses abapGit?](https://docs.abapgit.org/user-guide/other/where-used.html) der abapGit-Dokumentation finden Sie eine Auflistung an Unternehmen, die abapGit einsetzen und sich aktiv für eine Listung entschieden haben. Daraus ist abzuleiten, dass sie mindestens abapGit selbst als Open-Source-Software nutzen. Auch SAP nutzt Open-Source-ABAP. abapGit ist in einer angepassten Version in SAP S/4HANA Cloud Public Edition und dem SAP BTP ABAP Environment [vorinstalliert](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit?locale=en-US). Projekte wie [Code Pal for ABAP](https://github.com/SAP/code-pal-for-abap-cloud), [Project Kernseife](https://github.com/SAP/project-kernseife) und [RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) sind auf GitHub verfügbar und mit der Open-Source-Lizenz Apache 2.0 versehen.
 
 ## Integration von Open-Source-Tools im Entwicklungsprozess
 
@@ -67,7 +65,8 @@ Eine optionale Erweiterung dieser Ausbaustufe ist die Nutzung von Open-Source-Bi
 
 ## Bewertung und Lebenszyklus einer externen Abhängigkeit
 
-**TODO**
+TODO
+{: .label .label-red }
 
 - Verbreitung, aktive Weiterentwicklung, Anzahl Contributors
 - Wer kümmert sich um Updates, wer testet diese, bewertet diese
@@ -96,6 +95,9 @@ Eine optionale Erweiterung dieser Ausbaustufe ist die Nutzung von Open-Source-Bi
 - Bewertung der Lizenz und Kompatibilität zwischen Lizenzen
 - Support: Argument "Keine Software ohne Enterprise Support" durchgehen
 - Andreas?
+
+End-TODO
+{: .label .label-red }
 
 ## Auslieferung von Open-Source-Abhängigkeiten in eigenen Produkten
 

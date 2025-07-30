@@ -42,24 +42,12 @@ Klassisch in ABAP entwickelte Anwendungen sind oft nicht in sich gekapselt und n
 ABAP ist technologisch nicht dafür kategorisch ungeeignet gekapselte wiederverwendbare Komponenten zu entwickeln. Es wird allerdings auch nicht direkt durch die Technologie erzwungen und ist im Entwicklungsalltag oft zur Umsetzung von Anforderungen nicht erforderlich. Daher ist ggf. eine Auseinandersetzung mit dem Thema erforderlich.
 Beim Einsatz von solchen wiederverwendbaren Komponenten ergibt sich die Thematik, dass Problemstellungen direkt alle verwendenden Anwendungen betreffen können, da diese nicht jeweils eine eigene Installation der Komponente nutzen sondern die zentrale im System installierte. Auch bei der Auslieferung eigener Software, Open-Source oder nicht, ergibt sich das Problem, da im Zielsystem die Komponente in der passenden Version vorhanden sein muss.
 
+Aspekte zu Architekturüberlegungen und zur Unterstützung mehrerer Releases und Produkte finden Sie im Anwendungsfall [Entwicklung von Open-Source-Software](/ABAP-Leitfaden/open-source/developing-open-source-software/). Lösungansätze bezüglich der Installation mehrerer Versionen einer Komponente im System finden Sie unter [Auslieferung von Open-Source-Abhängigkeiten in eigenen Produkten](/ABAP-Leitfaden/open-source/using-open-source-software/#auslieferung-von-open-source-abhängigkeiten-in-eigenen-produkten).
 {: .solution }
-
-
-Lösung: Renaming, Auslieferung von Abhängigkeiten als Teil der eigenen Software ...
-
-## Geschäftskritische Anwendungen und Prozesse
-
-TODO
-
-## Unternehmenskritische Daten im System
-
-TODO
-
-## Kommunikation und Verhalten der SAP
-
-- TODO
-- SAP behindert durch Historie mit Code Exchange, gCTS, inkompatible Formate, uneinheitliche Kommunikation, abapGit Fork, abapGit ADT Frontend
 
 ## Namensräume
 
-TODO
+Das Namensraumkonzept ist generell ungeeignet für die unternehmensübergreifende Beteiligung an Entwicklungsprojekten, ohne Namenskonflikte im Kumdennamensraum zu riskieren. Abhängigkeiten können nicht mehrfach im System in verschiedenen benötigten Versionen installiert werden.
+
+Zur Lösung Problems gibt es Tooling in Form automatischer Namenskonfliktprüfung auf [dotabap.org](https://dotabap.org), automatischer Kopie von Abhängigkeiten in andere Namensräume / Präfixe mit abaplint und die ABAP Open Source Namespaces. Details finden Sie unter [Namensräume](/ABAP-Leitfaden/open-source/developing-open-source-software/#namensräume) und [Auslieferung von Open-Source-Abhängigkeiten in eigenen Produkten](/ABAP-Leitfaden/open-source/using-open-source-software/#auslieferung-von-open-source-abhängigkeiten-in-eigenen-produkten).
+{: .solution }
