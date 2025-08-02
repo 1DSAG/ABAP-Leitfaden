@@ -278,6 +278,12 @@ CDS Abstract Entities gehören zu den Non-SQL-Entitäten. Sie können sie als ko
 
 > Details finden Sie unter [SAP Help (CDS Abstract Entities)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abencds_f1_define_abstract_entity.htm)
 
+### External Entities
+
+CDS External Entities bieten eine moderne Möglichkeit, sekundäre Datenbankverbindungen in ABAP Cloud zu verwalten. Sie ermöglichen ABAP-Programmen, mittels SQL Daten aus anderen Datenbanksystemen abzurufen und zu bearbeiten. Im Gegensatz zu herkömmlichen sekundären Verbindungen, die nur auf SAP HANA-Datenbanken beschränkt sind, unterstützen CDS External Entities Verbindungen zu verschiedenen Datenbanksystemen, einschließlich SAP S/4HANA Cloud, SAP BTP ABAP Environment und SAP HANA Cloud, basierend auf der SAP HANA Smart Data Access-Technologie.
+
+> Details finden Sie unter [SAP Experten Blog: )](https://community.sap.com/t5/technology-blog-posts-by-sap/abap-cds-release-news-2408-external-entities/ba-p/13784415)
+
 ### Tuning objects
 Aktuell bietet SAP nur einen Konfigurationstyp an: Define View Entity Buffer. Damit kann eine Pufferung der Daten definiert werden (keine Pufferung, Einzelsatz, Bereiche, Vollständig). Diese Einstellung kann sich auf die Performance auswirken. 
 > Details zur Performance finden sie auch hier:
