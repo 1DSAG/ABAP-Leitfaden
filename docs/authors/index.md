@@ -184,7 +184,7 @@ nav_order: 15
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/volodymyrvashchenko/">Volodymyr Vashchenko</a></td>
-<td>Festo SE & Co.KG</td>
+<td>Bosch Thermotechnik GmbH</td>
 <td>Autor, Reviewer</td>
 </tr>
 </tbody>
@@ -245,7 +245,7 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <tr class="odd">
 <td>Volodymyr Vashchenko</td>
 <td>Clean Core, Organisation, Core Data Services, Integration</td>
-<td>Als ABAP Lead Developer bei FESTO bin ich der Innovationstornado, der immer vorne mitmischt. Mit der DSAG-Community Standards zu setzen, ist für mich wie ein heiliger Ritterschlag – nur mit weniger Rüstung und mehr Kaffeekicks!</td>
+<td>Als Enterprise Architect blicke ich gerne weit in die Zukunft; Und sehe eine strahlende Zukunft für die ABAP-Entwicklung, die neue Dimensionen erreicht. Als ABAP Lead Developer bei Festo war ich der Innovationstornado, der immer vorne mitmischt. Mit der DSAG-Community Standards zu setzen, ist für mich wie ein heiliger Ritterschlag – nur mit weniger Rüstung und mehr Kaffeekicks! Die Zusammenarbeit mit den renommierten ABAP-Profis war bereichernd. Viel Spaß beim Lesen!</td>
 </tr>
 
 <tr class="odd">
