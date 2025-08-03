@@ -231,9 +231,11 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <tr class="odd">
 <td>Peter Luz</td>
 <td>ABAP, Testing, KI</td>
-<td>ABAP Entwickler seit 2010 bei Robert Bosch GmbH im Bereich der Entwicklung von SAP-Logistik Funktionen <br>
-    seit 2024 Lead-Developer in einem S/4 Template Entwicklungsprojekt im Bereich Logistik <br> 
-    Nach der Mitarbeit am DSAG ADT Leitfaden 2023 möchte ich meine Erfahrungen aus vielen Jahren ABAP Entwicklung einbringen und weitergeben. </td>
+<td>Seit 2006 bei Robert Bosch GmbH im SAP-Bereich und seit 2010 ABAP Entwickler im Bereich der Entwicklung von SAP-Logistik Funktionen, seit 2024 Lead-Developer in einem S/4 Template Entwicklungsprojekt im Bereich Logistik.<br> 
+ABAP fande ich schon immer sehr interessant, da Programmierung auf Geschäftsprozesse trifft und der Einsatz für gute Softwarequalität sich auch im Praxiseinsatz der Software sichtbar wurde.  
+Die Mitarbeit an einem Leitfaden erfordert viel Zeit, v.a. private Zeit die man investiert. Man bringt sein Wissen und seine Erfahrung ein. Man bekommt aber auch sehr viel zurück durch die guten Gespräche mit Menschen aus der SAP-Community, durch den regen Erfahrungsaustausch im Autorenteam und man lernt sehr viel dazu.<br>  
+Nach der Mitarbeit am DSAG-ADT Leitfaden 2023 möchte ich meine Erfahrungen aus vielen Jahren ABAP Entwicklung auch hier einbringen und weitergeben.  
+Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und motiviert, moderne ABAP-Entwicklung im Alltag nutzen und gewinnbringend einzusetzen.</td>
 </tr>
 
 <tr class="odd">
