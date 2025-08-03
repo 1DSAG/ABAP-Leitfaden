@@ -25,6 +25,7 @@ Die folgenden Abschnitte zeigen Beispiele für modernen ABAP Code, erhebt jedoch
 wird vorausgesetzt.
 
 ## Clean ABAP 
+
 Clean ABAP stellt die Anpassung der Prinzipien aus dem Buch von Robert C. Martin auf ABAP dar. Das offizielle, im Repository der SAP freigegebene Dokument wurde von Florian Hoffmann und Klaus Häuptle 2019 auf den Weg gebracht und wird seitdem als [open source durch die ABAP Community](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) erweitert.
 
 Beispielregel mit Erläuterung:
@@ -112,7 +113,7 @@ TODO bisherige Abschnitte zu Deklarationen etc. hier lassen oder in Anhang versc
 
 - [ ] moderne SQL Syntax
 - [ ] Stil von modernem ABAP
-- [ ] SAP SAMPLES als Referenz bibliothek
+- [ ] SAP SAMPLES als Referenzbibliothek
 - [ ] Todo check SAP Samples (ABap OO Basics)– und clean code bzgl. patterns -
 
 ### Deklarationen
