@@ -30,7 +30,7 @@ Der Weg zur Erstellung moderner Anwendungen ist kein Leichter und es ist eine In
 Dieses Kapitel teilt sich in folgende Abschnitte auf:
 
 - [**Architektur und Design moderner ABAP Entwicklungen**](/ABAP-Leitfaden/abap/architecture_and_design)  
-    Hier erfahren Sie warum es wichtig ist und viele Vorteile bringt, ABAP Entwicklungen in Paketen zu strukturieren, die Paketfunktionalitäten zu nutzen und was Sie wissen müssen um unsere Empfehlungen umzusetzen. 
+    Hier erfahren Sie warum es wichtig ist und viele Vorteile bringt, ABAP Entwicklungen in Paketen zu strukturieren, die Paketfunktionalitäten zu nutzen und was Sie wissen müssen um unsere Empfehlungen umzusetzen.  
 
 - [**Design und Erstellung von ABAP Entwicklungen mit ABAP OO**](/ABAP-Leitfaden/abap/software_design_of_object_structur)  
     Die Anwendung von Objektorientierung ist ein essentieller Faktor eine moderne, robuste und Anpassungsfähige Software zu erstellen. In diesem Kapitel finden Sie unsere Empfehlungen OO gut und effizient umzusetzen und warum die Anwendung von Objektorientierung und gute Strukturierung der Funktionalitäten in Klassen sich auszahlt.

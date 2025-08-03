@@ -203,14 +203,15 @@ Die ABAP-Hilfe bietet Listen von Funktionen für
 
 ABAP Doc ist die moderne Variante, Dokumentation für Entwicklungsobjekte anzulegen. In den ABAP Development Tools lässt sich diese Dokumentation für ein Element dann schnell mit `F2` anzeigen.
 
-Die Dokumentation für eine Klasse wird z.B. so angegeben:
+Die Dokumentation für eine Klasse wird z.B. wie angegeben:
 
 ~~~ abap
 "! Description of what the class does
 CLASS demo DEFINITION.
 ~~~
 
-Weitere Informationen finden sich im [Abschnitt Dokumentation](../../documentation/).
+In den ABAPDoc Dokumentationen zu der Klasse können generelle Hinweise und der Zweck der Klasse somit auswertbar und gut lesbar im Code dokumentiert werden, ebenso können Hinweise zu den einzelnen Methoden und den Parametern der Methoden mittels ABAPDoc erstellt werden. Als Hauptnutzer der ABAPDoc Dokumentation ist der Verwender/Aufrufer (bzw. dessen Entwickler) der Klasse. Somit ist diese Funktion besonders hilfreich für Klassen, die zur Verwendung für andere Funktionen zur Verfügung gestellt werden.  
+Weitere Informationen zu ABAPDoc finden Sie im Abschnitt [Dokumentation/ABAP Doc](/ABAP-Leitfaden/documentation/dev_object_related_doc/#abap-doc).
 
 ### Konstruktoroperatoren
 
