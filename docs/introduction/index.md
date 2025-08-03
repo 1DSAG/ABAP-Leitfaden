@@ -12,18 +12,19 @@ nav_order: 0
 {:toc}
 
 Herzlich Willkommen beim neuen "ABAP-Leitfaden" der DSAG. Vor Ihnen befindet sich ein umfangreiches Dokument zum Thema Anwendungsentwicklung in SAP.  
-Bei diesem aktuellen ABAP-Leitfaden 2025 handelt es sich um die dritte Auflage. Der Leitfaden ist zuvor 2012 und 2016 erschienen. Seither hat sich im Bereich der SAP-Entwicklung sehr viel getan:  
+Bei diesem aktuellen ABAP-Leitfaden 2025 handelt es sich um die dritte Auflage. Dieser Leitfaden ist zuvor 2012 und 2016 erschienen. Seither hat sich im Bereich der SAP-Entwicklung sehr viel getan. So haben seither u.a. folgende bedeutende und große Neuerungen Einzug in die Anwendungsentwicklung mit SAP Einzug gehalten:  
 
 * Die Einführung der ABAP Development Tools (ADT)
-* HANA  
-* S/4HANA  
+* HANA Datenbank  
+* S/4HANA Business Suite
 * CDS für die Datenmodellierung  
 * das Restful Application Programming Model (RAP)  
 * und die rasante Weiterentwicklung der Programmiersprache ABAP hin zu ABAP-Cloud
-um hier die offensichtlichsten Punkte zu nennen.  
 
-Da sich somit auch die Entwicklung in SAP seit der Veröffentlichung der letzten Version maßgeblich verändert hat, wurde es erforderlich, einen aktualisierten Leitfaden zur Verfügung zu stellen, der diese Neuerungen berücksichtigt.  
-Im Jahr 2024 hat sich auf den Aufruf der DSAG wieder ein neues Team von Experten im SAP-Umfeld zusammengefunden um eine neue und aktuelle Version eines SAP-Entwicklungsleitfadens bereitzustellen, der sowohl Verantwortlichen in Unternehmen, als auch Entwicklern und Beratern Orientierung, Hinweise und Tipps aus der Praxis zu geben und helfen, bewährte und neue Technologien für die Anwendungsentwicklung erfolgreich und zielgerichtet einzusetzen.
+um hier die wichtigsten Neuerungen zu nennen.  
+
+Da sich somit auch die Entwicklung in SAP seit der Veröffentlichung der letzten Version des Leitfadens maßgeblich verändert hat, wurde es erforderlich, einen aktualisierten Leitfaden zur Verfügung zu stellen, der diese Neuerungen berücksichtigt .  
+Im Jahr 2024 hat sich auf den Aufruf der DSAG wieder ein neues Team von Experten im SAP-Umfeld zusammengefunden um eine neue Version des ABAP-Leitfadens zu erstellen, der sowohl Verantwortlichen in Unternehmen, als auch Entwicklern und Beratern Orientierung, Hinweise und Tipps aus der Praxis zu geben und dabei zu helfen, bewährte und neue Technologien für die Anwendungsentwicklung erfolgreich und zielgerichtet einzusetzen.
 
 Die Software der SAP zeichnet sich als Standardsoftware durch ein hohes Maß an Flexibilität und Erweiterbarkeit aus. In nahezu allen Unternehmen, die SAP-Software einsetzen, finden sich kundenspezifische Anpassungen und Erweiterungen. Die SAP-Software unterliegt damit sowohl auf Hersteller- als auch auf Kundenseite der kontinuierlichen Anpassung und Erweiterung durch sich ändernde Kundenbedürfnisse.
 Das hohe Maß an Flexibilität und Erweiterbarkeit von SAP-Software bringt Vor- und Nachteile mit sich:
@@ -35,19 +36,32 @@ Die Anwendungsentwicklung in SAP ist deutlich komplexer geworden und während fr
 
 Es gibt zahlreiche Dokumentationen und mittlerweile sind auch zahlreiche Schulungsangebote in der Form von Learning Journeys frei zu den verschiedenen Themen verfügbar. Dennoch ist es nicht einfach, sich im Dschungel der Tools und Techniken zurechtzufinden.
 
+## Aufbau und Inhalte des Leitfadens
+  
+Da die Erfolgsfaktoren der Transformation zu moderner ABAP-Entwicklung nicht in erster Linie in technischen Themen liegen, sondern durch die Rahmenbedingungen geschaffen werden, erhalten Sie Erläuterungen und Empfehlungen bezüglich der **Entwicklungsorganisation**.  
+Anschließend erhalten Sie einen Überblick über die Konzepte von **"Clean Core"** und Empfehlungen zur Vorgehensweise. Das Verständnis des Clean Core Konzept ist wichtig damit Sie Ihre Strategien definieren können und auch das Verständnis gegeben ist, wie die neuen Entwicklungsmethodiken den Clean-Core Ansatz technisch umsetzen.
+Damit haben Sie bereits einen guten Überblick über die Rahmenbedingungen.  
+Die technisch orientierten Themen  
 
-## Aufbau und Zielgruppe
+* **Core Data Services**
+* **ABAP**
+* **ABAP Unit Test**  
+* **User Interfaces und**
+* **Formulare**
 
-Wie das Dokument aufgebaut ist und wie Sie es effektiv nutzen können, erfahren Sie in diesem Abschnitt. Das Dokument unterteilt sich in spezifische Kapitel und Abschnitte:  
+geben Ihnen Erläuterungen, Empfehlungen und Details zu den technischen Aspekten und Technologien moderner SAP Entwicklung.  
+Am Anfang der Kapitel finden Sie jeweils einleitende Informationen und einen Überblick über das Thema. Dieser Teil ist vor allem für Manager und Entscheider im Unternehmen gedacht, die sich einen Überblick über den Bereich verschaffen möchten.  
+Je tiefer Sie in das Kapitel einsteigen, desto detailliertere Informationen erhalten Sie zu den Themen. Diese Abschnitte sind vor allem für Architekten, Entwickler und technisch Interessierte geeignet, die einen tieferen Einblick in das Thema erhalten wollen.  
 
-* Am Anfang des Kapitels finden Sie einleitende Informationen und einen Überblick über das Thema. Dieser Teil ist vor allem für Manager und Entscheider im Unternehmen gedacht, die sich einen Überblick über den Bereich machen wollen.
-* Je Tiefer Sie in das Kapitel einsteigen, desto detailiertere Informationen erhalten Sie. Diese Abschnitte sind vor allem für Architekten und Entwickler geeignet, die einen tieferen Einblick in das Thema erhalten wollen.
+Im weiteren Teil finden Sie dann Abschnitte zu den Themen **Open Source** mit wichtigen Ausführungen warum Open Source auch im ABAP-Bereich wichtig ist, Ausführungen zu Application Lifecycle Management (ALM), bei denen Sie auch Erläuterungen zu modernen Methoden der **Versionsverwaltung** finden.  
+Abschließend finden Sie noch Ausführungen zu den Themen **Sicherheit** und **Integration**, die bei Entwicklung von SAP Software heute wichtiger denn je sind.
+Und natürlich dürfen auch Hinweise zur künstlichen Intelligenz hier nicht fehlen.
 
 ## Positionierung
 
 Von der SAP und einer ganzen Reihe von Fachverlagen existieren bereits sehr gute Publikationen zur Anwendungsentwicklung und Erweiterung der SAP-Plattform. Im Verlauf dieses Leitfadens weisen wir auf aus unserer Sicht lesenswerte Literatur hin.
 
-Der Mehrwert dieses Dokuments liegt in der Zusammenfassung bewährter Vorgehensweisen, Praxistipps und erprobter Regelwerke aus den Anwenderunternehmen. Diese Guideline soll Ihnen als Anwender, Entwickler, Entwicklungs-, Projekt- oder IT-Leiter Anregungen und Hilfestellung geben, um „das Rad nicht immer wieder neu erfinden zu müssen“ und auf die Erfahrungen anderer aufbauen zu können. Dabei erheben die in dieser Guideline vorgestellten Empfehlungen nicht den Anspruch auf Vollständigkeit oder absolute Gültigkeit, sondern stellen eine Auswahl von Praxistipps dar. 
+Der Mehrwert dieses Dokuments liegt in der Zusammenfassung bewährter Vorgehensweisen, Praxistipps und erprobter Regelwerke aus den Anwenderunternehmen. Diese Guideline soll Ihnen als Anwender, Entwickler, Entwicklungs-, Projekt- oder IT-Leiter Anregungen und Hilfestellung geben, um „das Rad nicht immer wieder neu erfinden zu müssen“ und auf die Erfahrungen anderer aufbauen zu können. Dabei erheben die in dieser Guideline vorgestellten Empfehlungen nicht den Anspruch auf Vollständigkeit oder absolute Gültigkeit, sondern stellen eine Auswahl von Praxistipps dar.  
 
 Als Autorenteam haben wir uns darum bemüht, im Spannungsfeld zwischen Überblickswissen und Detailtiefe den richtigen Mix zu finden. Daher verweisen wir an entsprechenden Stellen auf weiterführende Quellen, um bereits ausführlich diskutierte Themen nicht redundant wiederzugeben. 
 
