@@ -55,19 +55,19 @@ Mit der Einführung des Paketkonzepts ergeben sich deutlich erweiterte Möglichk
 
 In den folgenden Abschnitten wird auf die Anwendung des Paketkonzepts eingegangen, welches auf On-Premise Systemen ab [ab SAP Web Application Server 6.2 bzw. deren Erweiterung ab Netweaver 7.3 EHP1] eingesetzt werden kann.  
 
->**Empfehlungen**  
-- ***Nutzen Sie das Paketkonzept:***
-- Schalten Sie auf Ihren SAP-Systemen die Paketprüfung ein.
-- Erstellen Sie für Ihre Eigenentwicklungen Hauptpakete, die sich an architektonischen Erfordernissen (Single Responsibility) orientieren.
-- Schalten Sie pro Paket die Paketkapselung ein.
-- Gruppieren und strukturieren Sie das Paket mit Unterpaketen anhand den Zuständigkeiten und nicht nach Objekttyp.
-- Machen Sie während des Entwicklungsprozesses regelmäßig Paketchecks, um Abhängigkeiten zu erkennen.
-- Prüfen Sie bei nicht sichtbaren Objekten Alternativen (z.B. vergleichbares Objekt mit Sichtbarkeit aus anderem Paket, Eigendefintion im Paket ...).
-- Nehmen Sie gewünschte Abhängigkeiten in den Verwendungsnachweis auf.
-- Vermeiden Sie die Erstellung sehr grosser Pakete oder "Sammelpakete" die zahlreiche unabhängige Funktionen bündeln.
-- Schulen Sie Ihre Entwickler bzgl. der Paketdefinition und Strukturierung im Unternehmen
-
 {: .highlight}
+>**Empfehlungen**  
+>
+>- ***Nutzen Sie das Paketkonzept:***
+>- Schalten Sie auf Ihren SAP-Systemen die Paketprüfung ein.
+>- Erstellen Sie für Ihre Eigenentwicklungen Hauptpakete, die sich an architektonischen Erfordernissen (Single Responsibility) orientieren.
+>- Schalten Sie pro Paket die Paketkapselung ein.
+>- Gruppieren und strukturieren Sie das Paket mit Unterpaketen anhand den Zuständigkeiten und nicht nach Objekttyp.
+>- Machen Sie während des Entwicklungsprozesses regelmäßig Paketchecks, um Abhängigkeiten zu erkennen.
+>- Prüfen Sie bei nicht sichtbaren Objekten Alternativen (z.B. vergleichbares Objekt mit Sichtbarkeit aus anderem Paket, Eigendefintion im Paket ...).
+>- Nehmen Sie gewünschte Abhängigkeiten in den Verwendungsnachweis auf.
+>- Vermeiden Sie die Erstellung sehr grosser Pakete oder "Sammelpakete" die zahlreiche unabhängige Funktionen bündeln.
+>- Schulen Sie Ihre Entwickler bzgl. der Paketdefinition und Strukturierung im Unternehmen
 
 ### Grundlagen und Begriffserklärungen zum Paketkonzept
 
@@ -177,7 +177,6 @@ Gerade bei Sammlerpaketen kann es sinnvoll sein, bei entsprechender Größe, ein
 
 ### Pakethierarchien
 
-
 Mit den oben genannten Methoden und Werkzeugen kann eine gute Softwarearchitektur in SAP über die Pakete mit den Abhängigkeiten dargestellt werden. Die Überlegungen die für ein gutes Paketdesign angestellt werden müssen führen letztlich zu einer guten Anwendungsarchitektur, wenn die Designprinzipien für sauberer Architektur eingehalten werden. Hinweise zu Prinzipien moderner Softwarearchitektur finden Sie in einschlägiger Fachliteratur z.B. "Clean Architecture" von Robert C. Martin.
 Bei der Gestaltung der Pakete sollte auch immer der Blick auf die Entwicklungen paketübergreifend erfolgen und bei der Anlage neuer bzw. Erweiterung bestehender Pakete geprüft werden, inwieweit die Pakete zueinander passen und zu prüfen ob Eigenentwicklungen eigener Funktionen in verschiedene Pakete getrennt werden soll. Bei komplexeren Systemlandschaften kann es sinnvoll sein, Framework Pakete zu definieren, die Basisfunktionen anbieten, dann Grundfunktionspakete, die die Geschäftslogik abbilden und optionale Add-On Pakete zu erstellen, die unterschiedliche Oberflächentechnologien oder Ausprägungen der Funktionalitäten abbilden. Dadurch entsteht eine Hierarchie von Hauptpaketen, deren Abhängigkeiten über die Paketschnittstellen gut abgebildet und dokumentiert werden können.  Wichtig ist hierbei zu achten, dass die Abhängigkeit immer nur in eine Richtung definiert sein darf.
 
@@ -199,12 +198,8 @@ Wie bereits beschrieben, sind die Abhängigkeiten von SAP-Paketen bzw. zwischen 
 ### Bessere Übersicht und Erklärbarkeit
 
 Bei komplexeren Entwicklungen hilft die Strukturierung schneller relevante Objekte zu finden. Die Struktur kann bereits als Teil der Dokumentation betrachtet werden. Stehen Korrekturen, Erweiterungen oder Ergänzungen einer Eigenentwicklung an, helfen eine gute Paketstruktur dem Entwickler sich schneller in der Anwendung zurecht zu finden und Erweiterungen umzusetzen.  
-Durch die Strukturüberlegungen ist die Software besser strukturiert und folgende Arbeiten können zielgerichteter durchgeführt werden. [#TODO]
 
-Wir empfehlen, das Hauptpaket als kleinste zu transportierende Einheit zu verwenden:  
-1 Hauptpaket = 1 Transport.
-
-Soll Software systemübergreifend transportiert werdem, sollte das Erstellen der Transporte auf Hauptpaketebene erfolgen. Ein Hauptpaket sollte eine Funktion bereitstellen, werden alle Objekte die sich innerhalb des Hauptpakets (in Unterpaketen enthalten) befinden in einen Transport aufgenommen und entsprechend deklarierte Voraussetzungen sind im Zielsystem erfüllt, ist der Transport über Systemlinien unproblematisch und ein Try-and-Error Transport packen und importieren bis kein RC8 auftritt wird nicht erforderlich sein. [*Satzbau??*]
+Soll Software systemübergreifend transportiert werdem, sollte das Erstellen der Transporte auf Hauptpaketebene erfolgen. Ein Hauptpaket sollte eine Geschäftsfunktion bereitstellen. Werden alle Objekte eines Hauptpaketes (in Unterpaketen strukturiert) in einen Transport aufgenommen und sind die entsprechenden deklarierte Voraussetzungen im Zielsystem erfüllt, ist der Transport über Systemlinien hinweg transportier- und importierbar. Importfehler (RC8) sollten dann i.d.R. nicht mehr auftreten.
 
 ### Flexibilität
 
@@ -213,7 +208,7 @@ Ist eine Softwarekomponente gut strukturiert, lassen sich Ergänzungen, Änderun
 ### Zukunftsfähigkeit
 
 Die Erstellung von Software in gut strukturierten Paketen beinhaltet neben den offensichtlichen Vorteilen auch weitere Vorteile, die nicht sofort wirksam werden, im Rahmen des Softwarelebenszyklus aber durchaus relevant werden können.  
-Sind die Eigenentwicklungen im System bereits in Paketen geordnet, sind schon wichtige Voraussetzungen erfüllt, um moderne Versionsverwaltungssysteme wie ABAPGIT oder gCTS zu nutzen, die Pakete bedingen. Somit sind dann Transporte mittels git-basierter Methoden in andere System über oder gar in die Cloud möglich [s. Versionsverwaltung](/ABAP-Leitfaden/version-management/#versionsverwaltung).
+Sind die Eigenentwicklungen im System bereits in Paketen geordnet, sind schon wichtige Voraussetzungen erfüllt, um moderne Versionsverwaltungssysteme wie ABAPGIT oder gCTS zu nutzen, die Pakete bedingen. Somit sind dann Transporte mittels git-basierter Methoden in andere System über oder gar in die Cloud möglich [s. Versionsverwaltung](/ABAP-Leitfaden/application-lifecycle-management/version-management/#versionsverwaltung-in-sap).
 
 ## Weitere Aspekte
 

@@ -42,20 +42,24 @@ Alle Regeln von Clean ABAP sind heute und sollten immer begründet und erläuter
 Clean ABAP kann generell auf jede Sprachversion von ABAP angewendet werden von R2 bis hin zu ABAP Cloud. 
 
 ### DSAG Empfehlung
+
 Die Regeln im öffentlichen Repository sind anerkannt unter den meisten ABAP-Experten.
 Die Autoren des DSAG Leitfaden empfehlen Ihnen den Einsatz der Clean ABAP Regeln für Ihr Coding und als Grundlage für Code Reviews.
 Diskussionen über Code unter Entwicklern können nicht selten mit einer Clean ABAP Regel gelöst werden. 
 
 ### Clean ABAP & Entwicklungsrichtlinien
+
 Die auf das Unternehmen angepasste Form von Clean ABAP sollte ein ergänzendes Dokument der gültigen Entwicklungsrichtlinien sein, sodass es überall Anwendung findet. 
 Prüfen Sie die Anwendung der Regeln mit einem automatischen Tool wie Code Pal for ABAP im ABAP Test Cockpit (https://github.com/SAP/code-pal-for-abap). 
 
 ### Clean ABAP owner
+
 In jedem Entwicklungsteam sollte es - gerne auch rollierend - einen Clean ABAP Owner geben, der Ansprechpatner und Verantwortlicher für Änderungen ist. 
 Änderungen und Erweiterungen müssen separat in den Teams kommuniziert und abgestimmt werden. 
 Clean ABAP funktioniert am besten, wenn alle Beteiligten hinter den Regeln stehen, hierfür sind immer wieder Kompromisse und Abstimmungen im Team nötig. 
 
-### Clean ABAP ist ein Prozess  
+### Clean ABAP ist ein Prozess
+
 Die Anwendung bzw. das Erlernen von Clean ABAP ist kein einmaliger Workshop oder eine Managementdirektive. 
 Es braucht Zeit, Übung, Motivation und den konstanten Willen um bessere ABAP Programme zu schreiben. 
 
@@ -80,8 +84,10 @@ kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständli
 
 ## Kommentare
 
-"Drücke dich durch Code aus - nicht durch Kommentare" 
-Dieses sollte einer der Leitsätze beim Scheiben von ABAP sein. Prüfen Sie jeden Kommentar, ob dieser nicht ein Ersatz für eine zu verbessernde Namensgebung bzw. Modularisierung ist. Eine lange Codestrecke, die mit dem Kommentar "Positionen verarbeiten" beginnt, deutet darauf, dass hier eine Methode über einen entsprechenden Namen genau dies aussagen und erledigen könnte. Ein Kommentar soll vielmehr Hinweise geben, warum etwas wie gemacht wird und ggf. den Kontext knapp erläutern anstatt zu beschreiben was gemacht wird.   
+> {: .Zitat }
+>"Drücke dich durch Code aus - nicht durch Kommentare"  
+
+Dieses sollte einer der Leitsätze beim Scheiben von ABAP sein. Prüfen Sie jeden Kommentar, ob dieser nicht ein Ersatz für eine zu verbessernde Namensgebung bzw. Modularisierung ist. Eine lange Codestrecke, die mit dem Kommentar "Positionen verarbeiten" beginnt, deutet darauf, dass hier eine Methode über einen entsprechenden Namen genau dies aussagen und erledigen könnte. Ein Kommentar soll vielmehr Hinweise geben, warum etwas wie gemacht wird und ggf. den Kontext knapp erläutern anstatt zu beschreiben was gemacht wird.  
 Zur Code Dokumentation ist ABAPDoc zu verwenden, somit sind Code Kommentare nur noch für spezifische, zeilenbezogene Erläuterungen zu verwenden. Z.B. wenn Funktionen und Fehlerbehandlungsblöcke nicht ausprogrammiert wurden, noch TODOs oder offene Fragen bestehen, die im Laufe des Lebenszyklus behoben werden müssen. 
 
 Stark veraltete ABAP Richtlinien mit Aussagen wie:
@@ -96,8 +102,6 @@ Diese Probleme in der Lesbarkeit sollten durch konsequente Modularisierung und n
 Clean ABAP rät zur (Erklärung über Code nicht Kommentare)[https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#use-methods-instead-of-comments-to-segment-your-code]
 
 Im Leitfaden von Clean ABAP steht alles was Sie zu Kommentaren beachten sollten, (Siehe)[https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#express-yourself-in-code-not-in-comments].
-
-
 
 ## Moderne Sprachmittel
 
@@ -214,8 +218,8 @@ Die Dokumentation für eine Klasse wird z.B. so angegeben:
 "! Description of what the class does
 CLASS demo DEFINITION.
 ~~~
-
-Weitere Informationen finden sich im [Abschnitt Dokumentation](../../documentation/).
+In den Dokumentationen zu der Klasse können generelle Hinweise und der Zweck der Klasse somit sauber im Code dokumentiert werden, ebenso können Hinweise zu den einzelnen Methoden und den Parametern somit auswertbar und gut lesbar erstellt werden. Als Hauptnutzer der ABAPDoc Dokumentation ist der Verwender/Aufrufer der Klasse. Somit ist diese Funktion besonders hilfreich für Klassen, die Anderen Verwendern zur Verfügung gestellt werden.  
+Weitere Informationen zu ABAPDoc finden Sie im Abschnitt [Dokumentation/ABAP Doc](/ABAP-Leitfaden/documentation/dev_object_related_doc/#abap-doc).
 
 ### Konstruktoroperatoren
 
