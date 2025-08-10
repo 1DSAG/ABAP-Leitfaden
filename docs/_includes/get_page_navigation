@@ -1,0 +1,157 @@
+{%- comment -%}
+This include creates the following variables:
+
+is_top_page:        true if current page is top page
+
+has_children:       true if current page is a top page that has children
+
+top_pages:          array with all top-level page objects, ordered by nav_order
+                    e.g. [Introduction, Development, ...]
+
+top_child_pages:    array of array of pages, first array has same index as top pages,
+                    inner array contains direct children sorted by nav_order
+                    e.g. [[], [Dev1, Dev2], ...]
+
+next_page:          next page in nav order
+
+previous_page:      previous page in nav order (or parent, if it is the first page)
+
+{%- endcomment -%}
+
+{%- comment -%}
+=== top_pages ===
+{%- endcomment -%}
+
+{% assign top_pages = site.pages
+| where_exp: "item", "item.title != nil"
+| where_exp: "item", "item.parent == nil"
+| sort: "nav_order"
+%}
+
+
+{%- comment -%}
+=== is_top_page ===
+{%- endcomment -%}
+
+{% assign _first_filtered = top_pages | where_exp: "item", "item.title == page.title" | first %}
+{% if _first_filtered %}
+{% assign is_top_page = 1 %}
+{% else %}
+{% assign is_top_page = 0 %}
+{% endif %}
+
+{%- comment -%}
+=== top_child_pages ===
+{%- endcomment -%}
+
+{% assign top_child_pages = "" | split: "," %}
+
+{% for top_page in top_pages %}
+    {% assign _curr_children = site.pages
+    | where_exp: "item", "item.title != nil"
+    | where_exp: "item", "item.parent == top_page.title"
+    | sort: "nav_order" %}
+
+    {% assign top_child_pages = top_child_pages | push: _curr_children %}
+{% endfor %}
+
+
+{%- comment -%}
+=== has children ===
+{%- endcomment -%}
+
+{% if is_top_page == 1 %}
+    {% assign _children_of_this_page = site.pages
+        | where_exp: "item", "item.title != nil"
+        | where_exp: "item", "item.parent == page.title"
+        | sort: "nav_order" %}
+    {% assign first_child = _children_of_this_page | first %}
+{% endif %}
+
+
+{%- comment -%}
+=== next_page / last_page ===
+{%- endcomment -%}
+
+{% if is_top_page == 1%}
+
+
+    {%comment%} +++ read index of current page from top_pages array +++ {%endcomment%}
+
+    {% capture _my_idx_str -%}
+    {% include find_idx_by_title pages=top_pages title=page.title %}
+    {%- endcapture %}
+
+    {% if _my_idx_str != "" # only convert if not empty string %}
+    {% assign _my_idx = _my_idx_str | plus: 0%}
+    {% endif %}
+
+
+    {%comment%} +++ determine next page in navigation +++ {%endcomment%}
+    
+    {% assign _next_top_page = top_pages | where_exp: "item", "item.nav_order > page.nav_order" | first %}
+
+    {% assign _my_children = top_child_pages[_my_idx] %}
+    {% assign _my_first_child = _my_children | first %}
+
+    {% if _my_first_child != nil %}
+        {% assign _next_child_or_top_page = _my_first_child %}
+    {% else %}
+        {% assign _next_child_or_top_page = _next_top_page %}
+    {% endif %}
+
+    {%comment%}
+        set to _next_top_page so top pages always link to next top page, 
+        or _next_child_or_top_page to link to the next child of the this
+        top page, if possible
+    {%endcomment%}
+    {% assign next_page = _next_child_or_top_page %}
+    
+
+    {%comment%} +++ determine previous page in navigation +++{%endcomment%}
+    {% assign _previous_top_page = top_pages | where_exp: "item", "page.nav_order > item.nav_order" | last %}
+    {% assign _parent_predecessor = _my_idx|minus:1 %}
+
+    {% if _parent_predecessor >= 0 %}
+        {% assign _parent_predecessor_children = top_child_pages[_parent_predecessor] %}
+        {% assign _num_parent_predecessor_children = _parent_predecessor_children | size %}
+
+        {% if _num_parent_predecessor_children == 0 %}
+            {% assign _previous_child_or_top_page = top_pages[_parent_predecessor] %}
+        {% else %}
+            {% assign _previous_child_or_top_page = _parent_predecessor_children[-1] %}
+        {% endif %}
+    {% endif %}
+
+    {%comment%}
+        set to _pervious_top_page so top pages always link to previous top page, 
+        or _previous_child_or_top_page to link to the last child of the previous
+        top page, if possible
+    {%endcomment%}
+    {% assign previous_page = _previous_child_or_top_page %}
+{% else %}
+
+    {% capture _parent_idx_str -%}
+    {% include find_idx_by_title pages=top_pages title=page.parent %}
+    {%- endcapture %}
+    
+    {% if _parent_idx_str != "" # only convert if not empty string %}
+    {% assign _parent_idx = _parent_idx_str | plus: 0%}
+    {% endif %}
+
+    {% if _parent_idx %}
+        {% assign _siblings = top_child_pages[_parent_idx] %}
+
+        {% assign next_page     = _siblings | where_exp: "item", "item.nav_order > page.nav_order" | first %}
+        {% assign previous_page = _siblings | where_exp: "item", "page.nav_order > item.nav_order" | last %}
+    {% endif %}
+
+    {% if previous_page == Nil && _parent_idx %}
+        {% assign previous_page = top_pages[_parent_idx] %}
+    {% endif %}
+    
+    {% if next_page == nil && _parent_idx %}
+        {% assign _parent_successor = _parent_idx|plus:1  %}
+        {% assign next_page = top_pages[_parent_successor] %}
+    {% endif %}
+{% endif %}

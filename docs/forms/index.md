@@ -2,16 +2,10 @@
 layout: page
 title: Formulare
 permalink: /forms/
-next_page_title: Formulare
-nav_order: 11
+has_children: true
+nav_order: 8
 ---
 
-{: .no_toc}
 # Formulare
 
-1. TOC
-{:toc}
-
-## Erster Punkt 
-
-Hier beginnt das Kapitel
+In diesem Kapitel erfahren Sie mehr über die Formulartechnologien, welche noch relevant sind und wo die Zukunft der Formulare liegt.

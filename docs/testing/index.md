@@ -1,215 +1,104 @@
 ---
 layout: page
-title: Testen
+title: Softwaretest mit ABAP Unit 
 permalink: /testing/
-next_page_title: ABAP Unit Framework
-next_page_link: /testing/abap_unit/
 has_children: true
-nav_order: 8
+nav_order: 5
 ---
 
 {: .no_toc}
-# Testen
+# Softwaretest mit ABAP Unit
 
 1. TOC
 {:toc}
 
+## Inhalt des Kapitels
+
+Wenn Software entwickelt wird, muss diese während der Entwicklung und vor der Inbetriebnahme ausgiebig getestet werden. Zum Testen von Software gibt es zahlreiche und vielfältige Methoden und Techniken. Testen ist aufwändig und wenn Software nicht sorgfältig und umfassend getestet wird, kann dies im besten Fall zu kleinen Störungen bis hin zu massiven Auswirkungen auf das Produktivsystem eines Systems führen. Dies führt mitunter zu hohen Kosten im Betrieb und der Weiterentwicklung von SAP-Systemen.  
+
+Effizientes und effektives Testen muss im Softwareentwicklungsprozess so früh wie möglich erfolgen um Fehler und Probleme so früh wie möglich erkennen zu können. Mit ABAP Unit werden Tests in die frühe Phase der Softwareentwicklung integriert.
+In diesem Kapitel gehen wir darauf ein warum der Einsatz von ABAP Unit erforderlich und gewinnbringend ist, welche Herausforderungen sich ergeben und welche Rahmenbedingungen gegeben sein müssen um ABAP Unit Tests effektiv einzusetzen.
+
+Ergänzend finden Sie noch ein paar Hinweise zu weiteren Testtools und Methoden, diese werden aber nur kurz angesprochen.  
+Wenn im Folgenden von _Unit Tests_ die Rede ist, dann sind ABAP Unit Tests mit Hilfe des ABAP Unit Frameworks gemeint. Das ABAP bezieht sich lediglich auf die Besonderheiten von Unit Tests im ABAP Unit Framework. 
+
+{: .important}
+> **Begriffsabgrenzung Unit Test**  
+> Unter Unit Tests werden oft verschiedene Definitionen von Tests verstanden.  
+> Wenn wir hier von Unit Tests schreiben, handelt es sich um programmierte Tests mit dem ABAP Unit Framework, die automatisiert ausgeführt werden können.  
+> Die manuelle Ausführen einzelner Code Einheiten z.B. mittels SE37 / SE24 / Reports ist kein Testen, sondern das Ausprobieren von Funktionalitäten.
 
 ## Zielgruppe
-- Management auch relevant
-    - return on Invest 
-- Hauptzielgruppe Lead / Senior-Entwickler, die motiviert sind 
-    - Hilfe zur Selbsthilfe / Lernen
-- Rechtfertigen als Quelle nutzen 
-- Teständerung
 
+In diesem Kapitel möchten wir einerseits den Entscheidern und Verantwortlichen Empfehlungen und Hinweise geben, warum ABAP Unit Tests für die heutige Form der modernen ABAP Programmierung sehr wichtig ist und welchen Nutzen Sie für dieses Investment erhalten können.  
+Dieser Leitfaden dient aber auch Entwicklern und Entwicklungsverantwortlichen oder vgl. Rollen dazu, ABAP Unit Testing sinnvoll einzusetzen, oder falls es noch nicht umfangreich im Einsatz ist, den Einstieg zu erleichtern.  
+Vielleicht hilft dieser Leitfaden auch dabei sowohl Entwickler als auch Entscheider zu motivieren, ABAP Unit Tests umfangreich im Entwicklungsprozess einzusetzen und die Rahmenbedingungen dafür zu schaffen.
 
+## Motivation
 
-# Abschnittstruktur: 
-## Abgrenzungen 
-* Was betrachten wir nicht. 
-*  Am Ende schreiben 
+Ein wichtiger Faktor in SAP-Projekten ist die zur Verfügung stehende Zeit. Und meistens herrscht hoher Zeitdruck wenn um die Erstellung von SAP-Anwendungen und Anpassungen geht. Die Erstellung von ABAP Unit Tests und die dazu erforderlichen softwaretechnischen Maßnahmen benötigen Zeit und Wissen. Hier entsteht ein Spannungsfeld da dies auf den ersten Blick Zielkonflikte aufwirft. Die Software soll schnell und im Projektzeitplan erstellt werden. Die Software soll aber auch allen Anforderungen entsprechen, robust und fehlertolerant, also von hoher Qualität sein.  
 
-## ABAP Unit Tests
-Dieses Kapitel handelt von automatisierten Entwicklertests (Unit Tests) und richtet sich an Programmierende jeglichen Niveaus als auch an managende und organisierende Personen. Jede Person, die in irgendeiner Form mit ABAP-Programmierungen in Berührung kommt, sollte wissen, was Unit Tests sind, wie sie eingesetzt werden und welche Grenzen sie haben.
+> {: .Zitat }
+> Der Mitbegründer des agilen Manifests und Buchautor mehrerer Bücher zur Softwareentwicklung, Robert C. Martin sagte:  
+> **"The only way to go fast is, to go well."**
 
-Wenn im Folgenden von _Unit Tests_ die Rede ist, dann sind ABAP Unit Tests gemeint. Das ABAP bezieht sich lediglich auf die Besonderheiten von Unit Tests im SAP-Kontext.
+Warum soll man Aufwand und Zeit in die Erstellung von Unit Tests investieren? Übersetzt in den ABAP-Kontext bedeutet diese Aussage, dass wer schnell sein will, gut vorgehen muss.  
+In ABAP Unit erfahrene Entwickler wissen, dass die Erstellung von Software, die mit ABAP Unit Tests abgedeckt ist, neben der höheren Qualität auch Effizienz- und Geschwindigkeitsvorteile mit sich bringt.  
+Wir möchten zu Beginn des Kapitels Ihnen die Vorteile aufzeigen und gehen im Weiteren auf die ABAP Unit Test Technik und die erforderlichen Maßnahmen und Vorgehensweisen ein.
 
-### Einstieg
+**Vorteile die sich durch den Einsatz von Unit Tests ergeben:**
 
-Unit Tests sind wichtig. Das Erstellen, verwalten und entwickeln von Unit Tests erfordert umfangreiche Kenntnisse. Das widerspricht der Aussage, dass sich dieses Kapitel an alle Programmierende richtet, unabhängig vom Wissensstand. Das ist jedoch nur auf den ersten Blick widersprüchlich, denn wir wollen mit diesem Kapitel alle erreichen. Wenn jemand noch nicht gut oder gar nicht objektorientiert programmieren kann, sich nicht mit Entwurfsmustern und anderen Programmierparadigmen auskennt, dann sollte das gelernt werden. Wir wollen Anregungen und Hilfestellungen dazu geben. Gleichwohl können wir an dieser Stelle nur begrenzt Informationen zu diesem Thema bereitstellen.
+- Die Erstellung von Software, die mit Unit Tests unterlegt ist, beinhaltet, bedingt durch die erforderliche Massnahmen zur Testbarkeit, eine klare Struktur, die objektorientierten Designprinzipien folgt.
+- Software, die ABAP Unit Tests enthält hat aufgrund der architektonischen Erfordernisse wie Separation of Concerns eine bessere Struktur und Trennung der Belange (Fachliche Logik und technisches Coding). Damit ist die Software flexibler und besser anpassbar.
+- Die Entwicklung enthält ein Sicherheitsnetz, dass von Entwicklern genutzt werden kann wenn Software weiterentwickelt wird.
+- Fehler werden bereits während der Entwicklung auf dem Entwicklungssystem erkannt, dies spart Aufand in Integrations- und Anwendertest.
+- Durch die erforderliche Erstellung der Testfälle und programmatische Testdatenerstellung, werden Unklarheiten in der Anforderungsspezifikation in einer frühen Phase der Entwicklung festgestellt.
+- eine Testabdeckung durch Unit Test ermöglicht die ständige Verbesserung und das Refaktoring der Software, was den Aufbau von technischen Schulden vermeidet.
+- Wissensverteilung in Team. Durch Unit Tests werden Funktionalitäten dokumentiert, was es anderen Teammitgliedern einfacher macht, sich mit dem Coding vertraut zu machen und es anzupassen, da Unit Tests programmierte Spezifikation des Verhaltens darstellen und dazu auch ausführbar sind.
+- Sobald eine in der Produktion befindliche Anwendung erweitert oder angepasst werden muss, sind die Vorteile von ABAP Unit Tests feststellbar, da bereits während der Entwicklung über die Tests getestet werden kann. Fehler können zum frühesten Zeitpunkt erkannt werden. Durch die Tests liegen bereits Testdaten und technische Spezifikationen vor, welche die Änderung oder Erweiterung des Codes vereinfacht.
 
-Wenn das Stichwort "Unit Tests" fällt, kommt es fast unweigerlich auch zu dem Thema _Test Driven Development_, kurz _TDD_. TDD ist ein Programmiervorgehen, bei dem zuerst definiert wird, welche Eingaben einer Funktion zu welchen Ergebnissen führen soll. Erst danach wird die Implementierung der Funktion realisiert. Durch das zuvor defnierte Verhalten kann überpfüt werden, ob die gewünschte Funktionalität gegeben ist.
+Die oben genannten Punkte führen im Ergebnis dazu, dass der Testaufwand der Anwendung durch die Fachabteilung deutlich reduziert wird. Anpassungen und Erweiterungen der Anwendungen werden durch die Implementierung von Unit Tests deutlich vereinfacht und vor allem sicherer, da neue Fehler bereits durch die bestehenden Unit Tests während der Entwicklung entdeckt werden und somit in den Anwendertests auf dem Testsystem auftreten. Dies sind vor allem Fehler in der Struktur oder Flüchtigkeitsfehler, die unvermeidlich sind.  
 
-Es geht an dieser Stelle explizit nicht um die Methode Test Driven Development. Unit Tests können auch dann sinnvoll eingesetzt werden, wenn nicht nach dieser Methode vorgegangen wurde. Das wichtigste ist aus unserer Sicht das Verständnis, wie Unit Tests funktionieren.
+Neben den generellen Vorteilen die sich positiv auf den Aufwand und die Organisation auswirken, bringt der Einsatz von Unit Tests aber auch Vorteile für den Entwickler, der zuerst Aufwand und Energie in die Erstellung von Unit Tests stecken muss und ggf. auch deswegen gegen Widerstände ankämpfen muss.
 
-### Motivation
-Unit Tests helfen dabei, Entwicklungen robuster zu machen. Programmierungen werden dabei automatisiert mit verschiedenen Parametern ausgeführt und auf Korrektheit überprüft. Robustheit und Korrektheit sind zwei Anforderungen, die in der modernen Softwareprogrammierung sehr hoch priorisiert werden sollten. Durch Unit Tests kann sichergestellt werden, dass geschäftsrelevante Prozesse sicher und wie erwartet ausgeführt werden. 
+**Vorteile für den Entwickler:**
 
-### Was sind Unit Test nun genau?
-Unit Tests sind Funktionen, die modularisierte Einheiten (Methoden, Funktionsbausteine) mit vorgegebenen Funktionen aufrufen und das Ergebnis mit den erwarteten Vorgaben abgleichen. 
+- Durch die Notwendigkeit Testdaten zu programmieren, erhält der Entwickler gute Einblicke in die zu verarbeitenden Daten und bekommt damit auch verwertbare Informationen über die zu erstellende Anwendung die helfen, die Anforderungen besser zu verstehen und damit besser umzusetzen.
+- Um Tests zu implementieren muss von Grund auf eine gute Struktur erstellt werden. Dies verhindert die Erstellung von Code der verschiedene Belange vermischt und spätere Anpassungen erschwert.
+- Sobald die ersten Tests geschrieben sind, können auf dem Entwicklungssystem die Komponenten der Anwendung ausgeführt und debugged werden und damit auch wertvolle Hinweise über das Laufzeitverhalten frühzeitig ermittelt werden und Fehlannahmen vermieden werden, die sonst aufwändig behoben werden müssten.
+- Der initiale Mehraufwand wird durch spätere Effizienzgewinne ausgeglichen. Verbunden damit, dass der Entwickler über UNIT TEST abgesicherte Software bessere Qualität liefert, schneller funktionierende Software auf den Testsystemen zur Verfügung gestellt werden kann und weniger Fehler in späteren Testphasen auftreten, verringert sich der Gesamtaufwand, es gibt weniger Testzyklen und dies steigert letztlich die Zufriedenheit sowohl auf Entwicklungs- als auch auf Anwenderseite.
 
-Folgendes Beispiel demonstriert die Vorgehensweise: Es gibt eine Klasse mit einer Methode, die aus einem Text die Straße und die Hausnummer ermitteln soll. Es werden nun Unit Tests erstellt, die aus bereits bekannten Problemen testen, ob das erwartete Ergebnis ermittelt wird.
+## Herausforderungen die den Einsatz von ABAP Unit beeinflussen
 
-Rufe die Methode ```ZCL_ADDRESS->SEPARATE_HOUSENO_FROM_STREET``` mit der Eingabe ```ABC-Straße 13``` auf und prüfe, ob das Ergebnis ```13``` ist. Sollte das Ergebnis vom erwarteten Wert abweichen, dann schlägt der Unit Test fehlt und erzeugt eine Fehlermeldung in der Testumgebung.
+### Mangelndes Wissen und Qualifikation
 
-Für die Prüfung des Ergebnisses gibt es eine Reihe von Methoden der Klasse ```CL_ABAP_UNIT_ASSERT```. Die bekannteste Methode ist ```EQUALS```. Sie prüft, ob der vorgegebene Wert gleich dem erwareteten Wert ist. Es gibt noch andere Methoden, auf die wir im weiteren Kapitel eingehen.
+Auch im Jahr 2025 bleibt die Herausforderung für Unternehmen bestehen, dass ein signifikanter Anteil der ABAP-Entwickler nicht über das Wissen und Erfahrung verfügt, um effizient automatisierte Tests mit ABAP Unit zu erstellen. Denn dies erfordert einerseits hinreichende Kenntnisse in moderner objektorientierter Programmierung, Trennung der Belange, guter Strukturierung der Software in testbare Einheiten und letztlich Kenntnisse der Unit-Test Methodiken. Dies kann u.a. in der Ausbildung begründet sein und ergibt sich auch daraus, dass Anwendungsentwicklung gute Geschäftsprozesskenntnisse erfordert. Daher ist bei vielen ABAP-Entwicklern die Kenntnistiefe im Bereich der Programmierung sehr gut in Bezug auf prozedurale Techniken und Umsetzungen von Reports und klassischen Anwendungen. Im Bereich des modernen ABAP mit Techniken und Methoden, die in anderen Programmiersprachen lange Standard sind, aber durchaus noch ausbaubar.  
 
-Unit Tests werden in der Regel als lokale Testklassen zu einer globalen Klasse definiert. Die Unit Tests werden nur im Entwicklungssystem durchgeführt. 
+### Erfahrungsdefizit als Umsetzungshürde
 
-### Wann sind Unit Tests sinnvoll?
-Beim Thema Unit Tests gibt es in der Regel zwei Lager: Die einen sagen, dass jegliches Coding mit Unit Tests geprüft werden muss (100% Code-Abdeckung). Die anderen sind der Meinung, dass Unit Tests überbewertet werden.
-Wir sind der Meinung, dass Unit Tests zum Programmieralltag dazugehören und dort eingesetzt werden sollten, wo sie sinnvoll sind. 
+> {: .Zitat }
+> "Ohne Tests keine Tests"
 
-Was unter "sinnvoll" zu verstehen ist, sollte jedes Team für sich selbst herausfinden. Ebenso sollte bewertet werden, ob eine Funktionalität als "kritisch" eingestuft werden kann. Wenn es eine kritisch Geschäftsfunktion gibt, dann sollte die Funktionalität auf jeden Fall über Unit Tests abgedeckt werden.
+Techniken und Methoden, die ein Entwickler nicht beherrscht, nicht regelmässig anwendet und auch nicht zwingend anwenden muss, werden unter Zeitdruck nicht zum Einsatz kommen. Unter derartigen Rahmenbedingungen wird sich der flächendeckende Einsatz von Unit Tests schwierig umsetzen lassen. Die oben genannten Vorteile werden nicht genutzt und die sich daraus ergebenden Nachteile. Dies führt zu hohen Testaufwänden, Fehlern im Produktivsystem, schwierigen und aufwändigen Anpassungen der Software.
 
-Besonders Prädestiniert für Unit Tests sind Methoden, die eine komplexe Logik haben und/ oder geschäftskritisch sind. 
+### Zeitdruck und die "Definition of Done"
 
+In SAP-Projekten besteht oftmals hoher Zeit- und Erfolgsdruck. Die Zeit für die Umsetzung der Anforderungen ist für Entwickler knapp bemessen und es wird erwartet dass frühzeitig testbare Versionen der Anwendung bereitgestellt werden.
+Die Definition wann ein Artefakt geliefert wurde, besteht meistens daraus, dass die geforderte Funktionalität erfolgreich im Anwendertest abgenommen werden kann. Die Erstellung von Unit-Tests findet sich idealerweise in Handbüchern und Entwicklungsrichtlinien, ist aber nicht Teil der Abnahme. Eventuell wird das Fehlen von Unit-Tests akzeptiert, da die Funktionalität auch ohne Unit Tests produktiv gesetzt werden kann. Die dadurch entstehenden technischen Schulden sind nicht offensichtlich und werden bewusst oder unbewusst in Kauf genommen.
 
+## Rahmenbedingungen für den Einsatz von ABAP Unit
 
+Damit sich ABAP Unit Tests in der Anwendungsentwicklung durchsetzen und effektiv eingesetzt werden kann, ist ein Umdenken bei Entscheidern und Verantwortlichen für den Betrieb von SAP-Software nötig.  
+Kenntnisse und Wissen zu ABAP Unit muss sich zu einem geforderten und geprüften Skill von ABAP-Entwicklern etablieren. Die Erstellung von ABAP Unit Tests muss in die Definition of Done und den Lieferumfang von Software aufgenommen werden und nicht als optionales To-Do betrachtet werden.
 
-### Trennung von Datenmodell, Geschäftslogik und Präsentationsschicht
+Der Einsatz von ABAP Unit muss einerseits in den Entwicklungsrichtlinien und Handbüchern definiert und vorgeschrieben werden, um eine Verbindlichkeit zu erzeugen. Wie oben beschrieben, wird die formale Definition allein den flächendeckenden Einsatz von Unit Tests nicht hervorbringen.  
+Um dies zu erreichen müssen neben formalen Voraussetzungen auch Rahmenbedingungen geschaffen werden, die sowohl die oben beschriebenen Herausforderungen als auch die Herausforderungen im moderen ABAP-Entwicklungsumfeld aufgreifen und die Entwicklungsteams befähigen, ABAP Unit Tests in den Entwickleralltag zu integrieren.  
+Eine ausführliche Beschreibung der nötigen Rahmenbedingungen und in der Praxis bewährte Vorgehensweisen finden Sie im Kapitel  
+**[Organisation: Teamorganisation](https://1dsag.github.io/ABAP-Leitfaden/organization/#teamorganisation-und-teamzusammensetzung)**
 
-Im SAP-Umfeld hat es sich leider "etabliert", dass alles, was für den Programmablauf benötigt wird, dort passiert, wo es gerade passt. Die Daten werden Selektiert, mit zusätzlichen SELECTS angereichert, aufbereitet und ausgegeben. Bei einem Doppelklick werden weitere Daten gelesen und es wird ein Popup ausgegeben, das den Anwender über irgendetwas informiert. 
+## Die Rolle des DSAG ABAP-Leitfadens für die Umsetzung Ihrer Test Strategie
 
-Eine grundlegende Voraussetzung von Unit Tests ist, dass die Geschäftslogik nicht mit der Datenausgabe (Präsentationsschicht) gemischt ist. In einem Unit Test gibt es keinen Anwender, der eine Info-Meldung wegklicken kann!
+ABAP Unit erfordert die Berücksichtigung zahlreicher Aspekte von Seiten der Entwicklungsorganisation, der verantwortlichen Personen und der Entwickler. Um ABAP Unit sinnvoll und effektiv anwenden und einsetzen zu können, erfordert es auf Seiten der Entwickler ein gutes Wissen über Softwareentwicklung und moderne Programmierung in ABAP und das Beherrschen von Objektorientierung.  
+Auf Seiten der Organisation müssen sowohl im Entwicklungsprozess als auch in den Rahmenbedingungen Voraussetzungen geschaffen werden, die die Erstellung von Unit-Tests unterstützen und fördern. Dieser Leitfaden behandelt alle diese Aspekte und vermittelt auf technischer Seite Wissen. Das kann Ihnen helfen, die Maßnahmen in Ihrem Unternehmen abzuleiten und den Entwicklern eine Motivation und Einstiegshilfe sein, in die Welt der ABAP Unit Tests einzutauchen.
 
-Ein weiterer Aspekt, der von der Geschäftslogik abgekoppelt sein sollte, ist die Datenbeschaffung (Datenmodell). 
-
-Es gibt Programmbereiche, die nicht mittels Unit Tests überprüft werden können. Dazu gehören alle Programmteile, die auf einen Dialog angewiesen sind oder Daten Darstellen (ALV-Grid). Wenn Unit Tests sinnvoll eingesetzt werden sollen, dann muss möglichst von Anfang an darauf geachtet werden, dass die Geschäftslogik von allem anderen getrennt ist. Wenn Unit Tests in vorhandenen Programmen eingesetzt werden sollen, muss eventuell das bestehende Coding refakturiert werden. 
-
-### Code-Abdeckung
-In den Entwicklungstools kann nachvollzogen werden, welche Code-Strecken beim Ausführen der Unit Tests durchlaufen wurden. Eine 100%-ige Codeabdeckung sollte dabei das Ziel sein.
-
-Bei vorhanden Klassen, bei denen nicht auf die Trennung geachtet wurde, ist eine 100%-ige Testabdeckung kaum zu erreichen. Man muss den Aufwand einer Refakturing dem Nutzen entgegenstellen. Wenn eine Klasse keine 100%-ige Testabdeckung hat, ist es sicherlich nicht schlimm, aber es erleichetet die Bewertung, wie vertrauenswürdig Unit Tests zu einem Modul einzustufen sind. Wenn es eine Klasse gibt, die zu 100% Geschäftslogik enthält, dann kann man mit einer Testabdeckung von 100% relativ sicher sein, dass diese Klasse so funktioniert, wie sie funktionieren soll. Wenn eine Klasse jedoch ein Mix aus Geschäftslogik und Datenpräsentation besteht, dann ist es schwer festzustellen, ob Code-Teile nicht gut per Unit Test getestet werden konnten oder ob sie einfach vergessen wurden.
-
-Bei anfälligen, kritischen oder komplexen Methoden kann es sinnvoll sein, nur für diese Unit Tests zu erstellen und die restlichen Methoden der Klasse ausser Acht zu lassen.
-
-
-### Testen von privaten, geschützten und öffentlichen Methoden
-Es gibt die Meinung, dass nur öffentliche Methoden getestet werden sollten. Über die Codeabdeckung kann analysiert werden, ob alle Codestrecken durchlaufen wurden.
-
-Allerdings kann das Bereitstellen der notwendigen Daten sehr aufwändig sein, so dass es sinnvoll sein kann, die kleineren Einheiten (private und geschützte Methoden) zu testen. Zudem "verwässern" umfangreiche Datenkonstellationen den Zweck eines Unit Tests.
-
-Beispiel Adressaufbereitung: Nehmen wir an, wir haben eine Klasse, die Adressen entgegen nimmt und analysiert. Die eine Methode ```SEPARATE_HOUSENO_FROM_STREET``` haben wir bereits kennengelernt. Zusätzlich gibt es eine Methode ```CHECK_POST_CODE```, die sicherstellen soll, dass die Postleitzahl 5-stellig ist und nur aus Zahlen besteht. Wenn beide privaten Methoden von der öffentlichen Methode ```CHECK_ADDRESS``` aufgerufen werden, müssen wir zum Testen immer eine komplette Adresse übergeben. Einfacher und auch deutlicher ist es, wenn wir die privaten Methoden separat testen.
-
-### Unit Tests erweitern
-Wenn wir uns das Beispiel mit dem Ermitteln der Hausnummer ansehen, dann gibt es viele Fallstricke, die ein unerwartetes Ergebnis hervorrufen können. Die Eingaben, die zu einem fehlerhafte Ergebnis führen, kennen wir im Vorfeld jedoch nicht. Wir lernen sie erst kennen, wenn sich Anwender beschweren, die ein falsches Ergebnis erhalten. In diesem Fall können die Eingaben, die zu fehlerhaften Ausgaben geführt haben, in einen Unit Test aufgenommen werden. Nach der Änderung des Codings werden alle bereits definierten Unit Tests durchgeführt und der Entwickelnde kann sicher sein, dass alles wie zuvor funktioniert.
-
-### GIVEN - WHEN - THEN
-GIVEN-WHEN-THEN ist ein Stil, um Unit Test zu formulieren. Mit GIVEN wird eine Bedingung angegeben, unter denen der Test stattfinden soll. WHEN beschreibt die Aktion, die durchgeführt wird und THEN beschreibt das erwartete Ergebnis.
-
-Bezogen auf unser Beispiel mit der Hausnummer könnte die Formulierung heißen:
-GIVEN: ABC-Straße 13
-WHEN: die Hausnummer aus diesem String ermittelt wird
-THEN: Sollte die Hausnummer 13 sein
-
-Link: CACAMBER
-
-### Unit Tests modularisieren
-
-### Unit Test Klasse
-* Beschreibung, wie eine Klasse aufgebaut ist
-* Risklevel
-* Duration
-* erstellen in
-  * Eclipse
-  * SE80
-* SETUP 
-* TEARDOWN
-* FOR TESTING
-* genereller Ablauf
-
-### ASSERT
-* Vorstellung CL_ABAP_UNIT_ASSERT
-
-### Beispiel Testklasse
-
-### Testumgebung
-* Ausführen Unit Tests
-* Anzeige Ergebnis
-* Codeabdeckung
-* 
-
-#### Eclipse
-
-#### SAPGUI/ SE80
-
-### Weiterführende Links
-* Leseprobe "ABAP ToThe Future" (Paul Hardy): ABAP Unit and Test Driven Development: <https://tinyurl.com/tddph2>
-* SAP Help "ABAP Unit in Test-Driven Development": <https://help.sap.com/doc/saphelp_nw75/7.5.5/en-US/4e/c2efe26e391014adc9fffe4e204223/content.htm?no_cache=true>
-* SAP-Community Blogs: <https://community.sap.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=false&filter=location&location=blog-board:application-developmentblog-board&q=abap%20unit%20tests>
-* GIVEN - THEN - WHEN (Martin Fowler): https://martinfowler.com/bliki/GivenWhenThen.html
-* CACAMBER (Dominik Panzer): https://github.com/dominikpanzer/cacamber-BDD-for-ABAP
-
-### Stichpunkte
-    
-* Motivation, Benefits aufzeigen
-* Nötige Skills
-  * Gutes ABAP OO design ist Grundlage 
-* ABAP OO 
-  * Unit test erfordern einen höheren Level an OO-Skills 
-    * Beispiel RFC Funktionsbaustein, mit OO versorgen.
-* ABAP Unit Tests sind nicht optional.
-  * Definition of Done erweitern und unit tests mit aufnehmen
-  * Kultur einhalten
-* sinnvolle Beispiele
-  * Test leiden immer unter (Projekt-)Zeitdruck 
-  * Grundsätzlich ist fast alles mit ABAP Unit testbar! 
-* NO excuses. 
-  * Experten Themen 
-  * Unittest / Infrastruktur ausbauen um Aufwand für neue Tests zu verringern. 
-* Technik
-  * ABAP Unit Tests SAPGUI/ Eclipse
-  * Test-Seams
-  * Test-Doubles
-    * SQL
-    * Funktionsbausteine
-
-## Testunterstützung:
-* Ecatt? 
-  * Wohl nicht mehr relevant
-* TestdatenContainer Ecatt für Testdaten 
-  * Nutzen für CDS /DB Mocks
-* Andere TestFriends:
-  * Dynamische Logpoints => ABAP Kaptiel, ADT Leitfaden,  Link 
-  * End2End Trace Cross Trace  …
-  * https://github.com/dominikpanzer/cacamber-BDD-for-ABAP
-  * ATC &  Transportintegration
- 
-## Empfehlungen für Test-Tools
-* Marco Krapf 
-* Cloud ALM
-  * Marco Krapf 
-  * ?Automatische Prozesstests mit CloudALM? 
-  * Geht das ? 
-  * Stand Sept 2024 laut Marco noch nicht gut nutzbar. ( freundlich formulieren ) 
-* Tricentris: https://www.tricentis.com/de/sap
-  * Hat erst mal mit ABAP-Entwicklung wenig zu tun, also da wäre nix zu beaachten, aber als allgemeines Tool, um Software zu testen
-
-## Mermaid Demo
-
-```mermaid
-classDiagram
-    direction RL
-    class ZIF_AUTH_PROVIDER {
-        <<interface>>
-        is_authorized() abap_bool
-    }
-    class ZCL_AUTH_PROVIDER
-    ZCL_AUTH_PROVIDER ..|> ZIF_AUTH_PROVIDER : implements
-    class LTD_AUTH_PROVIDER {
-        +abap_bool fail_on_next_check
-    }
-    LTD_AUTH_PROVIDER ..|> ZIF_AUTH_PROVIDER : implements
-    class ZCL_AUTH_PROV_FACTORY {
-        +get_instance() ZIF_AUTH_PROVIDER
-    }
-    ZCL_AUTH_PROV_FACTORY ..> ZIF_AUTH_PROVIDER
-    ZCL_AUTH_PROV_FACTORY ..> ZCL_AUTH_PROVIDER : instantiates
-    class ZCL_PROCESSOR {
-        
-    }
-    ZCL_PROCESSOR ..> ZIF_AUTH_PROVIDER : uses
-    ZCL_PROCESSOR ..> ZCL_AUTH_PROV_FACTORY : uses
-```
+Im Folgenden Abschnitt werden die technischen Grundlagen zu ABAP Unit Tests erläutert, Test- und Entwicklungstechniken vorgestellt und auch auf fortgeschrittene Techniken eingegangen, so dass mit den Ausführungen ein gutes Verständnis geschaffen und so die Grundlage gelegt werden kann, dass Unit Tests Teil des Softwareentwicklungsprozess werden.
