@@ -216,7 +216,7 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/krapf/">Marco Krapf</a></td>
 <td>ALM, Testing / weitere Testwerkzeuge</td>
-<td>Als SAP Solution Manager Libero seit zehn Jahren auf dem Spielfeld. Anfangs in einem Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozessmanagement, Testmanagement, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
+<td>Steht seit zehn Jahren als SAP Solution Manager Libero auf dem Spielfeld. Anfangs in einem super Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozess-Management, Test-Management, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Aufgaben und Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
 </tr>
 </tbody>
 </table>
@@ -224,4 +224,5 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 # Danksagungen
 
 Hier weitere Danksagungen ...
+
 
