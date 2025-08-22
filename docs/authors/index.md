@@ -15,7 +15,7 @@ nav_order: 15
 <th style="text-align: left">Unternehmen</th>
 <th style="text-align: left">Tätigkeit beim Leitfaden</th>
 </tr>
-</thead>
+</thead>.
 <tbody>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/alexander-lukas/">Alexander Lukas</a></td>
@@ -255,6 +255,13 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 <td>Testing</td>
 <td>ABAP-Dino (seit 1994). Seit 2003 teile ich meine Programmiererfahrungen im Tricktresor. Seit 2008 bei Inwerken als Entwickler, Programmierbegleiter, Initiator vom Code-Dojo, Produktentwicklung AppKnight, Ausrichter von SAP Inside Tracks und ABAP Code Retreats in Hannover. Durch die Mitarbeit beim DSAG-Leitfaden habe ich die Möglichkeit, Wissen weiterzugeben und selbst zu lernen.</td>
 </tr>
+
+<tr class="odd">
+<td>Sven Treutler</td>
+<td>Versionsverwaltung, Dokumentation</td>
+<td>ABAP-Entwickler aus Leidenschaft. Seit 2010 beschäftigt ich mich mit Themen rund um die ABAP-Entwicklung bei der rku.it GmbH in Herne. Dort kümmere ich mich um neue Technologien und Qualitätssicherung im ABAP-Umfeld. Meinen Masterabschluss machte ich an der Westfälischen Hochschule in Gelsenkirchen. Privat besuche ich schöne Orte mit meiner Frau, bin stolzer Katzenbesitzer und schwarz-gelber Fußballanhänger.</td>
+</tr>
+
 
 </tbody>
 </table>
