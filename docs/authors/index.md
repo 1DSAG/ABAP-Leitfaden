@@ -15,57 +15,57 @@ nav_order: 15
 <th style="text-align: left">Unternehmen</th>
 <th style="text-align: left">Tätigkeit beim Leitfaden</th>
 </tr>
-</thead>
+</thead>.
 <tbody>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/alexander-lukas/">Alexander Lukas</a></td>
 <td>EnBW</td>
-<td>Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/andrea-schlotthauer-45a9a4312/">Andrea Schlotthauer</a></td>
 <td>SAP</td>
-<td>Review</td>
+<td>Reviewer</td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/andreasgoeb/">Andreas Göb</a></td>
 <td>CQSE</td>
-<td></td>
+<td>Reviewer</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/armin-junge-b9b42323a/">Armin Junge</a></td>
 <td>msg systems ag</td>
-<td>Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="odd">
 <td>Bernd Reichel</td>
 <td>HORNBACH Baumarkt AG</td>
-<td>Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/bjoern-schulz-swh/">Björn Schulz</a></td>
 <td>REWE digital GmbH</td>
-<td>Organisation, Schreiben, Review</td>
+<td>Autor, Reviewer, Organisator</td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/carine-tchoutouo/">Carine Tchoutouo Djomo</a></td>
 <td>SAP</td>
-<td>Review</td>
+<td>Reviewer</td>
 </tr>
 <tr class="header">
-<td>Domi Bigl</td>
+<td><a href="https://www.linkedin.com/in/domi-bigl/">Domi Bigl</a></td>
 <td>Cadaxo</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/dominik-panzer-690702248">Dominik Panzer</a></td>
 <td>Intense AG</td>
-<td>Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/enno-wulff/">Enno Wulff</a></td>
 <td>Inwerken</td>
-<td>Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="odd">
 <td>Fabian Küng</td>
@@ -75,17 +75,17 @@ nav_order: 15
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/fabianlupa/">Fabian Lupa</a></td>
 <td>adesso business consulting AG</td>
-<td>Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="odd">
-<td>Florian Henninger</td>
+<td><a href="https://www.linkedin.com/in/f4abap/">Florian Henninger</a></td>
 <td>Cordes und Graefe</td>
-<td>Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/frank-engert/">Frank Engert</a></td>
 <td>Softway AG</td>
-<td></td>
+<td>Autor</td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/gregorwolf/">Gregor Wolf</a></td>
@@ -103,14 +103,14 @@ nav_order: 15
 <td></td>
 </tr>
 <tr class="header">
-<td>Jan Sauerland</td>
-<td>ebm-papst IT</td>
-<td></td>
+<td><a href="https://www.linkedin.com/in/jan-sauerland-1543b3a9/">Jan Sauerland</a></td>
+<td>ebm-papst St. Georgen GmbH & Co.KG</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="odd">
 <td>Jens Knappik</td>
 <td>thyssenkrupp</td>
-<td>Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="header">
 <td>Jens Zähringer</td>
@@ -120,12 +120,12 @@ nav_order: 15
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/josephinereinhold/">Josephine Reinhold</a></td>
 <td>Softway AG</td>
-<td>Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="header">
-<td><a href="https://www.linkedin.com/in/julius-dacheneder-503934152/">Julius Dacheneder</a></td>
-<td>msg systems ag</td>
-<td>Schreiben, Review</td>
+<td><a href="https://www.linkedin.com/in/julius-dacheneder/">Julius Dacheneder</a></td>
+<td>msg systems ag (ehemals)</td>
+<td>Autor</td>
 </tr>
 <tr class="header">
 <td>Marc Zimmek</td>
@@ -135,12 +135,12 @@ nav_order: 15
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/krapf/">Marco Krapf</a></td>
 <td>Würth IT GmbH</td>
-<td>Schreiben</td>
+<td>Autor</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/marcus-richter-cgi/">Marcus Richter</a></td>
 <td>CGI</td>
-<td>Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="odd">
 <td>Markus Gradl</td>
@@ -150,32 +150,32 @@ nav_order: 15
 <tr class="header">
 <td>Markus Rest</td>
 <td>SVA</td>
-<td>Schreiben, Review</td>
+<td>Autor</td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/abap-pete/">Peter Luz</a></td>
 <td>Robert Bosch GmbH</td>
-<td>Kapitel ABAP Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/sebastian-freilinger-huber/">Sebastian Freilinger-Huber</a></td>
 <td>msg systems ag</td>
-<td>Organisation, Review</td>
+<td>Reviewer, Organisator</td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/sven-treutler-87b470109/">Sven Treutler</a></td>
 <td>rku IT</td>
-<td>Schreiben, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/thomas-fiedler-2813202a/">Thomas Fiedler</a></td>
 <td>SAP</td>
-<td>Review</td>
+<td>Reviewer</td>
 </tr>
 <tr class="odd">
 <td><a href="https://timojohn.short.gy/">Timo John</a></td>
 <td>ADventas Gmbh</td>
-<td>KAP Testing, KAP ABAP, KAP Clean Core, Review</td>
+<td>Autor, Reviewer</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/urs-b%C3%BChlmann-3944b7/">Urs Bühlmann</a></td>
@@ -184,8 +184,8 @@ nav_order: 15
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/volodymyrvashchenko/">Volodymyr Vashchenko</a></td>
-<td>Festo SE & Co.KG</td>
-<td>Schreiben, Review</td>
+<td>Bosch Thermotechnik GmbH</td>
+<td>Autor, Reviewer</td>
 </tr>
 </tbody>
 </table>
@@ -203,21 +203,64 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 </tr>
 </thead>
 <tbody>
+
+<tr class="odd">
+<td>Björn Schulz</td>
+<td>Einleitung, Clean Core, Integration, Sicherheit</td>
+<td>SAP Entwickler (Fullstack, ABAP Architekt) bei REWE digital und dort für die Themen Clean Core, ABAP Architektur, Entwicklung, Guidelines, Entwickler Upskilliung, uvw. verantwortlich. Die Modernisierung des Leitfadens war schon länger nötig, da dort die aktuellen Themen der ABAP Entwicklung nicht abgebildet waren und das Dokument bei vielen Unternehmen immer noch die Referenz für Entwicklung darstellt.</td>
+</tr>
+
+<tr class="odd">
+<td>Dominik Panzer</td>
+<td>Organisation</td>
+<td>Selbst die talentiertesten ABAP Entwickler*innen mit dem besten KnowHow werden nicht erfolgreich sein, wenn sie nicht im Unternehmen ein positiv unterstützendes Umfeld finden: vom Management bis zu den Team-Kolleg*innen, fundierend auf einer klaren Strategie, bewusst entschiedener Architektur und modernen Softwareentwicklungs-Prozessen. Deshalb engagiere ich mich neben "technischer Exzellenz" auch für Themen aus den Bereichen Organisation und Softwareentwicklungsprozesse/-vorgehensmodelle. Nur beides zusammen macht Menschen und damit die Unternehmen für die sie arbeiten erfolgreich.</td>
+</tr>
+
+<tr class="odd">
+<td>Marco Krapf</td>
+<td>ALM, Testing / weitere Testwerkzeuge</td>
+<td>Steht seit zehn Jahren als SAP Solution Manager Libero auf dem Spielfeld. Anfangs in einem super Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozess-Management, Test-Management, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Aufgaben und Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
+
+<td>Jan Sauerland</td>
+<td>Moderne ABAP Entwicklung</td>
+<td>Als Hauptansprechpartner für ABAP-Programmierung im Unternehmen hatte ich auf Basis des alten ABAP-Leitfadens von 2016 bereits unternehmensinterne ABAP-Richtlinien entworfen. Daher freue ich mich sehr darüber, nun selbst am DSAG-Leitfaden für ABAP mitwirken und mein gesammeltes Wissen einbringen zu können.</td>
+</tr>
+
+<tr class="odd">
+<td>Peter Luz</td>
+<td>ABAP, Testing, KI</td>
+<td>Seit 2006 bei Robert Bosch GmbH im SAP-Bereich und seit 2010 ABAP Entwickler im Bereich der Entwicklung von SAP-Logistik Funktionen, seit 2024 Lead-Developer in einem S/4 Template Entwicklungsprojekt im Bereich Logistik.<br> 
+ABAP fande ich schon immer sehr interessant, da Programmierung auf Geschäftsprozesse trifft und der Einsatz für gute Softwarequalität sich auch im Praxiseinsatz der Software sichtbar wurde.  
+Die Mitarbeit an einem Leitfaden erfordert viel Zeit, v.a. private Zeit die man investiert. Man bringt sein Wissen und seine Erfahrung ein. Man bekommt aber auch sehr viel zurück durch die guten Gespräche mit Menschen aus der SAP-Community, durch den regen Erfahrungsaustausch im Autorenteam und man lernt sehr viel dazu.<br>  
+Nach der Mitarbeit am DSAG-ADT Leitfaden 2023 möchte ich meine Erfahrungen aus vielen Jahren ABAP Entwicklung auch hier einbringen und weitergeben.  
+Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und motiviert, moderne ABAP-Entwicklung im Alltag nutzen und gewinnbringend einzusetzen.</td>
+</tr>
+
+<tr class="odd">
+<td>Timo John</td>
+<td>Testing, ABAP, Clean Core</td>
+<td></td>
+</tr>
+
 <tr class="odd">
 <td>Volodymyr Vashchenko</td>
 <td>Clean Core, Organisation, Core Data Services, Integration</td>
-<td>Als ABAP Lead Developer bei FESTO bin ich der Innovationstornado, der immer vorne mitmischt. Mit der DSAG-Community Standards zu setzen, ist für mich wie ein heiliger Ritterschlag – nur mit weniger Rüstung und mehr Kaffeekicks!</td>
+<td>Als Enterprise Architect blicke ich gerne weit in die Zukunft; Und sehe eine strahlende Zukunft für die ABAP-Entwicklung, die neue Dimensionen erreicht. Als ABAP Lead Developer bei Festo war ich der Innovationstornado, der immer vorne mitmischt. Mit der DSAG-Community Standards zu setzen, ist für mich wie ein heiliger Ritterschlag – nur mit weniger Rüstung und mehr Kaffeekicks! Die Zusammenarbeit mit den renommierten ABAP-Profis war bereichernd. Viel Spaß beim Lesen!</td>
 </tr>
+
 <tr class="odd">
-<td><a href="https://www.linkedin.com/in/dominik-panzer-690702248">Dominik Panzer</a></td>
-<td>Organisation</td>
-<td>Selbst die talentiertesten ABAP Entwickler*innen mit dem besten KnowHow werden nicht erfolgreich sein, wenn sie nicht im Unternehmen ein positiv unterstützendes Umfeld finden: vom Management bis zu den Team-Kolleg*innen, fundierend auf einer klaren Strategie, bewusst entschiedener Architektur und modernen Softwareentwicklungs-Prozessen. Deshalb engagiere ich mich neben "technischer Exzellenz" auch für Themen aus den Bereichen Oraganisation und Softwareentwicklungsprozesse/-vorgehensmodelle. Nur beides zusammen macht Menschen und damit die Unternehmen für die sie arbeiten erfolgreich.</td>
+<td>Enno Wulff</td>
+<td>Testing</td>
+<td>ABAP-Dino (seit 1994). Seit 2003 teile ich meine Programmiererfahrungen im Tricktresor. Seit 2008 bei Inwerken als Entwickler, Programmierbegleiter, Initiator vom Code-Dojo, Produktentwicklung AppKnight, Ausrichter von SAP Inside Tracks und ABAP Code Retreats in Hannover. Durch die Mitarbeit beim DSAG-Leitfaden habe ich die Möglichkeit, Wissen weiterzugeben und selbst zu lernen.</td>
 </tr>
+
 <tr class="odd">
-<td><a href="https://www.linkedin.com/in/krapf/">Marco Krapf</a></td>
-<td>ALM, Testing / weitere Testwerkzeuge</td>
-<td>Steht seit zehn Jahren als SAP Solution Manager Libero auf dem Spielfeld. Anfangs in einem super Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozess-Management, Test-Management, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Aufgaben und Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
+<td>Sven Treutler</td>
+<td>Versionsverwaltung, Dokumentation</td>
+<td>ABAP-Entwickler aus Leidenschaft. Seit 2010 beschäftigt ich mich mit Themen rund um die ABAP-Entwicklung bei der rku.it GmbH in Herne. Dort kümmere ich mich um neue Technologien und Qualitätssicherung im ABAP-Umfeld. Meinen Masterabschluss machte ich an der Westfälischen Hochschule in Gelsenkirchen. Privat besuche ich schöne Orte mit meiner Frau, bin stolzer Katzenbesitzer und schwarz-gelber Fußballanhänger.</td>
 </tr>
+
+
 </tbody>
 </table>
 

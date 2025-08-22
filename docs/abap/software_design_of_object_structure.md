@@ -17,7 +17,8 @@ nav_order: 3
 Geschäftsanwendungen in der klassischen ABAP Entwicklung wurden oft mit Reports erstellt, die durch komplexe, prozedurale Kontrollstrukturen geprägt waren. Modularisierung erfolgte mittels Form-Routinen oder für Wiederverwendung mit Funktionsbausteinen. Bei guter Planung waren Funktionsgruppen nicht überladen, sondern bestanden aus zusammengehörigen spezifischen Funktionen.  Vielleicht kennen Sie aber auch die eine oder andere Funktionsgruppe, die zahlreiche Funktionsbausteine mit unterschiedlichen Aufgaben enthält und beim einen oder anderen Transport auch mal das eine oder andere Problem verursacht hat.  
 Mit der Anzahl der vorgenommenen Änderungen wurden diese Anwendung immer komplexer, fehleranfälliger und immer schwerer zu warten. 
 
-Die moderne ABAP-Entwicklungswelt ist ungleich komplexer und heterogener geworden als sie es zu früheren R/3 Zeiten war. An moderne Anwendungen werden heute hohe Anforderungen gestellt. 
+Die moderne ABAP-Entwicklungswelt ist ungleich komplexer und heterogener geworden als sie es zu früheren R/3 Zeiten war. An moderne Anwendungen werden heute hohe Anforderungen gestellt.  
+
 - Anwendungen müssen die Anforderungen bestens erfüllen.
 - Anwendungen müssen fehlerfrei, robust, performant und fehlertolerant betrieben werden können.
 - Änderungen sollen schnell, effizient, fehlerfrei und mit wenig Testaufwand durchführbar sein und keine neuen Fehler erzeugen.  
@@ -34,16 +35,16 @@ Schon seit vielen Jahren gibt es in ABAP die Möglichkeit objektorientiert zu pr
 
 Und obwohl die oben genannten Nachteile der prozeduralen und Vorteile der Objektorientierten Programmierung bekannt sind, werden auch in aktuellen Projekten weiterhin Funktionalitäten nicht objektorientiert umgesetzt bzw. nicht das volle Potenzial moderner Entwicklungsmethoden genutzt. Dies können z.B. Programme sein, die prozedural implementiert werden, Klassen die objektorientierte Prinzipien nicht umsetzen oder Implementierung von Funktionsbausteinen oder direkte Implementierung von komplexen Code in BAdI-Implementierung direkt ohne weitere Strukturierung.
 
->**Empfehlungen**  
-* Fordern Sie bei allen Entwicklungen die Umsetzung in ABAP Objects unter Einsatz objektorientierter Methoden ein
-* Achten Sie auf die Anwendung der SOLID Prinzipien der Objektorientierung
-* Wenden Sie beim Anwendungsdesign die gängigen objektorientierten Designpatterns an. 
-* Trennen Sie die unterschiedlichen Belange der Geschäftsanwendungen in Klassen auf (z.B. Controller Klasse, Datenzugriff, Geschäftslogiken, Prüfungen etc.)
-* Halten Sie die Schnittstellen klein und nutzen Sie die Factory für Übergabe wichtiger Daten an das Objekt
-* Verschalen und konzentrieren Sie Aufrufe von SAP-Code bzw. Paketfremden Code in eigenen privaten Methoden.
-* Verwenden Sie klassenbasierte Ausnahmen für das komplette Fehlerhandling inklusive Nachrichtenabwicklung in der Anwendung
 {: .highlight}
-
+>**Empfehlungen**
+>
+>- Fordern Sie bei allen Entwicklungen die Umsetzung in ABAP Objects unter Einsatz objektorientierter Methoden ein
+>- Achten Sie auf die Anwendung der SOLID Prinzipien der Objektorientierung
+>- Wenden Sie beim Anwendungsdesign die gängigen objektorientierten Designpatterns an.
+>- Trennen Sie die unterschiedlichen Belange der Geschäftsanwendungen in Klassen auf (z.B. Controller Klasse, Datenzugriff, Geschäftslogiken, Prüfungen etc.)
+>- Halten Sie die Schnittstellen klein und nutzen Sie die Factory für Übergabe wichtiger Daten an das Objekt
+>- Verschalen und konzentrieren Sie Aufrufe von SAP-Code bzw. Paketfremden Code in eigenen privaten Methoden.
+>- Verwenden Sie klassenbasierte Ausnahmen für das komplette Fehlerhandling inklusive Nachrichtenabwicklung in der Anwendung  
 
 Die detaillierte Erläuterung der Objektorientierung und die zahlreichen Möglichkeiten des modernen ABAP können wir in diesem Leitfaden nicht umfänglich abhandeln, möchten Ihnen aber bezüglich des Vorgehens Empfehlungen, Hinweise und Hilfen geben, die den Einstieg erleichtern und einen Überblick über Handlungsfelder geben, die schnell zu Verbesserungen führen können.
 
@@ -70,14 +71,15 @@ Dass während der Entwicklung Methoden und Attribute verschoben und umbenannt we
 
 Weitere Erkennnungsmerkmale einer Klasse, die objektorientierten Prinzipien folgt sind:
 
-+ **Größe der Klasse** - ein zu große Klasse zeigt vermutlich auf dass das Single Responsibility Prinzip verletzt wurde 
-+ **Größe der Methoden** - zu große Methoden weisen auf Strukturdefizite und redundanten Code hin. Die maximale Zielgröße liegt bei ca. 150 Zeilen.
-+ **Umfangreiche Parameterschnittstellen** - Objekte arbeiten mit Objekten und nicht mit Parametern, dies geht meistens mit zu großen Methoden einher
-+ .... any other - to be discussed. - check Clean Core Kapitel bzw. clean ABAP Styleguide
- 
+- **Größe der Klasse** - ein zu große Klasse zeigt vermutlich auf dass das Single Responsibility Prinzip verletzt wurde 
+- **Größe der Methoden** - zu große Methoden weisen auf Strukturdefizite und redundanten Code hin. Die maximale Zielgröße liegt bei ca. 150 Zeilen.
+- **Umfangreiche Parameterschnittstellen** - Objekte arbeiten mit Objekten und nicht mit Parametern, dies geht meistens mit zu großen Methoden einher  
+
+Weitere Indikatoren finden z.B. im Clean-ABAP Styleguide.
 
 ## Grundprinzipien der Objektorientierung (SOLID)
-Beim Einstieg in ABAP Objects geschieht es schnell, dass aus einer Funktionsgruppe mit mehreren Funktionsbausteinen einfach eine Klasse mit mehreren statischen Methoden wird. So können jedoch die Vorteile der Objektorientierung nicht genutzt werden. Die Nutzung von statischen Methoden verhindert etwa, dass Abhängigkeiten in Unit Tests durch Mocks ersetzt werden können. [Mehr Informationen dazu im Clean ABAP-Guide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-objects-to-static-classes).
+
+Beim Einstieg in ABAP Objects geschieht es schnell, dass aus einer Funktionsgruppe mit mehreren Funktionsbausteinen einfach eine Klasse mit mehreren statischen Methoden wird. So können jedoch die Vorteile der Objektorientierung nicht genutzt werden. Die Nutzung von statischen Methoden verhindert etwa, dass Abhängigkeiten in Unit-Tests durch Mocks ersetzt werden können. [Mehr Informationen dazu im Clean ABAP-Guide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-objects-to-static-classes).
 
 Ein Hilfsmittel für objektorientierte Entwürfe sind die SOLID-Prinzipien. Jeder Buchstabe gibt ein Prinzip für objektorientierte Entwicklung vor. Hier geben wir
 nur eine kurze Übersicht der Prinzipien, eine ausführliche Erklärung findet sich z.B. [im Blog von Uncle Bob](https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html), dem Autor von Clean Code.
@@ -120,25 +122,239 @@ nur eine kurze Übersicht der Prinzipien, eine ausführliche Erklärung findet s
 </dl>
 
 ## Entwurfsmuster
+
 In der Objektorientierung gibt es zahlreiche Entwurfsmuster (Design Pattern), die für verschiedene Problemstellungen und Anwendungsfälle bereits vorgefertigte und erprobte softwaretechnische Mechanismen bieten, die auch in ABAP umgesetzt werden können. So sind in ABAP folgende Pattern direkt und sinnvoll anwendbar, diese werden im folgenden näher erläutert:
+
 - Singleton
 - Factory
 - Facade
 - MVC (Model-View-Controller)
 
 ### Singleton-Pattern
-Das Singleton-Pattern zielt darauf ab, dass zu einer Klasse nur eine einzige Objektinstanz zur Laufzeit existiert bzw. existieren kann. Dazu wird die erste durch den Konstruktor erzeugte Instanz in eine Klassenvariable (CLASS-DATA) geschrieben und bei den folgenden Aufrufen des Klassenkonstruktors zur Erzeugung eines neuen Objektes wird ebendiese gespeicherte Instanz aus der Klassenvariable gelesen und zurückgegeben. So kann man kontrollieren, dass zu jeder Zeit nur eine Instanz einer Klasse existiert. Anwendungsbeispiele hierfür wären *!!TODO!!*
+
+Das Singleton-Pattern zielt darauf ab, dass zu einer Klasse nur eine einzige Objektinstanz zur Laufzeit existiert bzw. existieren kann. Dazu wird die erste durch den Konstruktor erzeugte Instanz in eine Klassenvariable (CLASS-DATA) geschrieben und bei den folgenden Aufrufen des Klassenkonstruktors zur Erzeugung eines neuen Objektes wird ebendiese gespeicherte Instanz aus der Klassenvariable gelesen und zurückgegeben. So kann man kontrollieren, dass zu jeder Zeit nur eine Instanz einer Klasse existiert.
+Hier ein Beispiel, wie dies umgesetzt werden könnte:
+
+~~~ abap
+CLASS zcl_singleton DEFINITION.
+  PUBLIC SECTION.
+    CLASS-METHODS:
+      get_instance RETURNING VALUE(instance) TYPE REF TO zcl_singleton.
+    METHODS:
+      do_something.
+  PRIVATE SECTION.
+    CLASS-DATA:
+      instance_ref TYPE REF TO zcl_singleton.
+    METHODS:
+      constructor.
+ENDCLASS.
+
+CLASS zcl_singleton IMPLEMENTATION.
+  METHOD constructor.
+    " Konstruktor ist privat, um direkte Instanziierung zu verhindern
+  ENDMETHOD.
+  METHOD get_instance.
+    IF instance_ref IS INITIAL.
+      CREATE OBJECT instance_ref.
+    ENDIF.
+    instance = instance_ref.
+  ENDMETHOD.
+  METHOD do_something.
+    WRITE: / 'Singleton-Methode wurde aufgerufen'.
+  ENDMETHOD.
+ENDCLASS.
+
+* Verwendung
+DATA(singleton) = zcl_singleton=>get_instance( ).
+singleton->do_something( ).
+~~~
 
 ### Factory-Pattern
-...
+
+Das Factory-Pattern ist ein Entwurfsmuster, das die Erstellung von Objekten kapselt. In ABAP wird es häufig verwendet, um die Instanziierung von Objekten zu zentralisieren und zu vereinfachen – besonders bei polymorphen Objekten oder wenn die Erzeugung komplex ist. Das Pattern bietet mehrere Vorteile: Änderungen an der Erzeugungslogik müssen nur an einer Stelle erfolgen, die Rückgabe eines Interfaces oder einer abstrakten Klasse (Polymorphismus) ist möglich und neue Typen können leicht ergänzt werden.
+Dies könnte beispielhaft folgendermaßen umgesetzt werden:
+
+~~~ abap
+* Abstrakte Basisklasse oder Interface
+INTERFACE if_vehicle.
+  METHODS drive.
+ENDINTERFACE.
+
+* Konkrete Implementierungen
+CLASS zcl_car DEFINITION.
+  PUBLIC SECTION.
+    INTERFACES if_vehicle.
+ENDCLASS.
+
+CLASS zcl_car IMPLEMENTATION.
+  METHOD if_vehicle~drive.
+    WRITE: / 'Das Auto fährt los!'.
+  ENDMETHOD.
+ENDCLASS.
+
+CLASS zcl_bike DEFINITION.
+  PUBLIC SECTION.
+    INTERFACES if_vehicle.
+ENDCLASS.
+
+CLASS zcl_bike IMPLEMENTATION.
+  METHOD if_vehicle~drive.
+    WRITE: / 'Das Fahrrad fährt los!'.
+  ENDMETHOD.
+ENDCLASS.
+
+* Factory-Klasse
+CLASS zcl_vehicle_factory DEFINITION.
+  PUBLIC SECTION.
+    CLASS-METHODS:
+      create_vehicle
+        IMPORTING type_name TYPE string
+        RETURNING VALUE(vehicle) TYPE REF TO if_vehicle.
+ENDCLASS.
+
+CLASS zcl_vehicle_factory IMPLEMENTATION.
+  METHOD create_vehicle.
+    CASE type_name.
+      WHEN 'CAR'.
+        CREATE OBJECT vehicle TYPE zcl_car.
+      WHEN 'BIKE'.
+        CREATE OBJECT vehicle TYPE zcl_bike.
+      WHEN OTHERS.
+        vehicle = NULL.
+    ENDCASE.
+  ENDMETHOD.
+ENDCLASS.
+
+* Verwendung
+DATA(vehicle) = zcl_vehicle_factory=>create_vehicle( type_name = 'CAR' ).
+IF vehicle IS BOUND.
+  vehicle->drive( ).
+ENDIF.
+~~~
 
 ### Facade-Pattern
-...
+
+Das Facade-Pattern wird in ABAP verwendet, um eine vereinfachte Schnittstelle zu einem komplexen Subsystem bereitzustellen. Es kapselt die Komplexität mehrerer Klassen oder Prozesse hinter einer einzigen, leicht zu verwendenden Klasse – der „Fassade“. Dies bietet folgende Vorteile: Der Aufrufer muss sich nicht mit Details der Subsysteme beschäftigen, Änderungen in den Subsystemen wirken ich nicht direkt auf den Aufrufe aus und die Fassade kann in verschiedenen Kontexten wiederverwendet werden.
+Dies könnte beispielhaft folgendermaßen umgesetzt werden:
+
+~~~ abap
+* Subsystem-Klassen
+CLASS zcl_order_processor DEFINITION.
+  PUBLIC SECTION.
+    METHODS process_order.
+ENDCLASS.
+
+CLASS zcl_order_processor IMPLEMENTATION.
+  METHOD process_order.
+    WRITE: / 'Bestellung verarbeitet'.
+  ENDMETHOD.
+ENDCLASS.
+
+CLASS zcl_invoice_generator DEFINITION.
+  PUBLIC SECTION.
+    METHODS generate_invoice.
+ENDCLASS.
+
+CLASS zcl_invoice_generator IMPLEMENTATION.
+  METHOD generate_invoice.
+    WRITE: / 'Rechnung erstellt'.
+  ENDMETHOD.
+ENDCLASS.
+
+CLASS zcl_shipping_service DEFINITION.
+  PUBLIC SECTION.
+    METHODS ship_order.
+ENDCLASS.
+
+CLASS zcl_shipping_service IMPLEMENTATION.
+  METHOD ship_order.
+    WRITE: / 'Versand durchgeführt'.
+  ENDMETHOD.
+ENDCLASS.
+
+* Facade-Klasse
+CLASS zcl_order_facade DEFINITION.
+  PUBLIC SECTION.
+    METHODS complete_order_process.
+ENDCLASS.
+
+CLASS zcl_order_facade IMPLEMENTATION.
+  METHOD complete_order_process.
+    DATA(processor) = NEW zcl_order_processor( ).
+    DATA(invoice)   = NEW zcl_invoice_generator( ).
+    DATA(shipping)  = NEW zcl_shipping_service( ).
+
+    processor->process_order( ).
+    invoice->generate_invoice( ).
+    shipping->ship_order( ).
+  ENDMETHOD.
+ENDCLASS.
+
+* Verwendung
+DATA(facade) = NEW zcl_order_facade( ).
+facade->complete_order_process( ).
+~~~
 
 ### MVC-Pattern
-Das MVC-Pattern wird verwendet, um die Programmierlogik in die 3 Bereiche Model (Datenmodell), View (Präsentationslogik) und Controller (Businesslogik) zu unterteilen. 
 
-Auch hier können wir leider nicht im Detail darauf eingehen, im Internet und der Fachliteratur finden sie zahlreiche Möglichkeiten sich dem Thema Anzunähern und in die Organisation zu bringen. [ABAP-OO Design Patterns m. Beispielen](https://zevolving.com/category/abapobjects/oo-design-patterns/).
+Das MVC-Pattern wird verwendet, um die Programmierlogik in die 3 Bereiche Model (Datenmodell), View (Präsentationslogik) und Controller (Businesslogik) zu unterteilen.
+Das Model-View-Controller (MVC) Pattern ist ein bewährtes Architekturmodell, das auch in ABAP – insbesondere im Kontext von SAP Web Dynpro, SAPUI5 oder klassischen Dynpros – eingesetzt werden kann. Es trennt die Anwendung in die drei Hauptkomponenten "Model" (Geschäftslogik und Datenzugriff), "View" (Darstellung der Daten / UI) und "Controller" (Vermittlung zwischen Model und View).
+Der Einsatz von MVC bietet folgende Vorteile: Bessere Wartbarkeit und Testbarkeit aufgrund der Trennung von Anliegen ("Separation of concerns"), Wiederverwendbarkeit von Views und Models, Skalierbarkeit für komplexe Anwendungen (z.B. SAPUI5, Web Dynpro).
+
+~~~ abap
+* Model Klasse
+CLASS zcl_model DEFINITION.
+  PUBLIC SECTION.
+    METHODS:
+      get_customer_name IMPORTING customer_id TYPE i RETURNING VALUE(customer_name) TYPE string.
+ENDCLASS.
+
+CLASS zcl_model IMPLEMENTATION.
+  METHOD get_customer_name.
+    CASE customer_id.
+      WHEN 1. customer_name = 'Max Mustermann'.
+      WHEN 2. customer_name = 'Erika Musterfrau'.
+      WHEN OTHERS. customer_name = 'Unbekannt'.
+    ENDCASE.
+  ENDMETHOD.
+ENDCLASS.
+
+* View Klasse
+CLASS zcl_view DEFINITION.
+  PUBLIC SECTION.
+    METHODS:
+      display_customer_name IMPORTING customer_name TYPE string.
+ENDCLASS.
+
+CLASS zcl_view IMPLEMENTATION.
+  METHOD display_customer_name.
+    WRITE: / 'Kundenname:', customer_name.  "hier könnte auch eine ALV-Ausgabe o.ä. stehen
+  ENDMETHOD.
+ENDCLASS.
+
+* Controller Klasse
+CLASS zcl_controller DEFINITION.
+  PUBLIC SECTION.
+    METHODS:
+      show_customer IMPORTING customer_id TYPE i.
+  PRIVATE SECTION.
+    DATA:
+      model TYPE REF TO zcl_model,
+      view  TYPE REF TO zcl_view.
+ENDCLASS.
+
+CLASS zcl_controller IMPLEMENTATION.
+  METHOD show_customer.
+    CREATE OBJECT model.
+    CREATE OBJECT view.
+
+    DATA(name) = model->get_customer_name( customer_id ).
+    view->display_customer_name( name ).
+  ENDMETHOD.
+ENDCLASS.
+~~~
+
+Auch hier können wir leider nicht im Detail auf alle Entwurfsmuster eingehen, im Internet und der Fachliteratur finden sie zahlreiche Möglichkeiten, sich dem Thema anzunähern und in die Organisation zu bringen. Ein guter Startpunkt für die eigene Recherche ist z.B. [ABAP-OO Design Patterns m. Beispielen](https://zevolving.com/category/abapobjects/oo-design-patterns/).
 
 ## Vergleich Vorgehen prozedurale vs. objektorientierter Entwicklung
 
@@ -146,26 +362,26 @@ Auch hier können wir leider nicht im Detail darauf eingehen, im Internet und de
 
 Beim Umsetzen einer Anforderung z.B. in einem Report oder eines Funktionbausteins würde das Design gemäß der Spezifikation klassischerweise wie folgt sich gestalten:
 
-+ Übernahme der Eingangsdaten aus Import Parametern 
-+ Lesen des Customizings aus der Datenbank (z.B. Z-Tabelle)
-+ Lesen der Daten aus den Datenbanktabellen
-+ Verarbeiten der Daten mit Loops, Read Tables und diversen IF-Endif Kontrollstrukturen:  z.B. Prüfen, Berechnen, sortieren, abmischen ...
-+ Übergabe des Ergebnisses and Export Parameter
+- Übernahme der Eingangsdaten aus Import Parametern 
+- Lesen des Customizings aus der Datenbank (z.B. Z-Tabelle)
+- Lesen der Daten aus den Datenbanktabellen
+- Verarbeiten der Daten mit Loops, Read Tables und diversen IF-Endif Kontrollstrukturen:  z.B. Prüfen, Berechnen, sortieren, abmischen ...
+- Übergabe des Ergebnisses and Export Parameter
 Damit wird die Anforderung in imperativer Form in Programmcode dargestellt, ggf. werden Teilfunktionen modularisiert.
 
 ### Ablauf bei Objektorientiertem Ansatz
 
 Wenn die Anforderungen bekannt sind und analysiert wurden, sind zuerst die unterschiedlichen Aufgaben zu definieren und zu gruppieren. Anhand der Aufgaben können die Klassen und abgeleiteten sinnvollen Klassennamen definiert werden. Basierend auf diesem Vorgehen kann die OO Implementierung wie folgt aussehen:
 
-+ Definition Objekt zum Lesen und Auswerten des Customizings auf Basis Organisationsdaten = **Customizing Objekt**
-+ Definition Objekt zum Lesen der Datenbank, ggf. je nach Komplexität Aufteilung nach Geschäftsobjekt = **Datenobjekt(e)**.
-+ Definition Objekt welches die Datenprüfungen und Validierungen durchführt = **Check Objekt**
-+ Definition Objekt welches die Datenprozessierung durchführt und für die Erstellung des Ergebnisses zuständig ist **Geschäftslogik**.
-+ Definition Objekt welches die Geschäftsfunktionalität abbildet und das Zusammenwirken der einzelnen Objekte orchestriert und verwaltet = **Controller**.
-+ Erstellung einer Factory Klasse, die die einzelnen Objektinstanzen erzeugt.
-+ Definition einer Injektorklasse, mittels der das Mocking einzelner Funktionen ermöglicht wird.
+- Definition Objekt zum Lesen und Auswerten des Customizings auf Basis Organisationsdaten = **Customizing Objekt**
+- Definition Objekt zum Lesen der Datenbank, ggf. je nach Komplexität Aufteilung nach Geschäftsobjekt = **Datenobjekt(e)**.
+- Definition Objekt welches die Datenprüfungen und Validierungen durchführt = **Check Objekt**
+- Definition Objekt welches die Datenprozessierung durchführt und für die Erstellung des Ergebnisses zuständig ist **Geschäftslogik**.
+- Definition Objekt welches die Geschäftsfunktionalität abbildet und das Zusammenwirken der einzelnen Objekte orchestriert und verwaltet = **Controller**.
+- Erstellung einer Factory Klasse, die die einzelnen Objektinstanzen erzeugt.
+- Definition einer Injektorklasse, mittels der das Mocking einzelner Funktionen ermöglicht wird.
 
-Die Details zum ABAP UNIT und wie man Unit Tests erstellt finden Sie im Kapitel [**Testing**](/ABAP-Leitfaden/testing/index))
+Die Details zum ABAP UNIT und wie man Unit-Tests erstellt finden Sie im Kapitel [**Testing**](/ABAP-Leitfaden/testing/index))
 
 ## Konzepte in der Objektorientierung
 
@@ -203,21 +419,11 @@ Dies gewährleistet eine konsistente Behandlung und vermindert den Aufwand wenn 
 
 ### Interfaces
 
-Durch den Einsatz von Interfaces wird die Definition von Methoden und deren Implementierung voneinander entkoppelt. Wird ein Interface verwendet, kann die Implementierung der Klasse geändert, bzw. flexibilisiert werden. Das Interface definiert sozusagen den Vertrag zwischen Verwender und implementierender Klasse.
-Interfaces werden bei UNIT-Tests benötigt, da z.B. Datenbankzugriffe in Unit Tests durch programmierte Testdaten ersetzt werden müssen. Die Datenbankklasse implementiert ein Interface, das im Produktcode aufgerufen wird. Wird der Unit-Test ausgeführt, wird statt der Datenbankklasse, eine sog. Mockingklasse aufgerufen, die statisch hinterlegte Daten beinhaltet und zurückliefert oder Das OSQL Framework nutzt um die Datenbankabfragen im Test zu simulieren.  
+Durch den Einsatz von Interfaces wird die Definition von Methoden und deren Implementierung voneinander entkoppelt. Wird ein Interface verwendet, kann die Implementierung der Klasse geändert, bzw. flexibilisiert werden. Das Interface definiert sozusagen den Vertrag zwischen Verwender und implementierender Klasse und "versteckt" somit die Implementierung (Software-Hiding-Prinzip).    
+Für öffentliche Methoden die Funktionen für andere Klassen bereitstellen sollten Sie grundsätzlich Interfaces definieren und damit dafür sorgen, dass die Verwender nur mit diesen Interfaces arbeiten. Das Erzeugen von konkreten Objekten übernimmt eine separate Factory Klasse oder in besonders einfachen Fällen eine Factorymethode der Klasse, z.B.: ```ZCL_BUSINESS_LOGIC=>GET_INSTANCE( CompanyCode )``` [Siehe SAP-Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-multiple-static-creation-methods-to-optional-parameters)
+
+Interfaces werden auch für Unit-Tests benötigt, da z.B. Datenbankzugriffe in Unit-Tests durch programmierte Testdaten ersetzt werden müssen. Die Datenbankklasse implementiert ein Interface, das im Produktcode aufgerufen wird. Wird der Unit-Test ausgeführt, wird statt der Datenbankklasse, eine sog. Mockingklasse aufgerufen, die statisch hinterlegte Daten beinhaltet, Methoden zur lokalen Testdatenerzeugung bereitstellt und diese zurückliefert oder Das OSQL Framework nutzt um die Datenbankabfragen im Test zu simulieren.  
 Die Ausführungen dazu finden Sie im Kapitel [**Testing**](/ABAP-Leitfaden/testing/index).
-
-
-------
-An @ABAP-Pete25 von  @TimoJohn 
-" ich würde gerne noch dazu schreiben das grundsätzlich immer Iinterfaces zu verwenden sind für die Lose Kopplung. Das Unit Test das nutzen ist gut. Klingt hier aber so als würde man dies nur für unit test machen. Und dann kommen wieder Leute auf creative Gründe "ich brauche das nicht weil ..."
-Vorschlag: 
-
-Sie sollten grundsätzlich Methoden die Funktionen für andere Klassen bereitstellen in Interfaces defineren und dafür sorgen, dass die Verwender nur mit diesen Intetrfaces Arbeiten. Das Erzeugen von konkreten Obkjekten über nimmt eine separate Factory Klasse oder in besonders einfachen Fällen eine Factory Methode der Klasse. 
-```ZCL_BUSINESS_LOGIC=>GET_INSTANCE( ConpanyCode )``` 
-
-[Siehe](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-multiple-static-creation-methods-to-optional-parameters)
---------
 
 ### Vererbung
 
@@ -228,7 +434,7 @@ Bei der Vererbung ist das Liskovsche Substitutionsprinzip zu beachten und genau 
 
 Manchmal ist es erforderlich, dass Funktionalitäten in vorgegebenen Artefakten umgesetzt werden müssen. Z.B. Funktionsbausteine in AIF, Remote Funktionsbausteine, Form Interface Routinen bei Adobe Forms usw.
 In diesem Fall dienen diese Entwicklungsobjekte als Verschalung und rufen die eigentliche Funktionalität nur auf, die dann in ABAP-Klassen und deren Methoden implementiert ist. Der Code in diesen Entwicklungsobjekten sollte sich nur auf technisches Coding beschränken wie z.B. Datenzuordnungen, Objektinstanziierung oder minimale Prüfungen.
-Dies bietet wiederum den Vorteil von möglicher Wiederverwendung und Implementierung von Unit Test.
+Dies bietet wiederum den Vorteil der möglichen Wiederverwendung und Implementierung von Unit-Tests.
 
 ## Verwendung von SAP Code
 
@@ -240,7 +446,6 @@ Falls die Erstellung eigener Klassen überdimensioniert ist, kann in Sonderfäll
 Eine hilfreiche Erweiterung dieser Klassen ist die Transformation der klassischen Ausnahmen, oder Return Codes, die von SAP Code zur Fehlerbehandlung verwendet werden, hin zu Ausnahmeklassen.  
 Diese Trennung ist auch eine wichtige Voraussetzung für die Testbarkeit einer Anwendung.
 
-
 ## Testbarkeit durch gutes Design
 
 Gute Strukturierung in den Paketen, als auch in den Objekten sind grundlegende Voraussetzungen um die Testbarkeit der Software zu erhöhen. Sind die Verantwortlichkeiten der Komponenten im Rahmen einer guten Architektur geklärt und die Aufgaben auf verschiedene Objekte sinnvoll verteilt, erleichtert dies den Einsatz von ABAP-Unit massgeblich.
@@ -251,6 +456,3 @@ ies verringert den Aufwand für die Unit-Test Erstellung deutlich gegenüber ein
 
 Das Vorgehen, Empfehlungen und Hinweise zu ABAP-UNIT finden Sie im Kapitel [Testen von SAP-Anwendungen](/ABAP-Leitfaden/testing/#testen).
 
-## TODO before Review ?
-
-CHECKPOINT -> Empfehlungen prüfen - was fehlt?
