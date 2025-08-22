@@ -135,7 +135,7 @@ nav_order: 15
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/krapf/">Marco Krapf</a></td>
 <td>Würth IT GmbH</td>
-<td>Schreiben, Review</td>
+<td>Schreiben</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/marcus-richter-cgi/">Marcus Richter</a></td>
@@ -215,8 +215,8 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/krapf/">Marco Krapf</a></td>
-<td>ALM, Softwaretests (weitere Testwerkzeuge)</td>
-<td>Als SAP Solution Manager Libero bin ich seit zehn Jahren auf dem SAP-Spielfeld unterwegs - allerdings nicht in der Position des ABAP-Entwicklers, sondern mit der ALM-Werkzeugkiste in der Hand, um meine Kolleginnen und Kolleginnen mit den Tools des Application Lifecycle Managements wie Prozessmanagement, Testmanagement, Custom Code Management oder Monitoring zu unterstützen. Das fühlt sich an wie ein Point-and-Click-Adventure, bei dem ich jeden Tag vor neuen Rätseln stehe, die ich durch logisches Denken, reden mit den anderen Charakteren und Klicken auf dem Bildschirm lösen muss, um weiterzukommen. SAP ist für mich ein Open-World-Spiel ohne richtiges Ende, das nie langweilig wird, wenn man den nötigen Humor mitbringt.</td>
+<td>ALM, Testing / weitere Testwerkzeuge</td>
+<td>Als SAP Solution Manager Libero seit zehn Jahren auf dem Spielfeld. Anfangs in einem Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozessmanagement, Testmanagement, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
 </tr>
 </tbody>
 </table>
@@ -224,3 +224,4 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 # Danksagungen
 
 Hier weitere Danksagungen ...
+
