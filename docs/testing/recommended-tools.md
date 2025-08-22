@@ -29,7 +29,7 @@ Die [Test-Suite des SAP Solution Managers](https://help.sap.com/docs/SUPPORT_CON
 
 Im Testplan-Management werden Testpläne angelegt und verwaltet. Das Herzstück ist die Auswahl der Testfälle, die als solche in der Struktur der [Lösungsdokumentation](https://help.sap.com/docs/SAP_Solution_Manager/c3c5ec585ee248228ddb6c3f08073ea9/2cb3e75e134249a2bd091a40fe2f6d61.html?mt=de-DE) (engl. Solution Documentation, kurz "SolDoc") abgelegt sind. Diese können dann in kleinere Einheiten, die sogenannten Testpakete, aufgeteilt und den entsprechenden Testern bzw. Testergruppen zugewiesen werden. Auf diese Weise können passgenaue Testpläne, zum Beispiel für Funktionstests, Integrationstests, Regressionstests, Komponententests (engl. "Unit Tests") oder Akzeptanz- bzw. Abnahmetests (eng. "User Acceptance Tests") erstellt werden.
 
-![Darstellung: Testmanagement im SAP Solution Manager](./img/darstellung_solman_testmanagement.png)
+![Darstellung: Testmanagement im SAP Solution Manager](./img/darstellung_solman_testmanagement_neu.png)
 *Schematische Darstellung: Testplan mit Testpaketen und Testfällen (Quelle: eigene Darstellung)*
 
 Manuelle Testfälle werden oft in **Testdokumenten** (mit Microsoft Word, Microsoft Excel etc.) beschrieben, in denen die durchzuführenden Testschritte detailliert aufgeführt sind. Außerdem besteht die Möglichkeit, **URLs** zu hinterlegen, die zu Testfällen führen, welche an einem anderen Ort liegen. Der dritte Testfalltyp im Standard des SAP Solution Managers sind sogenannte **Testkonfigurationen**, die automatisierte Testfälle ansteuern, die zum Beispiel mittels [CBTA (komponentenbasierte Testautomatisierung)](#Komponentenbasierte-Testautomatisierung), eCATT (extended Computer Aided Test Tool) oder mit [Tricentis Test Automation](#Tricentis-Test-Automation) erstellt wurden (siehe dazu das [Kapitel zu den Testfällen im SAP Help Portal](https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/df49e0555937e263e10000000a44538d.html?locale=de-DE)). 
@@ -91,4 +91,5 @@ SAP Cloud ALM bietet mit der "[SAP Cloud ALM Test Automation API](https://api.sa
 
 (Grafik selber machen auf deutsch, welches Tricentis-Tool für welches ALM-System etc., in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?) und die einzelnen Punkte kurz beschreiben
 ![Optionaler Alternativtext, falls sich das Bild nicht laden lässt](./img/tricentis_tools_uebersicht.png)
+
 
