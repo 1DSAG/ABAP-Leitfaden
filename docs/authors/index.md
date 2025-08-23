@@ -263,7 +263,7 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 <tr class="odd">
 <td>Florian Henninger</td>
 <td>ABAP</td>
-<td>Als Entwickler und Problemlöser bin ich seit langen immer daran interesssiert, was um mich rum passiert. Ich schaue gerne über den Tellerrand und freue mich über Erkenntnisse und auch die Lösungen, die es so für uns alle in der täglichen Arbeit gibt. Als ADT User der ersten Stunde bin ich immer wieder fasziniert, wieviel Mehrwert es gibt, wenn man auf die kleinen Dinge um sich herum achtet und sich nicht im Alltag verliert. Genau das, ist meine Motivation auch hier mit zu machen, da es neben ein paar Sachen, die ich beitragen konnte soviel gibt, die ich hier für  mich und meinen Arbeitsalltag mitnehmen konnte. Ich bin mir sicher, Sie finden auch etwas für sich.</td>
+<td>Als Entwickler und Problemlöser bin ich seit langen immer daran interesssiert, was um mich rum passiert. Ich schaue gerne über den Tellerrand und freue mich über Erkenntnisse und auch die Lösungen, die es so für uns alle in der täglichen Arbeit gibt. Als ADT User der ersten Stunde bin ich immer wieder fasziniert, wieviel Mehrwert es gibt, wenn man auf die kleinen Dinge um sich herum achtet und sich nicht im Alltag verliert. Genau das, ist meine Motivation hier (wieder) mit zu machen. Ich bin mir sicher, Sie finden auch etwas für sich.</td>
 </tr>
 
 </tbody>
@@ -272,6 +272,7 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 # Danksagungen
 
 Hier weitere Danksagungen ...
+
 
 
 
