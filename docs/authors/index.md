@@ -260,6 +260,11 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 <td>ABAP-Entwickler aus Leidenschaft. Seit 2010 beschäftigt ich mich mit Themen rund um die ABAP-Entwicklung bei der rku.it GmbH in Herne. Dort kümmere ich mich um neue Technologien und Qualitätssicherung im ABAP-Umfeld. Meinen Masterabschluss machte ich an der Westfälischen Hochschule in Gelsenkirchen. Privat besuche ich schöne Orte mit meiner Frau, bin stolzer Katzenbesitzer und schwarz-gelber Fußballanhänger.</td>
 </tr>
 
+<tr class="odd">
+<td>Florian Henninger</td>
+<td>ABAP</td>
+<td>Als Entwickler und Problemlöser bin ich seit langen immer daran interesssiert, was um mich rum passiert. Ich schaue gerne über den Tellerrand und freue mich über Erkenntnisse und auch die Lösungen, die es so für uns alle in der täglichen Arbeit gibt. Als ADT User der ersten Stunde bin ich immer wieder fasziniert, wieviel Mehrwert es gibt, wenn man auf die kleinen Dinge um sich herum achtet und sich nicht im Alltag verliert. Genau das, ist meine Motivation hier (wieder) mit zu machen. Ich bin mir sicher, Sie finden auch etwas für sich.</td>
+</tr>
 
 </tbody>
 </table>
@@ -267,5 +272,7 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 # Danksagungen
 
 Hier weitere Danksagungen ...
+
+
 
 
