@@ -7,6 +7,7 @@ nav_order: 2
 ---
 
 {: .no_toc}
+
 # Einsatz von Open-Source-Software
 
 Dieser Abschnitt beschreibt den Anwendungsfall als Open-Source-Software in den eigenen Entwicklungsprozess oder die eigens entwickelte Software zu integrieren. Er thematisiert damit die erste [Ausbaustufe](/ABAP-Leitfaden/open-source/#ausbaustufen).
@@ -47,7 +48,7 @@ Einen ersten Schritt zur Auseinandersetzung mit Open-Source-Software in der ABAP
   - Reduzierung von Aufwänden durch Verwendung von Generatoren
   - Erhöhung der Codequalität durch Einsatz von zusätzlichen Codeanalysewerkzeugen
 - **Risiken**
-  - Installation von Fremdsoftware im Entwicklungssystem / Entwickler-PCs / Continous-Integration-Umgebungen
+  - Installation von Fremdsoftware im Entwicklungssystem / Entwickler-PCs / Continuous-Integration-Umgebungen
 
 Viele der Chancen dieses Anwendungsfalls wurden bereits unter [Motivation und Chancen](/ABAP-Leitfaden/open-source/#motivation-und-chancen) mit Beispielen genannt. Zusammenfassen lässt sich der Einsatz von Open-Source-Tools im Entwicklungsprozess als eine Entlastung der Entwickler, da Arbeitsschritte automatisiert werden oder die Qualitätsvorgaben automatisch geprüft / Verletzungen der Vorgaben früh und teilweise automatisch korrigiert werden können.
 
@@ -69,15 +70,26 @@ Extern entwickelte Open-Source-Abhängigkeiten dauerhaft gewinnbringend einzuset
 um die in den vorigen Abschnitten genannten Chancen und Risiken gegeneinander abzuwägen.
 
 Insbesondere bezüglich der Risiken existieren bereits veröffentlichte Kriterien, anhand derer eine solche Bewertung vorgenommen
-werden kann, z.B. [^1]. Kriterien dabei sind unter anderem
+werden kann, z.B. [Bauer et al., "A structured approach to assess third-party library usage"](https://doi.org/10.1109/ICSM.2012.6405311). Kriterien dabei sind unter anderem
 
-- *Angemessenheit* erfasst, wie gut die gewählte Technologie hilft, das vorliegende Problem zu lösen.
-- *Dokumentation* fasst die Verfügbarkeit, Vollständigkeit und Qualität der Dokumentation zusammen.
-- *Lizenzkompatibilität* erfasst, ob die Lizenz einer Technologie für das Einsatzszenario geeignet ist und ob die Lizenz kompatibel zu den Lizenzen anderer eingesetzter Technologien ist.
-- *Verbreitungsgrad* fasst die Marktdurchdringung einer Technologie zusammen.
-- *Werkzeugunterstützung* erfasst, ob die Technologie durch Werkzeuge wie z.B. Entwicklungsumgebungen dediziert unterstützt wird oder ob ihr Einsatz diese gar behindert. Dieses Kriterium ist nicht für alle Technologien gleichermaßen anwendbar.
-- *Herstellerunterstützung* beschreibt, inwiefern Pflege und Weiterentwicklung einer Technologie durch den Hersteller (in diesem Fall die Open-Source-Community) auch langfristig sichergestellt ist.
-- *interne Qualität und Security*
+- **Angemessenheit** erfasst, wie gut die gewählte Technologie hilft, das vorliegende Problem zu lösen.
+- **Dokumentation** fasst die Verfügbarkeit, Vollständigkeit und Qualität der Dokumentation zusammen.
+- **Lizenzkompatibilität** erfasst, ob die Lizenz einer Technologie für das Einsatzszenario geeignet ist und ob die Lizenz kompatibel zu den Lizenzen anderer eingesetzter Technologien ist.
+- **Verbreitungsgrad** fasst die Marktdurchdringung einer Technologie zusammen.
+- **Werkzeugunterstützung** erfasst, ob die Technologie durch Werkzeuge wie z.B. Entwicklungsumgebungen dediziert unterstützt wird oder ob ihr Einsatz diese gar behindert. Dieses Kriterium ist nicht für alle Technologien gleichermaßen anwendbar.
+- **Herstellerunterstützung** beschreibt, inwiefern Pflege und Weiterentwicklung einer Technologie durch den Hersteller (das veröffentlichende Unternehmen oder die Open-Source-Community) auch langfristig sichergestellt ist.
+- **interne Qualität und Security**
+
+<!--
+  author    = {Veronika Bauer and Lars Heinemann and Florian Deissenboeck},
+  booktitle = {28th {IEEE} International Conference on Software Maintenance {ICSM}},
+  title     = {A structured approach to assess third-party library usage},
+  year      = {2012},
+  pages     = {483--492},
+  publisher = {IEEE Computer Society},
+  biburl    = {https://dblp.org/rec/conf/icsm/BauerHD12.bib},
+  url       = {https://doi.org/10.1109/ICSM.2012.6405311},
+-->
 
 Um diese Kriterien angemessen bewerten zu können, ist eine eingehende Überprüfung (Due Diligence) erforderlich.
 Einige "Red Flags" für den Unternehmenseinsatz sind leicht zu identifizieren und können als erste Ausschlusskriterien verstanden werden:
@@ -87,110 +99,74 @@ In diesen Fällen sollte von der Nutzung der Komponente abgesehen werden.
 Die Entscheidung *für* die Nutzung erfordert eine Reihe weiterer Überlegungen und ist immer das Ergebnis einer Abwägung:
 Wieviel eigenen Entwicklungsaufwand spart man sich durch die Nutzung der Open-Source-Komponente, und welchem Risiko setzt man sich dadurch aus?
 
-### Best Practices
+### Best Practices: Bewertungskriterien
 
-**Angemessenheit** Um die Komponente zu identifizieren, welche die einen Anforderungen am besten erfüllt, sollte zunächst eine Recherche stattfinden, die idealerweise mehrere Kandidaten liefert. Neben der reinen Funktionalität sollte dabei auch jeweils der erforderliche Aufwand abgeschätzt werden, um die Funktionalität zu implementieren, im Vergleich zur Lizenzierung einer kommerziellen Komponente. Insbesondere für gängige Funktionalität empfiehlt sich oft die Nutzung einer Drittanbieter-Komponenten anstatt einer eigenen Implementierung. Dennoch sollte der erwartete Aufwand einer Eigenentwicklung in die Entscheidung einfließen. Sollten bei einer identifizierten Open-Source-Komponente nur wenige Details fehlen, um die eigenen Anforderungen zu erfüllen, ist es auch möglich, diese als eigenen Beitrag zur Open-Source-Komponente bereitzustellen (siehe [Beteiligung an Open Source](../contributing-to-open-source/))
+**Angemessenheit:** Um die Komponente zu identifizieren, welche die einen Anforderungen am besten erfüllt, sollte zunächst eine Recherche stattfinden, die idealerweise mehrere Kandidaten liefert. Neben der reinen Funktionalität sollte dabei auch jeweils der erforderliche Aufwand abgeschätzt werden, um die Funktionalität zu implementieren, im Vergleich zur Lizenzierung einer kommerziellen Komponente. Insbesondere für gängige Funktionalität empfiehlt sich oft die Nutzung einer Drittanbieter-Komponenten anstatt einer eigenen Implementierung. Dennoch sollte der erwartete Aufwand einer Eigenentwicklung in die Entscheidung einfließen.
 
-**Interne Qualität und Security** Da Open-Source-Komponenten als Code veröffentlicht werden, sollte dieser vor einer Entscheidung zur Nutzung eingehend geprüft werden. Gerade bei größeren Komponenten empfiehlt sich der Einsatz von Codeanalyse-Werkzeugen. Teilweise enthalten die Repositories der Komponenten vielleicht bereits Ergebnis-Reports von Tools wie abaplint. In jedem Fall sollten automatische Prüfungen gegenüber den eigenen Sicherheits-Vorgaben durchgeführt werden, sofern dafür ohnehin schon Werkzeuge im Einsatz sind.
+Die Angemessenheit beschreibt, inwieweit der geplante Einsatzzweck dem für die Komponente vorgesehenen Szenario entspricht. Sollten bei einer identifizierten Open-Source-Komponente nur wenige Details fehlen, um die eigenen Anforderungen zu erfüllen, ist es auch möglich, diese als eigenen Beitrag zur Open-Source-Komponente bereitzustellen (siehe [Beteiligung an Open Source](../contributing-to-open-source/)). In diesem Fall ist es empfehlenswert, die Anpassung oder Ergänzung an das ursprüngliche Projekt zurückzugeben, damit sichergestellt ist, dass diese bei künftigen Updates kompatibel bleibt.
 
-Auch die Verständlichkeit des Codes sollte bewertet werden. Dies betrifft einerseits die Klarkeit der Schnittstellen (APIs) der verwendeten Komponente, um sie möglichst einfach zu integrieren, andererseit auch interne Merkmale wie die Kommentierung von Klassen und Methoden oder die sprechende Benennung von Klassen oder Variablen. Verständlicher Code erleichtert die Fehlersuche und ggf. künftige Erweiterungen oder Anpassungen. Siehe dazu auch den Abschnitt zu [Code Reviews](../../application-lifecycle-management/ensuring-quality/).
+**Interne Qualität und Security:** Da Open-Source-Komponenten als Code veröffentlicht werden, sollte dieser vor einer Entscheidung zur Nutzung eingehend geprüft werden. Gerade bei größeren Komponenten empfiehlt sich der Einsatz von Codeanalyse-Werkzeugen. Teilweise enthalten die Repositories der Komponenten vielleicht bereits Ergebnis-Reports von Tools wie *abaplint*. In jedem Fall sollten automatische Prüfungen gegenüber den eigenen Sicherheits-Vorgaben durchgeführt werden, sofern dafür ohnehin schon Werkzeuge im Einsatz sind.
 
-2. Einbeziehung der Stakeholder
-   Kollaborative Entscheidungsfindung: Binden Sie alle relevanten Teammitglieder und Rollen in die Auswahl der geeigneten Open-Source-Komponenten ein.
-   Egal, ob Sie eine Shortlist für eine bestimmte Funktionalität erstellen können oder nicht – stellen Sie sicher, dass alle relevanten Stakeholder in den Entscheidungsprozess einbezogen werden. Mindestens sollten folgende Rollen beteiligt sein:
+Auch die Verständlichkeit des Codes sollte bewertet werden. Dies betrifft einerseits die Klarheit der Schnittstellen (APIs) der verwendeten Komponente, um sie möglichst einfach zu integrieren, andererseit auch interne Merkmale wie die Kommentierung von Klassen und Methoden oder die sprechende Benennung von Klassen oder Variablen. Verständlicher Code erleichtert die Fehlersuche und ggf. künftige Erweiterungen oder Anpassungen. Siehe dazu auch den Abschnitt zu [Code Reviews](../../application-lifecycle-management/ensuring-quality/). Insbesondere für den Fall, dass die Komponente perspektivisch erweitert werden soll (s.o.), ist dies ein wichtiger Aspekt.
 
-Entwickler
-Sicherheitsspezialisten
-Projektmanager
-Produktverantwortliche
+**Dokumentation:** Ein Erfolgsfaktor für die Nutzung von Open Source ist die zur Verfügung stehende Dokumentation, insbesondere der durch die Komponente bereitgestellten Schnittstellen (API). Hier sollte insbesondere auf Umfang, Verständlichkeit und Aktualität geachtet werden. Einerseits hilft  Dokumentation beim korrekten Einsatz der Komponente und vermeidet oft den aufwändigen Blick in den Source Code. Andererseits signalisiert sie auch, dass die Komponente zur Nutzung durch die Öffentlichkeit vorgesehen ist, und kann so auch ein Hinweis darauf sein, dass die Komponente selbst gut gepflegt ist (siehe auch "Herstellerunterstützung").
+
+Auch für den Fall, dass Verbesserungen, Anpassungen oder Ergänzungen zurückgespielt werden sollen, bietet es sich an, im Vorfeld auf Dokumentation zum Beitragen von Änderungen zu achten. Oft enthalten Open-Source-Projekte einen "Contribution Guide", etwa in Form einer Datei `Contributing.md`.
+
+**Lizenzkompatibilität:** Gerade im Unternehmenskontext ist die Lizenz einer Open-Source-Komponente von essentieller Bedeutung. Es sollte unbedingt überprüft werden, dass die Komponente unter einer Lizenz veröffentlicht ist, die mit dem geplanten Einsatzzweck kompatibel ist und den eigenen Unternehmensrichtlinien übereinstimmt. Einige Lizenzen könnten etwa fordern, dass man bei Verwendung einer Komponente das gesamte resultierende Softwaresystem unter derselben Lizenz bereitstellen, also den gesamten Sourcecode offenlegen muss. Auch sollte darauf geachtet werden, dass die Lizenz es erlaubt, die Komponente zu modifizieren. Dies könnte entscheidend sein, um Bugs zu beheben oder Funktionen hinzuzufügen, falls die Community-Unterstützung nachlässt. Bei Verwendung mehrerer Open-Source-Komponenten ist außerdem zu beachten, dass deren Lizenzen miteinander kompatibel sind, sich also nicht widersprechen.
+
+Zudem ist zu beachten, dass Open Source nicht automatisch kostenlos bedeutet. Eine Komponente könnte etwa ausschließlich die private Nutzung kostenlos erlauben, während bei kommerzieller Nutzung eine Lizenzgebühr erhoben wird. Hierzu gibt es oft je nach Anwendungsfall (privat, kommerziell) unterschiedliche Lizenzen.
+
+**Verbreitungsgrad:** Bei der Bewertung einer Open-Source-Komponente spielt deren Verbreitungsgrad eine wichtige Rolle. Hauptargument für die Nutzung beliebter und weit verbreiteter Komponenten ist die geringere Abhängigkeit vom jeweiligen Anbieter.
+
+Um die Verbreitung zu bewerten, können verschiedene Kriterien herangezogen werden, etwa die Anzahl der "Sterne" oder Forks auf GitHub, oder die Anzahl der Ergebnisse bei einer Internet-Suche. Bei einer Internet-Recherche sollte natürlich auch die Art der Suchergebnisse betrachtet werden. Eine aktive Diskussion oder Blog Posts zum erfolgreichen Einsatz der Komponente können positive Signale senden, verzweifelte Hilfegesuche oder gehäufte Beschwerden negative. Insbesondere im Kontext der ABAP-Entwicklung ist auch die Haltung der SAP zum jeweiligen Projekt ein wichtiger Hinweis: Erwähnt SAP das Projekt selbst oder nutzt es sogar in seinen eigenen Produkten? Dann ist davon auszugehen, dass eine Nutzung auch im eigenen Projekt vermutlich mit geringem Risiko verbunden ist.
+
+**Werkzeugunterstützung:**
 
 3. Integration und Testing
    Komplexität der Integration: Stellen Sie sicher, dass die Komponente leicht zu verstehen und in Ihr bestehendes System zu integrieren ist.
    Automatisiertes Testing: Überprüfen Sie das Vorhandensein und die Abdeckung automatisierter Tests, um die Zuverlässigkeit und Wartbarkeit zu gewährleisten.
+   Kompatibilität mit der Entwicklungsinfrastruktur: Stellen Sie sicher, dass die Komponente gut mit Ihren bestehenden Entwicklungstools und -prozessen harmoniert.
 
-4. Dokumentation
-   Die Präsenz gut gepflegter Dokumentation zeigt, dass die Komponente von guter Qualität ist und Sie Unterstützung sowie weitere Entwicklung erwarten können.
-
-Benutzerdokumentation: Enthält Beschreibungen, beispielsweise zur Nutzung eines Systems. Die Beschreibung kann je nach verschiedenen Rollen unterschiedlich sein.
-Entwicklerdokumentation: Beschreibt, wie man zum Projekt beiträgt (Code hinzufügt oder ändert). Wenn die OSS Erweiterungsunterstützung bietet, enthält die Dokumentation in der Regel Informationen zur Implementierung solcher Erweiterungen. Für Bibliotheken stellen Sie sicher, dass eine gute API-Dokumentation vorhanden ist.
+**Herstellerunterstützung:**
 
 5. Verfügbarkeit von Builds/Packages
    Neue Versionen von OSS-Komponenten werden recht häufig veröffentlicht. Berücksichtigen Sie daher stets Folgendes:
 
 Stabile Releases: Wählen Sie Komponenten aus vertrauenswürdigen Repositories mit stabilen Versionen.
 Gründe für Updates: Verstehen Sie den Zweck neuer Releases, ob sie neue Funktionalitäten, Bugfixes usw. einführen.
+Code-Qualität: Achten Sie auf die Qualität des Codes und die Aktivität der Community rund um die Komponente.
+
+- Verbreitung, aktive Weiterentwicklung, Anzahl Contributors
+- "Empfiehlt" SAP das Projekt eventuell auch, oder nutzt dieses?
+  - Kommt es vielleicht sogar von der SAP und SAP übernimmt den Support/die Wartung?
+- Argument "Keine Software ohne Enterprise Support" durchgehen
+
+### Best Practices: Vorgehen und Prozess
+
+**Regelmäßige Wiedervorlage**
 
 6. Revisionsprozess
    Wir empfehlen eine regelmäßige, periodische Überprüfung aller verwendeten Open-Source-Komponenten, idealerweise einmal pro Jahr. Inkludieren Sie auch die Recherche nach neuen OSS-Projekten, die zentrale Funktionalitäten implementieren, in diesen Revisionsprozess. Dies stellt sicher, dass Ihr Produkt/Ihre Dienstleistung stets die besten verfügbaren Open-Source-Komponenten nutzt.
+
+**Kompetenz**
 
 7. Fähigkeiten und Wartung
    Team-Expertise: Stellen Sie sicher, dass Ihr Team die notwendigen Fähigkeiten besitzt, um die Open-Source-Software zu warten, zu aktualisieren und bereitzustellen.
    Fortbildung: Falls Lücken bestehen, planen Sie Schulungen ein, um die Bereitstellung und Integration effektiv zu handhaben.
 
-8. Infrastruktur und Technischer Support
-   Kompatibilität mit der Entwicklungsinfrastruktur: Stellen Sie sicher, dass die Komponente gut mit Ihren bestehenden Entwicklungstools und -prozessen harmoniert.
-   Compliance und Sicherheit: Halten Sie sich an Lizenz-, Sicherheits- und Exportkontrollvorschriften und seien Sie bereit, Abhängigkeiten zu verwalten.
-   Weitere Überlegungen:
-
-Lizenzkonformität: Verstehen Sie die Lizenzanforderungen der OSS und stellen Sie sicher, dass diese mit Ihren Unternehmensrichtlinien übereinstimmen.
-Code-Qualität: Achten Sie auf die Qualität des Codes und die Aktivität der Community rund um die Komponente.
-
-10. Lizenzüberlegungen
-    Permissive Lizenzen: Bevorzugen Sie Lizenzen, die flexibler sind, Änderungen erlauben und die Einschränkungen minimieren.
-    Rechte zur Modifikation: Stellen Sie sicher, dass die Lizenz es Ihnen erlaubt, die Komponente zu modifizieren, was entscheidend ist, um Bugs zu beheben oder Funktionen hinzuzufügen, falls die Community-Unterstützung nachlässt.
+**Verantwortlichkeit**
 
 11. Sicherheitsbewusstsein
     Verwaltung von Sicherheitslücken: Erkennen Sie an, dass Open-Source-Komponenten Sicherheitslücken aufweisen können, und haben Sie Strategien bereit, diese umgehend zu beheben.
 
-### TODO weitere Punkte
-
-- Verbreitung, aktive Weiterentwicklung, Anzahl Contributors
 - Wer kümmert sich um Updates, wer testet diese, bewertet diese
+- Verhalten bei Upgrades
+
+### Sicherheitsaspekte
+
 - Worauf hätte die Software Zugriff im System, ist sie nur auf Entwicklung oder auch Produktiv, bestehen Netzwerkverbindungen
-- Entscheidungsmatrix SAP aus Open Source Forum (-> Fabian fragt beim Referenten nach)
-- (Support, ...)
-- Wie verbreitet ist das OpenSource Projekt/Produkt?
-- "Empfiehlt" SAP das Projekt eventuell auch, oder nutzt dieses?
-- Wird das OpenSource Projekt in Blogs erwähnt? Wie ist die Bewertung in diesen Blogs?
-- Bevor man sich für Open Source oder ein bestimmtes Open Source Projekt entscheidet, sollte man folgende Dinge prüfen bzw. folgende Fragestellungen für sich beantworten:
-    - Open Source bedeutet nicht automatisch kostenlos, was sind die Lizenzkosten?
-    - Wie verbreitet ist ein Open Source Projekt?
-    - Kommt es vielleicht sogar von der SAP und SAP übernimmt den Support/die Wartung?
-    - Empfiehlt die SAP ein bestimmtes Projekt, oder nutzt es gar selbst?
-    - Was sagt die Community zu einem Projekt, wie ist das Feedback, wie bekannt ist es (in Diskussionsforen ...), wie ist die „Bewertung“?
-    - ...
-
-[^1] Bauer et al., "A structured approach to assess third-party library usage", in 28th IEEE International Conference on Software Maintenance (ICSM)", <https://doi.org/10.1109/ICSM.2012.6405311>
-
-<!--
-@InProceedings{2012_bauerv_library,
-  author    = {Veronika Bauer and Lars Heinemann and Florian Deissenboeck},
-  booktitle = {28th {IEEE} International Conference on Software Maintenance {ICSM}},
-  title     = {A structured approach to assess third-party library usage},
-  year      = {2012},
-  pages     = {483--492},
-  publisher = {IEEE Computer Society},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  biburl    = {https://dblp.org/rec/conf/icsm/BauerHD12.bib},
-  doi       = {10.1109/ICSM.2012.6405311},
-  timestamp = {Wed, 16 Oct 2019 14:14:50 +0200},
-  url       = {https://doi.org/10.1109/ICSM.2012.6405311},
-}
--->
-
-## Sicherheitsaspekte
-
 - Horrorszenarien durchgehen
-
-## Verhalten bei Upgrades
-
-## Lizenzen
-
-- "Die Lizenz einer Open-Source-Komponente ist wichtig. Sie kann auch die kommerzielle Nutzung untersagen oder eine kompatible Lizenz für alle durchgeführten Modifikationen erzwingen. Ebenfalls können Lizenzen verschiedener Open-Source-Projekte und die Lizenz der eigenen Software miteinander inkompatibel sein."
-
-## Support
-
-- Argument "Keine Software ohne Enterprise Support" durchgehen
 
 ## Auslieferung von Open-Source-Abhängigkeiten in eigenen Produkten
 
@@ -199,4 +175,4 @@ Eine Problemstellung bei der Nutzung von Open-Source-Komponenten in der eigenen 
 Die meisten Open-Source-ABAP-Projekte verwenden den Kundennamensraum (`Z`/`Y`). Kunden, an die Ihre Software ausgeliefert wird, verwenden auch den Kundennamensraum. Sollte Ihr Add-On einen reservierten Namensraum verwenden (`/NSPC/`), um Namenskollisionen zu verhindern, so gilt diese Garantie nicht für die abhängigen Open-Source-Komponenten. Zudem könnten Kunden Bedenken äußern, wenn Softwareanbieter in ihren Kundennamensraum "eindringen". Es kann sogar sein, dass im Kundensystem die Open-Source-Komponente bereits installiert ist und dort aktiv verwendet wird, aber in einer für Sie unpassenden Version.
 
 {: .solution }
-Ein möglicher Lösungsansatz ist die Open-Source-Komponente in Ihren Namensraum zu kopieren und somit isoliert auszuliefern und zu aktualisieren. Mit [abaplint](https://github.com/abaplint/abaplint) ist es möglich eine CI-Pipeline aufzusetzen, die ein Mirror-Repository der Open-Source-Komponente in Ihrem reserviertem Namensraum aufsetzt und automatisch aktualisiert. Dieses Repository können Sie dann mit ausliefern. abapGit verwendet diese Technik, um das [ajson](https://github.com/sbcgua/ajson) Projekt mit in abapGit auszuliefern. Details können Sie in folgendem Blog-Post lesen: [Automagic standalone renaming of ABAP objects](https://community.sap.com/t5/application-development-and-automation-blog-posts/automagic-standalone-renaming-of-abap-objects/ba-p/13499851).
+Ein möglicher Lösungsansatz ist die Open-Source-Komponente in Ihren Namensraum zu kopieren und somit isoliert auszuliefern und zu aktualisieren. Mit [abaplint](https://github.com/abaplint/abaplint) ist es möglich, eine CI-Pipeline aufzusetzen, die ein Mirror-Repository der Open-Source-Komponente in Ihrem reserviertem Namensraum aufsetzt und automatisch aktualisiert. Dieses Repository können Sie dann mit ausliefern. abapGit verwendet diese Technik, um das [ajson-Projekt](https://github.com/sbcgua/ajson) zusammen mit abapGit auszuliefern. Details können Sie in folgendem Blog Post lesen: [Automagic standalone renaming of ABAP objects](https://community.sap.com/t5/application-development-and-automation-blog-posts/automagic-standalone-renaming-of-abap-objects/ba-p/13499851).
