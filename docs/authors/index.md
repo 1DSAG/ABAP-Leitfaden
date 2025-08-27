@@ -15,7 +15,7 @@ nav_order: 15
 <th style="text-align: left">Unternehmen</th>
 <th style="text-align: left">Tätigkeit beim Leitfaden</th>
 </tr>
-</thead>
+</thead>.
 <tbody>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/alexander-lukas/">Alexander Lukas</a></td>
@@ -135,7 +135,7 @@ nav_order: 15
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/krapf/">Marco Krapf</a></td>
 <td>Würth IT GmbH</td>
-<td>Autor, Reviewer</td>
+<td>Autor</td>
 </tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/marcus-richter-cgi/">Marcus Richter</a></td>
@@ -217,15 +217,13 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 </tr>
 
 <tr class="odd">
+<td>Marco Krapf</td>
+<td>ALM, Testing / weitere Testwerkzeuge</td>
+<td>Steht seit zehn Jahren als SAP Solution Manager Libero auf dem Spielfeld. Anfangs in einem super Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozess-Management, Test-Management, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Aufgaben und Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
+
 <td>Jan Sauerland</td>
 <td>Moderne ABAP Entwicklung</td>
 <td>Als Hauptansprechpartner für ABAP-Programmierung im Unternehmen hatte ich auf Basis des alten ABAP-Leitfadens von 2016 bereits unternehmensinterne ABAP-Richtlinien entworfen. Daher freue ich mich sehr darüber, nun selbst am DSAG-Leitfaden für ABAP mitwirken und mein gesammeltes Wissen einbringen zu können.</td>
-</tr>
-
-<tr class="odd">
-<td>Marco Krapf</td>
-<td>ALM, Softwaretests (weitere Testwerkzeuge)</td>
-<td>Als SAP Solution Manager Libero bin ich seit zehn Jahren auf dem SAP-Spielfeld unterwegs - allerdings nicht in der Position des ABAP-Entwicklers, sondern mit der ALM-Werkzeugkiste in der Hand, um meine Kolleginnen und Kolleginnen mit den Tools des Application Lifecycle Managements wie Prozessmanagement, Testmanagement, Custom Code Management oder Monitoring zu unterstützen. Das fühlt sich an wie ein Point-and-Click-Adventure, bei dem ich jeden Tag vor neuen Rätseln stehe, die ich durch logisches Denken, reden mit den anderen Charakteren und Klicken auf dem Bildschirm lösen muss, um weiterzukommen. SAP ist für mich ein Open-World-Spiel ohne richtiges Ende, das nie langweilig wird, wenn man den nötigen Humor mitbringt.</td>
 </tr>
 
 <tr class="odd">
@@ -256,9 +254,25 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 <td>ABAP-Dino (seit 1994). Seit 2003 teile ich meine Programmiererfahrungen im Tricktresor. Seit 2008 bei Inwerken als Entwickler, Programmierbegleiter, Initiator vom Code-Dojo, Produktentwicklung AppKnight, Ausrichter von SAP Inside Tracks und ABAP Code Retreats in Hannover. Durch die Mitarbeit beim DSAG-Leitfaden habe ich die Möglichkeit, Wissen weiterzugeben und selbst zu lernen.</td>
 </tr>
 
+<tr class="odd">
+<td>Sven Treutler</td>
+<td>Versionsverwaltung, Dokumentation</td>
+<td>ABAP-Entwickler aus Leidenschaft. Seit 2010 beschäftigt ich mich mit Themen rund um die ABAP-Entwicklung bei der rku.it GmbH in Herne. Dort kümmere ich mich um neue Technologien und Qualitätssicherung im ABAP-Umfeld. Meinen Masterabschluss machte ich an der Westfälischen Hochschule in Gelsenkirchen. Privat besuche ich schöne Orte mit meiner Frau, bin stolzer Katzenbesitzer und schwarz-gelber Fußballanhänger.</td>
+</tr>
+
+<tr class="odd">
+<td>Florian Henninger</td>
+<td>ABAP</td>
+<td>Als Entwickler und Problemlöser bin ich seit langen immer daran interesssiert, was um mich rum passiert. Ich schaue gerne über den Tellerrand und freue mich über Erkenntnisse und auch die Lösungen, die es so für uns alle in der täglichen Arbeit gibt. Als ADT User der ersten Stunde bin ich immer wieder fasziniert, wieviel Mehrwert es gibt, wenn man auf die kleinen Dinge um sich herum achtet und sich nicht im Alltag verliert. Genau das, ist meine Motivation hier (wieder) mit zu machen. Ich bin mir sicher, Sie finden auch etwas für sich.</td>
+</tr>
+
 </tbody>
 </table>
 
 # Danksagungen
 
 Hier weitere Danksagungen ...
+
+
+
+

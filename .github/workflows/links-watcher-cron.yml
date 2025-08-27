@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout source code"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Link Checker
         id: lychee
-        uses: lycheeverse/lychee-action@v2.4.0
+        uses: lycheeverse/lychee-action@v2.5.0
         with:
           args: --verbose --no-progress --max-concurrency 2 --exclude-mail --exclude-loopback './**/*.md'
           output: ./lychee/out.md
