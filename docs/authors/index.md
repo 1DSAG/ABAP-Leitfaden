@@ -222,6 +222,7 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <td>Steht seit zehn Jahren als SAP Solution Manager Libero auf dem Spielfeld. Anfangs in einem super Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozess-Management, Test-Management, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Aufgaben und Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
 </tr>
 
+<tr class="odd">
 <td>Jan Sauerland</td>
 <td>Moderne ABAP Entwicklung</td>
 <td>Als Hauptansprechpartner für ABAP-Programmierung im Unternehmen hatte ich auf Basis des alten ABAP-Leitfadens von 2016 bereits unternehmensinterne ABAP-Richtlinien entworfen. Daher freue ich mich sehr darüber, nun selbst am DSAG-Leitfaden für ABAP mitwirken und mein gesammeltes Wissen einbringen zu können.</td>
