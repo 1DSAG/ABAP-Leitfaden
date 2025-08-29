@@ -25,7 +25,7 @@ Eine Auswertung aller erzeugten Nachrichten kann über die Transaktion TAANA fü
 
 Eine solche Auswertung empfiehlt sich, um sich einen Überblick zu verschaffen, welche Nachrichtenarten überhaupt und hauptsächlich verwendet werden. In welchen Sprachen werden meine Belege (Formulare) ausgegeben und wie groß ist das jeweilige Volumen. Dies hilft bei einer weiteren Planung von Umstellungs- und Go-Live Szenarien.  
 
-Eine genaue Anleitung zur Nutzung der Transaktion TAANA finden Sie unter folgendem Link (HIER SOFTWAY LINK ERLAUBT BEI YOUTUBE????).
+Eine genaue Anleitung zur Nutzung der Transaktion TAANA finden Sie unter folgendem Link als [YouTube](https://youtu.be/HsHHBt5znOE) Video.
 
 ![Pflege der Tabelle](./img/image-09.png)
 
