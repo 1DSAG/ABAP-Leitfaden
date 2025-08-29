@@ -220,6 +220,7 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <td>Marco Krapf</td>
 <td>ALM, Testing / weitere Testwerkzeuge</td>
 <td>Steht seit zehn Jahren als SAP Solution Manager Libero auf dem Spielfeld. Anfangs in einem super Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozess-Management, Test-Management, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Aufgaben und Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
+</tr>
 
 <td>Jan Sauerland</td>
 <td>Moderne ABAP Entwicklung</td>
@@ -272,6 +273,7 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 # Danksagungen
 
 Hier weitere Danksagungen ...
+
 
 
 
