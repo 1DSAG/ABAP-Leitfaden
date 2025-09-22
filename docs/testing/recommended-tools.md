@@ -87,8 +87,9 @@ Auch für SAP Cloud ALM gibt es eine integrierte Lösung zur Testautomatisierung
  
 SAP Cloud ALM bietet mit der "[SAP Cloud ALM Test Automation API](https://api.sap.com/api/CALM_TEST_AUTOMATION/overview)" eine Schnittstelle zu Drittanbieter-Werkzeugen. Über diese Schnittstelle kann neben Produkten anderer Anbieter auch das umfassende Tricentis-Testautomatisierungstool "SAP Test Automation by Tricentis" angeschlossen werden. Damit sind integrierte Tests mit SAP-Anwendungen und Drittanbieter-Anwendungen möglich. Auch dieses Produkt von Tricentis kann über den SAP-Vertrieb erworben werden.
 
-![Darstellung: Integration der SAP ALM-Tools mit Test Automatisierungs-Tools von Tricentis](./img/tricentis_test_automation_uebersicht.jpg)
-*Integration der SAP ALM-Tools mit Test Automatisierungs-Tools von Tricentis (Quelle: SAP)*
+![Darstellung: Integration der SAP ALM-Tools mit den Test Automatisierungs-Tools von Tricentis](./img/tricentis_test_automation_uebersicht.jpg)
+*Integration der SAP ALM-Tools mit den Test Automatisierungs-Tools von Tricentis (Quelle: SAP)*
+
 
 
 
