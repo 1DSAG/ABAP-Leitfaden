@@ -78,6 +78,9 @@ Ein Testautomatisierungswerkzeug für S/4HANA Cloud Public Edition ist in SAP S/
  
 Für umfangreichere Szenarien können Testwerkzeuge von Drittanbietern über die von SAP bereitgestellten APIs der [SAP Cloud ALM Test Automation API](https://api.sap.com/api/CALM_TEST_AUTOMATION/overview) integriert werden. Dies ermöglicht Flexibilität bei der Verwaltung komplexer Testumgebungen.
 
+![Darstellung: Testen mit SAP Cloud ALM](./img/sap_test_automation_api.jpg)
+*Testen mit SAP Cloud ALM (Quelle: SAP)*
+
 ## Tricentis Test Automation
 Tricentis ist ein eigenständiges Unternehmen, das nicht zu SAP gehört, aber [durch eine strategische Partnerschaft sehr gut in die SAP-Welt integriert](https://support.sap.com/en/alm/partners/test-automation.html) und daher im SAP-Kontext die empfohlene Lösung zur Testautomatisierung ist.
 
@@ -93,6 +96,7 @@ SAP Cloud ALM bietet mit der "[SAP Cloud ALM Test Automation API](https://api.sa
 
 ![Darstellung: Integration der SAP ALM-Tools mit den Test Automatisierungs-Tools von Tricentis](./img/tricentis_test_automation_uebersicht.jpg)
 *Integration der SAP ALM-Tools mit den Test Automatisierungs-Tools von Tricentis (Quelle: SAP)*
+
 
 
 
