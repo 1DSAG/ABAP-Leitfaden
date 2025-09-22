@@ -89,8 +89,12 @@ SAP Cloud ALM bietet mit der "[SAP Cloud ALM Test Automation API](https://api.sa
 
 ...verschiedene Ausprägungen...Lizenzen teilweise schon dabei...
 
+![Darstellung: Integration der SAP ALM-Tools mit Test Automatisierungs-Tools von Tricentis](./img/tricentis_test_automation_uebersicht.jpg)
+*Integration der SAP ALM-Tools mit Test Automatisierungs-Tools von Tricentis (Quelle: SAP)*
+
 (Grafik selber machen auf deutsch, welches Tricentis-Tool für welches ALM-System etc., in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?) und die einzelnen Punkte kurz beschreiben
 ![Optionaler Alternativtext, falls sich das Bild nicht laden lässt](./img/tricentis_tools_uebersicht.png)
+
 
 
 
