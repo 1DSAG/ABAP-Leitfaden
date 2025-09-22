@@ -95,7 +95,7 @@ nav_order: 15
 <tr class="header">
 <td>Harald Weidmann</td>
 <td>Würth IT GmbH</td>
-<td></td>
+<td>Autor</td>
 </tr>
 <tr class="odd">
 <td>Holger Stumm</td>
@@ -274,6 +274,7 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 # Danksagungen
 
 Hier weitere Danksagungen ...
+
 
 
 
