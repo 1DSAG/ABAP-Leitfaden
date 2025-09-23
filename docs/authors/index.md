@@ -95,7 +95,7 @@ nav_order: 15
 <tr class="header">
 <td>Harald Weidmann</td>
 <td>Würth IT GmbH</td>
-<td></td>
+<td>Autor</td>
 </tr>
 <tr class="odd">
 <td>Holger Stumm</td>
@@ -223,6 +223,12 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 </tr>
 
 <tr class="odd">
+<td>Harald Weidmann</td>
+<td>Testing / weitere Testwerkzeuge</td>
+<td>Nach über 20 Jahren Erfahrung mit anderen Programmiersprachen und Entwicklungsumgebungen bin ich 2016 bei der Würth IT in die SAP und ABAP-Welt eingestiegen. Im Jahr 2018 habe ich mit dem Aufbau des Testmanagements begonnen, bin verantwortlich für das Globale Testmanagement im SAP-Umfeld bei Würth und versuche das Testen auf allen Ebenen voranzutreiben. Leider wird das Testen in vielen Bereichen immer noch sehr stiefmütterlich behandelt, daher ist es wichtig, in einem Leitfaden für ABAP das Thema Testen aufzugreifen.</td>
+</tr>
+
+<tr class="odd">
 <td>Jan Sauerland</td>
 <td>Moderne ABAP Entwicklung</td>
 <td>Als Hauptansprechpartner für ABAP-Programmierung im Unternehmen hatte ich auf Basis des alten ABAP-Leitfadens von 2016 bereits unternehmensinterne ABAP-Richtlinien entworfen. Daher freue ich mich sehr darüber, nun selbst am DSAG-Leitfaden für ABAP mitwirken und mein gesammeltes Wissen einbringen zu können.</td>
@@ -274,6 +280,8 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 # Danksagungen
 
 Hier weitere Danksagungen ...
+
+
 
 
 
