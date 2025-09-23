@@ -70,9 +70,16 @@ Als Nachfolgeprodukt des SAP Solution Managers, dessen Mainstream-Wartungsende s
 Ähnlich wie im SAP Solution Manager gliedert sich das [Testmangement in SAP Cloud ALM](https://support.sap.com/en/alm/sap-cloud-alm/implementation/sap-cloud-alm-implementation-expert-portal/testmanagement.html?anchorId=section_1012737862
 ) in eine App für die **Testvorbereitung** von manuellen und automatisierten Testfällen, eine App für die Verwaltung von **Testplänen**, eine für die **Testausführung**, eine Analytics-App für die **Testausführungsanalyse** sowie eine zur Übersicht über Testfallfehler, hier **Defects** genannt.
 
-Eine (Stand: Mai 2025) in SAP Cloud ALM noch fehlende Funktion, die von vielen Anwendern im Solution Manager intensiv genutzt wird, ist die Gruppierung von Testfällen innerhalb eines Testplans in Testpakete, mit der Möglichkeit zur passgenauen Zuordnung von Testergruppen inklusive Wiederverwendung (!!!ist-das-noch-so???), wie im Abschnitt [Test-Suite](#Test-Suite) dargestellt.
+Eine (Stand: Mai 2025) in SAP Cloud ALM noch fehlende Funktion, die von vielen Anwendern im Solution Manager intensiv genutzt wird, ist die Gruppierung von Testfällen innerhalb eines Testplans in Testpakete, mit der Möglichkeit zur passgenauen Zuordnung von Testergruppen inklusive Wiederverwendung, wie im Abschnitt [Test-Suite](#Test-Suite) dargestellt.
 
-SAP liefert eine große Anzahl an Standardprozessen inklusive Prozessablauf-Diagrammen und der zugehörigen Testaktivitäten aus (!!!nochmal checken!!!), die sehr leicht in SAP Cloud ALM verwendet und bei Bedarf angepasst werden können, ähnlich wie beim [Testschritt-Designer](#Testschritt-Designer) aus dem Focused Build-Paket.
+SAP liefert eine große Anzahl an Standardprozessen inklusive Prozessablauf-Diagrammen und der zugehörigen Testaktivitäten aus, die sehr leicht in SAP Cloud ALM verwendet und bei Bedarf angepasst werden können, ähnlich wie beim [Testschritt-Designer](#Testschritt-Designer) aus dem Focused Build-Paket.
+
+Ein Testautomatisierungswerkzeug für S/4HANA Cloud Public Edition ist in SAP S/4HANA Cloud integriert und unterstützt das automatisierte Testen von Standard- und kundenspezifischen Geschäftsprozessen. Es sind über 300 vorgefertigte Testskripte vorhanden, die auf SAP Best Practices basieren. Diese Skripte decken Standardgeschäftsprozesse ab und können direkt ausgeführt werden.
+ 
+Für umfangreichere Szenarien können Testwerkzeuge von Drittanbietern über die von SAP bereitgestellten APIs der [SAP Cloud ALM Test Automation API](https://api.sap.com/api/CALM_TEST_AUTOMATION/overview) integriert werden. Dies ermöglicht Flexibilität bei der Verwaltung komplexer Testumgebungen.
+
+![Darstellung: Testen mit SAP Cloud ALM](./img/sap_test_automation_api.jpg)
+*Testen mit SAP Cloud ALM (Quelle: SAP)*
 
 ## Tricentis Test Automation
 Tricentis ist ein eigenständiges Unternehmen, das nicht zu SAP gehört, aber [durch eine strategische Partnerschaft sehr gut in die SAP-Welt integriert](https://support.sap.com/en/alm/partners/test-automation.html) und daher im SAP-Kontext die empfohlene Lösung zur Testautomatisierung ist.
@@ -87,10 +94,13 @@ Auch für SAP Cloud ALM gibt es eine integrierte Lösung zur Testautomatisierung
  
 SAP Cloud ALM bietet mit der "[SAP Cloud ALM Test Automation API](https://api.sap.com/api/CALM_TEST_AUTOMATION/overview)" eine Schnittstelle zu Drittanbieter-Werkzeugen. Über diese Schnittstelle kann neben Produkten anderer Anbieter auch das umfassende Tricentis-Testautomatisierungstool "SAP Test Automation by Tricentis" angeschlossen werden. Damit sind integrierte Tests mit SAP-Anwendungen und Drittanbieter-Anwendungen möglich. Auch dieses Produkt von Tricentis kann über den SAP-Vertrieb erworben werden.
 
-...verschiedene Ausprägungen...Lizenzen teilweise schon dabei...
+![Darstellung: Integration der SAP ALM-Tools mit den Test Automatisierungs-Tools von Tricentis](./img/tricentis_test_automation_uebersicht.jpg)
+*Integration der SAP ALM-Tools mit den Test Automatisierungs-Tools von Tricentis (Quelle: SAP)*
 
-(Grafik selber machen auf deutsch, welches Tricentis-Tool für welches ALM-System etc., in Anlehnung an die Darstellung von SAP --> "Quelle...in Anlehnung an..."?) und die einzelnen Punkte kurz beschreiben
-![Optionaler Alternativtext, falls sich das Bild nicht laden lässt](./img/tricentis_tools_uebersicht.png)
+
+
+
+
 
 
 
