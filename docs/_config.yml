@@ -39,22 +39,23 @@ plugins:
   - jekyll-remote-theme
 
 callouts:
-  highlight:
+  recommendation:
+    title: "Empfehlung"
     color: yellow
+  note:
+    title: "Hinweis"
+    color: purple
+  solution:
+    title: "Lösung"
+    color: green
+  warning:
+    title: "Warnung"
+    color: red
   important:
-    title: Wichtig
+    title: "Wichtig"
     color: blue
   new:
-    title: Neu
-    color: green
-  note:
-    title: Hinweis
-    color: purple
-  warning:
-    title: Warnung
-    color: red
-  solution:
-    title: Lösung
+    title: "Neu"
     color: green
 
 mermaid:
