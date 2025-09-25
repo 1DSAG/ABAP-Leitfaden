@@ -217,6 +217,12 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 </tr>
 
 <tr class="odd">
+<td>Fabian Lupa</td>
+<td>Open Source</td>
+<td>Als Senior Software Engineer und Trainer verantworte ich schwerpunktmäßig die Aus- und Weiterbildung von Mitarbeitern im Bereich der ABAP-Entwicklung bei adesso sowie das Developer Enablement in Kundenprojekten. In diesem Zusammenhang sind aktuelle Richtlinien und Best Practices von zentraler Bedeutung – sowohl für Neueinsteiger als auch für erfahrene Entwickler. Daher war es mir ein besonderes Anliegen, den Leitfaden auf den neuesten Stand zu bringen und auch bislang nicht abgedeckte Themen darin zu integrieren.</td>
+</tr>
+
+<tr class="odd">
 <td>Marco Krapf</td>
 <td>ALM, Testing / weitere Testwerkzeuge</td>
 <td>Steht seit zehn Jahren als SAP Solution Manager Libero auf dem Spielfeld. Anfangs in einem super Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozess-Management, Test-Management, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Aufgaben und Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
