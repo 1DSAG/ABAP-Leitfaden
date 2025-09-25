@@ -20,7 +20,7 @@ Open Source hat es in der ABAP-Entwicklung besonders schwer Fuß zu fassen. Imme
 2. ...an Open-Source-Projekten mitzuwirken ([Beteiligung an Open-Source-Software](contributing-to-open-source-software))
 3. ...eigene Lösungen als Open-Source-Projekt bereitzustellen ([Entwicklung von Open-Source-Software](developing-open-source-software)).
 
-{: .highlight }
+{: .recommendation }
 Eine _Open-Source-Strategie_ muss jedes Unternehmen für sich selbst erschließen. Hier finden Sie eine Arbeitsgrundlage und Erfahrungsberichte.
 
 ## Was ist Open Source?
@@ -60,7 +60,7 @@ Beispiele: [ABAP SDK für Azure](https://github.com/microsoft/ABAP-SDK-for-Azure
 
 1. Durch die Auseinandersetzung mit externen Bibliotheken und deren Implementierung können Sie Ihre Kenntnisse erweitern mit Blick auf objektorientiertes Design und Softwarearchitektur. Sie können mit neuen Technologien oder Ansätzen vertraut werden und das direkt mit produktivem Quellcode, statt Demobeispielen. Dieser Effekt verstärkt sich insbesondere bei der Beteiligung durch eigene Features oder Bugfixes und Code Reviews.
 
-{: .highlight }
+{: .recommendation }
 Sie sehen, es gibt viele Stellen an denen Open Source, auch in der ABAP-Entwicklung, einen erheblichen Mehrwert liefern kann. Eine Auseinandersetzung mit dem Thema lohnt sich daher in jedem Fall, selbst wenn nur einige der oben genannten Punkte für Sie konkret relevant sind.
 
 ## Ausbaustufen
