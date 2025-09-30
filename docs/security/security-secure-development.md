@@ -169,7 +169,7 @@ SAP-Systeme basieren auf der strikten Trennung von Mandanten. Diese Trennung wir
 Dateizugriffe sind besonders kritisch, da sie direkt auf das Dateisystem des Servers zugreifen. ABAP bietet hierzu `OPEN DATASET`, `READ`, `TRANSFER` usw., die alle über das Objekt `S_DATASET` abgesichert sind. Schutzmaßnahmen beinhalten:
 
 * Nutzung von `AUTHORITY_CHECK`
-* Verwendung logischer Dateinamen
+* Verwendung logischer Dateinamen (Transaktion FILE)
 * Vermeidung von Directory Traversal durch das Blockieren von „..“ oder `/`
 * Pflegen der Tabelle `SPTH`
 
