@@ -71,7 +71,7 @@ Sind die APIs aktuell nicht freigegeben, können Sie auf sogenannte Wrapper erst
 
 {: .note }
 > [Clean Core Extensibility (White Paper)](https://www.sap.com/documents/2024/09/20aece06-d87e-0010-bca6-c68f7e60039b.html)
-
+>
 > [Extensibility Guide (Aktuelle Version)](https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html)
 
 ### Migration von Reports
