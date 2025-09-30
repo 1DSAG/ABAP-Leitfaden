@@ -52,12 +52,28 @@ ABAP Cloud - Verfügbarkeit
 
 Die Verwendung von freigegebenen APIs (Entwicklungsobjekte mit C1-Freigabe) ist zentraler Bestandteil von ABAP Cloud. SAP gibt Ihnen als Kunde die Zusage, dass diese API stabil ist und für eigene Entwicklungen genutzt werden kann. Damit können in ABAP Cloud nur SAP Objekt verwendet werden, die SAP auch explizit freigegeben hat.
 
-### 3-TIER Modell
+### Level Concept
 
-Das 3-TIER Modell ist zentraler Bestandteil, wenn Sie einen Übergang von klassischer ABAP Entwicklung in Richtung ABAP Cloud gehen. Dabei sind erst einmal alle Objekte, die außerhalb einer Software Komponente, kurz SWC, mit ABAP Cloud sind, nicht Clean Core. Die Aufgabe besteht für Sie nun darin, die Entwicklungen ABAP Cloud Ready zu migrieren. Dabei werden Objekte von TIER-3 auf TIER-1 verschoben und nicht freigegebene APIs ersetzt. 
+Das Clean Core Level Concept wurde im August 2025 ausgeliefert und löst das bisherige 3-TIER Modell ab. Bei dem Level Concept geht es um die Klassifizierung ihrer kundeneigenen Entwicklung in vier verschiedene Level (Level A-D). Dabei ist Level A mit ABAP Cloud gleichzusetzen und damit automatisch Clean Core und Cloud Ready. Die Level B-D wurden neu klassifiziert und mit Hilfe des ABAP Test Cockpit klassifiziert.
 
-Sind die APIs aktuell nicht freigegeben, können Sie auf TIER-2 sogenannte Wrapper erstellen, die SAP Funktionalität kapseln und für Ihre Entwicklung in TIER-1 freigeben. Im Zuge dessen sollten Sie einen Influence Request bei SAP erstellen, um die Freigabe oder eine alternative API zu erhalten. Weitere Informationen zur Erstellung von Wrappern und welche Objekte sich eignen, finden sie im SAP Guide: [ABAP Cloud API Enablement](https://www.sap.com/documents/2023/05/b0bd8ae6-747e-0010-bca6-c68f7e60039b.html).
+* Level B - Als Clean Core eingestuft und darunter fallen klassische Technologien, wie IDOC oder das ALV Grid. Hierzu gibt eine Liste an Technologien, die im Hinweis [3578329](https://me.sap.com/notes/3578329) näher beschrieben und ausgeführt werden. Zusätzlich zum Hinweis wird das Cloudification Repository verwendet, um die als "[Classic API](https://sap.github.io/abap-atc-cr-cv-s4hc/?version=objectClassifications_3TierModel.json&states=classicAPI)" zugeordneten Objekte zu klassifizieren.
+* Level C - Dieser Level wird als "SAP Intern" beschrieben und ist "Conditional Clean Core". Die APIs und Objekt sind nicht explizit freigegeben oder verboten, SAP hält sich allerdings die Option offen, die Objekte zu ändern oder zu löschen.
+* Level D - Alle Objekte die hier als "[No API](https://sap.github.io/abap-atc-cr-cv-s4hc/?version=objectClassifications_3TierModel.json&states=noAPI)" gekennzeichnet wurden, fallen unter die Kategorie kein Clean Core. Objekte die über das Cloudification Repository klassifiziert wurden, sollten Sie nicht mehr in Ihrer Entwicklung nutzen.
 
+![Level Concept](./img/image-10.png)
+
+Clean Core Level Concept
+{: .img-caption}
+
+{: .recommendation }
+Auch wenn nun klassische Technologien als Clean Core definiert wurden, sollten Sie bei der Neuentwicklung auf Software Komponenten und ABAP Cloud setzen. Ebenfalls sollten Sie sich bei solchen Neuimplementierungen Gedanken machen, ob Sie diese On-Stack oder Side-by-Side durchführen wollen. 
+
+Sind die APIs aktuell nicht freigegeben, können Sie auf sogenannte Wrapper erstellen, die SAP Funktionalität kapseln und für Ihre Entwicklung in Level A freigeben. Im Zuge dessen sollten Sie einen Influence Request bei SAP erstellen, um die Freigabe oder eine alternative API zu erhalten. Weitere Informationen zur Erstellung von Wrappern und welche Objekte sich eignen, finden sie im SAP Guide: [ABAP Cloud API Enablement](https://www.sap.com/documents/2023/05/b0bd8ae6-747e-0010-bca6-c68f7e60039b.html).
+
+{: .note }
+> [Clean Core Extensibility (White Paper)](https://www.sap.com/documents/2024/09/20aece06-d87e-0010-bca6-c68f7e60039b.html)
+>
+> [Extensibility Guide (Aktuelle Version)](https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html)
 
 ### Migration von Reports
 
@@ -71,7 +87,7 @@ Aktuell gibt es die folgenden Nachfolger:
 
 Mit der Einführung von ABAP Cloud, wurden verschiedene Entwicklungskonzepte überarbeitet und Nachfolger zur Verfügung gestellt. Sie sollten daher beachten, dass die alten Konzepte teilweise nicht mehr gültig sind. Dazu einige Beispiele:
 
-| Bereich           | Alt (TIER-3)       | Neu (TIER-1)                        |
+| Bereich           | Alt (Level B-D)    | Neu (Level A)                       |
 |-------------------|--------------------|-------------------------------------|
 | Application Log   | SLG0, SLG1         | CL_BALI_OBJECT_HANDLER, ABAP API    |
 | Job               | SM36, SM37, Report | Application Job                     |

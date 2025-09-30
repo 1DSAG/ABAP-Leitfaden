@@ -29,7 +29,7 @@ Extensibility Szenarien
 
 ### On-Stack
 
-Auf der linken Seite finden Sie die On-Stack Extensibility, unterteilt in Pro Code und Low Code. Im Bereich Pro Code finden Sie die klassische ABAP Cloud Entwicklung mit dem 3-TIER Modell, der Verwendung von Shared APIs und der Erweiterung von Objekten (C0-Objekte). Mehr zum Thema ABAP Cloud finden Sie im entsprechenden Abschnitt von Clean Core. 
+Auf der linken Seite finden Sie die On-Stack Extensibility, unterteilt in Pro Code und Low Code. Im Bereich Pro Code finden Sie die klassische ABAP Cloud Entwicklung mit dem Clean Core Level Concept, der Verwendung von Shared APIs und der Erweiterung von Objekten (C0-Objekte). Mehr zum Thema ABAP Cloud finden Sie im entsprechenden Abschnitt von Clean Core. 
 
 Im Low Code Bereich gibt es vor allem die Key-User Extensibility, das sind einige Fiori Anwendungen, mit denen man das System erweitern kann. Die häufigsten Szenarien in diesem Bereich sind
 
