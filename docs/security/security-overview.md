@@ -28,11 +28,11 @@ SAP hat im Laufe der Zeit verschiedene Sicherheits-APIs und Sicherheitsfunktione
 
 - OS-Befehlsbeschränkung
 - RFC-Callback-Whitelisting
-- Vereinheitlichtes Konnektivitäts-Framework (UCON)
+- Unified Connectivity Protocol (UCON)
 - HTTP-Pfad-Whitelist
 - Ausgabekodierung und
 - Dienstprogramme für die Eingabevalidierung
-- Virus-Scan-Schnittstelle
+- Virus Scan Interface (VSI)
 - Zugangskontroll-API
 - Protokollierungs-APIs (eine Menge) und implizite Protokollierung
 
