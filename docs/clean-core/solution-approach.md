@@ -65,8 +65,8 @@ Das Clean Core Level Concept wurde im August 2025 ausgeliefert und löst das bis
 Clean Core Level Concept
 {: .img-caption}
 
-{: .recommandation }
-> Auch wenn nun klassische Technologien als Clean Core definiert wurden, sollten Sie bei der Neuentwicklung auf Software Komponenten und ABAP Cloud setzen. Ebenfalls sollten Sie sich bei solchen Neuimplementierungen Gedanken machen, ob Sie diese On-Stack oder Side-by-Side durchführen wollen. 
+{: .recommendation }
+Auch wenn nun klassische Technologien als Clean Core definiert wurden, sollten Sie bei der Neuentwicklung auf Software Komponenten und ABAP Cloud setzen. Ebenfalls sollten Sie sich bei solchen Neuimplementierungen Gedanken machen, ob Sie diese On-Stack oder Side-by-Side durchführen wollen. 
 
 Sind die APIs aktuell nicht freigegeben, können Sie auf sogenannte Wrapper erstellen, die SAP Funktionalität kapseln und für Ihre Entwicklung in Level A freigeben. Im Zuge dessen sollten Sie einen Influence Request bei SAP erstellen, um die Freigabe oder eine alternative API zu erhalten. Weitere Informationen zur Erstellung von Wrappern und welche Objekte sich eignen, finden sie im SAP Guide: [ABAP Cloud API Enablement](https://www.sap.com/documents/2023/05/b0bd8ae6-747e-0010-bca6-c68f7e60039b.html).
 
