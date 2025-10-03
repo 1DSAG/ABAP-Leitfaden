@@ -32,9 +32,7 @@ Seit ABAP Plattform 7.55 gibt es das Knowledge Transfer Document. KTD kann für 
 
 KTD müssen im selben Paket wie das Entwicklungsobjekt sein. Es wird nicht automatisch mit dem Entwicklungsobjekt transportiert, aber wenn das Entwicklungsobjekt gelöscht wird, wird auch das dazugehörige KTD gelöscht.
 
-| BEST PRACTICE |
-|---------------|
-|Wir empfehlen, für alle Entwicklungsobjekte und unabhängig vom Quellcode die Dokumentationsfunktion der ABAP-Workbench zu nutzen. Die Dokumentationsfunktion sollte in folgender Reihenfolge angewendet werden, je nachdem für welches Objekt welche Art von Dokumentationsobjekt verfügbar ist: 1. Knowledge Transfer Documents 2. abapDoc 3. Kurztexte Hierbei sollte ausschließlich der Ist-Stand dokumentiert werden, gegebenenfalls angereichert um kurze Verweise auf die Änderungsdokumentation (Transportdokumentation, Defekt-Nummern).|
+{: .recommendation } Wir empfehlen, für alle Entwicklungsobjekte und unabhängig vom Quellcode die Dokumentationsfunktion der ABAP-Workbench zu nutzen. Die Dokumentationsfunktion sollte in folgender Reihenfolge angewendet werden, je nachdem für welches Objekt welche Art von Dokumentationsobjekt verfügbar ist: 1. Knowledge Transfer Documents 2. abapDoc 3. Kurztexte Hierbei sollte ausschließlich der Ist-Stand dokumentiert werden, gegebenenfalls angereichert um kurze Verweise auf die Änderungsdokumentation (Transportdokumentation, Defekt-Nummern).
 
 # Dokumentation im Quellcode
 
@@ -42,17 +40,14 @@ KTD müssen im selben Paket wie das Entwicklungsobjekt sein. Es wird nicht autom
 
 Entwicklungsteams arbeiten heutzutage überwiegend international zusammen. Auch wenn Sie derzeit rein deutschsprachig entwickeln, kann Ihr Projekt im Laufe der Zeit internationalisiert werden. Der Aufwand, der dann durch Koordinationsprobleme oder sogar nachträgliches Übersetzen entsteht, steht in keinem Verhältnis zu dem vielleicht größeren Aufwand durch englische Dokumentation. Es hat sich außerdem gezeigt, dass die Lesbarkeit von Quellcode und Kommentaren durch englischsprachige Kommentare erhöht wird. Denn die ABAP-Befehle selbst sind englisch und im Stil von Sätzen aufgebaut. Der Leser des Quellcodes muss bei englischer Dokumentation also nicht ständig die Sprache wechseln.
 
-| BEST PRACTICE |
-|---------------|
-|Es sollte im Unternehmen geklärt, was die Kommentierungssprache ist. Die Empfehlung ist in englisch zu kommentieren.|
+{: .recommendation }
+Es sollte im Unternehmen geklärt, was die Kommentierungssprache ist. Die Empfehlung ist in englisch zu kommentieren.
 
 ## Dokumentation von Änderungen
 
 Ab dem Zeitpunkt der Produktivsetzung eines Programms sollte darauf geachtet werden, dass Änderungen in Programmen angemessen dokumentiert werden. Hier ist das richtige Maß wesentlich: Eine vollständige Versionshistorie aller Änderungen und auskommentierter Quellcode reduzieren die Lesbarkeit des Quellcodes. Trotz dieses Nachteils dokumentieren einige Entwicklungsteams bewusst alle Änderungen im Quellcode, um die Fehlersuche auf Produktiv- oder Testsystemen zu vereinfachen, in denen die Versionshistorie nicht zur Verfügung steht.
 
-| BEST PRACTICE |
-|---------------|
-|Nachträgliche Änderungen am Quellcode sollten - von Headerkommentaren abgesehen - nur in Ausnahmefällen direkt im Quellcode dokumentiert werden.|
+{: .important }Nachträgliche Änderungen am Quellcode sollten - von Headerkommentaren abgesehen - nur in Ausnahmefällen direkt im Quellcode dokumentiert werden.
 
 ## Kommentare im Quellcode
 
@@ -64,9 +59,8 @@ Stern-Kommentare sollten nur im Programmkopf oder für das temporäre Auskomment
 
 Für alle anderen Kommentare empfiehlt SAP, Inline-Kommentare zu verwenden. Diese sollten jeweils vor dem Quellcode stehen, den sie dokumentieren, und genauso eingerückt sein wie dieser Quellcode. Letzteres wird (nur) für Inline-Kommentare auch vom Pretty Printer korrekt durchgeführt.
 
-| BEST PRACTICE |
-|---------------|
-|Sie sollten die Frage beantworten, „Warum” etwas programmiert wurde und nicht „Was”. Letzteres ergibt sich aus dem Quellcode ohnehin, während die Beweggründe oft nicht klar erkennbar sind. Gerade sie helfen beim Verständnis aber wesentlich weiter. Dabei gilt der Grundsatz: So wenig Kommentar wie möglich, so viel Kommentar wie nötig.|
+{: .recommendation }
+Sie sollten die Frage beantworten, „Warum” etwas programmiert wurde und nicht „Was”. Letzteres ergibt sich aus dem Quellcode ohnehin, während die Beweggründe oft nicht klar erkennbar sind. Gerade sie helfen beim Verständnis aber wesentlich weiter. Dabei gilt der Grundsatz: So wenig Kommentar wie möglich, so viel Kommentar wie nötig.
 
 WEITERE QUELLEN
 
