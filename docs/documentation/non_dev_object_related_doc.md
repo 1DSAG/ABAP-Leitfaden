@@ -36,11 +36,10 @@ Dokumentenvorlagen wie das arc42-Template müssen nicht immer vollständig “au
 
 Darüber hinaus kann eine veraltete Dokumentation irreführend sein. Deshalb sollte in allen Dokumenten der Stand und eine Versionierung enthalten sein, um die Aktualität bewerten zu können.
 
-| BEST PRACTICE |
-|---------------|
-|Es sollte im Unternehmen geklärt werden, wie Dokumentation von Software erfolgen soll.|
-|Es sollte eine einheitliche Plattform genutzt werden, entweder eine strukturierte Ablage, Ticketsystem oder auch ein Prozessdokument mit fortgeführter Dokumentation (versioniert)|
-|Der Aufbau der Dokumente sollte immer gleichartig sein, auch von extern zugekaufter Software, das ermöglicht der Supportorganisation auch dort helfen zu können|
+{: .solution }
+Es sollte im Unternehmen geklärt werden, wie Dokumentation von Software erfolgen soll.
+Es sollte eine einheitliche Plattform genutzt werden, entweder eine strukturierte Ablage, Ticketsystem oder auch ein Prozessdokument mit fortgeführter Dokumentation (versioniert)
+Der Aufbau der Dokumente sollte immer gleichartig sein, auch von extern zugekaufter Software, das ermöglicht der Supportorganisation auch dort helfen zu können
 
 Innerhalb einer SAP-Systemlandschaft bietet zum Beispiel der SAP Solution Manager Möglichkeiten zur Projektdokumentation.
 
@@ -75,6 +74,5 @@ WEITERE QUELLEN
 
 Die Verwendung eines Git-Clients wie abapGit oder gCTS protokolliert Code-Änderungen automatisch bei jedem Commit. Zusätzlich werden bei dem Commit Metadaten gespeichert, die eine kurze Beschreibung, sogenannte Commit-Nachricht, den Autor und das Datum enthalten. Die so entstehende Commit-Historie ermöglicht, vergangene Commits zu sehen und die Code-Änderungen nachzuvollziehen. Wird ein Ticket-System, wie zum Beispiel Jira oder Azure DevOps, für die Erfassung der Anforderungen benutzt, hat jede Anforderung an die Entwicklung eine eindeutige ID. Viele Teams haben die Vorgabe oder die interne Vereinbarung, diese ID in den Commit-Nachrichten einzutragen, damit sich die Commits den Aufgaben zuordnen lassen. Wird das konsistent gemacht, lassen sich mittels Freitextsuche in den Commit-Nachrichten alle Commits identifizieren, die zu einer bestimmten Aufgabe gehören. Das erleichtert wesentlich das Wiederfinden und die Überprüfung der Umsetzung im Fall von Bugs. Gleichzeitig lassen sich dadurch ähnliche Aufgaben sehr schnell umsetzen, weil die Entwickler das bereits funktionierende Beispiel finden und verfolgen können.
 
-| BEST PRACTICE |
-|---------------|
-|Steigern sie die Nachverfolgbarkeit und Transparenz von Änderungen an Entwicklungsobjekten, indem sie  im Transportauftrag oder Git-Client die Änderungen dokumentieren - idealerweise mit Bezug zu dem auslösenden Vorgang im Ticketsystem.|
+{: .solution }
+Steigern sie die Nachverfolgbarkeit und Transparenz von Änderungen an Entwicklungsobjekten, indem sie  im Transportauftrag oder Git-Client die Änderungen dokumentieren - idealerweise mit Bezug zu dem auslösenden Vorgang im Ticketsystem.
