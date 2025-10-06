@@ -1,13 +1,21 @@
 ---
 layout: page
-title: backup
-permalink: /abap/.../
-parent: 
-nav_order: 2
+title: Grundlagen des Paketkonzepts
+permalink: /abap/package_details/
+parent: Architektur und Strukturierung in der ABAP Entwicklung
+grand_parent: Moderne ABAP Entwicklung
+nav_order: 1
 ---
 
+1. TOC
+{:toc}
 
-### Grundlagen und Begriffserklärungen zum Paketkonzept
+{: .no_toc}
+# Grundlagen des Paketkonzepts
+
+Im Folgenden sind zum besseren Verständnis der im Leitfaden genannten Empfehlungen die Grundlagen hier detailliert erläutert. Wir empfehlen hierzu auch die offizielle SAP Dokumentation zu verwenden.
+
+## Begriffserklärungen zum Paketkonzept
 
 Ein **Paket** dient der Strukturierung von Software. In einem Paket werden Softwareartefakte zusammengefasst, die für einen bestimmten Zweck zuständig sind. Pakete können (und sollten auch) gekapselt sein. Das bedeutet, dass ein Objekt eines Paketes ein Objekt eines anderen Pakets nicht verwenden kann bzw. von einem Objekt eines anderen Pakets nicht verwendet werden kann, sofern diese nicht über eine Paketschnittstelle öffentlich gemacht werden und beim Verwender im Verwendungsnachweis deklariert werden.  
 Um unsere Empfehlung für Sie umsetzbar zu machen, werden im Folgenden ein paar Grundlagen genannt, um dann den Nutzen und die Vorteile zu erläutern.
@@ -28,7 +36,7 @@ Strukturpakete einzusetzen, kann sinnvoll sein, wenn im Unternehmen das Paketkon
 Die Paketschnittstellen der Strukturpakete können keine Entwicklungsobjekte enthalten, sondern definieren die Beziehungen zu anderen Strukturpaketen. Damit kann die Deklaration und Pflege von Verwendungsbeziehungen reduziert werden und die technische Entkopplung von Applikationen (wie bei SAP_APPL und SAP_HR) sichergestellt werden.  
 Im Rahmen von Cloud werden Strukturpakete als Wurzelpakete der Softwarecomponents benötigt und sind daher dort notwendig.
 
-### Definition des Hauptpakets
+## Definition des Hauptpakets
 
 In den folgenden Ausführungen beschreiben wir die Aspekte des Paketkonzepts für die Erstellung einer größeren Eigenentwicklung. Auf andere Fälle wird später eingegangen.
 Am Anfang der Umsetzung einer Eigenentwicklung muss klar definiert sein, welche Funktion die Software erfüllen soll und welchen SAP Applikationsbereich die Software betrifft. Damit kann nun der Name der Eigenentwicklung als Komponente definiert werden. Dabei müssen Vorgaben der Entwicklungsrichtlinien im Unternehmen wie Namenskonventionen und Präfixe beachtet werden.
@@ -40,7 +48,7 @@ Damit steht der Name des Hauptpaketes, das nun in SAP erstellt werden kann und s
 
 Innerhalb dieses Hauptpaketes sind nun die Unterpakete zu erstellen, die sich im Namen an dem Hauptpaket orientieren, als Postfix aber die Funktion des Unterpaketes ausdrücken. Ein Unterpaket zum EWM-HU Paket, welches das Verpacken betrifft, könnte z.B. wie folgt abgeleitet werden: *Z_EWM_HU_PRC_PACKING*.
 
-### Erstellung der Unterpakete - Unterteilung nach Funktion der enthaltenen Objekte
+## Erstellung der Unterpakete - Unterteilung nach Funktion der enthaltenen Objekte
 
 Die Unterteilung des Hauptpaketes in Unterpakete sollte nicht nach Objekttyp erfolgen (z.B: DDIC, Forms, Klassen), sondern nach logischer Funktion. Je nach Art der Software können folgende Unterpakete erstellt werden:  
 
@@ -52,7 +60,7 @@ Die Unterteilung des Hauptpaketes in Unterpakete sollte nicht nach Objekttyp erf
 - **.._TEST** - Objekte für Unit Tests und Testhelper wie auch Mock-Objekte - alles was zur Testinfrastruktur zugehörig ist.
 - **.._HLP**  oder **..SHARED** - Unterpaket für Hilfsobjekte oder Funktionen, die in mehreren Unterpaketen verwendet werden, z.B. Nachrichtenklassen oder Logging Funktionen.
 
-### Einsatz von Paketen bei der Implementierung von BAdIs und bei kleinen Erweiterungen
+## Einsatz von Paketen bei der Implementierung von BAdIs und bei kleinen Erweiterungen
 
 Die oben beschriebene Struktur ist sinnvoll für größere Entwicklungen, bei denen zahlreiche Objekte erstellt werden, und schafft Ordnung und Übersicht. Die gleiche Vorgehensweise in reduzierter Form macht aber auch für kleine Erweiterungen, wie bei BAdI-Implementierungen, durchaus Sinn.
 Hierbei erstellt man ein Hauptpaket als Entsprechung des Paketes des SAP Enhancement Spots, orientiert sich an der Namensgebung und vergibt dieselbe Applikationskomponente.  
@@ -64,9 +72,7 @@ Für diesen Fall empfehlen wir die Anlage von Hauptpaketen, die funktionsorienti
 
 Idealerweise werden die nach außen sichtbaren Funktionen in den Paketschnittstellen propagiert, so dass die Verwender diese Pakete im Verwendungsnachweis deklarieren können.
 
-
-
-### Paketschnittstellen
+## Paketschnittstellen
 
 Mit den bisher genannten Ausführungen sind zwar unsere Entwicklungen besser geordnet, wir bekommen eine bessere Übersicht und durch den Zwang der Strukturierung werden automatisch architektonische Überlegungen der Entwicklung vorangestellt.  
 Maßgebliche Vorteile und Verbesserung im Softwaremanagement ergeben sich aber erst durch die Nutzung der Paketschnittstellen.
@@ -75,13 +81,13 @@ Ist ein Paket in sich geschlossen und die Verwendung von Objekten des Paketes du
 
 Ein gut designtes Paket sollte ein eigenes API- oder Interface Unterpaket besitzen, das Interfaces, Klassen und Artefakte enthält, die von außen verwendet werden können. Diese Objekte und das Paket verschalen damit die Implementierung und die Komplexität der Anwendung. Mittels Paketinterface und Propagierung werden diese Artefakte nach außen sichtbar. Somit können innerhalb des Paketes jederzeit Änderungen vorgenommen werden, solange das Interface nach außen stabil bleibt. Bzw. besteht die Möglichkeit, neue Interfaces aufzunehmen, die eine neue Version darstellen.
 
-### Verwendungserklärung
+## Verwendungserklärung
 
 Auf Paketebene gibt es neben den Schnittstellen, die die Propagierung nach außen deklariert, noch die Verwendungserklärung. Mit dieser wird aufgelistet, welche Paketschnittstellen ein Paket verwendet. So kann in der Verwendungserklärung geprüft werden, ob die aufgelistete Verwendung und somit die Erzeugung von Abhängigkeiten von Paket xy wirklich gewünscht und vorgesehen ist. Damit werden diese Abhängigkeiten technisch dokumentiert und sind auswertbar bzw. ablesbar.  
 Dies gilt bedingt für SAP-Pakete. Sofern SAP-Objekte in Paketschnittstellen deklariert wurden, können diese auch über den Paketcheck und die Vorschlagfunktion automatisiert in den Verwendungsnachweis aufgenommen werden. Allerdings sind seitens SAP die Paketschnittstellen nicht für die Kommunikation zu den Kunden bzgl. Objektfreigabe vorgesehen und nicht vollständig gepflegt [*PRÜFEN SAP.TF ob so formulierbar?*].  
 Zumindest hilft die Verwendungserklärung hier einen Überblick über sichtbare (über die Verwendungserklärung) und unsichtbare (Fehler im Paketcheck) SAP-Objekte zu bekommen.
 
-### Paketprüfung
+## Paketprüfung
 
 Eine zentrale Rolle zur sinnvollen Umsetzung des Paketkonzepts in Eigenentwicklungen ist die Paketprüfung. In den ABAP Developments Tools, kann diese direkt in den Einstellungen aktiviert werden, oder über den ATC ausgeführt werden. Im SAP GUI in der SE80 ist dies über das Kontextmenü möglich.  
 Bei der Paketprüfung wird angezeigt, ob Objekte eines anderen Paketes verwendet werden, die Verwendungserklärung aber noch nicht deklariert wurde. In dem Fall kann dies automatisiert durchgeführt werden, wobei die gesamte Hierarchie berücksichtigt wird. Dies ist bei den komplexen SAP-Paketen hilfreich und zeitsparend.  
@@ -90,12 +96,12 @@ Bei Verwendung von nicht sichtbaren Objekten aus anderen eigenen Paketen ist zu 
 Derartige Funde können auch ein Hinweis sein, die unsichtbare Funktion in ein neues Paket zu verschieben, das ähnliche Funktionen bereits als Hilfsfunktionen enthält, oder ein neues Paket dafür zu erstellen.  
 Damit die Paketprüfung wie beschrieben funktioniert, müssen die Pakete gekapselt sein und die Systemeinstellung müssen gemäß Dokumentation entsprechend vorgenommen werden.
 
-### Paketkapselung und Paketschnittstellen von Unterpaketen innerhalb des Hauptpaketes
+## Paketkapselung und Paketschnittstellen von Unterpaketen innerhalb des Hauptpaketes
 
 Das Kapseln der Hauptpakete dient der Dokumentation der Abhängigkeiten über die Paketprüfung. Die Kapselung ist allerdings auch für Unterpakete sinnvoll. Dazu sollte pro Unterpaket eine Paketschnittstelle angelegt werden und darin die Objekte aufgenommen werden, die von anderen Unterpaketen verwendet werden. Dementsprechend wird dann auch die Verwendungserklärung gepflegt. Dies bringt einen Verwaltungsaufwand bei der Erstellung einher, bringt aber den Vorteil mit sich, dass die Abhängigkeiten der Unterpakete dokumentiert sind und hier eine gezielte Steuerung und Überwachung möglich ist. Pro Hauptpaket muss eine klare Verwendungsbeziehung definiert sein und eine gemischte Wiederverwendung innerhalb der Unterpakete vermieden werden.  
 Gerade bei Sammlerpaketen kann es sinnvoll sein, bei entsprechender Größe, einzelne Pakete herauszulösen und als eigenständige Komponenten bereitzustellen. Dabei ist es hilfreich, hier bereits klare und geordnete Verwendungsbeziehungen zu haben.
 
-### Pakethierarchien
+## Pakethierarchien
 
 Mit den oben genannten Methoden und Werkzeugen kann eine gute Softwarearchitektur in SAP über die Pakete mit den Abhängigkeiten dargestellt werden. Die Überlegungen die für ein gutes Paketdesign angestellt werden müssen führen letztlich zu einer guten Anwendungsarchitektur, wenn die Designprinzipien für sauberer Architektur eingehalten werden. Hinweise zu Prinzipien moderner Softwarearchitektur finden Sie in einschlägiger Fachliteratur z.B. "Clean Architecture" von Robert C. Martin.
 Bei der Gestaltung der Pakete sollte auch immer der Blick auf die Entwicklungen paketübergreifend erfolgen und bei der Anlage neuer bzw. Erweiterung bestehender Pakete geprüft werden, inwieweit die Pakete zueinander passen und zu prüfen ob Eigenentwicklungen eigener Funktionen in verschiedene Pakete getrennt werden soll. Bei komplexeren Systemlandschaften kann es sinnvoll sein, Framework Pakete zu definieren, die Basisfunktionen anbieten, dann Grundfunktionspakete, die die Geschäftslogik abbilden und optionale Add-On Pakete zu erstellen, die unterschiedliche Oberflächentechnologien oder Ausprägungen der Funktionalitäten abbilden. Dadurch entsteht eine Hierarchie von Hauptpaketen, deren Abhängigkeiten über die Paketschnittstellen gut abgebildet und dokumentiert werden können.  Wichtig ist hierbei zu achten, dass die Abhängigkeit immer nur in eine Richtung definiert sein darf.
