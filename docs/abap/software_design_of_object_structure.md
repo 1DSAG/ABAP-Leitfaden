@@ -3,7 +3,7 @@ layout: page
 title: Design und Erstellung von SAP-Anwendungen
 permalink: /abap/oo-design/
 parent: Moderne ABAP Entwicklung
-nav_order: 3
+nav_order: 2
 ---
 
 {: .no_toc}
@@ -35,9 +35,7 @@ Schon seit vielen Jahren gibt es in ABAP die Möglichkeit objektorientiert zu pr
 
 Und obwohl die oben genannten Nachteile der prozeduralen und Vorteile der Objektorientierten Programmierung bekannt sind, werden auch in aktuellen Projekten weiterhin Funktionalitäten nicht objektorientiert umgesetzt bzw. nicht das volle Potenzial moderner Entwicklungsmethoden genutzt. Dies können z.B. Programme sein, die prozedural implementiert werden, Klassen die objektorientierte Prinzipien nicht umsetzen oder Implementierung von Funktionsbausteinen oder direkte Implementierung von komplexen Code in BAdI-Implementierung direkt ohne weitere Strukturierung.
 
-{: .highlight}
->**Empfehlungen**
->
+{: .recommendation}
 >- Fordern Sie bei allen Entwicklungen die Umsetzung in ABAP Objects unter Einsatz objektorientierter Methoden ein
 >- Achten Sie auf die Anwendung der SOLID Prinzipien der Objektorientierung
 >- Wenden Sie beim Anwendungsdesign die gängigen objektorientierten Designpatterns an.

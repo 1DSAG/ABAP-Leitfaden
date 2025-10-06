@@ -2,8 +2,9 @@
 layout: page
 title: Architektur und Strukturierung in der ABAP Entwicklung
 permalink: /abap/architecture_and_design/
+has_children: true
 parent: Moderne ABAP Entwicklung
-nav_order: 2
+nav_order: 1
 ---
 
 {: .no_toc}
@@ -69,8 +70,7 @@ Des Weiteren bereitet es sowohl die Entwickler, als auch die Entwicklerorganisat
 
  Eine gute Strukturierung Ihrer Software durch Pakete auf aktuellen R/3 und S/4 Systemen hilft Ihnen somit beim Umstieg auf ABAP-Cloud oder die Transformation in die Cloud. Daher gehen wir in den folgenden Abschnitten auf die Anwendung des Paketkonzepts ein, welches auf On-Premise Systemen ab [ab SAP Web Application Server 6.2 bzw. deren Erweiterung ab Netweaver 7.3 EHP1] eingesetzt werden kann.  
 
-{: .highlight}
->**Empfehlungen**  
+{: .recommendation}
 >- ***Nutzen Sie das Paketkonzept:***
 >- Schalten Sie auf Ihren SAP-Systemen die Paketprüfung ein.
 >- Erstellen Sie für Ihre Eigenentwicklungen Hauptpakete, die sich an architektonischen Erfordernissen (Single Responsibility) orientieren.
@@ -84,23 +84,19 @@ Des Weiteren bereitet es sowohl die Entwickler, als auch die Entwicklerorganisat
 
 ## Paketstrukturen und Hierarchien  
 
-Wir empfehlen die Paketstrukturen anhand der Funktionalität zu gestalten. Für eine eigenständige Lösung, die auch selbstständig transportierbar sein soll, legen Sie ein Hauptpaket an. Die verschiedenen Belange dieser Lösung wie z.B. Geschäftslogik, Schnittstellen die von anderen Lösungen verwendet werden können, User-Interfaces und zentrale Elemente der Lösung, die innerhalb des Hauptpaketes von den anderen Komponenten gemeinsam verwendet werden, strukturieren Sie in Unterpaketen (Entwicklungspakete). Im sABAP-Cloud Kontext kann dann über dieses Hauptpaket ein technisch erforderliches Strukturpaket angelegt werden, dass dann für die Softwarekomponente verwendet wird. Im klassischen Umfeld ist das Hauptpaket die transportierbare Einheit. Im Cloud Kontext wird die transportierbare Einheit durch die Softwarekomponente repräsentiert.  
-Eine Strukturierung anhand von Organisations- oder Projektstrukturen wird aus architektonischer Sicht nicht empfohlen, da Organisationsstrukturen sich im Zeitverlauf ändern und nur bedingt von der Funktionalität abhängig sind. Organisatorische Verantwortlichkeiten sind als Attribute zu betrachten die anderweitig zu dokumentieren sind.  
+Wir empfehlen die Pakete nach funktionalen Aspekten zu gestalten. Eigenständige Lösungen, die auch selbstständig transportierbar sein sollen, bilden Sie über Hauptpakete ab. Die verschiedenen funktionalen Belange dieser Lösung wie z.B. Geschäftslogik, verwendbare Schnittstellen, User-Interfaces und zentrale Elemente der Lösung, die innerhalb des Hauptpaketes von den anderen Komponenten gemeinsam verwendet werden, strukturieren Sie in Unterpaketen (Entwicklungspakete). Im klassischen Umfeld ist das Hauptpaket die transportierbare Einheit.  
+Im ABAP-Cloud Kontext kann dann über dieses Hauptpaket ein technisch erforderliches Strukturpaket angelegt werden, dass dann für die Softwarekomponente verwendet wird. Im Cloud Kontext wird die transportierbare Einheit durch die Softwarekomponente repräsentiert.  
+Eine Strukturierung anhand von Organisations-, Verantwortungs- oder Projektstrukturen wird nicht empfohlen, da diese Attribute sich im Zeitverlauf ändern und nur bedingt von der Funktionalität abhängig sind. In einer dem Hauptpaket zugehöriger Dokumentation sind diese Attribute besser aufgehoben.  
 
 ## Kontrolle der Abhängigkeiten über Paketkapselung, Paketschnittstellen und Verwendungserklärung
 
-Um eine technische Kontrolle der Verwendungsbeziehungen und Abhängigkeiten zu ermöglichen, schalten Sie die Paketkapselung auf Paketebene ein. Somit wird ein Fehler in der Paketprüfung angezeigt, wenn Objekte anderer Pakete verwendet werden. Anhand der Fehlermeldung kann ermittelt werden, ob das aufgerufene Objekt in einer Paketschnittstelle zur Verwendung deklariert wurde. In diesem Fall kann im Hauptpaket diese Paketschnittstelle in der Verwendungserklärung aufgenommen werden und somit dokumentiert werden, dass es sich um eine beabsichtigte Abhängigkeit handeltkann nun überprüft werden, ob Ist die Abhängigkeit gewünscht.  
+Aktivieren Sie die Paketkapselung, um technische Abhängigkeiten kontrollieren zu können. Es können zwei Fehlersituatioen auftreten:  
+Wird ein Objekt aus einem anderen Paket verwendet, das nicht in einer freigegebenen Paketschnittstelle enthalten ist, meldet die Paketprüfung einen Fehler, dass das Objekt nicht sichtbar ist.
+Wird ein Objekt eines anderen Paketes verwendet, welches sich in einer Paketschnittstelle befindet, muss diese Schnittstelle noch in der Verwendungserklärung deklariert werden um keine Fehler in der Paketprüfung zu erhalten. So erhalten Sie Transparenz darüber, welche Abhängigkeiten zu anderen Paketen bestehen und welche Objekte verwendet werden, die nicht zur Verwendung in fremden Paketen vorgesehen sind.  
 Ist das Objekt nicht in einer Paketschnittstelle enthalten, sollte dies Objekt nicht verwendet werden und eine Alternative gesucht, oder eine eigenes Objekt innerhalb des Paketes dafür erstellt werden, um den Paketfehler zu vermeiden.  
 Soll ein Objekt des eigenen Paketes anderen Paketen zur Verwendung zur Verfügung gestellt werden, ist dies in einer Paketschnittstelle des Hauptpaketes zu definieren, somit definiert die Paketschnittstelle das öffentliche Interface des Hauptpaketes. Wird diese dann in die Verwendungserklärung des Verwenderpaketes aufgenommen, ist somit auch eine technische Auswertung der Verwendungen möglich.
 
-## Anwendung des Paketkonzepts in der Praxis
-
-### Schulung der Entwickler
-
-Wenn die Unternehmensinternen Richtlinien bezüglich des Paketkonzepts definiert sind und Strukturen vorhanden sind, ist es wichtig die Entwickler auch hinreichend bezüglich des umzusetzenden Paketkonzepts zu schulen und die Einhaltung und ordnungsgemäße Umsetzung zu prüfen. Insbesondere wenn externe Entwickler eingesetzt werden ist darauf zu achten, dass hier ein entsprechendes Onboarding erfolgt.  
-Die Aufgabe der Definition der Pakete und deren Strukturierung, sowie die Einordnung in die Paketlandschaft sollte durch den Lead-Developer oder Softwarearchitekt erfolgen um eine Konsistenz über Pakete hinweg sicherzustellen.
-
-## Vorteile und Nutzen durch Nutzung des Paketkonzeptes
+## Vorteile und Nutzen der Nutzung des Paketkonzeptes
 
 Nach den hier beschriebenen Ausführungen wird deutlich, dass die Umsetzung des Paketkonzepts einiges an Überlegung und Aufwand bedarf. Dieser Aufwand zahlt sich aber durch zahlreiche Vorteile aus, die hier im Folgenden aufgeführt werden:
 
@@ -119,6 +115,22 @@ Werden alle Objekte eines Hauptpaketes (strukturiert in Unterpaketen) in einen T
 
 Ist eine Softwarekomponente gut strukturiert, lassen sich Ergänzungen, Änderungen, Erweiterungen und Korrekturen besser durchführen als in dem Fall wenn eine Anwendung sich aus lose zusammengestellten und in einem großen ungeordneten Paket befindlichen Objekten besteht, in dem andere Objekte für andere Funktionen enthalten sind. Somit ergibt sich bei guter Strukturierung auch eine erhöhte Flexibilität. Insbesondere wenn Funktionalitäten im Laufe des Lebenszyklus wachsen und der Umfang wächst, kann es erforderlich sein, die Struktur anzupassen und ggf. Funktionalitäten in globalere Pakete auszulagern um Wiederverwendbarkeit zu erlangen oder im umgekehrten Fall, mehrere kleinere Anwendungen in ein Hauptpaket zusammenzufassen.
 
+### Zukunftsfähigkeit
+
+Die Erstellung von Software in gut strukturierten Paketen beinhaltet neben den offensichtlichen Vorteilen auch weitere Vorteile, die nicht sofort wirksam werden, im Rahmen des Softwarelebenszyklus aber durchaus relevant werden können.  
+Sind die Eigenentwicklungen im System bereits in Paketen geordnet, sind schon wichtige Voraussetzungen erfüllt, um moderne Versionsverwaltungssysteme wie ABAPGIT oder gCTS zu nutzen, die Pakete bedingen. Somit sind dann Transporte mittels git-basierter Methoden in andere System über oder gar in die Cloud möglich [s. Versionsverwaltung](/ABAP-Leitfaden/application-lifecycle-management/version-management/).
+
+### Paketkapselung über Schnittstellen vs. Softwarekomponenten
+
+Wurde das Paketkonzept mit Erklärung der Verwendungsbeziehungen im Unternehmen bereits eingeübt und ist somit bereits eine Awareness bzgl. nutzbarer Objekte gegeben, sind gute Voraussetzungen geschaffen, die Konzepte in ABAP Cloud mit den Softwarekomponenten zu verstehen und anzuwenden.
+Die Paketschnittstellen entfallen hierbei, da die Verwendungsbeziehungen nicht mehr auf der Ebene der Pakete gepflegt werden. Die Prinzipien sind aber vergleichbar. Bei den Softwarekomponenten wird die Verwendung über die Release Contracts (C1) gesteuert. Damit sind Objekte in Softwarekomponenten systemweit verwendbar. Soll die Verwendung nur durch Objekte definierter Softwarekomponenten erfolgen, kann dies in sog. Softwarekomponentenbeziehungen (SWC) erfolgen. Damit deklariert man in einer Softwarekomponente, dass Objekte der eigenen SWC von Objekten anderen SWCs, die in den SWC-Relations deklariert werden, verwendet werden können, ohne dass ein Kontrakt auf Objektebene vorliegt. Dabei ist allerdings keine Einschränkung auf Objekte der eigenen SWC möglich.
+
+## Weitere Aspekte zum Paketkonzept
+
+### Schulung der Entwickler
+
+Das Paketkonzept bringt den Nutzen, wenn es umfassend eingesetzt wird. Dies erfordert eine unternehmensinterne Defintion wie Pakete anzulegen sind Es muss darauf aufbauend sichergestellt werden, dass die mit der Entwicklung betrauten Personen die Vorgaben zum PAketkonzept verstehen und umsetzen können. Daher ist es wichtig die Entwickler auch hinreichend bezüglich des umzusetzenden Paketkonzepts zu schulen und die Einhaltung und ordnungsgemäße Umsetzung zu prüfen. Insbesondere wenn externe Entwickler eingesetzt werden ist darauf zu achten, dass hier ein entsprechendes Onboarding erfolgt. Die Aufgabe der Definition der Pakete und deren Strukturierung, sowie die Einordnung in die Paketlandschaft sollte durch den Lead-Developer oder Softwarearchitekt erfolgen um eine Konsistenz über Pakete hinweg sicherzustellen.
+
 ### Vermeidung grosser / unspezifischer Sammlerpakete
 
 Wir empfehlen die Erstellung großer Sammlerpakete (z.B. auf Basis Modulebene) nicht zu erlauben, da dies zu Problemen mit der Übersichtlichkeit und zu ungewünschten Abhängigkeiten führen kann und das Prinzip der Single Responsibility verletzt.
@@ -126,17 +138,7 @@ Wir empfehlen die Erstellung großer Sammlerpakete (z.B. auf Basis Modulebene) n
 Das Risiko ist groß, dass Klassen und Funktionen in solchen Paketen landen, anstatt solide architektonische Überlegungen vorzunehmen, was die Anstrengungen, eine geordnete Systemarchitektur einzuhalten, konterkarieren kann.  
 Es kann aber durchaus Sinn machen, kleine, wohldefinierte und Domänenspezifische Hilfspakete zu erstellen, die grundlegende und oft benötigte Hilfsfunktionen zentral bereitstellen.
 
-### Zukunftsfähigkeit
-
-Die Erstellung von Software in gut strukturierten Paketen beinhaltet neben den offensichtlichen Vorteilen auch weitere Vorteile, die nicht sofort wirksam werden, im Rahmen des Softwarelebenszyklus aber durchaus relevant werden können.  
-Sind die Eigenentwicklungen im System bereits in Paketen geordnet, sind schon wichtige Voraussetzungen erfüllt, um moderne Versionsverwaltungssysteme wie ABAPGIT oder gCTS zu nutzen, die Pakete bedingen. Somit sind dann Transporte mittels git-basierter Methoden in andere System über oder gar in die Cloud möglich [s. Versionsverwaltung](/ABAP-Leitfaden/application-lifecycle-management/version-management/).
-
-### Paketkapselung über Schnittstellen vs. Softwarekomponenten 
-
-Wurde das Paketkonzept mit Erklärung der Verwendungsbeziehungen im Unternehmen bereits eingeübt und ist somit bereits eine Awareness bzgl. nutzbarer Objekte gegeben, sind gute Voraussetzungen geschaffen, die Konzepte in ABAP Cloud mit den Softwarekomponenten zu verstehen und anzuwenden.
-Die Paketschnittstellen entfallen hierbei, da die Verwendungsbeziehungen nicht mehr auf der Ebene der Pakete gepflegt werden. Die Prinzipien sind aber vergleichbar. Bei den Softwarekomponenten wird die Verwendung über die Release Contracts (C1) gesteuert. Damit sind Objekte in Softwarekomponenten systemweit verwendbar. Soll die Verwendung nur durch Objekte definierter Softwarekomponenten erfolgen, kann dies in sog. Softwarekomponentenbeziehungen (SWC) erfolgen. Damit deklariert man in einer Softwarekomponente, dass Objekte der eigenen SWC von Objekten anderen SWCs, die in den SWC-Relations deklariert werden, verwendet werden können, ohne dass ein Kontrakt auf Objektebene vorliegt. Dabei ist allerdings keine Einschränkung auf Objekte der eigenen SWC möglich.
-
-## Weitere Aspekte
+## Weitergehende Themen zum Paketkonzept
 
 Wir haben hier grundlegende Aspekte der Nutzung des Paketkonzepts beschrieben, die Ihnen helfen sollen, die Vorteile gut strukturierter Pakete zu erkennen, aber auch sehr konkret Hilfestellung gegeben, wie ein Paketkonzept praxisorientiert umgesetzt werden kann.  
 Dies ist nur der Anfang und es gibt einige Aspekte auf die in dieser Version nicht eingegangen werden kann, da dies den Umfang des Leitfadens übersteigen würde. Folgende Aspekte sind relevant und sollten im Unternehmen definiert und in den Handbüchern beschrieben werden:
