@@ -38,7 +38,7 @@ Dadurch ergeben sich folgende Vorteile:
 ### Wichtige Begriffe
 
 * **Repository**: In einem Repository bzw. einem Repo befinden sich alle Dateien inklusive derer vorangegangenen Versionen. Dadurch stehen stets alle Änderungen zur Verfügung, die von einer Datei ins Repo gespielt wurden und es kann nachvollzogen werden, wer wann welche Änderungen durchgeführt hat.
-* **Branches**: Beim Einsatz von Git dienen Branches (engl.: to branch - sich verzweigen) dazu, einen separaten Arbeitszweig zu erstellen. Dieser kann dann auch als neuer Kontext gesehen werden, in dem gearbeitet wird. So kann z.B. die Programmierung eines Features in einem eigenen Branch erfolgen, der bei Fertigstellung und nach dem Testen zurück in den Master-Zweig eingearbeitet wird.
+* **Branches**: Beim Einsatz von Git dienen Branches (engl.: to branch - sich verzweigen) dazu, einen separaten Arbeitszweig zu erstellen. Dieser kann dann auch als neuer Kontext gesehen werden, in dem gearbeitet wird. So kann z.B. die Programmierung eines Features in einem eigenen Branch erfolgen, der bei Fertigstellung und nach dem Testen zurück in den Main-Zweig eingearbeitet wird.
 * **Versionierung**: Bei der Versionierung werden im Git alle getätigten Änderungen protokolliert. Mittels "Commit" können die Änderungen zu dem Repository hinzugefügt werden, eine neue Version der Datei(en) befindet sich dann im Repo. Anschließend können verschiedene Versionen miteinander verglichen, Änderungen rückgängig oder zu einer früheren Version zurückgekehrt werden.
 
 ## Einsatz von Git-basierten Lösungen in der ABAP-Entwicklung
@@ -55,7 +55,7 @@ Neben den technologischen Vorteilen gibt es auch organisatorische Vorteile
 
 * **Git ist Standardlösung**: Es ist einfacher, andere Menschen für die SAP-Entwicklung zu begeistern, wenn sie schon Tools oder Technologien aus anderen Programmiersprachen kennen. Git ist die Standardlösung für andere Programmiersprachen, und es muss kein neues Know-How aufgebaut werden. Besonders Studenten, die Git schon kennen, können sich dann für ABAP besser begeistern.
 * **Einheitliches Format für Programmiersprachen**: Im Git-Repository können nicht nur SAP-Entwicklungen gespeichert werden, sondern es können auch andere Entwicklerteams dort ihren Code zentral hinterlegen.
-* **Format**: Das Format ist einheitlich und kann von jedem gelesen werden. Es ist nicht verschlüsselt, und alle Änderungen können nachvollzogen werden. So kann auch ein Wirtschaftsprüfer alle Änderungen sehen, wann und von wem sie gemacht wurden.
+* **Format**: Das Format kann von jedem gelesen werden. Es ist nicht verschlüsselt, und alle Änderungen können nachvollzogen werden. So kann auch ein Wirtschaftsprüfer alle Änderungen sehen, wann und von wem sie gemacht wurden.
 
 ## Versionskontrollsysteme im SAP-Umfeld
 
@@ -76,7 +76,7 @@ Die entsprechenden Objekte werden bei jeder Transportfreigabe versioniert.
 
 ### Lokale Versionsverwaltung in ABAP Development Tools
 
-Die auf der Eclipse IDE basierenden ABAP Development Tools bietet zwei Basis, eingebaute Versionsverwaltungen für Entwicklungsressourcen an, die mittels des ABAP-Compare Editors ausgeführt werden können und umfangreiche Vergleichsmöglichkeiten bieten:
+Die auf der Eclipse IDE basierenden ABAP Development Tools bietet eine eingebaute Versionsverwaltungen für Entwicklungsressourcen an, die mittels des ABAP-Compare Editors ausgeführt werden können und umfangreiche Vergleichsmöglichkeiten bieten:
 
 * **clientbasierte lokale Versionsverwaltung:** - Das Standardfeature unter Eclipse bietet eine Standardversionsverwaltung. Jedes Mal wenn ein Objekt, wie z.B. eine ABAP-Klasse bearbeitet und gespeichert wird, speichert Eclipse die Version nach den persönlichen eingestellten Präferenzen. Dies ist sinnvoll wenn Änderungen nachvollzogen werden sollen, die vor einer Transportfreigabe erfolgten.
 
@@ -121,9 +121,9 @@ In den folgenden Dokumentationeb befindet sich der Funktionsumfang der jeweilige
 |:-------------------------------------------------|:------------------------------|
 | **SE80 (Lokale Versionsverwaltung)**             | [SAP Versionsverwahltung](https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/2b28ffa716c24348903f8ffbfeb81df8/e52a2c8d53f8400bb8a309cffe417275.html)|
 | **ABAP Development Tools (Versionsverwaltung)**  | [ADT User Guide ](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/comparing-source-code)              |
-| **abapGit in SAP GUI**                           | [abapgit User Guide](https://docs.abapgit.org/user-guide/)                                                                   |
+| **abapGit in SAP GUI**                           | [abapGit User Guide](https://docs.abapgit.org/user-guide/)                                                                   |
 | **abapGit in ADT**                               | [BTP Working with abapgit](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit)              |
-| **abapGit in der Cloud**                         | [abapgit](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit)                               |
+| **abapGit in der Cloud**                         | [abapGit](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit)                               |
 | **gCTS in der Cloud**                            | [gCTS](https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/f319b168e87e42149e25e13c08d002b9.html)   |
 | **gCTS OnPrem**                                  | [gCTS](https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/f319b168e87e42149e25e13c08d002b9.html)   |
 | **SAP BAS**                                      | [DOKU fehlt noch]                                            |
@@ -151,7 +151,7 @@ Die Versionsverwaltung wird folgendermaßen angetriggert.
 |:--------------------------------------------------|:-------------------------------------------|
 | **SE80 (Lokale Versionsverwaltung)**              | Bei jeder Transportfreigabe                |
 | **ABAP Development Tools (Versionsverwaltung)**   | Nach jedem Speichern/Aktivieren            |
-| **abapGit in SAP GUI**                            | Bei manuellem Antriggern                   |
+| **abapGit in SAP GUI**                            | Bei manuellem Antriggern oder automatisch im Hintergrund                  |
 | **abapGit in ADT**                                | Bei manuellem Antriggern                   |
 | **abapGit in der Cloud**                          | Bei manuellem Antriggern                   |
 | **gCTS in der Cloud**                             | Bei Transportfreigabe                      |
@@ -162,9 +162,9 @@ Die Versionsverwaltung wird folgendermaßen angetriggert.
 
 Folgende Anwendungen neben einem SAP-System werden benötigt, um die Versionsverwaltungen zu nutzen.
 
-|                                                   | **Triggerpunkt**                                                |
+|                                                   | **Anwendungen**                                                |
 |---------------------------------------------------|---------------------------                                      |
-| **SE80 (Lokale Versionsverwaltung)**              | Bei jeder Transportfreigabe                                     |
+| **SE80 (Lokale Versionsverwaltung)**              | Kein weiteres System notwendig                                    |
 | **ABAP Development Tools (Versionsverwaltung)**   | ABAP Development Tools                                          |
 | **abapGit in SAP GUI**                            | Repository System sowie abapGit im SAP-System                   |
 | **abapGit in ADT**                                | Repository System sowie abapGit im SAP-System und Plugin in ADT |
@@ -175,7 +175,7 @@ Folgende Anwendungen neben einem SAP-System werden benötigt, um die Versionsver
 
 ## Einsatzszenarien
 
-### Normale 3-System-Landschaft
+### Weit verbreitete 3-System-Landschaft
 
 Bei diesem Einsatzszenario geht es darum, dass der Code auf dem Entwicklungssystem in ein Git-Repository mit einem Git-Versionsverwaltungssystem übertragen wird.
 
@@ -216,13 +216,13 @@ Dabei muss nicht jedes Repository-Objekt einzeln zurückgeholt werden, sondern e
 
 ## Annäherung Entwicklungsprozesse ABAP und Non-ABAP über git-basierte Tools
 
-SAP-Entwickler stehen im Spannungsfeld zwischen traditioneller Stabilität und der Notwendigkeit für schnellere, flexiblere Entwicklungsprozesse. In vielen anderen IT-Abteilungen sind DevOps-Praktiken bereits erfolgreich implementiert, während SAP-Team noch mit langwierigen Release-Zyklen und komplexerer Transportmechanismen. DevOps ist eine Kombination aus „Development“ (Entwicklung) und „Operations“ (Betrieb) und zielt darauf ab, Entwicklungs- und Betriebsprozesse so zu verzahnen, dass Software schneller, verlässlicher und mit höherer Qualität ausgeliefert wird. Durch den Einsatz einer Versionsverwaltung lässt sich auch in der SAP-Welt eine agile und effiziente Entwicklungsumgebung schaffen. 
+SAP-Entwickler stehen im Spannungsfeld zwischen traditioneller Stabilität und der Notwendigkeit für schnellere, flexiblere Entwicklungsprozesse. In vielen anderen IT-Abteilungen sind DevOps-Praktiken bereits erfolgreich implementiert, während SAP-Team noch mit langwierigen Release-Zyklen und komplexerer Transportmechanismen kämpfen. DevOps ist eine Kombination aus „Development“ (Entwicklung) und „Operations“ (Betrieb) und zielt darauf ab, Entwicklungs- und Betriebsprozesse so zu verzahnen, dass Software schneller, verlässlicher und mit höherer Qualität ausgeliefert wird. Durch den Einsatz einer Versionsverwaltung lässt sich auch in der SAP-Welt eine agile und effiziente Entwicklungsumgebung schaffen. 
 
 ## Integration an andere Komponenten
 
 Die SAP-Versionsverwaltung ist der Ausgangspunkt mit ABAP-Code außerhalb eines SAP-Systems zu arbeiten
 
-### Azure DevOps
+### Azure Pipelines
 
 Azure DevOps optimiert den Bereitstellungsprozess, indem Pipelines bereitgestellt werden, die Sie ausführen können.
 Quelle: 
@@ -240,7 +240,7 @@ https://community.sap.com/t5/application-development-and-automation-blog-posts/c
 
 ### Revisionssicherheit
 
-Durch die präzise und lückenlose Protokollierung aller Änderungen sorgt die Versionsverwaltung für eine Revisionssicherheit. Dies ist besonders wichtig, um Compliance Anforderungen zu erfüllen sowie bei der Überprüfung von Sicherheitsvorfällen oder Audits
+Durch die präzise und lückenlose Protokollierung aller Änderungen sorgt die Versionsverwaltung für eine Revisionssicherheit. Dies ist besonders wichtig, um Compliance Anforderungen zu erfüllen sowie bei der Überprüfung von Sicherheitsvorfällen oder Audits.
 
 ### Sicherung und Wiederherstellung
 
@@ -256,7 +256,7 @@ Jede Änderung wird dokumentiert, einschließlich des Zeitpunktes und des Bearbe
 
 ### Manipulationseinsatz
 
-Mit Hilfe von externen Versionsverwaltungssystemen können durch deren kryptografische Hashing-Algorithmen, de Inhalt und der Änderungsverlauf vor Manipulation zu schützen
+Mit Hilfe von externen Versionsverwaltungssystemen können durch deren kryptografische Hashing-Algorithmen, der Inhalt und der Änderungsverlauf vor Manipulation zu schützen.
 
 
 ## Risiken
@@ -275,7 +275,7 @@ Die Wahl des richtigen Versionsverwaltung hängt von den spezifischen Anforderun
 
 ### Einsatz von weiteren Tools
 
-Es können mit Hilfe der Versionsverwaltung moderne Entwicklungspraktiken wie CI/CD genutzt werden. Überlegen Sie sich
+Es können mit Hilfe der Versionsverwaltung moderne Entwicklungspraktiken wie CI/CD genutzt werden. Überlegen Sie sich wie ihre Pipeline aussehen soll
 
 ## Weitere Quellen
 [Git und SAP / Rheinwerk Verlag](https://www.rheinwerk-verlag.de/git-und-sap/?srsltid=AfmBOooMbM45uQOGPLDAiaKz5hHazrf45BIEVjmOIe8mz9HjpdHjgzZq)
