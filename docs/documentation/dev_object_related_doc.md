@@ -47,7 +47,7 @@ Es sollte im Unternehmen geklärt, was die Kommentierungssprache ist. Die Empfeh
 
 Ab dem Zeitpunkt der Produktivsetzung eines Programms sollte darauf geachtet werden, dass Änderungen in Programmen angemessen dokumentiert werden. Hier ist das richtige Maß wesentlich: Eine vollständige Versionshistorie aller Änderungen und auskommentierter Quellcode reduzieren die Lesbarkeit des Quellcodes. Trotz dieses Nachteils dokumentieren einige Entwicklungsteams bewusst alle Änderungen im Quellcode, um die Fehlersuche auf Produktiv- oder Testsystemen zu vereinfachen, in denen die Versionshistorie nicht zur Verfügung steht.
 
-{: .important }Nachträgliche Änderungen am Quellcode sollten - von Headerkommentaren abgesehen - nur in Ausnahmefällen direkt im Quellcode dokumentiert werden.
+{: .important }Nachträgliche Änderungen am Quellcode sollten nur in Ausnahmefällen direkt im Quellcode dokumentiert werden.
 
 ## Kommentare im Quellcode
 

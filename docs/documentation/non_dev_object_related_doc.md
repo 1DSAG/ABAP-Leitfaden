@@ -62,6 +62,7 @@ Oftmals hilft es zum Transportauftrag zu dokumentieren
 * Wichtigste Entwicklungsobjekte im Transport
 * Abhängigkeiten zu anderen Transporten (sofern vorhanden)
 * Kurzbeschreibung zu Änderungen im Transport
+
 Die Dokumentation zu jeder Aufgabe und zu jedem Auftrag lässt sich während der Auftragsbearbeitung innerhalb des Transport Request Editors im Reiter "Dokumentation" erfassen. Die Dokumentation kann bis zur Freigabe laufend erweitert werden. Beachten sie, dass nach der Freigabe des Auftrags die Bearbeitung nicht mehr möglich ist.
 
 Diese Dokumentation auf dem Reiter "Dokumentation" kann man für jeden Transportauftrag erstellen, der in das Produktivsysteme geht. Vermeiden sie redundante Dokumentation und dokumentieren sie keine Transporte von Kopien. Letztlich interessieren nur die Transporte, die ins Produktiv System gehen sollen, bzw. bereits gegangen sind.
