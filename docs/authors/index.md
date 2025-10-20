@@ -178,11 +178,6 @@ nav_order: 15
 <td>Autor, Reviewer</td>
 </tr>
 <tr class="header">
-<td><a href="https://www.linkedin.com/in/urs-b%C3%BChlmann-3944b7/">Urs Bühlmann</a></td>
-<td>inpeek AG</td>
-<td></td>
-</tr>
-<tr class="odd">
 <td><a href="https://www.linkedin.com/in/volodymyrvashchenko/">Volodymyr Vashchenko</a></td>
 <td>Bosch Thermotechnik GmbH</td>
 <td>Autor, Reviewer</td>
