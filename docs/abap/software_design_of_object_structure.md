@@ -14,12 +14,10 @@ nav_order: 2
 
 ## Moderne Geschäftsanwendungen erfordern moderne Softwareentwicklungsmethoden
 
-Geschäftsanwendungen in der klassischen ABAP Entwicklung wurden oft mit Reports erstellt, die durch komplexe, prozedurale Kontrollstrukturen geprägt waren. Modularisierung erfolgte mittels Form-Routinen oder für Wiederverwendung mit Funktionsbausteinen. Bei guter Planung waren Funktionsgruppen nicht überladen, sondern bestanden aus zusammengehörigen spezifischen Funktionen.  Vielleicht kennen Sie aber auch die eine oder andere Funktionsgruppe, die zahlreiche Funktionsbausteine mit unterschiedlichen Aufgaben enthält und beim einen oder anderen Transport auch mal das eine oder andere Problem verursacht hat.  
-Mit der Anzahl der vorgenommenen Änderungen wurden diese Anwendung immer komplexer, fehleranfälliger und immer schwerer zu warten. 
+Geschäftsanwendungen in der klassischen prozeduralen ABAP Entwicklung werden in Form von Programmen erstellt, die durch komplexe, prozedurale Kontrollstrukturen geprägt waren. Modularisierung erfolgte mittels Form-Routinen oder für die Wiederverwendung von Funktionen mit Funktionsbausteinen. Bei guter Planung und Anwendung von Methoden der Softwareentwicklung waren Funktionsgruppen nicht überladen, sondern bestanden aus zusammengehörigen spezifischen Funktionen. Vielleicht kennen Sie aber auch die eine oder andere Funktionsgruppe, die zahlreiche Funktionsbausteine mit unterschiedlichen Aufgaben enthält und beim einen oder anderen Transport auch mal das eine oder andere Problem verursacht hat. Mit der Anzahl der vorgenommenen Änderungen wurden diese Anwendung immer komplexer, fehleranfälliger und immer schwerer zu warten. Die Softwareentwicklungsmethoden und Techniken die heute dem ABAP-Entwickler zur Verfügung stehen, bieten für die Herausforderungen, die die Anforderungen moderner Geschäftsanwendungen mit sich bringen, gute Lösungsansätze for o.g. Problemfelder. Der ist der klassische, prozedurale Ansatz nicht zeitgemäß und darf nicht mehr Bestandteil heutiger Anwendungsentwicklung sein. Im ABAP-Cloud Umfeld ist dies durch eine strikte Syntaxprüfung auch technisch nicht mehr umsetzbar. Daher ist der Weg in die moderne ABAP-Entwicklung unabdingbar. Diese ist aber ungleich komplexer und heterogener geworden als es zu früheren R/3 Zeiten war.  
+An moderne Anwendungen werden heute hohe Anforderungen gestellt.  
 
-Die moderne ABAP-Entwicklungswelt ist ungleich komplexer und heterogener geworden als sie es zu früheren R/3 Zeiten war. An moderne Anwendungen werden heute hohe Anforderungen gestellt.  
-
-- Anwendungen müssen die Anforderungen bestens erfüllen.
+- Anwendungen müssen die funktionalen Anforderungen bestens erfüllen.
 - Anwendungen müssen fehlerfrei, robust, performant und fehlertolerant betrieben werden können.
 - Änderungen sollen schnell, effizient, fehlerfrei und mit wenig Testaufwand durchführbar sein und keine neuen Fehler erzeugen.  
 
@@ -27,9 +25,10 @@ Somit müssen auch Anforderungen an den ABAP-Code gestellt werden.
 
 1. ABAP-Code **muss** die funktionalen Anforderungen korrekt erfüllen und hat keine negativen Auswirkungen auf Sicherheitsthemen oder andere Entwicklungen.
 2. ABAP-Code **soll** fachlich präzise strukturiert sein. Er wird in kleinen, semantisch zusammenpassenden und modularen Einheiten entwickelt. Diese Einheiten sind gut lesbar und für andere Entwickler leicht verständlich. Externe Zugriffe und modulübergreifende Abhängigkeiten sind über klar definierte Schnittstellen geregelt.
-3. ABAP-Code **soll** moderne Programmiertechniken verwenden. Er enthält keine veralteten oder nicht unterstützten Anweisungen.
+3. ABAP-Code **soll** moderne Sprachkonstrukte verwenden. Er enthält keine veralteten Anweisungen oder Konstrukte die dem Clean Code Prinzipien widersprechen.
+4. ABAO.Code **soll** gut lesbar und verständlich geschrieben sein und Kommentare helfen beim Verständnis der implementierten Funktionalität.
 
-Mit langen, tief verschachtelten und eng verwobenen Modularisationseinheiten wie Reports, Forms und Funktionsbausteinen sind diese Anforderungen nur schwer zu erfüllen, da diese eine hohe Abwärtskompabilität aufweisen und vieles möglich ist, was mit ABAP-OO bereits technisch geprüft oder teilweise sogar verhindert wird.  
+Mit langen, tief verschachtelten und eng verwobenen Modularisationseinheiten wie Programmen, Formroutinen und Funktionsbausteinen sind diese Anforderungen nur schwer zu erfüllen, da diese eine hohe Abwärtskompabilität aufweisen und vieles möglich ist, was mit ABAP-OO bereits technisch geprüft oder teilweise sogar verhindert wird.  
 
 Schon seit vielen Jahren gibt es in ABAP die Möglichkeit objektorientiert zu programmieren. Auch wenn dies anfangs noch nicht erforderlich war, ist es heute einerseits technisch notwendig, wenn neue Möglichkeiten genutzt werden sollen, andererseits bietet die Methodik der Objektorientierung sehr viele gute Ansätze Geschäftsanwendung so zu entwickeln, dass sie flexibel, wartbar, erweiterbar und robust umgesetzt werden können. Und durch die Nutzung von ABAP-Unit und eines guten Designs, können zahlreiche Tests bereits als UNIT Tests abgedeckt werden womit das Testen durch den Endanwender auf die Testung des Prozesses und der Funktion reduziert werden kann.
 
