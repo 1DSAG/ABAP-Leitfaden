@@ -13,10 +13,10 @@ nav_order: 1
 1. Toc
 {:toc}
 
-## Architektur und Struktur als Fundament und Rahmen einer guten SAP Anwendung  
+## Strukturelle Herausforderungen in SAP-Anwendungen – ihre Ursachen und Folgen
 
 In vielen SAP ERP Systemen finden sich zahlreiche und umfangreiche Eigenentwicklungen die im Laufe der Lebenszeit des Systems entstanden sind und kontinuierlich erweitert wurden. Je komplexer ein System ist, desto wichtiger ist es, dass die darin enthaltenen Applikationen und Komponenten in einer wohldefinierten Struktur geordnet sind, die gängigen Softwarearchitekturprinzipien folgen.
-In SAP ERP Systemen ist dies im Bereich der Eigenentwicklungen nicht immer gegeben. Dies hat unter anderem folgende Gründe:
+In SAP ERP Systemen ist dies im Bereich der Eigenentwicklungen nicht immer gegeben. Dies hat unter anderem folgende Ursachen:
 
 - **Entwicklungsklassen**  
 Die Entwicklungen wurden begonnen, als das SAP-Paketkonzept noch nicht vorhanden war und dessen Vorgänger, die Entwicklungsklassen, verwendet wurden. Diese ermöglichten nur eine flache Strukturierung und somit folgte auch die Struktur sehr groben Kriterien, z.B. pro Entwicklungsteam oder Modul. Dieses Prinzip wurde nach Einführung des Paketkonzepts beibehalten und weitergeführt.
@@ -29,7 +29,8 @@ Viele Entwicklungen betreffen die Weiterentwicklung bestehender Funktionalitäte
 
 - **Zeit- und Termindruck**  
 Letztlich finden die meisten Entwicklungen unter Zeitdruck statt. Die Frage, wie eine Anwendung sinnvoll in Paketen strukturiert werden kann, wird oft nicht gestellt oder vernachlässigt, da die Lieferung der Funktionalität im Vordergrund steht.  
-Als Folge dieser Rahmenbedingungen können sich folgende Probleme ergeben:
+
+Als Folge der strukturellen Defizite in Eigenentwicklungen können sich folgende Probleme ergeben:
 
 - **Mangelnde Transparenz und Verständlichkeit:**  
 Sowohl die Aufgaben und deren Verantwortlichkeiten einzelner Artefakte, als auch deren Abhängigkeiten zueinander sind nicht aus der Struktur der Pakete ersichtlich.
@@ -43,32 +44,20 @@ Sowohl die Aufgaben und deren Verantwortlichkeiten einzelner Artefakte, als auch
 - **Probleme bei Verteilung und Import von Änderungen**
 Es kann zu Problemen bei Transporten kommen, wenn nicht alle notwendigen Objekte korrekt transportiert wurden oder nicht alle Abhängigkeiten berücksichtigt wurden (z.B. RC8).
 
-Software wird in der Komplexität sehr gern unterschätzt und nur wer von Anfang an sich Gedanken über eine gute Softwarearchitektur gemacht hat und die Anwendung laufend technisch und strukturell auf dem aktuellen Stand hält, wird mit der oben beschriebenen Problematik weniger konfrontiert sein.  
-Daher ist es essentiell sich zuallererst Gedanken zu machen, welche Funktionen und Zuständigkeiten eine zu erstellende Anwendung haben soll, wie die Verantwortlichkeiten *geregelt* sind und wie sich dies letztendlich in der Paketstruktur widerspiegelt.  
-Mit dem SAP Paketkonzept haben Sie das Werkzeug, um die Grundlagen für eine saubere und zukunftsfähige Anwendungsarchitektur zu legen.  
+##  Architektur und Struktur als Fundament und Rahmen einer guten SAP Anwendung
+
+Die Komplexität von Software wird oftmals unterschätzt und nur wer sich von Anfang an Gedanken über eine gute Softwarearchitektur macht und die Anwendung kontinuierlich technisch und strukturell verbessert, wird mit der oben beschriebenen Problematik weniger konfrontiert sein.  
+Gute und moderne Softwareentwicklung beginnt zuallererst mit der Überlegung, welche Funktionen und Zuständigkeiten eine zu erstellende Anwendung haben soll, wie die Verantwortlichkeiten *geregelt* sind und wie sich dies letztendlich in der Paketstruktur widerspiegelt.  
+Mit dem SAP Paketkonzept haben Sie das Werkzeug, um diese Überlegungen in sichtbare Strukturen zu überführen und damit die Grundlagen für eine saubere und zukunftsfähige Anwendungsarchitektur zu legen.
 
 ## Strukturierung von Software in Paketen
 
 ### Das SAP Paketkonzept und die Aufgabe von Paketen
 
-Die SAP hat, wie in anderen Programmiersprachen wie z.B. JAVA üblich, auch in ABAP ein Paketkonzept implementiert, mit dem es Möglich ist, die Software auf verschiedenen Ebenen zu strukturieren. Vor der Verfügbarkeit des Paketkonzepts waren Entwicklungsobjekte in Entwicklungsklassen als flache Struktur organisiert.  
+Die SAP hat, wie in anderen Programmiersprachen wie z.B. Java üblich, auch in ABAP ein Paketkonzept implementiert, mit dem es Möglich ist, die Software auf verschiedenen Ebenen zu strukturieren. Vor der Verfügbarkeit des Paketkonzepts waren Entwicklungsobjekte in Entwicklungsklassen als flache Struktur organisiert.  
 Durch die Anwendung des Paketkonzepts bei Eigenentwicklungen ergeben sich deutlich erweiterte Möglichkeiten der Softwarestrukturierung, die zwar vordergründig nicht direkt auf die Funktionalität an sich wirken, aber spätestens bei der Wartung, Pflege und Erweiterung der Eigenentwicklung deutliche Vorteile mit sich bringen. Da es seitens SAP eine ausführliche und gut verständliche Dokumentation des Paketkonzeptes gibt, werden wir hier nicht auf das Paketkonzept im Detail eingehen sondern einen praxisnahen Überblick und Empfehlungen geben, wie bei Erstellung von Eigenentwicklungen, im Weiteren "Software" genannt, vorgegangen werden kann, um Pakete in ABAP sinnvoll und nutzbringend einzusetzen.  
 [SAP Dokumentation ABAP Workbench - Package Builder](https://help.sap.com/docs/ABAP_PLATFORM_NEW/bd833c8355f34e96a6e83096b38bf192/af40bd38652c8c42e10000009b38f8cf.html?locale=de-DE).  
 
-### Das "Paketkonzept" in ABAP Cloud - Softwarecomponents
-
-Die ABAP Entwicklung ist stark im Wandel, insbesondere der Weg der SAP in die Cloud wird auch die ABAP Entwicklung mit deren Tools und Methoden in naher Zukunft weiterhin maßgeblich beeinflussen.  
-Im Kontext von ABAP Cloud, ist das hier beschriebene Paketkonzept nicht mehr 1:1 anwendbar, da Paketschnittstellen in der Cloud nicht mehr unterstützt werden.  
-Mit der Einführung des ABAP Environments für die Entwicklung auf der Cloud und mit ABAP Cloud bekommt die schon lange vorhandene, aber nicht für die Strukturierung benutzte Eigenschaft "Softwarekomponente" (SWC) eine tragende Bedeutung in der Strukturierung von ABAP-Software. Die Softwarekomponente wird bei Entwicklung mit ABAP Cloud ein zentraler Bestandteil der Softwarestruktur und ergänzt das Paketkonzept.
-
-Das Prinzip der Trennung von Komponenten und der Definition von Abhängigkeitsbeziehungen zwischen Paketen wird in ABAP Cloud über Softwarecomponents und Softwarecomponentrelations (SWC-Relations) behandelt. Die Pakete darunter dienen zur Strukturierung der verschiedenen Bestandteile einer Anwendung. 
-Des Weiteren können einzelne Objekte für die Verwendung aus anderen Softwarekomponenten über die Release Status freigegeben werden.  
-[SAP Dokumentation SWC](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/software-component?locale=en-US)
-
-Auch wenn sich das Paketkonzept nicht mehr 1:1 in der Cloud wiederfindet. ist Umsetzung und Anwendung der oben beschriebenen Konzepte dennoch in aktuellen On-Premise und private Cloud SAP Systemen sinnvoll, das es Entwicklungen strukturiert, Abhängigkeiten und Sichtbarkeiten deklariert und damit hilft, gut strukturierte Anwendungen zu erstellen.  
-Des Weiteren bereitet es sowohl die Entwickler, als auch die Entwicklerorganisation auf die Entwicklung in der Cloud vor, da bezüglich der Strukturierung von Software nicht mehr die allgemeinen Prinzipien erlernt werden müssen, sondern die bestehenden Konzepte nur noch auf die neuen Strukturartefakte übertragen werden müssen.
-
- Eine gute Strukturierung Ihrer Software durch Pakete auf aktuellen R/3 und S/4 Systemen hilft Ihnen somit beim Umstieg auf ABAP-Cloud oder die Transformation in die Cloud. Daher gehen wir in den folgenden Abschnitten auf die Anwendung des Paketkonzepts ein, welches auf On-Premise Systemen ab [ab SAP Web Application Server 6.2 bzw. deren Erweiterung ab Netweaver 7.3 EHP1] eingesetzt werden kann.  
 
 {: .recommendation}
 >- ***Nutzen Sie das Paketkonzept:***
@@ -137,18 +126,24 @@ Werden alle Objekte eines Hauptpaketes (strukturiert in Unterpaketen) in einen T
 
 ### Flexibilität
 
-Ist eine Softwarekomponente gut strukturiert, lassen sich Ergänzungen, Änderungen, Erweiterungen und Korrekturen besser durchführen als in dem Fall, wenn eine Anwendung sich aus lose zusammengestellten und in einem großen ungeordneten Paket befindlichen Objekten besteht, in dem andere Objekte für andere Funktionen enthalten sind. Somit ergibt sich bei guter Strukturierung auch eine erhöhte Flexibilität. Insbesondere wenn Funktionalitäten im Laufe des Lebenszyklus wachsen und der Umfang wächst, kann es erforderlich sein, die Struktur anzupassen und ggf. Funktionalitäten in zentrale Pakete auszulagern um eine Wiederverwendbarkeit hierfür zu erlangen oder im umgekehrten Fall, mehrere kleinere Anwendungen in ein Hauptpaket zusammenzufassen.
+Ist eine Softwarekomponente gut strukturiert, lassen sich Ergänzungen, Änderungen, Erweiterungen und Korrekturen besser durchführen als in dem Fall, wenn eine Anwendung sich aus lose zusammengestellten und in einem großen ungeordneten Paket befindlichen Objekten besteht, in dem andere Objekte für andere Funktionen enthalten sind. Somit ergibt sich bei guter Strukturierung auch eine erhöhte Flexibilität. Insbesondere wenn Funktionalitäten im Laufe des Lebenszyklus wachsen und der Umfang wächst, kann es erforderlich sein, die Struktur anzupassen und ggf. Funktionalitäten in zentrale bzw. allgemein verfügbare Pakete auszulagern um eine Wiederverwendbarkeit hierfür zu erlangen oder im umgekehrten Fall, mehrere kleinere Anwendungen in ein Hauptpaket zusammenzufassen.
 
 ### Zukunftsfähigkeit
 
 Die Erstellung von Software in gut strukturierten Paketen beinhaltet neben den offensichtlichen Vorteilen auch weitere Vorteile, die nicht sofort wirksam werden, im Rahmen des Softwarelebenszyklus aber durchaus relevant werden können.  
-Sind die Eigenentwicklungen im System bereits in Paketen geordnet, sind schon wichtige Voraussetzungen erfüllt, um moderne Versionsverwaltungssysteme wie abapGit oder gCTS zu nutzen, die Pakete bedingen. Somit sind dann Transporte mittels git-basierter Methoden in andere System über oder gar in die Cloud möglich [s. Versionsverwaltung](/ABAP-Leitfaden/application-lifecycle-management/version-management/).
-
-### Paketkapselung über Schnittstellen vs. Softwarekomponenten
-
+Sind die Eigenentwicklungen im System bereits in Paketen geordnet, sind schon wichtige Voraussetzungen erfüllt, um moderne Versionsverwaltungssysteme wie abapGit oder gCTS zu nutzen, die Pakete bedingen. Somit sind dann Transporte mittels Git-basierter Methoden in andere System über oder gar in die Cloud möglich s. Kapitel [Versionsverwaltung](/ABAP-Leitfaden/application-lifecycle-management/version-management/).  
 Wurde das Paketkonzept mit Erklärung der Verwendungsbeziehungen im Unternehmen bereits eingeübt und ist somit bereits eine Awareness bzgl. nutzbarer Objekte gegeben, sind gute Voraussetzungen geschaffen, die Konzepte in ABAP Cloud mit den Softwarekomponenten zu verstehen und anzuwenden.
-Die Paketschnittstellen entfallen hierbei, da die Verwendungsbeziehungen nicht mehr auf der Ebene der Pakete gepflegt werden. Die Prinzipien sind aber vergleichbar. Bei den Softwarekomponenten wird die Verwendung über die Release Contracts (C1) gesteuert. Damit sind Objekte in Softwarekomponenten systemweit verwendbar. Soll die Verwendung nur durch Objekte definierter Softwarekomponenten erfolgen, kann dies in sog. Softwarekomponentenbeziehungen (SWC) erfolgen. Damit deklariert man in einer Softwarekomponente, dass Objekte der eigenen SWC von Objekten anderen SWCs, die in den SWC-Relations deklariert werden, verwendet werden können, ohne dass ein Kontrakt auf Objektebene vorliegt. Dabei ist allerdings keine Einschränkung auf Objekte der eigenen SWC möglich.
 
+## Das Paketkonzept in ABAP Cloud - Softwarekomponenten
+
+Im Kontext von ABAP Cloud, ist das hier beschriebene Paketkonzept nicht mehr 1:1 anwendbar, da Paketschnittstellen in der Cloud nicht mehr unterstützt werden.  
+Mit der Einführung des ABAP Environments für die Entwicklung auf der Cloud und mit ABAP Cloud bekommt die schon lange vorhandene, aber in der Regel nicht für die Strukturierung benutzte Eigenschaft "Softwarekomponente" (SWC) eine tragende Bedeutung in der Strukturierung von ABAP-Software. Die Softwarekomponente wird bei Entwicklung mit ABAP Cloud ein zentraler Bestandteil der Softwarestruktur und ergänzt das Paketkonzept.
+Die Pakete unterhalb der Softwarekomponente dienen zur Strukturierung der verschiedenen Bestandteile einer Anwendung.
+Die Paketschnittstellen entfallen hierbei, da die Verwendungsbeziehungen nicht mehr auf der Ebene der Pakete gepflegt werden. Die Prinzipien sind aber vergleichbar. Bei den Softwarekomponenten wird die Verwendung über die Release Contracts (C1) gesteuert. Damit sind Objekte in Softwarekomponenten systemweit verwendbar sofern diese mit einem Release Contract versehen sind.  
+Soll die Verwendung nur durch Objekte definierter Softwarekomponenten erfolgen, kann dies in sog. Softwarekomponentenbeziehungen (SWC) erfolgen. Die hier deklarierten Softwarekomponenten erhalten die Erlaubnis alle Objekte der SWC zu verwenden. Eine Einschränkung auf spezifische Objekte der eigenen SWC ist nicht möglich.
+[SAP Dokumentation SWC](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/software-component?locale=en-US)  
+
+Auch wenn sich einige Elemente des Paketkonzepts in der Cloud nicht mehr wiederfinden, ist die Umsetzung und Anwendung der oben beschriebenen Konzepte dennoch in aktuellen On-Premise und private Cloud SAP Systemen sinnvoll, das es Entwicklungen strukturiert, Abhängigkeiten und Sichtbarkeiten deklariert und damit hilft, gut strukturierte Anwendungen zu erstellen.  
 
 ## Von der Architektur zum Design
 
