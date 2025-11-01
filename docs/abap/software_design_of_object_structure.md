@@ -27,21 +27,23 @@ Somit müssen auch Anforderungen an den ABAP-Code gestellt werden.
 2. ABAP-Code **soll** fachlich präzise strukturiert sein. Er wird in kleinen, semantisch zusammenpassenden und modularen Einheiten entwickelt. Diese Einheiten sind gut lesbar und für andere Entwickler leicht verständlich. Externe Zugriffe und modulübergreifende Abhängigkeiten sind über klar definierte Schnittstellen geregelt.
 3. ABAP-Code **soll** moderne Sprachkonstrukte verwenden. Er enthält keine veralteten Anweisungen oder Konstrukte die dem Clean Code Prinzipien widersprechen.
 4. ABAP.Code **soll** gut lesbar und verständlich geschrieben sein und Kommentare helfen beim Verständnis der implementierten Funktionalität.
+5. ABAP-Code **soll** dem Clean-Core Level Modell entsprechen.
 
-Mit langen, tief verschachtelten und eng verwobenen Modularisationseinheiten wie Programmen, Formroutinen und Funktionsbausteinen sind diese Anforderungen nur schwer zu erfüllen, da diese eine hohe Abwärtskompabilität aufweisen und vieles möglich ist, was mit ABAP-OO bereits technisch geprüft oder teilweise sogar verhindert wird.  
+Mit langen, tief verschachtelten und eng verwobenen Modularisationseinheiten wie Programmen, Formroutinen und Funktionsbausteinen sind diese Anforderungen nur schwer zu erfüllen, da diese eine hohe Abwärtskompabilität aufweisen, veraltete Möglichkeiten bieten und die Wartbarkeit erschweren. Mit ABAP OO wird dies bereits teilweise verhindert.
 
-Schon seit vielen Jahren gibt es in ABAP die Möglichkeit objektorientiert zu programmieren. Auch wenn dies anfangs noch nicht erforderlich war, ist es heute einerseits technisch notwendig, wenn neue Möglichkeiten genutzt werden sollen, andererseits bietet die Methodik der Objektorientierung sehr viele gute Ansätze Geschäftsanwendung so zu entwickeln, dass sie flexibel, wartbar, erweiterbar und robust umgesetzt werden können. Und durch die Nutzung von ABAP-Unit und eines guten Designs, können zahlreiche Tests bereits als UNIT Tests abgedeckt werden womit das Testen durch den Endanwender auf die Testung des Prozesses und der Funktion reduziert werden kann.
+Schon seit vielen Jahren gibt es in ABAP die Möglichkeit objektorientiert zu programmieren. Auch wenn dies anfangs noch nicht erforderlich war, ist es heute einerseits technisch notwendig, wenn neue Möglichkeiten genutzt werden sollen, andererseits bietet die Methodik der Objektorientierung sehr viele gute Ansätze Geschäftsanwendung so zu entwickeln, dass sie flexibel, wartbar, erweiterbar und robust umgesetzt werden können. Durch die Nutzung von ABAP-Unit und eines guten Designs, können zahlreiche Funktionen über Unit-Tests geprüft werden. Damit wird das Testen durch den Endanwender auf die Testung des Prozesses und der Funktion reduziert werden kann.
 
-Und obwohl die oben genannten Nachteile der prozeduralen und Vorteile der Objektorientierten Programmierung bekannt sind, werden auch in aktuellen Projekten weiterhin Funktionalitäten nicht objektorientiert umgesetzt bzw. nicht das volle Potenzial moderner Entwicklungsmethoden genutzt. Dies können z.B. Programme sein, die prozedural implementiert werden, Klassen die objektorientierte Prinzipien nicht umsetzen oder Implementierung von Funktionsbausteinen oder direkte Implementierung von komplexen Code in BAdI-Implementierung direkt ohne weitere Strukturierung.
+Und obwohl die oben genannten Nachteile der prozeduralen und Vorteile der Objektorientierten Programmierung bekannt sind, werden auch in aktuellen Projekten weiterhin Funktionalitäten nicht objektorientiert umgesetzt bzw. nicht das volle Potenzial moderner Entwicklungsmethoden genutzt. Dies können z.B. Programme sein, die prozedural implementiert werden, Klassen die objektorientierte Prinzipien nicht umsetzen oder Implementierung von Funktionsbausteinen oder direkte Implementierung von komplexen Code in BAdI-Implementierung ohne weitergehende Strukturierung in eigenen Klassen. All dies ist zu vermeiden und durch entsprechende Techniken der OOP zu lösen.
 
 {: .recommendation}
->- Fordern Sie bei allen Entwicklungen die Umsetzung in ABAP Objects unter Einsatz objektorientierter Methoden ein
->- Achten Sie auf die Anwendung der SOLID Prinzipien der Objektorientierung
+>- Fordern Sie bei allen Entwicklungen die Umsetzung in ABAP Objects unter Einsatz objektorientierter Methoden ein.
+>- Achten Sie auf die Anwendung der SOLID Prinzipien der Objektorientierung.
 >- Wenden Sie beim Anwendungsdesign die gängigen objektorientierten Designpatterns an.
->- Trennen Sie die unterschiedlichen Belange der Geschäftsanwendungen in Klassen auf (z.B. Controller Klasse, Datenzugriff, Geschäftslogiken, Prüfungen etc.)
->- Halten Sie die Schnittstellen klein und nutzen Sie die Factory für Übergabe wichtiger Daten an das Objekt
+>- Trennen Sie die unterschiedlichen Belange der Geschäftsanwendungen in Klassen auf (z.B. Controller Klasse, Datenzugriff, Geschäftslogiken, Prüfungen etc.).
+>- Halten Sie die Schnittstellen klein und nutzen Sie die Factory für Übergabe wichtiger Daten an das Objekt.
 >- Verschalen und konzentrieren Sie Aufrufe von SAP-Code bzw. Paketfremden Code in eigenen privaten Methoden.
->- Verwenden Sie klassenbasierte Ausnahmen für das komplette Fehlerhandling inklusive Nachrichtenabwicklung in der Anwendung  
+>- Verwenden Sie klassenbasierte Ausnahmen für das komplette Fehlerhandling inklusive Nachrichtenabwicklung in der Anwendung.
+>- Propagieren Sie nur Interfaces oder spezielle Fassadenklassen in den Paketschnittstellen.
 
 Die detaillierte Erläuterung der Objektorientierung und die zahlreichen Möglichkeiten des modernen ABAP können wir in diesem Leitfaden nicht umfänglich abhandeln, möchten Ihnen aber bezüglich des Vorgehens Empfehlungen, Hinweise und Hilfen geben, die den Einstieg erleichtern und einen Überblick über Handlungsfelder geben, die schnell zu Verbesserungen führen können.
 
