@@ -16,19 +16,19 @@ nav_order: 2
 
 Geschäftsanwendungen in der klassischen prozeduralen ABAP Entwicklung werden in Form von Programmen erstellt, die durch komplexe, prozedurale, tief verschachtelte Kontrollstrukturen geprägt sind. Modularisierung erfolgte mittels Form-Routinen oder für die Wiederverwendung in Funktionsbausteinen. Bei guter Planung und Anwendung von Methoden der Softwareentwicklung waren Funktionsgruppen nicht überladen, sondern bestehen aus zusammengehörigen spezifischen Funktionen. Vielleicht kennen Sie aber auch die eine oder andere Funktionsgruppe, die zahlreiche Funktionsbausteine mit unterschiedlichen Aufgaben enthält und beim einen oder anderen Transport auch mal das eine oder andere Problem verursacht hat. Mit der Anzahl der vorgenommenen Änderungen wurden diese Anwendung immer komplexer, fehleranfälliger und immer schwerer zu warten.  
 
-An moderne Anwendungen werden heute hohe Anforderungen gestellt.  
+An moderne Anwendungen werden heute hohe Anforderungen gestellt:
 
 - Anwendungen müssen die funktionalen Anforderungen bestens erfüllen.
 - Anwendungen müssen fehlerfrei, robust, performant und fehlertolerant betrieben werden können.
 - Änderungen sollen schnell, effizient, fehlerfrei und mit wenig Testaufwand durchführbar sein und keine neuen Fehler erzeugen.  
 
-Somit müssen auch Anforderungen an den ABAP-Code gestellt werden.  
+Somit müssen auch Anforderungen an den ABAP-Code gestellt werden:
 
-1. ABAP-Code **muss** die funktionalen Anforderungen korrekt erfüllen und hat keine negativen Auswirkungen auf Sicherheitsthemen oder andere Entwicklungen.
-2. ABAP-Code **soll** fachlich präzise strukturiert sein. Er wird in kleinen, semantisch zusammenpassenden und modularen Einheiten entwickelt. Diese Einheiten sind gut lesbar und für andere Entwickler leicht verständlich. Externe Zugriffe und modulübergreifende Abhängigkeiten sind über klar definierte Schnittstellen geregelt.
-3. ABAP-Code **soll** moderne Sprachkonstrukte verwenden. Er enthält keine veralteten Anweisungen oder Konstrukte die dem Clean Code Prinzipien widersprechen.
-4. ABAP-Code **soll** gut lesbar und verständlich geschrieben sein und Kommentare helfen beim Verständnis der implementierten Funktionalität.
-5. ABAP-Code **soll** dem [Clean-Core-Level Modell](/ABAP-Leitfaden/clean-core//solution-approach/#level-concept) entsprechen.
+- ABAP-Code muss die funktionalen Anforderungen korrekt erfüllen und hat keine negativen Auswirkungen auf Sicherheitsthemen oder andere Entwicklungen.
+- ABAP-Code soll fachlich präzise strukturiert sein. Er wird in kleinen, semantisch zusammenpassenden und modularen Einheiten entwickelt. Diese Einheiten sind gut lesbar und für andere Entwickler leicht verständlich. Externe Zugriffe und modulübergreifende Abhängigkeiten sind über klar definierte Schnittstellen geregelt.
+ ABAP-Code soll moderne Sprachkonstrukte verwenden. Er enthält keine veralteten Anweisungen oder Konstrukte die dem Clean Code Prinzipien widersprechen.
+- ABAP-Code soll gut lesbar und verständlich geschrieben sein und Kommentare helfen beim Verständnis der implementierten Funktionalität.
+- ABAP-Code soll dem [Clean-Core Level Modell](/ABAP-Leitfaden/clean-core//solution-approach/#level-concept) entsprechen.
 
 Mit der klassischen, prozeduralen ABAP-Programmierung sind diese Anforderungen nur schwer zu erfüllen, da diese eine hohe Abwärtskompabilität aufweisen, veraltete Möglichkeiten bieten und die Wartbarkeit erschweren. Dieser klassische, prozedurale Ansatz ist nicht mehr zeitgemäß und sollte nicht mehr Anwendung finden.  
 
@@ -54,7 +54,7 @@ Die detaillierte Erläuterung der Objektorientierung und die zahlreichen Möglic
 
 Das Thema Objektorientierung ist komplex und viele existierende Funktionalitäten in SAP folgen nicht den Designprinzipien der Objektorientierung, auch dann nicht wenn diese in ABAP-Klassen implementiert sind. Für dieses Kapitel sollten die Grundprinzipien der Objektorientierung bereits bekannt sein.  
 Die Hinweise und Tipps erfolgen hier in sehr vereinfachter Form. Es soll ein Vorgehen aufzeigen um die Objektorientierung nutzbringend anzuwenden und unsere Empfehlungen praxisorientiert untermauern.  
-Dies ist ein Anfang und kann helfen das Verständnis für ABAP-OO in den Entwicklerteams zu schaffen, erste Erfolgserlebnisse zu erzielen und mittels weitere Unterstützung durch Trainings, Dokumentation und Literatur und Coachings das Thema nachhaltig in der Organisation gewinnbringend zu nutzen.
+Dies ist ein Anfang und kann helfen das Verständnis für ABAP-OO in den Entwicklerteams zu schaffen, erste Erfolgserlebnisse zu erzielen und mittels weitere Unterstützung durch Trainings und Coachings, Dokumentationen, Blogs und Online Events und durch Fachliteratur das Thema nachhaltig in der Organisation gewinnbringend zu nutzen.
 
 ## Merkmale Objektorientierter Entwicklung in ABAP-Klassen
 
@@ -71,13 +71,14 @@ Weitere Erkennungsmerkmale einer Klasse, die **nicht** objektorientierten Prinzi
 
 - **Größe der Klasse** - eine Klasse mit vielen (öffentlichen) Methoden zeigt vermutlich auf dass das Single Responsibility Prinzip verletzt wurde  
 - **Größe der Methoden** - umfangreiche Methoden weisen auf Strukturdefizite, redundanten Code und Verletzung des Separation of Concerns Prinzips hin.  
-- **Umfangreiche Parameterschnittstellen** - Objekte arbeiten mit Objekten und nicht mit Parametern, dies geht meistens mit zu großen Methoden einher. Daher besitzen Objektorientierte Methoden oftmals sehr schmale Schnittstellen die Objekte und bei funktionalen Methoden Return Parameter enthalten.  
+- **Umfangreiche Parameterschnittstellen** - Objekte arbeiten mit Objekten und nicht mit Parametern. Dies geht meistens mit zu großen Methoden einher. Daher besitzen objektorientierte Methoden oftmals sehr schmale Schnittstellen, die Objekte als Übergabeparameter, bei funktionalen Methoden Return Parameter, enthalten.  
+
+Klassen, die die diese Erkennungsmerkmale besitzen, widersprechen den o.g. Anforderungen an modernen ABAP-Code.
 Weitere Indikatoren finden z.B. im [Clean-ABAP Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md).
-Solche Klassen widersprechen den o.g. Anforderungen an modernen ABAP-Code.
 
 Klassen sollen übersichtlich gestaltet werden und entsprechend dem Single-Responsibility Prinzip nur eine Aufgaben erfüllen. Methoden so kurz wie möglich und dabei auch nur eine Aufgabe erfüllen. Diese Beschränkung zwingt dazu, Aufgaben in verschiedene Klassen zu delegieren. Damit sind die einzelnen Klassen weniger Komplex, die Komplexität verschiebt sich damit je nach Anwendung in das Klassengeflecht und dem Zusammenspiel der einzelnen Klassen. Dieses Zusammenspiel und die übergeordnete Logik wird in einem **Controller** gebündelt.  
 Um hier einer Komplexitätsverschiebung zu reduzieren und Strukturdefizite zu vermeiden, bedarf es guter Planung und Gestaltung der Struktur der Anwendung.  
-Dass während der Entwicklung Methoden und Attribute verschoben und umbenannt werden und Objekte umstrukturiert (Refactoing) werden, gehört zum Softwareentwicklungsprozess dazu und ist Dank moderner Softwareentwicklungswerkzeuge in den ABAP-Development Tools in Eclipse und zusätzlichen AddOns einfach und sicher durchzuführen.
+Dass während der Entwicklung Methoden und Attribute verschoben und umbenannt werden und Objekte umstrukturiert [Refactoring](/ABAP-Leitfaden/abap/oo-design/#die-bedeutung-des-refactorings-von-bestehenden-anwendungen) werden, gehört zum Softwareentwicklungsprozess dazu und ist Dank moderner Softwareentwicklungswerkzeuge in den ABAP-Development Tools in Eclipse und zusätzlichen AddOns einfach und sicher durchzuführen.
 
 ## Grundprinzipien der Objektorientierung (SOLID)
 
@@ -85,11 +86,11 @@ Beim Einstieg in ABAP Objects geschieht es schnell, dass aus einer Funktionsgrup
 
 Ein Hilfsmittel für objektorientierte Entwürfe sind die SOLID-Prinzipien. Jeder Buchstabe gibt ein Prinzip für objektorientierte Entwicklung vor. Es gibt folgende Prinzipien:
 
-- Single Responsibility Principle
-- Open/Closed Principle
-- Liskov Substitution Principle
-- Interface Segregation Principle
- -Dependency Inversion Principle
+- **S**ingle Responsibility Principle
+- **O**pen/Closed Principle
+- **L**iskov Substitution Principle
+- **I**nterface Segregation Principle und das
+- **D**ependency Inversion Principle
 
 Eine kurze Beschreibung der Prinzipien finden Sie im [Unterabschnitt](/ABAP-Leitfaden/abap/oo-basics/), eine ausführliche Erklärung findet sich z.B. [im Blog von Uncle Bob](https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html), dem Autor von Clean Code.
 
@@ -99,10 +100,11 @@ Insbesondere die beiden ersten Prinzipien sind ohne allzu tiefes OO Verständnis
 
 In der Objektorientierung gibt es zahlreiche Entwurfsmuster (Design Pattern), die für verschiedene Problemstellungen und Anwendungsfälle bereits vorgefertigte und erprobte softwaretechnische Mechanismen bieten. Diese können auch in ABAP angewendet werden. So sind in ABAP folgende Pattern direkt und sinnvoll anwendbar:  
 
-- Factory - Erzeugung von Instanzen einer Klasse
-- Singleton - Erzeugung einer zentralen Instanz einer Klasse
-- Facade - Verschalung von Komplexität einer Funktion - Fassaden eignen sich für die Propagierung in Paketschnittstellen zur Verwendung durch andere Pakete
-- MVC (Model-View-Controller) - Trennung der Belange einer Anwendung
+- **Factory** - Erzeugung von Instanzen einer Klasse
+- **Singleton** - Erzeugung einer zentralen Instanz einer Klasse
+- **Facade** - Verschalung von Komplexität einer Funktion  
+   Fassaden eignen sich für die Propagierung in Paketschnittstellen zur Verwendung durch andere Pakete
+- **MVC** (Model-View-Controller) - Trennung der Belange einer Anwendung
 
 Detaillierte Erläuterungen und Code Beispiele finden Sie im [Unterabschnitt](/ABAP-Leitfaden/abap/oo-basics/)
 
@@ -160,7 +162,7 @@ Dieses Verfahren folgt dem Prinzip der Steuerungsumkehr und trägt zur Separatio
 
 Die Erstellung technischer Objekte erscheint anfangs aufwändiger als der Top-Down Ansatz beim prozeduralen Vorgehen. 
 Mittels Autovervollständigung, Nutzung von Code Templates und Quickfixes in den ABAP Development Tools in Eclipse (ADT) wird der ABAP-Code für die technischen Klassen sehr schnell und einfach erstellt, wodurch sich der Mehraufwand im Coding sehr in Grenzen hält.  
-Ist dieses Muster erst einmal eingeübt, übertreffen die Vorteile dieses Verfahrens den Nachtteil des vermeintlich erhöhten initialen Aufwands bei weitem.  
+Ist dieses Muster erst einmal eingeübt, übertreffen die Vorteile dieses Verfahrens den Nachteil des vermeintlich erhöhten initialen Aufwands bei weitem.  
 Natürlich muss dass Vorgehen auch eingeübt werden um eine gewisse Entwicklungsperformanz und -effizienz zu entwickeln.  
 Bitte beachten Sie hierzu den **[ADT-Leitfaden](https://1dsag.github.io/ADT-Leitfaden/)** der DSAG, der Sie unterstützt, ADT effizient und flächendeckend im Unternehmen einzusetzen.
 
@@ -197,12 +199,14 @@ Dies bietet wiederum den Vorteil der möglichen Wiederverwendung und Implementie
 ## Verwendung von SAP Code - Gesetz von Demeter
 
 Die Verwendung von SAP-Code (Klassen, Funktionsbausteinen, BAPIs, etc.) oder auch paketfremder Code, sollte immer in einer eigenen Zugriffsschicht liegen. Dies entspricht dann auch einer sauberen Trennung der Belange (S - Separation of Concerns).  
-Dies entspricht der Entwurfsrichtlinie der Objektorientierung ["Gesetz von Demeter"](https://de.wikipedia.org/wiki/Gesetz_von_Demeter), welches besagt, das Objekte nur mit Objekten in ihrer unmittelbaren Umgebung kommunizieren sollen.
-Auch wenn es sich um freigegebene Elemente handelt, sollten diese stets mit einer Klasse gekapselt werden, damit es zu einer zentralen Stelle des Übergangs von Eigen- an Fremdcode gibt.
+Dies entspricht der Entwurfsrichtlinie der Objektorientierung ["Gesetz von Demeter"](https://de.wikipedia.org/wiki/Gesetz_von_Demeter), welches besagt, das Objekte nur mit Objekten in ihrer unmittelbaren Umgebung kommunizieren sollen.  
+Auch wenn es sich um freigegebene Elemente handelt, sollten diese stets mit einer Klasse gekapselt werden, damit es zu einer zentralen Stelle des Übergangs von Eigen- an Fremdcode gibt.  
+
 Erstellen Sie Klassen, deren Aufgabe es ist, den Programmcode der Anwendung frei von jeglichen Abhängigkeiten zum SAP Code oder zu paketfremden Code zu halten. Dies wird auch die Wiederverwendung fördern.  
-Falls die Erstellung eigener Klassen überdimensioniert ist, kann in Sonderfällen die Trennung auch durch den Aufruf des fremden Codes in eigens dafür erstellten privaten Methoden erfolgen. Die Schnittstellendefinition sollte sich dabei eher an den Aufrufer und nicht am aufgerufenen Objekt orientieren. Somit ist später ein Austausch des verwendeten Fremdcodes einfacher. Je nach Komplexität kann das Mapping zwischen Eigen- und Fremdcodeschnittstellen in eigene Methoden ausgelagert werden.
+Falls die Erstellung eigener Klassen überdimensioniert ist, kann in Sonderfällen die Trennung auch durch den Aufruf des fremden Codes in eigens dafür erstellten privaten Methoden erfolgen. Die Schnittstellendefinition sollte sich dabei eher an den Aufrufer und nicht am aufgerufenen Objekt orientieren. Somit ist später ein Austausch des verwendeten Fremdcodes einfacher. Je nach Komplexität kann das Mapping zwischen Eigen- und Fremdcodeschnittstellen in eigene Methoden ausgelagert werden.  
 Ziel ist es hier Kontrolle über Abhängigkeiten zu behalten und die Wartbarkeit der Software zu erhöhen.
-Datenzugriffen, z.B. CDS-Views, sollten aus Gründen der Testbarkeit in einer eigenen Datenbankzugriffsschicht implementiert werden, die eine Entkopplung des Datenzugriffs über Dependency Inversion für ABAP Unit Tests ermöglicht (s. Kapitel Testen).
+
+Datenzugriffe, z.B. CDS-Views oder SAP-Funktionsbausteine sollten aus Gründen der Testbarkeit in einer eigenen Datenbankzugriffsschicht implementiert werden, die eine Entkopplung des Datenzugriffs über Dependency Inversion für ABAP Unit Tests ermöglicht (s. Kapitel Testen).
 
 Eine hilfreiche Erweiterung dieser Klassen ist die Transformation der klassischen Ausnahmen, oder Return Codes, die von SAP Code zur Fehlerbehandlung verwendet werden, hin zu Ausnahmeklassen.  
 Diese Trennung ist auch eine wichtige Voraussetzung für die Testbarkeit einer Anwendung.
@@ -224,3 +228,7 @@ Refactoring sollte immer dann vorgenommen werden, wenn bestehende Anwendungen ge
 
 Refactoring beschreibt aber nicht nur die Verbesserung des Codes im Einzelnen, sondern kann im übertragenen Sinne auch auf die Struktur in Form der Pakete angewendet werden. Objekte können sinnvoll in neue Unterpakete verteilt werden. Falls bisher Ihre Anwendungen nicht auf einer Struktur basieren, die durch Hauptpakete geordnet sind, empfehlen wir, Hauptpakete zu erstellen, die Ihre Hauptfunktionalitäten abbilden und bisherige Pakete können dann diesen Paketen entsprechend ihrer Zugehörigkeit zugeordnet werden. Eine Aufteilung zu grosser Pakete in kleinere Pakete ist möglich, allerdings sind hier die Abhängigkeiten zu prüfen, zu klären und ggf. zu eliminieren. Dabei hilft aber die Paketkapselung und die Paketprüfung. Diese Funktionalitäten sind im optionalen Abschnitt [Grundlagen des Paketkonzepts](/ABAP-Leitfaden/abap/package_extended.md) detailliert erläutert.
 Die Verbesserung an bestehender Software sollte kontinuierlich und in kleinen Schritten erfolgen und durch Tests abgesichert werden. Wenn dies im Entwicklungsprozess integriert ist und zum Tagesgeschäft der Entwicklung gehört, wird sich das mit besser wartbarer und weniger Fehleranfälligen Software auszahlen.
+
+## Eine gute Architektur braucht auch sauberen Code
+
+Nachdem Sie einiges über die Architektur und Struktur moderner Anwendungsentwicklung und Methoden zur Gestaltung der Software erfahren haben, lesen Sie im nächsten Abschnitt welche Eigenschaften Clean Code besitzt und erhalten unsere Empfehlungen und Hinweise wie moderner und sauberer Code (Clean Code) bei der Anwendungsentwicklung erreicht werden kann. Denn eine Anwendung sollte nicht nur eine gute Architektur und Strukturierung besitzen. Ebenso wichtig ist sauberen Code zu erstellen und den Clean-Code Prinzipien zu folgen. Denn dies unterstützt das Ziel moderner und wartungsfreundlicher Software.  

@@ -30,13 +30,13 @@ Viele Entwicklungen betreffen die Weiterentwicklung bestehender Funktionalitäte
 - **Zeit- und Termindruck**  
 Letztlich finden die meisten Entwicklungen unter Zeitdruck statt. Die Frage, wie eine Anwendung sinnvoll in Paketen strukturiert werden kann, wird oft nicht gestellt oder vernachlässigt, da die Lieferung der Funktionalität im Vordergrund steht.  
 
-Als Folge der strukturellen Defizite in Eigenentwicklungen können sich folgende Probleme ergeben:
+Als Folge der sich aus den genannten Gründen ergebenden strukturellen Defizite in Eigenentwicklungen können sich folgende Probleme ergeben:
 
 - **Mangelnde Transparenz und Verständlichkeit:**  
 Sowohl die Aufgaben und deren Verantwortlichkeiten einzelner Artefakte, als auch deren Abhängigkeiten zueinander sind nicht aus der Struktur der Pakete ersichtlich.
 
 - **Hohe Anpassungsaufwände**  
-Änderungen an bestehender Software erfordern hohe Aufwände verursacht durch aufwändige Analyse, die zu ändernden Artefakte zu finden und die Änderung korrekt umzusetzen. Da die Korrektheit von Änderungen schwer vorhergesagt werden kann, enstehen hohe Test- und Fehlerkorrekturaufwände.
+Änderungen an bestehender Software erfordern hohe Aufwände verursacht durch aufwändige Analyse, die zu ändernden Artefakte zu finden und die Änderung korrekt umzusetzen. Da die Korrektheit von Änderungen schwer vorhergesagt werden kann, entstehen hohe Test- und Fehlerkorrekturaufwände.
 
 - **Seiteneffekte und Fehler bei Änderungen bestehender Anwendungen:**
 Änderungen können zu nicht vorhersehbaren Seiteneffekten in der Produktion führen und damit zu erhöhten Entwicklungs- und Fehlerbereinigungsaufwänden.
@@ -44,10 +44,10 @@ Sowohl die Aufgaben und deren Verantwortlichkeiten einzelner Artefakte, als auch
 - **Probleme bei Verteilung und Import von Änderungen**
 Es kann zu Problemen bei Transporten kommen, wenn nicht alle notwendigen Objekte korrekt transportiert wurden oder nicht alle Abhängigkeiten berücksichtigt wurden (z.B. RC8).
 
-##  Architektur und Struktur als Fundament und Rahmen einer guten SAP Anwendung
+## Architektur und Struktur als Fundament und Rahmen einer guten SAP Anwendung
 
 Die Komplexität von Software wird oftmals unterschätzt und nur wer sich von Anfang an Gedanken über eine gute Softwarearchitektur macht und die Anwendung kontinuierlich technisch und strukturell verbessert, wird mit der oben beschriebenen Problematik weniger konfrontiert sein.  
-Gute und moderne Softwareentwicklung beginnt zuallererst mit der Überlegung, welche Funktionen und Zuständigkeiten eine zu erstellende Anwendung haben soll, wie die Verantwortlichkeiten *geregelt* sind und wie sich dies letztendlich in der Paketstruktur widerspiegelt.  
+Gute und moderne Softwareentwicklung beginnt zuallererst mit der Überlegung, welche Funktionen und Zuständigkeiten eine zu erstellende Anwendung haben soll, wie die Verantwortlichkeiten geregelt sind und wie sich dies letztendlich in der Paketstruktur widerspiegelt.  
 Mit dem SAP Paketkonzept haben Sie das Werkzeug, um diese Überlegungen in sichtbare Strukturen zu überführen und damit die Grundlagen für eine saubere und zukunftsfähige Anwendungsarchitektur zu legen.
 
 ## Strukturierung von Software in Paketen
@@ -81,9 +81,10 @@ Eine Strukturierung anhand von Organisations-, Verantwortungs- oder Projektstruk
 
 Aktivieren Sie die Paketkapselung, um technische Abhängigkeiten kontrollieren zu können. Es können zwei Fehlersituationen auftreten:  
 
-- Wird ein Objekt aus einem anderen Paket verwendet, das nicht in einer freigegebenen Paketschnittstelle enthalten ist, meldet die Paketprüfung einen Fehler, dass das Objekt nicht sichtbar ist.
+- **Unsichtbares Objekt**: Wird ein Objekt aus einem anderen Paket verwendet, das nicht in einer freigegebenen Paketschnittstelle enthalten ist, meldet die Paketprüfung einen Fehler, dass das Objekt nicht sichtbar ist.
 
-- Wird ein Objekt eines anderen Paketes verwendet, welches sich in einer Paketschnittstelle befindet, muss diese Schnittstelle noch in der Verwendungserklärung deklariert werden um keine Fehler in der Paketprüfung zu erhalten.  
+- **Fehlender Verwendungsnachweis**: Wird ein Objekt eines anderen Paketes verwendet, welches sich in einer Paketschnittstelle befindet, muss diese Schnittstelle noch in der Verwendungserklärung deklariert werden um keine Fehler in der Paketprüfung zu erhalten.  
+
 Mit den Fehlern aus der Paketprüfung erhalten Sie Transparenz darüber, welche Abhängigkeiten zu anderen Paketen bestehen und welche Objekte verwendet werden, die nicht zur Verwendung in fremden Paketen vorgesehen sind.  
 Ist das Objekt nicht in einer Paketschnittstelle enthalten, sollte dies Objekt nicht verwendet werden und eine Alternative gesucht oder eine eigenes Objekt innerhalb des Paketes dafür erstellt werden, um den Paketfehler zu vermeiden.  
 Soll ein Objekt des eigenen Paketes anderen Paketen zur Verwendung zur Verfügung gestellt werden, ist dies in einer Paketschnittstelle des Hauptpaketes zu definieren, somit definiert die Paketschnittstelle das öffentliche Interface des Hauptpaketes. Wird diese dann in die Verwendungserklärung des Verwenderpaketes aufgenommen, ist somit auch eine technische Auswertung der Verwendungen möglich.
@@ -109,7 +110,7 @@ Es gibt neben den hier beschriebenen Empfehlungen zum Paketkonzept weitere Frage
 - Größe von Paketen - Architektonische Grenzen - Abgrenzung - Kosten (Clean Architecture)
 - Paket Refactoring - Splitting - Kombination einzelner Pakete - Kontinuierliche Paketpflege bei Änderungen und Erweiterungen
 
-## Warum sich die Anwendung es Paketkonzepts lohnt - Vorteile und Mehrwert
+## Vorteile und Mehrwert durch die Anwendung des Paketkonzepts
 
 Nach den hier beschriebenen Ausführungen wird deutlich, dass die Umsetzung des Paketkonzepts einiges an Überlegung und Aufwand bedarf. Dieser Aufwand zahlt sich aber durch zahlreiche Vorteile aus, die hier im Folgenden aufgeführt werden:
 
@@ -140,11 +141,10 @@ Im Kontext von ABAP Cloud, ist das hier beschriebene Paketkonzept nicht mehr 1:1
 Mit der Einführung des ABAP Environments für die Entwicklung auf der Cloud und mit ABAP Cloud bekommt die schon lange vorhandene, aber in der Regel nicht für die Strukturierung benutzte Eigenschaft "Softwarekomponente" (SWC) eine tragende Bedeutung in der Strukturierung von ABAP-Software. Die Softwarekomponente wird bei Entwicklung mit ABAP Cloud ein zentraler Bestandteil der Softwarestruktur und ergänzt das Paketkonzept.
 Die Pakete unterhalb der Softwarekomponente dienen zur Strukturierung der verschiedenen Bestandteile einer Anwendung.
 Die Paketschnittstellen entfallen hierbei, da die Verwendungsbeziehungen nicht mehr auf der Ebene der Pakete gepflegt werden. Die Prinzipien sind aber vergleichbar. Bei den Softwarekomponenten wird die Verwendung über die Release Contracts (C1) gesteuert. Damit sind Objekte in Softwarekomponenten systemweit verwendbar sofern diese mit einem Release Contract versehen sind.  
-Soll die Verwendung nur durch Objekte definierter Softwarekomponenten erfolgen, kann dies in sog. Softwarekomponentenbeziehungen (SWC) erfolgen. Die hier deklarierten Softwarekomponenten erhalten die Erlaubnis alle Objekte der SWC zu verwenden. Eine Einschränkung auf spezifische Objekte der eigenen SWC ist nicht möglich.
-[SAP Dokumentation SWC](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/software-component?locale=en-US)  
+Soll die Verwendung nur durch Objekte definierter Softwarekomponenten erfolgen, kann dies in sog. Softwarekomponentenbeziehungen (SWC) erfolgen. Die hier deklarierten Softwarekomponenten erhalten die Erlaubnis alle Objekte der SWC zu verwenden. Eine Einschränkung auf spezifische Objekte der eigenen SWC ist nicht möglich. Detaillierte Informationen finden Sie in der [SAP Dokumentation zu SWC](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/software-component?locale=en-US)  
 
 Auch wenn sich einige Elemente des Paketkonzepts in der Cloud nicht mehr wiederfinden, ist die Umsetzung und Anwendung der oben beschriebenen Konzepte dennoch in aktuellen On-Premise und private Cloud SAP Systemen sinnvoll, das es Entwicklungen strukturiert, Abhängigkeiten und Sichtbarkeiten deklariert und damit hilft, gut strukturierte Anwendungen zu erstellen.  
 
 ## Von der Architektur zum Design
 
-Nachdem mit den hier genannten Ausführungen die Voraussetzung für eine gute Architektur geschaffen wurden, die sich in der Paketstruktur wiederfindet, muss nun anschließend in den einzelnen Unterpaketen die Anwendungsarchitektur in konkreter Form von Klassen definiert/designed werden. Die Ausführungen hierzu finden Sie im folgenden Abschnitt: [Design von ABAP Anwendungen mit OO](/ABAP-Leitfaden/abap/oo-design#design-und-erstellung-von-abap-entwicklungen-mit-abap-oo).
+Nachdem mit den hier genannten Ausführungen die Voraussetzung für eine gute Architektur geschaffen wurden, die sich in der Paketstruktur wiederfindet, muss nun anschließend in den einzelnen Unterpaketen die Anwendungsarchitektur in konkreter Form von Klassen definiert/designed werden. Die Ausführungen hierzu finden Sie im Abschnitt: [Entwurf und Gestaltung moderner SAP-Anwendungen](/ABAP-Leitfaden//abap/oo-design/).
