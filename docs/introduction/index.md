@@ -11,6 +11,7 @@ nav_order: 0
 1. TOC
 {:toc}
 
+## Der neue DSAG ABAP-Leitfaden 
 Herzlich Willkommen beim neuen "ABAP-Leitfaden" der DSAG. Vor Ihnen befindet sich ein umfangreiches Dokument zum Thema Anwendungsentwicklung in SAP.
 
 Die Business Suite der SAP zeichnet sich als Standardsoftware durch ein hohes Maß an Flexibilität und Erweiterbarkeit aus. In nahezu allen Unternehmen, die SAP-Software einsetzen, finden sich kundenspezifische Anpassungen und Erweiterungen. Die SAP-Software unterliegt damit sowohl auf Hersteller- als auch auf Kundenseite der kontinuierlichen Anpassung und Erweiterung durch sich ändernde Kundenbedürfnisse.
@@ -34,11 +35,10 @@ Im Jahr 2024 hat sich auf den Aufruf der DSAG wieder ein Team von Experten im SA
 
 ## Aufbau und Inhalte des Leitfadens
   
-Die Erfolgsfaktoren der Transformation zu moderner ABAP-Entwicklung finden sich nicht zuallererst in technischen Themen, sondern werden durch die Rahmenbedingungen geschaffen die ein Entwicklungsteam vorfindet. Zu Beginn des Leitfadens erhalten Sie Erläuterungen und Empfehlungen bezüglich der **Entwicklungsorganisation** die Ihnen Orientierung geben wie Rahmenbedingungen für moderne Anwendungsentwicklung in SAP geschaffen werden können.  
-Anschließend erhalten Sie einen Überblick über die Konzepte von **"Clean Core"** und Empfehlungen zur Vorgehensweise. Das Verständnis des Clean Core Konzept ist wichtig damit Sie Ihre Strategien definieren können und auch das Verständnis gegeben ist, wie die neuen Entwicklungsmethodiken den Clean-Core Ansatz technisch umsetzen.
-Damit haben Sie bereits einen guten Überblick über die Rahmenbedingungen.  
+Die Erfolgsfaktoren der Transformation zu moderner ABAP-Entwicklung finden sich nicht zuallererst in den technischen Themen, sondern werden durch die Rahmenbedingungen geschaffen die ein Entwicklungsteam vorfindet. Zu Beginn des Leitfadens erhalten Sie Erläuterungen und Empfehlungen bezüglich der **Entwicklungsorganisation** die Ihnen Orientierung geben wie Rahmenbedingungen für moderne Anwendungsentwicklung in SAP geschaffen werden können.  
+Anschließend erhalten Sie einen Überblick über die Konzepte von **"Clean Core"** und Empfehlungen zur Vorgehensweise. Das Verständnis des Clean Core Konzept ist wichtig damit Sie Ihre Strategien definieren können und auch das Verständnis gegeben ist, wie die neuen Entwicklungsmethodiken den Clean-Core Ansatz in die Umsetzung bringen. Damit haben Sie bereits einen guten Überblick über die Rahmenbedingungen.  
 
-Die technisch orientierten Themen  
+Die Themen 
 
 * **Core Data Services**
 * **ABAP**
@@ -46,9 +46,9 @@ Die technisch orientierten Themen
 * **User Interfaces und**
 * **Formulare**
 
-geben Ihnen Erläuterungen, Empfehlungen und Details zu den technischen Aspekten und Technologien moderner SAP Entwicklung.  
+geben Ihnen Erläuterungen, Empfehlungen und Details zu den technikorientierten Aspekten und Technologien moderner SAP Entwicklung.  
 Am Anfang der Kapitel finden Sie jeweils einleitende Informationen und einen Überblick über das Thema. Dieser Teil ist vor allem für Manager und Entscheider im Unternehmen gedacht, die sich einen Überblick über den Bereich verschaffen möchten.  
-Je tiefer Sie in das Kapitel einsteigen, desto detailliertere Informationen erhalten Sie zu den einzelnen Themen. Diese sehr technikorientierten Abschnitte sind vor allem für Architekten, Entwickler und technisch Interessierte geeignet, die einen technisch detaillierteren Einblick in das Thema erhalten wollen.  
+Je tiefer Sie in das Kapitel einsteigen, desto detailliertere Informationen erhalten Sie zu den einzelnen Themen. Diese Abschnitte sind vor allem für Architekten, Entwickler und technisch Interessierte geeignet, die einen detaillierteren Einblick in das Thema erhalten wollen.  
 
 Im weiteren Teil finden Sie dann Abschnitte zu den Themen **Open Source** mit wichtigen Ausführungen warum Open Source auch im ABAP-Bereich wichtig ist, Ausführungen zu Application Lifecycle Management (ALM), bei denen Sie auch Erläuterungen zu modernen Methoden der **Versionsverwaltung** finden.  
 Abschließend finden Sie noch Ausführungen zu den Themen **Sicherheit** und **Integration**, die bei Entwicklung von SAP Software heute wichtiger denn je sind.
@@ -73,7 +73,8 @@ Dieser Leitfaden dient nicht als Dokumentation und ist auch keine detaillierte A
 ## Feedback
 
 Dieser Leitfaden wird neben der druckbaren Version auch als digitale Ausgabe als Git-Repository im Internet zur Verfügung stehen:  
-[DSAG ABAP-Leitfaden Git-Pages](https://1dsag.github.io/ABAP-Leitfaden/) und [DSAG ABAP Leitfaden Git-Repository](https://github.com/1DSAG/ABAP-Leitfaden). Sie haben damit auch die Möglichkeit sich zu beteiligen und über Git-issues sowohl Feedback als auch Korrekturen und Ergänzungen in den Leitfaden einzubringen. Dieses Dokument lebt von der Community und vom Feedback der Leser. Die DSAG und das Autorenteam freut sich über jede Rückmeldung zum ABAP-Leitfaden und ist sehr interessiert ob und wie Ihnen der Leitfaden geholfen hat.  
+[DSAG ABAP-Leitfaden Git-Pages](https://1dsag.github.io/ABAP-Leitfaden/) und [DSAG ABAP Leitfaden Git-Repository](https://github.com/1DSAG/ABAP-Leitfaden).  
+Sie haben damit auch die Möglichkeit sich zu beteiligen und über Git-issues sowohl Feedback als auch Korrekturen und Ergänzungen in den Leitfaden einzubringen. Dieses Dokument lebt von der Community und vom Feedback der Leser. Die DSAG und das Autorenteam freut sich über jede Rückmeldung zum ABAP-Leitfaden und ist sehr interessiert ob und wie Ihnen der Leitfaden geholfen hat und wo Sie weitere Vertiefung wünschen.  
 
 ## Disclaimer
 
