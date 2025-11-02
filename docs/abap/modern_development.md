@@ -14,7 +14,8 @@ nav_order: 2
 
 ## Moderne Geschäftsanwendungen erfordern zeitgemäße Softwareentwicklungsmethoden
 
-Geschäftsanwendungen in der klassischen prozeduralen ABAP Entwicklung werden in Form von Programmen erstellt, die durch komplexe, prozedurale Kontrollstrukturen geprägt waren. Modularisierung erfolgte mittels Form-Routinen oder für die Wiederverwendung von Funktionen mit Funktionsbausteinen. Bei guter Planung und Anwendung von Methoden der Softwareentwicklung waren Funktionsgruppen nicht überladen, sondern bestanden aus zusammengehörigen spezifischen Funktionen. Vielleicht kennen Sie aber auch die eine oder andere Funktionsgruppe, die zahlreiche Funktionsbausteine mit unterschiedlichen Aufgaben enthält und beim einen oder anderen Transport auch mal das eine oder andere Problem verursacht hat. Mit der Anzahl der vorgenommenen Änderungen wurden diese Anwendung immer komplexer, fehleranfälliger und immer schwerer zu warten. Die Softwareentwicklungsmethoden und Techniken die heute dem ABAP-Entwickler zur Verfügung stehen, bieten für die Herausforderungen, die die Anforderungen moderner Geschäftsanwendungen mit sich bringen, gute Lösungsansätze for o.g. Problemfelder. Der ist der klassische, prozedurale Ansatz nicht zeitgemäß und darf nicht mehr Bestandteil heutiger Anwendungsentwicklung sein. Im ABAP-Cloud Umfeld ist dies durch eine strikte Syntaxprüfung auch technisch nicht mehr umsetzbar. Daher ist der Weg in die moderne ABAP-Entwicklung unabdingbar. Diese ist aber ungleich komplexer und heterogener geworden als es zu früheren R/3 Zeiten war.  
+Geschäftsanwendungen in der klassischen prozeduralen ABAP Entwicklung werden in Form von Programmen erstellt, die durch komplexe, prozedurale, tief verschachtelte Kontrollstrukturen geprägt sind. Modularisierung erfolgte mittels Form-Routinen oder für die Wiederverwendung in Funktionsbausteinen. Bei guter Planung und Anwendung von Methoden der Softwareentwicklung waren Funktionsgruppen nicht überladen, sondern bestehen aus zusammengehörigen spezifischen Funktionen. Vielleicht kennen Sie aber auch die eine oder andere Funktionsgruppe, die zahlreiche Funktionsbausteine mit unterschiedlichen Aufgaben enthält und beim einen oder anderen Transport auch mal das eine oder andere Problem verursacht hat. Mit der Anzahl der vorgenommenen Änderungen wurden diese Anwendung immer komplexer, fehleranfälliger und immer schwerer zu warten.  
+
 An moderne Anwendungen werden heute hohe Anforderungen gestellt.  
 
 - Anwendungen müssen die funktionalen Anforderungen bestens erfüllen.
@@ -26,14 +27,16 @@ Somit müssen auch Anforderungen an den ABAP-Code gestellt werden.
 1. ABAP-Code **muss** die funktionalen Anforderungen korrekt erfüllen und hat keine negativen Auswirkungen auf Sicherheitsthemen oder andere Entwicklungen.
 2. ABAP-Code **soll** fachlich präzise strukturiert sein. Er wird in kleinen, semantisch zusammenpassenden und modularen Einheiten entwickelt. Diese Einheiten sind gut lesbar und für andere Entwickler leicht verständlich. Externe Zugriffe und modulübergreifende Abhängigkeiten sind über klar definierte Schnittstellen geregelt.
 3. ABAP-Code **soll** moderne Sprachkonstrukte verwenden. Er enthält keine veralteten Anweisungen oder Konstrukte die dem Clean Code Prinzipien widersprechen.
-4. ABAP.Code **soll** gut lesbar und verständlich geschrieben sein und Kommentare helfen beim Verständnis der implementierten Funktionalität.
+4. ABAP-Code **soll** gut lesbar und verständlich geschrieben sein und Kommentare helfen beim Verständnis der implementierten Funktionalität.
 5. ABAP-Code **soll** dem [Clean-Core-Level Modell](/ABAP-Leitfaden/clean-core//solution-approach/#level-concept) entsprechen.
 
-Mit langen, tief verschachtelten und eng verwobenen Modularisationseinheiten wie Programmen, Formroutinen und Funktionsbausteinen sind diese Anforderungen nur schwer zu erfüllen, da diese eine hohe Abwärtskompabilität aufweisen, veraltete Möglichkeiten bieten und die Wartbarkeit erschweren. Mit ABAP OO wird dies bereits teilweise verhindert.
+Mit der klassischen, prozeduralen ABAP-Programmierung sind diese Anforderungen nur schwer zu erfüllen, da diese eine hohe Abwärtskompabilität aufweisen, veraltete Möglichkeiten bieten und die Wartbarkeit erschweren. Dieser klassische, prozedurale Ansatz ist nicht mehr zeitgemäß und sollte nicht mehr Anwendung finden.  
 
-Schon seit vielen Jahren gibt es in ABAP die Möglichkeit objektorientiert zu programmieren. Auch wenn dies anfangs noch nicht erforderlich war, ist es heute einerseits technisch notwendig, wenn neue Möglichkeiten genutzt werden sollen, andererseits bietet die Methodik der Objektorientierung sehr viele gute Ansätze Geschäftsanwendung so zu entwickeln, dass sie flexibel, wartbar, erweiterbar und robust umgesetzt werden können. Durch die Nutzung von ABAP-Unit und eines guten Designs, können zahlreiche Funktionen über Unit-Tests geprüft werden. Damit wird das Testen durch den Endanwender auf die Testung des Prozesses und der Funktion reduziert werden kann.
+Die Softwareentwicklungsmethoden und Techniken die heute dem ABAP-Entwickler zur Verfügung stehen, bieten für o.g. Problemfelder und für die Herausforderungen, die Anforderungen moderner Geschäftsanwendungen mit sich bringen, gute Lösungsansätze.  
 
-Und obwohl die oben genannten Nachteile der prozeduralen und Vorteile der Objektorientierten Programmierung bekannt sind, werden auch in aktuellen Projekten weiterhin Funktionalitäten nicht objektorientiert umgesetzt bzw. nicht das volle Potenzial moderner Entwicklungsmethoden genutzt. Dies können z.B. Programme sein, die prozedural implementiert werden, Klassen die objektorientierte Prinzipien nicht umsetzen oder Implementierung von Funktionsbausteinen oder direkte Implementierung von komplexen Code in BAdI-Implementierung ohne weitergehende Strukturierung in eigenen Klassen. All dies ist zu vermeiden und durch entsprechende Techniken der OOP zu lösen.
+Schon seit vielen Jahren gibt es in ABAP die Möglichkeit objektorientiert zu programmieren. Auch wenn dies anfangs noch nicht erforderlich war, ist es heute einerseits technisch notwendig, wenn neue Möglichkeiten genutzt werden sollen. Andererseits bietet die Methodik der Objektorientierung sehr viele gute Ansätze Geschäftsanwendung so zu entwickeln, dass sie flexibel, wartbar, erweiterbar und robust umgesetzt werden können. Durch die Nutzung von ABAP Unit und eines guten Designs, können zahlreiche Funktionen über Unit Tests geprüft werden. Damit kann das Testen durch den Endanwender auf das Testen des Prozesses und damit der Testaufwand in der Fachabteilung reduziert werden, da die innere Struktur der Software über ABAP Unit Tests abgesichert wird.
+
+Obwohl die oben genannten Nachteile der prozeduralen und Vorteile der Objektorientierten Programmierung bekannt sind, werden auch in aktuellen Projekten weiterhin Funktionalitäten nicht objektorientiert umgesetzt bzw. nicht das volle Potenzial moderner Entwicklungsmethoden genutzt. Dies können z.B. Programme sein, die prozedural implementiert werden, Klassen die objektorientierte Prinzipien nicht umsetzen oder Implementierung von Funktionsbausteinen oder direkte Implementierung von komplexen Code in BAdI-Implementierung ohne weitergehende Strukturierung in eigenen Klassen. All dies ist zu vermeiden und durch entsprechende Prinzipien der Objektorientierung zu lösen.
 
 {: .recommendation}
 >- Fordern Sie bei allen Entwicklungen die Umsetzung in ABAP Objects unter Einsatz objektorientierter Methoden ein.
@@ -64,12 +67,13 @@ Der entscheidende Unterschied ist die Instanziierbarkeit, d.h. es können für K
 
 Bei einer Klasse, die nur statische Methoden beinhaltet und in der Verwendung nicht instanziiert wird, handelt es sich somit nicht um eine Klasse die objektorientierten Prinzipien folgt.
 
-Weitere Erkennnungsmerkmale einer Klasse, die **nicht** objektorientierten Prinzipien folgt sind:
+Weitere Erkennungsmerkmale einer Klasse, die **nicht** objektorientierten Prinzipien folgt sind:
 
 - **Größe der Klasse** - eine Klasse mit vielen (öffentlichen) Methoden zeigt vermutlich auf dass das Single Responsibility Prinzip verletzt wurde  
 - **Größe der Methoden** - umfangreiche Methoden weisen auf Strukturdefizite, redundanten Code und Verletzung des Separation of Concerns Prinzips hin.  
 - **Umfangreiche Parameterschnittstellen** - Objekte arbeiten mit Objekten und nicht mit Parametern, dies geht meistens mit zu großen Methoden einher. Daher besitzen Objektorientierte Methoden oftmals sehr schmale Schnittstellen die Objekte und bei funktionalen Methoden Return Parameter enthalten.  
 Weitere Indikatoren finden z.B. im [Clean-ABAP Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md).
+Solche Klassen widersprechen den o.g. Anforderungen an modernen ABAP-Code.
 
 Klassen sollen übersichtlich gestaltet werden und entsprechend dem Single-Responsibility Prinzip nur eine Aufgaben erfüllen. Methoden so kurz wie möglich und dabei auch nur eine Aufgabe erfüllen. Diese Beschränkung zwingt dazu, Aufgaben in verschiedene Klassen zu delegieren. Damit sind die einzelnen Klassen weniger Komplex, die Komplexität verschiebt sich damit je nach Anwendung in das Klassengeflecht und dem Zusammenspiel der einzelnen Klassen. Dieses Zusammenspiel und die übergeordnete Logik wird in einem **Controller** gebündelt.  
 Um hier einer Komplexitätsverschiebung zu reduzieren und Strukturdefizite zu vermeiden, bedarf es guter Planung und Gestaltung der Struktur der Anwendung.  
@@ -111,7 +115,7 @@ Auch hier können wir leider nicht im Detail auf alle Entwurfsmuster eingehen, i
 Beim Umsetzen einer Anforderung z.B. in einem Report oder eines Funktionbausteins würde das Design gemäß der Spezifikation klassischerweise wie folgt sich gestalten:
 
 - Übernahme der Eingangsdaten aus Import Parametern 
-- Lesen des Customizings aus der Datenbank (z.B. Z-Tabelle)
+- Lesen des Customizing aus der Datenbank (z.B. Z-Tabelle)
 - Lesen der Daten aus den Datenbanktabellen
 - Verarbeiten der Daten mit Loops, Read Tables und diversen IF-Endif Kontrollstrukturen:  z.B. Prüfen, Berechnen, sortieren, abmischen ...
 - Übergabe des Ergebnisses and Export Parameter
@@ -119,9 +123,9 @@ Damit wird die Anforderung in imperativer Form in Programmcode dargestellt, ggf.
 
 ### Ablauf bei Objektorientiertem Ansatz
 
-Wenn die Anforderungen bekannt sind und analysiert wurden, sind zuerst die unterschiedlichen Aufgaben zu definieren und zu gruppieren. Anhand der Aufgaben können die Klassen und abgeleiteten sinnvollen Klassennamen definiert werden. Basierend auf diesem Vorgehen kann die OO Implementierung wie folgt aussehen:
+Wenn die Anforderungen bekannt sind und analysiert wurden, sind zuerst die unterschiedlichen Aufgaben zu definieren und zu gruppieren. Anhand der Aufgaben können die Klassen und abgeleiteten sinnvollen Klassennamen definiert werden. Basierend auf diesem Vorgehen kann die objektorientierte Implementierung wie folgt aussehen:
 
-- Definition Objekt zum Lesen und Auswerten des Customizings auf Basis Organisationsdaten = **Customizing Objekt**
+- Definition Objekt zum Lesen und Auswerten des Customizing auf Basis Organisationsdaten = **Customizing Objekt**
 - Definition Objekt zum Lesen der Datenbank, ggf. je nach Komplexität Aufteilung nach Geschäftsobjekt = **Datenobjekt(e)**.
 - Definition Objekt welches die Datenprüfungen und Validierungen durchführt = **Check Objekt**
 - Definition Objekt welches die Datenprozessierung durchführt und für die Erstellung des Ergebnisses zuständig ist **Geschäftslogik**.
@@ -129,7 +133,7 @@ Wenn die Anforderungen bekannt sind und analysiert wurden, sind zuerst die unter
 - Erstellung einer Factory Klasse, die die einzelnen Objektinstanzen erzeugt.
 - Definition einer Injektorklasse, mittels der das Mocking einzelner Funktionen ermöglicht wird.
 
-Die Details zum ABAP UNIT und wie man Unit-Tests erstellt finden Sie im Kapitel [**Testing**](/ABAP-Leitfaden/testing/index))
+Die Details zum ABAP Unit und wie man Unit-Tests erstellt finden Sie im Kapitel [**Testing**](/ABAP-Leitfaden/testing/index))
 
 ## Konzepte in der Objektorientierung
 
@@ -137,25 +141,30 @@ Neben den Grundlagen, gibt es weitere Konzepte und Techniken, durch deren Einsat
 
 ### Erstellung von Factories
 
-Jedes Objekt sollte eine Factory Methode haben, die Übergabe erforderlicher Parameter an die Klasse erfolgt über den Konstruktor der Klasse. Erfolgt die Instanziierung der Klassen einer Anwendung über eine zentrale Factory, wird die Factory Methode der Klasse in der Factory Klasse gerufen. Durch Anwendung des Factory Patterns, bleibt die Kontrolle der Objektinstanziierung bei den Klassen bzw. der zentralen Factory Klasse. 
+Jedes Objekt sollte eine Factory Methode haben, die Übergabe erforderlicher Parameter an die Klasse erfolgt über den Konstruktor der Klasse. Erfolgt die Instanziierung der Klassen einer Anwendung über eine zentrale Factory, wird die Factory Methode der Klasse in der Factory Klasse gerufen. Durch Anwendung des Factory Patterns, bleibt die Kontrolle der Objektinstanziierung bei den Klassen bzw. der zentralen Factory Klasse.
+
+{: .note }
 Vermeiden Sie, dass Klassen von außerhalb über den Befehl *New* bzw. *Create Object* instanziiert werden.
 
 ### Beispiel: Verschalung des Customizing in der Factory-Methode
 
-Die Customizing Klasse kann nun so gestaltet werden, dass in der Factory Methode die Customizing Tabelle geprüft wird, in der die Steuerung der Funktion hinterlegt ist. Nur wenn sich ein Eintrag in dieser Tabelle zu den Parametern der Factory-Methode (z.B. Werk oder Buchungskreis etc.) befindet, wird eine Instanz an den Aufrufer übergeben. Falls kein Eintrag oder ein Problem vorliegt, sollte eine Ausnahme ausgelöst werden, die vom Aufrufer abgefangen wird. Somit muss der Aufrufer nicht mehr die Prüfung der Tabelle übernehmen, sondern die Instanz ist nur dann vorhanden, wenn die Funktion auch aktiv ist. Im Positivfall können dann über die zurückgegebene Instanz die entsprechenden Methoden aufgerufen werden.  
-Alternativ bietet sich hier auch die Verwendung des Null-Instanz Patterns an, bei dem im Falle einer negativen Customizingprüfung, statt der Klasse mit der Implementierung, eine Klasse mit leerer Implementierung zurückgegeben wird. Beim Aufruf der Instanz passiert dann einfach nichts. Dies hat den Vorteil, dass der Aufrufer nicht mit Ausnahmen umgehen muss.  
+Eine Klasse, die für die Auswertung des Customizing verantwortlich ist, kann derart gestaltet werden, dass in der Factory Methode die Customizing Tabelle geprüft wird, in der die Steuerung der Funktion hinterlegt ist.  
+Nur wenn sich ein Eintrag in dieser Tabelle zu den Parametern der Factory-Methode (z.B. Werk oder Buchungskreis etc.) befindet, wird eine Instanz an den Aufrufer übergeben.  
+Einzelne Parameter des Customizing können in Attributen der Customizing Klasse vorgehalten werden und mittels sog. Getter-Methoden bei Bedarf in anderen zugehörigen Klassen abgefragt werden.  
+Falls kein Eintrag hierfür oder ein Problem vorliegt, sollte eine Ausnahme ausgelöst werden, die vom Aufrufer abgefangen wird. Somit muss der Aufrufer nicht mehr die Prüfung der Tabelle übernehmen, sondern bekommt nur dann eine Instanz zurück, wenn die Funktion im betreffenden Fall aktiv ist. Im Positivfall können dann über die zurückgegebene Instanz die entsprechenden Methoden aufgerufen werden.  
 
-Damit vereinfacht sich der Code der Geschäftslogik und die Komplexität des Customizing wird verschalt bzw. automatisiert. Einzelne Parameter des Customizings können in Attributen der Customizing Klasse vorgehalten werden und mittels sog. Getter-Methoden bei Bedarf in anderen zugehörigen Klassen abgefragt werden.  
-Da dem Objektkonstrukt mittels der Factory die Customizing Instanz bekannt ist und bei Bedarf diese in anderen Objekten als Attribut abgelegt werden kann, ist der Zugriff auf das Customizing standardisiert im gesamten Konstrukt ohne redundanten Code möglich.  
-Dies bedeutet einen initialen Erstellungsaufwand, der sich aber bei Änderungen und Ergänzungen auszahlt, da auf vorhandene Services effizient und aufwandslos zugegriffen werden kann und fehleranfällige Coderedundanzen nicht mehr erforderlich sind.
+Alternativ bietet sich hier auch die Verwendung des Nullobjekt Entwurfsmusters an, bei dem im Falle einer negativen Customizingprüfung anstatt der Klasse mit der Implementierung, eine Klasse mit leerer Implementierung zurückgegeben wird. Beim Aufruf der Methoden des Nullobjekts passiert dann einfach nichts. Dies hat den Vorteil, dass der Aufrufer nicht mit Ausnahmen umgehen muss.  
 
-Die Erstellung der zahlreichen Objekte erscheint deutlich aufwändiger als der Top-Down Ansatz beim prozeduralen Vorgehen. Man gewinnt hier aber durch die Aufteilung der Funktionen gemäß der Verantwortlichkeiten eine deutlich höhere Flexibilität und Robustheit und durch die Mechanismen eine Form der Automatisierung.  
-Ist dieses Muster erst einmal eingeübt, übertreffen die Vorteile dieses Verfahrens den Nachtteil des vermeintlich erhöhten initialen Aufwands bei weitem.  
+Da dem Objektkonstrukt mittels der Factory die Customizinginstanz bekannt ist, ist der Zugriff auf das Customizing im gesamten Konstrukt standardisiert und ohne redundanten Code möglich.  
+Dieses Verfahren folgt dem Prinzip der Steuerungsumkehr und trägt zur Separation of Concerns bei. Damit vereinfacht sich der Code der Geschäftslogik und die Komplexität des Customizing wird verschalt bzw. automatisiert.
+
+Die Erstellung technischer Objekte erscheint anfangs aufwändiger als der Top-Down Ansatz beim prozeduralen Vorgehen. 
 Mittels Autovervollständigung, Nutzung von Code Templates und Quickfixes in den ABAP Development Tools in Eclipse (ADT) wird der ABAP-Code für die technischen Klassen sehr schnell und einfach erstellt, wodurch sich der Mehraufwand im Coding sehr in Grenzen hält.  
+Ist dieses Muster erst einmal eingeübt, übertreffen die Vorteile dieses Verfahrens den Nachtteil des vermeintlich erhöhten initialen Aufwands bei weitem.  
 Natürlich muss dass Vorgehen auch eingeübt werden um eine gewisse Entwicklungsperformanz und -effizienz zu entwickeln.  
 Bitte beachten Sie hierzu den **[ADT-Leitfaden](https://1dsag.github.io/ADT-Leitfaden/)** der DSAG, der Sie unterstützt, ADT effizient und flächendeckend im Unternehmen einzusetzen.
 
-### Vollständiger Einsatz von klasssenbasierten Ausnahmen zur Fehlerbehandlung
+### Vollständiger Einsatz von klassenbasierten Ausnahmen zur Fehlerbehandlung
 
 Verwenden Sie für die Behandlung von Fehlern ausschließlich klassenbasierte Ausnahmen. Diese sollen auch nur für den Fall von Fehlern eingesetzt werden und nicht für Erfolgs- oder Statusmeldungen aus der Anwendung missbraucht werden. Lediglich technische Einschränkungen von Seiten SAP zwingen Sie an einigen wenigen Stellen dazu klassische Exceptions einzusetzen.  
 Von der Verwendung von Returncodes raten wir ihnen ebenso ab wie von der alleinigen Rückgabe von Message Tabellen wie z.B. BAPIRET2, wie Sie dies z.B. in BAPI-Funktionsbausteinen oft vorfinden. diese Konzepte erzeugen das Problem, dass im aufrufenden Programm innerhalb des Ablaufs der Geschäftslogik geprüft werden muss, ob ein Fehlerfall vorliegt und somit eine saubere Trennung von technischen Belangen und Geschäftslogik nicht gegeben ist.
@@ -203,8 +212,7 @@ Diese Trennung ist auch eine wichtige Voraussetzung für die Testbarkeit einer A
 Gute Strukturierung in den Paketen, als auch in den Objekten sind grundlegende Voraussetzungen um die Testbarkeit der Software zu erhöhen. Sind die Verantwortlichkeiten der Komponenten im Rahmen einer guten Architektur geklärt und die Aufgaben auf verschiedene Objekte sinnvoll verteilt, erleichtert dies den Einsatz von ABAP Unit massgeblich.
 Im Rahmen der vorgenannten Architektur- und Designentscheidungen müssen bereits testrelevante Aspekte miteinbezogen werden, um effizient ABAP-Unit umsetzen zu können, da die Struktur sich unmittelbar auf die Testbarkeit auswirkt.
 
-Sind Datenbankzugriffe und Zugriffe auf SAP Funktionsbausteine oder Klassen bereits in einer eigenen Softwareschicht gekapselt und werden die Instanzen über eine Factory erzeugt, die eine Injection vorsieht, ist es für einen erfahrenen Entwickler sehr unproblematisch, den eigenen Code über ABAP Unit Tests zu testen und Datenbankzugriffe sowie SAP-Funktionen über Test-Mocks-Objekte zu entkoppeln.  
-ies verringert den Aufwand für die Unit-Test Erstellung deutlich gegenüber einem Vorgehen, bei dem der Testentwickler im Code Techniken wie Test-seams anwenden muss oder den Code umbauen muss, um die Entkopplung der Eigenentwicklung von SAP-Bausteinen in Tests sicherzustellen.
+Sind Datenbankzugriffe und Zugriffe auf SAP Funktionsbausteine oder Klassen bereits in einer eigenen Softwareschicht gekapselt und werden die Instanzen über eine Factory erzeugt, die eine Injection vorsieht, ist es für einen erfahrenen Entwickler sehr unproblematisch, den eigenen Code über ABAP Unit Tests zu testen und Datenbankzugriffe sowie SAP-Funktionen über Test-Mocks-Objekte zu entkoppeln. Dies verringert den Aufwand für die Unit-Test Erstellung deutlich gegenüber einem Vorgehen, bei dem der Testentwickler im Code Techniken wie Test-seams anwenden muss oder den Code umbauen muss, um die Entkopplung der Eigenentwicklung von SAP-Bausteinen in Tests sicherzustellen.
 
 Das Vorgehen, Empfehlungen und Hinweise zu ABAP Unit finden Sie im Kapitel [Testen von SAP-Anwendungen](/ABAP-Leitfaden/testing/#testen).
 
