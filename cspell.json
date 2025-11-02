@@ -13,10 +13,12 @@
     "ERP",
     "Fiori",
     "HANA",
+    "klassenbasierte",
     "OSS",
     "Präsentationsschicht",
     "S/4HANA",
-    "SAP"
+    "SAP",
+    "Testbarkeit"
   ],
   "flagWords": [
     "S4HANA",
