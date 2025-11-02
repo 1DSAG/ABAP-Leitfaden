@@ -13,7 +13,7 @@ nav_order: 1
 1. Toc
 {:toc}
 
-## Strukturelle Herausforderungen in SAP-Anwendungen – ihre Ursachen und Folgen
+## Strukturelle Herausforderungen in SAP-Anwendungen
 
 In vielen SAP ERP Systemen finden sich zahlreiche und umfangreiche Eigenentwicklungen die im Laufe der Lebenszeit des Systems entstanden sind und kontinuierlich erweitert wurden. Je komplexer ein System ist, desto wichtiger ist es, dass die darin enthaltenen Applikationen und Komponenten in einer wohldefinierten Struktur geordnet sind, die gängigen Softwarearchitekturprinzipien folgen.
 In SAP ERP Systemen ist dies im Bereich der Eigenentwicklungen nicht immer gegeben. Dies hat unter anderem folgende Ursachen:
