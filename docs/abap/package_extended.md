@@ -117,5 +117,3 @@ Bei der Gestaltung der Pakete sollte auch immer der Blick auf die Entwicklungen 
 Wichtig ist dabei darauf zu achten, dass die Abhängigkeit immer nur in eine Richtung definiert sein darf.
 
 Ein anderer Anwendungsfall wäre z.B. dieselbe Funktionalität für verschiedene Releases bereitzustellen, wobei die Kernfunktion in einem zentralen Paket, die Differenzierungen nach Release in unterschiedlichen Hauptpaketen implementiert sind.
-
-

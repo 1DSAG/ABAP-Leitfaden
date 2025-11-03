@@ -26,7 +26,6 @@ Somit müssen auch Anforderungen an den ABAP-Code gestellt werden:
 
 - ABAP-Code muss die funktionalen Anforderungen korrekt erfüllen und hat keine negativen Auswirkungen auf Sicherheitsthemen oder andere Entwicklungen.
 - ABAP-Code soll fachlich präzise strukturiert sein. Er wird in kleinen, semantisch zusammenpassenden und modularen Einheiten entwickelt. Diese Einheiten sind gut lesbar und für andere Entwickler leicht verständlich. Externe Zugriffe und modulübergreifende Abhängigkeiten sind über klar definierte Schnittstellen geregelt.
- ABAP-Code soll moderne Sprachkonstrukte verwenden. Er enthält keine veralteten Anweisungen oder Konstrukte die dem Clean Code Prinzipien widersprechen.
 - ABAP-Code soll gut lesbar und verständlich geschrieben sein und Kommentare helfen beim Verständnis der implementierten Funktionalität.
 - ABAP-Code soll dem [Clean-Core Level Modell](/ABAP-Leitfaden/clean-core/solution-approach/#level-concept) entsprechen.
 
