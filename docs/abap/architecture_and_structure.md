@@ -77,12 +77,12 @@ Wir empfehlen die Pakete nach funktionalen Aspekten zu gestalten. Eigenständige
 Im ABAP-Cloud Kontext kann dann über dieses Hauptpaket ein technisch erforderliches Strukturpaket angelegt werden, dass dann für die Softwarekomponente verwendet wird. Im Cloud Kontext wird die transportierbare Einheit durch die Softwarekomponente repräsentiert.  
 Eine Strukturierung anhand von Organisations-, Verantwortungs- oder Projektstrukturen wird nicht empfohlen, da diese Attribute sich im Zeitverlauf ändern und nur bedingt von der Funktionalität abhängig sind. In einer dem Hauptpaket zugehöriger Dokumentation sind diese Attribute besser aufgehoben.  
 
-## Kontrolle der Abhängigkeiten in Paketen
+## Kontrolle der Abhängigkeiten
 
 Mit der Aktivierung der Paketkapselung wird die Kontrolle über die Abhängigkeiten in Paketen ermöglicht.  
 In den Paketschnittstellen definieren Sie die Sichtbarkeit von Objekten bei eingeschalteter Paketkapselung und über die Verwendungserklärung dokumentieren Sie Abhängigkeiten zu anderen Paketen über deren Paketschnittstellen.
 Die Paketprüfung ist das Werkzeug um die Verwendung unsichtbarer Objekte oder fehlende Verwendungserklärung sichtbar zu machen und zu überwachen.  
-Wie Sie diese Elemente konkret einsetzen wird im Detailabschnitt zum Paketkonzept erläutert. Informationen hierzu finden Sie aber auch in der SAP Dokumentation.
+Wie Sie diese Elemente konkret einsetzen wird im [Detailabschnitt](/ABAP-Leitfaden/abap/package_details/#paketpr%C3%BCfung) zum Paketkonzept erläutert. Informationen hierzu finden Sie aber auch in der SAP Dokumentation.
 
 ## Vorteile und Mehrwert durch die Anwendung des Paketkonzepts
 
