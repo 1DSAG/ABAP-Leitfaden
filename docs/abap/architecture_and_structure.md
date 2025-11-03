@@ -89,27 +89,6 @@ Mit den Fehlern aus der Paketprüfung erhalten Sie Transparenz darüber, welche 
 Ist das Objekt nicht in einer Paketschnittstelle enthalten, sollte dies Objekt nicht verwendet werden und eine Alternative gesucht oder eine eigenes Objekt innerhalb des Paketes dafür erstellt werden, um den Paketfehler zu vermeiden.  
 Soll ein Objekt des eigenen Paketes anderen Paketen zur Verwendung zur Verfügung gestellt werden, ist dies in einer Paketschnittstelle des Hauptpaketes zu definieren, somit definiert die Paketschnittstelle das öffentliche Interface des Hauptpaketes. Wird diese dann in die Verwendungserklärung des Verwenderpaketes aufgenommen, ist somit auch eine technische Auswertung der Verwendungen möglich.
 
-## Maßnahmen zur Umsetzung des Paketkonzepts in der Entwicklung
-
-### Definition und Umsetzung der Paketstrategie
-
-Das Paketkonzept bringt den Nutzen, wenn es umfassend eingesetzt wird. Dies erfordert eine unternehmensinterne Defintion wie Pakete anzulegen sind. Es muss darauf aufbauend sichergestellt werden, dass die mit der Entwicklung betrauten Personen die Vorgaben zum PAketkonzept verstehen und umsetzen können. Daher ist es wichtig die Entwickler auch hinreichend bezüglich des umzusetzenden Paketkonzepts zu schulen und die Einhaltung und ordnungsgemäße Umsetzung zu prüfen. Insbesondere wenn externe Entwickler eingesetzt werden ist darauf zu achten, dass hier ein entsprechendes Onboarding erfolgt. Die Aufgabe der Definition der Pakete und deren Strukturierung, sowie die Einordnung in die Paketlandschaft sollte durch den Softwarearchitekt bzw. Softwareentwicklungsverantwortlichen wie z.B. den SAP Lead Developer erfolgen um eine Konsistenz über Pakete hinweg sicherzustellen.
-
-### Vermeidung grosser / unspezifischer Sammlerpakete
-
-Wir empfehlen die Erstellung großer Sammlerpakete (z.B. auf Basis Modulebene) nicht zu erlauben, da dies zu Problemen mit der Übersichtlichkeit und zu ungewünschten Abhängigkeiten führen kann und das Prinzip der Single Responsibility verletzt.
-
-Das Risiko ist groß, dass Klassen und Funktionen in solchen Paketen landen, anstatt solide architektonische Überlegungen vorzunehmen, was die Anstrengungen, eine geordnete Systemarchitektur einzuhalten, konterkarieren kann.  
-Es kann aber durchaus Sinn machen, kleine, wohldefinierte und Domänenspezifische Hilfspakete zu erstellen, die grundlegende und oft benötigte Hilfsfunktionen zentral bereitstellen.
-
-## Weiterführende Fragestellungen bei der Umsetzung des Paketkonzepts
-
-Es gibt neben den hier beschriebenen Empfehlungen zum Paketkonzept weitere Fragestellungen auf die hier nicht weiter eingegangen werden können, da eine detaillierte Behandlung den Umfang des Leitfadens übersteigen würde. Diese sollten aber in den Richtlinien und Handbüchern berücksichtigt und definiert werden. Hierbei handelt es sich um folgende Aspekte:  
-
-- Vermeidung statischer Abhängigkeiten - verschiedene Lösungsansätze (Definition BAdIs / Aufrufe über Funktionsbausteine)
-- Größe von Paketen - Architektonische Grenzen - Abgrenzung - Kosten (Clean Architecture)
-- Paket Refactoring - Splitting - Kombination einzelner Pakete - Kontinuierliche Paketpflege bei Änderungen und Erweiterungen
-
 ## Vorteile und Mehrwert durch die Anwendung des Paketkonzepts
 
 Nach den hier beschriebenen Ausführungen wird deutlich, dass die Umsetzung des Paketkonzepts einiges an Überlegung und Aufwand bedarf. Dieser Aufwand zahlt sich aber durch zahlreiche Vorteile aus, die hier im Folgenden aufgeführt werden:
@@ -134,6 +113,28 @@ Ist eine Softwarekomponente gut strukturiert, lassen sich Ergänzungen, Änderun
 Die Erstellung von Software in gut strukturierten Paketen beinhaltet neben den offensichtlichen Vorteilen auch weitere Vorteile, die nicht sofort wirksam werden, im Rahmen des Softwarelebenszyklus aber durchaus relevant werden können.  
 Sind die Eigenentwicklungen im System bereits in Paketen geordnet, sind schon wichtige Voraussetzungen erfüllt, um moderne Versionsverwaltungssysteme wie abapGit oder gCTS zu nutzen, die Pakete bedingen. Somit sind dann Transporte mittels Git-basierter Methoden in andere System über oder gar in die Cloud möglich s. Kapitel [Versionsverwaltung](/ABAP-Leitfaden/application-lifecycle-management/version-management/).  
 Wurde das Paketkonzept mit Erklärung der Verwendungsbeziehungen im Unternehmen bereits eingeübt und ist somit bereits eine Awareness bzgl. nutzbarer Objekte gegeben, sind gute Voraussetzungen geschaffen, die Konzepte in ABAP Cloud mit den Softwarekomponenten zu verstehen und anzuwenden.
+
+## Maßnahmen zur Umsetzung des Paketkonzepts in der Entwicklung
+
+### Definition und Umsetzung der Paketstrategie
+
+Die o.g. Vorteile ergeben sich nur, wenn das Paketkonzept umfassend und konsistent im Unternehmen eingesetzt wird. Daher ist wichtig, dass Sie Ihre Paketstrategie klar definieren und festlegen wie Pakete angelegt und dokumentiert werden.  
+Stellen Sie sicher, dass die mit der Entwicklung betrauten Personen die Vorgaben zum Paketkonzept verstehen und umsetzen können. Daher ist es wichtig die Entwickler auch hinreichend bezüglich des umzusetzenden Paketkonzepts zu schulen und die Einhaltung und ordnungsgemäße Umsetzung zu prüfen. Insbesondere wenn externe Entwickler eingesetzt werden ist darauf zu achten, dass hier ein entsprechendes Onboarding erfolgt. Die Aufgabe der Definition der Pakete und deren Strukturierung, sowie die Einordnung in die Paketlandschaft sollte durch den Softwarearchitekt bzw. Softwareentwicklungsverantwortlichen wie z.B. den SAP Lead Developer erfolgen um eine Konsistenz über Pakete hinweg sicherzustellen.
+
+### Vermeidung grosser / unspezifischer Sammlerpakete
+
+Wir empfehlen die Erstellung großer Sammlerpakete (z.B. auf Basis Modulebene) nicht zu erlauben, da dies zu Problemen mit der Übersichtlichkeit und zu ungewünschten Abhängigkeiten führen kann und das Prinzip der Single Responsibility verletzt.
+
+Das Risiko ist groß, dass Klassen und Funktionen in solchen Paketen landen, anstatt solide architektonische Überlegungen vorzunehmen, was die Anstrengungen, eine geordnete Systemarchitektur einzuhalten, konterkarieren kann.  
+Es kann aber durchaus Sinn machen, kleine, wohldefinierte und Domänenspezifische Hilfspakete zu erstellen, die grundlegende und oft benötigte Hilfsfunktionen zentral bereitstellen.
+
+## Weiterführende Fragestellungen bei der Umsetzung des Paketkonzepts
+
+Es gibt neben den hier beschriebenen Empfehlungen zum Paketkonzept weitere Fragestellungen auf die hier nicht weiter eingegangen werden können, da eine detaillierte Behandlung den Umfang des Leitfadens übersteigen würde. Diese sollten aber in den Richtlinien und Handbüchern berücksichtigt und definiert werden. Hierbei handelt es sich um folgende Aspekte:  
+
+- Vermeidung statischer Abhängigkeiten - verschiedene Lösungsansätze (Definition BAdIs / Aufrufe über Funktionsbausteine)
+- Größe von Paketen - Architektonische Grenzen - Abgrenzung - Kosten (Clean Architecture)
+- Paket Refactoring - Splitting - Kombination einzelner Pakete - Kontinuierliche Paketpflege bei Änderungen und Erweiterungen
 
 ## Das Paketkonzept in ABAP Cloud - Softwarekomponenten
 
