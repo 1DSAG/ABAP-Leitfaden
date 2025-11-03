@@ -92,7 +92,7 @@ Durch die Anwendung des Paketkonzepts werden Abhängigkeiten von Funktionalität
 
 ### Bessere Übersicht und Erklärbarkeit
 
-Bei komplexen und Entwicklungen hilft die Strukturierung schneller relevante Objekte zu finden. Die Struktur kann bereits als Teil der Dokumentation betrachtet werden. Stehen Korrekturen, Erweiterungen oder Ergänzungen einer Eigenentwicklung an, helfen eine gute Paketstruktur dem Entwickler sich leichter in der Anwendung zurechtzufinden und Erweiterungen schneller umzusetzen.  
+Bei komplexen und umfangreichen Entwicklungen hilft die Strukturierung schneller relevante Objekte zu finden. Die Struktur kann bereits als Teil der Dokumentation betrachtet werden. Stehen Korrekturen, Erweiterungen oder Ergänzungen einer Eigenentwicklung an, helfen eine gute Paketstruktur dem Entwickler sich leichter in der Anwendung zurechtzufinden und Erweiterungen schneller umzusetzen.  
 
 Soll Software systemübergreifend transportiert werdem, empfehlen wir das Erstellen der Transporte auf Hauptpaketebene. Das Hauptpaket repräsentiert eine in sich funktionierende Geschäftsfunktion oder eine Erweiterung einer Standardfunktion bzw. eines abgegrenzten Bereiches.  
 Werden alle Objekte eines Hauptpaketes (strukturiert in Unterpaketen) in einen Transport aufgenommen und sind die deklarierten Voraussetzungen/Abhängigkeiten im Zielsystem erfüllt, ist der Transport über Systemlinien hinweg transportier- und importierbar. Importfehler (RC8) sollten dann i.d.R. nicht mehr auftreten.
