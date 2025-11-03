@@ -77,29 +77,22 @@ Wir empfehlen die Pakete nach funktionalen Aspekten zu gestalten. Eigenständige
 Im ABAP-Cloud Kontext kann dann über dieses Hauptpaket ein technisch erforderliches Strukturpaket angelegt werden, dass dann für die Softwarekomponente verwendet wird. Im Cloud Kontext wird die transportierbare Einheit durch die Softwarekomponente repräsentiert.  
 Eine Strukturierung anhand von Organisations-, Verantwortungs- oder Projektstrukturen wird nicht empfohlen, da diese Attribute sich im Zeitverlauf ändern und nur bedingt von der Funktionalität abhängig sind. In einer dem Hauptpaket zugehöriger Dokumentation sind diese Attribute besser aufgehoben.  
 
-## Kontrolle der Abhängigkeiten über Paketkapselung, Paketschnittstellen und Verwendungserklärung
+## Kontrolle der Abhängigkeiten in Paketen
 
-Aktivieren Sie die Paketkapselung, um technische Abhängigkeiten kontrollieren zu können. Es können zwei Fehlersituationen auftreten:  
-
-- **Unsichtbares Objekt**: Wird ein Objekt aus einem anderen Paket verwendet, das nicht in einer freigegebenen Paketschnittstelle enthalten ist, meldet die Paketprüfung einen Fehler, dass das Objekt nicht sichtbar ist.
-
-- **Fehlender Verwendungsnachweis**: Wird ein Objekt eines anderen Paketes verwendet, welches sich in einer Paketschnittstelle befindet, muss diese Schnittstelle noch in der Verwendungserklärung deklariert werden um keine Fehler in der Paketprüfung zu erhalten.  
-
-Mit den Fehlern aus der Paketprüfung erhalten Sie Transparenz darüber, welche Abhängigkeiten zu anderen Paketen bestehen und welche Objekte verwendet werden, die nicht zur Verwendung in fremden Paketen vorgesehen sind.  
-Ist das Objekt nicht in einer Paketschnittstelle enthalten, sollte dies Objekt nicht verwendet werden und eine Alternative gesucht oder eine eigenes Objekt innerhalb des Paketes dafür erstellt werden, um den Paketfehler zu vermeiden.  
-Soll ein Objekt des eigenen Paketes anderen Paketen zur Verwendung zur Verfügung gestellt werden, ist dies in einer Paketschnittstelle des Hauptpaketes zu definieren, somit definiert die Paketschnittstelle das öffentliche Interface des Hauptpaketes. Wird diese dann in die Verwendungserklärung des Verwenderpaketes aufgenommen, ist somit auch eine technische Auswertung der Verwendungen möglich.
+Mit der Aktivierung der Paketkapselung wird die Kontrolle über die Abhängigkeiten in Paketen ermöglicht.  
+In den Paketschnittstellen definieren Sie die Sichtbarkeit von Objekten bei eingeschalteter Paketkapselung und über die Verwendungserklärung dokumentieren Sie Abhängigkeiten zu anderen Paketen über deren Paketschnittstellen.
+Die Paketprüfung ist das Werkzeug um die Verwendung unsichtbarer Objekte oder fehlende Verwendungserklärung sichtbar zu machen und zu überwachen.  
+Wie Sie diese Elemente konkret einsetzen wird im Detailabschnitt zum Paketkonzept erläutert. Informationen hierzu finden Sie aber auch in der SAP Dokumentation.
 
 ## Vorteile und Mehrwert durch die Anwendung des Paketkonzepts
 
-Nach den hier beschriebenen Ausführungen wird deutlich, dass die Umsetzung des Paketkonzepts einiges an Überlegung und Aufwand bedarf. Dieser Aufwand zahlt sich aber durch zahlreiche Vorteile aus, die hier im Folgenden aufgeführt werden:
-
 ### Eindeutig deklarierte Abhängigkeiten
 
-Wie bereits beschrieben, sind die Abhängigkeiten von SAP-Paketen bzw. zwischen eigenentwickelten Paketen bei korrekter Umsetzung des Paketkonzepts klar ersichtlich. Entweder ist eine Abhängigkeit in der Verwendungserklärung aufgeführt, damit handelt es sich um bewusst definierte Abhängigkeit, oder die Abhängigkeit wird durch eine Fehlermeldung in der Paketprüfung ersichtlich, im Falle von nicht sichtbaren Objekten oder bei fehlender Verwendungserklärung. Die hieraus gewonnenen Informationen können für die Dokumentation und Beschreibung verwendet werden. Bevor ein Paket in ein System importiert wird, kann somit geprüft werden, ob im System die Voraussetzungen gegeben sind, das Paket fehlerfrei zu importieren, oder ob andere Pakete benötigt werden.
+Durch die Anwendung des Paketkonzepts werden Abhängigkeiten von Funktionalitäten transparent. Entweder ist eine Abhängigkeit in der Verwendungserklärung aufgeführt, damit handelt es sich um bewusst definierte Abhängigkeit, oder die Abhängigkeit wird durch eine Fehlermeldung in der Paketprüfung ersichtlich, im Falle von nicht sichtbaren Objekten oder bei fehlender Verwendungserklärung. Die hieraus gewonnenen Informationen können für die Dokumentation und Beschreibung verwendet werden. Bevor ein Paket in ein System importiert wird, kann somit geprüft werden, ob im System die Voraussetzungen gegeben sind, das Paket fehlerfrei zu importieren, oder ob andere Pakete benötigt werden.
 
 ### Bessere Übersicht und Erklärbarkeit
 
-Bei komplexeren Entwicklungen hilft die Strukturierung schneller relevante Objekte zu finden. Die Struktur kann bereits als Teil der Dokumentation betrachtet werden. Stehen Korrekturen, Erweiterungen oder Ergänzungen einer Eigenentwicklung an, helfen eine gute Paketstruktur dem Entwickler sich leichter in der Anwendung zurechtzufinden und Erweiterungen schneller umzusetzen.  
+Bei komplexen und Entwicklungen hilft die Strukturierung schneller relevante Objekte zu finden. Die Struktur kann bereits als Teil der Dokumentation betrachtet werden. Stehen Korrekturen, Erweiterungen oder Ergänzungen einer Eigenentwicklung an, helfen eine gute Paketstruktur dem Entwickler sich leichter in der Anwendung zurechtzufinden und Erweiterungen schneller umzusetzen.  
 
 Soll Software systemübergreifend transportiert werdem, empfehlen wir das Erstellen der Transporte auf Hauptpaketebene. Das Hauptpaket repräsentiert eine in sich funktionierende Geschäftsfunktion oder eine Erweiterung einer Standardfunktion bzw. eines abgegrenzten Bereiches.  
 Werden alle Objekte eines Hauptpaketes (strukturiert in Unterpaketen) in einen Transport aufgenommen und sind die deklarierten Voraussetzungen/Abhängigkeiten im Zielsystem erfüllt, ist der Transport über Systemlinien hinweg transportier- und importierbar. Importfehler (RC8) sollten dann i.d.R. nicht mehr auftreten.
@@ -118,21 +111,24 @@ Wurde das Paketkonzept mit Erklärung der Verwendungsbeziehungen im Unternehmen 
 
 ### Definition und Umsetzung der Paketstrategie
 
-Die o.g. Vorteile ergeben sich nur, wenn das Paketkonzept umfassend und konsistent im Unternehmen eingesetzt wird. Daher ist wichtig, dass Sie Ihre Paketstrategie klar definieren und festlegen wie Pakete angelegt und dokumentiert werden.  
+Die o.g. Vorteile ergeben sich nur, wenn das Paketkonzept in Form einer Paketstrategie umfassend und konsistent im Unternehmen umgesetzt wird. Daher ist wichtig, dass Sie Ihre Paketstrategie klar definieren und festlegen wie Pakete angelegt und dokumentiert werden.  
 Stellen Sie sicher, dass die mit der Entwicklung betrauten Personen die Vorgaben zum Paketkonzept verstehen und umsetzen können. Daher ist es wichtig die Entwickler auch hinreichend bezüglich des umzusetzenden Paketkonzepts zu schulen und die Einhaltung und ordnungsgemäße Umsetzung zu prüfen. Insbesondere wenn externe Entwickler eingesetzt werden ist darauf zu achten, dass hier ein entsprechendes Onboarding erfolgt. Die Aufgabe der Definition der Pakete und deren Strukturierung, sowie die Einordnung in die Paketlandschaft sollte durch den Softwarearchitekt bzw. Softwareentwicklungsverantwortlichen wie z.B. den SAP Lead Developer erfolgen um eine Konsistenz über Pakete hinweg sicherzustellen.
 
 ### Vermeidung grosser / unspezifischer Sammlerpakete
 
-Wir empfehlen die Erstellung großer Sammlerpakete (z.B. auf Basis Modulebene) nicht zu erlauben, da dies zu Problemen mit der Übersichtlichkeit und zu ungewünschten Abhängigkeiten führen kann und das Prinzip der Single Responsibility verletzt.
+Wir empfehlen die Erstellung großer Sammlerpakete (z.B. auf Basis Modulebene) nicht zu erlauben, da dies zu Problemen mit der Übersichtlichkeit und zu ungewünschten Abhängigkeiten führen kann und das Prinzip der Single Responsibility verletzt.  
+Das Risiko ist groß, dass aus diversen Gründen zahlreich verschiedenartige Klassen und Funktionen in solchen Paketen landen, anstatt solide architektonische Überlegungen vorzunehmen, was die Anstrengung eine geordnete Systemarchitektur einzuhalten, konterkarieren kann.  
 
-Das Risiko ist groß, dass Klassen und Funktionen in solchen Paketen landen, anstatt solide architektonische Überlegungen vorzunehmen, was die Anstrengungen, eine geordnete Systemarchitektur einzuhalten, konterkarieren kann.  
 Es kann aber durchaus Sinn machen, kleine, wohldefinierte und Domänenspezifische Hilfspakete zu erstellen, die grundlegende und oft benötigte Hilfsfunktionen zentral bereitstellen.
 
 ## Weiterführende Fragestellungen bei der Umsetzung des Paketkonzepts
 
 Es gibt neben den hier beschriebenen Empfehlungen zum Paketkonzept weitere Fragestellungen auf die hier nicht weiter eingegangen werden können, da eine detaillierte Behandlung den Umfang des Leitfadens übersteigen würde. Diese sollten aber in den Richtlinien und Handbüchern berücksichtigt und definiert werden. Hierbei handelt es sich um folgende Aspekte:  
 
-- Vermeidung statischer Abhängigkeiten - verschiedene Lösungsansätze (Definition BAdIs / Aufrufe über Funktionsbausteine)
+- Vermeidung statischer Abhängigkeiten - Pakete sollen so definiert werden, dass diese unabhängig von anderen Paketen sind
+- Definition der Vorgehensweise wenn Abhängigkeiten unvermeidbar oder gewünscht sind. Hier bieten sich verschiedene Lösungsansätze an wie z.B.:
+  - über Definition von BAdIs - die dann lokal implementiert werden und darüber die Paketverbindung herstellen  
+  - Aufrufe einer Funktion eines anderen Paketes über dynamischen Funktionsbausteinaufruf
 - Größe von Paketen - Architektonische Grenzen - Abgrenzung - Kosten (Clean Architecture)
 - Paket Refactoring - Splitting - Kombination einzelner Pakete - Kontinuierliche Paketpflege bei Änderungen und Erweiterungen
 
