@@ -11,7 +11,8 @@ nav_order: 0
 1. TOC
 {:toc}
 
-## Der neue DSAG ABAP-Leitfaden 
+## Der neue DSAG ABAP-Leitfaden
+
 Herzlich Willkommen beim neuen "ABAP-Leitfaden" der DSAG. Vor Ihnen befindet sich ein umfangreiches Dokument zum Thema Anwendungsentwicklung in SAP.
 
 Die Business Suite der SAP zeichnet sich als Standardsoftware durch ein hohes Maß an Flexibilität und Erweiterbarkeit aus. In nahezu allen Unternehmen, die SAP-Software einsetzen, finden sich kundenspezifische Anpassungen und Erweiterungen. Die SAP-Software unterliegt damit sowohl auf Hersteller- als auch auf Kundenseite der kontinuierlichen Anpassung und Erweiterung durch sich ändernde Kundenbedürfnisse.
