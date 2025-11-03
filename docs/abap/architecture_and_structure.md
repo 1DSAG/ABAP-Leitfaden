@@ -145,3 +145,4 @@ Auch wenn sich einige Elemente des Paketkonzepts in der Cloud nicht mehr wiederf
 ## Von der Architektur zum Design
 
 Nachdem mit den hier genannten Ausführungen die Voraussetzung für eine gute Architektur geschaffen wurden, die sich in der Paketstruktur wiederfindet, muss nun anschließend in den einzelnen Unterpaketen die Anwendungsarchitektur in konkreter Form von Klassen definiert/designed werden. Die Ausführungen hierzu finden Sie im Abschnitt: [Entwurf und Gestaltung moderner SAP-Anwendungen](/ABAP-Leitfaden//abap/oo-design/).
+

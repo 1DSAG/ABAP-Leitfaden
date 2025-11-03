@@ -57,3 +57,5 @@ Detaillierte und wertvolle Empfehlungen zu den Themenkomplexen Organisation und 
 ## Zielgruppe des Kapitels
 
 Wir sprechen in erster Linie den Personenkreis der ABAP Entwickler und in die ABAP-Entwicklung involvierte Personen an. Wir möchten aber auch Entscheider und Vorgesetzte von Entwicklungsteams ansprechen, da für die ABAP-Transformation Rahmenbedingungen gegeben sein müssen um auf dieser Reise erfolgreich zu sein. Und dafür möchten wir die Motivation im Unternehmen schaffen indem wir Ihnen konkrete  Praxisempfehlungen und Vorteile aufzeigen.
+
+
