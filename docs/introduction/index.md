@@ -57,19 +57,18 @@ Und natürlich dürfen auch Hinweise zur künstlichen Intelligenz hier nicht feh
 
 ## Positionierung
 
-Von der SAP und einer ganzen Reihe von Fachverlagen existieren bereits sehr gute Publikationen zur Anwendungsentwicklung und Erweiterung der SAP-Plattform. Im Verlauf dieses Leitfadens weisen wir auf aus unserer Sicht lesenswerte Literatur hin.
+Von der SAP gibt es zahlreiche Dokumentationen zu Anwendungsentwicklung und Erweiterung der SAP-Plattform. Fachverlage haben hierzu auch sehr gute Publikationen veröffentlicht. Des Weiteren gibt es mittlerweile zahlreiche, frei verfügbare Learning Journeys zu den verschiedenen Themen. Dennoch ist es nicht einfach, sich im Dschungel der Tools und Techniken zurechtzufinden.  
+Der Mehrwert dieses Dokuments liegt in der Zusammenfassung bewährter Vorgehensweisen, Praxistipps und erprobter Regelwerke aus den Anwenderunternehmen. Daher behandelt dieser Leitfaden die Themen vorrangig aus einem etwas höheren Blickwinkel.
 
-Es gibt zahlreiche Dokumentationen und mittlerweile sind auch zahlreiche Schulungsangebote in der Form von Learning Journeys frei zu den verschiedenen Themen verfügbar. Dennoch ist es nicht einfach, sich im Dschungel der Tools und Techniken zurechtzufinden.  
+Diese Guideline soll Ihnen als Anwender, Entwickler, Entwicklungs-, Projekt- oder IT-Leiter Anregungen und Hilfestellung geben, um „das Rad nicht immer wieder neu erfinden zu müssen“ und auf die Erfahrungen Anderer aufbauen zu können. Dabei erheben die in dieser Guideline vorgestellten Empfehlungen nicht den Anspruch auf Vollständigkeit oder absolute Gültigkeit, sondern stellen eine Auswahl von Praxistipps dar.
 
-Der Mehrwert dieses Dokuments liegt in der Zusammenfassung bewährter Vorgehensweisen, Praxistipps und erprobter Regelwerke aus den Anwenderunternehmen. Diese Guideline soll Ihnen als Anwender, Entwickler, Entwicklungs-, Projekt- oder IT-Leiter Anregungen und Hilfestellung geben, um „das Rad nicht immer wieder neu erfinden zu müssen“ und auf die Erfahrungen anderer aufbauen zu können. Dabei erheben die in dieser Guideline vorgestellten Empfehlungen nicht den Anspruch auf Vollständigkeit oder absolute Gültigkeit, sondern stellen eine Auswahl von Praxistipps dar.  
-
-Als Autorenteam haben wir uns darum bemüht, im Spannungsfeld zwischen Überblickswissen und Detailtiefe den richtigen Mix zu finden. Daher verweisen wir an entsprechenden Stellen auf weiterführende Quellen, um bereits ausführlich diskutierte Themen nicht redundant wiederzugeben.  
+Als Autorenteam haben wir uns darum bemüht, im Spannungsfeld zwischen Überblickswissen und Detailtiefe den richtigen Mix zu finden. Daher verweisen wir an entsprechenden Stellen auf weiterführende Quellen oder lesenswerte Literatur, um bereits ausführlich diskutierte Themen nicht redundant wiederzugeben.  
 
 ## Motivation
 
-Manche der neueren Technologien und Tools sind in der Breite noch nicht vollumfänglich im Einsatz, obwohl diese schon seit Jahren zur Verfügung stehen. Daher ist es dem Autorenteam auch ein Anliegen, anhand von Vorteilen und Möglichkeiten darzustellen, warum es sich lohnt in die neueren und neuen Methoden zu investieren und neue Wege einzuschlagen. Denn müssen für den Einsatz dieser Methoden auch die Rahmenbedingungen im SAP-Entwicklungsumfeld angepasst oder sogar verändert werden. Um die Hemmschwelle abzubauen soll dieser Leitfaden auch den Einstieg erleichtern. Daher behandelt dieser Leitfaden vorrangig die Themen aus einem etwas höheren Blickwinkel, zu Dokumentationen oder weiteren Dokumenten, die Details erläutern wird nach Möglichkeit verwiesen.
-
-Dieser Leitfaden dient nicht als Dokumentation und ist auch keine detaillierte Anleitung zu einzelnen Themen. Mit diesem Leitfaden möchten wir auf Basis von Praxiserfahrungen und gesammeltem Wissen der Autoren den Einstieg in neue Techniken erleichtern, eine Bewertung des Stands der SAP-Entwicklung im Unternehmen ermöglichen und Handlungsfelder aufzeigen, wie eine effiziente und gute SAP-Entwicklung ermöglicht wird.
+Manche der neueren Technologien und Tools sind in der Breite noch nicht vollumfänglich im Einsatz, obwohl diese schon seit Jahren zur Verfügung stehen. Dem Autorenteam ist es daher ein Anliegen, anhand von Vorteilen und Möglichkeiten darzustellen, warum es sich lohnt, in die neuen Methoden zu investieren und neue Wege in der Anwendungsentwicklung einzuschlagen.  
+Dieser Leitfaden soll Ihnen eine Bewertung des Stands der SAP-Entwicklung im Unternehmen ermöglichen und Handlungsfelder aufzeigen, wie Sie eine effiziente und gute SAP-Entwicklung im Unternehmen erreichen können.  
+Dazu müssen die Rahmenbedingungen im SAP-Entwicklungsumfeld angepasst oder sogar verändert werden. Der ABAP-Leitfaden soll Sie dabei unterstützen, Hemmschwellen abzubauen, den Einstieg in die Themen zu erleichtern und motivieren, die im Leitfaden beschriebenen Themen aktiv zu fordern und zu fördern.
 
 ## Feedback
 
