@@ -20,9 +20,10 @@
     "S/4HANA",
     "SAP",
     "Testbarkeit"
+    "ABAP Unit"
   ],
   "flagWords": [
     "S4HANA",
-    "S4/HANA"
+    "S/4HANA"
   ]
 }
