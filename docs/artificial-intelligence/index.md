@@ -98,7 +98,7 @@ SAP unterscheidet bei SAP Joule for Developers drei primäre Bereiche der KI-Unt
 
 - **Transform**
   - Der ABAP Entwickler soll bei der Migration von kundeneigenem Code nach ABAP Cloud und einem Clean Core unterstützt werden. Sowohl existierender Code als auch Meldungen aus dem ATC Check werden erklärt. Darüber hinaus bietet die KI Vorschläge zur Anpassung/Überführung von bestehendem Coding. 
-- Die Verfügbarkeit des Transform Anwendungsfalls ist nach aktuellem Wissenstand bzgl. SAP Cloud ERP private analog zu den Accelerate Features. 
+  - Die Verfügbarkeit des Transform Anwendungsfalls ist nach aktuellem Wissenstand bzgl. SAP Cloud ERP private analog zu den Accelerate Features. 
 
 - **Empower**
   - Dieser Hauptbereich befasst sich mit der Integration von KI in Applikationen. D.h. die Zielgruppe bzgl. KI ist hierbei der Enduser. Der ABAP Entwickler hat die Aufgabe, diese zu in die Applikation zu implementieren. SAP stellt hierfür das ABAP AI SDK mittels "ISLM" (Intelligent scenario lifecycle management) zur Verfügung. Es möglicht einen standardisierten Zugriff auf den generative AI hub innerhalb des SAP AI Core auf der SAP BTP.  
@@ -165,7 +165,7 @@ Als Ergebnis des beschriebenen Vorgehens erhält man eine Beschreibung der KI-ba
 Mit gutem Prompt Engineering und "Iterativem Prompting" bzw. Finetuning der erstellten Dokumentation erhält man eine gute Basis auf der man die Dokumentation final durch manuelle Überarbeitung fertigstellen kann. Anschließend kann das Ergebnis durch die KI geprüft werden, anhand dessen Sie wiederum weitere Rückschlüsse auf die Qualität der Dokumentation ziehen können.  
 Das Ziel ist nicht primär vollautomatisch eine Dokumentation zu erhalten. Dieser Prozess hilft vielmehr bei der Erstellung einer Entwurfsversion bzw. deren Überarbeitung oder auch Finalisierung der Dokumentation, wodurch sich die Qualität erhöht und umfangreiche Tipparbeit eingespart werden kann. Erfolg- und Effizienzfaktoren sind hierbei Code-Basis und deren Struktur, Erfahrungen im Prompt Engineering und das Verständnis über die zu dokumentierende Anwendung.
 
-## KI-Entwicklung in der SAP BTP über ABAP hinaus
+## KI-Entwicklung auf der SAP BTP über ABAP hinaus
 
 Abschließend sei im KI-Kapitel erwähnt, dass sich bzgl. KI-Entwicklung im SAP Ökosystem über ABAP hinaus ebenfalls sehr viel bewegt. Auch beispielsweise im Kontext SAP Fiori (SAPUI5) oder dem CAP Modell ermöglicht SAP zahlreiche Funktionen nahtlos integrierbar mittels VSCode. Wir erwarten mit der offiziellen Verfügbarkeit von ABAP in VSCode für die 2.Jahreshälfte 2026 ebenso spannende Entwicklungen im Kontext der KI-Integration für ABAP. 
 
