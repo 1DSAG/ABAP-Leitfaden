@@ -105,7 +105,7 @@ SAP unterscheidet bei SAP Joule for Developers drei primäre Bereiche der KI-Unt
   - Der Empower-Bereich ist sowohl auf SAP BTP ABAP Environment, SAP ERP Cloud (inkl. private) als auch S/4HANA On-Premise per Downport bis Release 2021 verfügbar (näheres finden Sie im SAP Hinweis 3513374).
 
 Einen Überblick bzgl. der aktuellen Roadmap zum heutigen Zeitpunkt (SAP TechEd 2025) findet sie auf folgender Folie: 
-![Roadmap](./img/image-02.png)
+![Roadmap](./img/joule_for_developers_road_map.png)
 
 Aktuelle Roadmap
 {: .img-caption}
