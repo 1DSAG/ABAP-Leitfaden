@@ -160,7 +160,7 @@ nav_order: 15
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/sebastian-freilinger-huber/">Sebastian Freilinger-Huber</a></td>
 <td>msg systems ag</td>
-<td>Reviewer, Organisator</td>
+<td>Autor, Reviewer, Organisator</td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/sven-treutler-87b470109/">Sven Treutler</a></td>
@@ -243,6 +243,12 @@ ABAP fande ich schon immer sehr interessant, da Programmierung auf Geschäftspro
 Die Mitarbeit an einem Leitfaden erfordert viel Zeit, v.a. private Zeit die man investiert. Man bringt sein Wissen und seine Erfahrung ein. Man bekommt aber auch sehr viel zurück durch die guten Gespräche mit Menschen aus der SAP-Community, durch den regen Erfahrungsaustausch im Autorenteam und man lernt sehr viel dazu.<br>  
 Nach der Mitarbeit am DSAG-ADT Leitfaden 2023 möchte ich meine Erfahrungen aus vielen Jahren ABAP Entwicklung auch hier einbringen und weitergeben.  
 Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und motiviert, moderne ABAP-Entwicklung im Alltag nutzen und gewinnbringend einzusetzen.</td>
+</tr>
+
+<tr class="odd">
+<td>Sebastian Freilinger-Huber</td>
+<td>KI und vollständiges Review</td>
+<td>Leiter des Center of Excellence für SAP Applikations-Entwicklung bei der msg group. Neben koordinierenden Tätigkeiten technologisch vor allem im Kontext ABAP und SAP Fiori zu Hause und für architektonische Entscheidungen zuständig. Aktuell liegt mir besonders das Thema "Weiterbildung für klassische ABAP Entwickler in Richtung ABAP Cloud" am Herzen. Zusammen mit Björn Schulz Sprecher des DSAG Arbeitskreises Development aus dem auch die Initiative für diesen Leitfaden gestartet wurde. Wir hoffen hiermit relevanten Mehrwert für eine hoffentlich große Anzahl an ABAP Entwicklern schaffen zu können.</td>
 </tr>
 
 <tr class="odd">
