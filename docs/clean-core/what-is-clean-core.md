@@ -24,7 +24,7 @@ dürfen SAP-Kunden nur freigegebene Schnittstellen für Geschäftsprozesserweite
 - **"Make the core clean"** - Bezieht sich auf die Unternehmenstransformation und die iterative Reise zu einem Clean Core.
 
 
-Clean Core hat fünf Schwerpunkte: S/4 HANA Software Versionen, Geschäftsprozesse, Kundenerweiterungen, Geschäftsdaten, Betrieb und Integration. Vor allem die neuen Wege der Kundenerweiterungen stehen im Mittelpunkt diesem Kapitel.
+Clean Core hat fünf Schwerpunkte: S/4HANA Software Versionen, Geschäftsprozesse, Kundenerweiterungen, Geschäftsdaten, Betrieb und Integration. Vor allem die neuen Wege der Kundenerweiterungen stehen im Mittelpunkt diesem Kapitel.
 
 > „Die Erweiterbarkeitsfunktionen umfassen viele Optionen, die  Kunden und Partner dabei unterstützen, Standard-Business-Software an ihre Geschäftsanforderungen anzupassen.“
 
@@ -52,8 +52,8 @@ Das Datenmodell darunter wird durch Key-User-Extensibility erweitert und auch in
 
 Grundsätzlich ist Clean Core so, wie es der Hersteller beschreibt: 
 1. Erweiterungen sind klar vom SAP-Code getrennt und Erweiterungen verändern keine SAP-Objekte.
-2. Nutzen Sie die neuen Erweiterungstechnologien und den SAP-Standard. Erweiterungen verwenden die neuen Erweiterungsmethoden wie Key-User, Developer und Side-by-Side Extensibility. 
-3. Erweiterungen verwenden nur stabile, freigegebene SAP APIs und Erweiterungspunkte. Classical Extensibility sollte nur in freigegebenen Business Add-Ins (BADI) mit freigegebenen Entwicklungsobjekten stattfinden. 
+2. Nutzen Sie die neuen Erweiterungstechnologien und den SAP-Standard. Die neuen Erweiterungstechnologien sind: Key-User, Developer und Side-by-Side Extensibility. 
+3. Erweiterungen verwenden nur stabile, freigegebene SAP APIs und Erweiterungspunkte. Classic Extensibility sollte nur in freigegebenen Business Add-Ins (BADI) mit freigegebenen Entwicklungsobjekten stattfinden. 
 4. Legacy Technologien wie RFCs, IDocs und kundeneigene Dynprotransaktionen oder SAP SEGW Projekte sollten nicht mehr für Neuentwicklungen verwendet werden. 
 5. Alte kundeneigene Entwicklungen und Erweiterungen sollen auf neue Technologien migriert werden oder die Geschäftsprozessanforderung wird im SAP Standard wiedergefunden.
 
@@ -94,13 +94,13 @@ Im Wesentlichen sind im DSAG-Netzwerk zwei große Kundengruppen sichtbar: Die er
 
 Hier einige Beispiele für mögliche SAP Kunden:
 
-1. Neue SAP-Kunden, die auf S/4 HANA migrieren. Hier sollte der Greenfield-Ansatz und das strikte Clean Core laut SAP angewendet werden.
-2. Brownfield to Bluefield: Bestandskunden von SAP, die seit Jahrzehnten mit SAP arbeiten und auf S/4 HANA migrieren. Je nach Investitionsbereitschaft kann schrittweise der Clean Core definiert und die Neuentwicklung konform dazu gehalten werden. Bestehende Kundenerweiterungen werden in Großprojekten auf eine Clean Core konforme Entwicklung umgestellt.
-3. Brownfield to Greenfield: Bestands SAP Kunden, welche seit Jahrzenten mit SAP zusammenarbeiten und auf S/4 HANA migrieren. Hier kann eine Abbildung der Kundenerweiterungen mit sehr hohem Investitionsvolumen erfolgen.
-4. Brownfield im S/4 HANA: Ist identisch mit Szenario zwei.
+1. Neue SAP-Kunden, die auf S/4HANA migrieren. Hier sollte der Greenfield-Ansatz und das strikte Clean Core laut SAP angewendet werden.
+2. Brownfield to Bluefield: Bestandskunden von SAP, die seit Jahrzehnten mit SAP arbeiten und auf S/4HANA migrieren. Je nach Investitionsbereitschaft kann schrittweise der Clean Core definiert und die Neuentwicklung konform dazu gehalten werden. Bestehende Kundenerweiterungen werden in Großprojekten auf eine Clean Core konforme Entwicklung umgestellt.
+3. Brownfield to Greenfield: Bestands SAP Kunden, welche seit Jahrzenten mit SAP zusammenarbeiten und auf S/4HANA migrieren. Hier kann eine Abbildung der Kundenerweiterungen mit sehr hohem Investitionsvolumen erfolgen.
+4. Brownfield im S/4HANA: Ist identisch mit Szenario zwei.
 
-### Private/Public Cloud/BTP
-Die digitale Transformation eines jeden SAP-Kunden hängt von der im Unternehmen vorhandenen Expertise, den Partnern, den Investitionsmöglichkeiten und vielen weiteren Faktoren ab. Das DSAG-Netzwerk kann empfehlen, beim Hersteller nachzufragen und zu evaluieren, für welche SAP-Systeme eine Transformation in die Cloud möglich ist. Die Analysetools und die Beratungsbereitschaft der Firma SAP sind sehr hoch. Danach sind die Schritte vielfältig. Nur die Frage muss irgendwann beantwortet werden: Soll das Unternehmen mit seinen SAP-Systemen in die Public Cloud? Hier einige Tipps zu Cloud-Szenarien.
+### Private/Public Cloud
+Die digitale Transformation eines jeden SAP-Kunden hängt von der im Unternehmen vorhandenen Expertise, den Partnern, den Investitionsmöglichkeiten und vielen weiteren Faktoren ab. Das DSAG-Netzwerk kann empfehlen, beim Hersteller nachzufragen und zu evaluieren, für welche SAP-Systeme eine Transformation in die Cloud möglich ist. Die Analysetools und die Beratungsbereitschaft von SAP sind sehr hoch. Danach sind die Schritte vielfältig. Nur die Frage muss irgendwann beantwortet werden: Soll das Unternehmen mit seinen SAP-Systemen in die Public Cloud? Hier einige Tipps zu Cloud-Szenarien.
 
 
 ## Unterschiede zwischen den Modellen
@@ -109,7 +109,7 @@ Die digitale Transformation eines jeden SAP-Kunden hängt von der im Unternehmen
 
 Die SAP S/4HANA Cloud, public edition (GROW) ist per Definition "clean". Starten Sie als Kunde mit GROW oder migrieren Sie ihr System auf ein S/4HANA Public Cloud System, dann können Sie nur noch Clean Core entwickeln und haben keine Möglichkeit auf nicht freigegebene Objekte im Standard zurückzugreifen.
 
-Möchten Sie mit bestehendem Kundencode auf ein Public Cloud System, muss dieser ABAP-Cloud-fähig sein und ihr Prozesse müssen sich mit dem Standard der SAP abbilden lassen.
+Möchten Sie mit bestehendem Kundencode auf ein Public-Cloud-System, muss dieser ABAP-Cloud-fähig sein und ihr Prozesse müssen sich mit dem Standard der SAP abbilden lassen.
 
 
 ### Private Cloud
@@ -130,7 +130,7 @@ Sie möchten Ihr System im eigenen Rechenzentrum oder durch einen Dienstleister 
   - Die SAP S/4HANA Cloud, public edition (GROW) ist von Grund auf auf Clean-Core-Prinzipien aufgebaut.
 
 
-## S/4 HANA Transformation
+## S/4HANA Transformation
 
 Diese Abgrenzung hilft bei der Entscheidungsfindung, welcher Ansatz am besten zu den Zielen, Ressourcen und Gegebenheiten eines Unternehmens passt.
 
@@ -190,7 +190,7 @@ Hier wären ein paar Hilfestellungen für SAP Kunden, welche mittelfristig noch 
 ### Grundsätze für Modifikationen  
 - **Definition laut SAP Help**:  
   Eine Modifikation bezeichnet das direkte Ändern des SAP-Standardcodes. Dies ist eine Maßnahme, die von SAP ausdrücklich nicht empfohlen wird, da sie zukünftige Updates und Wartungszyklen erschwert. Mit jedem System-Upgrade wird eine Abarbeitung mit der Transaktion SPAU zwingend durchzuführen sein.
-  **Definition laut dem Dokument "Extend SAP S/4HANA in the cloud and on premise with ABAP based extensions"**:
+- **Definition laut dem Dokument "Extend SAP S/4HANA in the cloud and on premise with ABAP based extensions"**:
    Sie sollten auch die verbleibenden klassischen Standard-Erweiterungstypen kritisch betrachten und die Verwendung von BADIs bevorzugen.
   Siehe: ["5.3.2 Using classical business logic extension techniques"](https://www.sap.com/documents/2022/10/52e0cd9b-497e-0010-bca6-c68f7e60039b.html)
 - **Empfohlener Umgang**:  
@@ -198,7 +198,7 @@ Hier wären ein paar Hilfestellungen für SAP Kunden, welche mittelfristig noch 
 
 ### Wichtige Hinweise  
 - Vor der Durchführung einer Modifikation ist immer eine **Auswirkungsanalyse** durchzuführen, um potenzielle Konflikte mit künftigen Updates zu minimieren.  
-- Der Einsatz von kundenspezifischen Erweiterungen sollte bevorzugt werden. SAP Help bietet zahlreiche Möglichkeiten für Erweiterungen, einschließlich:  
+- Der Einsatz von kundenspezifischen Erweiterungen sollte bevorzugt werden. In dem SAP Help-Portal finden Sie zahlreiche Möglichkeiten für Erweiterungen, einschließlich:  
   - **User Exits**: Vorgesehen für kundenindividuelle Logik.  
   - **BAdIs (Business Add-Ins)**: Flexible Erweiterungspunkte im SAP-Standard.  
   - **Enhancements (Erweiterungen)**: Technologien wie Enhancement Framework und Switch Framework für gezielte Änderungen.  
