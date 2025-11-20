@@ -16,7 +16,7 @@ nav_order: 3
 ## Core Data Services Views (CDS Views)
 
 Was sind CDS Views und warum sind sie wichtig? 
-In SAP S/4 HANA soll der Entwickler nicht mehr direkt auf die Datenbanken zugreifen, sondern das [Virtuelle Datenmodell (VDM)](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/8573b810511948c8a99c0672abc159aa.html?locale=de-DE) nutzen, um auf die Daten in SAP S/4HANA zuzugreifen, z.B. für Analytics oder Schnittstellen.  Das VDM wird in SAP S/4HANA durch CDS-Views repräsentiert. Diese CDS-Views folgen festen Regeln für die Modellierung und Benennung. Sie stellen Geschäftsdaten aus Datenbanktabellen auf Basis der Geschäftslogik dar und machen die Daten so einfacher nutzbar. 
+In SAP S/4HANA soll der Entwickler nicht mehr direkt auf die Datenbanken zugreifen, sondern das [Virtuelle Datenmodell (VDM)](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/8573b810511948c8a99c0672abc159aa.html?locale=de-DE) nutzen, um auf die Daten in SAP S/4HANA zuzugreifen, z.B. für Analytics oder Schnittstellen.  Das VDM wird in SAP S/4HANA durch CDS-Views repräsentiert. Diese CDS-Views folgen festen Regeln für die Modellierung und Benennung. Sie stellen Geschäftsdaten aus Datenbanktabellen auf Basis der Geschäftslogik dar und machen die Daten so einfacher nutzbar. 
 [CDS Views sind die Schlüsselelemente](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds.html) für On-Stack Extensibility oder auch ABAP Cloud - siehe [Kapitel Clean Core](/ABAP-Leitfaden//clean-core/what-is-clean-core/). Die Nutzung und Erweiterung eines Datenmodells ist der Schlüssel zum VDM-Konzept. CDS Views werden für viele Zwecke verwendet, z.B. als Schnittstelle zwischen verschiedenen Anwendungen und Add-Ons im selben System sowie zu externen Systemen und Anwendungen. Sie können auch eigene Views erstellen, indem Sie, nach dem Clean Core Gedanken, die von SAP bereitgestellten und freigegebenen Views als Datenquelle verwenden.
 
 ## Aufbau von dem VDM
@@ -62,6 +62,8 @@ Desweiten, gibt es die Kennung als Suffix je nach Einsatzbereich des CDS Views.
 CDS-Views können für viele verschiedene Zwecke verwendet werden, z. B. zum Erstellen von Fiori-Anwendungen oder zum Analysieren von Daten. Sie können eigene CDS-Views erstellen und dabei auf viele von SAP freigegebene Views zurückgreifen.
 Um Ihnen die Suche nach der passenden CDS-View zu erleichtern, hat SAP zwei Funktionen eingeführt: Unterstützte Funktionen und Modellierungsmuster. Diese Merkmale werden als Annotationen spezifiziert und können für jede CDS-View definiert werden.
 Sie können die unterstützten Funktionen und Modellierungsmuster von CDS-Views im [View-Browser App](https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/#/detail/Apps('F2170')/S30PCE) sehen. In den ABAP Development Tools finden Sie diese Informationen als Annotation am Anfang jeder CDS-View.
+
+> Weitere Details finden Sie unter [SAP Help](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/8a8cee943ef944fe8936f4cc60ba9bc1.html)
 
 > __Open Source Tipp__
 Die folgende SAP Community Seite [ZSCV_SEARCH_CDS_VIEWS](https://github.com/alwinvandeput/zscv_search_cds_views) bietet eine Open-Source-Lösung zur Suche von CDS-Views an.
@@ -319,8 +321,7 @@ define role ZC_BusinesspartnerAddress_DAC {
 [SAP ABAP CDS - Access Control Documentation](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abencds_access_control.html) 
 
 
-> Tipp
-Mit der Transaktion SACMSEL können Berechtigungsprüfergebnisse vereinfacht angezeigt werden.
+> Tipp: Mit der Transaktion SACMSEL können Berechtigungsprüfergebnisse vereinfacht angezeigt werden.
 {: .highlight}
 
 ## Associations
@@ -334,7 +335,7 @@ __Beispiel__
 association [0..*] to OtherView as _Other on _Other.ForeignKeyField = $projection.KeyField
 ```
 
-> Achtung! Ab Release 2302, wird eine andere Syntax verwendet. [Siehe Blog-Eintrag](https://community.sap.com/t5/application-development-and-automation-blog-posts/new-cardinality-syntax-for-performance-optimization-in-abap-cds-and-abap/ba-p/13554546)
+> Achtung! Ab Release 2023, wird eine andere Syntax verwendet. [Siehe Blog-Eintrag](https://community.sap.com/t5/application-development-and-automation-blog-posts/new-cardinality-syntax-for-performance-optimization-in-abap-cds-and-abap/ba-p/13554546)
 >
 > Details finden Sie unter [SAP Help (CDS View Entity, SELECT, Associations)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_association_v2.htm)
 
@@ -353,7 +354,7 @@ Um die zuverlässige Nutzung von CDS-Views zu gewährleisten, hat SAP drei Stabi
 > Weitere Informationen finden Sie im [Stabilitätskontrakte für CDS-Views](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/2e4edbede2f94fb7b7f6eac856c02b19.html?locale=de-DE).  
 
 ### Erweiterungen von SAP Standard CDS Views
-Ein großer Vorteil ist die Möglichkeit, beliebige CDS Views mit dem Vertrag für Erweiterungen (C0) und höher zu erweitern. Ein CDS View, der mit dem C0 Vertrag für Erweiterungen klassifiziert wurde, bietet stabile Punkte für Erweiterungen. SAP garantiert Stabilität, sodass es bei S/4HANA Upgrades nicht zu inkompatiblen Änderungen kommen kann. Dies birgt aber auch eine Gefahr! Wenn Sie z.B. Felder aus einer bestehende CDS Views in Ihrer erweiterten CDS View ( ZE_* ) verwenden, dann können diese bei S/4 HANA Upgrades verändert werden. Achten Sie darauf nur in den vorgesehenen E_* CDS Views, CDS Views "hinzufügen". Wir empfehlen diese [Learning Journey von SAP](https://learning.sap.com/learning-journeys/acquire-core-abap-skills/extending-cds-views_fab548c5-6438-41e1-8384-c5190f13ea7b), hier wird der Sachverhalt erläutert.
+Ein großer Vorteil ist die Möglichkeit, beliebige CDS Views mit dem Vertrag für Erweiterungen (C0) und höher zu erweitern. Ein CDS View, der mit dem C0 Vertrag für Erweiterungen klassifiziert wurde, bietet stabile Punkte für Erweiterungen. SAP garantiert Stabilität, sodass es bei S/4HANA Upgrades nicht zu inkompatiblen Änderungen kommen kann. Dies birgt aber auch eine Gefahr! Wenn Sie z.B. Felder aus einer bestehende CDS Views in Ihrer erweiterten CDS View ( ZE_* ) verwenden, dann können diese bei S/4HANA Upgrades verändert werden. Achten Sie darauf nur in den vorgesehenen E_* CDS Views, CDS Views "hinzufügen". Wir empfehlen diese [Learning Journey von SAP](https://learning.sap.com/learning-journeys/acquire-core-abap-skills/extending-cds-views_fab548c5-6438-41e1-8384-c5190f13ea7b), hier wird der Sachverhalt erläutert.
 
 ## BW-Integration, embedded Analytics und ODP
 Das Operational Data Provisioning Framework (ODP) ermöglicht die Übertragung von Daten aus verschiedenen SAP-Repositories nach SAP BW, SAP BW/4HANA und anderen Systemen oder Servicen. CDS Views können als Quelle für die Datenextraktion dienen.  

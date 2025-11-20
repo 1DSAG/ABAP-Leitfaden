@@ -14,7 +14,7 @@ nav_order: 12
 
 ## Einführung
 
-Die Integration von SAP Systemen, und auch Non-SAP Systemen, würde an sich den Rahmen dieses Leitfadens sprengen. Daher finden Sie hier vor allem aktuell genutzte Technologien und eine ungefähre Richtung, welche Technologien die nächsten Jahre bestehen werden. Dabei sollten Sie immer im Hinterkopf behalten, dass auch das Thema Middleware eine wichtige Rolle beim Verteilen von Daten und dem Monitoring sind. Siehe auch Rubrik [Kapitel Clean Core](/ABAP-Leitfaden//clean-core//what-is-clean-core/) 
+Die Integration von SAP Systemen, und auch Non-SAP Systemen, würde an sich den Rahmen dieses Leitfadens sprengen. Daher finden Sie hier vor allem aktuell genutzte Technologien und eine ungefähre Richtung, welche Technologien die nächsten Jahre bestehen werden. Dabei sollten Sie immer im Hinterkopf behalten, dass auch das Thema Middleware eine wichtige Rolle beim Verteilen von Daten und dem Monitoring spielt. Siehe auch Rubrik [Kapitel Clean Core](/ABAP-Leitfaden//clean-core//what-is-clean-core/) 
 
 Zusätzlich sollten Sie beachten, dass mit der zunehmenden Migration von SAP-Systemen in die Cloud, nicht-funktionale Anforderungen (NFRs) wie Verfügbarkeit, Sicherheit, Skalierbarkeit und Beobachtbarkeit (Englisch: observability) von Anfang an zu berücksichtigen. Diese Aspekte sind in On-Premise-Umgebungen oft selbstverständlich, müssen aber in der Cloud neu durchdacht und aktiv integriert werden. Eine unzureichende Planung kann zu hohen Kosten für Nachbesserungen führen, insbesondere wenn ein System erst bei steigender Nutzerzahl oder im Ernstfall seine Grenzen aufzeigt. [Siehe Artikel "The Seven Reasons Your SAP Tech Initiatives Are Failing"](https://secondphase.com.au/seven-reasons-sap-tech-failing/)
 
@@ -47,7 +47,7 @@ Simple Object Access Protocol, kurz SOAP, ist ein standardisiertes Schnittstelle
 
 ### OData
 
-Das Open Data Protocol, kurz OData, ist ein standardisiertes Protokoll für HTTP Kommunikation. Darin werden Standards beschrieben, wie Anfragen und Antworten von Schnittstellen zur Verfügung gestellt wird und wie in Integration in das HTTP Protokoll aussieht. Die Kommunikation kann im Format XML, aber auch JSON, erfolgen. OData ist mittlerweile der Standard zum Aufbau von UI und API Schnittstellen im SAP System. Die aktuell verfügbare Version ist "OData v4" und ermöglicht gegenüber "OData v2" weitere Möglichkeiten zur Integration von Anwendungen.
+Das Open Data Protocol, kurz OData, ist ein standardisiertes Protokoll für HTTP Kommunikation. Darin werden Standards beschrieben, wie Anfragen und Antworten von Schnittstellen zur Verfügung gestellt wird und wie Integration in das HTTP Protokoll aussieht. Die Kommunikation kann im Format XML, aber auch JSON, erfolgen. OData ist mittlerweile der Standard zum Aufbau von UI und API Schnittstellen im SAP System. Die aktuell verfügbare Version ist "OData v4" und ermöglicht gegenüber "OData v2" weitere Möglichkeiten zur Integration von Anwendungen.
 
 ### HTTP
 
@@ -92,7 +92,7 @@ Die Gestaltung einer nachhaltigen Architektur sollte unter Berücksichtigung der
 
 ### Wichtige Entscheidungsfaktoren bei Grenzfällen
 
-- **Kosten:** Der finanzielle Aufwand für Entwicklung(sressourcen), Betrieb, Lizensen und Wartung muss gegen den Nutzen abgewogen werden.
+- **Kosten:** Der finanzielle Aufwand für Entwicklung(sressourcen), Betrieb, Lizenzen und Wartung muss gegen den Nutzen abgewogen werden.
 - **Features:** Prüfen, ob bestehende Integrationslösungen alle benötigten Funktionen abdecken oder Anpassungen erforderlich sind.
 - **Vendor Lock-In:** Abhängigkeiten von bestimmten SAP- oder Drittanbieter-Technologien sollten kritisch betrachtet werden.
 - **Monitoring:** Eine effektive Überwachung der Integration ist essenziell, um Probleme frühzeitig zu erkennen und zu beheben. Für den Fall von Systemausfällen sind Reprozessierung-szenarien vorzusehen.
@@ -100,7 +100,7 @@ Die Gestaltung einer nachhaltigen Architektur sollte unter Berücksichtigung der
 
 ### Beispiel: Massendatentransferierung 
 
-#### EDI (Electronic Data Interchange) im S/4 HANA
+#### EDI (Electronic Data Interchange) im S/4HANA
 
 (Web) APIs basierend auf REST oder SOAP haben ihre Grenzen. Dafür sollten anderen Technologien eingesetzt werden. Beispielsweise SAP EDI ist für die Verarbeitung großer Mengen elektronischer Daten konzipiert für 100.000+ Nachrichten pro Tag – und erfolgt mit zahlreichen B2B-Partnern unter Verwendung standardisierter Formate wie EDIFACT.
 
