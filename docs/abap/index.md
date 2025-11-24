@@ -25,7 +25,7 @@ Der Leitfaden im Generellen und dieses Kapitel in Bezug zu ABAP möchte Ihnen Hi
 - [**Architektur und Design moderner ABAP Entwicklungen**](/ABAP-Leitfaden/abap/architecture_and_design)  
     Hier erfahren Sie warum es wichtig ist und viele Vorteile bringt, ABAP Entwicklungen in Paketen zu strukturieren, die Paketfunktionalitäten zu nutzen und was Sie wissen müssen um unsere Empfehlungen umzusetzen.  
 
-- [**Entwurf und Gestaltung moderner SAP-Anwendungen**](/ABAP-Leitfaden//abap/oo-design/)  
+- [**Entwurf und Gestaltung moderner SAP-Anwendungen**](/ABAP-Leitfaden/abap/oo-design/)  
     Die Anwendung von Objektorientierung ist ein essentieller Faktor eine moderne, robuste und anpassungsfähige Software zu erstellen. In diesem Kapitel finden Sie unsere Empfehlungen OO gut und effizient umzusetzen und warum die Anwendung von Objektorientierung und gute Strukturierung der Funktionalitäten in Klassen einen Mehrwert bietet.
 
 - [**Sauberer und moderner Code**](/ABAP-Leitfaden/abap/clean_and_modern_abap)  
