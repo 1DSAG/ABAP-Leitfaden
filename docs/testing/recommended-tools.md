@@ -47,9 +47,8 @@ Die "klassische" App "Meine Aufgaben / Tester-Arbeitsvorrat" ist etwas mächtige
 ![Darstellung: Möglichkeiten der SAP Solution Manager Test Suite und der Ergänzung aus Focused Build](./img/solman_test_suite_focused_build.png)
 *Möglichkeiten der SAP Solution Manager Test Suite (unten) und der Ergänzung aus Focused Build (oben) [(Quelle: SAP)](https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf)*
 
-{: .highlight }
-> Tipp:
-Sofern Ihre Anwender ein SAP Fiori-Launchpad als Einstiegspunkt in die SAP-Welt nutzen, betten Sie die Kachel “Meine Testausführungen” als iFrame ein, auf der die Anzahl der offenen Testpakete dargestellt wird, die dem jeweiligen Nutzer zugeordnet sind.
+{: .note }
+> Sofern Ihre Anwender ein SAP Fiori-Launchpad als Einstiegspunkt in die SAP-Welt nutzen, betten Sie die Kachel “Meine Testausführungen” als iFrame ein, auf der die Anzahl der offenen Testpakete dargestellt wird, die dem jeweiligen Nutzer zugeordnet sind.
 
 ### Komponentenbasierte Testautomatisierung
 Die [komponentenbasierte Testautomatisierung](https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/00e90f0489994e76ad5999a63bbf4f30.html?locale=de-DE) (Component-Based Test Automation, kurz CBTA) ist das Bordwerkzeug des SAP Solution Managers zur Automatisierung von Testfällen und im Standardlieferumfang enthalten.
@@ -59,9 +58,8 @@ Die Erstellung erfolgt mittels eines Testrecorders, der ein Testskript mit den a
 
 Die Testskripte werden in sogenannte Testkonfigurationen gepackt und können darüber in der Lösungsdokumentation - neben manuellen Testfällen und URLs - abgelegt werden.
 
-{: .highlight }
-> Tipp:
-Mit dem Wartungsende des SAP Solution Managers rückt auch das Ende von CBTA näher. Daher ist es ratsam zu überlegen, ob eine zukunftsfähige Drittanbieter-Lösung wie Tricentis Test Automation (siehe unten) zur Testautomatiserung vielleicht jetzt schon die bessere Alternative ist.
+{: .note }
+> Mit dem Wartungsende des SAP Solution Managers rückt auch das Ende von CBTA näher. Daher ist es ratsam zu überlegen, ob eine zukunftsfähige Drittanbieter-Lösung wie Tricentis Test Automation (siehe unten) zur Testautomatiserung vielleicht jetzt schon die bessere Alternative ist.
 
 ## Testwerkzeuge in SAP Cloud ALM
 Als Nachfolgeprodukt des SAP Solution Managers, dessen Mainstream-Wartungsende seitens SAP auf Ende 2027 datiert ist, wurde [SAP Cloud ALM](https://support.sap.com/en/alm/sap-cloud-alm.html) für die Umsetzung des [Application Lifecycle Management](/ABAP-Leitfaden/application-lifecycle-management) entwickelt. Das Cloud-Produkt beinhaltet - wie schon der Solution Manager - unter anderem ein integriertes Testmanagement, das sowohl eigenständig (für manuelle Testfälle) als auch in Verbindung mit einer Testautomatisierungslösung wie [Tricentis Test Automation](#Tricentis-Test-Automation) eingesetzt werden kann. SAP Cloud ALM und damit auch dessen Testmanagement-Funktionen werden von SAP kontinuierlich weiterentwickelt.
