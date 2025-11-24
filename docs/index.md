@@ -12,6 +12,3 @@ Wenn Sie einen Beitrag leisten möchten, besuchen Sie das GitHub Repository:
 [DSAG's ABAP Leitfaden](https://github.com/1DSAG/ABAP-Leitfaden)
 
 Der DSAG ABAP Leitfaden ist ein lebendiges Dokument 👨‍💻 - es lebt von und mit seiner Community 🥳.
-
-{% capture disclaimer %}{% include wip-disclaimer.md %}{% endcapture %}
-{{ disclaimer | markdownify }}
