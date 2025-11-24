@@ -62,20 +62,12 @@ Sollten Sie in Ihren Komponenten- oder Integrationstests darauf angewiesen sein,
 
 ### VALUE-Anweisung für Mockdaten automatisch generieren
 
-tbd 
-
-Erzeugen von VALUE-Anweisungen aus aktuellen Daten während des Debuggens
-
--> ADT: Standard
--> SAPGUI: [Debugger Data View Extension]https://github.com/objective-partner/abap_debugger_data_view_extension
+Erzeugen von VALUE-Anweisungen aus aktuellen Daten während des Debuggens:
+-  ADT: Standard
+-  SAPGUI: [Debugger Data View Extension]https://github.com/objective-partner/abap_debugger_data_view_extension
 
 Erzeugen in ADT aus der Data-Preview für ausgewählte Zeilen und Spalten
 https://community.sap.com/t5/application-development-and-automation-blog-posts/abap-unit-tests-generate-a-value-statement-for-the-contents-of-an-internal/ba-p/13543137
-
-
-### Mockdaten aus DB-Tabelle erstellen in ADT
-
-tbd ???
 
 ### Testdatenverwaltung in ECATT-Containern
 
@@ -103,20 +95,15 @@ Zugriff auf die ECATT Test Daten:
 Diese Testdaten aus den ECATT-Containern können dann in die Mock-Datenbank eingefügt werden. 
 
 ```ABAP
-sql_environment = cl_osql_test_environment=>create( change_dependencies( tables_to_be_mocked ) ).```
+sql_environment = cl_osql_test_environment=>create( change_dependencies( tables_to_be_mocked ) ).
+```
 
-!Achtung!
-      " For reference 2024 the insert from tdc was ~12 seconds / 5 times slower than the manual insert.
-      data tdc_data_description type if_osql_test_environment=>tty_double_tdc_info.
-      sql_environment->insert_from_tdc( tdc_data_description ).
+{: .warning }
+> " For reference 2024 the insert from tdc was ~12 seconds / 5 times slower than the manual insert.
+> data tdc_data_description type if_osql_test_environment=>tty_double_tdc_info.
+> sql_environment->insert_from_tdc( tdc_data_description ).
 
 Schneller: 
   sql_environment->insert_test_data 
-
-
-
-Noch offen und ggf, hier erwähnen
-Open Source projekte für Unit Testing
-verschiedene DB Mockiung techniken - Vorteile nachteile FM Mocking etc.
 
 

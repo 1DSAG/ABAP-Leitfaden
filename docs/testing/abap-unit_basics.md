@@ -363,10 +363,10 @@ Es gibt mehrere Möglichkeiten Unit Test regelmäßig laufen zu lassen.
 - ATC Läufte 
 - Rest Service ( Communication scenario SAP_COM_0735 )
 
->**Empfehlung**  
-Planen Sie die Unit Test eines Systems regelmäßig ein und erstellen Sie Benachrichtigungen hierfür. 
-Für jeden Enwickler sollte es zur Morgenroutine gehören zu prüfen ob alle Test fehlerfrei sind, damit dies gegebenenfalls Daily besprochen werden kann. 
-{: .highlight}
+{: .recommendation }
+> Planen Sie die Unit Test eines Systems regelmäßig ein und erstellen Sie Benachrichtigungen hierfür. 
+> Für jeden Enwickler sollte es zur Morgenroutine gehören zu prüfen ob alle Test fehlerfrei sind, damit dies gegebenenfalls Daily besprochen werden kann. 
+
 
 ## Do's & Dont's 
 * Im Zweifel einen Unit Test mehr anlegen

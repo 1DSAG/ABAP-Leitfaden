@@ -6,7 +6,6 @@ parent: Softwaretest mit ABAP Unit
 nav_order: 4
 ---
 
-
 {: .no_toc}
 # Weitere Testwerkzeuge
 
@@ -96,14 +95,3 @@ SAP Cloud ALM bietet mit der "[SAP Cloud ALM Test Automation API](https://api.sa
 
 ![Darstellung: Integration der SAP ALM-Tools mit den Test Automatisierungs-Tools von Tricentis](./img/tricentis_test_automation_uebersicht.jpg)
 *Integration der SAP ALM-Tools mit den Test Automatisierungs-Tools von Tricentis (Quelle: SAP)*
-
-
-
-
-
-
-
-
-
-
-

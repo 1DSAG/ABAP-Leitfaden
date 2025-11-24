@@ -91,10 +91,9 @@ Die Definition wann ein Artefakt geliefert wurde, besteht meistens daraus, dass 
 Damit sich ABAP Unit Tests in der Anwendungsentwicklung durchsetzen und effektiv eingesetzt werden kann, ist ein Umdenken bei Entscheidern und Verantwortlichen für den Betrieb von SAP-Software nötig.  
 Kenntnisse und Wissen zu ABAP Unit muss sich zu einem geforderten und geprüften Skill von ABAP-Entwicklern etablieren. Die Erstellung von ABAP Unit Tests muss in die Definition of Done und den Lieferumfang von Software aufgenommen werden und nicht als optionales To-Do betrachtet werden.
 
-Der Einsatz von ABAP Unit muss einerseits in den Entwicklungsrichtlinien und Handbüchern definiert und vorgeschrieben werden, um eine Verbindlichkeit zu erzeugen. Wie oben beschrieben, wird die formale Definition allein den flächendeckenden Einsatz von Unit Tests nicht hervorbringen.  
+Der Einsatz von ABAP Unit muss einerseits in den Entwicklungsrichtlinien und Handbüchern definiert und vorgeschrieben werden, um eine Verbindlichkeit zu erzeugen. Wie oben beschrieben, wird die formale Definition allein den flächendeckenden Einsatz von Unit Tests nicht hervorbringen.
 Um dies zu erreichen müssen neben formalen Voraussetzungen auch Rahmenbedingungen geschaffen werden, die sowohl die oben beschriebenen Herausforderungen als auch die Herausforderungen im moderen ABAP-Entwicklungsumfeld aufgreifen und die Entwicklungsteams befähigen, ABAP Unit Tests in den Entwickleralltag zu integrieren.  
-Eine ausführliche Beschreibung der nötigen Rahmenbedingungen und in der Praxis bewährte Vorgehensweisen finden Sie im Kapitel  
-**[Organisation: Teamorganisation](https://1dsag.github.io/ABAP-Leitfaden/organization/#teamorganisation-und-teamzusammensetzung)**
+Eine ausführliche Beschreibung der nötigen Rahmenbedingungen und in der Praxis bewährte Vorgehensweisen finden Sie im Kapitel [Organisation: Teamorganisation](https://1dsag.github.io/ABAP-Leitfaden/organization/#teamorganisation-und-teamzusammensetzung)
 
 ## Die Rolle des DSAG ABAP-Leitfadens für die Umsetzung Ihrer Test Strategie
 
