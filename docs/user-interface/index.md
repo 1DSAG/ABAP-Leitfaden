@@ -15,10 +15,9 @@ nav_order: 6
 
 Dieses Kapitel gibt einen Überblick über verschiedene UI-Technologien, die im Kontext von ABAP-System zum Einsatz kommen. Der Hauptfokus liegt relevanzbedingt auf Fiori (SAPUI5). Im späteren Verlauf wird jedoch auch ein Überblick auf ältere und teils weiterhin relevante Technologien gegeben.
 
-## Empfehlungen / Best Practices 
->* Für Neuentwicklungen sollte in den allermeisten Fällen eine Fiori-konforme Oberfläche zum Einsatz kommen.  
-* Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
-{: .highlight}
+{: .recommendation }
+> * Für Neuentwicklungen sollte in den allermeisten Fällen eine Fiori-konforme Oberfläche zum Einsatz kommen.  
+> * Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
 
 ## Fiori & SAPUI5
 
