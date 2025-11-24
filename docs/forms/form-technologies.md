@@ -15,9 +15,7 @@ nav_order: 1
 
 Im Laufe der Jahre hat SAP verschiedene Formulartechnologien herausgebracht. Inzwischen gibt es drei verschiedene Technologien, welche in S/4HANA verfügbar sind. Dadurch herrscht bei vielen Unternehmen z.T. eine große Mischung was die Verwendung der verschiedenen Formulartechnologien angeht. Dementsprechend müssen die zuständigen Entwickler das entsprechende Knowhow für die verwendeten Formulartechnologien vorhalten.
 
-{: .note-title }
-> Hinweis
->
+{: .note }
 > Allgemein ist noch auf das Ende der Unterstützungsdauer für die Formulartechnologien SAPscript und SmartForms hinzuweisen, welche im Jahr 2040 liegt (siehe auch die Hinweise 2791338 und 2900377).
 
 ## SAPscript (1992 R/3)  
@@ -47,9 +45,7 @@ Im Vergleich zu SAPscript hat SmartForms eine modernere SAP GUI Oberfläche, zur
 
 Bei dieser Technologie wurde die Mehrsprachigkeit von SAP besser umgesetzt als im SAPscript. Hier kann mittels Transaktion SE63 übersetzt werden und es muss nicht das komplette Formular in einer neuen Sprache angelegt werden. Des Weiteren wurde eine Anbindung an das SAP Transportwesen integriert. Leider fehlt genauso wie bei SAPscript eine Versionierung der Formularanpassungen im Standard. Dies macht es erforderlich einen manuellen Prozess zu gestalten, mit dem gewährleistet wird auch kurzfristig auf einen älteren Formularstand zurückgehen zu können. Ein Beispiel hierfür wäre, dass anzupassende Formular unter einem neuen Namen (ggf. mit Datumsangabe im Namen) im Entwicklungssystem vor der Änderung in ein lokales Paket zu kopieren und somit diesen letzten im Produktivsystem funktionierenden Stand zu sichern. 
 
-{: .recommendation-title }
-> Empfehlung
->
+{: .recommendation }
 > Stimmen Sie sich bezüglich Vorgehen und Namenskonvention unbedingt in Ihrem Entwicklungsteam ab!  
 
 Der Name des Schnittstellenbausteins wird vom System generiert und unterscheidet sich von SAP System zu SAP System (Entwicklung, Qualitätssicherung, Produktion). Daher ist es nötig den Funktionsbaustein „SSF_FUNCTION_MODULE_NAME“ im Druckprogramm aufzurufen um den tatsächlichen Namen (Importing-Parameter FM_NAME) des generierten Funktionsbausteins zur Laufzeit im jeweiligen SAP System zu ermitteln.  
@@ -98,11 +94,8 @@ Adobe Formulare bestehen bzgl. Layout aus verschiedenen Objekten:
 Um diese Objekte zu pflegen und zu bearbeiten, muss im Layoutbereich der Transaktion SFP zwischen den Tabreitern „Designansicht“ und „Masterseiten“ gewechselt werden.  
 Der Tabreiter „PDF-Vorschau“ ermöglicht eine Vorschau auf das Formularlayout.
 
-{: .note-title }
-> Hinweis
->  
+{: .note } 
 > Wird bei Bearbeiten > Formulareigenschaften > Vorschau eine XFD.xml Datei mit Beispieldaten (welche z.B. aus einem Test- oder Produktivsystem generiert und heruntergeladen wurde) hinterlegt, so werden diese Formularinhalte dann auch in einem Entwicklungssystem unter “PDF-Vorschau” angezeigt. Dies ist äußerst hilfreich um z.B. inhaltsabhängige Formatierungen zu testen o.ä.
-{: .highlight}
 
 <br/>
 
@@ -112,9 +105,7 @@ Vorschau
 {: .img-caption}
 
 
-{: .note-title }
-> Hinweis
->  
+{: .note } 
 > Der LCD lässt Anpassungen im Anzeigenmodus zu. Diese können NICHT gespeichert werden!  
 > Vergewissern Sie sich also vor der Arbeit an einem Adobe Formular, dass Sie sich im „Ändern-Modus“ der Transaktion SFP befinden.  
 
@@ -144,16 +135,12 @@ Die Schnittstelle besteht aus drei konkreten Bereichen:
 - Initialisierung  
     Möglichkeit zusätzliche Daten im Formular nachzulesen. Das Coding sollte kurz und knapp gehalten werden. Der Editor hat an dieser Stelle einige Einschränkungen wie z.B. keine Vorwärtsnavigation und kein Pretty-Printer.  
     
-    {: .Recommendation-title }
-    > Empfehlung
-    >
-    > Die Business Logik in eine Klasse auslagern, welche hier aufgerufen wird.  
+{: .recommendation }
+> Die Business Logik in eine Klasse auslagern, welche hier aufgerufen wird.  
 
-    {: .note-title }
-    > Hinweis
-    >   
-    > Um die Übersichtlichkeit nicht zu verlieren und die Logik des Formulardrucks nicht zu komplex zu machen, sollte vor jeder Implementierung überlegt werden, ob das nötige Coding im aufrufenden Druckprogramm hinterlegt wird oder in der Formularschnittstelle. Die Entscheidung hängt natürlich auch davon ab, ob ein SAP Standarddruckprogramm 
-    > verwendet wird, oder ein kundeneigenes Druckprogramm.
+{: .note }
+> Um die Übersichtlichkeit nicht zu verlieren und die Logik des Formulardrucks nicht zu komplex zu machen, sollte vor jeder Implementierung überlegt werden, ob das nötige Coding im aufrufenden Druckprogramm hinterlegt wird oder in der Formularschnittstelle. Die Entscheidung hängt natürlich auch davon ab, ob ein SAP Standarddruckprogramm 
+> verwendet wird, oder ein kundeneigenes Druckprogramm.
 
 Wie bei SmartForms wird auch bei Adobe Forms Formularen ein vom SAP System generierter Funktionsbaustein benötigt, um das Formular auszugeben. Da dieser Funktionsbausteinname ebenfalls wie bei SmartForms von System zu System unterschiedlich ist, muss der Funktionsbaustein FP_FUNCTION_MODULE_NAME verwendet werden, um zur Laufzeit den richtigen Namen des Funktionsbausteins zu ermitteln.  
 Grundsätzlich hat der generierte Funktionsbaustein die gleichen Import- und Exportparameter wie die Formularschnittstelle (SFP), außerdem sind die Kontextobjekte ebenfalls enthalten.
@@ -185,9 +172,7 @@ Zu nennen ist an dieser Stelle, dass kundenindividuelle Bedingungen nur sehr bes
 
 Diese Formulartechnologie ist nur zusammen mit der Ausgabelösung S/4HANA Output Control (siehe Abschnitt XYZ) möglich.
 
-{: .note-title }
-> Hinweis
->     
+{: .note }   
 > - lokale Bearbeitung des Layouts / Formulars -> daher muss sich im Team abgestimmt werden!  
 > - keine automatische Transportanbindung -> Bedenken Sie das Sie alle Objekte manuell zusammensuchen und in einen Transport aufnehmen müssen.  
 
@@ -198,9 +183,7 @@ Diese Formulartechnologie ist nur zusammen mit der Ausgabelösung S/4HANA Output
 | F2761 | Logos verwalten |
 | F1589 | Objekte in Transporte aufnehmen |
 
-{: .note-title }
-> Hinweis
-> 
+{: .note }
 > Um diese Fiori Apps finden zu können muss die Katalog-ID SAP_BASIS_TCR_T dem angemeldeten Benutzer über eine Rolle zugewiesen werden (Transaktion PFCG).
 
 ![Transaktion PFCG](./img/image-03.png)
@@ -254,7 +237,6 @@ Adobe Fragments sind nur im Zusammenhang mit Output Control nutzbar
 
 
 ## Fazit
-
 
 SAP empfiehlt für neue Formulare grundsätzlich SAP Interactive Forms by Adobe zu verwenden.
 Dies ist zukunftssicher, da SAPscript und SmartForms von SAP selbst nicht mehr weiterentwickelt werden.

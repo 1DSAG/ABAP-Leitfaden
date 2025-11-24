@@ -12,7 +12,6 @@ nav_order: 2
 1. TOC
 {:toc}
 
-
 Im Folgenden erhalten Sie einen Überblick über die möglichen Ausgabelösungen.
 
 ## Nachrichtensteuerung (NAST)  
@@ -23,9 +22,7 @@ Die Transaktion NACE dient als zentraler Einstiegspunkt zur Pflege der Nachricht
 _Hinweis:_  
 Eine Auswertung aller erzeugten Nachrichten kann über die Transaktion TAANA für die Datenbanktabelle NAST erstellt werden. Hierfür muss diese Transaktion im Produktivsystem ausgeführt werden. Um die Auswertung Jahresweise durchzuführen muss vorher ggf.noch ein neues „virtuelles Feld“ (ERYEAR) hinzugefügt werden. Die Ergebnisliste kann als Excel-Tabelle heruntergeladen werden und dort für eine leichtere Auswertung zur Pivot-Tabelle umgestellt werden.
 
-{: .Recommendation-title }
-> Empfehlung
->
+{: .recommendation }
 > Eine solche Auswertung empfiehlt sich, um sich einen Überblick zu verschaffen, welche Nachrichtenarten überhaupt und hauptsächlich verwendet werden. In welchen Sprachen 
 > werden meine Belege (Formulare) ausgegeben und wie groß ist das jeweilige Volumen. Dies hilft bei einer weiteren Planung von Umstellungs- und Go-Live Szenarien.  
 
@@ -69,7 +66,5 @@ Output Szenarien
 Die Einstellungen im S/4HANA Output Control erfolgt in der GUI über den folgenden Pfad:  
 Transaktion SPRO > Anwendungsübergreifende Komponenten > Ausgabesteuerung  
 
-{: .note-title }
-> Hinweis
->  
+{: .note }
 > Unter Hinweis [2791338](https://me.sap.com/notes/2791338/E) finden sich FAQs zum Thema Ausgabesteuerung.

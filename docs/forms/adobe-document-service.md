@@ -12,7 +12,6 @@ nav_order: 3
 1. TOC
 {:toc}
 
-
 Adobe Document Services – auch kurz „ADS“ genannt – wird von SAP Interactive Forms als auch SAP S/4HANA Forms benötigt, um die gewünschten Datei- oder Druckformate zu erzeugen (Rendering). Mit anderen Worten handelt es sich hierbei um die Services, welche die Dokumente zur Laufzeit erzeugen und generieren. 
 
 Die erzeugten Dateiformate sind PDF oder PDF/A. Das Format PDF/A stellt hierbei eine Variante des PDF dar, welche verwendet wird um Langzeitarchivierung sicherzustellen. Damit können Dokumente, unabhängig von der verwendeten Software, immer wieder reproduziert werden, da alle relevanten Informationen in der Datei eingebettet sind.  
@@ -33,18 +32,16 @@ Bei den Adobe Document Services muss zwischen zwei Versionen unterschieden werde
     - SAP S/4 HANA Java bis 2030
 - Die Nachfolgelösung wird auf SAP HANA Extended Application Services Advanced Model (XSA) laufen und ist für Q1 2027 mit dem S/4 HANA 2025 FPS03 geplant.
 - Für Druck-Formulare lizenzkostenfrei
-{: .note-title }
-> Hinweis
->  
+
+{: .note }
 > [Blog zur Maintenance Strategie von SAP](https://community.sap.com/t5/technology-blogs-by-sap/maintenance-strategy-adobe-forms-on-premise/ba-p/13627957)
 
 ## SAP Forms Service by Adobe (Cloud-ADS)
 
 - Läuft als Service auf der SAP BTP (Cloud Foundry Environment)
 - Bereitstellung und Wartung durch SAP
-{: .note-title }
-> Hinweis
->  
+
+{: .note }
 > Zusätzliche Informationen unter Hinweis 2219598  
 
 Ob die Adobe Document Services in Ihrem System eingerichtet und angebunden sind, können Sie mit dem Testprogramm FP_TEST_00 (Form Processing – Zentrales Testprogramm) schnell und zuverlässig testen.
