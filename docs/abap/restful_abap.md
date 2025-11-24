@@ -20,7 +20,7 @@ Beide Programmiermodelle geben die nötigen Entwicklungsobjekte und deren Zusamm
 
 RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum veröffentlichten OData-Service ab. Das Business Objekt (BO) wird einerseits durch das virtuelle Datenmodell (VDM) sowie andererseits durch das (optional) verfügbare Verhalten definiert. Im VDM werden durch die Anlage von CDS-Views die Felder aus der Datenbank selektiert und über Beziehungen zwischen den CDS-Views der BO Composition Tree festgelegt. Dieser besteht immer aus einer Wurzel-Entität (Root, beispielsweise eine Reise mit entsprechend möglichen Instanzen) und beliebig vielen Kind-Entitäten (etwa eine oder mehrere Instanzen von Flugbuchungen unterhalb der Reise). Dieser Kompositionsbaum kann beliebig tief aufgebaut werden. Jede Kind-Entität kann dabei lediglich gemeinsam mit ihrem direkten Elter exististieren und dessen Schlüssel ist Teil des eigenen.  
 
-{: .recommandation }
+{: .recommendation }
 > * RAP sollte [frühestens ab Release 2021](https://pages.community.sap.com/topics/abap/rap) produktiv genutzt werden. Setzen Sie sich bei Bedarf detailliert mit dem eingeschränkten Funktionsumfang im Release 1909 sowie 2020 (wie das Fehlen von Validations, Determinations, Draft, ...) auseinander!  
 > * In der Regel sollten Sie für Neuentwicklungen das integrierte Draft-Konzept nutzen und lediglich bei triftigen Gründen darauf verzichten.
 > * Da RAP als Technologie relativ neu ist gibt es teils eklatante Unterschiede je nach S/4HANA Release. Machen Sie sich mit den Einschränkungen ihres Systems vorab vertraut!  
