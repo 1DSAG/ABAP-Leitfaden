@@ -259,11 +259,13 @@ In diesem Beispiel wird die Demoklasse aus dem vorherigen Kapitel, die eine Adre
 
 Also zum Beispiel:
 
-`verify_address( strasse = 'Beispielstraße'  house_number = '23' )`.
+```
+verify_address( strasse = 'Beispielstraße'  house_number = '23' ).
+```
 
 Die Testklasse könnte dann wie folgt aussehen:
 
-```ABAP
+```
 CLASS ltcl_verify_addresses_helper DEFINITION FINAL FOR TESTING
   DURATION SHORT
   RISK LEVEL HARMLESS.
