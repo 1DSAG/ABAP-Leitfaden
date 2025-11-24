@@ -23,7 +23,7 @@ Neben den Kundenerweiterungen im SAP Standard, gibt es in jedem SAP-System die T
  
 Die Dissonanz zwischen der Sichtweise von SAP zum Clean Core und dem langjährigen Kundenstamm ist die Anwendung der Clean Core Prinzipien/Konzepte. 
 
-Die Standardtransaktionen, Standard BADIs und Standard Fiori Apps reichen oftmals nicht mehr aus, um die Geschäftsprozessanforderungen abzudecken. Die klassischen Erweiterungen / RICEFW Objekte haben Mehrwerte geschaffen, welche erst in S/4 HANA - dem Clean Core – wiedergefunden werden müssen. Um die neuen Technologien, beispielsweise SAP Build, vor allem auf der BTP zu benutzen, erfordert es an Investitionen in Organisation, Technologien und Prozessen.
+Die Standardtransaktionen, Standard BADIs und Standard Fiori Apps reichen oftmals nicht mehr aus, um die Geschäftsprozessanforderungen abzudecken. Die klassischen Erweiterungen / RICEFW Objekte haben Mehrwerte geschaffen, welche erst in S/4HANA - dem Clean Core – wiedergefunden werden müssen. Um die neuen Technologien, beispielsweise SAP Build, vor allem auf der BTP zu benutzen, erfordert es an Investitionen in Organisation, Technologien und Prozessen.
  
 ## Technologien
 
@@ -31,7 +31,7 @@ Von der Verhandlung der Lizenzen, Aufbau der Infrastruktur, Schulung der SAP Bas
 
 Vor allem alternative Technologien, welche mit vorhandenen ABAP-Entwicklern nutzbar sind, werden gebraucht, da existierende Kundenerweiterungen/ RICEFW Objekte weiterhin gepflegt werden müssen.
  
-## Organisation
+## Ogranisation
 Der klassische Berater und Entwickler entwickelt sich durch die neuen Technologien zu einem Vollzeit-Entwickler mit breiten Entwicklungskenntnissen, hier ist massives Change Management angesagt. Mehr dazu erfahren Sie im [Kapitel Organisation](/ABAP-Leitfaden/organization/).
 
 Durch die No-Code und Low-Code Optionen, vor allem bei SAP Build, aber auch Key-User Extensibility können nicht-Entwickler in Fusion Teams mitarbeiten. Das erfordert auch eine moderne Arbeitsweise, welche agiler Natur sein sollte.
@@ -44,6 +44,6 @@ Standardprozesse werden von der SAP unterstützt und Standard Fiori Apps kann au
 
 ## Add-Ons
 
-Clean Core hat weiterhin Auswirkungen auf Add-Ons, die im ABAP System eingesetzt werden können. Damit ein Partner zukünftig die Clean Core Strategie Ihrer Kunden unterstützen kann, hat SAP die Bedingungen, eine Zertifizierung von Add-Ons zu erhalten, geändert. Somit ist es nicht mehr möglich eine Zertifizierung eines Add-Ons zu erhalten, wenn die Implementierung der Erweitung nicht den Vorgaben von Clean Core (erstellt in ABAP Cloud oder der BTP) entspricht. Eine Ausnahme hiervon ist nur innerhalb eines SAP S/4HANA Cloud, private edition Add-Ons bis Q3/25 möglich.
+Clean Core hat weiterhin Auswirkungen auf Add-Ons, die im ABAP System eingesetzt werden können. Damit ein Partner zukünftig die Clean Core Strategie Ihrer Kunden unterstützen kann, hat SAP die Bedingungen, eine Zertifizierung von Add-Ons zu erhalten, geändert. Somit ist es nicht mehr möglich eine Zertifizierung eines Add-Ons zu erhalten, wenn die Implementierung der Erweitung nicht den Vorgaben von Clean Core (erstellt in ABAP Cloud oder der BTP) entspricht. Eine Ausnahme hiervon ist nur innerhalb eines SAP S/4HANA Cloud, private edition Add-Ons bis Q3/25 möglich. [SAP Partner - Anforderung für SAP zertifizierte Software-Lösungen](https://pages.community.sap.com/topics/btp-abap-environment/faq-partners)
 
 Bei Add-Ons ohne SAP Zertifizierung in SAP S/4HANA (on premise) oder SAP S/4HANA Cloud, private edition empfehlen wir daher, rechtzeitig mit dem Add-On Partner zu prüfen, ob dieser sein Produkt nach Clean Core entwickelt hat, bzw. dass rechtzeitig ein kompatibles Add-On für einen bevorstehenden Upgrade geliefert werden.
