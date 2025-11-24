@@ -86,7 +86,7 @@ Zur Erstellung stabiler Testdaten können ECATT-Testdaten-Container verwendet we
 
 Zugriff auf die ECATT Test Daten: 
  
- ```ABAP 
+ ```
  DATA(lo_tdc_api) = cl_apl_ecatt_tdc_api=>get_instance( 
    i_testdatacontainer         = get_tdc_name( )
    i_testdatacontainer_version = get_tdc_version( ) ).
@@ -94,16 +94,9 @@ Zugriff auf die ECATT Test Daten:
 
 Diese Testdaten aus den ECATT-Containern können dann in die Mock-Datenbank eingefügt werden. 
 
-```ABAP
+```
 sql_environment = cl_osql_test_environment=>create( change_dependencies( tables_to_be_mocked ) ).
 ```
 
 {: .warning }
-> " For reference 2024 the insert from tdc was ~12 seconds / 5 times slower than the manual insert.
-> data tdc_data_description type if_osql_test_environment=>tty_double_tdc_info.
-> sql_environment->insert_from_tdc( tdc_data_description ).
-
-Schneller: 
-  sql_environment->insert_test_data 
-
-
+> Die Methode insert_from_tdc ist 5 mal langsamer als das manuelle Einfügen der Testdaten über die Methode insert_test_data
