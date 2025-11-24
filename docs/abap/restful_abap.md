@@ -20,13 +20,13 @@ Beide Programmiermodelle geben die nötigen Entwicklungsobjekte und deren Zusamm
 
 RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum veröffentlichten OData-Service ab. Das Business Objekt (BO) wird einerseits durch das virtuelle Datenmodell (VDM) sowie andererseits durch das (optional) verfügbare Verhalten definiert. Im VDM werden durch die Anlage von CDS-Views die Felder aus der Datenbank selektiert und über Beziehungen zwischen den CDS-Views der BO Composition Tree festgelegt. Dieser besteht immer aus einer Wurzel-Entität (Root, beispielsweise eine Reise mit entsprechend möglichen Instanzen) und beliebig vielen Kind-Entitäten (etwa eine oder mehrere Instanzen von Flugbuchungen unterhalb der Reise). Dieser Kompositionsbaum kann beliebig tief aufgebaut werden. Jede Kind-Entität kann dabei lediglich gemeinsam mit ihrem direkten Elter exististieren und dessen Schlüssel ist Teil des eigenen.  
 
-## Empfehlungen / Best Practices 
+{: .recommandation }
 >* RAP sollte [frühestens ab Release 2021](https://pages.community.sap.com/topics/abap/rap) produktiv genutzt werden. Setzen Sie sich bei Bedarf detailliert mit dem eingeschränkten Funktionsumfang im Release 1909 sowie 2020 (wie das Fehlen von Validations, Determinations, Draft, ...) auseinander!  
 * In der Regel sollten Sie für Neuentwicklungen das integrierte Draft-Konzept nutzen und lediglich bei triftigen Gründen darauf verzichten.
 * Da RAP als Technologie relativ neu ist gibt es teils eklatante Unterschiede je nach S/4HANA Release. Machen Sie sich mit den Einschränkungen ihres Systems vorab vertraut!  
 * Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
 * Vergessen Sie nicht, Ihre Entwicklungen mit RAP zur Erweiterbarkeit für andere Konsumenten freizugeben, falls dies gewünscht ist.
-{: .highlight}
+
 
 ## Managed Entwicklungen mit RAP
 Per Definition trennt das RAP-Framework die einzelnen Entwicklungsobjekte ohnehin und gibt dadurch die Softwarearchitektur und eine saubere Trennung bereits vor. Die tatsächliche Anwendungslogik wird dabei strikt von der Datenhaltung getrennt. Diese strikten Vorgaben des Framework erleichtern Entwickler:innen das Orientieren und Implementieren von Anwendungen und nimmt viel Arbeit diesbezüglich ab. Das nachstehende Bild zeigt das grobe Zusammenspiel der Teilelemente in RAP Programmierungen.  
@@ -133,14 +133,14 @@ Wie oben erwähnt machte das RAP-Framework insbesondere direkt nach Release gro�
 + Kollaborativer Draft (Parallele Zusammenarbeit an einer BO-Instanz)
 + Fiori Elements Tabellen zur Anzeige und Änderung von RAP-Hierarchien
   
-## Weiterführende Quellen
-+ [RAP Cloud Documentation](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/289477a81eec4d4e84c0302fb6835035.html?locale=en-US)
-+ [EML Cheat Sheet](https://github.com/SAP-samples/abap-cheat-sheets/blob/main/08_EML_ABAP_for_RAP.md)
-+ [RAP Feature Matrix der Software Heroes](https://software-heroes.com/en/abap-feature-matrix)
-+ [RAP Feature Cheat Sheet](https://www.brandeis.de/blog/cheat-sheet-sap-rap-basics-de)
-+ [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)  
-+ [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase)  
-+ [SAP Samples: RAP Repositories](https://github.com/orgs/SAP-samples/repositories?q=rap)
-+ [SAP Learning Course: Building Apps with RAP](https://learning.sap.com/courses/building-apps-with-the-abap-restful-application-programming-model)
-+ [SAP Learning Journey: Creating a Fiori Elements App with RAP OData V4](https://learning.sap.com/learning-journeys/getting-started-with-creating-an-sap-fiori-elements-app-based-on-an-odata-v4-rap-service)
-+ [SAP Technology Blog: Getting Started with RAP](https://community.sap.com/t5/technology-blog-posts-by-sap/getting-started-with-the-abap-restful-application-programming-model-rap/ba-p/13420829)
+{: .note }
+> + [RAP Cloud Documentation](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/289477a81eec4d4e84c0302fb6835035.html?locale=en-US)
+> + [EML Cheat Sheet](https://github.com/SAP-samples/abap-cheat-sheets/blob/main/08_EML_ABAP_for_RAP.md)
+> + [RAP Feature Matrix der Software Heroes](https://software-heroes.com/en/abap-feature-matrix)
+> + [RAP Feature Cheat Sheet](https://www.brandeis.de/blog/cheat-sheet-sap-rap-basics-de)
+> + [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)  
+> + [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase)  
+> + [SAP Samples: RAP Repositories](https://github.com/orgs/SAP-samples/repositories?q=rap)
+> + [SAP Learning Course: Building Apps with RAP](https://learning.sap.com/courses/building-apps-with-the-abap-restful-application-programming-model)
+> + [SAP Learning Journey: Creating a Fiori Elements App with RAP OData V4](https://learning.sap.com/learning-journeys/getting-started-with-creating-an-sap-fiori-elements-app-based-on-an-odata-v4-rap-service)
+> + [SAP Technology Blog: Getting Started with RAP](https://community.sap.com/t5/technology-blog-posts-by-sap/getting-started-with-the-abap-restful-application-programming-model-rap/ba-p/13420829)
