@@ -63,7 +63,7 @@ Hier finden Sie ergänzende Erläuterungen zu den wichtigsten Entwurfsmustern:
 Das Singleton-Pattern zielt darauf ab, dass zu einer Klasse nur eine einzige Objektinstanz zur Laufzeit existiert bzw. existieren kann. Dazu wird die erste durch den Konstruktor erzeugte Instanz in eine Klassenvariable (CLASS-DATA) geschrieben und bei den folgenden Aufrufen des Klassenkonstruktors zur Erzeugung eines neuen Objektes wird ebendiese gespeicherte Instanz aus der Klassenvariable gelesen und zurückgegeben. So kann man kontrollieren, dass zu jeder Zeit nur eine Instanz einer Klasse existiert.
 Hier ein Beispiel, wie dies umgesetzt werden könnte:
 
-```ABAP
+```abap
 CLASS zcl_singleton DEFINITION.
   PUBLIC SECTION.
     CLASS-METHODS:
@@ -102,7 +102,7 @@ singleton->do_something( ).
 Das Factory-Pattern ist ein Entwurfsmuster, das die Erstellung von Objekten kapselt. In ABAP wird es häufig verwendet, um die Instanziierung von Objekten zu zentralisieren und zu vereinfachen – besonders bei polymorphen Objekten oder wenn die Erzeugung komplex ist. Das Pattern bietet mehrere Vorteile: Änderungen an der Erzeugungslogik müssen nur an einer Stelle erfolgen, die Rückgabe eines Interfaces oder einer abstrakten Klasse (Polymorphismus) ist möglich und neue Typen können leicht ergänzt werden.
 Dies könnte beispielhaft folgendermaßen umgesetzt werden:
 
-```ABAP
+```abap
 * Abstrakte Basisklasse oder Interface
 INTERFACE if_vehicle.
   METHODS drive.
@@ -165,7 +165,7 @@ ENDIF.
 Das Facade-Pattern wird in ABAP verwendet, um eine vereinfachte Schnittstelle zu einem komplexen Subsystem bereitzustellen. Es kapselt die Komplexität mehrerer Klassen oder Prozesse hinter einer einzigen, leicht zu verwendenden Klasse – der „Fassade“. Dies bietet folgende Vorteile: Der Aufrufer muss sich nicht mit Details der Subsysteme beschäftigen, Änderungen in den Subsystemen wirken ich nicht direkt auf den Aufrufe aus und die Fassade kann in verschiedenen Kontexten wiederverwendet werden.
 Dies könnte beispielhaft folgendermaßen umgesetzt werden:
 
-```ABAP
+```abap
 * Subsystem-Klassen
 CLASS zcl_order_processor DEFINITION.
   PUBLIC SECTION.
@@ -231,7 +231,7 @@ Der Einsatz von MVC bietet folgende Vorteile: Bessere Wartbarkeit und Testbarkei
 
 Das Restful Application Programming Model bildet das MVC Pattern ab, da hier durch das technische Framework bereits eine strikte Trennung der Belange in Form von Model = CDS, Control = Behavior Definition und View = Fiori vorgegeben ist.
 
-```ABAP
+```abap
 * Model Klasse
 CLASS zcl_model DEFINITION.
   PUBLIC SECTION.
