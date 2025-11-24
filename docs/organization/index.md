@@ -60,21 +60,19 @@ Softwareentwicklungs-Teams sind das Schlüsselelement für die erfolgreiche Umse
 *   Stellen Sie Ihren Softwareentwicklungsteams den angemessenen Freiraum für Experimente, Weiterbildung und zur Produktoptimierung bereit. Vermeiden Sie es Ihre Entwickler dauerhaft mit einer 100% Auslastung zu verheizen. Ermöglichen Sie den Entwicklern, durch Maßnahmen wie die Einrichtung einer Community of Practice, voneinander zu lernen. Experimentieren Sie z.B. mit [Pair-Programming](https://en.wikipedia.org/wiki/Pair_programming) und profitieren Sie von den damit verbundenen [Vorteilen](https://medium.com/the-liberators/in-depth-the-costs-and-benefits-of-pair-programming-b4b54b27c6ff), wie einer potentiell höheren Code Qualität und besserem Software Design.
 *   Geben sie den Teams die Mittel und Tools in die Hand, um Transparenz über ihr Arbeitsgebiet zu erlangen. Eine effektive Optimierung lässt sich nur auf Grundlage von Zahlen, Daten und Fakten siehe [Kapitel ALM](/ABAP-Leitfaden/application-lifecycle-management/ensuring-quality/) durchführen. Sind die Informationen über Custom Code und Prozess-Metriken nicht vorhanden, ist eine betriebswirtschaftlich sinnvolle Entscheidung über eine lohnenswerte Investition in ein Optimierungsprojekt nahezu unmöglich.
     
-
-### Weiterführende Internetquellen und Literaturempfehlung
-
-#### Artikel & Blogposts
-- [Inverse Conway Maneuver – ThoughtWorks](https://www.thoughtworks.com/en-de/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams)
-
-#### Webseiten & Ressourcen
-- [Team Topologies](https://teamtopologies.com/)
-- [Flow Engineering](https://flowengineering.org/)
-- [Core Domain Charts – GitHub](https://github.com/ddd-crew/core-domain-charts)
-- [Managing the Unmanageable](https://managingtheunmanageable.net/)
-
-#### Bücher
-- *Lean Software Development – An Agile Toolkit*  
-  [Pearson Verlag](https://www.pearson.de/lean-software-development-an-agile-toolkit-an-agile-toolkit-9780133812954)
+{: .note }
+> Artikel & Blogposts
+> - [Inverse Conway Maneuver – ThoughtWorks](https://www.thoughtworks.com/en-de/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams)
+> 
+> Webseiten & Ressourcen
+> - [Team Topologies](https://teamtopologies.com/)
+> - [Flow Engineering](https://flowengineering.org/)
+> - [Core Domain Charts – GitHub](https://github.com/ddd-crew/core-domain-charts)
+> - [Managing the Unmanageable](https://managingtheunmanageable.net/)
+> 
+> Bücher
+> - *Lean Software Development – An Agile Toolkit*  
+>   [Pearson Verlag](https://www.pearson.de/lean-software-development-an-agile-toolkit-an-agile-toolkit-9780133812954)
 
 ---
 
@@ -111,14 +109,12 @@ Unternehmen mit einem geringen Reifegrad in der Softwareentwicklung fahren oft e
 *   Stellen sie klare Regeln für den Umgang mit dem Versionskontrollsystem auf. Definieren sie, wie lange ein Transport im Entwicklungssystem verweilen darf, bis die Entwicklung zurückgebaut werden muss und richten Sie dafür ein entsprechendes Monitoring ein. Legen Sie für Systemlandschaften mit mehreren Produktiv-Systemen und einem zentralen Entwicklungssystem fest, dass der Quellcode in allen Produktivsystemen identisch seien muss. Definieren Sie, wie mit Quellcode umgegangen werden soll, der über mehrere Systemlandschaften hinweg genutzt wird, wie die Abwärtskompatibilität zu unterschiedlichen Release-Ständen gewährleistet wird und wie man mit Namespaces und Forks umgehen soll.
     
 
-### Weiterführende Internetquellen und Literaturempfehlung
-
-#### Webseiten & Ressourcen
-- [Langlebige Softwarearchitekturen](https://www.langlebige-softwarearchitekturen.de/)
-- [Refactoring.com](https://refactoring.com/)
-- [Software-Architektur.tv](https://software-architektur.tv/)
-- [SAP Application Extension Methodology](https://help.sap.com/docs/sap-btp-guidance-framework/sap-application-extension-methodology/sap-application-extension-methodology-overview)
-- [SAP Architecture Center](https://architecture.learning.sap.com/)
+{: .note }
+> - [Langlebige Softwarearchitekturen](https://www.langlebige-softwarearchitekturen.de/)
+> - [Refactoring.com](https://refactoring.com/)
+> - [Software-Architektur.tv](https://software-architektur.tv/)
+> - [SAP Application Extension Methodology](https://help.sap.com/docs/sap-btp-guidance-framework/sap-application-extension-methodology/sap-application-extension-methodology-overview)
+> - [SAP Architecture Center](https://architecture.learning.sap.com/)
 
 
 ## Prozesse und Methodik
@@ -156,16 +152,15 @@ Aus unserer Erfahrung im DSAG-Netzwerk wissen wir: Die Qualität der Softwareent
 
 Es gibt eine große Auswahl an von Entwicklungsstandards, die beispielsweise im ABAP Leitfaden 2016 [dsag\_handlungsempfehlung\_abap\_2016\_0.pdf](https://www.dsag.de/wp-content/uploads/2021/12/dsag_handlungsempfehlung_abap_2016_0.pdf), [Clean ABAP](/ABAP-Leitfaden//abap/clean_and_modern_abap/) sowie diversen Büchern zu entnehmen sind. Aus unserer Sicht sind grobe Pfeiler zu denen ein Konsens besteht:
 
->**Empfehlungen** 
-*   Namenskonventionen für die kundeneigene Entwicklungen, optional im separaten Namensraum
-*   Strukturiertes Paketkonzeptes, optional mit klaren Paketschnittstellen
-*   Statische Codeprüfung (z.B. ATC Checks) als Teil des Transportwesens mit der Prüfung nach den folgenden Code-Kriterien: Performance, Sicherheit, Compliance, Robustheit, Wartbarkeit, Erweiterbarkeit (ABAP Cloud). Siehe hierzu auch den DSAG ATC Leitfaden [dsag\_leitfaden\_atc\_2020\_06.pdf](https://www.dsag.de/wp-content/uploads/2021/12/dsag_leitfaden_atc_2020_06.pdf)
-*   Dokumentation von öffentlichen Methoden/Funktionsbausteinen
-*   Erstellung von [angemessener Dokumentation](/ABAP-Leitfaden/documentation/documentation_tipps/) .
-*   Der Einsatz von ABAP Unit und Code Coverage
-*   Genehmigungsverfahren für Classical Extensibility – den sogenannten Level D Entwicklungen [siehe Kapitel Clean Core](/ABAP-Leitfaden//clean-core/solution-approach/)
-*   Anpassung der Geschäftsprozess- und technischen Dokumentation nach einer Programmänderung
-{: .highlight}
+{: .recommendation}
+> *   Namenskonventionen für die kundeneigene Entwicklungen, optional im separaten Namensraum
+> *   Strukturiertes Paketkonzeptes, optional mit klaren Paketschnittstellen
+> *   Statische Codeprüfung (z.B. ATC Checks) als Teil des Transportwesens mit der Prüfung nach den folgenden Code-Kriterien: Performance, Sicherheit, Compliance, Robustheit, Wartbarkeit, Erweiterbarkeit (ABAP Cloud). Siehe hierzu auch den DSAG ATC Leitfaden [dsag\_leitfaden\_atc\_2020\_06.pdf](https://www.dsag.de/wp-content/uploads/2021/12/dsag_leitfaden_atc_2020_06.pdf)
+> *   Dokumentation von öffentlichen Methoden/Funktionsbausteinen
+> *   Erstellung von [angemessener Dokumentation](/ABAP-Leitfaden/documentation/documentation_tipps/) .
+> *   Der Einsatz von ABAP Unit und Code Coverage
+> *   Genehmigungsverfahren für Classical Extensibility – den sogenannten Level D Entwicklungen [siehe Kapitel Clean Core](/ABAP-Leitfaden//clean-core/solution-approach/)
+> *   Anpassung der Geschäftsprozess- und technischen Dokumentation nach einer Programmänderung
 
 ### Warum sollte sich etwas ändern?
 
