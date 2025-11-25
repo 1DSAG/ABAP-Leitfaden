@@ -277,5 +277,5 @@ Die Wahl des richtigen Versionsverwaltung hängt von den spezifischen Anforderun
 
 Es können mit Hilfe der Versionsverwaltung moderne Entwicklungspraktiken wie CI/CD genutzt werden. Überlegen Sie sich wie ihre Pipeline aussehen soll
 
-## Weitere Quellen
-[Git und SAP / Rheinwerk Verlag](https://www.rheinwerk-verlag.de/git-und-sap/?srsltid=AfmBOooMbM45uQOGPLDAiaKz5hHazrf45BIEVjmOIe8mz9HjpdHjgzZq)
+{: .note }
+> [Git und SAP / Rheinwerk Verlag](https://www.rheinwerk-verlag.de/git-und-sap/?srsltid=AfmBOooMbM45uQOGPLDAiaKz5hHazrf45BIEVjmOIe8mz9HjpdHjgzZq)
