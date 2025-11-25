@@ -94,6 +94,5 @@ Als ABAP-Entwickler tragen Sie eine besondere Verantwortung. Ihr Code läuft im 
 
 Sicherer ABAP-Code ist kein Luxus -- er ist eine Notwendigkeit in der heutigen vernetzten Geschäftswelt. Lassen Sie uns gemeinsam dafür sorgen, dass Ihre Entwicklungen nicht nur funktional und performant, sondern auch sicher sind.
 
----
-
-*Die folgenden Abschnitte führen Sie durch konkrete Sicherheitsaspekte mit praxisnahen Beispielen und Lösungsansätzen. Jeder Code-Schnipsel wurde so gewählt, dass er reale Herausforderungen aus dem Entwicklungsalltag widerspiegelt.*
+{: .solution }
+> Die folgenden Abschnitte führen Sie durch konkrete Sicherheitsaspekte mit praxisnahen Beispielen und Lösungsansätzen. Jeder Code-Schnipsel wurde so gewählt, dass er reale Herausforderungen aus dem Entwicklungsalltag widerspiegelt.
