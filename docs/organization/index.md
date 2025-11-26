@@ -11,9 +11,6 @@ nav_order: 1
 1. TOC
 {:toc}
 
-
-## Einleitung
-
 Wieso sollte das Management in Softwarequalität und eine gut aufgestellte Entwicklungsorganisation investieren? Softwarequalität als Basis wird in der Regel implizit von Stakeholdern automatisch erwartet, dafür notwendige Maßnahmen aber oft wenig unterstützt, denn „Es liegt kein Ruhm in Prävention“.
 
 Aus Managementsicht ist ein solcher Invest (Zeit, Ressourcen, Tooling) mit einem Business Case zu hinterlegen, der sich am einfachsten für ihr Unternehmen individuell erarbeiten lässt, wenn Sie einen Blick auf die aktuellen Probleme ihres Unternehmens und ihrer IT werfen. Falls sie einige dieser bei sich wiederfinden, kann eine Optimierung ihrer Entwicklungsabteilung und Kultur mit Fokus auf Qualität und Technologien ein Lösungsansatz sein:

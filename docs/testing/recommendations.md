@@ -13,8 +13,6 @@ nav_order: 99
 1. TOC
 {:toc}
 
-# Empfehlungen
-
 Folgend möchten wir versuchen, Ihnen aus den vielen Informationen eine Empfehlung zusammenzustellen, die Ihnen und Ihrem Team einen schnellen und nachhaltigen Start ermöglichen.
 
 ## Konsens

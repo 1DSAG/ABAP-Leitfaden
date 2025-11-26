@@ -12,14 +12,13 @@ nav_order: 2
 1. TOC
 {:toc}
 
-# Überblick
-
 Neben Methoden, Funktionsbausteinen und Reports, die Dokumentation im Quellcode enthalten können, existieren weitere Entwicklungsobjekte im ABAP-System, die keinen Quellcode besitzen und daher auf anderem Weg dokumentiert werden müssen. Beispiele dafür sind:
 
 * DDIC-Objekte
 * Transaktionen
 
 Da die Workbench-Dokumentation auch an das Transportwesen angeschlossen ist, steht sie in allen Einzelsystemen einer Systemlandschaft zur Verfügung. Weiterhin kann diese Dokumentation von allen Benutzern eingesehen werden und wird für Reports vom ABAP-System automatisch in die Benutzeroberfläche eingebunden. Ein weiterer Vorteil kann darin bestehen, dass die Dokumentation mehrsprachig geführt werden kann. Auf SAP-Systemen mit SAP_BASIS >= 7.40 können im Quellcode ABAP-Doc-Kommentare verwendet werden. Dies kann als Alternative zur Dokumentation in der ABAP-Workbench verwendet werden. Der volle Funktionsumfang von ABAP-Doc-Kommentaren lässt sich derzeit allerdings nur mit den ABAP-Development-Tools für Eclipse ausschöpfen. Bei Verwendung von Core Data Services zur Definition von DDIC-Objekten können wesentlich mehr Entwicklungsobjekte im Quellcode dokumentiert werden und die Notwendigkeit externer Dokumentation entfällt.
+
 Beginnend mit SAP NetWeaver 7.50 lassen sich die ABAP-Doc-Kommentare von Klassen und Schnittstellen als HTML-Dateien exportieren. Die SAP erweitert ihr Repertoire ab ABAP Plattform 7.55 um eine weitere Technologie zur Dokumentation von ABAP-Entwicklungsobjekten. Das Knowledge Transfer Document fokussiert sich auf die neuen Objekttypen, die primär aus dem ABAP RESTful Application Programming Model (RAP) Kontext entstammen. Dieses umfasst unter anderem: CDS Views, Behavior Definitions, Service Definitions, Service Bindings, Annotation Definitions und Paket
 
 ## Kurztexte
@@ -72,10 +71,10 @@ WEITERE QUELLEN
 ## ABAP Doc
 
 ABAP Doc ermöglicht es Klassen, Interfaces und Funktionsbausteine zu dokumentieren. Die Kommentare bestehen aus einer oder mehrerer kommentierte Zeilen.  
-ABAP Doc beginnt mit dem Präfix  `"!.`  .  
-ABAP Doc kann verwendet werden um grundsätzliche Informationen zur Klasse, Methode oder Interface direkt im Quellcode zu dokumentieren. Des Weiteren können die Parameter einer Methode über ABAP Doc im Einzelnen mit Dokumentation versehen werden. Diese ABAP Doc Kommentare werden direkt vor deklarative Statements platziert.  
-In ABAP Doc können zudem HTML Tags zur Formatierung verwendet werden, was die Lesbarkeit und Struktur der Dokumentation erhöht und verschönert.  
-Bei der empfohlenen Nutzung von ADT ist die Erstellung von ABAP Doc durch Nutzung von Quickfix sehr einfach und effizient durchzuführen [DSAG AG ADT Leitfaden: Was sind ABAP Doc](https://1dsag.github.io/ADT-Leitfaden/working-with-adt/features/abap-doc/#was-sind-abap-doc)
+- ABAP Doc beginnt mit dem Präfix `"!.`.  
+- ABAP Doc kann verwendet werden um grundsätzliche Informationen zur Klasse, Methode oder Interface direkt im Quellcode zu dokumentieren. Des Weiteren können die Parameter einer Methode über ABAP Doc im Einzelnen mit Dokumentation versehen werden. Diese ABAP Doc Kommentare werden direkt vor deklarative Statements platziert.  
+- In ABAP Doc können zudem HTML Tags zur Formatierung verwendet werden, was die Lesbarkeit und Struktur der Dokumentation erhöht und verschönert.  
+- Bei der empfohlenen Nutzung von ADT ist die Erstellung von ABAP Doc durch Nutzung von Quickfix sehr einfach und effizient durchzuführen [DSAG AG ADT Leitfaden: Was sind ABAP Doc](https://1dsag.github.io/ADT-Leitfaden/working-with-adt/features/abap-doc/#was-sind-abap-doc)
 
 Der Vorteil der Nutzung von ABAP Doc besteht darin, dass diese Kommentare in folgenden Funktionen der ADT angezeigt werden und damit dem Entwickler wertvolle Informationen direkt bei der Code Erstellung zur Verfügung stehen.
 

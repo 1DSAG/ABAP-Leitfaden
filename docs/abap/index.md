@@ -12,8 +12,6 @@ nav_order: 4
 1. TOC
 {:toc}
 
-## Einführung ins Thema und Inhalte des Kapitels
-
 Willkommen im Kapitel Moderne ABAP Entwicklung. Hier geht es um den Kern der modernen Entwicklung von Anwendungen in SAP - um ABAP. Wir möchten Ihnen Empfehlungen und Hinweise aus der Praxis geben, wie ABAP in modernen Anwendungen sinnvoll eingesetzt wird und welche Vorteile und Möglichkeiten die Nutzung von modernem ABAP bieten.  
 
 SAP hat schon vor vielen Jahren die [ABAP-Programmierrichtlinien](https://help.sap.com/doc/abapdocu_751_index_htm/7.51/de-DE/abenabap_pgl.htm) herausgebracht in denen grundlegende Prinzipien genannt und erläutert werden. Deren Prinzipien gelten auch weiterhin. Der [Clean-ABAP Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) erweitert diese Empfehlungen um Methoden und Prinzipien moderner Applikationsentwicklung und basiert auf den allgemeinen Clean Code Ansätzen und ergänzt diese um spezifische Aspekte der ABAP- und SAP-Anwendungsentwicklung.

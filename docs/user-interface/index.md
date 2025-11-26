@@ -11,8 +11,6 @@ nav_order: 6
 1. TOC
 {:toc}
 
-## Einleitung
-
 Dieses Kapitel gibt einen Überblick über verschiedene UI-Technologien, die im Kontext von ABAP-System zum Einsatz kommen. Der Hauptfokus liegt relevanzbedingt auf Fiori (SAPUI5). Im späteren Verlauf wird jedoch auch ein Überblick auf ältere und teils weiterhin relevante Technologien gegeben.
 
 {: .recommendation }
