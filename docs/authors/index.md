@@ -52,11 +52,6 @@ nav_order: 15
 <td>SAP</td>
 <td>Reviewer</td>
 </tr>
-<tr class="header">
-<td><a href="https://www.linkedin.com/in/domi-bigl/">Domi Bigl</a></td>
-<td>Cadaxo</td>
-<td></td>
-</tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/dominik-panzer-690702248">Dominik Panzer</a></td>
 <td>Intense AG</td>
@@ -97,11 +92,6 @@ nav_order: 15
 <td>Würth IT GmbH</td>
 <td>Autor</td>
 </tr>
-<tr class="odd">
-<td>Holger Stumm</td>
-<td>log(2)</td>
-<td></td>
-</tr>
 <tr class="header">
 <td><a href="https://www.linkedin.com/in/jan-sauerland-1543b3a9/">Jan Sauerland</a></td>
 <td>ebm-papst St. Georgen GmbH & Co.KG</td>
@@ -115,7 +105,7 @@ nav_order: 15
 <tr class="header">
 <td>Jens Zähringer</td>
 <td>Nagarro ES</td>
-<td></td>
+<td>Reviewer</td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/josephinereinhold/">Josephine Reinhold</a></td>
