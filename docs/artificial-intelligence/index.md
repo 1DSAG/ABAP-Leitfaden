@@ -176,4 +176,5 @@ Unabhängig der Implementierungs-Werkzeuge rund um die etablierten Technologien,
 KI wird die Anwendungsentwicklung in der SAP-Welt nachhaltig verändern – sie wird Entwickler nicht ersetzen, sondern ihre Stärken gezielt unterstützen und Routinearbeiten reduzieren.
 Wer die Chancen und Möglichkeiten generativer KI verantwortungsvoll nutzt, gewinnt an Effizienz und Qualität, ohne die eigene Kompetenz einzubüßen. Fundiertes Fachwissen, gute Architektur, sauberes Design und kritisches Denken bleiben die Grundlage jeder Entwicklung – auch und gerade im Zeitalter der KI. Entscheidend ist, dass der Mensch die Kontrolle über das Ergebnis behält und die Verantwortung dafür trägt.
 
-*Diese Zusammenfassung wurde mit Unterstützung einer generativen KI erstellt – selbstverständlich sorgfältig geprüft, überarbeitet, vom Autor finalisiert und von der KI sprachlich abgerundet.*
+{: .note }
+> Diese Zusammenfassung wurde mit Unterstützung einer generativen KI erstellt – selbstverständlich sorgfältig geprüft, überarbeitet, vom Autor finalisiert und von der KI sprachlich abgerundet.
