@@ -90,7 +90,7 @@ nav_order: 15
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/gregorwolf/">Gregor Wolf</a></td>
 <td>profes</td>
-<td></td>
+<td>Autor</td>
 </tr>
 <tr class="header">
 <td>Harald Weidmann</td>
@@ -130,7 +130,7 @@ nav_order: 15
 <tr class="header">
 <td>Marc Zimmek</td>
 <td>Claas</td>
-<td></td>
+<td>Reviewer</td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.linkedin.com/in/krapf/">Marco Krapf</a></td>
@@ -212,15 +212,21 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 </tr>
 
 <tr class="odd">
+<td>Enno Wulff</td>
+<td>Testing</td>
+<td>ABAP-Dino (seit 1994). Seit 2003 teile ich meine Programmiererfahrungen im Tricktresor. Seit 2008 bei Inwerken als Entwickler, Programmierbegleiter, Initiator vom Code-Dojo, Produktentwicklung AppKnight, Ausrichter von SAP Inside Tracks und ABAP Code Retreats in Hannover. Durch die Mitarbeit beim DSAG-Leitfaden habe ich die Möglichkeit, Wissen weiterzugeben und selbst zu lernen.</td>
+</tr>
+
+<tr class="odd">
 <td>Fabian Lupa</td>
 <td>Open Source</td>
 <td>Als Senior Software Engineer und Trainer verantworte ich schwerpunktmäßig die Aus- und Weiterbildung von Mitarbeitern im Bereich der ABAP-Entwicklung bei adesso sowie das Developer Enablement in Kundenprojekten. In diesem Zusammenhang sind aktuelle Richtlinien und Best Practices von zentraler Bedeutung – sowohl für Neueinsteiger als auch für erfahrene Entwickler. Daher war es mir ein besonderes Anliegen, den Leitfaden auf den neuesten Stand zu bringen und auch bislang nicht abgedeckte Themen darin zu integrieren.</td>
 </tr>
 
 <tr class="odd">
-<td>Marco Krapf</td>
-<td>ALM, Testing / weitere Testwerkzeuge</td>
-<td>Steht seit zehn Jahren als SAP Solution Manager Libero auf dem Spielfeld. Anfangs in einem super Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozess-Management, Test-Management, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Aufgaben und Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
+<td>Florian Henninger</td>
+<td>ABAP</td>
+<td>Als Entwickler und Problemlöser bin ich seit langen immer daran interesssiert, was um mich rum passiert. Ich schaue gerne über den Tellerrand und freue mich über Erkenntnisse und auch die Lösungen, die es so für uns alle in der täglichen Arbeit gibt. Als ADT User der ersten Stunde bin ich immer wieder fasziniert, wieviel Mehrwert es gibt, wenn man auf die kleinen Dinge um sich herum achtet und sich nicht im Alltag verliert. Genau das, ist meine Motivation hier (wieder) mit zu machen. Ich bin mir sicher, Sie finden auch etwas für sich.</td>
 </tr>
 
 <tr class="odd">
@@ -233,6 +239,12 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <td>Jan Sauerland</td>
 <td>Moderne ABAP Entwicklung</td>
 <td>Als Hauptansprechpartner für ABAP-Programmierung im Unternehmen hatte ich auf Basis des alten ABAP-Leitfadens von 2016 bereits unternehmensinterne ABAP-Richtlinien entworfen. Daher freue ich mich sehr darüber, nun selbst am DSAG-Leitfaden für ABAP mitwirken und mein gesammeltes Wissen einbringen zu können.</td>
+</tr>
+
+<tr class="odd">
+<td>Marco Krapf</td>
+<td>ALM, Testing / weitere Testwerkzeuge</td>
+<td>Steht seit zehn Jahren als SAP Solution Manager Libero auf dem Spielfeld. Anfangs in einem super Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozess-Management, Test-Management, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Aufgaben und Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
 </tr>
 
 <tr class="odd">
@@ -252,6 +264,12 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 </tr>
 
 <tr class="odd">
+<td>Sven Treutler</td>
+<td>Versionsverwaltung, Dokumentation</td>
+<td>ABAP-Entwickler aus Leidenschaft. Seit 2010 beschäftigt ich mich mit Themen rund um die ABAP-Entwicklung bei der rku.it GmbH in Herne. Dort kümmere ich mich um neue Technologien und Qualitätssicherung im ABAP-Umfeld. Meinen Masterabschluss machte ich an der Westfälischen Hochschule in Gelsenkirchen. Privat besuche ich schöne Orte mit meiner Frau, bin stolzer Katzenbesitzer und schwarz-gelber Fußballanhänger.</td>
+</tr>
+
+<tr class="odd">
 <td>Timo John</td>
 <td>Testing, ABAP, Clean Core</td>
 <td></td>
@@ -263,30 +281,12 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 <td>Als Enterprise Architect blicke ich gerne weit in die Zukunft; Und sehe eine strahlende Zukunft für die ABAP-Entwicklung, die neue Dimensionen erreicht. Als ABAP Lead Developer bei Festo war ich der Innovationstornado, der immer vorne mitmischt. Mit der DSAG-Community Standards zu setzen, ist für mich wie ein heiliger Ritterschlag – nur mit weniger Rüstung und mehr Kaffeekicks! Die Zusammenarbeit mit den renommierten ABAP-Profis war bereichernd. Viel Spaß beim Lesen!</td>
 </tr>
 
-<tr class="odd">
-<td>Enno Wulff</td>
-<td>Testing</td>
-<td>ABAP-Dino (seit 1994). Seit 2003 teile ich meine Programmiererfahrungen im Tricktresor. Seit 2008 bei Inwerken als Entwickler, Programmierbegleiter, Initiator vom Code-Dojo, Produktentwicklung AppKnight, Ausrichter von SAP Inside Tracks und ABAP Code Retreats in Hannover. Durch die Mitarbeit beim DSAG-Leitfaden habe ich die Möglichkeit, Wissen weiterzugeben und selbst zu lernen.</td>
-</tr>
-
-<tr class="odd">
-<td>Sven Treutler</td>
-<td>Versionsverwaltung, Dokumentation</td>
-<td>ABAP-Entwickler aus Leidenschaft. Seit 2010 beschäftigt ich mich mit Themen rund um die ABAP-Entwicklung bei der rku.it GmbH in Herne. Dort kümmere ich mich um neue Technologien und Qualitätssicherung im ABAP-Umfeld. Meinen Masterabschluss machte ich an der Westfälischen Hochschule in Gelsenkirchen. Privat besuche ich schöne Orte mit meiner Frau, bin stolzer Katzenbesitzer und schwarz-gelber Fußballanhänger.</td>
-</tr>
-
-<tr class="odd">
-<td>Florian Henninger</td>
-<td>ABAP</td>
-<td>Als Entwickler und Problemlöser bin ich seit langen immer daran interesssiert, was um mich rum passiert. Ich schaue gerne über den Tellerrand und freue mich über Erkenntnisse und auch die Lösungen, die es so für uns alle in der täglichen Arbeit gibt. Als ADT User der ersten Stunde bin ich immer wieder fasziniert, wieviel Mehrwert es gibt, wenn man auf die kleinen Dinge um sich herum achtet und sich nicht im Alltag verliert. Genau das, ist meine Motivation hier (wieder) mit zu machen. Ich bin mir sicher, Sie finden auch etwas für sich.</td>
-</tr>
-
 </tbody>
 </table>
 
 # Danksagungen
 
-Hier weitere Danksagungen ...
+Als Sprecherteam des Arbeitskreis Development (Sebastian und Björn), möchten wir uns bei allen Autoren und Reviewers bedanken, dass sie uns auf dem Weg der 1,5 Jahre begleitet haben. Auch für den wertvollen Austausch und die zahlreichen Gespräche rund um den Leitfaden und die ABAP Entwicklung der Zukunft. Ein großer Dank geht auch an die Kollegen der DSAG, die bei der Revision und Veröffentlichung des Dokuments mitgewirkt haben.
 
 
 
