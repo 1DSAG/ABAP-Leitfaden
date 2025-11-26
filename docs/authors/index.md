@@ -8,6 +8,8 @@ nav_order: 15
 {: .no_toc}
 # Mitarbeiter
 
+Hier finden Sie alle Mitarbeiter des Leitfadens, die sich um die Struktur, Erstellung und den Review des Dokuments gekümmert haben.
+
 <table>
 <thead>
 <tr class="header">
