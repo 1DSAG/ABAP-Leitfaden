@@ -5,8 +5,11 @@ permalink: /authors/
 nav_order: 15
 ---
 
+# Abschluss
+
 {: .no_toc}
-# Mitarbeiter
+
+## Mitarbeiter
 
 Hier finden Sie alle Mitarbeiter des Leitfadens, die sich um die Struktur, Erstellung und den Review des Dokuments gekümmert haben.
 
@@ -167,7 +170,7 @@ Hier finden Sie alle Mitarbeiter des Leitfadens, die sich um die Struktur, Erste
 </tbody>
 </table>
 
-# Autoren
+## Autoren
 
 Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, was sie in der realen Welt tun und was sie motiviert hat am Leitfaden mitzuarbeiten.
 
@@ -266,6 +269,6 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 </tbody>
 </table>
 
-# Danksagungen
+## Danksagungen
 
 Als Sprecherteam des Arbeitskreis Development (Sebastian und Björn), möchten wir uns bei allen Autoren und Reviewers bedanken, dass sie uns auf dem Weg der 1,5 Jahre begleitet haben. Auch für den wertvollen Austausch und die zahlreichen Gespräche rund um den Leitfaden und die ABAP Entwicklung der Zukunft. Ein großer Dank geht auch an die Kollegen der DSAG, die bei der Revision und Veröffentlichung des Dokuments mitgewirkt haben.
