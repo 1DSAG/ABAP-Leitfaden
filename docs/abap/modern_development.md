@@ -61,11 +61,12 @@ Eine Klasse bildet eine spezielle Aufgabe ab, die in überschaubaren Methoden im
 
 Bei einer Klasse, die nur statische Methoden beinhaltet und in der Verwendung nicht instanziiert wird, handelt es sich somit nicht um eine Klasse die objektorientierten Prinzipien folgt.
 
-Weitere Erkennungsmerkmale einer Klasse, die **nicht** objektorientierten Prinzipien folgt sind:
-
-- **Größe der Klasse** - eine Klasse mit vielen (öffentlichen) Methoden zeigt vermutlich auf dass das Single Responsibility Prinzip verletzt wurde  
-- **Größe der Methoden** - umfangreiche Methoden weisen auf Strukturdefizite, redundanten Code und Verletzung des Separation of Concerns Prinzips hin.  
-- **Umfangreiche Parameterschnittstellen** - Objekte arbeiten mit Objekten und nicht mit Parametern. Dies geht meistens mit zu großen Methoden einher. Daher besitzen objektorientierte Methoden oftmals sehr schmale Schnittstellen, die Objekte als Übergabeparameter, bei funktionalen Methoden Return Parameter, enthalten.  
+{: .note }
+> Erkennungsmerkmale einer Klasse, die **nicht** objektorientierten Prinzipien folgt sind:
+> 
+> - Größe der Klasse - eine Klasse mit vielen (öffentlichen) Methoden zeigt vermutlich auf dass das Single Responsibility Prinzip verletzt wurde  
+> - Größe der Methoden - umfangreiche Methoden weisen auf Strukturdefizite, redundanten Code und Verletzung des Separation of Concerns Prinzips hin.  
+> - Umfangreiche Parameterschnittstellen - Objekte arbeiten mit Objekten und nicht mit Parametern. Dies geht meistens mit zu großen Methoden einher. Daher besitzen objektorientierte Methoden oftmals sehr schmale Schnittstellen, die Objekte als Übergabeparameter, bei funktionalen Methoden Return Parameter, enthalten.  
 
 Klassen, die die diese Erkennungsmerkmale besitzen, widersprechen den o.g. Anforderungen an modernen ABAP-Code.
 Weitere Indikatoren finden z.B. im [Clean-ABAP Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md).
