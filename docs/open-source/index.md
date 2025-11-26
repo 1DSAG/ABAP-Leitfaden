@@ -12,8 +12,6 @@ nav_order: 11
 1. TOC
 {:toc}
 
-## Einleitung
-
 Open Source hat es in der ABAP-Entwicklung besonders schwer Fuß zu fassen. Immer noch halten sich Einwände, dass der Einsatz von frei verfügbarer Software in den geschäftskritischen SAP-Systemen mit den Unternehmensdaten gar nicht möglich oder zu rechtfertigen sei. Dabei gibt es für viele der berechtigten Einwände Lösungen, um die _Risiken_ zu minimieren und die [_Chancen_](#motivation-und-chancen), die Open-Source-Software bietet, nutzen zu können. In anderen Programmiersprachen überwiegen die Chancen bereits lange gegenüber den Restrisiken und es wurden Prozesse und Tools geschaffen, um Open-Source-Bestandteile effektiv in den eigenen Entwicklungsprozess zu integrieren. Dieses Kapitel soll Ihnen einen Überblick zum aktuellen Stand von Open Source in der ABAP-Entwicklung geben sowie Prozesse und Tools vorstellen, um...
 
 1. ...Open-Source-Projekte in die eigenen Lösungen zu integrieren ([Einsatz von Open-Source-Software](using-open-source-software))

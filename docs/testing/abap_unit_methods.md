@@ -30,7 +30,6 @@ Um ein umfangreiches Überarbeiten erstellter Software zu vermeiden, ist daher e
 
 ### Unit Tests sind nicht optional - Unit Tests als Teil der Definition of Done
 
-> {: .Zitat }
 > "Erst die Funktion implementieren - dann machen wir die Unit Tests (wenn dann noch Zeit ist)."
 
 Leider ist dieser Satz noch sehr häufig in ABAP Entwicklungsprojekten im Alltag zu finden. Im Vordergrund steht bei Zeitdruck eben die Lieferung der Funktionalität. 
@@ -60,8 +59,8 @@ Der Einsatz von TDD nach reiner Lehre ist nicht einfach und erfordert einige Erf
 Unit Tests sind wichtig. Das Erstellen, Verwalten und Entwickeln von Unit Tests erfordert umfangreiche Kenntnisse, die über das reine Schreiben von ABAP hinaus gehen. Das widerspricht der Aussage, dass sich dieses Kapitel an alle Programmierende richtet, unabhängig vom Wissensstand. Das ist jedoch nur auf den ersten Blick widersprüchlich, denn wir wollen mit diesem Kapitel alle erreichen. Wenn jemand noch nicht gut oder gar nicht objektorientiert programmieren kann, sich nicht mit Entwurfsmustern und anderen Programmierparadigmen auskennt, dann sollte das gelernt werden. Unit Test können eine gute Umgebung darstellen Techniken zu erlernen und diese anschließend auf den produktiven Code zu übertragen.
 Wir wollen Anregungen und Hilfestellungen dazu geben. Gleichwohl können wir an dieser Stelle nur begrenzt Informationen zu diesem Thema bereitstellen.
 
->**Empfehlungen**
-- Wir empfehlen Unit Tests
+{: .recommendation }
+> - Wir empfehlen Unit Tests
 
 #### Skills, die beim Arbeiten mit Unit Tests trainiert werden
 
@@ -151,14 +150,14 @@ In den Entwicklungstools kann nachvollzogen werden, welche Code-Strecken beim Au
 
 Bei vorhandenen Klassen, bei denen nicht auf die Trennung geachtet wurde, ist eine 100%-ige Testabdeckung kaum zu erreichen. Man muss den Aufwand eines Refactorings dem Nutzen entgegenstellen. Wenn eine Klasse keine 100%-ige Testabdeckung hat, ist es sicherlich nicht schlimm, aber es erleichtert die Bewertung, wie vertrauenswürdig Unit Tests zu einem Modul einzustufen sind. Wenn es eine Klasse gibt, die zu 100% Geschäftslogik enthält, dann können Sie bei einer Testabdeckung von 100% relativ sicher sein, dass diese Klasse so funktioniert, wie sie funktionieren soll. Wenn eine Klasse jedoch aus einem Mix von Geschäftslogik und Datenpräsentation besteht, dann ist es schwer festzustellen, ob Code-Teile nicht gut per Unit Test getestet werden konnten oder ob sie einfach vergessen wurden.
 
-## Weiterführende Links
 
-* [Unit Tests in ABAP](https://help.sap.com/docs/ABAP_PLATFORM_NEW/c238d694b825421f940829321ffa326a/08c60b52cb85444ea3069779274b43db.html?locale=en-US)
-* [Leseprobe "ABAP To The Future" (Paul Hardy): ABAP Unit and Test Driven Development](https://tinyurl.com/tddph2)
-* [SAP Help "ABAP Unit in Test-Driven Development"](<https://help.sap.com/doc/saphelp_nw75/7.5.5/en-US/4e/c2efe26e391014adc9fffe4e204223/content.htm?no_cache=true>)
-* [SAP-Community Blogs: Unit Testing ](https://community.sap.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=false&filter=location&location=blog-board:application-developmentblog-board&q=abap%20unit%20tests)
-* [GIVEN - WHEN - THEN (Martin Fowler)](https://martinfowler.com/bliki/GivenWhenThen.html)
-* [CACAMBER (Dominik Panzer)](https://github.com/dominikpanzer/cacamber-BDD-for-ABAP)
-* [Agile ABAP-Entwicklung von Winfried Schwarzmann - Reinwerk](https://www.rheinwerk-verlag.de/agile-abap-entwicklung)
-* [ABAPKoans von Damir Majer](https://github.com/damir-majer/ABAPKoans)
-* [ABAP Unit Tests - SAP Learning Hub](https://learning.sap.com/learning-journeys/acquire-core-abap-skills/implementing-code-tests-with-abap-unit_b23c7a00-c2e8-406d-8969-b00db3f1fd87)
+{: .note }
+> * [Unit Tests in ABAP](https://help.sap.com/docs/ABAP_PLATFORM_NEW/c238d694b825421f940829321ffa326a/08c60b52cb85444ea3069779274b43db.html?locale=en-US)
+> * [Leseprobe "ABAP To The Future" (Paul Hardy): ABAP Unit and Test Driven Development](https://tinyurl.com/tddph2)
+> * [SAP Help "ABAP Unit in Test-Driven Development"](<https://help.sap.com/doc/saphelp_nw75/7.5.5/en-US/4e/c2efe26e391014adc9fffe4e204223/content.htm?no_cache=true>)
+> * [SAP-Community Blogs: Unit Testing ](https://community.sap.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=false&filter=location&location=blog-board:application-developmentblog-board&q=abap%20unit%20tests)
+> * [GIVEN - WHEN - THEN (Martin Fowler)](https://martinfowler.com/bliki/GivenWhenThen.html)
+> * [CACAMBER (Dominik Panzer)](https://github.com/dominikpanzer/cacamber-BDD-for-ABAP)
+> * [Agile ABAP-Entwicklung von Winfried Schwarzmann - Reinwerk](https://www.rheinwerk-verlag.de/agile-abap-entwicklung)
+> * [ABAPKoans von Damir Majer](https://github.com/damir-majer/ABAPKoans)
+> * [ABAP Unit Tests - SAP Learning Hub](https://learning.sap.com/learning-journeys/acquire-core-abap-skills/implementing-code-tests-with-abap-unit_b23c7a00-c2e8-406d-8969-b00db3f1fd87)

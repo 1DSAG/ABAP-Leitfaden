@@ -55,22 +55,18 @@ Das Thema Objektorientierung ist komplex und viele existierende Funktionalitäte
 Die Hinweise und Tipps erfolgen hier in sehr vereinfachter Form. Es soll ein Vorgehen aufzeigen um die Objektorientierung nutzbringend anzuwenden und unsere Empfehlungen praxisorientiert untermauern.  
 Dies ist ein Anfang und kann helfen das Verständnis für ABAP-OO in den Entwicklerteams zu schaffen, erste Erfolgserlebnisse zu erzielen und mittels weitere Unterstützung durch Trainings und Coachings, Dokumentationen, Blogs und Online Events und durch Fachliteratur das Thema nachhaltig in der Organisation gewinnbringend zu nutzen.
 
-## Merkmale Objektorientierter Entwicklung in ABAP-Klassen
+## Merkmale objektorientierter Entwicklung in ABAP-Klassen
 
-Eine Klasse bildet eine spezielle (Teil-)Aufgabe ab, die in überschaubaren Methoden implementiert wird.  
-Eine ABAP-Klasse besteht aus Attributen, die Werte speichern können oder Konstanten sein können.  
-Es es gibt Methoden, die Funktionen implementieren und in *Public*, *Protected* und *Private* Methoden unterteilt sind. Man kann auch Klassenspezifische Typen definieren, die in der Klasse aber auch von Aufrufern verwendet werden können (wenn in Public Section definiert).  
-Darüber hinaus definieren Klassen weitergehende Eigenschaften wie Paketzugehörigkeit und die Art der Instanziierbarkeit und ggf. Vererbungsinformationen.  
-Oft werden ABAP-Klassen als eine moderne Form von Funktionsbausteinen betrachtet, dieser Vergleich wird den Möglichkeiten einer Klasse nicht gerecht.
-Der entscheidende Unterschied ist die Instanziierbarkeit, d.h. es können für Klassen mehrere Objekte im gleichen Programmkontext erzeugt werden.
+Eine Klasse bildet eine spezielle Aufgabe ab, die in überschaubaren Methoden implementiert wird. Eine ABAP-Klasse besteht aus Attributen, die Werte speichern können oder Konstanten sein können. Oft werden ABAP-Klassen als eine moderne Form von Funktionsbausteinen betrachtet, dieser Vergleich wird den Möglichkeiten einer Klasse nicht gerecht. Der entscheidende Unterschied ist die Instanziierbarkeit, d.h. es können für Klassen mehrere Objekte im gleichen Programmkontext erzeugt werden.
 
 Bei einer Klasse, die nur statische Methoden beinhaltet und in der Verwendung nicht instanziiert wird, handelt es sich somit nicht um eine Klasse die objektorientierten Prinzipien folgt.
 
-Weitere Erkennungsmerkmale einer Klasse, die **nicht** objektorientierten Prinzipien folgt sind:
-
-- **Größe der Klasse** - eine Klasse mit vielen (öffentlichen) Methoden zeigt vermutlich auf dass das Single Responsibility Prinzip verletzt wurde  
-- **Größe der Methoden** - umfangreiche Methoden weisen auf Strukturdefizite, redundanten Code und Verletzung des Separation of Concerns Prinzips hin.  
-- **Umfangreiche Parameterschnittstellen** - Objekte arbeiten mit Objekten und nicht mit Parametern. Dies geht meistens mit zu großen Methoden einher. Daher besitzen objektorientierte Methoden oftmals sehr schmale Schnittstellen, die Objekte als Übergabeparameter, bei funktionalen Methoden Return Parameter, enthalten.  
+{: .note }
+> Erkennungsmerkmale einer Klasse, die **nicht** objektorientierten Prinzipien folgt sind:
+> 
+> - Größe der Klasse - eine Klasse mit vielen (öffentlichen) Methoden zeigt vermutlich auf dass das Single Responsibility Prinzip verletzt wurde  
+> - Größe der Methoden - umfangreiche Methoden weisen auf Strukturdefizite, redundanten Code und Verletzung des Separation of Concerns Prinzips hin.  
+> - Umfangreiche Parameterschnittstellen - Objekte arbeiten mit Objekten und nicht mit Parametern. Dies geht meistens mit zu großen Methoden einher. Daher besitzen objektorientierte Methoden oftmals sehr schmale Schnittstellen, die Objekte als Übergabeparameter, bei funktionalen Methoden Return Parameter, enthalten.  
 
 Klassen, die die diese Erkennungsmerkmale besitzen, widersprechen den o.g. Anforderungen an modernen ABAP-Code.
 Weitere Indikatoren finden z.B. im [Clean-ABAP Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md).
@@ -181,8 +177,7 @@ Dies gewährleistet eine konsistente Behandlung und vermindert den Aufwand wenn 
 Durch den Einsatz von Interfaces wird die Definition von Methoden und deren Implementierung voneinander entkoppelt. Wird ein Interface verwendet, kann die Implementierung der Klasse geändert, bzw. flexibilisiert werden. Das Interface definiert sozusagen den Vertrag zwischen Verwender und implementierender Klasse und "versteckt" somit die Implementierung (Software-Hiding-Prinzip).  
 Für öffentliche Methoden die Funktionen für andere Klassen bereitstellen sollten Sie grundsätzlich Interfaces definieren und damit dafür sorgen, dass die Verwender nur mit diesen Interfaces arbeiten. Das Erzeugen von konkreten Objekten übernimmt eine separate Factory Klasse oder in besonders einfachen Fällen eine Factorymethode der Klasse, z.B.: ```ZCL_BUSINESS_LOGIC=>GET_INSTANCE( CompanyCode )``` [Siehe SAP-Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-multiple-static-creation-methods-to-optional-parameters)
 
-Interfaces werden auch für Unit-Tests benötigt, da z.B. Datenbankzugriffe in Unit-Tests durch programmierte Testdaten ersetzt werden müssen. Die Datenbankklasse implementiert ein Interface, das im Produktcode aufgerufen wird. Wird der Unit-Test ausgeführt, wird statt der Datenbankklasse, eine sog. Mockingklasse aufgerufen, die statisch hinterlegte Daten beinhaltet, Methoden zur lokalen Testdatenerzeugung bereitstellt und diese zurückliefert oder Das OSQL Framework nutzt um die Datenbankabfragen im Test zu simulieren.  
-Die Ausführungen dazu finden Sie im Kapitel [**Testing**](/ABAP-Leitfaden/testing/index).
+Interfaces werden auch für Unit-Tests benötigt, da z.B. Datenbankzugriffe in Unit-Tests durch programmierte Testdaten ersetzt werden müssen. Die Datenbankklasse implementiert ein Interface, das im Produktcode aufgerufen wird. Wird der Unit-Test ausgeführt, wird statt der Datenbankklasse, eine sog. Mockingklasse aufgerufen, die statisch hinterlegte Daten beinhaltet, Methoden zur lokalen Testdatenerzeugung bereitstellt und diese zurückliefert. Die Ausführungen dazu finden Sie im Kapitel [Testing](/ABAP-Leitfaden/testing/index).
 
 ### Vererbung
 

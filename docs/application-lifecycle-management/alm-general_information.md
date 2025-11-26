@@ -39,9 +39,8 @@ Zusammengefasst decken die oben genannten Produkte folgenden Funktionsumfang ab:
 - Integration manueller und automatisierter Tests
 - Qualitätssicherung vor Produktivsetzungen
 
-|**Weiterführende Informationen**|
-|[Testmanagement](/ABAP-Leitfaden/testing/index)|
-
+{: .note }
+> [Testmanagement](/ABAP-Leitfaden/testing/index)
 
 **IT-Service-Management (ITSM)**
 
@@ -73,9 +72,9 @@ Zusammengefasst decken die oben genannten Produkte folgenden Funktionsumfang ab:
 - Zentrale Ablage von technischen und funktionalen Dokumentationen
 - Wiederverwendbarkeit von Informationen und Know-how-Sicherung
 
-|**Webseiten & Ressourcen**|
-|- [SAP Support - Application Lifecycle Management (ALM)](https://support.sap.com/en/alm.html)|
-|- [E3-Special SAP Solution Manager](https://e3mag.com/wp-content/uploads/2018/03/1205-E-3_Extra.pdf)|
+{: .note }
+> - [SAP Support - Application Lifecycle Management (ALM)](https://support.sap.com/en/alm.html)
+> - [E3-Special SAP Solution Manager](https://e3mag.com/wp-content/uploads/2018/03/1205-E-3_Extra.pdf)
 
 ## Nutzen von ALM
 

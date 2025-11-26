@@ -12,8 +12,6 @@ nav_order: 3
 1. TOC
 {:toc}
 
-## Einleitung/Motivation
-
 Zu den aufbewahrungspflichtigen Dokumenten gemäß HGB, AO und GoBS gehören auch die Repository-Objekten in ABAP. Dies wurde lange Zeit durch die integrierte Versionsverwaltung innerhalb der ABAP-Workbench (SE80) erreicht. In den letzten Jahren hat sich aber ABAP weiterentwickelt, sei es durch den Einsatz einer externen Entwicklungsumgebung (ABAP Development Tools), den Einsatz von Git-Versionsverwaltung oder die Entwicklung weiterer Repository-Objekte, die nicht in der ABAP-Workbench entwickelt werden können. Daher stellt sich für jeden ABAP-Entwickler die zentrale Frage:
 
 * Welche Versionsverwaltung soll ich wann nehmen?
@@ -277,5 +275,5 @@ Die Wahl des richtigen Versionsverwaltung hängt von den spezifischen Anforderun
 
 Es können mit Hilfe der Versionsverwaltung moderne Entwicklungspraktiken wie CI/CD genutzt werden. Überlegen Sie sich wie ihre Pipeline aussehen soll
 
-## Weitere Quellen
-[Git und SAP / Rheinwerk Verlag](https://www.rheinwerk-verlag.de/git-und-sap/?srsltid=AfmBOooMbM45uQOGPLDAiaKz5hHazrf45BIEVjmOIe8mz9HjpdHjgzZq)
+{: .note }
+> [Git und SAP / Rheinwerk Verlag](https://www.rheinwerk-verlag.de/git-und-sap/?srsltid=AfmBOooMbM45uQOGPLDAiaKz5hHazrf45BIEVjmOIe8mz9HjpdHjgzZq)

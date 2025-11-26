@@ -6,9 +6,8 @@ parent: Softwaretest mit ABAP Unit
 nav_order: 4
 ---
 
-
 {: .no_toc}
-# Weitere Testwerkzeuge
+# Empfehlungen für Testwerkzeuge
 
 1. TOC
 {:toc}
@@ -16,8 +15,6 @@ nav_order: 4
 Ergänzend zu den Ausführungen zu ABAP Unit möchten wir Ihnen noch weitere Testwerkzeuge aufzeigen, die im Kontext von Testing in SAP eingesetzt werden können. Diese dienen zur Unterstützung des Testens der Applikationen im Geschäftsprozess Kontext. Diese Werkzeuge sind nicht ABAP-spezifisch, sondern generell im Rahmen der (SAP)-Softwareentwicklung zu sehen.  
 Dies bedeutet, dass von Seiten der ABAP-Entwicklung keine besonderen Vorkehrungen bezgl. der Tools vorgenommen werden müssen.  
 Allerdings ist ABAP Unit als Grundlage und Testunterstützung ist Voraussetzung, um grundlegende Fehler in der Entwicklungsphase zu vermeiden, zu entdecken und eine angemessene Softwarequalität sicherzustellen. Ist ABAP Unit umfangreich im Einsatz, können Sie sich beim Testen der Anwendungen mit den hier genannten Tools auf Fehler konzentrieren, die sich aus der Integration und das Zusammenspiel der Anwendungen ergeben. Die Tests werden nicht mehr durch Fehler in tieferen Softwareschichten unterbrochen und somit wird die Anzahl der Testzyklen und damit der Testaufwand signifikant reduziert.
-
-# Empfehlungen für Testwerkzeuge
 
 Die Auswahl in diesem Leitfaden beschränkt sich auf die von SAP präferierten und teilweise schon im Lizenzumfang enthaltenen Produkte. Daneben gibt es noch viele weitere Testmanagement-Lösungen auf dem Markt, die zur Unterstützung der ABAP-Entwicklung verwendet werden können.
 
@@ -30,7 +27,9 @@ Die [Test-Suite des SAP Solution Managers](https://help.sap.com/docs/SUPPORT_CON
 Im Testplan-Management werden Testpläne angelegt und verwaltet. Das Herzstück ist die Auswahl der Testfälle, die als solche in der Struktur der [Lösungsdokumentation](https://help.sap.com/docs/SAP_Solution_Manager/c3c5ec585ee248228ddb6c3f08073ea9/2cb3e75e134249a2bd091a40fe2f6d61.html?mt=de-DE) (engl. Solution Documentation, kurz "SolDoc") abgelegt sind. Diese können dann in kleinere Einheiten, die sogenannten Testpakete, aufgeteilt und den entsprechenden Testern bzw. Testergruppen zugewiesen werden. Auf diese Weise können passgenaue Testpläne, zum Beispiel für Funktionstests, Integrationstests, Regressionstests, Komponententests (engl. "Unit Tests") oder Akzeptanz- bzw. Abnahmetests (eng. "User Acceptance Tests") erstellt werden.
 
 ![Darstellung: Testmanagement im SAP Solution Manager](./img/darstellung_solman_testmanagement_neu.png)
-*Schematische Darstellung: Testplan mit Testpaketen und Testfällen aus der SolDoc (Quelle: eigene Darstellung)*
+
+Schematische Darstellung: Testplan mit Testpaketen und Testfällen aus der SolDoc (Quelle: eigene Darstellung)
+{: .img-caption}
 
 Manuelle Testfälle werden oft in **Testdokumenten** (mit Microsoft Word, Microsoft Excel etc.) beschrieben, in denen die durchzuführenden Testschritte detailliert aufgeführt sind. Außerdem besteht die Möglichkeit, **URLs** zu hinterlegen, die zu Testfällen führen, welche an einem anderen Ort liegen. Der dritte Testfalltyp im Standard des SAP Solution Managers sind sogenannte **Testkonfigurationen**, die automatisierte Testfälle ansteuern, die zum Beispiel mittels [CBTA (komponentenbasierte Testautomatisierung)](#Komponentenbasierte-Testautomatisierung), eCATT (extended Computer Aided Test Tool) oder mit [Tricentis Test Automation](#Tricentis-Test-Automation) erstellt wurden (siehe dazu das [Kapitel zu den Testfällen im SAP Help Portal](https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/df49e0555937e263e10000000a44538d.html?locale=de-DE)). 
 Als weitere Variante für manuelle Testfälle wurden von SAP [Testschritte (engl. "Test Steps")](#Testschritt-Designer) eingeführt, die allerdings nur nach Installation des Add-on "Focused Build" zur Verfügung stehen.
@@ -46,11 +45,12 @@ Mit Focused Build wird eine weitere Tester-App namens "Meine Testausführungen" 
 Die "klassische" App "Meine Aufgaben / Tester-Arbeitsvorrat" ist etwas mächtiger, dafür allerdings auch schwieriger zu handhaben. Sie kann ebenso für beide Testfalltypen genutzt werden, wobei beim Aufruf eines Testschritt-Designer-Testfalls in "Meine Testausführungen" abgesprungen wird, was anfangs eventuell verwirrend sein kann.
 
 ![Darstellung: Möglichkeiten der SAP Solution Manager Test Suite und der Ergänzung aus Focused Build](./img/solman_test_suite_focused_build.png)
-*Möglichkeiten der SAP Solution Manager Test Suite (unten) und der Ergänzung aus Focused Build (oben) [(Quelle: SAP)](https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf)*
 
-{: .highlight }
-> Tipp:
-Sofern Ihre Anwender ein SAP Fiori-Launchpad als Einstiegspunkt in die SAP-Welt nutzen, betten Sie die Kachel “Meine Testausführungen” als iFrame ein, auf der die Anzahl der offenen Testpakete dargestellt wird, die dem jeweiligen Nutzer zugeordnet sind.
+Möglichkeiten der SAP Solution Manager Test Suite (unten) und der Ergänzung aus Focused Build (oben) [(Quelle: SAP)](https://support.sap.com/content/dam/support/en_us/library/ssp/alm/sap-solution-manager/focused-solutions/Focused_Build/sp15/FB_TestManagement_L2.pdf)
+{: .img-caption}
+
+{: .note }
+> Sofern Ihre Anwender ein SAP Fiori-Launchpad als Einstiegspunkt in die SAP-Welt nutzen, betten Sie die Kachel “Meine Testausführungen” als iFrame ein, auf der die Anzahl der offenen Testpakete dargestellt wird, die dem jeweiligen Nutzer zugeordnet sind.
 
 ### Komponentenbasierte Testautomatisierung
 Die [komponentenbasierte Testautomatisierung](https://help.sap.com/docs/SAP_Solution_Manager/fbc7b5ecf5094fe0b6a2eb966160008f/00e90f0489994e76ad5999a63bbf4f30.html?locale=de-DE) (Component-Based Test Automation, kurz CBTA) ist das Bordwerkzeug des SAP Solution Managers zur Automatisierung von Testfällen und im Standardlieferumfang enthalten.
@@ -60,9 +60,8 @@ Die Erstellung erfolgt mittels eines Testrecorders, der ein Testskript mit den a
 
 Die Testskripte werden in sogenannte Testkonfigurationen gepackt und können darüber in der Lösungsdokumentation - neben manuellen Testfällen und URLs - abgelegt werden.
 
-{: .highlight }
-> Tipp:
-Mit dem Wartungsende des SAP Solution Managers rückt auch das Ende von CBTA näher. Daher ist es ratsam zu überlegen, ob eine zukunftsfähige Drittanbieter-Lösung wie Tricentis Test Automation (siehe unten) zur Testautomatiserung vielleicht jetzt schon die bessere Alternative ist.
+{: .note }
+> Mit dem Wartungsende des SAP Solution Managers rückt auch das Ende von CBTA näher. Daher ist es ratsam zu überlegen, ob eine zukunftsfähige Drittanbieter-Lösung wie Tricentis Test Automation (siehe unten) zur Testautomatiserung vielleicht jetzt schon die bessere Alternative ist.
 
 ## Testwerkzeuge in SAP Cloud ALM
 Als Nachfolgeprodukt des SAP Solution Managers, dessen Mainstream-Wartungsende seitens SAP auf Ende 2027 datiert ist, wurde [SAP Cloud ALM](https://support.sap.com/en/alm/sap-cloud-alm.html) für die Umsetzung des [Application Lifecycle Management](/ABAP-Leitfaden/application-lifecycle-management) entwickelt. Das Cloud-Produkt beinhaltet - wie schon der Solution Manager - unter anderem ein integriertes Testmanagement, das sowohl eigenständig (für manuelle Testfälle) als auch in Verbindung mit einer Testautomatisierungslösung wie [Tricentis Test Automation](#Tricentis-Test-Automation) eingesetzt werden kann. SAP Cloud ALM und damit auch dessen Testmanagement-Funktionen werden von SAP kontinuierlich weiterentwickelt.
@@ -79,7 +78,9 @@ Ein Testautomatisierungswerkzeug für S/4HANA Cloud Public Edition ist in SAP S/
 Für umfangreichere Szenarien können Testwerkzeuge von Drittanbietern über die von SAP bereitgestellten APIs der [SAP Cloud ALM Test Automation API](https://api.sap.com/api/CALM_TEST_AUTOMATION/overview) integriert werden. Dies ermöglicht Flexibilität bei der Verwaltung komplexer Testumgebungen.
 
 ![Darstellung: Testen mit SAP Cloud ALM](./img/sap_test_automation_api.jpg)
-*Testen mit SAP Cloud ALM (Quelle: SAP)*
+
+Testen mit SAP Cloud ALM (Quelle: SAP)
+{: .img-caption}
 
 ## Tricentis Test Automation
 Tricentis ist ein eigenständiges Unternehmen, das nicht zu SAP gehört, aber [durch eine strategische Partnerschaft sehr gut in die SAP-Welt integriert](https://support.sap.com/en/alm/partners/test-automation.html) und daher im SAP-Kontext die empfohlene Lösung zur Testautomatisierung ist.
@@ -95,15 +96,6 @@ Auch für SAP Cloud ALM gibt es eine integrierte Lösung zur Testautomatisierung
 SAP Cloud ALM bietet mit der "[SAP Cloud ALM Test Automation API](https://api.sap.com/api/CALM_TEST_AUTOMATION/overview)" eine Schnittstelle zu Drittanbieter-Werkzeugen. Über diese Schnittstelle kann neben Produkten anderer Anbieter auch das umfassende Tricentis-Testautomatisierungstool "SAP Test Automation by Tricentis" angeschlossen werden. Damit sind integrierte Tests mit SAP-Anwendungen und Drittanbieter-Anwendungen möglich. Auch dieses Produkt von Tricentis kann über den SAP-Vertrieb erworben werden.
 
 ![Darstellung: Integration der SAP ALM-Tools mit den Test Automatisierungs-Tools von Tricentis](./img/tricentis_test_automation_uebersicht.jpg)
-*Integration der SAP ALM-Tools mit den Test Automatisierungs-Tools von Tricentis (Quelle: SAP)*
 
-
-
-
-
-
-
-
-
-
-
+Integration der SAP ALM-Tools mit den Test Automatisierungs-Tools von Tricentis (Quelle: SAP)
+{: .img-caption}

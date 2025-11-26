@@ -28,13 +28,12 @@ Für alles Andere gibt es Möglichkeiten diese Programme mit ABAP Unit Tests abz
 Die klassische Systemkonfiguration im Entwicklungssystem mit einen Entwicklungs- und einem Testmandanten stellt eine Hürde für den reibungslosen Ablauf von Komponenten- oder Integrationstests dar, da diese meist von Daten der Datenbank abhängig sind, wenn gängige Unit Test Methodiken nicht angewendet werden.  
 Dies gilt analog für Szenarien bei denen auf dem Entwicklungssystem sich keine Daten in der Datenbank befinden. 
 
->**Empfehlung**  
+{: .recommendation } 
 > Erstellen Sie ihre ABAP Unit Tests unabhängig von der Datenbank, so dass sie mit Hilfe von Dependency-Injection und Mocks in jedem  Mandanten lauffähig sind und das gleiche Ergebnis liefern.  
 > Wird dieses Vorgehen nicht angewendet, die Tests im Mandant x entwickelt, in Mandant y ausgeführt, würden die Tests keine belastbare Aussage liefern und somit seltener oder gar nicht ausgeführt.
 > Analog verhält es sich mit Unit Tests, die abhängig von einer Datenkonstellation auf dem Testsystem sind.
 > Gemäß Unit Test Methodik sind daher direkte Datenbankabfragen mittels Mocking oder Injection-Framework zu vermeiden.
 > Welche Techniken Sie beim Erreichten dieser Unabhängigkeit unterstützen finden sie hier im Abschnitt [Erweiterte Techniken](#abap_unit_advanced)
-{: .highlight}
 
 ## Testumgebung
 
@@ -260,11 +259,13 @@ In diesem Beispiel wird die Demoklasse aus dem vorherigen Kapitel, die eine Adre
 
 Also zum Beispiel:
 
-`verify_address( strasse = 'Beispielstraße'  house_number = '23' )`.
+```
+verify_address( strasse = 'Beispielstraße'  house_number = '23' ).
+```
 
 Die Testklasse könnte dann wie folgt aussehen:
 
-```ABAP
+```
 CLASS ltcl_verify_addresses_helper DEFINITION FINAL FOR TESTING
   DURATION SHORT
   RISK LEVEL HARMLESS.
@@ -363,10 +364,10 @@ Es gibt mehrere Möglichkeiten Unit Test regelmäßig laufen zu lassen.
 - ATC Läufte 
 - Rest Service ( Communication scenario SAP_COM_0735 )
 
->**Empfehlung**  
-Planen Sie die Unit Test eines Systems regelmäßig ein und erstellen Sie Benachrichtigungen hierfür. 
-Für jeden Enwickler sollte es zur Morgenroutine gehören zu prüfen ob alle Test fehlerfrei sind, damit dies gegebenenfalls Daily besprochen werden kann. 
-{: .highlight}
+{: .recommendation }
+> Planen Sie die Unit Test eines Systems regelmäßig ein und erstellen Sie Benachrichtigungen hierfür. 
+> Für jeden Enwickler sollte es zur Morgenroutine gehören zu prüfen ob alle Test fehlerfrei sind, damit dies gegebenenfalls Daily besprochen werden kann. 
+
 
 ## Do's & Dont's 
 * Im Zweifel einen Unit Test mehr anlegen

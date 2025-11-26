@@ -66,7 +66,8 @@ Abmeldung Web-GUI
 
 Bei der Abmeldeseite des WEBGUI Services den Service /sap/public/bc/icf/logoff als Redirect angeben.
 
-Details sind im SAP Hinweis 1777513 beschrieben (ebenso weitere Hintergrundinformationen)
+{: .note }
+> Details sind im SAP Hinweis 1777513 beschrieben (ebenso weitere Hintergrundinformationen)
 
 ### Domain Relaxing deaktivieren (falls notwendig)
 
@@ -79,9 +80,8 @@ Falls es zu einem solchen Browser-Verhalten kommen sollte, muss das Domain Relax
 Domain Relaxing
 {: .img-caption}
 
-Details sind im SAP Hinweis 2111099 beschrieben (ebenso weitere Hintergrundinformationen)
-
-\=> Einfügen Abschnitt
+{: .note }
+> Details sind im SAP Hinweis 2111099 beschrieben (ebenso weitere Hintergrundinformationen)
 
 ## SAP Berechtigungen
 

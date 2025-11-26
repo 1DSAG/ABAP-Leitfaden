@@ -31,10 +31,9 @@ Je früher ein Mangel in der Softwareentwicklung gefunden wird, desto günstiger
 - Bevorzugen sie die ABAP Development Tools für Eclipse (ADT) als Entwicklungsumgebung für ABAP: Hierdurch können sie auf integrierte Refactoring-Möglichkeiten, erweitertes Syntax-Highlighting und erweiterte Code-Vervollständigung, Autokorrektur ausgewählter ATC-Fundstellen durch Quick-Fixes, Inline Anzeige von ATC-Fundstellen an der auftretenden Code-Zeile nach ausgeführter ATC Prüfung und eine frei konfigurierbare Benutzeroberfläche zugreifen.
 - Nutzen sie das Eclipse-Ökosystem um die Effizienz Ihrer Entwickler zu steigern: Durch die Bereitstellung des [ADT-SDKs](https://www.sap.com/documents/2013/04/12289ce1-527c-0010-82c7-eda71af511fa.html) existiert die Möglichkeit, die ABAP Development Tools über standardisierte Schnittstellen zu erweitern. Hierdurch sind in den vergangenen Jahren diverse Projekte entstanden, die unter anderem Erweiterungen der IDE anbieten und das Entwicklerleben in vielerlei Hinsicht vereinfachen. Als Beispiel für so eine Erweiterung möchten wir den [ABAP Cleaner](https://github.com/SAP/abap-cleaner)erwähnen, der Code Refactorings unterstützt, die sich primär auf den Einsatz von moderner ABAP Syntax und die Einhaltung eines einheitlichen Styleguides konzentriert.
 - Achten sie bei dem Einsatz von Eclipse Plug-Ins auf sicherheitsrelevante Rahmenbedingungen: Dieser Leitfaden soll keine Einladung sein, sämtliche Open Source oder frei verfügbaren Eclipse Plug-Ins ohne weiteres in Ihrem produktiven Entwicklungsumfeld zu verwenden. Bitte beachten Sie vor Installation der Plug-Ins auf die in ihrem Unternehmen geltenden Vorgänge für Sicherheitsprüfungen und Freigabeprozesse für die Nutzung neuer Software.
-{: .highlight}
 
-| **Webseiten & Ressourcen** |
-|- [ABAP Open Source Projects](https://dotabap.org/)|
+{: .note }
+> - [ABAP Open Source Projects](https://dotabap.org/)
 
 ## Code Review
 
@@ -46,36 +45,30 @@ Der folgende Abschnitt liefert einige allgemeine Best Practices zu Code Reviews.
 
 ### Best Practices
 
->**1. Allgemeine Prinzipien**
-
+#### Allgemeine Prinzipien
 - Kleine Änderungen, häufige Reviews: Große Code-Änderungen sind schwerer zu überblicken. Stattdessen sollten Reviews auf überschaubaren Einheiten durchgeführt werden.
 - Statische Analyse als Eingangskriterium: Investiere erst dann manuellen Aufwand für Code Reviews, wenn automatisierte Verfahren wie Unit Tests und statische Codeanalyse keine Probleme mehr im Code finden.
 - Klare Erwartungen: Definiere im Team, was in einem Code Review überprüft werden soll. Hierfür empfiehlt sich die Erstellung einer gemeinsamen Review-Guideline. Beispiele sind weiter unten verlinkt.
 - Feedback-Kultur: Code-Review sollte nicht als zusätzlicher Freigabeprozess verstanden werden, sondern als Mittel zum Erfahrungsaustausch mit dem gemeinsamen Ziel, die Qualität zu verbessern. Dies bedeutet, dass sowohl Code-Autor als auch Reviewer offen für konstruktive Kritik sein sollten.
 - Kurze Review-Zyklen: Lange Wartezeiten können den Entwicklungsprozess verlangsamen. Es sollte darauf geachtet werden, dass Änderungen zügig reviewt und ggf. nachgearbeitet werden. Hierfür empfiehlt es sich, interne Ziele zu vereinbaren und zu überwachen, etwa dass keine Änderung länger als 2 Tage auf Code-Review warten muss.
-{: .highlight}
 
->**2. Für den Autor**
-
+#### Für den Autor
 - Codekommentare: Erkläre die Gründe für bestimmte Entscheidungen und den Kontext des Codes. Falls ein Reviewer den Code nicht versteht, tut man es selbst nach einigen Monaten vermutlich auch nicht mehr.
 - Vor dem Review selbst überprüfen: Überprüfe den Code selbst gründlich, bevor du ihn zum Review stellst.
 - Sei bereit, Änderungen anzunehmen: Sei offen für Feedback und bereit, deinen Code anzupassen.
-{: .highlight}
 
->**3. Für den Reviewer**
 
+#### Für den Reviewer
 - Konzentriere dich auf die Intention: Verstehe, was der Autor mit dem Code erreichen wollte.
 - Sei respektvoll: Feedback sollte sich immer auf den Code beziehen, nicht die Person. Auch Verständnisfragen sind wertvolles Feedback.
 - Sei konstruktiv: Gib konkrete Vorschläge zur Verbesserung.
 - Fokus: Konzentriere dich auf Themen wie Verständlichkeit, Architektur, Algorithmen oder Testbarkeit des Codes.
 - Augenmaß: Eine Flut von Kommentaren kann den Autor überfordern. Falls ohnehin eine Überarbeitung nötig ist, konzentriere dich zunächst auf die wichtigsten Vorschläge.
-{: .highlight}
 
-### Weitere Ressourcen
-
-- [ABAP Code Reviews - A practical guide](https://github.com/SAP/styleguides/blob/main/abap-code-review/ABAPCodeReview.md)
-- CQSE Blog "Lessons from Code Review" ([Teil 1](https://teamscale.com/blog/en/news/blog/lessons-from-code-reviews-pt1), [Teil 2](https://teamscale.com/blog/en/news/blog/lessons-from-code-reviews-pt2))
-- [Google Engineering Practices Documentation](https://google.github.io/eng-practices/)
+{: .note }
+> - [ABAP Code Reviews - A practical guide](https://github.com/SAP/styleguides/blob/main/abap-code-review/ABAPCodeReview.md)
+> - CQSE Blog "Lessons from Code Review" ([Teil 1](https://teamscale.com/blog/en/news/blog/lessons-from-code-reviews-pt1), [Teil 2](https://teamscale.com/blog/en/news/blog/lessons-from-code-reviews-pt2))
+> - [Google Engineering Practices Documentation](https://google.github.io/eng-practices/)
 
 ### abapGit
 
@@ -106,7 +99,7 @@ Vor der Freigabe eines neuen Features in den Release-Prozess empfiehlt sich eine
 
 Alle anderen Fundstellen, wie z.B. die Verletzung von Wartbarkeits-, Robustheits- und Effizienz-Kriterien, sollten im Vorfeld durch die kontinuierliche Qualitätsprüfung des Entwickler und den Code Review Prozess angemessen behandelt werden. Vernachlässigen sie die vorgelagerten Prüfungen, endet das entweder in unglücklichen Business Usern, die sie wegen schwerwiegender und zu spät erkannter Qualitätsmängeln auf ein neues Releasedatum vertrösten müssen, oder in einem auf Dauer immer komplexeren, schwer verständlichen und wartungsintensiven System. Beide Szenarien sollten sie unbedingt vermeiden und Qualitätsprüfungen frühzeitig und kontinuierlich durchführen.
 
->**Quality-Gate Unterstützungs-Prozesse**
+**Quality-Gate Unterstützungs-Prozesse**
 
 - Definieren sie ein Verfahren zur systematischen Kennzeichnung von Falsch-Positiv-Meldungen und Ausnahmegenehmigungen während der Qualitätskontrolle. Statische Code Analysetools bieten hierfür in der Regel Mechanismen an, mit der sie die identifizierten Findings entsprechend unterdrücken können. Vermeiden sie Engpässe und nutzen sie das Verfahren bereits vor der finalen Qualitätskontrolle.
 - Nutzen sie bei der Einführung von Qualitätskontrollprozessen das sogenannten Baseline-Verfahren zur Unterdrückung von Qualitätsmeldungen, die vor der Einführung des Qualitätskontrollprozesses entstanden sind. Nützlich ist das vor allem in Bestandssystemen mit einer großen Code-Basis an Alt-Entwicklungen,  bei denen Sie Meldungen aus dem Bestands-Code von neu hinzugefügte Qualitätsmängel unterscheiden wollen. Achten sie darauf, sicherheitskritische Prüfungen nicht in die Baseline mit aufzunehmen. Diese müssen gesondert betrachtet, analysiert und ggf. über eine Falsch-Positiv Meldung ausgeschlossen, oder eine separate Korrektur-Initiative behoben werden.
@@ -114,14 +107,12 @@ Alle anderen Fundstellen, wie z.B. die Verletzung von Wartbarkeits-, Robustheits
 - Führen Sie eine Sicherheitsprüfung aller Quellcode-Artefakte durch, bevor diese in Ihr System eingebunden werden. Lassen Sie sich von SAP Add-On Anbietern Löschtransporte zur Verfügung stellen, bevor Sie deren Produkte in Ihrem System einspielen. Importieren und scannen Sie die Transporte von Drittanbietern erstmalig nur in einem Sandbox System,  falls dieser Ihnen keinen Löschtransport bereitstellt.<br>
 Setzen sie sich mit Ihrer Einkaufsabteilung oder dem in Ihrem Unternehmen zuständigen Bereich für Vertragsmanagement in Verbindung, falls sich der Anbieter wenig kooperativ zeigt und Ihnen keine Korrekturen der Findings oder ausführliche False-Positive-Beschreibungen zur Verfügung stellt.<br>
 Gehen Sie keine rechtlichen Risiken ein und unterlassen Sie die Veröffentlichung der identifizierten Schwachstellen. Das Ausnutzen oder Veröffentlichen von Exploits kann nach deutschem Recht (s. [$202c Strafgesetzbuch](https://www.gesetze-im-internet.de/stgb/__202c.html)) unter Umständen als Vorbereitungshandlung für eine Straftat gelten. Im Härtefall ist das Gespräch mit einem IT-Rechtsanwalt, oder die Kontaktaufnahme mit einer anerkannten Stelle wie dem [Bundesamt for Sicherheit in der Informationstechnik - BSI](https://www.bsi.bund.de/DE/Service-Navi/Kontakt/Kontaktformular/kontaktformular_node.html) oder einer Bug-Bounty-Platform sinnvoll.
-{: .highlight}
 
->**Manipulation von Quality Gates**
+**Manipulation von Quality Gates**
 
 - Achten sie auf die Implementierung eines manipulationsfreien Prüf- und Freigabeprozesses: Die Freiheiten die ein Entwickler im Entwicklungssystem zur Verfügung hat, können in zeitkritischen Situationen (Entwicklung und Qualitätssicherung in mehreren Zeitzonen verteilt / Dezentrales Release Management / etc.) ein nicht zu unterschätzende Herausforderung darstellen. Gerade in Unternehmen die keine vorgelagerte kontinuierliche Selbstkontrolle durch den Entwickler, fehlende Pair Programming oder Code Review Prozesse, zu große und über lange Zeiträume gestreckte Releases haben, kann dies dazu führen, dass Entwickler mit einem festen Lieferdatum im Nacken, zu Kurzschluss-Reaktionen neigen und über die vorhandenen Debug and Replace Berechtigungen die Quality Gates und damit verbundenen Qualitätsprüfungen aushebeln. Die Manipulation des Prüf- und Freigabeprozesses ist nur durch kontinuierliches Monitoring von Debug- und Replace Aktivitäten im System-Log (SM21) zu erkennen und kann nur teilweise durch Berechtigungseinschränkungen für die Freigabe von Transport Requests und Transport Tasks abgewehrt werden. Findige Entwickler finden fast immer einen Weg, vorhandene Quality Gates zu umgehen.
 - Beheben Sie die Ursache des Problems, nicht nur das Symptom: Bei der Entdeckung von Quality Gate Manipulation ist es ratsam zuerst das Gespräch mit dem Entwickler zu suchen und die Ursache zu identifizieren, die zu der Notwendigkeit einer Manipulation geführt hat. Oft ist die "Not" unter der der Entwickler handelt, Unkenntnis über den, oder ein Mangel an fehlender Flexibilität im Entwicklungsprozess. Hilfreich ist die Investition in leichtgewichtiges und gut nachvollziehbares On-Boarding Material für den Entwickler und für prozessbeteiligte Personen. Zusätzlich kann eine Aufmerksamkeitsinitiative innerhalb der Produktteams über die Notwendigkeit früher und kontinuierlicher Qualitätssicherungsmaßnahmen sinnvoll sein.
 - Greifen Sie bei Wiederholungsfällen und Nichteinhaltung der Prozesse konsequent durch: Hierfür müssen sie den Prozess im Vorfeld mit der Management- und Entscheider-Ebene abgestimmt haben und sich die Handlungslegitimation einholen. Natürlich hat die psychologische Sicherheit der Entwickler eine hohe Priorität, weswegen grundsätzlich bei Erst-, oder Zweitverstößen das Gespräch mit dem Entwickler im vertraulichen Rahmen gesucht werden muss. Spätestens beim dritten Auftreten kann von einer arglistigen Täuschung oder beabsichtigter Schädigung des Unternehmens ausgegangen werden. Gerade bei durchgeschleusten Sicherheitsschwachstellen kann von einem Cybersecurity Vorfall ausgegangen werden, der rechtliche Konsequenzen nach sich ziehen sollte. Solche beabsichtigten Sicherheitsvorfälle sollten, sofern keine alibifreie Begründung vorliegt, bereits beim ersten Auftreten konsequent geahndet werden.  
-{: .highlight}
 
 ## Ganzheitliche Betrachtung und Kontinuierliche Qualitätskontrolle
 
@@ -147,6 +138,6 @@ ABAP2CodeCharta ist ein Open-Source-Tool, das ABAP-Quellcode in ein CodeCharta-F
 
 Teamscale ist ein kommerzielles Custom Code Analytics Tool für die kontinuierliche Analyse und Bewertung von Softwarequalität. Es unterstützt viele Programmiersprachen (inkl. ABAP) und kombiniert statische Codeanalyse mit Nutzungsauswertungen, Änderungsverhalten und Architekturmetriken. Teamscale erkennt z. B. technische Schuld, ungenutzten oder redundanten Code, Hotspots und Verstöße gegen Qualitätsrichtlinien. Es bietet Dashboards, Trends und Integrationen in DevOps-Prozesse und ist insbesondere in komplexen Unternehmenslandschaften ein Werkzeug zur nachhaltigen Qualitätssteuerung.
 
-|**Weiterführende Internetquellen und Literaturempfehlung**|
-|- [Intelligent Custom Code Management](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/intelligent-custom-code-management/ba-p/13472631)|
-|- [Managing Custom Code - SAP Cloud ALM or SAP Solution Manager?](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/managing-custom-code-sap-cloud-alm-or-sap-solution-manager/ba-p/13524454)
+{: .note }
+> - [Intelligent Custom Code Management](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/intelligent-custom-code-management/ba-p/13472631)
+> - [Managing Custom Code - SAP Cloud ALM or SAP Solution Manager?](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/managing-custom-code-sap-cloud-alm-or-sap-solution-manager/ba-p/13524454)
