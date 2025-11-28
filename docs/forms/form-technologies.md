@@ -12,19 +12,18 @@ nav_order: 1
 1. TOC
 {:toc}
 
-
-Im Laufe der Jahre hat SAP verschiedene Formulartechnologien herausgebracht. Inzwischen gibt es drei verschiedene Technologien, welche in S/4HANA verfügbar sind. Dadurch herrscht bei vielen Unternehmen z.T. eine große Mischung was die Verwendung der verschiedenen Formulartechnologien angeht. Dementsprechend müssen die zuständigen Entwickler das entsprechende Knowhow für die verwendeten Formulartechnologien vorhalten.
+Im Laufe der Jahre hat SAP verschiedene Formulartechnologien herausgebracht. Inzwischen gibt es drei verschiedene Technologien, welche in S/4HANA verfügbar sind. Dadurch herrscht bei vielen Unternehmen z.T. eine große Mischung, was die Verwendung der verschiedenen Formulartechnologien angeht. Dementsprechend müssen die zuständigen Entwickler das entsprechende Knowhow für die verwendeten Formulartechnologien vorhalten.
 
 {: .note }
 > Allgemein ist noch auf das Ende der Unterstützungsdauer für die Formulartechnologien SAPscript und SmartForms hinzuweisen, welche im Jahr 2040 liegt (siehe auch die Hinweise 2791338 und 2900377).
 
 ## SAPscript (1992 R/3)  
 
-Auch im Jahr 2025 haben sehr viele Unternehmen weiterhin SAPscript Formulare im Einsatz. Häufig sind dies seit Jahren oder z.T. Jahrzehnten bestehende Formulare. Deshalb müssen ABAP Entwickler sich auch weiterhin mit dieser Technologie auskennen um ggf. Anpassungen an den Formularen vornehmen zu können.
+Auch im Jahr 2025 haben sehr viele Unternehmen weiterhin SAPscript Formulare im Einsatz. Häufig sind dies seit Jahren oder z.T. Jahrzehnten bestehende Formulare. Deshalb müssen ABAP Entwickler sich auch weiterhin mit dieser Technologie auskennen, um ggf. Anpassungen an den Formularen vornehmen zu können.
 
 Die Übertragung der Daten vom Druckprogramm an das Formular erfolgt per globaler Variablen. Die Variablen müssen exakt gleich im Druckprogramm und im Formular benannt werden, um eine automatische Datenübertragung zu gewährleisten.
 
-Wird ein Formular in anderen Sprachen benötigt, so muss das Formular mit dem selben Namen, aber in der entsprechend anderen Sprache, in der Transaktion SE71 angelegt/gespeichert werden, um die Übersetzung durchführen zu können.
+Wird ein Formular in anderen Sprachen benötigt, so muss das Formular mit demselben Namen, aber in der entsprechend anderen Sprache, in der Transaktion SE71 angelegt/gespeichert werden, um die Übersetzung durchführen zu können.
 
 Während der Laufzeit können SAPscript Formulare gedebugged werden. Dafür muss der Debugger in Transaktion SE71 im Menü unter „Hilfsmittel“ als erstes eingeschalten werden. Anschließend wird das Druckprogramm / die Transaktion zum Prozessieren des Formulars ausgeführt.  
 Das Debuggen ist relativ unkomfortabel und eigentlich nicht mehr zeitgemäß. Es wird jedes Textelement angesprungen, was z.T. zeitaufwändig ist. Werte von Variablen kann man sich anzeigen lassen in dem der Variablenname ohne „&“ im Debugger eingegeben und mit ENTER bestätigt wird.  
@@ -50,7 +49,7 @@ Bei dieser Technologie wurde die Mehrsprachigkeit von SAP besser umgesetzt als i
 
 Der Name des Schnittstellenbausteins wird vom System generiert und unterscheidet sich von SAP System zu SAP System (Entwicklung, Qualitätssicherung, Produktion). Daher ist es nötig den Funktionsbaustein „SSF_FUNCTION_MODULE_NAME“ im Druckprogramm aufzurufen um den tatsächlichen Namen (Importing-Parameter FM_NAME) des generierten Funktionsbausteins zur Laufzeit im jeweiligen SAP System zu ermitteln.  
 
-Möchte man ein SmartForms Formular debuggen setzt man am Besten einen Breakpoint im generierten Schnittstellenfunktionsbaustein. Den Namen des Funktionsbausteins kann man sich über die Transaktion SMARTFORMS im Menü „Umfeld“ anzeigen lassen. Diesen Funktionsbaustein dann z.B. mittels Transaktion SE37 oder SE80 anzeigen und an entsprechender Stelle einen Breakpoint setzen.
+Möchte man ein SmartForms Formular debuggen setzt man am besten einen Breakpoint im generierten Schnittstellenfunktionsbaustein. Den Namen des Funktionsbausteins kann man sich über die Transaktion SMARTFORMS im Menü „Umfeld“ anzeigen lassen. Diesen Funktionsbaustein dann z.B. mittels Transaktion SE37 oder SE80 anzeigen und an entsprechender Stelle einen Breakpoint setzen.
 
 Der SAP Standard liefert diverse Testprogramme und Testformulare aus. Diese beginnen mit „SF_\*“.
 
@@ -83,7 +82,7 @@ Folgende Funktionalitäten werden bei der Formulargestaltung mit SAP Interactive
 Adobe Formulare bestehen bzgl. Layout aus verschiedenen Objekten:
 
 - Masterseite:  
-    ein oder mehrere Masterseiten sind pro Formular möglich und sind die oberste Ebene eines Formulars um das Formular zu strukturieren. Hier werden Informationen welche sich auf jeder Ausgabeseite wiederholen sollen platziert, ebenso wie die Größe und der Platz des Inhaltsbereichs definiert.  
+    ein oder mehrere Masterseiten sind pro Formular möglich und sind die oberste Ebene eines Formulars, um das Formular zu strukturieren. Hier werden Informationen, welche sich auf jeder Ausgabeseite wiederholen sollen platziert, ebenso wie die Größe und der Platz des Inhaltsbereichs definiert.  
 
 - Inhaltsbereich:  
     Bereich zur Ausgabe der dynamischen oder statischen Inhalte.  
@@ -95,7 +94,7 @@ Um diese Objekte zu pflegen und zu bearbeiten, muss im Layoutbereich der Transak
 Der Tabreiter „PDF-Vorschau“ ermöglicht eine Vorschau auf das Formularlayout.
 
 {: .note } 
-> Wird bei Bearbeiten > Formulareigenschaften > Vorschau eine XFD.xml Datei mit Beispieldaten (welche z.B. aus einem Test- oder Produktivsystem generiert und heruntergeladen wurde) hinterlegt, so werden diese Formularinhalte dann auch in einem Entwicklungssystem unter “PDF-Vorschau” angezeigt. Dies ist äußerst hilfreich um z.B. inhaltsabhängige Formatierungen zu testen o.ä.
+> Wird bei Bearbeiten > Formulareigenschaften > Vorschau eine XFD.xml Datei mit Beispieldaten (welche z.B. aus einem Test- oder Produktivsystem generiert und heruntergeladen wurde) hinterlegt, so werden diese Formularinhalte dann auch in einem Entwicklungssystem unter “PDF-Vorschau” angezeigt. Dies ist äußerst hilfreich, um z.B. inhaltsabhängige Formatierungen zu testen o.ä.
 
 <br/>
 
@@ -130,7 +129,7 @@ Die Schnittstelle besteht aus drei konkreten Bereichen:
     mit den Unterbereichen: Import, Export, Ausnahmen  
 
 - Globale Definitionen  
-    Zur Definition von Variablen um zusätzlich zu Daten der Formularschnittstelle auch andere Daten speichern zu können.  
+    Zur Definition von Variablen, um zusätzlich zu Daten der Formularschnittstelle auch andere Daten speichern zu können.  
 
 - Initialisierung  
     Möglichkeit zusätzliche Daten im Formular nachzulesen. Das Coding sollte kurz und knapp gehalten werden. Der Editor hat an dieser Stelle einige Einschränkungen wie z.B. keine Vorwärtsnavigation und kein Pretty-Printer.  
@@ -142,7 +141,7 @@ Die Schnittstelle besteht aus drei konkreten Bereichen:
 > Um die Übersichtlichkeit nicht zu verlieren und die Logik des Formulardrucks nicht zu komplex zu machen, sollte vor jeder Implementierung überlegt werden, ob das nötige Coding im aufrufenden Druckprogramm hinterlegt wird oder in der Formularschnittstelle. Die Entscheidung hängt natürlich auch davon ab, ob ein SAP Standarddruckprogramm 
 > verwendet wird, oder ein kundeneigenes Druckprogramm.
 
-Wie bei SmartForms wird auch bei Adobe Forms Formularen ein vom SAP System generierter Funktionsbaustein benötigt, um das Formular auszugeben. Da dieser Funktionsbausteinname ebenfalls wie bei SmartForms von System zu System unterschiedlich ist, muss der Funktionsbaustein FP_FUNCTION_MODULE_NAME verwendet werden, um zur Laufzeit den richtigen Namen des Funktionsbausteins zu ermitteln.  
+Wie bei SmartForms wird auch bei Adobe Forms Formularen ein vom SAP System generierter Funktionsbaustein benötigt, um das Formular auszugeben. Da dieser Funktionsbausteinname ebenfalls, wie bei SmartForms von System zu System unterschiedlich ist, muss der Funktionsbaustein FP_FUNCTION_MODULE_NAME verwendet werden, um zur Laufzeit den richtigen Namen des Funktionsbausteins zu ermitteln.  
 Grundsätzlich hat der generierte Funktionsbaustein die gleichen Import- und Exportparameter wie die Formularschnittstelle (SFP), außerdem sind die Kontextobjekte ebenfalls enthalten.
 
 In das Debugging eines Adobe Formulars kann ebenfalls mittels Breakpoint im generierten Funktionsbaustein eingestiegen werden.  
@@ -164,7 +163,7 @@ Der SAP Standard liefert diverse Testprogramme und Testformulare aus. Diese begi
 
 Grundlage sind Adobe Formulare mit Gateway-Schnittstellen, deren Datenbeschaffung mittels Gateway-Services (also keine klassischen Druckprogramme) erfolgt. Die Pflege erfolgt mit Fiori Apps und somit sind “SAP S/4HANA Forms” public-cloud-fähig.
 
-Das Layout wird ebenfalls mit dem LiveCycle Designer, jedoch als standalone, designed. Hierbei ist zu beachten, das die bearbeiteten Objekte manuell in Transportaufträge aufgenommen werden müssen (mittels Fiori-App ID F1589) und es keine automatische Objektsperre gibt.  
+Das Layout wird ebenfalls mit dem LiveCycle Designer, jedoch als standalone, designed. Hierbei ist zu beachten, dass die bearbeiteten Objekte manuell in Transportaufträge aufgenommen werden müssen (mittels Fiori-App ID F1589) und es keine automatische Objektsperre gibt.  
 
 Ebenso wie die “SAP Interactive Forms by Adobe” benötigen die SAP S/4HANA Forms einen Adobe Document Service (ADS -> SAP Forms Service by Adobe).
 
@@ -243,7 +242,7 @@ Dies ist zukunftssicher, da SAPscript und SmartForms von SAP selbst nicht mehr w
 
 Unternehmen, welche bereits viele Smart Forms Formulare im Einsatz haben, wird empfohlen diese weiterzuverwenden, jedoch neue Entwicklungen mit SAP Interactive Forms by Adobe umzusetzen.
 
-Die Entscheidung welche Techologie verwendet wird, um Neuentwicklungen im Bereich Formulare umzusetzen, sollte nicht davon abhängig gemacht werden welche die vorherschende Techologie bei den Bestandsformularen ist. Allen voran ist es wichtig die Wartbarkeit und Zukunftssicherheit im Blick zu haben und wie sich Ihr Unternehmen zukünftig bzgl. Systemlandschaft und Technologie strategisch weiter ausrichten möchte.
+Die Entscheidung welche Technologie verwendet wird, um Neuentwicklungen im Bereich Formulare umzusetzen, sollte nicht davon abhängig gemacht werden welche die vorherrschende Techologie bei den Bestandsformularen ist. Allen voran ist es wichtig die Wartbarkeit und Zukunftssicherheit im Blick zu haben und wie sich Ihr Unternehmen zukünftig bzgl. Systemlandschaft und Technologie strategisch weiter ausrichten möchte.
 
 Schaut man sich die bestehenden Systemlandschaften an, so ergibt sich folgende Empfehlung.
 
