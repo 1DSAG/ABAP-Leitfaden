@@ -271,4 +271,4 @@ Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und mo
 
 ## Danksagungen
 
-Als Sprecherteam des Arbeitskreis Development (Sebastian und Björn), möchten wir uns bei allen Autoren und Reviewers bedanken, dass sie uns auf dem Weg der 1,5 Jahre begleitet haben. Auch für den wertvollen Austausch und die zahlreichen Gespräche rund um den Leitfaden und die ABAP Entwicklung der Zukunft. Ein großer Dank geht auch an die Kollegen der DSAG, die bei der Revision und Veröffentlichung des Dokuments mitgewirkt haben.
+Als Sprecherteam des Arbeitskreis Development (Sebastian und Björn), möchten wir uns bei allen Autoren und Reviewern bedanken, dass sie uns auf dem Weg der 1,5 Jahre begleitet haben. Auch für den wertvollen Austausch und die zahlreichen Gespräche rund um den Leitfaden und die ABAP Entwicklung der Zukunft. Ein großer Dank geht auch an die Kollegen der DSAG, die bei der Revision und Veröffentlichung des Dokuments mitgewirkt haben.

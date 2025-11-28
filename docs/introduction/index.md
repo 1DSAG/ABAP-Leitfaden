@@ -32,11 +32,11 @@ Die früheren Versionen des ABAP Leitfadens sind 2012 und 2016 erschienen. Die A
 
 um hier die wichtigsten Neuerungen zu nennen.  
 Somit wurde in der SAP Community der Ruf laut einen aktualisierten Leitfaden zur Verfügung zu stellen, der die Neuerungen in der SAP Entwicklung berücksichtigt.  
-Im Jahr 2024 hat sich auf den Aufruf der DSAG wieder ein Team von Experten im SAP-Umfeld zusammengefunden um eine neue Version des ABAP-Leitfadens zu erstellen, der sowohl Verantwortlichen in Unternehmen, als auch Entwicklern und Beratern Orientierung, Hinweise und Tipps aus der Praxis gibt und dabei unterstützt, bewährte und neue Technologien für die Anwendungsentwicklung erfolgreich und zielgerichtet einzusetzen.
+Im Jahr 2024 hat sich auf den Aufruf der DSAG wieder ein Team von Experten im SAP-Umfeld zusammengefunden, um eine neue Version des ABAP-Leitfadens zu erstellen, der sowohl Verantwortlichen in Unternehmen als auch Entwicklern und Beratern Orientierung, Hinweise und Tipps aus der Praxis gibt und dabei unterstützt, bewährte und neue Technologien für die Anwendungsentwicklung erfolgreich und zielgerichtet einzusetzen.
 
 ## Aufbau und Inhalte des Leitfadens
   
-Die Erfolgsfaktoren der Transformation zu moderner ABAP-Entwicklung finden sich nicht zuallererst in den technischen Themen, sondern werden durch die Rahmenbedingungen geschaffen die ein Entwicklungsteam vorfindet. Zu Beginn des Leitfadens erhalten Sie Erläuterungen und Empfehlungen bezüglich der **Entwicklungsorganisation** die Ihnen Orientierung geben wie Rahmenbedingungen für moderne Anwendungsentwicklung in SAP geschaffen werden können.  
+Die Erfolgsfaktoren der Transformation zu moderner ABAP-Entwicklung finden sich nicht zuallererst in den technischen Themen, sondern werden durch die Rahmenbedingungen geschaffen, die ein Entwicklungsteam vorfindet. Zu Beginn des Leitfadens erhalten Sie Erläuterungen und Empfehlungen bezüglich der **Entwicklungsorganisation**, die Ihnen Orientierung geben, wie Rahmenbedingungen für moderne Anwendungsentwicklung in SAP geschaffen werden können.  
 Anschließend erhalten Sie einen Überblick über die Konzepte von **"Clean Core"** und Empfehlungen zur Vorgehensweise. Das Verständnis des Clean Core Konzept ist wichtig damit Sie Ihre Strategien definieren können und auch das Verständnis gegeben ist, wie die neuen Entwicklungsmethodiken den Clean-Core Ansatz in die Umsetzung bringen. Damit haben Sie bereits einen guten Überblick über die Rahmenbedingungen.  
 
 Die Themen 
@@ -51,7 +51,7 @@ geben Ihnen Erläuterungen, Empfehlungen und Details zu den technikorientierten 
 Am Anfang der Kapitel finden Sie jeweils einleitende Informationen und einen Überblick über das Thema. Dieser Teil ist vor allem für Manager und Entscheider im Unternehmen gedacht, die sich einen Überblick über den Bereich verschaffen möchten.  
 Je tiefer Sie in das Kapitel einsteigen, desto detailliertere Informationen erhalten Sie zu den einzelnen Themen. Diese Abschnitte sind vor allem für Architekten, Entwickler und technisch Interessierte geeignet, die einen detaillierteren Einblick in das Thema erhalten wollen.  
 
-Im weiteren Teil finden Sie dann Abschnitte zu den Themen **Open Source** mit wichtigen Ausführungen warum Open Source auch im ABAP-Bereich wichtig ist, Ausführungen zu Application Lifecycle Management (ALM), bei denen Sie auch Erläuterungen zu modernen Methoden der **Versionsverwaltung** finden.  
+Im weiteren Teil finden Sie dann Abschnitte zu den Themen **Open Source** mit wichtigen Ausführungen, warum Open Source auch im ABAP-Bereich wichtig ist, Ausführungen zu Application Lifecycle Management (ALM), bei denen Sie auch Erläuterungen zu modernen Methoden der **Versionsverwaltung** finden.  
 Abschließend finden Sie noch Ausführungen zu den Themen **Sicherheit** und **Integration**, die bei Entwicklung von SAP Software heute wichtiger denn je sind.
 Und natürlich dürfen auch Hinweise zur künstlichen Intelligenz hier nicht fehlen.
 
