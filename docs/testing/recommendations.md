@@ -44,7 +44,7 @@ Automatisierte Tests mit Hilfe von ABAP Unit sind ein sehr weites Feld. Es gibt 
 
 ## Management
 
-Das Erstellen und Verwalten von Unit Tests ist ein zeitlicher Mehraufwand. Dieser wird durch eine höhrere Softwarequalität und damit geringere Anwendertests oder gar Produktionsausfälle jedoch wett gemacht. Entwickelnde benötigen - gerade in der Anfangszeit - deutlich mehr Zeit für die Erstellung der Unit Tests. Dies muss durch das Management gewollt sein und muss unterstützt werden. Definieren Sie, was Sie vom Management erwarten, aber auch, was das Management dafür bekommt. Suchen Sie sich einen Bereich, eine Applikation oder ein Team, das Erfahrungen mit automatisiertem Testing sammelt. Setzen Sie sich Ziele, was Sie in einem betsimmten Zeitraum erreicht haben wollen.
+Das Erstellen und Verwalten von Unit Tests ist ein zeitlicher Mehraufwand. Dieser wird durch eine höhere Softwarequalität und damit geringere Anwendertests oder gar Produktionsausfälle jedoch wett gemacht. Entwickelnde benötigen - gerade in der Anfangszeit - deutlich mehr Zeit für die Erstellung der Unit Tests. Dies muss durch das Management gewollt sein und muss unterstützt werden. Definieren Sie, was Sie vom Management erwarten, aber auch, was das Management dafür bekommt. Suchen Sie sich einen Bereich, eine Applikation oder ein Team, das Erfahrungen mit automatisiertem Testing sammelt. Setzen Sie sich Ziele, was Sie in einem bestimmten Zeitraum erreicht haben wollen.
 
 ## Weiterbildung
 

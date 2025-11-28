@@ -26,9 +26,9 @@ Ein Grund für die Vermeidung der TDFs ist die umständliche Verwendung. Sie ben
 
 #### Test-Double-Framework für ABAP Datenbankzugriffe/ CDS Views/ AMDP
 
-SAP stellt Ihnen verschiedenen Frameworks zur Seite um Abhängigkeiten von verschiedenen Datenbankartefakten zu lösen. Diese Frameworks basieren auf Techniken womit die echten Daten in den Tabellen durch vorkonfigurierte MOCK Daten ersetzt werden können.
+SAP stellt Ihnen verschiedenen Frameworks zur Seite, um Abhängigkeiten von verschiedenen Datenbankartefakten zu lösen. Diese Frameworks basieren auf Techniken womit die echten Daten in den Tabellen durch vorkonfigurierte MOCK Daten ersetzt werden können.
 
-Ziel ist es hierbei eine stabile wiederholbare Umgebung aufzubauen in der sich Tests beliebig oft wiederholen lassen ohne dass Belege neu erstellt werden müssen.
+Ziel ist es hierbei eine stabile wiederholbare Umgebung aufzubauen in der sich Tests beliebig oft wiederholen lassen, ohne dass Belege neu erstellt werden müssen.
 
 Eine Übersicht der vorhandenen Möglichkeiten finden Sie in der [SAP-Hilfe](https://help.sap.com/docs/abap-cloud/abap-development-tools-user-guide/managing-database-dependencies-with-ABAP-Unit).
 
@@ -64,7 +64,7 @@ Sollten Sie in Ihren Komponenten- oder Integrationstests darauf angewiesen sein,
 
 Erzeugen von VALUE-Anweisungen aus aktuellen Daten während des Debuggens:
 -  ADT: Standard
--  SAPGUI: [Debugger Data View Extension]https://github.com/objective-partner/abap_debugger_data_view_extension
+-  SAPGUI: [Debugger Data View Extension](https://github.com/objective-partner/abap_debugger_data_view_extension)
 
 Erzeugen in ADT aus der Data-Preview für ausgewählte Zeilen und Spalten
 https://community.sap.com/t5/application-development-and-automation-blog-posts/abap-unit-tests-generate-a-value-statement-for-the-contents-of-an-internal/ba-p/13543137
