@@ -41,7 +41,7 @@ KTD müssen im selben Paket wie das Entwicklungsobjekt sein. Es wird nicht autom
 Entwicklungsteams arbeiten heutzutage überwiegend international zusammen. Auch wenn Sie derzeit rein deutschsprachig entwickeln, kann Ihr Projekt im Laufe der Zeit internationalisiert werden. Der Aufwand, der dann durch Koordinationsprobleme oder sogar nachträgliches Übersetzen entsteht, steht in keinem Verhältnis zu dem vielleicht größeren Aufwand durch englische Dokumentation. Es hat sich außerdem gezeigt, dass die Lesbarkeit von Quellcode und Kommentaren durch englischsprachige Kommentare erhöht wird. Denn die ABAP-Befehle selbst sind englisch und im Stil von Sätzen aufgebaut. Der Leser des Quellcodes muss bei englischer Dokumentation also nicht ständig die Sprache wechseln.
 
 {: .recommendation }
-> Es sollte im Unternehmen geklärt, was die Kommentierungssprache ist. Die Empfehlung ist in englisch zu kommentieren.
+> Es sollte im Unternehmen geklärt, was die Kommentierungssprache ist. Die Empfehlung ist in Englisch zu kommentieren.
 
 ## Dokumentation von Änderungen
 
@@ -54,7 +54,7 @@ Ab dem Zeitpunkt der Produktivsetzung eines Programms sollte darauf geachtet wer
 
 Kommentare im Quellcode sollen dazu dienen, Entwicklern das Verstehen des Quellcodes zu erleichtern, sofern dies nicht durch geschickte Gestaltung des Quellcodes allein (Modularisierung, Namenswahl von Methoden und Variablen) erreichbar ist.
 
-Kommentare sind für andere Entwickler und mit zunehmendem zeitlichen Abstand auch für den ursprünglichen Entwickler gedacht.
+Kommentare sind für andere Entwickler und mit zunehmendem zeitlichem Abstand auch für den ursprünglichen Entwickler gedacht.
 
 Stern-Kommentare sollten nur im Programmkopf oder für das temporäre Auskommentieren von altem Quellcode verwendet werden.
 
@@ -82,5 +82,5 @@ Der Vorteil der Nutzung von ABAP Doc besteht darin, dass diese Kommentare in fol
 * Element Information Popup
 * Code Completion Liste.
 
-Und diese ABAP Doc Kommentare können aus ADT in eine HTML Datei extrahiert und somit für eine weitere Verwendung ausserhalb des Codes z.B. auf internen Seiten, verwendet werden. Wird der Code und die dazu bestehende ABAP Doc Dokumentation gleichzeitig gepflegt und nach jeder Änderung ABAP Doc extrahiert, ist auch die externe Dokumentation ohne Mehraufwand aktuell.
-Wird die ABAP Doc Dokumentation strukturiert erstellt, kann diese ausserdem für die Verwendung mit unterstützender generativer AI zur Erstellung von weiteren Dokumentationen verwendet werden (s.[Kapitel Künstliche Intelligenz](/ABAP-Leitfaden/artificial-intelligence/#ai-als-werkzeug-bei-dokumentationserstellung)).
+Und diese ABAP Doc Kommentare können aus ADT in eine HTML Datei extrahiert und somit für eine weitere Verwendung außerhalb des Codes z.B. auf internen Seiten, verwendet werden. Wird der Code und die dazu bestehende ABAP Doc Dokumentation gleichzeitig gepflegt und nach jeder Änderung ABAP Doc extrahiert, ist auch die externe Dokumentation ohne Mehraufwand aktuell.
+Wird die ABAP Doc Dokumentation strukturiert erstellt, kann diese außerdem für die Verwendung mit unterstützender generativer AI zur Erstellung von weiteren Dokumentationen verwendet werden (siehe [Kapitel Künstliche Intelligenz](/ABAP-Leitfaden/artificial-intelligence/#ai-als-werkzeug-bei-dokumentationserstellung)).
