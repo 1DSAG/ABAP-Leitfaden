@@ -211,7 +211,7 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <tr class="odd">
 <td>Florian Henninger</td>
 <td>ABAP</td>
-<td>Als Entwickler und Problemlöser bin ich seit langen immer daran interesssiert, was um mich rum passiert. Ich schaue gerne über den Tellerrand und freue mich über Erkenntnisse und auch die Lösungen, die es so für uns alle in der täglichen Arbeit gibt. Als ADT User der ersten Stunde bin ich immer wieder fasziniert, wieviel Mehrwert es gibt, wenn man auf die kleinen Dinge um sich herum achtet und sich nicht im Alltag verliert. Genau das, ist meine Motivation hier (wieder) mit zu machen. Ich bin mir sicher, Sie finden auch etwas für sich.</td>
+<td>Als Entwickler und Problemlöser bin ich seit langen immer daran interessiert, was um mich rum passiert. Ich schaue gerne über den Tellerrand und freue mich über Erkenntnisse und auch die Lösungen, die es so für uns alle in der täglichen Arbeit gibt. Als ADT User der ersten Stunde bin ich immer wieder fasziniert, wieviel Mehrwert es gibt, wenn man auf die kleinen Dinge um sich herum achtet und sich nicht im Alltag verliert. Genau das, ist meine Motivation hier (wieder) mitzumachen. Ich bin mir sicher, Sie finden auch etwas für sich.</td>
 </tr>
 
 <tr class="odd">
@@ -236,10 +236,10 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <td>Peter Luz</td>
 <td>ABAP, Testing, KI</td>
 <td>Seit 2006 bei Robert Bosch GmbH im SAP-Bereich und seit 2010 ABAP Entwickler im Bereich der Entwicklung von SAP-Logistik Funktionen, seit 2024 Lead-Developer in einem S/4 Template Entwicklungsprojekt im Bereich Logistik.<br> 
-ABAP fande ich schon immer sehr interessant, da Programmierung auf Geschäftsprozesse trifft und der Einsatz für gute Softwarequalität sich auch im Praxiseinsatz der Software sichtbar wurde.  
+ABAP fand ich schon immer sehr interessant, da Programmierung auf Geschäftsprozesse trifft und der Einsatz für gute Softwarequalität sich auch im Praxiseinsatz der Software sichtbar wurde.  
 Die Mitarbeit an einem Leitfaden erfordert viel Zeit, v.a. private Zeit die man investiert. Man bringt sein Wissen und seine Erfahrung ein. Man bekommt aber auch sehr viel zurück durch die guten Gespräche mit Menschen aus der SAP-Community, durch den regen Erfahrungsaustausch im Autorenteam und man lernt sehr viel dazu.<br>  
 Nach der Mitarbeit am DSAG-ADT Leitfaden 2023 möchte ich meine Erfahrungen aus vielen Jahren ABAP Entwicklung auch hier einbringen und weitergeben.  
-Ich hoffe dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und motiviert, moderne ABAP-Entwicklung im Alltag nutzen und gewinnbringend einzusetzen.</td>
+Ich hoffe, dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und motiviert, moderne ABAP-Entwicklung im Alltag nutzen und gewinnbringend einzusetzen.</td>
 </tr>
 
 <tr class="odd">
