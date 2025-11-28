@@ -78,7 +78,7 @@ werden kann, z.B. [Bauer et al., "A structured approach to assess third-party li
 - **Verbreitungsgrad** fasst die Marktdurchdringung einer Komponente zusammen.
 - **Werkzeugunterstützung** erfasst, ob die Komponente durch Werkzeuge wie z.B. Entwicklungsumgebungen dediziert unterstützt wird oder ob ihr Einsatz diese gar behindert. Dieses Kriterium ist nicht für alle Komponenten gleichermaßen anwendbar.
 - **Herstellerunterstützung** beschreibt, inwiefern Pflege und Weiterentwicklung einer Komponente durch den Hersteller (das veröffentlichende Unternehmen oder die Open-Source-Community) auch langfristig sichergestellt ist.
-- **interne Qualität und Security** erfasst, inwiefern eine Komponente interne Qualitätskriterien wie Wartbarkeit, Verständlichkeit berücksichtigt und ob Mechanismen existieren um die Sicherheit zu überprüfen und auf Sicherheitsmängel zu reagieren.
+- **interne Qualität und Security** erfasst, inwiefern eine Komponente interne Qualitätskriterien wie Wartbarkeit, Verständlichkeit berücksichtigt und ob Mechanismen existieren, um die Sicherheit zu überprüfen und auf Sicherheitsmängel zu reagieren.
 
 <!--
   author    = {Veronika Bauer and Lars Heinemann and Florian Deissenboeck},
@@ -92,7 +92,7 @@ werden kann, z.B. [Bauer et al., "A structured approach to assess third-party li
 -->
 
 Um diese Kriterien angemessen bewerten zu können, ist eine eingehende Überprüfung (Due Diligence) erforderlich.
-Einige "Red Flags" für den Unternehmenseinsatz sind leicht zu identifizieren und können als erste Ausschlusskriterien verstanden werden:
+Einige "Red Flags" für den Unternehmenseinsatz sind leicht zu identifizieren und können, als erste Ausschlusskriterien verstanden werden:
 Ist der letzte Commit sehr lange her? Existieren offene Issues, auf die lange Zeit nicht reagiert wurde? Ist keine Lizenz-Information vorhanden oder widerspricht die Lizenz den Vorgaben des eigenen Unternehmens?
 In diesen Fällen sollte von der Nutzung der Komponente abgesehen werden.
 
@@ -131,9 +131,9 @@ Die Begriffe "Hersteller" oder "Anbieter" bedeuten dabei ausdrücklich *nicht*, 
 
 ### Best Practices: Vorgehen und Prozess
 
-**Regelmäßige Wiedervorlage:** Beim Einsatz von Open-Source-Komponenten empfiehlt es sich grundsätzlich, eine regelmäßige Überprüfung aller oben genannten Kriterien durchzuführen um auf Änderungen auf Seiten der Open-Source-Projekte oder in der eigenen Anwendung reagieren zu können. Eine Anpassung des eigenen Funktionsumfangs kann etwa zu einer anderen Bewertung hinsichtlich der Angemessenheit einer Komponente führen, oder ein Wechsel in der Projektstruktur, dessen Aktivität oder Lizenz führt zu einer neuen Risikobewertung. Idealerweise schließt eine solche Überprüfung auch die Recherche nach neueren Open-Source-Projekten mit ein, welche für den eigenen Anwendungsfall vielleicht noch besser geeignet sind.
+**Regelmäßige Wiedervorlage:** Beim Einsatz von Open-Source-Komponenten empfiehlt es sich grundsätzlich, eine regelmäßige Überprüfung aller oben genannten Kriterien durchzuführen, um auf Änderungen auf Seiten der Open-Source-Projekte oder in der eigenen Anwendung reagieren zu können. Eine Anpassung des eigenen Funktionsumfangs kann etwa zu einer anderen Bewertung hinsichtlich der Angemessenheit einer Komponente führen, oder ein Wechsel in der Projektstruktur, dessen Aktivität oder Lizenz führt zu einer neuen Risikobewertung. Idealerweise schließt eine solche Überprüfung auch die Recherche nach neueren Open-Source-Projekten mit ein, welche für den eigenen Anwendungsfall vielleicht noch besser geeignet sind.
 
-**Kompetenz:** Die Arbeit mit der Open-Source-Community erfordert eine gewisse Fähigkeiten im Team, etwa zum Melden von Fehlern oder Änderungswünschen an die betreffenden Projekte, oder zum Einreichen von Pull Requests, um eigene Anpassungen vorzunehmen und der Community zurückzugeben. Falls an dieser Stelle Erfahrungen in Ihrem Team fehlen, sollten Sie Schulungen einplanen, um die Arbeit mit den Open-Source-Projekten möglichst effektiv gestalten zu können.
+**Kompetenz:** Die Arbeit mit der Open-Source-Community erfordert eine gewisse Fähigkeit im Team, etwa zum Melden von Fehlern oder Änderungswünschen an die betreffenden Projekte, oder zum Einreichen von Pull Requests, um eigene Anpassungen vorzunehmen und der Community zurückzugeben. Falls an dieser Stelle Erfahrungen in Ihrem Team fehlen, sollten Sie Schulungen einplanen, um die Arbeit mit den Open-Source-Projekten möglichst effektiv gestalten zu können.
 
 **Aktualisierungen:** Vorgehen und Verantwortlichkeiten für die Aktualisierung externer Abhängigkeiten sollten definiert sein. Wann immer eine Komponente in einer neuen Version verfügbar wird, muss diese Änderung hinsichtlich der Relevanz für die eigene Anwendung bewertet werden. Im positiven Fall muss die Änderung integriert und getestet werden, bis sie schließlich in die Produktivumgebung übernommen werden kann. Ein eingespieltes Vorgehen ist insbesondere bei Bekanntwerden eines Sicherheitsproblems in einer Open-Source-Komponente relevant, um schnell reagieren zu können.
 

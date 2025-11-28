@@ -14,11 +14,11 @@ nav_order: 1
 
 ## Voraussetzungen für ABAP Unit Tests
 
-Nachdem im vorigen Abschnitt Herausforderungen und Voraussetzungen vor allem organisatorischer Art angesprochen wurden, gehen wir Im Folgenden Abschnitt auf technische Aspekte und Belange ein, die zu berücksichtigen sind um erfolgreich ABAP Unit Tests zum Einsatz zu bringen.
+Nachdem im vorigen Abschnitt Herausforderungen und Voraussetzungen vor allem organisatorischer Art angesprochen wurden, gehen wir Im Folgenden Abschnitt auf technische Aspekte und Belange ein, die zu berücksichtigen sind, um erfolgreich ABAP Unit Tests zum Einsatz zu bringen.
 
 ### Trennung von Datenmodell, Geschäftslogik und Präsentationsschicht
 
-Im SAP-Umfeld hat es sich leider etabliert, dass alles, was für den Programmablauf benötigt wird, dort passiert, wo es gerade passt. Die Daten werden mit zusätzlichen SELECTS angereichert, aufbereitet und ausgegeben. Bei einem Doppelklick werden weitere Daten gelesen und es wird ein Popup ausgegeben, das den Anwender über irgendetwas informiert. All dies passiert in einem Stück Software, welches als Business Funktion gemäß der beschriebenen Geschäftsanforderung erstellt wurde und diese mit all dem was nötig ist umsetzt.  
+Im SAP-Umfeld hat es sich leider etabliert, dass alles, was für den Programmablauf benötigt wird, dort passiert, wo es gerade passt. Die Daten werden mit zusätzlichen SELECTS angereichert, aufbereitet und ausgegeben. Bei einem Doppelklick werden weitere Daten gelesen und es wird ein Popup ausgegeben, das den Anwender über irgendetwas informiert. All dies passiert in einem Stück Software, welches als Business Funktion gemäß der beschriebenen Geschäftsanforderung erstellt wurde und diese mit all dem, was nötig ist umsetzt.  
 So entsteht Code, in der beispielsweise eine Methode ```create_sales_order``` einen BAPI aufruft, der Daten verbucht und damit eine Auftragsnummer erstellt. In dieser klassischen, am Geschäftsprozess orientierten Entwicklung, wie sie viele Jahre üblich war und auch heute noch im Einsatz ist, findet keine Trennung verschiedener Belange gemäß dem "Separation of Concerns"-Prinzips statt. 
 
 Eine grundlegende Regel von fachkompetenter Arbeit ist, dass Datenbeschaffung, Geschäftslogik und Datenausgabe (Präsentationsschicht) in der Anwendung technisch getrennt sind und sich im Code nicht vermischen. In einem Unit Test gibt es keinen Anwender, der eine Info-Meldung wegklicken kann, was die automatisierte Testbarkeit von solchen All-in-one Programmteilen stark erschwert.  
@@ -93,21 +93,21 @@ Besonders prädestiniert für Unit Tests sind Methoden, die eine komplexe Logik 
 
 ### Mocking
 
-Ein sehr wichtiger und hier oft erwähnter Begriff ist das sogenannte Mocking. Generell versteht man unter Mocking, dass Objekte wie z.B: Funktionsbausteine oder Klassen von SAP, die nicht Teil des Unit-Tests sind, durch Stellvertreterobjekte ersetzt werden. Wie ein Mocking erreicht wird, wird in einschlägen Kursen zu ABAP oder auch Fachbüchern vermittelt, daher gehen wir wegen der technischen Detailtiefe hier nicht weiter darauf ein.  
+Ein sehr wichtiger und hier oft erwähnter Begriff ist das sogenannte Mocking. Generell versteht man unter Mocking, dass Objekte wie z.B: Funktionsbausteine oder Klassen von SAP, die nicht Teil des Unit-Tests sind, durch Stellvertreterobjekte ersetzt werden. Wie ein Mocking erreicht wird, wird in einschlägigen Kursen zu ABAP oder auch Fachbüchern vermittelt, daher gehen wir wegen der technischen Detailtiefe hier nicht weiter darauf ein.  
 Es gibt auch verschiedene Formen des Mockings was im Abschnitt Testtechniken kurz erläutert wird.
 
 ### Testlevel
 
 #### Methoden Tests
 
-Tests einzelner Methoden mit dem Fokus die korrekte Arbeitsweise der Methoden sicher zu stellen. Die Tests sollten unbedingt unabhägig von der Datenbank ausgeführt werden.  
+Tests einzelner Methoden mit dem Fokus die korrekte Arbeitsweise der Methoden sicher zu stellen. Die Tests sollten unbedingt unabhängig von der Datenbank ausgeführt werden.  
 Aus dieser Definition ergeben sich bereits oft die ersten Grundlagen für ein Refactoring, da viele Methoden mehrere Aufgaben ausführen.
 Eine große Anzahl oder sehr umfangreiche Unit Tests deuten oft darauf hin, dass Sie eine Methode zerlegen sollten.
 
 #### Komponententests
 
 Tests ganzer Klassen oder zusammenhängender Komponenten wie eine Klasse und ein BAPI zur Verbuchung.
-Diese Test sind häufig von der Datenbank abhängig. Hier sollte mit entsprechenden Techniken gearbeitet werden um einen konsistenten Datenbankzustand für jeden Test herzustellen.  
+Diese Tests sind häufig von der Datenbank abhängig. Hier sollte mit entsprechenden Techniken gearbeitet werden um einen konsistenten Datenbankzustand für jeden Test herzustellen.  
 Hierzu eignen sich die entsprechenden Frameworks der SAP:
 
 * CDS Test Double Framework (Read Access)
@@ -116,16 +116,16 @@ Hierzu eignen sich die entsprechenden Frameworks der SAP:
 
 #### Integrationstests
 
-Bei Integrationtests werden Teile von oder ganze Prozessen getestet, um das Zusammenspiel der Komponenten abzusichern. 
+Bei Integrationstests werden Teile von oder ganze Prozesse getestet, um das Zusammenspiel der Komponenten abzusichern. 
 Diese Tests sind oft davon gekennzeichnet, dass die Vorbereitung der Ausgangslage an Daten aufwändig ist. Es wird benötigt: Kunde mit Liefersperre, Material ohne bestand, aber mit eingehender Bestellung usw.  Hier wird man einen Großteil der Tests auf eine effiziente Bereitstellung dieser Testdaten verwenden müssen. 
 
 ## Vorgehen und Methodiken
 
 ### Clean Islands
 
-Um zu vermitteln wie eine gute Umsetzung von Unit Tests aussehen kann, können so genannte _Clean Islands_ helfen.
+Um zu vermitteln, wie eine gute Umsetzung von Unit Tests aussehen kann, können so genannte _Clean Islands_ helfen.
 Es handelt sich dabei um Pakete oder Klassen die in Bezug auf die Softwarequalität - und auch Unit-Tests - einen Vorzeigestatus haben.
-Somit dienen sie als Referenz für Teams, Externe und neue Kollegen um analog neue Software zu erstellen.
+Somit dienen sie als Referenz für Teams, Externe und neue Kollegen, um analog neue Software zu erstellen.
 
 ### Unit Tests modularisieren
 
@@ -135,7 +135,7 @@ Unit Tests bestehen aus Code, der ebenso wie Produktcode, modularisiert, gewarte
 
 * Erstellen Sie für jede Methode ihrer Klasse eine eigene neue Testmethode.
 * Gibt es verschiedene Testfälle für eine Methode, erstellen Sie pro Fall eine eigene Testmethode (z.B. Erfolgsfall und Fehlerfall)
-* Kopieren Sie keine Methode. Wenn sie Code benötigen, den Sie bereits geschrieben haben, extrahieren Sie diesen in eine neue Testmethode um diesen wiederverwenden zu können.
+* Kopieren Sie keine Methode. Wenn sie Code benötigen, den Sie bereits geschrieben haben, extrahieren Sie diesen in eine neue Testmethode, um diesen wiederverwenden zu können.
 * Überprüfen Sie dabei immer wieder die bisherigen Tests. Eine Engine die in der Lage ist, Testdaten in verschiedenen benötigten fachlichen Konstellationen zu erstellen, wird Ihnen beim Erstellen von Tests gute Dienste leisten.
 
 Es gibt folgende zusätzliche Möglichkeiten, nach denen ebenfalls modularisiert werden kann:

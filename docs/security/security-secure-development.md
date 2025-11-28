@@ -88,8 +88,8 @@ Ein häufiger Fehler besteht in fehlenden oder unvollständigen Authority-Checks
 * fehlende Prüfung nach dem `AUTHORITY-CHECK` auf `SY-SUBRC`
 * Verwendung von Alias-Usern in `SUBMIT ... USER`-Anweisungen
 
-Zudem ist sicherzustellen, dass kundeneigene Programme mit einer Berechtigungsgruppe versehen werden, um implizite Prüfungen auszulösen. Für eine gute UI und eine sichere Programmierung empfiehlt es sich die wichtigsten Berechtigungsobjekte direkt vor nach dem Start, vor der Usereingabe mit `DUMMY`zu prüfen um sowohl den Anwendungsserver als auch den Datenbankserver nicht mit Anfragen zu belasten, die im Nachinein sowieso nicht berechtigt sind.
-Beispielsweise zeigt ein Report Daten zu einem Debitor in einer Verkaufsorganisation an. Der Report ist mit einem Z Berechtigugnsobjekt versehen um zu prüfen ob der User diesen Kunden sehen darf. Hier kann beim ersten Aufruf (INITIALIZATION im Report) direkt das Berechtigungsobjekt gegen Dummyobjekte geprüft werden. Schlägt dies schon fehl braucht der User sich nicht die Mühe machen eine funktionierende Kombination zu finden.
+Zudem ist sicherzustellen, dass kundeneigene Programme mit einer Berechtigungsgruppe versehen werden, um implizite Prüfungen auszulösen. Für eine gute UI und eine sichere Programmierung empfiehlt es sich die wichtigsten Berechtigungsobjekte direkt vor nach dem Start, vor der Usereingabe mit `DUMMY`zu prüfen, um sowohl den Anwendungsserver als auch den Datenbankserver nicht mit Anfragen zu belasten, die im Nachhinein sowieso nicht berechtigt sind.
+Beispielsweise zeigt ein Report Daten zu einem Debitor in einer Verkaufsorganisation an. Der Report ist mit einem Z-Berechtigungsobjekt versehen um zu prüfen ob der User diesen Kunden sehen darf. Hier kann beim ersten Aufruf (INITIALIZATION im Report) direkt das Berechtigungsobjekt gegen Dummyobjekte geprüft werden. Schlägt dies schon fehl braucht der User sich nicht die Mühe machen eine funktionierende Kombination zu finden.
 
 ```abap
 " Vollständige Berechtigungsprüfung

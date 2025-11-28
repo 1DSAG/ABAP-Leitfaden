@@ -66,7 +66,7 @@ Weitere Details finden Sie unter [SAP Help](https://help.sap.com/docs/SAP_S4HANA
 {: .note }
 > Die folgende SAP Community Seite [ZSCV_SEARCH_CDS_VIEWS](https://github.com/alwinvandeput/zscv_search_cds_views) bietet eine Open-Source-Lösung zur Suche von CDS-Views an.
 
-## Klassifierierung von CDS Views
+## Klassifizierung von CDS Views
 
 ### Unterstützte Funktionen  
 Die unterstützten Funktionen geben an, so die SAP, wofür eine CDS-View am besten verwendet werden kann. Eine CDS-View kann mehrere unterstützte Funktionen haben, da sie für verschiedene Zwecke geeignet sein kann.  
@@ -195,7 +195,7 @@ Currency,
 ...
 ```
 
-Außerdem gibt es noch die [Framework-Spezifischen Annotationen (SAP Help)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_annotations_frmwrk_tables.htm). Damit kann man z.B. Metadaten für OData-Services, Benutzeroberflächen oder Analytics definieren. Diese Form der Annotation wird nicht vond er ABAP Laufzeit erkannt, sondern von einem Framework. Das Paradebeispiel im SAP-Umfeld ist dabei Fiori Elements.
+Außerdem gibt es noch die [Framework-Spezifischen Annotationen (SAP Help)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abencds_annotations_frmwrk_tables.htm). Damit kann man z.B. Metadaten für OData-Services, Benutzeroberflächen oder Analytics definieren. Diese Form der Annotation wird nicht von der ABAP Laufzeit erkannt, sondern von einem Framework. Das Paradebeispiel im SAP-Umfeld ist dabei Fiori Elements.
 
 __Beispiel__
 
@@ -324,7 +324,7 @@ Es gibt noch weitere Funktionen, die Sie sich hier ansehen können:
 
 ## Associations
 Mit Associations können CDS Entitäten miteinander verknüpft werden. Die Quelle ist immer die eigene CDS View Entität. Als Ziel können DDIC-Tabellen und andere CDS Entitäten definiert werden. Wichtig sind die Angaben zur Kardinalität und die Kondition zur Verknüpfung. Die Kardinalität bestimmt die Relation, also z.B. 1:1 oder 0:n. Die Kondition bestimmt über welche Felder Quelle und Ziel verbunden sind.
-Eine Association wird immer nur in eine Richtung definiert. Wenn man zwei Entitäten in beide Richtungen mit einander verbinden möchte, muss man in beiden die Association zur jeweils anderen angeben.
+Eine Association wird immer nur in eine Richtung definiert. Wenn man zwei Entitäten in beide Richtungen miteinander verbinden möchte, muss man in beiden die Association zur jeweils anderen angeben.
 Die Association kann zusätzlich in der Feldliste bekannt gegeben werden, wodurch Verwender auch auf die Association zugreifen können.
 
 __Beispiel__
@@ -355,16 +355,16 @@ Weitere Informationen finden Sie im [Stabilitätskontrakte für CDS-Views](https
 ### Erweiterungen von SAP Standard CDS Views
 Ein großer Vorteil ist die Möglichkeit, beliebige CDS Views mit dem Vertrag für Erweiterungen (C0) und höher zu erweitern. Ein CDS View, der mit dem C0 Vertrag für Erweiterungen klassifiziert wurde, bietet stabile Punkte für Erweiterungen. SAP garantiert Stabilität, sodass es bei S/4HANA Upgrades nicht zu inkompatiblen Änderungen kommen kann. Dies birgt aber auch eine Gefahr! Wenn Sie z.B. Felder aus einer bestehende CDS Views in Ihrer erweiterten CDS View ( ZE_* ) verwenden, dann können diese bei S/4HANA Upgrades verändert werden. Achten Sie darauf nur in den vorgesehenen E_* CDS Views, CDS Views "hinzufügen". Wir empfehlen diese [Learning Journey von SAP](https://learning.sap.com/learning-journeys/acquire-core-abap-skills/extending-cds-views_fab548c5-6438-41e1-8384-c5190f13ea7b), hier wird der Sachverhalt erläutert.
 
-## BW-Integration, embedded Analytics und ODP
-Das Operational Data Provisioning Framework (ODP) ermöglicht die Übertragung von Daten aus verschiedenen SAP-Repositories nach SAP BW, SAP BW/4HANA und anderen Systemen oder Servicen. CDS Views können als Quelle für die Datenextraktion dienen.  
+## BW-Integration, Embedded Analytics und ODP
+Das Operational Data Provisioning Framework (ODP) ermöglicht die Übertragung von Daten aus verschiedenen SAP-Repositories nach SAP BW, SAP BW/4HANA und anderen Systemen oder Services. CDS Views können als Quelle für die Datenextraktion dienen.  
 
 #### Voraussetzungen für den Transfer zu SAP BW/4HANA 
 Der klassische CDS View oder CDS View Entity sollte folgende Annotationen besitzen:  
 - `@Analytics.dataCategory`  
 - `@Analytics.dataExtraction.enabled`  
 
-### Voraussetzungen für embedded Analytics
-Embedded Analytics funktioniert nicht nur in den Analytical Fiori Apps oder über die Key-User Extensibility Apps. Ein direkter Konsum eines CDS Views, durch die Online Analytical Processing (OLAP) Engine, ist auch direkt in den Buiness Intelligence (BI) Tools möglich. Insbesondere die SAP Analytic Cloud (SAC), aber auch Analyse for Office (AO).
+### Voraussetzungen für Embedded Analytics
+Embedded Analytics funktioniert nicht nur in den Analytical Fiori Apps oder über die Key-User Extensibility Apps. Ein direkter Konsum eines CDS Views, durch die Online Analytical Processing (OLAP) Engine, ist auch direkt in den Business Intelligence (BI) Tools möglich. Insbesondere die SAP Analytic Cloud (SAC), aber auch Analyse for Office (AO).
 
 Weitere Informationen finden Sie [in diesem Blog-Eintrag](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/sap-s-4hana-embedded-analytics-an-overview/ba-p/13530854#:~:text=It%20is%20a%20collection%20of%20SAP%20Fiori%20tiles,as%20Fiori%20analytical%20apps%20for%20various%20functional%20areas.). 
 
@@ -378,7 +378,7 @@ Musteraufbau: Direkter Zugriff vom SAC
 {: .img-caption}
 
 Dabei ist zu beachten, dass für den Consumption CDS View einen **Vertrag für den systeminternen Gebrauch (C1)** vergeben werden muss.
-Zusätlich werden noch die folgenden Authorisierungs-Objekte in den Rollen der Anwender benötigt.
+Zusätzlich werden noch die folgenden Authorisierungs-Objekte in den Rollen der Anwender benötigt.
 
 ```
 S_RS_COMP

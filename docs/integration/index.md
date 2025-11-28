@@ -94,7 +94,7 @@ Die Gestaltung einer nachhaltigen Architektur sollte unter Berücksichtigung der
 - **Kosten:** Der finanzielle Aufwand für Entwicklung(sressourcen), Betrieb, Lizenzen und Wartung muss gegen den Nutzen abgewogen werden.
 - **Features:** Prüfen, ob bestehende Integrationslösungen alle benötigten Funktionen abdecken oder Anpassungen erforderlich sind.
 - **Vendor Lock-In:** Abhängigkeiten von bestimmten SAP- oder Drittanbieter-Technologien sollten kritisch betrachtet werden.
-- **Monitoring:** Eine effektive Überwachung der Integration ist essenziell, um Probleme frühzeitig zu erkennen und zu beheben. Für den Fall von Systemausfällen sind Reprozessierung-szenarien vorzusehen.
+- **Monitoring:** Eine effektive Überwachung der Integration ist essenziell, um Probleme frühzeitig zu erkennen und zu beheben. Für den Fall von Systemausfällen sind Reprozessierungsszenarien vorzusehen.
 
 
 ### Beispiel: Massendatentransferierung 

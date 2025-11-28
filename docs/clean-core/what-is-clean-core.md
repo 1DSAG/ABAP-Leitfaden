@@ -81,7 +81,6 @@ Aus den Herstellerangaben ergeben sich vier Anwendungsbereiche und die Fakten zu
 * Die Integration nach außen muss klar geregelt sein, Prozessintegration und Middleware für das API-Management müssen vorhanden sein.
 * Legacy-Technologien wie IDocs, RFCs und SAP SEGW-Projekte müssen sukzessive abgelöst werden.
 
-
 Zusammenfassend stellt das Clean Core-Konzept der SAP einen Paradigmenwechsel im Design von Unternehmenssoftware dar. SAP setzt darauf, neue Services nur noch in der Cloud anzubieten und die Schnittstellen zum Core weiter auszubauen. Der Mehrwert, gut laufende Lösungen auf eine neue Plattform zu bringen, ist vorerst nicht gegeben. Neue Lösungen sollte ein Unternehmen mit den neuen Erweiterungsarten gehen, um für die Zukunft gerüstet zu sein. So profitiert ein SAP-Kunde von den Innovationen rund um den Standard. Zum Paradigmenwechsel gehört auch die digitale Transformation: weg vom SAP GUI und Dynpros hin zum Fiori Launchpad, die Endanwender sollen primär im Browser arbeiten. Zu einem Clean Core gehört auch ein massives Change Management durch die IT und die Fachbereiche.
 
 Durch die Umsetzung der Prinzipien des Clean Core und strategischer Initiativen können sich Organisationen auf zukünftige SAP-Strategien, insbesondere Cloud-Technologien, vorbereiten. 
@@ -109,7 +108,7 @@ Die digitale Transformation eines jeden SAP-Kunden hängt von der im Unternehmen
 
 Die SAP S/4HANA Cloud, public edition (GROW) ist per Definition "clean". Starten Sie als Kunde mit GROW oder migrieren Sie ihr System auf ein S/4HANA Public Cloud System, dann können Sie nur noch Clean Core entwickeln und haben keine Möglichkeit auf nicht freigegebene Objekte im Standard zurückzugreifen.
 
-Möchten Sie mit bestehendem Kundencode auf ein Public-Cloud-System, muss dieser ABAP-Cloud-fähig sein und ihr Prozesse müssen sich mit dem Standard der SAP abbilden lassen.
+Möchten Sie mit bestehendem Kundencode auf ein Public-Cloud-System, muss dieser ABAP-Cloud-fähig sein und Ihre Prozesse müssen sich mit dem Standard der SAP abbilden lassen.
 
 
 ### Private Cloud
@@ -126,7 +125,7 @@ Sie möchten Ihr System im eigenen Rechenzentrum oder durch einen Dienstleister 
 - Relevante Szenarien:
   - SAP S/4HANA on-premise
   - SAP S/4HANA Cloud, private edition (RISE)
-- Public Cloud ist clean by default:
+- Public Cloud ist Clean by default:
   - Die SAP S/4HANA Cloud, public edition (GROW) ist von Grund auf auf Clean-Core-Prinzipien aufgebaut.
 
 
@@ -160,7 +159,7 @@ Merkmale:
 Der Bluefield-Ansatz stellt einen hybriden Ansatz zwischen Greenfield und Brownfield dar. Dabei wird eine selektive Daten- und Prozessmigration durchgeführt, wodurch sowohl Altlasten eliminiert als auch bestehende Systeme genutzt werden können.
 
 Merkmale:
-- Selektivität: Unternehmen können entscheiden, welche Daten und Prozesse übernommen oder neu gestaltet werden.
+- Selektivität: Unternehmen können entscheiden, welche Daten und Prozesse übernommen oder neugestaltet werden.
 - Flexibilität und Kontrolle: Optimierung bestehender Prozesse ohne vollständige Neuimplementierung.
 - Aufwand: Zwischen Greenfield und Brownfield.
 - Vorteil: Optimale Balance zwischen Innovation und Effizienz.
@@ -222,7 +221,7 @@ Modifikationen dürfen nur nach gründlicher Abwägung vorgenommen werden. Die G
 - **Implementierung von Alleinstellungsmerkmalen (USPs)**:  
   Schaffung oder Anpassung von Funktionen, die eine Differenzierung des Unternehmens ermöglichen.  
 - **Prozessoptimierung**:  
-  Abbildung kundeneigenere Geschäftsprozesse oder Automatisierung der Standardprozesse und interner Abläufe.  
+  Abbildung kundeneigener Geschäftsprozesse oder Automatisierung der Standardprozesse und interner Abläufe.  
 - **Kosteneinsparungen**:  
   Reduktion von operativen oder langfristigen Aufwänden durch gezielte Anpassungen.  
 
@@ -253,6 +252,6 @@ Wenn Sie den SAP-Standard verändern möchten, beachten Sie die folgenden Regeln
 
 ## Clean ABAP - Abgrenzung
 
-Bei Clean ABAP geht es um das Schreiben von ABAP Code dessen Fokus auf Verständlichkeit und Wartbarkeit liegt. Bei Clean Core der SAP geht es um die Behandlung der Grenzen von kundenindividuellen Programmen im SAP Standard. Nur weil eine Umsetzung der Clean Core Strategie entspricht ist diese nicht automatisch Clean ABAP und umgekehrt. Mehr dazu im Kapitel [ABAP](/ABAP-Leitfaden/abap).
+Bei Clean ABAP geht es um das Schreiben von ABAP Code dessen Fokus auf Verständlichkeit und Wartbarkeit liegt. Bei Clean Core der SAP geht es um die Behandlung der Grenzen von kundenindividuellen Programmen im SAP Standard. Nur weil eine Umsetzung der Clean Core Strategie entspricht, ist diese nicht automatisch Clean ABAP und umgekehrt. Mehr dazu im Kapitel [ABAP](/ABAP-Leitfaden/abap).
 
 

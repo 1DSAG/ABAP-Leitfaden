@@ -15,7 +15,7 @@ nav_order: 8
 
 ## Allgemein
 
-Was ist “SAP Screen Personas 3.0”?
+Was sind “SAP Screen Personas 3.0”?
 
 Aus der [SAP Onlinehilfe](https://help.sap.com/docs/SAP_SCREEN_PERSONAS/e9aec5d380204249836a4fc3fc76f38e/d59f3aac0f574537af49f2ce0033bba8.html):
 

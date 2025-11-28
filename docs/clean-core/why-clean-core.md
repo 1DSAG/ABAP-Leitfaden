@@ -53,5 +53,3 @@ Ist die Umstellung auf Clean Core für Ihr Unternehmen überhaupt wirtschaftlich
 ### Know How
 
 Besitzen Sie bereits im Unternehmen das nötige Know How für die Transformation? Die Entwicklung, aber auch die Beratung, benötigen für den Umstieg auf Clean Core eine Menge an neuem Wissen für aktuelle Technologien und Best Practices auf einem S/4 HANA System.
-
-

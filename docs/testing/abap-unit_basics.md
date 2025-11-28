@@ -39,7 +39,7 @@ Dies gilt analog für Szenarien bei denen auf dem Entwicklungssystem sich keine 
 
 Die ABAP Unit-Tests können aus den ABAP-Development-Tools heraus oder der SAP-GUI Entwicklungsumgebung (SE80, SE24) erstellt und verwendet werden. Die Vorgehensweise unterscheidet sich nur in Kleinigkeiten.
 Empfohlen wird hier klar ADT, da hier auch die Verwendung von [Test Relations](https://www.youtube.com/watch?app=desktop&v=yiKhKlQz89Y&t=14s) möglich ist.  
-Die Techniken, die zur Erstellung notwendig sind, ähneln sich jedoch stark. Unit Tests, die in der SE80 erstellt wurden, können auch in Eclipse gewartet und getestet werden und umgekehrt. Die Tastenkombination zum Ausführen der Unit Tests ist in beiden Tools **STRG + SHIFT + F10.** Andere Funktionen sind in der ABAP Workbench teilweise nur durch das Menü erreichbar während es im ADT eine Tastenkombination dafür gibt.
+Die Techniken, die zur Erstellung notwendig sind, ähneln sich jedoch stark. Unit Tests, die in der SE80 erstellt wurden, können auch in Eclipse gewartet und getestet werden und umgekehrt. Die Tastenkombination zum Ausführen der Unit Tests ist in beiden Tools **STRG + SHIFT + F10.** Andere Funktionen sind in der ABAP Workbench teilweise nur durch das Menü erreichbar, während es im ADT eine Tastenkombination dafür gibt.
 
 Im folgenden Abschnitt werden diese Themen behandelt:
 
@@ -110,9 +110,9 @@ Eine Unit-Test-Klasse hat - im Gengensatz zu einer gängigen ABAP-Klasse - ein p
 
 ### Genereller Ablauf
 
-Jede Klasse hat ein Include in dem mehrere lokale Klassen und Text-Klassen definiert werden können. Eine Testklasse beseitzt Attribute, die etwas über die _Gefährlichkeit_ (Risk level) und die _Dauer_ (Duration) der Tests aussagen. Jede Testklasse hat Testmethoden, die mit dem Zusatz _FOR TESTING_ als solche kenntlich gemacht werden. Testmethoden werden in zufälliger Reihenfolge ausgeführt und dürfen nicht voneinander abhängen.
+Jede Klasse hat ein Include in dem mehrere lokale Klassen und Text-Klassen definiert werden können. Eine Testklasse besitzt Attribute, die etwas über die _Gefährlichkeit_ (Risk level) und die _Dauer_ (Duration) der Tests aussagen. Jede Testklasse hat Testmethoden, die mit dem Zusatz _FOR TESTING_ als solche kenntlich gemacht werden. Testmethoden werden in zufälliger Reihenfolge ausgeführt und dürfen nicht voneinander abhängen.
 
-In einer Testmethode wird eine (öffentliche) Methode der zu testenden Klasse ausgeführt und mit einem erwarteteten Ergebnis verglichen. Stimmt die Erwartung überein, dann ist der Test erfolgreich. Die Instanz der zu testenden Klasse wird _F_CUT_ oder _CUT_ genannt. _CUT_ steht für _Code Under Test_. Vor Ausführung der Tests kann optional die Methode _SETUP_ ausgeführt werden, in der Vorbereitungen zum Testfall vorgenommen werden können (z.B. die Erzeugung der Instanz _CUT_). Nach Ausführung einer Testmethode können in der Methode _TEARDOWN_ Aufräumarbeiten durchgeführt werden. Es können beliebig viele andere Methoden oder Klassen definiert werden, die zur Unterstützung der Tests dienen.
+In einer Testmethode wird eine (öffentliche) Methode der zu testenden Klasse ausgeführt und mit einem erwarteten Ergebnis verglichen. Stimmt die Erwartung überein, dann ist der Test erfolgreich. Die Instanz der zu testenden Klasse wird _F_CUT_ oder _CUT_ genannt. _CUT_ steht für _Code Under Test_. Vor Ausführung der Tests kann optional die Methode _SETUP_ ausgeführt werden, in der Vorbereitungen zum Testfall vorgenommen werden können (z.B. die Erzeugung der Instanz _CUT_). Nach Ausführung einer Testmethode können in der Methode _TEARDOWN_ Aufräumarbeiten durchgeführt werden. Es können beliebig viele andere Methoden oder Klassen definiert werden, die zur Unterstützung der Tests dienen.
 
 ### Risikostufe/ Risk Level
 
@@ -216,7 +216,7 @@ Bei komplizierten Testfällen müssen eventuell umfangreiche Vorarbeiten getan w
 **Beispiel:**
 
 Die Methode `prepare_setup( ).` erstellt zwei Instanzen, die zur Verifizierung der Adresse notwendig sind:
-* Strassenverzeichnis
+* Straßenverzeichnis
 * Postleitzahlenkatalog
 
 #### Hilfsmethoden zum Aufbau von Testdaten
@@ -246,7 +246,7 @@ Die Methode `verify_address_is_valid( address = data )` prüft nicht nur, ob Str
 Es gibt die Meinung, dass nur öffentliche Methoden getestet werden sollten. Über die Codeabdeckung kann analysiert werden, ob alle Codestrecken durchlaufen wurden.
 Allerdings kann das Bereitstellen der notwendigen Daten sehr aufwändig sein, so dass es sinnvoll sein kann, die kleineren Einheiten (private und geschützte Methoden) zu testen. Zudem "verwässern" umfangreiche Datenkonstellationen den Zweck eines Unit Tests. Tests für private Methoden können ebenfalls helfen, den Ursprung eines Fehlers schneller zu lokalisieren. 
 
-**Beispiel Adressaufbereitung:**\
+**Beispiel Adressaufbereitung:**
 Nehmen wir an, wir haben eine Klasse, die Adressen entgegen nimmt und analysiert. Die eine Methode `SEPARATE_HOUSENO_FROM_STREET` haben wir bereits kennengelernt. Zusätzlich gibt es eine Methode `CHECK_POST_CODE`, die sicherstellen soll, dass die Postleitzahl 5-stellig ist und nur aus Zahlen besteht. Wenn beide privaten Methoden von der öffentlichen Methode `CHECK_ADDRESS` aufgerufen werden, müssen wir zum Testen immer eine komplette Adresse übergeben. Einfacher und auch deutlicher ist es, wenn wir die privaten Methoden separat testen. Sie können so die eigentliche Funktion der Methode `SEPARATE_HOUSENO_FROM_STREET` testen. 
 
 ### Unit Tests erweitern
@@ -324,8 +324,6 @@ Diese Variante erlaubt es, auch weiterhin Tests durchzuführen, die nach einem a
 
 Hinweis: Dies ist keine Empfehlung, alle Tests in einer Testmethode unterzubringen. Das Beispiel soll lediglich aufzeigen, dass Hilfsmethoden genutzt werden können, um die Unit Tests kompakter, besser wartbar und lesbarer zu gestalten.
 
-#### Aufteilen von lokalen & globalen Testklassen 
-
 ### Testumgebung
 
 ABAP Unit test können in ADT als auch im SAP GUI ausgeführt und ihre Ergebnisse analysiert werden. 
@@ -355,14 +353,12 @@ Die Verwendung von Test-Doubles ist notwendig, wenn Abhängigkeiten bestehen, di
 
 Test-Double-Frameworks sind in der Regel umständlich zu bedienen und sehr unübersichtlich. Mit vielen Definitionen und Methoden müssen Eingabeparameter und die gewünschten Ergebnisse vorgegeben werden. Wenn möglich sollten Sie die Abhängigkeiten eliminieren um auf die Verwendung von Test-Doubles verzichten zu können. Dies ist jedoch nicht immer möglich. Weiterführende Informationen zu den Test-Double-Frameworks stellen wir Ihnen im Abschnitt [Erweiterte Techniken](#abap_unit_advanced) vor.
 
-
-
 #### Automatisierte regelmäßige Läufe von Unit Tests
 Es gibt mehrere Möglichkeiten Unit Test regelmäßig laufen zu lassen. 
 
 - Programm RS_AUCV_RUNNER  
 - ATC Läufte 
-- Rest Service ( Communication scenario SAP_COM_0735 )
+- Rest Service (Communication Scenario SAP_COM_0735)
 
 {: .recommendation }
 > Planen Sie die Unit Test eines Systems regelmäßig ein und erstellen Sie Benachrichtigungen hierfür. 

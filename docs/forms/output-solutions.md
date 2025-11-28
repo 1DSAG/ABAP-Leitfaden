@@ -20,7 +20,7 @@ Mit der Nachrichtensteuerung werden verschiedene Ausgabearten wie Drucken, E-Mai
 Die Transaktion NACE dient als zentraler Einstiegspunkt zur Pflege der Nachrichtenfindung pro Applikation. Die dort gepflegten Einstellungen werden in der Datenbanktabelle TNAPR gespeichert.  
     
 _Hinweis:_  
-Eine Auswertung aller erzeugten Nachrichten kann über die Transaktion TAANA für die Datenbanktabelle NAST erstellt werden. Hierfür muss diese Transaktion im Produktivsystem ausgeführt werden. Um die Auswertung Jahresweise durchzuführen muss vorher ggf.noch ein neues „virtuelles Feld“ (ERYEAR) hinzugefügt werden. Die Ergebnisliste kann als Excel-Tabelle heruntergeladen werden und dort für eine leichtere Auswertung zur Pivot-Tabelle umgestellt werden.
+Eine Auswertung aller erzeugten Nachrichten kann über die Transaktion TAANA für die Datenbanktabelle NAST erstellt werden. Hierfür muss diese Transaktion im Produktivsystem ausgeführt werden. Um die Auswertung jahresweise durchzuführen, muss vorher ggf. noch ein neues „virtuelles Feld“ (ERYEAR) hinzugefügt werden. Die Ergebnisliste kann als Excel-Tabelle heruntergeladen werden und dort für eine leichtere Auswertung zur Pivot-Tabelle umgestellt werden.
 
 {: .recommendation }
 > Eine solche Auswertung empfiehlt sich, um sich einen Überblick zu verschaffen, welche Nachrichtenarten überhaupt und hauptsächlich verwendet werden. In welchen Sprachen 

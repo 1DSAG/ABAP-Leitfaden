@@ -29,9 +29,9 @@ Somit müssen auch Anforderungen an den ABAP-Code gestellt werden:
 - ABAP-Code soll gut lesbar und verständlich geschrieben sein und Kommentare helfen beim Verständnis der implementierten Funktionalität.
 - ABAP-Code soll dem [Clean-Core Level Modell](/ABAP-Leitfaden/clean-core/solution-approach/#level-concept) entsprechen.
 
-Mit der klassischen, prozeduralen ABAP-Programmierung sind diese Anforderungen nur schwer zu erfüllen, da diese eine hohe Abwärtskompabilität aufweisen, veraltete Möglichkeiten bieten und die Wartbarkeit erschweren. Dieser klassische, prozedurale Ansatz ist nicht mehr zeitgemäß und sollte nicht mehr Anwendung finden.  
+Mit der klassischen, prozeduralen ABAP-Programmierung sind diese Anforderungen nur schwer zu erfüllen, da diese eine hohe Abwärtskompatibilität aufweisen, veraltete Möglichkeiten bieten und die Wartbarkeit erschweren. Dieser klassische, prozedurale Ansatz ist nicht mehr zeitgemäß und sollte nicht mehr Anwendung finden.  
 
-Die Softwareentwicklungsmethoden und Techniken die heute dem ABAP-Entwickler zur Verfügung stehen, bieten für o.g. Problemfelder und für die Herausforderungen, die Anforderungen moderner Geschäftsanwendungen mit sich bringen, gute Lösungsansätze.  
+Die Softwareentwicklungsmethoden und Techniken, die heute dem ABAP-Entwickler zur Verfügung stehen, bieten für o.g. Problemfelder und für die Herausforderungen, die Anforderungen moderner Geschäftsanwendungen mit sich bringen, gute Lösungsansätze.  
 
 Schon seit vielen Jahren gibt es in ABAP die Möglichkeit objektorientiert zu programmieren. Auch wenn dies anfangs noch nicht erforderlich war, ist es heute einerseits technisch notwendig, wenn neue Möglichkeiten genutzt werden sollen. Andererseits bietet die Methodik der Objektorientierung sehr viele gute Ansätze Geschäftsanwendung so zu entwickeln, dass sie flexibel, wartbar, erweiterbar und robust umgesetzt werden können. Durch die Nutzung von ABAP Unit und eines guten Designs, können zahlreiche Funktionen über Unit Tests geprüft werden. Damit kann das Testen durch den Endanwender auf das Testen des Prozesses und damit der Testaufwand in der Fachabteilung reduziert werden, da die innere Struktur der Software über ABAP Unit Tests abgesichert wird.
 
@@ -53,7 +53,7 @@ Die detaillierte Erläuterung der Objektorientierung und die zahlreichen Möglic
 
 Das Thema Objektorientierung ist komplex und viele existierende Funktionalitäten in SAP folgen nicht den Designprinzipien der Objektorientierung, auch dann nicht wenn diese in ABAP-Klassen implementiert sind. Für dieses Kapitel sollten die Grundprinzipien der Objektorientierung bereits bekannt sein.  
 Die Hinweise und Tipps erfolgen hier in sehr vereinfachter Form. Es soll ein Vorgehen aufzeigen um die Objektorientierung nutzbringend anzuwenden und unsere Empfehlungen praxisorientiert untermauern.  
-Dies ist ein Anfang und kann helfen das Verständnis für ABAP-OO in den Entwicklerteams zu schaffen, erste Erfolgserlebnisse zu erzielen und mittels weitere Unterstützung durch Trainings und Coachings, Dokumentationen, Blogs und Online Events und durch Fachliteratur das Thema nachhaltig in der Organisation gewinnbringend zu nutzen.
+Dies ist ein Anfang und kann helfen das Verständnis für ABAP-OO in den Entwicklerteams zu schaffen, erste Erfolgserlebnisse zu erzielen und mittels weiterer Unterstützung durch Trainings und Coachings, Dokumentationen, Blogs und Online Events und durch Fachliteratur das Thema nachhaltig in der Organisation gewinnbringend zu nutzen.
 
 ## Merkmale objektorientierter Entwicklung in ABAP-Klassen
 
@@ -71,9 +71,9 @@ Bei einer Klasse, die nur statische Methoden beinhaltet und in der Verwendung ni
 Klassen, die die diese Erkennungsmerkmale besitzen, widersprechen den o.g. Anforderungen an modernen ABAP-Code.
 Weitere Indikatoren finden z.B. im [Clean-ABAP Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md).
 
-Klassen sollen übersichtlich gestaltet werden und entsprechend dem Single-Responsibility Prinzip nur eine Aufgaben erfüllen. Methoden so kurz wie möglich und dabei auch nur eine Aufgabe erfüllen. Diese Beschränkung zwingt dazu, Aufgaben in verschiedene Klassen zu delegieren. Damit sind die einzelnen Klassen weniger Komplex, die Komplexität verschiebt sich damit je nach Anwendung in das Klassengeflecht und dem Zusammenspiel der einzelnen Klassen. Dieses Zusammenspiel und die übergeordnete Logik wird in einem **Controller** gebündelt.  
+Klassen sollen übersichtlich gestaltet werden und entsprechend dem Single-Responsibility Prinzip nur eine Aufgabe erfüllen. Methoden so kurz wie möglich und dabei auch nur eine Aufgabe erfüllen. Diese Beschränkung zwingt dazu, Aufgaben in verschiedene Klassen zu delegieren. Damit sind die einzelnen Klassen weniger Komplex, die Komplexität verschiebt sich damit je nach Anwendung in das Klassengeflecht und dem Zusammenspiel der einzelnen Klassen. Dieses Zusammenspiel und die übergeordnete Logik wird in einem **Controller** gebündelt.  
 Um hier einer Komplexitätsverschiebung zu reduzieren und Strukturdefizite zu vermeiden, bedarf es guter Planung und Gestaltung der Struktur der Anwendung.  
-Dass während der Entwicklung Methoden und Attribute verschoben und umbenannt werden und Objekte umstrukturiert [Refactoring](/ABAP-Leitfaden/abap/oo-design/#die-bedeutung-des-refactorings-von-bestehenden-anwendungen) werden, gehört zum Softwareentwicklungsprozess dazu und ist Dank moderner Softwareentwicklungswerkzeuge in den ABAP-Development Tools in Eclipse und zusätzlichen AddOns einfach und sicher durchzuführen.
+Dass während der Entwicklung Methoden und Attribute verschoben und umbenannt werden und Objekte umstrukturiert [Refactoring](/ABAP-Leitfaden/abap/oo-design/#die-bedeutung-des-refactorings-von-bestehenden-anwendungen) werden, gehört zum Softwareentwicklungsprozess dazu und ist dank moderner Softwareentwicklungswerkzeuge in den ABAP-Development Tools in Eclipse und zusätzlichen AddOns einfach und sicher durchzuführen.
 
 ## Grundprinzipien der Objektorientierung (SOLID)
 
@@ -89,7 +89,7 @@ Ein Hilfsmittel für objektorientierte Entwürfe sind die SOLID-Prinzipien. Jede
 
 Eine kurze Beschreibung der Prinzipien finden Sie im [Unterabschnitt](/ABAP-Leitfaden/abap/oo-basics/), eine ausführliche Erklärung findet sich z.B. [im Blog von Uncle Bob](https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html), dem Autor von Clean Code.
 
-Insbesondere die beiden ersten Prinzipien sind ohne allzu tiefes OO Verständnis in ABAP umzusetzen und der Mehrwert wird schnell ersichtlich wenn die Wartung und Änderung von Code besser durchgeführt werden kann und weniger Seiteneffekte auftreten. Detailliertes Wissen und die Anwendung im ABAP-Kontext finden sich in Fachliteratur zum Thema Agile Softwareentwicklung in ABAP bzw. Testdriven Design in ABAP.  
+Insbesondere die beiden ersten Prinzipien sind ohne allzu tiefes OO Verständnis in ABAP umzusetzen und der Mehrwert wird schnell ersichtlich, wenn die Wartung und Änderung von Code besser durchgeführt werden kann und weniger Seiteneffekte auftreten. Detailliertes Wissen und die Anwendung im ABAP-Kontext finden sich in Fachliteratur zum Thema Agile Softwareentwicklung in ABAP bzw. Testdriven Design in ABAP.  
 
 ## Entwurfsmuster
 
@@ -125,8 +125,8 @@ Wenn die Anforderungen bekannt sind und analysiert wurden, sind zuerst die unter
 - Definition Objekt zum Lesen und Auswerten des Customizing auf Basis Organisationsdaten = **Customizing Objekt**
 - Definition Objekt zum Lesen der Datenbank, ggf. je nach Komplexität Aufteilung nach Geschäftsobjekt = **Datenobjekt(e)**.
 - Definition Objekt welches die Datenprüfungen und Validierungen durchführt = **Check Objekt**
-- Definition Objekt welches die Datenprozessierung durchführt und für die Erstellung des Ergebnisses zuständig ist **Geschäftslogik**.
-- Definition Objekt welches die Geschäftsfunktionalität abbildet und das Zusammenwirken der einzelnen Objekte orchestriert und verwaltet = **Controller**.
+- Definition Objekt, welches die Datenprozessierung durchführt und für die Erstellung des Ergebnisses zuständig ist **Geschäftslogik**.
+- Definition Objekt, welches die Geschäftsfunktionalität abbildet und das Zusammenwirken der einzelnen Objekte orchestriert und verwaltet = **Controller**.
 - Erstellung einer Factory Klasse, die die einzelnen Objektinstanzen erzeugt.
 - Definition einer Injektorklasse, mittels der das Mocking einzelner Funktionen ermöglicht wird.
 
@@ -134,7 +134,7 @@ Die Details zum ABAP Unit und wie man Unit-Tests erstellt finden Sie im Kapitel 
 
 ## Konzepte in der Objektorientierung
 
-Neben den Grundlagen, gibt es weitere Konzepte und Techniken, durch deren Einsatz erst der volle Mehrwert der Objektorientierung zum Einsatz kommt und auch komplexe Problemstellungen elegant gelöst werden können, was mit klassischen Technologien deutlich aufwändiger oder gar nicht möglich war. Auch hier können wir in der ersten Version des neuen Leitfadens nur in sehr kurzer Form hinweisen. In der ABAP Dokumentation und in Trainings und Büchern finden Sie weitere Informationen.
+Neben den Grundlagen gibt es weitere Konzepte und Techniken, durch deren Einsatz erst der volle Mehrwert der Objektorientierung zum Einsatz kommt und auch komplexe Problemstellungen elegant gelöst werden können, was mit klassischen Technologien deutlich aufwändiger oder gar nicht möglich war. Auch hier können wir in der ersten Version des neuen Leitfadens nur in sehr kurzer Form hinweisen. In der ABAP Dokumentation und in Trainings und Büchern finden Sie weitere Informationen.
 
 ### Erstellung von Factories
 
@@ -158,31 +158,31 @@ Dieses Verfahren folgt dem Prinzip der Steuerungsumkehr und trägt zur Separatio
 Die Erstellung technischer Objekte erscheint anfangs aufwändiger als der Top-Down Ansatz beim prozeduralen Vorgehen. 
 Mittels Autovervollständigung, Nutzung von Code Templates und Quickfixes in den ABAP Development Tools in Eclipse (ADT) wird der ABAP-Code für die technischen Klassen sehr schnell und einfach erstellt, wodurch sich der Mehraufwand im Coding sehr in Grenzen hält.  
 Ist dieses Muster erst einmal eingeübt, übertreffen die Vorteile dieses Verfahrens den Nachteil des vermeintlich erhöhten initialen Aufwands bei weitem.  
-Natürlich muss dass Vorgehen auch eingeübt werden um eine gewisse Entwicklungsperformanz und -effizienz zu entwickeln.  
+Natürlich muss dass Vorgehen auch eingeübt werden, um eine gewisse Entwicklungsperformanz und -effizienz zu entwickeln.  
 Bitte beachten Sie hierzu den **[ADT-Leitfaden](https://1dsag.github.io/ADT-Leitfaden/)** der DSAG, der Sie unterstützt, ADT effizient und flächendeckend im Unternehmen einzusetzen.
 
 ### Vollständiger Einsatz von klassenbasierten Ausnahmen zur Fehlerbehandlung
 
 Verwenden Sie für die Behandlung von Fehlern ausschließlich klassenbasierte Ausnahmen. Diese sollen auch nur für den Fall von Fehlern eingesetzt werden und nicht für Erfolgs- oder Statusmeldungen aus der Anwendung missbraucht werden. Lediglich technische Einschränkungen von Seiten SAP zwingen Sie an einigen wenigen Stellen dazu klassische Exceptions einzusetzen.  
 Von der Verwendung von Returncodes raten wir ihnen ebenso ab wie von der alleinigen Rückgabe von Message Tabellen wie z.B. BAPIRET2, wie Sie dies z.B. in BAPI-Funktionsbausteinen oft vorfinden. diese Konzepte erzeugen das Problem, dass im aufrufenden Programm innerhalb des Ablaufs der Geschäftslogik geprüft werden muss, ob ein Fehlerfall vorliegt und somit eine saubere Trennung von technischen Belangen und Geschäftslogik nicht gegeben ist.
-Der Einsatz von Ausnahmeklassen ermöglicht hier eine deutlich bessere Trennung, Des Weiteren können Sie die Fehlerbehandlung aufgrund der Propagierung von Ausnahmen an zentralen Stellen bündeln. Bitte beachtens Sie hierzu auch die Empfehlungen des 
+Der Einsatz von Ausnahmeklassen ermöglicht hier eine deutlich bessere Trennung, Des Weiteren können Sie die Fehlerbehandlung aufgrund der Propagierung von Ausnahmen an zentralen Stellen bündeln. Bitte beachten Sie hierzu auch die Empfehlungen des 
 [Clean-ABAP Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/sub-sections/Exceptions.md)
 
 Ein in ABAP-OO geübter Entwickler definiert in der Konzeptionsphase die auftretenden Fehlersituationen, die in einem (Unter)Paket auftreten können und erstellt darauf basierend die entsprechenden Ausnahmeklassen mit den Fehlermeldungen (als Text-ID oder Nachrichtenbasiert).
 Wenn der Code der Geschäftslogik implementiert wird und die Fehler behandelt werden müssen, wird an der betreffenden Stelle die Exception aufgerufen. Die Behandlung muss nun nicht wie bei Funktionsbausteinen in jeweils jeder Aufrufschicht erfolgen, sondern kann zentral an einer Stelle erfolgen.
-Dies gewährleistet eine konsistente Behandlung und vermindert den Aufwand wenn Fehler an mehreren Stellen auftreten können.
+Dies gewährleistet eine konsistente Behandlung und vermindert den Aufwand, wenn Fehler an mehreren Stellen auftreten können.
 
 ### Interfaces
 
 Durch den Einsatz von Interfaces wird die Definition von Methoden und deren Implementierung voneinander entkoppelt. Wird ein Interface verwendet, kann die Implementierung der Klasse geändert, bzw. flexibilisiert werden. Das Interface definiert sozusagen den Vertrag zwischen Verwender und implementierender Klasse und "versteckt" somit die Implementierung (Software-Hiding-Prinzip).  
 Für öffentliche Methoden die Funktionen für andere Klassen bereitstellen sollten Sie grundsätzlich Interfaces definieren und damit dafür sorgen, dass die Verwender nur mit diesen Interfaces arbeiten. Das Erzeugen von konkreten Objekten übernimmt eine separate Factory Klasse oder in besonders einfachen Fällen eine Factorymethode der Klasse, z.B.: ```ZCL_BUSINESS_LOGIC=>GET_INSTANCE( CompanyCode )``` [Siehe SAP-Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-multiple-static-creation-methods-to-optional-parameters)
 
-Interfaces werden auch für Unit-Tests benötigt, da z.B. Datenbankzugriffe in Unit-Tests durch programmierte Testdaten ersetzt werden müssen. Die Datenbankklasse implementiert ein Interface, das im Produktcode aufgerufen wird. Wird der Unit-Test ausgeführt, wird statt der Datenbankklasse, eine sog. Mockingklasse aufgerufen, die statisch hinterlegte Daten beinhaltet, Methoden zur lokalen Testdatenerzeugung bereitstellt und diese zurückliefert. Die Ausführungen dazu finden Sie im Kapitel [Testing](/ABAP-Leitfaden/testing/index).
+Interfaces werden auch für Unit-Tests benötigt, da z.B. Datenbankzugriffe in Unit-Tests durch programmierte Testdaten ersetzt werden müssen. Die Datenbankklasse implementiert ein Interface, das im Produktcode aufgerufen wird. Wird der Unit-Test ausgeführt, wird statt der Datenbankklasse, eine sog. Mockingklasse aufgerufen, die statisch hinterlegten Daten beinhaltet, Methoden zur lokalen Testdatenerzeugung bereitstellt und diese zurückliefert. Die Ausführungen dazu finden Sie im Kapitel [Testing](/ABAP-Leitfaden/testing/index).
 
 ### Vererbung
 
 Ein wichtiges Konzept in der Objektorientierung ist die Vererbung. Dabei kann eine Klasse von einer anderen Klasse abgeleitet werden und somit die Eigenschaften der übergeordneten Klasse erben. So hat eine erbende Klasse die Attribute und Methoden der übergeordneten Klasse, kann aber weitere spezifische Methoden ergänzen oder ererbte Methoden redefinieren, d.h. eine Ergänzung der vererbten Implementierung oder gar eine eigene Implementierung der Methode erhalten.  
-Bei der Vererbung ist das Liskovsche Substitutionsprinzip zu beachten und genau zu prüfen, ob im vorgesehenen Kontext Vererbung Sinn macht. Oft ist es besser statt Vererbung Interfaces zu verwenden oder die Methode der Delegation zu verwenden und verschiedene Aspekte einer Klasse auf verschiedene Klassen zu verteilen und das Zusammenspiel über einen Controller und die Instanzen über eine Factory zu regeln.  
+Bei der Vererbung ist das Liskovsche Substitutionsprinzip zu beachten und genau zu prüfen, ob im vorgesehenen Kontext Vererbung Sinn macht. Oft ist es besser, statt Vererbung Interfaces zu verwenden oder die Methode der Delegation zu verwenden und verschiedene Aspekte einer Klasse auf verschiedene Klassen zu verteilen und das Zusammenspiel über einen Controller und die Instanzen über eine Factory zu regeln.  
 
 ## Objektorientierung in Funktionsbausteinen und Form-Routinen
 
@@ -207,7 +207,7 @@ Diese Trennung ist auch eine wichtige Voraussetzung für die Testbarkeit einer A
 
 ## Testbarkeit durch gutes Design
 
-Gute Strukturierung in den Paketen, als auch in den Objekten sind grundlegende Voraussetzungen um die Testbarkeit der Software zu erhöhen. Sind die Verantwortlichkeiten der Komponenten im Rahmen einer guten Architektur geklärt und die Aufgaben auf verschiedene Objekte sinnvoll verteilt, erleichtert dies den Einsatz von ABAP Unit massgeblich.
+Gute Strukturierung in den Paketen, als auch in den Objekten sind grundlegende Voraussetzungen, um die Testbarkeit der Software zu erhöhen. Sind die Verantwortlichkeiten der Komponenten im Rahmen einer guten Architektur geklärt und die Aufgaben auf verschiedene Objekte sinnvoll verteilt, erleichtert dies den Einsatz von ABAP Unit maßgeblich.
 Im Rahmen der vorgenannten Architektur- und Designentscheidungen müssen bereits testrelevante Aspekte miteinbezogen werden, um effizient ABAP-Unit umsetzen zu können, da die Struktur sich unmittelbar auf die Testbarkeit auswirkt.
 
 Sind Datenbankzugriffe und Zugriffe auf SAP Funktionsbausteine oder Klassen bereits in einer eigenen Softwareschicht gekapselt und werden die Instanzen über eine Factory erzeugt, die eine Injection vorsieht, ist es für einen erfahrenen Entwickler sehr unproblematisch, den eigenen Code über ABAP Unit Tests zu testen und Datenbankzugriffe sowie SAP-Funktionen über Test-Mocks-Objekte zu entkoppeln. Dies verringert den Aufwand für die Unit-Test Erstellung deutlich gegenüber einem Vorgehen, bei dem der Testentwickler im Code Techniken wie Test-seams anwenden muss oder den Code umbauen muss, um die Entkopplung der Eigenentwicklung von SAP-Bausteinen in Tests sicherzustellen.
@@ -216,7 +216,7 @@ Das Vorgehen, Empfehlungen und Hinweise zu ABAP Unit finden Sie im Kapitel [Test
 
 ## Die Bedeutung des Refactorings von bestehenden Anwendungen
 
-Die in diesem Leitfaden beschriebenen Empfehlungen, technischen Methodiken und Programmiertechniken lassen sich sehr gut bei der Erstellung neuer Anwendungen einplanen und anwenden. darüberhinaus können und sollten diese auch zur Verbesserung bestehender Entwicklungen angewendet werden. Man bezeichnet dies als Refactoring  
+Die in diesem Leitfaden beschriebenen Empfehlungen, technischen Methodiken und Programmiertechniken lassen sich sehr gut bei der Erstellung neuer Anwendungen einplanen und anwenden. Darüber hinaus können und sollten diese auch zur Verbesserung bestehender Entwicklungen angewendet werden. Man bezeichnet dies als Refactoring  
 
 Refactoring sollte immer dann vorgenommen werden, wenn bestehende Anwendungen geändert oder erweitert werden müssen. Dafür muss Zeit eingeplant werden. Gute Hinweise für ein sinnvolles Vorgehen zum Refactoring ist z.B. im [Clean-ABAP Styleguide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) beschrieben.
 
