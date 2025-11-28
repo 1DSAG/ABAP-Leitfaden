@@ -29,7 +29,8 @@ wird vorausgesetzt.
 Clean ABAP stellt die Anpassung der Prinzipien aus dem Buch von Robert C. Martin auf ABAP dar. Das offizielle, im Repository der SAP freigegebene Dokument wurde von Florian Hoffmann und Klaus Häuptle 2019 auf den Weg gebracht und wird seitdem als [open source durch die ABAP Community](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md) erweitert.
 
 Beispielregel mit Erläuterung ([Prefer inline to up-front declarations](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md#prefer-inline-to-up-front-declarations) im Clean ABAP Guide):
-![Clean ABAP Example Rule: Prefer inline to up-front declarations](../img/clean_abap_prefer_inline_rule.png)
+
+![Clean ABAP Example Rule: Prefer inline to up-front declarations](/img/clean_abap_prefer_inline_rule.png)
 
 Clean ABAP Example Rule Prefer inline to up-front declarations
 {: .img-caption}
