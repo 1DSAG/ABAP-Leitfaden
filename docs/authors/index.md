@@ -229,7 +229,7 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 <tr class="odd">
 <td>Julius Dacheneder</td>
 <td>RAP, UI</td>
-<td>2014 hatte ich als Werkstudent bei der msg systems ag meinen Erstkontakt zu ABAP und konnte seitdem in diversen Kundenprojekten viel Erfahrung mit moderner ABAP und SAPUI5 Entwicklung - zunächst via BOPF-basierten Fiori-Apps - sammeln. Seit 2025 bin ich nun für den oberösterreichischen Mittelstand auf S/4HANA Public Cloud Systemen mit der RAP-Entwicklung beschäftigt. Die DSAG hat mich auf diesem Weg stets begleitet: Ich konnte vieles mit und von ihr lernen und freue mich nun, selbst ein klein wenig zurückgeben zu können.</td>
+<td>2014 hatte ich als Werkstudent bei der msg systems ag meinen Erstkontakt zu ABAP und konnte seitdem in diversen Kundenprojekten (größtenteils durch die Entwicklung BOPF-basierter Fiori-Apps) viel Erfahrung mit moderner ABAP und SAPUI5 Entwicklung sammeln. Seit 2025 bin ich nun für den oberösterreichischen Mittelstand auf der S/4HANA Public Cloud mit RAP-Entwicklungen beschäftigt. Die DSAG hat mich auf diesem Weg stets begleitet: Ich konnte vieles mit und von ihr lernen und freue mich nun, selbst ein klein wenig zurückgeben zu können.</td>
 </tr>
 
 <tr class="odd">
@@ -279,4 +279,5 @@ Ich hoffe, dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und m
 
 
 Als Sprecherteam des Arbeitskreis Development (Sebastian und Björn), möchten wir uns bei allen Autoren und Reviewern bedanken, dass sie uns auf dem Weg der 1,5 Jahre begleitet haben. Auch für den wertvollen Austausch und die zahlreichen Gespräche rund um den Leitfaden und die ABAP Entwicklung der Zukunft. Ein großer Dank geht auch an die Kollegen der DSAG, die bei der Revision und Veröffentlichung des Dokuments mitgewirkt haben.
+
 
