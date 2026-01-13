@@ -227,6 +227,12 @@ Hier stellen sich die Autoren vor, an welchen Kapiteln sie mitgearbeitet haben, 
 </tr>
 
 <tr class="odd">
+<td>Julius Dacheneder</td>
+<td>RAP, UI</td>
+<td>2014 hatte ich als Werkstudent bei der msg systems ag meinen Erstkontakt zu ABAP und konnte seitdem in diversen Kundenprojekten (größtenteils durch die Entwicklung BOPF-basierter Fiori-Apps) viel Erfahrung mit moderner ABAP und SAPUI5 Entwicklung sammeln. Seit 2025 bin ich nun für den oberösterreichischen Mittelstand auf der S/4HANA Public Cloud mit RAP-Entwicklungen beschäftigt. Die DSAG hat mich auf diesem Weg stets begleitet: Ich konnte vieles mit und von ihr lernen und freue mich nun, selbst ein klein wenig zurückgeben zu können.</td>
+</tr>
+
+<tr class="odd">
 <td>Marco Krapf</td>
 <td>ALM, Testing / weitere Testwerkzeuge</td>
 <td>Steht seit zehn Jahren als SAP Solution Manager Libero auf dem Spielfeld. Anfangs in einem super Team in Hamburg, dann positionsgetreu in den Süden gewechselt. Kein gelernter ABAP-Entwickler. Hat die ALM-Werkzeugkiste in der Hand, um die Mannschaft mit Tools des Application Lifecycle Managements wie Prozess-Management, Test-Management, Custom Code Management oder Monitoring zu unterstützen. Sieht SAP als ein Point-and-Click-Adventure, bei dem jeden Tag neue Aufgaben und Rätsel durch Klicken auf dem Bildschirm, durch logisches Denken und durch Reden mit den anderen Charakteren des Spiels gelöst werden müssen.</td>
@@ -271,4 +277,7 @@ Ich hoffe, dass diese Version des Leitfadens vielen ABAP-Entwicklern hilft und m
 
 ## Danksagungen
 
+
 Als Sprecherteam des Arbeitskreis Development (Sebastian und Björn), möchten wir uns bei allen Autoren und Reviewern bedanken, dass sie uns auf dem Weg der 1,5 Jahre begleitet haben. Auch für den wertvollen Austausch und die zahlreichen Gespräche rund um den Leitfaden und die ABAP Entwicklung der Zukunft. Ein großer Dank geht auch an die Kollegen der DSAG, die bei der Revision und Veröffentlichung des Dokuments mitgewirkt haben.
+
+
