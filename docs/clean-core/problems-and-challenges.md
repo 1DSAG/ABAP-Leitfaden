@@ -17,7 +17,7 @@ Für etablierte Brownfield-Kunden oder SAP-AddOn Hersteller (Partner), die auf L
 
 ## Kundencode
 
-Der Großteil des über Jahrzehnte gewachsenen Kundencodes muss überarbeitet werden. Grund dafür ist, das bestehende Entwicklung häufig auf nicht freigegebenen APIs oder Entwicklungskomponenten aus dem SAP-Standard basiert. Dabei sollten Sie im ersten Schritt analysieren, ob sie ihr System Cloud-Ready machen wollen. Dabei sollten sie auch prüfen, welche Lösungen vielleicht bereits veraltete Technologien verwenden, wie zum Beispiel BOPF, die komplexe Variantenkonfiguration-Einstellungen oder den klassischen Report.
+Der Großteil des über Jahrzehnte gewachsenen Kundencodes muss überarbeitet werden. Grund dafür ist, das bestehende Entwicklungen häufig auf nicht freigegebenen APIs oder Entwicklungskomponenten aus dem SAP-Standard basieren. Dabei sollten Sie im ersten Schritt analysieren, ob sie ihr System Cloud-Ready machen wollen. Dabei sollten sie auch prüfen, welche Lösungen vielleicht bereits veraltete Technologien verwenden, wie zum Beispiel BOPF, die komplexe Variantenkonfiguration-Einstellungen oder den klassischen Report.
 
 Neben den Kundenerweiterungen im SAP Standard, gibt es in jedem SAP-System die Thematik der Custom SAP Applications, das sind Eigenentwicklungen, welche neben dem SAP Standard parallel laufen. Die Ablösung solcher Anwendungen bedarf eigener Großprojekte und muss weiterhin von Prozessexperten betreut werden. 
  
@@ -31,16 +31,17 @@ Von der Verhandlung der Lizenzen, Aufbau der Infrastruktur, Schulung der SAP Bas
 
 Vor allem alternative Technologien, welche mit vorhandenen ABAP-Entwicklern nutzbar sind, werden gebraucht, da existierende Kundenerweiterungen/ RICEFW Objekte weiterhin gepflegt werden müssen.
  
-## Ogranisation
+## Organisation
+
 Der klassische Berater und Entwickler entwickelt sich durch die neuen Technologien zu einem Vollzeit-Entwickler mit breiten Entwicklungskenntnissen, hier ist massives Change Management angesagt. Mehr dazu erfahren Sie im [Kapitel Organisation](/ABAP-Leitfaden/organization/).
 
 Durch die No-Code und Low-Code Optionen, vor allem bei SAP Build, aber auch Key-User Extensibility können nicht-Entwickler in Fusion Teams mitarbeiten. Das erfordert auch eine moderne Arbeitsweise, welche agiler Natur sein sollte.
  
 ## (Geschäfts-)Prozesse
  
-Organisatorische Prozesse können bspw. im Reporting enorm verschlankt werden. Wenn Standard CDS Views und Standard APIs genommen werden, dann ziehen die Berechtigungsprüfungen in der CDS View. So können Sie Datenprodukte anbieten und die Fachbereichs Kollegen können ohne die IT Reporting betreiben. Ein mögliches Problem: Das bringt die Gefahr das un-performante CDS Views (Stichwort: Compatibility-Views) die Systemlast enorm beeinträchtigen.
+Organisatorische Prozesse können bspw. im Reporting enorm verschlankt werden. Wenn Standard CDS Views und Standard APIs genommen werden, dann ziehen die Berechtigungsprüfungen in der CDS View. So können Sie Datenprodukte anbieten und die Fachbereichskollegen können ohne die IT Reporting betreiben. Ein mögliches Problem: Das bringt die Gefahr das un-performante CDS Views (Stichwort: Compatibility-Views) die Systemlast enorm beeinträchtigen.
 
-Standardprozesse werden von der SAP unterstützt und Standard Fiori Apps kann auch ein Nicht-Entwickler recht simpel im UI anpassen. Kunden mit langer SAP Historie haben oftmals Geschäftsprozessanforderungen, welche weit über die Standard Apps hinaus gehen. Auch ein mögliches Thema sind die SAP SEGW Projekt-basierten Apps: wenn die Standard Fiori App erstmal auf den SAP SEGW-Projekte aufgebaut wird und dann nach einem Systemupgrade diese App auf das RAP-Model im Backend umzieht, so ist die Eigenentwicklung erstmal nachzubauen im neuen RAP-Modell.
+Standardprozesse werden von der SAP unterstützt und Standard Fiori Apps kann auch ein Nicht-Entwickler recht simpel im UI anpassen. Kunden mit langer SAP Historie haben oftmals Geschäftsprozessanforderungen, welche weit über die Standard Apps hinausgehen. Auch ein mögliches Thema sind die SAP SEGW Projekt-basierten Apps: wenn die Standard Fiori App erstmal auf den SAP SEGW-Projekte aufgebaut wird und dann nach einem Systemupgrade diese App auf das RAP-Model im Backend umzieht, so ist die Eigenentwicklung erstmal nachzubauen im neuen RAP-Modell.
 
 ## Add-Ons
 
