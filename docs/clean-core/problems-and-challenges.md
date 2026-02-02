@@ -31,7 +31,7 @@ Von der Verhandlung der Lizenzen, Aufbau der Infrastruktur, Schulung der SAP Bas
 
 Vor allem alternative Technologien, welche mit vorhandenen ABAP-Entwicklern nutzbar sind, werden gebraucht, da existierende Kundenerweiterungen/ RICEFW Objekte weiterhin gepflegt werden müssen.
  
-## Ogranisation
+## Organisation
 Der klassische Berater und Entwickler entwickelt sich durch die neuen Technologien zu einem Vollzeit-Entwickler mit breiten Entwicklungskenntnissen, hier ist massives Change Management angesagt. Mehr dazu erfahren Sie im [Kapitel Organisation](/ABAP-Leitfaden/organization/).
 
 Durch die No-Code und Low-Code Optionen, vor allem bei SAP Build, aber auch Key-User Extensibility können nicht-Entwickler in Fusion Teams mitarbeiten. Das erfordert auch eine moderne Arbeitsweise, welche agiler Natur sein sollte.
