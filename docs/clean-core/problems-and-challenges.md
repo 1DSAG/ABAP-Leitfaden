@@ -17,7 +17,7 @@ Für etablierte Brownfield-Kunden oder SAP-AddOn Hersteller (Partner), die auf L
 
 ## Kundencode
 
-Der Großteil des über Jahrzehnte gewachsenen Kundencodes muss überarbeitet werden. Grund dafür ist, das bestehende Entwicklung häufig auf nicht freigegebenen APIs oder Entwicklungskomponenten aus dem SAP-Standard basiert. Dabei sollten Sie im ersten Schritt analysieren, ob sie ihr System Cloud-Ready machen wollen. Dabei sollten sie auch prüfen, welche Lösungen vielleicht bereits veraltete Technologien verwenden, wie zum Beispiel BOPF, die komplexe Variantenkonfiguration-Einstellungen oder den klassischen Report.
+Der Großteil des über Jahrzehnte gewachsenen Kundencodes muss überarbeitet werden. Grund dafür ist, das bestehende Entwicklungen häufig auf nicht freigegebenen APIs oder Entwicklungskomponenten aus dem SAP-Standard basieren. Dabei sollten Sie im ersten Schritt analysieren, ob sie ihr System Cloud-Ready machen wollen. Dabei sollten sie auch prüfen, welche Lösungen vielleicht bereits veraltete Technologien verwenden, wie zum Beispiel BOPF, die komplexe Variantenkonfiguration-Einstellungen oder den klassischen Report.
 
 Neben den Kundenerweiterungen im SAP Standard, gibt es in jedem SAP-System die Thematik der Custom SAP Applications, das sind Eigenentwicklungen, welche neben dem SAP Standard parallel laufen. Die Ablösung solcher Anwendungen bedarf eigener Großprojekte und muss weiterhin von Prozessexperten betreut werden. 
  
