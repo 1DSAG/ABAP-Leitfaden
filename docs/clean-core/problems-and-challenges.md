@@ -39,7 +39,7 @@ Durch die No-Code und Low-Code Optionen, vor allem bei SAP Build, aber auch Key-
  
 ## (Geschäfts-)Prozesse
  
-Organisatorische Prozesse können bspw. im Reporting enorm verschlankt werden. Wenn Standard CDS Views und Standard APIs genommen werden, dann ziehen die Berechtigungsprüfungen in der CDS View. So können Sie Datenprodukte anbieten und die Fachbereichs Kollegen können ohne die IT Reporting betreiben. Ein mögliches Problem: Das bringt die Gefahr das un-performante CDS Views (Stichwort: Compatibility-Views) die Systemlast enorm beeinträchtigen.
+Organisatorische Prozesse können bspw. im Reporting enorm verschlankt werden. Wenn Standard CDS Views und Standard APIs genommen werden, dann ziehen die Berechtigungsprüfungen in der CDS View. So können Sie Datenprodukte anbieten und die Fachbereichskollegen können ohne die IT Reporting betreiben. Ein mögliches Problem: Das bringt die Gefahr das un-performante CDS Views (Stichwort: Compatibility-Views) die Systemlast enorm beeinträchtigen.
 
 Standardprozesse werden von der SAP unterstützt und Standard Fiori Apps kann auch ein Nicht-Entwickler recht simpel im UI anpassen. Kunden mit langer SAP Historie haben oftmals Geschäftsprozessanforderungen, welche weit über die Standard Apps hinaus gehen. Auch ein mögliches Thema sind die SAP SEGW Projekt-basierten Apps: wenn die Standard Fiori App erstmal auf den SAP SEGW-Projekte aufgebaut wird und dann nach einem Systemupgrade diese App auf das RAP-Model im Backend umzieht, so ist die Eigenentwicklung erstmal nachzubauen im neuen RAP-Modell.
 
