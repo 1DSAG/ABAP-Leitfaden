@@ -459,7 +459,7 @@ Entwicklungsobjekt eingesetzt werden.
 
 ## ABAP Cleaner
 
-Der 2023 öffentlich erschienene [ABAP Cleaner Link](https://github.com/SAP/abap-cleaner) ist eine Erweiterung für ADT, welche die Anwendung von mehr als 90 Regeln zur Formatierung und Gestaltung von ABAP Code ermöglicht.
+Der 2023 öffentlich erschienene [ABAP Cleaner](https://github.com/SAP/abap-cleaner) ist eine Erweiterung für ADT, welche die Anwendung von mehr als 90 Regeln zur Formatierung und Gestaltung von ABAP Code ermöglicht.
 
 ABAP Code wird nicht nur wie bei Pretty Printer formatiert, es werden auch, basierend auf den eingestellten Regeln, Optimierungen des ABAP Codes vorgenommen.
 Nicht verwendete Methoden-Parameter werden durch Kommentare kenntlich gemacht und es können - je nach Einstellung - nicht verwendete Variablen automatisch gelöscht werden.
