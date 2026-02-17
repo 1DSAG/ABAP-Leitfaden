@@ -21,7 +21,7 @@ RAP bildet dabei das komplette E2E-Szenario von der Datenbankschicht bis hin zum
 {: .recommendation }
 > * RAP sollte [frühestens ab Release 2021](https://pages.community.sap.com/topics/abap/rap) produktiv genutzt werden. Setzen Sie sich bei Bedarf detailliert mit dem eingeschränkten Funktionsumfang im Release 1909 sowie 2020 (wie das Fehlen von Validations, Determinations, Draft, ...) auseinander!  
 > * In der Regel sollten Sie für Neuentwicklungen das integrierte Draft-Konzept nutzen und lediglich bei triftigen Gründen darauf verzichten.
-> * Da RAP als Technologie relativ neu ist gibt es teils eklatante Unterschiede je nach S/4HANA Release. Machen Sie sich mit den Einschränkungen ihres Systems vorab vertraut!  
+> * Da RAP als Technologie relativ neu ist, gibt es teils eklatante Unterschiede je nach S/4HANA Release. Machen Sie sich mit den Einschränkungen ihres Systems vorab vertraut!  
 > * Wann immer möglich sollten neue Applikationen mit Fiori Elements umgesetzt werden. SAPUI5 Freestyle-Apps verlocken gerne dazu, sich durch zusätzliche Freiheiten in erhöhte Komplexität locken zu lassen und führen in der Regel zu deutlichem Mehraufwand.
 > * Vergessen Sie nicht, Ihre Entwicklungen mit RAP zur Erweiterbarkeit für andere Konsumenten freizugeben, falls dies gewünscht ist.
 
