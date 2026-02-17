@@ -18,7 +18,7 @@ Die Nutzung von SAP-Standardprozessen und Erweiterungsmöglichkeiten bietet Unte
 ## Gründe für die Nutzung von SAP-Standard-Prozessen und Erweiterungsmöglichkeiten  
 
 ### Zukunftssicherheit und Innovation  
-SAP Standardtransaktionen und -anwendungen werden mit jedem S/4 HANA Release verbessert und erweitert. SAP bietet neue Innovationen ausschließlich auf Standardprozessen an, insbesondere in der Public Cloud. Die Nutzung dieser Prozesse stellt sicher, dass Unternehmen von zukünftigen Updates und Weiterentwicklungen profitieren können. Eine Entwicklung auf Basis von Standard-APIs und damit Standard-Datenprodukten ist zukunftssicher.   
+SAP Standardtransaktionen und -anwendungen werden mit jedem S/4HANA Release verbessert und erweitert. SAP bietet neue Innovationen ausschließlich auf Standardprozessen an, insbesondere in der Public Cloud. Die Nutzung dieser Prozesse stellt sicher, dass Unternehmen von zukünftigen Updates und Weiterentwicklungen profitieren können. Eine Entwicklung auf Basis von Standard-APIs und damit Standard-Datenprodukten ist zukunftssicher.   
 
 ### Reduzierung technischer Schulden  
  Die Reduzierung der technischen Schulden erleichtert die Einführung von Audit/Compliance-konformen und Security-by-Default-Techniken. Beispiel: Kundenspezifische APIs auf Basis von RAP im Managed Szenario ermöglichen einen sicheren Datenaktualisierungsprozess. Langfristig wird der Aufwand für Wartung und Anpassungen reduziert, was eine agile und sichere IT-Landschaft unterstützt. 
@@ -52,4 +52,4 @@ Ist die Umstellung auf Clean Core für Ihr Unternehmen überhaupt wirtschaftlich
 
 ### Know How
 
-Besitzen Sie bereits im Unternehmen das nötige Know How für die Transformation? Die Entwicklung, aber auch die Beratung, benötigen für den Umstieg auf Clean Core eine Menge an neuem Wissen für aktuelle Technologien und Best Practices auf einem S/4 HANA System.
+Besitzen Sie bereits im Unternehmen das nötige Know How für die Transformation? Die Entwicklung, aber auch die Beratung, benötigen für den Umstieg auf Clean Core eine Menge an neuem Wissen für aktuelle Technologien und Best Practices auf einem S/4HANA System.
