@@ -84,7 +84,7 @@ kann jedoch die Lesbarkeit erschweren, z.B. ist `tj02_list` schwerer verständli
 > Drücke dich durch Code aus - nicht durch Kommentare.
 
 Dieses sollte einer der Leitsätze beim Schreiben von ABAP sein. Prüfen Sie jeden Kommentar, ob dieser nicht ein Ersatz für eine zu verbessernde Namensgebung bzw. Modularisierung ist. Eine lange Codestrecke, die mit dem Kommentar "Positionen verarbeiten" beginnt, deutet darauf, dass hier eine Methode über einen entsprechenden Namen genau dies aussagen und erledigen könnte. Ein Kommentar soll vielmehr Hinweise geben, warum etwas wie gemacht wird und ggf. den Kontext knapp erläutern, anstatt zu beschreiben was gemacht wird.
-Zur Code Dokumentation ist ABAPDoc zu verwenden, somit sind Code Kommentare nur noch für spezifische, zeilenbezogene Erläuterungen zu verwenden. Z.B., wenn Funktionen und Fehlerbehandlungsblöcke nicht ausprogrammiert wurden, noch TODOs oder offene Fragen bestehen, die im Laufe des Lebenszyklus behoben werden müssen.
+Zur Code Dokumentation ist ABAP Doc zu verwenden, somit sind Code Kommentare nur noch für spezifische, zeilenbezogene Erläuterungen zu verwenden. Z.B., wenn Funktionen und Fehlerbehandlungsblöcke nicht ausprogrammiert wurden, noch TODOs oder offene Fragen bestehen, die im Laufe des Lebenszyklus behoben werden müssen.
 
 Stark veraltete ABAP Richtlinien mit Aussagen wie:
 
