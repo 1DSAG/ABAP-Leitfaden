@@ -116,7 +116,7 @@ Neben kulturellen und technologischen Themen ist ein wichtiger Aspekt das Vorgeh
 
 Eine allgemeingültige Empfehlung lässt sich daher nicht geben, wir möchten allerdings einige Punkte aus unseren Erfahrungen teilen, die eine Einordnung für ein individuelles Vorgehen ermöglichen:
 
-*   Viele Organisationen machen seit Jahren klassisches Projektmanagement mit klar definierten Rollen, Konzepten, Artefakten. Eine Änderung dieser Vorgehensmodelle an sich ist ein großes Change Projekt, dass viel Nachdenken, Zeit und Know-How bedarf. Konsistent und über Jahre hinweg.
+*   Viele Organisationen machen seit Jahren klassisches Projektmanagement mit klar definierten Rollen, Konzepten, Artefakten. Eine Änderung dieser Vorgehensmodelle an sich ist ein großes Change Projekt, das viel Nachdenken, Zeit und Know-How bedarf. Konsistent und über Jahre hinweg.
 *   Oft ist ein Vorschlag, „agiler zu werden“. Letztendlich sind Stakeholder oft unzufrieden mit der Innovationskraft oder Umsetzungsgeschwindigkeit von Anforderungen und sehen agile Methoden als geeignetes Instrument. Teils kommen diese Vorschläge auch aus der Entwicklungsorganisation selbst, da Mitarbeitende dort mit den aktuellen Abläufen unzufrieden sind.
 *   Vorgehensmodelle, Methoden, Prozesse und Strategien sind kontextabhängig – nicht jede Organisation, jedes Team oder jedes Projekt ist für jedes Modell sinnvoll. Daher ist es sinnvoll, nicht mit dem Statement „Wir sind jetzt agil!“ oder „Wir machen jetzt Scrum!“ zu starten, sondern zunächst zu prüfen, wo Herausforderungen und Probleme bestehen, in welchen Bereichen das Unternehmen besser werden möchte und wie das Know-how und die Ressourcen verteilt sind. Auf dieser Basis sollte dann das Problem angegangen werden und nicht eine potenzielle Lösung. Beziehen Sie die Menschen mit ein, die die wertschöpfende Arbeit verrichten und die Probleme lösen müssen.
 *   In Unternehmen gibt es teils gescheiterte Implementierung von „agile“, so dass dieses Wort einen negativen Beigeschmack hat. Die Ursachen hierfür sind mannigfaltig und multifaktoriell: zu wenig Coaching, zu viel Load in Kombination mit einem komplexen Projekt, zu wenig Ausbildung, schlechtes Tooling, kein Grund oder Wille zum Change, Big Bangs etc. Wenn sie agile Methoden nutzen möchten, müssen sie diesen Kontext bzw. die Historie ihres Unternehmens und Mitarbeitenden beachten.
@@ -132,7 +132,7 @@ Darüber hinaus ist „agile“ definiert durch Werte und Prinzipien, so dass ke
 *   Innerhalb dieser gibt es zusätzlich verschiedene Level und Reifegrade, an denen entlang sich eine Organisation entwickeln kann. Das [Kanban Maturity Modell](https://www.kanbanmaturitymodel.com/) ist hierfür ein Beispiel
     
 
-Welche Änderung auch immer für ihr Unternehmen gut ist – bedenken sie, dass es letztendlich und Menschen und Kommunikation geht. Versuchen sie ein gemeinsames Ziel, einen „Unity of Puprose“ zu schaffen, an dem sie ihr Vorgehen messen können und Konflikte auflösen können. Ansonsten besteht die Gefahr, dass ihre Initiative unter verschiedenen Richtungen („weniger Regeln und Struktur“ vs „mehr Vorgaben“) oder Interessen (z.B. Gegenläufigen Jahreszielen von Führungskräften) zerrieben wird. Oft gibt es auch die Konstellation, dass ein agiles Team dennoch einen Projektmanager oder Projektleiter hat, wodurch eine hybride Struktur entsteht. In diesem Fall empfiehlt es sich, im Kontext der Organisation zu prüfen, ob ein Wechsel von „Projekten zu Produkten“ hilfreich sein kann.
+Welche Änderung auch immer für ihr Unternehmen gut ist – bedenken sie, dass es letztendlich und Menschen und Kommunikation geht. Versuchen sie ein gemeinsames Ziel, einen „Unity of Purpose“ zu schaffen, an dem sie ihr Vorgehen messen können und Konflikte auflösen können. Ansonsten besteht die Gefahr, dass ihre Initiative unter verschiedenen Richtungen („weniger Regeln und Struktur“ vs „mehr Vorgaben“) oder Interessen (z.B. Gegenläufigen Jahreszielen von Führungskräften) zerrieben wird. Oft gibt es auch die Konstellation, dass ein agiles Team dennoch einen Projektmanager oder Projektleiter hat, wodurch eine hybride Struktur entsteht. In diesem Fall empfiehlt es sich, im Kontext der Organisation zu prüfen, ob ein Wechsel von „Projekten zu Produkten“ hilfreich sein kann.
 
 ## Status Quo in gewachsenen Landschaften
 
@@ -145,7 +145,7 @@ Es gibt eine große Auswahl an von Entwicklungsstandards, die beispielsweise im 
 
 {: .recommendation}
 > - Namenskonventionen für die kundeneigene Entwicklungen, optional im separaten Namensraum
-> - Strukturiertes Paketkonzeptes, optional mit klaren Paketschnittstellen
+> - Strukturiertes Paketkonzept, optional mit klaren Paketschnittstellen
 > - Statische Codeprüfung (z.B. ATC Checks) als Teil des Transportwesens mit der Prüfung nach den folgenden Code-Kriterien: Performance, Sicherheit, Compliance, Robustheit, Wartbarkeit, Erweiterbarkeit (ABAP Cloud). Siehe hierzu auch den DSAG ATC Leitfaden [dsag\_leitfaden\_atc\_2020\_06.pdf](https://www.dsag.de/wp-content/uploads/2021/12/dsag_leitfaden_atc_2020_06.pdf)
 > - Dokumentation von öffentlichen Methoden/Funktionsbausteinen
 > - Erstellung von [angemessener Dokumentation](/ABAP-Leitfaden/documentation/documentation_tipps/) .
@@ -187,7 +187,7 @@ Wir wollen die ABAP Cloud-Technologien und den SAP-Standard effektiv nutzen. Wir
 *   Aufbau einer Community of Practice: Senior ABAP Coaches
 *   Aktivierung der ersten ATC-Checks (z.B. Fokus Security, HANA Readiness) auf Basis der "Low hanging fruits"
 *   Schulung der ABAP-Entwickler, wo benötigt.
-*   Einführung eines Paketkonzepts mit Benennung von Verantwortlichkeiten für alle  Pakethierarchien.
+*   Einführung eines Paketkonzepts mit Benennung von Verantwortlichkeiten für alle Pakethierarchien.
     
 
 **Jahr 2** **„Strategie umsetzen“**
