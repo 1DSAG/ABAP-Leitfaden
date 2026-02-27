@@ -27,7 +27,7 @@ Die Umsetzung des Clean Core-Konzepts erfordert einen strategischen Ansatz und e
     * Harmonisieren Sie Ihre Geschäftsprozesse und starten Sie Projekte, um Z-Transaktionen in Standard-Fiori-Apps zu integrieren. Dazu sollten Sie die Funktionalitäten von Z-Transaktionen in Standard-Fiori-Apps wiederfinden oder erweitern.
     * Entscheiden Sie welche Kundenerweiterung bestehen bleiben. 
 3.	**Bewertung und Rationalisierung**: Führen Sie eine gründliche Bewertung der bestehenden SAP-Landschaften durch, um Bereiche der Komplexität und Redundanz zu identifizieren. Rationalisieren Sie Systeme und Prozesse, um sie mit den Prinzipien des Clean Core in Einklang zu bringen und Prioritäten für Vereinfachungsmaßnahmen zu setzen.
-    * Führen Sie Fit-Gap-Workshops durch und starten Sie Bereinigungsprojekte von performanten, unsicheren, oder ungenutzten Code. 
+    * Führen Sie Fit-Gap-Workshops durch und starten Sie Bereinigungsprojekte von inperformanten, unsicheren, oder ungenutzten Code. 
     * Bilden Sie Ihre Architekten aus, um anhand Richtlinien bewusst neue Technologien zu nutzen.
 
 ## Entscheidungshilfen

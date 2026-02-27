@@ -29,8 +29,8 @@ Bei den Adobe Document Services muss zwischen zwei Versionen unterschieden werde
 
 - SAP Wartung und Support auf  
     - SAP NetWeaver Application Server Java bis 2027 (erweiterte Wartung bis 2030)  
-    - SAP S/4 HANA Java bis 2030
-- Die Nachfolgelösung wird auf SAP HANA Extended Application Services Advanced Model (XSA) laufen und ist für Q1 2027 mit dem S/4 HANA 2025 FPS03 geplant.
+    - SAP S/4HANA Java bis 2030
+- Die Nachfolgelösung wird auf SAP HANA Extended Application Services Advanced Model (XSA) laufen und ist für Q1 2027 mit dem S/4HANA 2025 FPS03 geplant.
 - Für Druck-Formulare lizenzkostenfrei
 
 {: .note }
