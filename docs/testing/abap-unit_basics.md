@@ -110,7 +110,7 @@ Eine Unit-Test-Klasse hat - im Gengensatz zu einer gängigen ABAP-Klasse - ein p
 
 ### Genereller Ablauf
 
-Jede Klasse hat ein Include in dem mehrere lokale Klassen und Text-Klassen definiert werden können. Eine Testklasse besitzt Attribute, die etwas über die _Gefährlichkeit_ (Risk level) und die _Dauer_ (Duration) der Tests aussagen. Jede Testklasse hat Testmethoden, die mit dem Zusatz _FOR TESTING_ als solche kenntlich gemacht werden. Testmethoden werden in zufälliger Reihenfolge ausgeführt und dürfen nicht voneinander abhängen.
+Jede Klasse hat ein Include in dem mehrere lokale Klassen und Test-Klassen definiert werden können. Eine Testklasse besitzt Attribute, die etwas über die _Gefährlichkeit_ (Risk level) und die _Dauer_ (Duration) der Tests aussagen. Jede Testklasse hat Testmethoden, die mit dem Zusatz _FOR TESTING_ als solche kenntlich gemacht werden. Testmethoden werden in zufälliger Reihenfolge ausgeführt und dürfen nicht voneinander abhängen.
 
 In einer Testmethode wird eine (öffentliche) Methode der zu testenden Klasse ausgeführt und mit einem erwarteten Ergebnis verglichen. Stimmt die Erwartung überein, dann ist der Test erfolgreich. Die Instanz der zu testenden Klasse wird _F_CUT_ oder _CUT_ genannt. _CUT_ steht für _Code Under Test_. Vor Ausführung der Tests kann optional die Methode _SETUP_ ausgeführt werden, in der Vorbereitungen zum Testfall vorgenommen werden können (z.B. die Erzeugung der Instanz _CUT_). Nach Ausführung einer Testmethode können in der Methode _TEARDOWN_ Aufräumarbeiten durchgeführt werden. Es können beliebig viele andere Methoden oder Klassen definiert werden, die zur Unterstützung der Tests dienen.
 

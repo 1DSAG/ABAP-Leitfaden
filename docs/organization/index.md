@@ -129,7 +129,7 @@ Eine allgemeingültige Empfehlung lässt sich daher nicht geben, wir möchten al
     
 Darüber hinaus ist „agile“ definiert durch Werte und Prinzipien, so dass kein Framework notwendig ist, sondern jede Organisation sich an daran ausgerichtet einen eigenen Prozess erschaffen kann.
 
-*   Innerhalb dieser gibt es zusätzlich verschiedene Level und Reifegrade, an denen entlang sich eine Organisation entwickeln kann. Das [Kanban Maturity Modell](https://www.kanbanmaturitymodel.com/) ist hierfür ein Beispiel
+*   Innerhalb dieser Werte und Prinzipien gibt es zusätzlich verschiedene Level und Reifegrade, an denen entlang sich eine Organisation entwickeln kann. Das [Kanban Maturity Modell](https://www.kanbanmaturitymodel.com/) ist hierfür ein Beispiel
     
 
 Welche Änderung auch immer für ihr Unternehmen gut ist – bedenken sie, dass es letztendlich und Menschen und Kommunikation geht. Versuchen sie ein gemeinsames Ziel, einen „Unity of Purpose“ zu schaffen, an dem sie ihr Vorgehen messen können und Konflikte auflösen können. Ansonsten besteht die Gefahr, dass ihre Initiative unter verschiedenen Richtungen („weniger Regeln und Struktur“ vs „mehr Vorgaben“) oder Interessen (z.B. Gegenläufigen Jahreszielen von Führungskräften) zerrieben wird. Oft gibt es auch die Konstellation, dass ein agiles Team dennoch einen Projektmanager oder Projektleiter hat, wodurch eine hybride Struktur entsteht. In diesem Fall empfiehlt es sich, im Kontext der Organisation zu prüfen, ob ein Wechsel von „Projekten zu Produkten“ hilfreich sein kann.
