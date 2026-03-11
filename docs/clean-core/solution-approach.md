@@ -21,7 +21,7 @@ Die Umsetzung des Clean Core-Konzepts erfordert einen strategischen Ansatz und e
  
 1. **API-First-Ansatz**: Fokussieren Sie einen API-First-Ansatz für die Entwicklung, indem Sie Kernfunktionalitäten als wiederverwendbare APIs freigeben, die von internen und externen Anwendungen genutzt werden können. Dies fördert Agilität, Skalierbarkeit und Innovation und gewährleistet gleichzeitig Sicherheit und Governance. Stichwort: SOA - Service Oriented Architecture, oder auch Microservices.
     * Neue Schnittstellen, werden nur mit Standard APIs der SAP angelegt.
-    * Oder eigene Z* REST APIs werden intern geschaffen.
+    * Oder Kundeneigene REST APIs werden intern geschaffen.
 2. **Modularisierung und Standardisierung**: Zerlegen Sie monolithische Systeme in modulare Komponenten und standardisieren Sie Datenstrukturen und Schnittstellen, wo möglich. Dies ermöglicht eine größere Flexibilität, Wiederverwendbarkeit und Interoperabilität im gesamten Unternehmen.
     * Entscheiden Sie, wo die kundenspezifischen Daten gespeichert werden sollen. Wenn Sie zusätzliche Daten für Ihre Geschäftsprozesse benötigen, dann am besten integriert in ein Standarddatenprodukt, vermeiden Sie parallele Datenmodelle zur Standardtabellen.
     * Harmonisieren Sie Ihre Geschäftsprozesse und starten Sie Projekte, um Z-Transaktionen in Standard-Fiori-Apps zu integrieren. Dazu sollten Sie die Funktionalitäten von Z-Transaktionen in Standard-Fiori-Apps wiederfinden oder erweitern.
@@ -81,7 +81,7 @@ Reports/Programme sind heute zentraler Bestandteil zur Ausführung von Logik in 
 
 Aktuell gibt es die folgenden Nachfolger:
 * Fiori App - Erstellung einer Anwendung auf SAP Fiori Basis mit dem ABAP RESTful Programming Model, kurz RAP. Weitere Informationen zu RAP finden Sie im Kapitel für Entwicklung. Die App ist der Einstiegspunkt für den Anwender.
-* Application Job - Diese neue Art von Job basiert in der Entwicklung auf einer Klasse, die durch eine zentrale Routine im System gestartet wird. Der Start erfolgt über eine Fiori Anwendung. Jobs sind vor allem zur Automatisierung von Tätigkeiten im Hintergrund.
+* Application Job - Diese neue Art von Job basiert in der Entwicklung auf einer Klasse, die durch eine zentrale Routine im System gestartet wird. Der Start erfolgt über eine Fiori Anwendung. Jobs sind vor allem zur Automatisierung von Tätigkeiten im Hintergrund geeignet.
 
 ### Neue Konzepte
 

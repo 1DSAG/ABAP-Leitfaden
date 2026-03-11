@@ -28,7 +28,7 @@ Technisch basiert SAP Screen Personas 3.0 (Personas) auf einem SICF-Service, der
 SICF Service
 {: .img-caption}
 
-Bei SAP Screen Personas handelt es sich um eine Benutzungsoberflächen-Technologie, die als  Add-On im Backend-System implementiert wird, Die Sicherheit ist deshalb abhängig von den für dieses System  verfügbaren Funktionen. zu Datenzugriff-Governance oder Datenschutz. Die  meisten dieser Systemfunktionen werden durch die zugrunde liegenden Systemmechanismen  und -richtlinien vorgegeben. Alle für SAP Screen Personas spezifischen Aspekte oder möglichen  Diskrepanzen und Bereiche von besonderem Interesse werden nachfolgend erläutert.
+Bei SAP Screen Personas handelt es sich um eine Benutzungsoberflächen-Technologie, die als  Add-On im Backend-System implementiert wird, Die Sicherheit ist deshalb abhängig von den für dieses System  verfügbaren Funktionen. Die  meisten dieser Systemfunktionen werden durch die zugrunde liegenden Systemmechanismen  und -richtlinien vorgegeben. Alle für SAP Screen Personas spezifischen Aspekte oder möglichen  Diskrepanzen und Bereiche von besonderem Interesse werden nachfolgend erläutert.
 
 ## Spezielle Sicherheitsaspekte
 
@@ -87,13 +87,13 @@ Domain Relaxing
 
 SAP Screen Personas 3.0 ist nur dann für einen Benutzer aktiviert, wenn er über die  erforderlichen Berechtigungen basierend auf Benutzerrolle verfügt. Die Rollenzuordnung erfolgt  im Rahmen des regulären Benutzerverwaltungsprozesses. SAP liefert folgende Standardrollen  aus:
 
-- Administrator: **/PERSONAS/ADMIN_ROLE** \- Diese Rolle hat vollständigen Zugriff  auf alle Funktionen, die SAP Screen Personas dem Flavor-Consumer zur Laufzeit zur  Verfügung stehen, kann den Zugriff auf alle Funktionen der Flavor-Builder-Aufgaben zur  Design-Zeit ermöglichen und Administrationsaufgaben in der Administrationsumgebung  ausführen.
+- Administrator: **/PERSONAS/ADMIN_ROLE** \- Diese Rolle hat vollständigen Zugriff auf alle Funktionen, die SAP Screen Personas dem Flavor-Consumer zur Laufzeit zur Verfügung stehen, kann den Zugriff auf alle Funktionen der Flavor-Builder-Aufgaben zur  Design-Zeit ermöglichen und Administrationsaufgaben in der Administrationsumgebung  ausführen.
 - Flavor-Konsument: **/PERSONAS/CONSUMER_ROLE** \- Diese Rolle hat  Berechtigungen für den Zugriff auf Flavors für klassische Anwendungen. Flavor Konsumenten können mit dem Flavor-Manager zwischen Flavors und dem  ursprünglichen Bild wählen und Flavors zwischen dem Flavor-Manager und der Flavor Galerie verschieben.
 - Flavor-Builder: **/PERSONAS/EDITOR_ROLE** \- Diese Rolle wird verwendet, um  Flavors und andere benutzereigene Objekte mit Bearbeitungsrechten in allen Design Zeit-Editoren zu erstellen.
 
-SAP liefert die Rollen ohne generiertes Berechtigungsprofil aus, deshalb muss das Profil jeweils  generiert und sehr wahrscheinlich auch angepasst werden.
+SAP liefert die Rollen ohne generiertes Berechtigungsprofil aus, deshalb muss das Profil jeweils generiert und sehr wahrscheinlich auch angepasst werden.
 
-Grundsätzlich gilt: Die Benutzer müssen immer Zugriff auf den Transaktionscode haben,  zusätzlich zu dem, was ihnen in SAP Screen Personas gehört um eine Funktion innerhalb von  Personas ausführen zu können. Also TCD (Applikationsberechtigung) plus Personas  Berechtigungen müssen vorhanden sein.
+Grundsätzlich gilt: Die Benutzer müssen immer Zugriff auf den Transaktionscode haben, zusätzlich zu dem, was ihnen in SAP Screen Personas gehört um eine Funktion innerhalb von  Personas ausführen zu können. Also TCD (Applikationsberechtigung) plus Personas  Berechtigungen müssen vorhanden sein.
 
 Die folgenden Tabellen erläutern, wie Personas die verschiedenen Berechtigungsobjekte zum Erstellen von Flavors verwendet und mit den standardmäßig ausgelieferten Rollen verteilt:
 

@@ -35,7 +35,7 @@ RAP Big Picture, © SAP
 {: .img-caption}
 
 ### Datenbankebene
-Bei Neuentwicklungen sollte stets das Managed Szenario genutzt werden um möglichst viele Funktionalitäten (CRUD-Handlung, Draft, ...) automatisiert vom Framework zu nutzen und manuellen Entwicklungsaufwand zu reduzieren. Einige Unterschiede im [Unmanaged Szenario](#unmanaged-szenario) finden Sie im entsprechenden Abschnitt weiter unten. Auf unterster Ebene wird das Datenmodell für das RAP Business Objekt klassisch via DDIC Tabellen oder auf neueren Systemen mit CDS Tabellenentitäten erstellt. Jeder Knoten, der später über RAP als eigenes EntitySet veröffentlicht werden soll, erhält eine eigene Datenhaltung. Es ist darauf zu achten, UUIDs als Schlüssel zu verwenden und den UUID-Schlüssel aller hierarchisch obergeordneten Knoten mit einzubeziehen.
+Bei Neuentwicklungen sollte stets das Managed Szenario genutzt werden um möglichst viele Funktionalitäten (CRUD-Handling, Draft, ...) automatisiert vom Framework zu nutzen und manuellen Entwicklungsaufwand zu reduzieren. Einige Unterschiede im [Unmanaged Szenario](#unmanaged-szenario) finden Sie im entsprechenden Abschnitt weiter unten. Auf unterster Ebene wird das Datenmodell für das RAP Business Objekt klassisch via DDIC Tabellen oder auf neueren Systemen mit CDS Tabellenentitäten erstellt. Jeder Knoten, der später über RAP als eigenes EntitySet veröffentlicht werden soll, erhält eine eigene Datenhaltung. Es ist darauf zu achten, UUIDs als Schlüssel zu verwenden und den UUID-Schlüssel aller hierarchisch obergeordneten Knoten mit einzubeziehen.
 
 ### Virtuelles Datenmodell
 Basierend auf den Tabellen wird nun das Virtuelle Datenmodell (VDM) via CDS Views aufgebaut - mehr Informationen zu diesem Entwicklungsobjekt finden Sie im Kapitel [Core Data Services](../core-data-services/index.md). Gemäß der SAP-Empfehlungen sollten hierfür mehrere Ebenen bzw. Layer aufgebaut werden (von unten nach oben):
@@ -125,7 +125,7 @@ Wie oben erwähnt machte das RAP-Framework insbesondere direkt nach Release gro�
 + Migrations-Tool für bestehende BOPF BOs (siehe unten)
 + Consumption von Business Events
 
-**2025, verfügbar ab Herbst**
+**2025**
 + Ausschließlich CDS-basiertes Datenmodell (CDS Table Entities als Persistenz, CDS Simple Types, CDS Exact Cardinalities, CDS Scalar Functions, CDS Aspects - allerdings ohne Draft und simple ENUMs)
 + RAP-Modellierung von Hierarchien
 + Kollaborativer Draft (Parallele Zusammenarbeit an einer BO-Instanz)

@@ -262,7 +262,7 @@ Eine Tabellenfunktion besteht aus zwei Teilen. Einem CDS Entity, welches z.B. be
 Details finden Sie unter [SAP Help (CDS Tabellenfunktion)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abencds_table_functions.htm)
 
 ### Hierarchies
-Mit dieser Art von CDS-View können Sie hierarchische Daten bereitstellen. Dabei werden nur die Eltern-Kind-Hierarchien unterstützt. Als Grundlage muss ein CDS View Entity angegeben werden, welches eine Association auf sich selbst besitzt. Diese Association beschreibt die Beziehung zum Eltern-Knoten. In der Feldliste können Sie Felder die CDS View Entity angeben und spezielle Hierarchie-Attribute, z.B. das Level des Eintrags in der Hierarchie.
+Mit dieser Art von CDS-View können Sie hierarchische Daten bereitstellen. Dabei werden nur die Eltern-Kind-Hierarchien unterstützt. Als Grundlage muss ein CDS View Entity angegeben werden, welches eine Association auf sich selbst besitzt. Diese Association beschreibt die Beziehung zum Eltern-Knoten. In der Feldliste können Sie Felder der CDS View Entity angeben und spezielle Hierarchie-Attribute, z.B. das Level des Eintrags in der Hierarchie.
 
 Details finden Sie unter [SAP Help (CDS Hierarchies)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abencds_f1_define_hierarchy.htm)
 
