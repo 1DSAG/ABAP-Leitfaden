@@ -282,7 +282,7 @@ Ein Teil des Leitfaden-Teams hatte sich im März 2026 zu den DSAG Technologietag
 
 ![Leitfaden-Team](./img/image-01.jpg)
 
-Teil des Leitfaden-Teams (Technologietage)
+Teil des Leitfaden-Teams (Technologietage) / Bild: Frames by Alex
 {: .img-caption}
 
 In Frankenthal gab es dann noch die zweite Ausgabe zu den ABAP Development Days im Mai 2026 mit den T-Shirts.
