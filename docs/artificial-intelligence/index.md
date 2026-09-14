@@ -146,6 +146,24 @@ Wir möchten an dieser Stelle erwähnen, dass GitHub Copilot *eine" mögliche Al
 Wie auch bei "Joule for Developers" sind alle Ergebnisse der KI vom Entwickler zu validieren. Die Verantwortung der Richtigkeit liegt beim Verwender des KI-Tools. Daher ist einerseits sicherzustellen, dass die Mitarbeiter entsprechend geschult und sensibilisiert wurden. Darüber hinaus können potentielle Prozesse etabliert werden, um sicherstellen, dass KI generierte Ergebnisse nicht ungeprüft verwendet werden können (Stichwort "Human-in-Command" bzw. "Human-in-the-loop").
 
 
+### Systemkontext und ausgeführte Prüfungen bei MCP-gestützten Änderungen
+
+Bei einer KI-gestützten Änderung an bestehendem ABAP-Code sollten drei Komponenten getrennt bewertet werden: der KI-Client, die Verbindung zum SAP-System und die projektspezifischen Arbeitsanweisungen. Ein Modellname allein beschreibt weder den verfügbaren Systemkontext noch die ausführbaren SAP-Operationen.
+
+Für einen begrenzten Versuch eignet sich eine Änderung mit eindeutigem Vorher-Nachher-Verhalten. Ein Beispiel: Eine Prüfroutine soll Längenfehler und unzulässige Zeichen unabhängig voneinander melden. Vor der Implementierung werden die erwarteten Ergebnisse für gültige Eingaben, mehrere gleichzeitige Fehler und wechselnde Konfigurationen festgelegt.
+
+Die Auswertung sollte nachvollziehbar festhalten:
+
+- **Kontext:** Welche Quelltexte, Aufrufer und Dictionary-Definitionen wurden tatsächlich gelesen? Welche Annahmen blieben offen?
+- **Änderung:** Welche Objekte und Versionen wurden verändert? Stimmen die zurückgelesenen aktiven Quellen mit dem geprüften Stand überein?
+- **Prüfung:** Wurden Syntaxprüfung, Aktivierung und ABAP Unit ausgeführt oder lediglich vorgeschlagen? Welche Ergebnisse gehören zu welcher Quelltextversion?
+- **Abdeckung:** Prüfen die Tests nur eine Methode oder auch Selektion, Ausgabe und Navigation des Reports? Nicht ausgeführte Integrationsszenarien bleiben ausdrücklich offen.
+- **Dokumentation:** Sind Anforderung, Implementierung, erwartetes Verhalten und tatsächliches Testergebnis miteinander verknüpft?
+
+Projektanweisungen können dieses Vorgehen unterstützen. Sie ersetzen keine SAP-Berechtigungen und erzwingen nicht automatisch eine Prüfung vor jedem Schreibzugriff. Für die eingesetzte Verbindung sind deshalb Identität, erlaubte Operationen, Protokollierung und übertragener Kontext gesondert zu prüfen.
+
+Ein erfolgreicher Versuch belegt den getesteten Ablauf auf der angegebenen Installation. Er belegt weder allgemeine Release-Kompatibilität noch Produktionsreife oder eine bestimmte Zeitersparnis. Für einen Vergleich werden dieselbe Aufgabe und dieselben Abnahmekriterien verwendet; Einrichtung, Korrekturen und menschliche Prüfung gehören zum erfassten Aufwand.
+
 ## Weiterführende Anwendungsfälle für generative KI in der Softwareentwicklung
 
 Neben den beschriebenen Möglichkeiten zur Steigerung der Effizienz während der Implementierungsphase kann KI auch in weiteren Phasen der Software-Entwicklung zum Einsatz kommen. Anhand einiger Beispielen möchten wir Ihnen erläutern, in welchen Bereichen generative KI bereits heute unterstützend eingesetzt werden kann und welchen Nutzen Sie daraus gewinnen können. Da es verschiedenste Tools gibt und die o.g. Fragestellungen in Unternehmen zu unterschiedlichen Lösungen und Anbieter führen können, nennen wir hier keine konkreten Tools, sondern möchten Ihnen den Anwendungsfall beschreiben und Ihnen Inpiration geben, auch chatbasierte Tools in der Entwicklung einzusetzen.
