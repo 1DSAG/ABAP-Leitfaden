@@ -139,6 +139,6 @@ Wie oben erwähnt machte das RAP-Framework insbesondere direkt nach Release gro�
 > + [Migration von CDS-generiertem BOPF zu RAP über Migration Guide](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0a54d0c8a2be4136a8b5d41a367dd537/2e48e205756c4dafb02ef0e2ff14b1bc.html?locale=en-US)  
 > + [RAP Feature Showcase App](https://github.com/SAP-samples/abap-platform-fiori-feature-showcase)  
 > + [SAP Samples: RAP Repositories](https://github.com/orgs/SAP-samples/repositories?q=rap)
-> + [SAP Learning Course: Building Apps with RAP](https://learning.sap.com/courses/building-apps-with-the-abap-restful-application-programming-model)
-> + [SAP Learning Journey: Creating a Fiori Elements App with RAP OData V4](https://learning.sap.com/learning-journeys/getting-started-with-creating-an-sap-fiori-elements-app-based-on-an-odata-v4-rap-service)
+> + [SAP Learning Course: Building Transactional Apps with the ABAP RESTful Application Programming Model](https://learning.sap.com/courses/building-transactional-apps-with-the-abap-restful-application-programming-model)
+> + [SAP Learning Course: Getting Started with Creating an SAP Fiori Elements App Based on an OData V4 RAP Service](https://learning.sap.com/courses/getting-started-with-creating-an-sap-fiori-elements-app-based-on-an-odata-v4-rap-service)
 > + [SAP Technology Blog: Getting Started with RAP](https://community.sap.com/t5/technology-blog-posts-by-sap/getting-started-with-the-abap-restful-application-programming-model-rap/ba-p/13420829)
