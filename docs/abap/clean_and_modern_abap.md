@@ -35,12 +35,7 @@ Beispielregel mit Erläuterung ([Prefer inline to up-front declarations](https:/
 Clean ABAP Example Rule Prefer inline to up-front declarations
 {: .img-caption}
 
-Der Gedanke von Clean ABAP ist, dass es nicht eine Version von Clean ABAP gibt, mit einem festen unveränderlichen Set an Regeln.
-Teams sind eingeladen, die Regeln anzupassen und zu verändern so wie sie für ihren spezifischen Fall am besten passen. Die öffentliche Version von Clean ABAP stellt eine exzellente Grundlage hierfür dar.
-Wichtig ist hier nur, dass diese Regeln verbindlich und für alle Teams eines Unternehmens hinweg gültig sein sollten. Der Grundgedanken von Clean ABAP - einheitliche Code Reviews - würde gebrochen, wenn das Financials Team andere ABAP Regeln hat als das Sales Team.
-Alle Regeln von Clean ABAP sind heute und sollten immer begründet und erläutert werden.
-
-Clean ABAP kann generell auf jede Sprachversion von ABAP angewendet werden von R2 bis hin zu ABAP Cloud.
+Der Gedanke von Clean ABAP ist, dass es nicht eine Version von Clean ABAP gibt, mit einem festen unveränderlichen Set an Regeln. Teams sind eingeladen, die Regeln anzupassen und zu verändern so wie sie für ihren spezifischen Fall am besten passen. Die öffentliche Version von Clean ABAP stellt eine exzellente Grundlage hierfür dar. Wichtig ist hier nur, dass diese Regeln verbindlich und für alle Teams eines Unternehmens hinweg gültig sein sollten. Der Grundgedanken von Clean ABAP - einheitliche Code Reviews - würde gebrochen, wenn das Financials Team andere ABAP Regeln hat als das Sales Team. Damit die Regeln im Team akzeptiert werden, sollten diese immer begründet und erläutert werden, um Verständis zu schaffen. Clean ABAP kann generell auf jede Sprachversion von ABAP angewendet werden von R2 bis hin zu ABAP Cloud.
 
 ### DSAG Empfehlung
 
