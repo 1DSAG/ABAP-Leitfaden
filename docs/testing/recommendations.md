@@ -28,7 +28,7 @@ Wenn das Management die Entwickelnden nicht unterstützt und keine Rückendeckun
 
 ## Verantwortlichkeiten
 
-Wir haben in dem Kapitel [ABAP Unit](#abap_unit_advanced) versucht, die Notwendigkeit und die Vorteile von Unit Tests klarzumachen. In welcher Form und in welchem Umfang Sie dies in Ihrer Firma, in Ihrem Team einsetzen, müssen Sie erarbeiten. Aus diesem Grund sollte es eine verantwortliche Person geben, die in der Entwicklungsabteilung als auch auf Managementebene die Weichen stellt und Dinge vorantreibt.
+Wir haben in dem Kapitel [ABAP Unit](/ABAP-Leitfaden/testing/abap_unit_advanced/) versucht, die Notwendigkeit und die Vorteile von Unit Tests klarzumachen. In welcher Form und in welchem Umfang Sie dies in Ihrer Firma, in Ihrem Team einsetzen, müssen Sie erarbeiten. Aus diesem Grund sollte es eine verantwortliche Person geben, die in der Entwicklungsabteilung als auch auf Managementebene die Weichen stellt und Dinge vorantreibt.
 
 ## Am Anfang war das Konzept
 
