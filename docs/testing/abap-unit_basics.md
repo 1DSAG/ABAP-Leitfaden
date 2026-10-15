@@ -33,7 +33,7 @@ Dies gilt analog für Szenarien bei denen auf dem Entwicklungssystem sich keine 
 > Wird dieses Vorgehen nicht angewendet, die Tests im Mandant x entwickelt, in Mandant y ausgeführt, würden die Tests keine belastbare Aussage liefern und somit seltener oder gar nicht ausgeführt.
 > Analog verhält es sich mit Unit Tests, die abhängig von einer Datenkonstellation auf dem Testsystem sind.
 > Gemäß Unit Test Methodik sind daher direkte Datenbankabfragen mittels Mocking oder Injection-Framework zu vermeiden.
-> Welche Techniken Sie beim Erreichten dieser Unabhängigkeit unterstützen finden sie hier im Abschnitt [Erweiterte Techniken](#abap_unit_advanced)
+> Welche Techniken Sie beim Erreichten dieser Unabhängigkeit unterstützen finden sie hier im Abschnitt [Erweiterte Techniken](/ABAP-Leitfaden/testing/abap_unit_advanced/)
 
 ## Testumgebung
 
@@ -351,7 +351,7 @@ Ein **Spion**-Objekt kann Eigenschaften von Stubs, Fakes und Mocks enthalten, ü
 
 Die Verwendung von Test-Doubles ist notwendig, wenn Abhängigkeiten bestehen, die nicht ausreichend aufgelöst wurden oder aufgelöst werden konnten. Mit entsprechenden Test-Double-Frameworks kann das Ergebnis von Datenbankzugriffe oder Funktionsbausteinaufrufen gefälscht werden. 
 
-Test-Double-Frameworks sind in der Regel umständlich zu bedienen und sehr unübersichtlich. Mit vielen Definitionen und Methoden müssen Eingabeparameter und die gewünschten Ergebnisse vorgegeben werden. Wenn möglich sollten Sie die Abhängigkeiten eliminieren um auf die Verwendung von Test-Doubles verzichten zu können. Dies ist jedoch nicht immer möglich. Weiterführende Informationen zu den Test-Double-Frameworks stellen wir Ihnen im Abschnitt [Erweiterte Techniken](#abap_unit_advanced) vor.
+Test-Double-Frameworks sind in der Regel umständlich zu bedienen und sehr unübersichtlich. Mit vielen Definitionen und Methoden müssen Eingabeparameter und die gewünschten Ergebnisse vorgegeben werden. Wenn möglich sollten Sie die Abhängigkeiten eliminieren um auf die Verwendung von Test-Doubles verzichten zu können. Dies ist jedoch nicht immer möglich. Weiterführende Informationen zu den Test-Double-Frameworks stellen wir Ihnen im Abschnitt [Erweiterte Techniken](/ABAP-Leitfaden/testing/abap_unit_advanced/) vor.
 
 #### Automatisierte regelmäßige Läufe von Unit Tests
 Es gibt mehrere Möglichkeiten Unit Test regelmäßig laufen zu lassen. 

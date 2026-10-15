@@ -58,7 +58,7 @@ Siehe [Clean ABAP Test Seams](https://github.com/SAP/styleguides/blob/main/clean
 
 ### SAP Komponenten wie BAPIs & Funktionsbausteine in Unit Test
 
-Sollten Sie in Ihren Komponenten- oder Integrationstests darauf angewiesen sein, dass ein Funktionsbaustein oder eine Klasse von SAP einen Schritt ausführt, der Teil Ihres Tests sein soll, ist es meist nötig, wiederholbare und stabile Testdaten in den relevanten Tabellen zu haben. siehe [Mocking von Datenbanktabellen](Testdatenverwaltung in ECATT-Containern). 
+Sollten Sie in Ihren Komponenten- oder Integrationstests darauf angewiesen sein, dass ein Funktionsbaustein oder eine Klasse von SAP einen Schritt ausführt, der Teil Ihres Tests sein soll, ist es meist nötig, wiederholbare und stabile Testdaten in den relevanten Tabellen zu haben. siehe [Mocking von Datenbanktabellen](#testdatenverwaltung-in-ecatt-containern). 
 
 ### VALUE-Anweisung für Mockdaten automatisch generieren
 
