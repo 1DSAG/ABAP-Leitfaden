@@ -64,7 +64,7 @@ Sollten Sie in Ihren Komponenten- oder Integrationstests darauf angewiesen sein,
 
 Erzeugen von VALUE-Anweisungen aus aktuellen Daten während des Debuggens:
 -  ADT: Standard
--  SAPGUI: [Debugger Data View Extension](https://github.com/objective-partner/abap_debugger_data_view_extension)
+-  SAPGUI: [Debugger Data View Extension](https://github.com/gepparta/abap_debugger_data_view_extension)
 
 Erzeugen in ADT aus der Data-Preview für ausgewählte Zeilen und Spalten
 https://community.sap.com/t5/application-development-and-automation-blog-posts/abap-unit-tests-generate-a-value-statement-for-the-contents-of-an-internal/ba-p/13543137
